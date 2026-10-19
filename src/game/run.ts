@@ -27,6 +27,7 @@ import { simulateSeries, type SeriesResult } from '../engine/series';
 import { teamStrength } from '../engine/team';
 import {
   PLAYOFF_BRACKET,
+  TEAM_COUNT,
   createTournament,
   pendingMatches,
   reportResult,
@@ -331,7 +332,8 @@ export function userFinish(run: RunState): UserFinish | null {
   if (t.champion === USER_ID) return { place: '1º', label: 'Campeão', champion: true };
   const rec = userRecord(run);
   if (rec.swiss.status === 'eliminated') {
-    const place = rec.swiss.wins === 2 ? '9º–12º' : rec.swiss.wins === 1 ? '13º–14º' : '15º–16º';
+    // 8 teams go out of the Swiss: three at 2-3, three at 1-3 and two at 0-3.
+    const place = rec.swiss.wins === 2 ? '9º–11º' : rec.swiss.wins === 1 ? '12º–14º' : '15º–16º';
     return { place, label: `Eliminado na Suíça (${rec.swiss.wins}-${rec.swiss.losses})`, champion: false };
   }
   const fatal = rec.results.find((r) => !r.won && (r.match.round.startsWith('lb-') || r.match.round === 'gf'));
@@ -462,11 +464,18 @@ export function parseRun(data: unknown): RunState | null {
     if (!['draft', 'team', 'tournament', 'done'].includes(run.phase)) return null;
     if (!run.draft || typeof run.draft !== 'object' || !Array.isArray(run.draft.picks)) return null;
     if (!run.userSeries || typeof run.userSeries !== 'object') return null;
+    // Past the draft, the lineup and the coach must be complete.
+    if (run.phase !== 'draft' && (run.draft.picks.length !== 5 || run.draft.phase !== 'done')) return null;
     // Every referenced card, coach and opponent must still exist in the pool.
     if (run.draft.picks.length === 5) draftedLineup(run);
     if (run.phase === 'tournament' || run.phase === 'done') {
-      if (!run.tournament || !Array.isArray(run.opponents)) return null;
-      for (const e of run.tournament.entrants) teamInfo(run, e.id);
+      const t = run.tournament;
+      if (!t || !Array.isArray(run.opponents) || !Array.isArray(t.matches)) return null;
+      if (!Array.isArray(t.entrants) || t.entrants.length !== TEAM_COUNT) return null;
+      for (const e of t.entrants) teamInfo(run, e.id);
+      // Smoke-test the selectors the screens rely on: they throw on a broken tournament.
+      standings(run);
+      userPendingMatch(run);
     }
     return run;
   } catch {

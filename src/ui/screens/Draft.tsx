@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { SLOTS, openSlots } from '../../engine/draft';
 import { roleFit } from '../../engine/team';
 import type { Card, Slot } from '../../engine/types';
@@ -7,6 +7,9 @@ import { MODE_LABELS, draftOptions, rolledRoster, type RunState } from '../../ga
 import { findCard } from '../../engine/roster';
 import { RUN_POOL } from '../../game/run';
 import { PlayerCard } from '../components/PlayerCard';
+
+/** Clicks on the roulette within this window of the previous spin are ignored, so a double click never spends two rerolls. */
+const SPIN_GUARD_MS = 600;
 
 interface Props {
   run: RunState;
@@ -22,6 +25,16 @@ export function Draft({ run, onRoll, onReroll, onPick }: Props) {
   const card = options.find((c) => c.id === selected);
   const roster = rolledRoster(run);
   const pickNumber = Math.min(draft.picks.length + 1, SLOTS.length);
+  const lastSpin = useRef(0);
+
+  /** Runs a roll or reroll unless one just happened (the second click of a double click). */
+  const spin = (action: () => void) => {
+    const now = performance.now();
+    if (now - lastSpin.current < SPIN_GUARD_MS) return;
+    lastSpin.current = now;
+    setSelected(null);
+    action();
+  };
 
   const choose = (slot: Slot) => {
     if (!card) return;
@@ -43,7 +56,7 @@ export function Draft({ run, onRoll, onReroll, onPick }: Props) {
       {draft.mode === 'classic' && draft.phase === 'roll' && (
         <section className="panel center">
           <p>Gire a roleta para sortear um time e um evento. Você escolhe 1 jogador desse elenco.</p>
-          <button type="button" className="primary big" onClick={onRoll}>
+          <button type="button" className="primary big" onClick={() => spin(onRoll)}>
             Girar roleta
           </button>
           <p className="small muted">Rerolls restantes: {draft.rerollsLeft}</p>
@@ -64,10 +77,7 @@ export function Draft({ run, onRoll, onReroll, onPick }: Props) {
               <button
                 type="button"
                 className="secondary"
-                onClick={() => {
-                  setSelected(null);
-                  onReroll();
-                }}
+                onClick={() => spin(onReroll)}
                 disabled={draft.rerollsLeft <= 0}
               >
                 Reroll ({draft.rerollsLeft})

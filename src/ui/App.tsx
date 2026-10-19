@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { Component, useEffect, useRef, useState, type ReactNode } from 'react';
 import type { Slot } from '../engine/types';
 import {
   applyUserVeto,
@@ -23,7 +23,7 @@ import { Hub } from './screens/Hub';
 import { Series } from './screens/Series';
 import { Team } from './screens/Team';
 import { Veto } from './screens/Veto';
-import { loadRun, newSeed, saveRun } from './storage';
+import { clearRun, loadRun, newSeed, saveRun } from './storage';
 
 /** Transient UI state on top of the run: the home page, or a series being viewed. Everything else derives from the run. */
 type View = { kind: 'home' } | { kind: 'run' } | { kind: 'hub' } | { kind: 'series'; matchId: string };
@@ -46,9 +46,25 @@ function screenOf(run: RunState | null, view: View): ScreenKey {
   }
 }
 
+/** The game behind an error boundary: a crash offers a new run (clearing the save) instead of a blank page. */
 export function App() {
+  const [generation, setGeneration] = useState(0);
+  return (
+    <ErrorBoundary
+      key={generation}
+      onReset={() => {
+        clearRun();
+        setGeneration((g) => g + 1);
+      }}
+    >
+      <Game />
+    </ErrorBoundary>
+  );
+}
+
+function Game() {
   const [run, setRun] = useState<RunState | null>(() => loadRun());
-  const [view, setView] = useState<View>({ kind: 'home' });
+  const [view, setViewState] = useState<View>({ kind: 'home' });
   const [error, setError] = useState<string | null>(null);
   const screen = screenOf(run, view);
   const headingRef = useRef<HTMLDivElement>(null);
@@ -60,16 +76,24 @@ export function App() {
     headingRef.current?.focus({ preventScroll: true });
   }, [viewKey]);
 
-  /** Applies an action to the run and saves it. */
-  const act = (fn: (r: RunState) => RunState) => {
-    if (!run) return;
+  /** Changing screens dismisses the error of a previous action. */
+  const setView = (next: View) => {
+    setError(null);
+    setViewState(next);
+  };
+
+  /** Applies an action to the run and saves it. Returns false (and shows the error) when the action throws. */
+  const act = (fn: (r: RunState) => RunState): boolean => {
+    if (!run) return false;
     try {
       const next = fn(run);
       setRun(next);
       saveRun(next);
       setError(null);
+      return true;
     } catch (e) {
       setError(e instanceof Error ? e.message : String(e));
+      return false;
     }
   };
 
@@ -110,18 +134,22 @@ export function App() {
         )}
         {run && screen === 'coach' && <Coach run={run} onPick={(id) => act((r) => pickDraftCoach(r, id))} />}
         {run && screen === 'team' && <Team run={run} onStart={(name) => act((r) => startTournament(r, name))} />}
-        {run && screen === 'hub' && <Hub run={run} onVeto={() => {
-              act(beginUserVeto);
-              setView({ kind: 'run' });
-            }} onViewSeries={viewSeries} />}
+        {run && screen === 'hub' && (
+          <Hub
+            run={run}
+            onVeto={() => {
+              if (act(beginUserVeto)) setView({ kind: 'run' });
+            }}
+            onViewSeries={viewSeries}
+          />
+        )}
         {run && screen === 'veto' && (
           <Veto
             run={run}
             onChoose={(map) => act((r) => applyUserVeto(r, map))}
             onPlay={() => {
               const matchId = run.veto!.matchId;
-              act(playUserMatch);
-              viewSeries(matchId);
+              if (act(playUserMatch)) viewSeries(matchId);
             }}
             onBack={() => setView({ kind: 'hub' })}
           />
@@ -135,4 +163,37 @@ export function App() {
       <Footer />
     </div>
   );
+}
+
+interface BoundaryProps {
+  children: ReactNode;
+  onReset: () => void;
+}
+
+/** Catches render errors (e.g. a save that passed validation but still breaks a screen). */
+class ErrorBoundary extends Component<BoundaryProps, { failed: boolean }> {
+  state = { failed: false };
+
+  static getDerivedStateFromError(): { failed: boolean } {
+    return { failed: true };
+  }
+
+  render() {
+    if (!this.state.failed) return this.props.children;
+    return (
+      <div className="app">
+        <main className="main">
+          <section className="panel" role="alert">
+            <h1>Algo deu errado</h1>
+            <p>Não foi possível mostrar esta tela. A run salva pode estar corrompida ou ser de uma versão antiga.</p>
+            <p className="small muted">Começar uma nova run apaga a run salva.</p>
+            <button type="button" className="primary wide" onClick={this.props.onReset}>
+              Nova run
+            </button>
+          </section>
+        </main>
+        <Footer />
+      </div>
+    );
+  }
 }

@@ -208,6 +208,27 @@ describe('selectors', () => {
     const r = startTournament(autoDraft(createRun('classic', 'p')), 'P');
     expect(parseRun({ ...r, opponents: ['nope-nope'], tournament: { ...r.tournament!, entrants: [{ id: 'nope-nope', name: 'x', seed: 1 }] } })).toBeNull();
     expect(parseRun({ ...r, draft: { ...r.draft, picks: [...r.draft.picks.slice(0, 4), { cardId: 'gone', slot: 'flex' }] } })).toBeNull();
+    // A tournament without its match list would crash the hub.
+    const noMatches: Record<string, unknown> = { ...r.tournament! };
+    delete noMatches.matches;
+    expect(parseRun({ ...r, tournament: noMatches })).toBeNull();
+    // Naming the team needs the full lineup.
+    const team = autoDraft(createRun('classic', 'p2'));
+    expect(parseRun(team)).not.toBeNull();
+    expect(parseRun({ ...team, draft: { ...team.draft, picks: team.draft.picks.slice(0, 4) } })).toBeNull();
+    expect(parseRun({ ...team, draft: { ...team.draft, phase: 'coach' } })).toBeNull();
+  });
+
+  it('places Swiss eliminations by record', () => {
+    const seen = new Map<number, string>();
+    for (let i = 0; i < 80 && seen.size < 3; i++) {
+      const r = fullRun(i % 2 ? 'classic' : 'ultimate', `swiss-out-${i}`);
+      const rec = userRecord(r);
+      if (rec.swiss.status === 'eliminated') seen.set(rec.swiss.wins, userFinish(r)!.place);
+    }
+    expect(seen.size).toBeGreaterThan(0);
+    const expected: Record<number, string> = { 2: '9º–11º', 1: '12º–14º', 0: '15º–16º' };
+    for (const [wins, place] of seen) expect(place).toBe(expected[wins]);
   });
 });
 
