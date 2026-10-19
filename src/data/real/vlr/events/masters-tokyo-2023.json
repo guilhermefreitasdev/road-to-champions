@@ -5,6 +5,8 @@
   "shortName": "Masters Tokyo 2023",
   "year": 2023,
   "tier": "masters",
+  "region": null,
+  "stage": null,
   "startDate": "2023-06-10",
   "endDate": "2023-06-25",
   "datesText": "Jun 10–25, 2023",
@@ -287,96 +289,6 @@
       ]
     },
     {
-      "id": 1184,
-      "slug": "fut-esports",
-      "name": "FUT Esports",
-      "tag": "FUT",
-      "countryName": "Türkiye",
-      "placement": {
-        "text": "5th–6th",
-        "min": 5,
-        "max": 6
-      },
-      "played": true,
-      "players": [
-        {
-          "playerId": 1139,
-          "handle": "qRaxs",
-          "rounds": 162,
-          "main": true
-        },
-        {
-          "playerId": 3604,
-          "handle": "MOJJ",
-          "rounds": 162,
-          "main": true
-        },
-        {
-          "playerId": 6510,
-          "handle": "AtaKaptan",
-          "rounds": 162,
-          "main": true
-        },
-        {
-          "playerId": 8044,
-          "handle": "MrFaliN",
-          "rounds": 162,
-          "main": true
-        },
-        {
-          "playerId": 10125,
-          "handle": "qw1",
-          "rounds": 162,
-          "main": true
-        }
-      ]
-    },
-    {
-      "id": 14,
-      "slug": "t1",
-      "name": "T1",
-      "tag": "T1",
-      "countryName": "South Korea",
-      "placement": {
-        "text": "5th–6th",
-        "min": 5,
-        "max": 6
-      },
-      "played": true,
-      "players": [
-        {
-          "playerId": 474,
-          "handle": "xeta",
-          "rounds": 173,
-          "main": true
-        },
-        {
-          "playerId": 2489,
-          "handle": "Munchkin",
-          "rounds": 173,
-          "main": true
-        },
-        {
-          "playerId": 4545,
-          "handle": "Sayaplayer",
-          "rounds": 173,
-          "main": true
-        },
-        {
-          "playerId": 5129,
-          "handle": "ban",
-          "rounds": 173,
-          "main": true
-        },
-        {
-          "playerId": 31207,
-          "handle": "carpe",
-          "rounds": 173,
-          "main": true
-        }
-      ]
-    },
-    {
       "id": 474,
       "slug": "team-liquid",
       "name": "Team Liquid",
@@ -417,51 +329,6 @@
           "playerId": 9780,
           "handle": "Jamppi",
           "rounds": 169,
-          "main": true
-        }
-      ]
-    },
-    {
-      "id": 1837,
-      "slug": "attacking-soul-esports",
-      "name": "Attacking Soul Esports",
-      "tag": "ASE",
-      "countryName": "China",
-      "placement": {
-        "text": "7th–8th",
-        "min": 7,
-        "max": 8
-      },
-      "played": true,
-      "players": [
-        {
-          "playerId": 3028,
-          "handle": "Life",
-          "rounds": 101,
-          "main": true
-        },
-        {
-          "playerId": 7135,
-          "handle": "zjc",
-          "rounds": 101,
-          "main": true
-        },
-        {
-          "playerId": 10486,
-          "handle": "YHchen",
-          "rounds": 101,
-          "main": true
-        },
-        {
-          "playerId": 14431,
-          "handle": "monk",
-          "rounds": 101,
-          "main": true
-        },
-        {
-          "playerId": 25949,
-          "handle": "bunt",
-          "rounds": 101,
           "main": true
         }
       ]
@@ -563,16 +430,94 @@
       ]
     },
     {
+      "id": 1837,
+      "slug": "attacking-soul-esports",
+      "name": "Attacking Soul Esports",
+      "tag": "ASE",
+      "countryName": "China",
+      "placement": null,
+      "played": true,
+      "players": [
+        {
+          "playerId": 3028,
+          "handle": "Life",
+          "rounds": 101,
+          "main": true
+        },
+        {
+          "playerId": 7135,
+          "handle": "zjc",
+          "rounds": 101,
+          "main": true
+        },
+        {
+          "playerId": 10486,
+          "handle": "YHchen",
+          "rounds": 101,
+          "main": true
+        },
+        {
+          "playerId": 14431,
+          "handle": "monk",
+          "rounds": 101,
+          "main": true
+        },
+        {
+          "playerId": 25949,
+          "handle": "bunt",
+          "rounds": 101,
+          "main": true
+        }
+      ]
+    },
+    {
+      "id": 1184,
+      "slug": "fut-esports",
+      "name": "FUT Esports",
+      "tag": "FUT",
+      "countryName": "Türkiye",
+      "placement": null,
+      "played": true,
+      "players": [
+        {
+          "playerId": 1139,
+          "handle": "qRaxs",
+          "rounds": 162,
+          "main": true
+        },
+        {
+          "playerId": 3604,
+          "handle": "MOJJ",
+          "rounds": 162,
+          "main": true
+        },
+        {
+          "playerId": 6510,
+          "handle": "AtaKaptan",
+          "rounds": 162,
+          "main": true
+        },
+        {
+          "playerId": 8044,
+          "handle": "MrFaliN",
+          "rounds": 162,
+          "main": true
+        },
+        {
+          "playerId": 10125,
+          "handle": "qw1",
+          "rounds": 162,
+          "main": true
+        }
+      ]
+    },
+    {
       "id": 4915,
       "slug": "natus-vincere",
       "name": "Natus Vincere",
       "tag": "NAVI",
       "countryName": "Europe",
-      "placement": {
-        "text": "7th–8th",
-        "min": 7,
-        "max": 8
-      },
+      "placement": null,
       "played": true,
       "players": [
         {
@@ -603,6 +548,47 @@
           "playerId": 2858,
           "handle": "SUYGETSU",
           "rounds": 124,
+          "main": true
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "slug": "t1",
+      "name": "T1",
+      "tag": "T1",
+      "countryName": "South Korea",
+      "placement": null,
+      "played": true,
+      "players": [
+        {
+          "playerId": 474,
+          "handle": "xeta",
+          "rounds": 173,
+          "main": true
+        },
+        {
+          "playerId": 2489,
+          "handle": "Munchkin",
+          "rounds": 173,
+          "main": true
+        },
+        {
+          "playerId": 4545,
+          "handle": "Sayaplayer",
+          "rounds": 173,
+          "main": true
+        },
+        {
+          "playerId": 5129,
+          "handle": "ban",
+          "rounds": 173,
+          "main": true
+        },
+        {
+          "playerId": 31207,
+          "handle": "carpe",
+          "rounds": 173,
           "main": true
         }
       ]

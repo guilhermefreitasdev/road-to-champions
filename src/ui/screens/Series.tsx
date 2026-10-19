@@ -1,14 +1,21 @@
-import type { TeamIndex } from '../../engine/types';
+import type { SeriesResult } from '../../engine/series';
+import type { BestOf, TeamIndex } from '../../engine/types';
 import { playedMaps } from '../../engine/veto';
-import { USER_ID, teamInfo, type RunState } from '../../game/run';
 import { YouTag } from '../components/Icon';
 import { Scoreboard } from '../components/Scoreboard';
 
-export function Series({ run, matchId, onContinue }: { run: RunState; matchId: string; onContinue: () => void }) {
-  const match = run.tournament!.matches.find((m) => m.id === matchId)!;
-  const series = run.userSeries[matchId]!;
-  const side: TeamIndex = match.a === USER_ID ? 0 : 1;
-  const names: [string, string] = [teamInfo(run, match.a).name, teamInfo(run, match.b).name];
+interface Props {
+  /** Match label ("Grupo A · Abertura") and format. */
+  label: string;
+  bestOf: BestOf;
+  series: SeriesResult;
+  /** The user's side (0 = a, 1 = b). */
+  side: TeamIndex;
+  names: [string, string];
+  onContinue: () => void;
+}
+
+export function Series({ label, bestOf, series, side, names, onContinue }: Props) {
   const won = series.winner === side;
   const order = playedMaps(series.veto);
 
@@ -22,7 +29,7 @@ export function Series({ run, matchId, onContinue }: { run: RunState; matchId: s
           {won ? 'Vitória!' : 'Derrota'}
         </h1>
         <p className="context">
-          {match.label} · MD{match.bestOf}
+          {label} · MD{bestOf}
         </p>
         <p className="series-score" aria-label={`${names[0]} ${series.score[0]} a ${series.score[1]} ${names[1]}`}>
           <span>

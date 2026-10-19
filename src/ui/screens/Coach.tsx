@@ -1,5 +1,7 @@
+import type { DraftState } from '../../engine/draft';
+import { findCoach } from '../../engine/roster';
+import type { Coach as CoachType, RosterEntry } from '../../engine/types';
 import { placementLabel } from '../../game/explain';
-import { coachOptions, rosterOf, type RunState } from '../../game/run';
 import { TeamLogo } from '../components/TeamLogo';
 
 const SCOUT_TEXT = [
@@ -9,7 +11,14 @@ const SCOUT_TEXT = [
   'revela o conforto do adversário em todos os mapas do veto',
 ];
 
-export function Coach({ run, onPick }: { run: RunState; onPick: (coachId: string) => void }) {
+interface Props {
+  draft: DraftState;
+  pool: readonly RosterEntry[];
+  onPick: (coachId: string) => void;
+}
+
+export function Coach({ draft, pool, onPick }: Props) {
+  const options = (draft.coachOptions ?? []).map((id) => findCoach(pool, id)).filter((c): c is CoachType => !!c);
   return (
     <div className="screen coach">
       <header className="screen-head">
@@ -21,8 +30,8 @@ export function Coach({ run, onPick }: { run: RunState; onPick: (coachId: string
         </p>
       </header>
       <div className="coach-list">
-        {coachOptions(run).map((c) => {
-          const roster = rosterOf(c.teamId, c.eventId);
+        {options.map((c) => {
+          const roster = pool.find((e) => e.teamId === c.teamId && e.eventId === c.eventId);
           return (
             <button key={c.id} type="button" className="coach-card" onClick={() => onPick(c.id)}>
               <strong className="coach-name">{c.name}</strong>

@@ -1,8 +1,17 @@
-import type { TMatch } from '../../engine/tournament';
+import type { MatchResult } from '../../engine/tournament';
 import { USER_ID, userOpponent, userWon } from '../../game/run';
 
+/** What a result row needs: Champions matches and league matches both fit. */
+export interface ResultMatch {
+  id: string;
+  label: string;
+  a: string;
+  b: string;
+  result?: MatchResult;
+}
+
 interface Props {
-  matches: TMatch[];
+  matches: ResultMatch[];
   nameOf: (id: string) => string;
   onView: (matchId: string) => void;
 }

@@ -1,0 +1,3535 @@
+{
+  "id": 2500,
+  "slug": "pacific-stage-2-2025",
+  "name": "VCT 2025: Pacific Stage 2",
+  "shortName": "Pacific Stage 2 2025",
+  "year": 2025,
+  "tier": "regional",
+  "region": "pacific",
+  "stage": "stage2",
+  "startDate": "2025-07-15",
+  "endDate": "2025-08-31",
+  "datesText": "Jul 15 – Aug 31, 2025",
+  "location": "Sangam Colosseum, Seoul",
+  "locationCountry": "kr",
+  "prize": "$250,000",
+  "source": {
+    "site": "VLR.gg",
+    "credit": "Dados de VLR.gg (vlr.gg). Sem API oficial; exibidos com atribuição.",
+    "eventUrl": "https://www.vlr.gg/event/2500/vct-2025-pacific-stage-2",
+    "urls": [
+      "https://www.vlr.gg/530364/talon-vs-rex-regum-qeon-vct-2025-pacific-stage-2-lf",
+      "https://www.vlr.gg/530365/paper-rex-vs-rex-regum-qeon-vct-2025-pacific-stage-2-gf",
+      "https://www.vlr.gg/event/2500/vct-2025-pacific-stage-2",
+      "https://www.vlr.gg/event/2500/vct-2025-pacific-stage-2/group-stage",
+      "https://www.vlr.gg/event/agents/2500",
+      "https://www.vlr.gg/event/matches/2500/?series_id=all",
+      "https://www.vlr.gg/event/stats/2500?min_rounds=0"
+    ],
+    "fetchedAt": "2026-10-19"
+  },
+  "mapPool": [
+    {
+      "map": "Ascent",
+      "played": 12
+    },
+    {
+      "map": "Bind",
+      "played": 14
+    },
+    {
+      "map": "Corrode",
+      "played": 17
+    },
+    {
+      "map": "Haven",
+      "played": 16
+    },
+    {
+      "map": "Icebox",
+      "played": 13
+    },
+    {
+      "map": "Lotus",
+      "played": 19
+    },
+    {
+      "map": "Sunset",
+      "played": 12
+    }
+  ],
+  "teams": [
+    {
+      "id": 624,
+      "slug": "paper-rex",
+      "name": "Paper Rex",
+      "tag": "PRX",
+      "countryName": "Singapore",
+      "placement": {
+        "text": "1st",
+        "min": 1,
+        "max": 1
+      },
+      "played": true,
+      "players": [
+        {
+          "playerId": 7378,
+          "handle": "Jinggg",
+          "rounds": 402,
+          "main": true
+        },
+        {
+          "playerId": 9801,
+          "handle": "f0rsakeN",
+          "rounds": 402,
+          "main": true
+        },
+        {
+          "playerId": 9803,
+          "handle": "d4v41",
+          "rounds": 402,
+          "main": true
+        },
+        {
+          "playerId": 13744,
+          "handle": "PatMen",
+          "rounds": 402,
+          "main": true
+        },
+        {
+          "playerId": 17086,
+          "handle": "something",
+          "rounds": 402,
+          "main": true
+        }
+      ]
+    },
+    {
+      "id": 878,
+      "slug": "rex-regum-qeon",
+      "name": "Rex Regum Qeon",
+      "tag": "RRQ",
+      "countryName": "Indonesia",
+      "placement": {
+        "text": "2nd",
+        "min": 2,
+        "max": 2
+      },
+      "played": true,
+      "players": [
+        {
+          "playerId": 1430,
+          "handle": "crazyguy",
+          "rounds": 696,
+          "main": true
+        },
+        {
+          "playerId": 4866,
+          "handle": "Kushy",
+          "rounds": 696,
+          "main": true
+        },
+        {
+          "playerId": 4871,
+          "handle": "xffero",
+          "rounds": 696,
+          "main": true
+        },
+        {
+          "playerId": 8497,
+          "handle": "Monyet",
+          "rounds": 696,
+          "main": true
+        },
+        {
+          "playerId": 24895,
+          "handle": "Jemkin",
+          "rounds": 696,
+          "main": true
+        }
+      ]
+    },
+    {
+      "id": 8304,
+      "slug": "talon",
+      "name": "TALON",
+      "tag": "TLN",
+      "countryName": "Thailand",
+      "placement": {
+        "text": "3rd",
+        "min": 3,
+        "max": 3
+      },
+      "played": true,
+      "players": [
+        {
+          "playerId": 3977,
+          "handle": "Crws",
+          "rounds": 498,
+          "main": true
+        },
+        {
+          "playerId": 13784,
+          "handle": "Killua",
+          "rounds": 498,
+          "main": true
+        },
+        {
+          "playerId": 13788,
+          "handle": "JitBoyS",
+          "rounds": 498,
+          "main": true
+        },
+        {
+          "playerId": 25255,
+          "handle": "primmie",
+          "rounds": 498,
+          "main": true
+        },
+        {
+          "playerId": 42901,
+          "handle": "thyy",
+          "rounds": 498,
+          "main": true
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "slug": "t1",
+      "name": "T1",
+      "tag": "T1",
+      "countryName": "South Korea",
+      "placement": {
+        "text": "4th",
+        "min": 4,
+        "max": 4
+      },
+      "played": true,
+      "players": [
+        {
+          "playerId": 485,
+          "handle": "stax",
+          "rounds": 442,
+          "main": true
+        },
+        {
+          "playerId": 804,
+          "handle": "BuZz",
+          "rounds": 442,
+          "main": true
+        },
+        {
+          "playerId": 13039,
+          "handle": "Meteor",
+          "rounds": 442,
+          "main": true
+        },
+        {
+          "playerId": 29833,
+          "handle": "iZu",
+          "rounds": 442,
+          "main": true
+        },
+        {
+          "playerId": 43057,
+          "handle": "DH",
+          "rounds": 442,
+          "main": true
+        }
+      ]
+    },
+    {
+      "id": 8185,
+      "slug": "kiwoom-drx",
+      "name": "KIWOOM DRX",
+      "tag": "KRX",
+      "countryName": "South Korea",
+      "placement": {
+        "text": "5th–6th",
+        "min": 5,
+        "max": 6
+      },
+      "played": true,
+      "players": [
+        {
+          "playerId": 1916,
+          "handle": "free1ng",
+          "rounds": 333,
+          "main": true
+        },
+        {
+          "playerId": 4462,
+          "handle": "MaKo",
+          "rounds": 333,
+          "main": true
+        },
+        {
+          "playerId": 25025,
+          "handle": "Estrella",
+          "rounds": 333,
+          "main": true
+        },
+        {
+          "playerId": 28400,
+          "handle": "HYUNMIN",
+          "rounds": 333,
+          "main": true
+        },
+        {
+          "playerId": 35013,
+          "handle": "Flashback",
+          "rounds": 333,
+          "main": true
+        }
+      ]
+    },
+    {
+      "id": 11060,
+      "slug": "nongshim-redforce",
+      "name": "Nongshim RedForce",
+      "tag": "NS",
+      "countryName": "South Korea",
+      "placement": {
+        "text": "5th–6th",
+        "min": 5,
+        "max": 6
+      },
+      "played": true,
+      "players": [
+        {
+          "playerId": 488,
+          "handle": "Rb",
+          "rounds": 400,
+          "main": true
+        },
+        {
+          "playerId": 4122,
+          "handle": "Persia",
+          "rounds": 400,
+          "main": true
+        },
+        {
+          "playerId": 31827,
+          "handle": "Dambi",
+          "rounds": 400,
+          "main": true
+        },
+        {
+          "playerId": 31828,
+          "handle": "Francis",
+          "rounds": 400,
+          "main": true
+        },
+        {
+          "playerId": 31829,
+          "handle": "Ivy",
+          "rounds": 400,
+          "main": true
+        }
+      ]
+    },
+    {
+      "id": 278,
+      "slug": "detonation-focusme",
+      "name": "DetonatioN FocusMe",
+      "tag": "DFM",
+      "countryName": "Japan",
+      "placement": {
+        "text": "7th–8th",
+        "min": 7,
+        "max": 8
+      },
+      "played": true,
+      "players": [
+        {
+          "playerId": 4052,
+          "handle": "Jinboong",
+          "rounds": 274,
+          "main": true
+        },
+        {
+          "playerId": 6672,
+          "handle": "Meiy",
+          "rounds": 274,
+          "main": true
+        },
+        {
+          "playerId": 13002,
+          "handle": "Akame",
+          "rounds": 274,
+          "main": true
+        },
+        {
+          "playerId": 21438,
+          "handle": "SSeeS",
+          "rounds": 274,
+          "main": true
+        },
+        {
+          "playerId": 48577,
+          "handle": "gyen",
+          "rounds": 274,
+          "main": true
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "slug": "gen-g",
+      "name": "Gen.G",
+      "tag": "GEN",
+      "countryName": "South Korea",
+      "placement": {
+        "text": "7th–8th",
+        "min": 7,
+        "max": 8
+      },
+      "played": true,
+      "players": [
+        {
+          "playerId": 2489,
+          "handle": "Munchkin",
+          "rounds": 305,
+          "main": true
+        },
+        {
+          "playerId": 9196,
+          "handle": "t3xture",
+          "rounds": 305,
+          "main": true
+        },
+        {
+          "playerId": 11600,
+          "handle": "Foxy9",
+          "rounds": 305,
+          "main": true
+        },
+        {
+          "playerId": 25017,
+          "handle": "Ash",
+          "rounds": 305,
+          "main": true
+        },
+        {
+          "playerId": 34974,
+          "handle": "Karon",
+          "rounds": 305,
+          "main": true
+        }
+      ]
+    },
+    {
+      "id": 6199,
+      "slug": "team-secret",
+      "name": "Team Secret",
+      "tag": "TS",
+      "countryName": "Philippines",
+      "placement": {
+        "text": "9th–10th",
+        "min": 9,
+        "max": 10
+      },
+      "played": true,
+      "players": [
+        {
+          "playerId": 7437,
+          "handle": "kellyS",
+          "rounds": 256,
+          "main": true
+        },
+        {
+          "playerId": 8504,
+          "handle": "invy",
+          "rounds": 256,
+          "main": true
+        },
+        {
+          "playerId": 9740,
+          "handle": "Wild0reoo",
+          "rounds": 256,
+          "main": true
+        },
+        {
+          "playerId": 14225,
+          "handle": "n1zzy",
+          "rounds": 256,
+          "main": true
+        },
+        {
+          "playerId": 2380,
+          "handle": "ZesBeeW",
+          "rounds": 195,
+          "main": true
+        },
+        {
+          "playerId": 2334,
+          "handle": "JessieVash",
+          "rounds": 61,
+          "main": false
+        }
+      ]
+    },
+    {
+      "id": 5448,
+      "slug": "zeta-division",
+      "name": "ZETA DIVISION",
+      "tag": "ZETA",
+      "countryName": "Japan",
+      "placement": {
+        "text": "9th–10th",
+        "min": 9,
+        "max": 10
+      },
+      "played": true,
+      "players": [
+        {
+          "playerId": 424,
+          "handle": "Dep",
+          "rounds": 238,
+          "main": true
+        },
+        {
+          "playerId": 2615,
+          "handle": "CLZ",
+          "rounds": 238,
+          "main": true
+        },
+        {
+          "playerId": 6668,
+          "handle": "SugarZ3ro",
+          "rounds": 238,
+          "main": true
+        },
+        {
+          "playerId": 25221,
+          "handle": "Xdll",
+          "rounds": 238,
+          "main": true
+        },
+        {
+          "playerId": 29839,
+          "handle": "TenTen",
+          "rounds": 238,
+          "main": true
+        }
+      ]
+    },
+    {
+      "id": 466,
+      "slug": "boom-esports",
+      "name": "BOOM Esports",
+      "tag": "BME",
+      "countryName": "Indonesia",
+      "placement": {
+        "text": "11th–12th",
+        "min": 11,
+        "max": 12
+      },
+      "played": true,
+      "players": [
+        {
+          "playerId": 2348,
+          "handle": "Famouz",
+          "rounds": 235,
+          "main": true
+        },
+        {
+          "playerId": 4874,
+          "handle": "BerserX",
+          "rounds": 235,
+          "main": true
+        },
+        {
+          "playerId": 7043,
+          "handle": "NcSlasher",
+          "rounds": 235,
+          "main": true
+        },
+        {
+          "playerId": 10739,
+          "handle": "Shiro",
+          "rounds": 235,
+          "main": true
+        },
+        {
+          "playerId": 16215,
+          "handle": "dos9",
+          "rounds": 235,
+          "main": true
+        }
+      ]
+    },
+    {
+      "id": 918,
+      "slug": "global-esports",
+      "name": "Global Esports",
+      "tag": "GE",
+      "countryName": "India",
+      "placement": {
+        "text": "11th–12th",
+        "min": 11,
+        "max": 12
+      },
+      "played": true,
+      "players": [
+        {
+          "playerId": 4428,
+          "handle": "UdoTan",
+          "rounds": 241,
+          "main": true
+        },
+        {
+          "playerId": 5129,
+          "handle": "ban",
+          "rounds": 241,
+          "main": true
+        },
+        {
+          "playerId": 5796,
+          "handle": "Kr1stal",
+          "rounds": 241,
+          "main": true
+        },
+        {
+          "playerId": 13219,
+          "handle": "Papi",
+          "rounds": 241,
+          "main": true
+        },
+        {
+          "playerId": 25081,
+          "handle": "yoman",
+          "rounds": 241,
+          "main": true
+        }
+      ]
+    }
+  ],
+  "excludedPlayers": [],
+  "players": [
+    {
+      "playerId": 13002,
+      "playerSlug": "akame",
+      "handle": "Akame",
+      "country": "kr",
+      "agents": [
+        {
+          "agent": "Raze",
+          "pct": 29
+        },
+        {
+          "agent": "Iso",
+          "pct": 21
+        },
+        {
+          "agent": "Harbor",
+          "pct": 14
+        }
+      ],
+      "agentsHidden": 3,
+      "maps": 14,
+      "rounds": 274,
+      "rating": 0.92,
+      "acs": 201,
+      "kd": 0.93,
+      "kast": 72,
+      "adr": 133.2,
+      "kpr": 0.69,
+      "apr": 0.25,
+      "fkfd": 0.91,
+      "fkPct": 11,
+      "fdPct": 12,
+      "hsPct": 29,
+      "clutchPct": 20,
+      "clutches": "4/20",
+      "clutchesWon": 4,
+      "clutchesPlayed": 20,
+      "kmax": 23,
+      "k": 188,
+      "d": 203,
+      "a": 68,
+      "fk": 31,
+      "fd": 34,
+      "teamId": 278,
+      "teamTag": "DFM"
+    },
+    {
+      "playerId": 25017,
+      "playerSlug": "ash",
+      "handle": "Ash",
+      "country": "kr",
+      "agents": [
+        {
+          "agent": "Sova",
+          "pct": 67
+        },
+        {
+          "agent": "Fade",
+          "pct": 33
+        }
+      ],
+      "agentsHidden": 0,
+      "maps": 15,
+      "rounds": 305,
+      "rating": 1.05,
+      "acs": 184,
+      "kd": 1.1,
+      "kast": 75,
+      "adr": 121.1,
+      "kpr": 0.67,
+      "apr": 0.23,
+      "fkfd": 1.08,
+      "fkPct": 5,
+      "fdPct": 4,
+      "hsPct": 29,
+      "clutchPct": 17,
+      "clutches": "7/42",
+      "clutchesWon": 7,
+      "clutchesPlayed": 42,
+      "kmax": 18,
+      "k": 204,
+      "d": 186,
+      "a": 71,
+      "fk": 14,
+      "fd": 13,
+      "teamId": 17,
+      "teamTag": "GEN"
+    },
+    {
+      "playerId": 5129,
+      "playerSlug": "ban",
+      "handle": "ban",
+      "country": "kr",
+      "agents": [
+        {
+          "agent": "Iso",
+          "pct": 42
+        },
+        {
+          "agent": "Viper",
+          "pct": 25
+        },
+        {
+          "agent": "Cypher",
+          "pct": 17
+        }
+      ],
+      "agentsHidden": 2,
+      "maps": 12,
+      "rounds": 241,
+      "rating": 0.95,
+      "acs": 207,
+      "kd": 0.98,
+      "kast": 66,
+      "adr": 135,
+      "kpr": 0.72,
+      "apr": 0.2,
+      "fkfd": 1,
+      "fkPct": 13,
+      "fdPct": 13,
+      "hsPct": 30,
+      "clutchPct": 9,
+      "clutches": "3/32",
+      "clutchesWon": 3,
+      "clutchesPlayed": 32,
+      "kmax": 21,
+      "k": 174,
+      "d": 178,
+      "a": 47,
+      "fk": 31,
+      "fd": 31,
+      "teamId": 918,
+      "teamTag": "GE"
+    },
+    {
+      "playerId": 4874,
+      "playerSlug": "berserx",
+      "handle": "BerserX",
+      "country": "id",
+      "agents": [
+        {
+          "agent": "Killjoy",
+          "pct": 45
+        },
+        {
+          "agent": "Viper",
+          "pct": 27
+        },
+        {
+          "agent": "Cypher",
+          "pct": 9
+        }
+      ],
+      "agentsHidden": 2,
+      "maps": 11,
+      "rounds": 235,
+      "rating": 0.92,
+      "acs": 186,
+      "kd": 0.94,
+      "kast": 68,
+      "adr": 118.3,
+      "kpr": 0.66,
+      "apr": 0.14,
+      "fkfd": 1.22,
+      "fkPct": 12,
+      "fdPct": 10,
+      "hsPct": 23,
+      "clutchPct": 7,
+      "clutches": "3/44",
+      "clutchesWon": 3,
+      "clutchesPlayed": 44,
+      "kmax": 24,
+      "k": 155,
+      "d": 165,
+      "a": 34,
+      "fk": 28,
+      "fd": 23,
+      "teamId": 466,
+      "teamTag": "BME"
+    },
+    {
+      "playerId": 804,
+      "playerSlug": "buzz",
+      "handle": "BuZz",
+      "country": "kr",
+      "agents": [
+        {
+          "agent": "Yoru",
+          "pct": 60
+        },
+        {
+          "agent": "Chamber",
+          "pct": 30
+        },
+        {
+          "agent": "Raze",
+          "pct": 10
+        }
+      ],
+      "agentsHidden": 0,
+      "maps": 20,
+      "rounds": 442,
+      "rating": 0.97,
+      "acs": 204,
+      "kd": 1.02,
+      "kast": 67,
+      "adr": 129.4,
+      "kpr": 0.72,
+      "apr": 0.16,
+      "fkfd": 0.98,
+      "fkPct": 14,
+      "fdPct": 14,
+      "hsPct": 22,
+      "clutchPct": 7,
+      "clutches": "4/54",
+      "clutchesWon": 4,
+      "clutchesPlayed": 54,
+      "kmax": 33,
+      "k": 320,
+      "d": 313,
+      "a": 72,
+      "fk": 60,
+      "fd": 61,
+      "teamId": 14,
+      "teamTag": "T1"
+    },
+    {
+      "playerId": 2615,
+      "playerSlug": "clz",
+      "handle": "CLZ",
+      "country": "jp",
+      "agents": [
+        {
+          "agent": "Vyse",
+          "pct": 33
+        },
+        {
+          "agent": "Deadlock",
+          "pct": 17
+        },
+        {
+          "agent": "Cypher",
+          "pct": 17
+        }
+      ],
+      "agentsHidden": 4,
+      "maps": 12,
+      "rounds": 238,
+      "rating": 0.85,
+      "acs": 161,
+      "kd": 0.81,
+      "kast": 68,
+      "adr": 108.3,
+      "kpr": 0.58,
+      "apr": 0.23,
+      "fkfd": 1.07,
+      "fkPct": 6,
+      "fdPct": 6,
+      "hsPct": 35,
+      "clutchPct": 24,
+      "clutches": "9/37",
+      "clutchesWon": 9,
+      "clutchesPlayed": 37,
+      "kmax": 22,
+      "k": 138,
+      "d": 171,
+      "a": 54,
+      "fk": 15,
+      "fd": 14,
+      "teamId": 5448,
+      "teamTag": "ZETA"
+    },
+    {
+      "playerId": 1430,
+      "playerSlug": "crazyguy",
+      "handle": "crazyguy",
+      "country": "vn",
+      "agents": [
+        {
+          "agent": "Omen",
+          "pct": 36
+        },
+        {
+          "agent": "Breach",
+          "pct": 18
+        },
+        {
+          "agent": "Sage",
+          "pct": 12
+        }
+      ],
+      "agentsHidden": 5,
+      "maps": 33,
+      "rounds": 696,
+      "rating": 0.94,
+      "acs": 177,
+      "kd": 0.89,
+      "kast": 73,
+      "adr": 115.9,
+      "kpr": 0.61,
+      "apr": 0.39,
+      "fkfd": 0.9,
+      "fkPct": 6,
+      "fdPct": 7,
+      "hsPct": 28,
+      "clutchPct": 11,
+      "clutches": "10/93",
+      "clutchesWon": 10,
+      "clutchesPlayed": 93,
+      "kmax": 24,
+      "k": 423,
+      "d": 473,
+      "a": 270,
+      "fk": 45,
+      "fd": 50,
+      "teamId": 878,
+      "teamTag": "RRQ"
+    },
+    {
+      "playerId": 3977,
+      "playerSlug": "crws",
+      "handle": "Crws",
+      "country": "th",
+      "agents": [
+        {
+          "agent": "Omen",
+          "pct": 35
+        },
+        {
+          "agent": "Viper",
+          "pct": 26
+        },
+        {
+          "agent": "Fade",
+          "pct": 22
+        }
+      ],
+      "agentsHidden": 2,
+      "maps": 23,
+      "rounds": 498,
+      "rating": 0.9,
+      "acs": 164,
+      "kd": 0.86,
+      "kast": 73,
+      "adr": 109.9,
+      "kpr": 0.55,
+      "apr": 0.33,
+      "fkfd": 0.98,
+      "fkPct": 8,
+      "fdPct": 9,
+      "hsPct": 24,
+      "clutchPct": 17,
+      "clutches": "10/58",
+      "clutchesWon": 10,
+      "clutchesPlayed": 58,
+      "kmax": 28,
+      "k": 276,
+      "d": 320,
+      "a": 162,
+      "fk": 42,
+      "fd": 43,
+      "teamId": 8304,
+      "teamTag": "TLN"
+    },
+    {
+      "playerId": 9803,
+      "playerSlug": "d4v41",
+      "handle": "d4v41",
+      "country": "my",
+      "agents": [
+        {
+          "agent": "Vyse",
+          "pct": 56
+        },
+        {
+          "agent": "Viper",
+          "pct": 28
+        },
+        {
+          "agent": "Sage",
+          "pct": 11
+        }
+      ],
+      "agentsHidden": 1,
+      "maps": 18,
+      "rounds": 402,
+      "rating": 1.1,
+      "acs": 202,
+      "kd": 1.16,
+      "kast": 74,
+      "adr": 137.4,
+      "kpr": 0.72,
+      "apr": 0.25,
+      "fkfd": 1.54,
+      "fkPct": 9,
+      "fdPct": 6,
+      "hsPct": 25,
+      "clutchPct": 12,
+      "clutches": "7/60",
+      "clutchesWon": 7,
+      "clutchesPlayed": 60,
+      "kmax": 29,
+      "k": 290,
+      "d": 250,
+      "a": 100,
+      "fk": 37,
+      "fd": 24,
+      "teamId": 624,
+      "teamTag": "PRX"
+    },
+    {
+      "playerId": 31827,
+      "playerSlug": "dambi",
+      "handle": "Dambi",
+      "country": "kr",
+      "agents": [
+        {
+          "agent": "Neon",
+          "pct": 68
+        },
+        {
+          "agent": "Jett",
+          "pct": 11
+        },
+        {
+          "agent": "Raze",
+          "pct": 11
+        }
+      ],
+      "agentsHidden": 1,
+      "maps": 19,
+      "rounds": 400,
+      "rating": 1.06,
+      "acs": 226,
+      "kd": 1.09,
+      "kast": 72,
+      "adr": 141.2,
+      "kpr": 0.79,
+      "apr": 0.22,
+      "fkfd": 1.14,
+      "fkPct": 19,
+      "fdPct": 16,
+      "hsPct": 24,
+      "clutchPct": 25,
+      "clutches": "4/16",
+      "clutchesWon": 4,
+      "clutchesPlayed": 16,
+      "kmax": 23,
+      "k": 314,
+      "d": 289,
+      "a": 89,
+      "fk": 74,
+      "fd": 65,
+      "teamId": 11060,
+      "teamTag": "NS"
+    },
+    {
+      "playerId": 424,
+      "playerSlug": "dep",
+      "handle": "Dep",
+      "country": "jp",
+      "agents": [
+        {
+          "agent": "Viper",
+          "pct": 58
+        },
+        {
+          "agent": "Killjoy",
+          "pct": 17
+        },
+        {
+          "agent": "Vyse",
+          "pct": 8
+        }
+      ],
+      "agentsHidden": 2,
+      "maps": 12,
+      "rounds": 238,
+      "rating": 1.08,
+      "acs": 217,
+      "kd": 1.07,
+      "kast": 71,
+      "adr": 141.8,
+      "kpr": 0.77,
+      "apr": 0.19,
+      "fkfd": 1.25,
+      "fkPct": 13,
+      "fdPct": 10,
+      "hsPct": 33,
+      "clutchPct": 13,
+      "clutches": "4/30",
+      "clutchesWon": 4,
+      "clutchesPlayed": 30,
+      "kmax": 22,
+      "k": 183,
+      "d": 171,
+      "a": 45,
+      "fk": 30,
+      "fd": 24,
+      "teamId": 5448,
+      "teamTag": "ZETA"
+    },
+    {
+      "playerId": 43057,
+      "playerSlug": "dh",
+      "handle": "DH",
+      "country": "kr",
+      "agents": [
+        {
+          "agent": "Omen",
+          "pct": 90
+        },
+        {
+          "agent": "Brimstone",
+          "pct": 10
+        }
+      ],
+      "agentsHidden": 0,
+      "maps": 20,
+      "rounds": 442,
+      "rating": 1.1,
+      "acs": 198,
+      "kd": 1.07,
+      "kast": 75,
+      "adr": 127.7,
+      "kpr": 0.72,
+      "apr": 0.46,
+      "fkfd": 0.9,
+      "fkPct": 8,
+      "fdPct": 9,
+      "hsPct": 38,
+      "clutchPct": 26,
+      "clutches": "12/46",
+      "clutchesWon": 12,
+      "clutchesPlayed": 46,
+      "kmax": 23,
+      "k": 317,
+      "d": 296,
+      "a": 202,
+      "fk": 36,
+      "fd": 40,
+      "teamId": 14,
+      "teamTag": "T1"
+    },
+    {
+      "playerId": 16215,
+      "playerSlug": "dos9",
+      "handle": "dos9",
+      "country": "kz",
+      "agents": [
+        {
+          "agent": "Omen",
+          "pct": 64
+        },
+        {
+          "agent": "Brimstone",
+          "pct": 18
+        },
+        {
+          "agent": "Viper",
+          "pct": 9
+        }
+      ],
+      "agentsHidden": 1,
+      "maps": 11,
+      "rounds": 235,
+      "rating": 1.06,
+      "acs": 204,
+      "kd": 1.06,
+      "kast": 75,
+      "adr": 126,
+      "kpr": 0.72,
+      "apr": 0.39,
+      "fkfd": 0.9,
+      "fkPct": 8,
+      "fdPct": 9,
+      "hsPct": 29,
+      "clutchPct": 14,
+      "clutches": "5/37",
+      "clutchesWon": 5,
+      "clutchesPlayed": 37,
+      "kmax": 25,
+      "k": 169,
+      "d": 160,
+      "a": 92,
+      "fk": 18,
+      "fd": 20,
+      "teamId": 466,
+      "teamTag": "BME"
+    },
+    {
+      "playerId": 25025,
+      "playerSlug": "estrella",
+      "handle": "Estrella",
+      "country": "kr",
+      "agents": [
+        {
+          "agent": "Fade",
+          "pct": 44
+        },
+        {
+          "agent": "Sage",
+          "pct": 25
+        },
+        {
+          "agent": "Viper",
+          "pct": 19
+        }
+      ],
+      "agentsHidden": 2,
+      "maps": 16,
+      "rounds": 333,
+      "rating": 0.8,
+      "acs": 153,
+      "kd": 0.74,
+      "kast": 71,
+      "adr": 99.4,
+      "kpr": 0.49,
+      "apr": 0.39,
+      "fkfd": 0.45,
+      "fkPct": 5,
+      "fdPct": 10,
+      "hsPct": 27,
+      "clutchPct": 19,
+      "clutches": "5/26",
+      "clutchesWon": 5,
+      "clutchesPlayed": 26,
+      "kmax": 18,
+      "k": 164,
+      "d": 223,
+      "a": 131,
+      "fk": 15,
+      "fd": 33,
+      "teamId": 8185,
+      "teamTag": "KRX"
+    },
+    {
+      "playerId": 9801,
+      "playerSlug": "f0rsaken",
+      "handle": "f0rsakeN",
+      "country": "id",
+      "agents": [
+        {
+          "agent": "Omen",
+          "pct": 44
+        },
+        {
+          "agent": "Brimstone",
+          "pct": 28
+        },
+        {
+          "agent": "Waylay",
+          "pct": 22
+        }
+      ],
+      "agentsHidden": 1,
+      "maps": 18,
+      "rounds": 402,
+      "rating": 1.07,
+      "acs": 212,
+      "kd": 1.12,
+      "kast": 75,
+      "adr": 139.7,
+      "kpr": 0.76,
+      "apr": 0.36,
+      "fkfd": 0.94,
+      "fkPct": 11,
+      "fdPct": 12,
+      "hsPct": 31,
+      "clutchPct": 37,
+      "clutches": "7/19",
+      "clutchesWon": 7,
+      "clutchesPlayed": 19,
+      "kmax": 27,
+      "k": 307,
+      "d": 275,
+      "a": 144,
+      "fk": 46,
+      "fd": 49,
+      "teamId": 624,
+      "teamTag": "PRX"
+    },
+    {
+      "playerId": 2348,
+      "playerSlug": "famouz",
+      "handle": "Famouz",
+      "country": "id",
+      "agents": [
+        {
+          "agent": "Raze",
+          "pct": 45
+        },
+        {
+          "agent": "Neon",
+          "pct": 36
+        },
+        {
+          "agent": "Yoru",
+          "pct": 9
+        }
+      ],
+      "agentsHidden": 1,
+      "maps": 11,
+      "rounds": 235,
+      "rating": 0.82,
+      "acs": 197,
+      "kd": 0.84,
+      "kast": 64,
+      "adr": 126.7,
+      "kpr": 0.66,
+      "apr": 0.15,
+      "fkfd": 1,
+      "fkPct": 12,
+      "fdPct": 12,
+      "hsPct": 18,
+      "clutchPct": 5,
+      "clutches": "1/22",
+      "clutchesWon": 1,
+      "clutchesPlayed": 22,
+      "kmax": 18,
+      "k": 156,
+      "d": 185,
+      "a": 35,
+      "fk": 29,
+      "fd": 29,
+      "teamId": 466,
+      "teamTag": "BME"
+    },
+    {
+      "playerId": 35013,
+      "playerSlug": "flashback",
+      "handle": "Flashback",
+      "country": "kr",
+      "agents": [
+        {
+          "agent": "Vyse",
+          "pct": 50
+        },
+        {
+          "agent": "Killjoy",
+          "pct": 25
+        },
+        {
+          "agent": "Cypher",
+          "pct": 19
+        }
+      ],
+      "agentsHidden": 1,
+      "maps": 16,
+      "rounds": 333,
+      "rating": 1.06,
+      "acs": 205,
+      "kd": 1.16,
+      "kast": 71,
+      "adr": 134.8,
+      "kpr": 0.74,
+      "apr": 0.18,
+      "fkfd": 1.15,
+      "fkPct": 9,
+      "fdPct": 8,
+      "hsPct": 33,
+      "clutchPct": 13,
+      "clutches": "6/47",
+      "clutchesWon": 6,
+      "clutchesPlayed": 47,
+      "kmax": 24,
+      "k": 247,
+      "d": 213,
+      "a": 61,
+      "fk": 31,
+      "fd": 27,
+      "teamId": 8185,
+      "teamTag": "KRX"
+    },
+    {
+      "playerId": 11600,
+      "playerSlug": "foxy9",
+      "handle": "Foxy9",
+      "country": "kr",
+      "agents": [
+        {
+          "agent": "Killjoy",
+          "pct": 67
+        },
+        {
+          "agent": "Sage",
+          "pct": 20
+        },
+        {
+          "agent": "Deadlock",
+          "pct": 13
+        }
+      ],
+      "agentsHidden": 0,
+      "maps": 15,
+      "rounds": 305,
+      "rating": 0.99,
+      "acs": 187,
+      "kd": 1.05,
+      "kast": 71,
+      "adr": 124.9,
+      "kpr": 0.67,
+      "apr": 0.18,
+      "fkfd": 1.27,
+      "fkPct": 9,
+      "fdPct": 7,
+      "hsPct": 33,
+      "clutchPct": 10,
+      "clutches": "2/21",
+      "clutchesWon": 2,
+      "clutchesPlayed": 21,
+      "kmax": 19,
+      "k": 204,
+      "d": 194,
+      "a": 54,
+      "fk": 28,
+      "fd": 22,
+      "teamId": 17,
+      "teamTag": "GEN"
+    },
+    {
+      "playerId": 31828,
+      "playerSlug": "francis",
+      "handle": "Francis",
+      "country": "kr",
+      "agents": [
+        {
+          "agent": "Viper",
+          "pct": 37
+        },
+        {
+          "agent": "Fade",
+          "pct": 21
+        },
+        {
+          "agent": "Sova",
+          "pct": 16
+        }
+      ],
+      "agentsHidden": 3,
+      "maps": 19,
+      "rounds": 400,
+      "rating": 1.01,
+      "acs": 200,
+      "kd": 0.99,
+      "kast": 72,
+      "adr": 129.4,
+      "kpr": 0.69,
+      "apr": 0.36,
+      "fkfd": 0.79,
+      "fkPct": 8,
+      "fdPct": 10,
+      "hsPct": 26,
+      "clutchPct": 13,
+      "clutches": "5/38",
+      "clutchesWon": 5,
+      "clutchesPlayed": 38,
+      "kmax": 27,
+      "k": 275,
+      "d": 278,
+      "a": 144,
+      "fk": 30,
+      "fd": 38,
+      "teamId": 11060,
+      "teamTag": "NS"
+    },
+    {
+      "playerId": 1916,
+      "playerSlug": "free1ng",
+      "handle": "free1ng",
+      "country": "kr",
+      "agents": [
+        {
+          "agent": "Sova",
+          "pct": 44
+        },
+        {
+          "agent": "Viper",
+          "pct": 44
+        },
+        {
+          "agent": "Skye",
+          "pct": 6
+        }
+      ],
+      "agentsHidden": 1,
+      "maps": 16,
+      "rounds": 333,
+      "rating": 0.97,
+      "acs": 184,
+      "kd": 0.96,
+      "kast": 71,
+      "adr": 120.6,
+      "kpr": 0.64,
+      "apr": 0.28,
+      "fkfd": 0.85,
+      "fkPct": 8,
+      "fdPct": 10,
+      "hsPct": 35,
+      "clutchPct": 21,
+      "clutches": "8/39",
+      "clutchesWon": 8,
+      "clutchesPlayed": 39,
+      "kmax": 20,
+      "k": 213,
+      "d": 223,
+      "a": 94,
+      "fk": 28,
+      "fd": 33,
+      "teamId": 8185,
+      "teamTag": "KRX"
+    },
+    {
+      "playerId": 48577,
+      "playerSlug": "gyen",
+      "handle": "gyen",
+      "country": "jp",
+      "agents": [
+        {
+          "agent": "Viper",
+          "pct": 57
+        },
+        {
+          "agent": "Omen",
+          "pct": 43
+        }
+      ],
+      "agentsHidden": 0,
+      "maps": 14,
+      "rounds": 274,
+      "rating": 1.02,
+      "acs": 192,
+      "kd": 1.03,
+      "kast": 69,
+      "adr": 123.6,
+      "kpr": 0.68,
+      "apr": 0.25,
+      "fkfd": 0.86,
+      "fkPct": 9,
+      "fdPct": 11,
+      "hsPct": 34,
+      "clutchPct": 14,
+      "clutches": "5/35",
+      "clutchesWon": 5,
+      "clutchesPlayed": 35,
+      "kmax": 19,
+      "k": 185,
+      "d": 179,
+      "a": 69,
+      "fk": 25,
+      "fd": 29,
+      "teamId": 278,
+      "teamTag": "DFM"
+    },
+    {
+      "playerId": 28400,
+      "playerSlug": "hyunmin",
+      "handle": "HYUNMIN",
+      "country": "kr",
+      "agents": [
+        {
+          "agent": "Jett",
+          "pct": 38
+        },
+        {
+          "agent": "Raze",
+          "pct": 31
+        },
+        {
+          "agent": "Neon",
+          "pct": 25
+        }
+      ],
+      "agentsHidden": 1,
+      "maps": 16,
+      "rounds": 333,
+      "rating": 1.13,
+      "acs": 243,
+      "kd": 1.15,
+      "kast": 74,
+      "adr": 157.6,
+      "kpr": 0.83,
+      "apr": 0.18,
+      "fkfd": 1.53,
+      "fkPct": 17,
+      "fdPct": 11,
+      "hsPct": 28,
+      "clutchPct": 13,
+      "clutches": "3/23",
+      "clutchesWon": 3,
+      "clutchesPlayed": 23,
+      "kmax": 26,
+      "k": 278,
+      "d": 242,
+      "a": 60,
+      "fk": 58,
+      "fd": 38,
+      "teamId": 8185,
+      "teamTag": "KRX"
+    },
+    {
+      "playerId": 8504,
+      "playerSlug": "invy",
+      "handle": "invy",
+      "country": "ph",
+      "agents": [
+        {
+          "agent": "Fade",
+          "pct": 38
+        },
+        {
+          "agent": "Sova",
+          "pct": 31
+        },
+        {
+          "agent": "Gekko",
+          "pct": 8
+        }
+      ],
+      "agentsHidden": 3,
+      "maps": 13,
+      "rounds": 256,
+      "rating": 1.02,
+      "acs": 208,
+      "kd": 0.94,
+      "kast": 68,
+      "adr": 136.5,
+      "kpr": 0.72,
+      "apr": 0.22,
+      "fkfd": 1.4,
+      "fkPct": 8,
+      "fdPct": 6,
+      "hsPct": 30,
+      "clutchPct": 8,
+      "clutches": "3/38",
+      "clutchesWon": 3,
+      "clutchesPlayed": 38,
+      "kmax": 28,
+      "k": 184,
+      "d": 195,
+      "a": 56,
+      "fk": 21,
+      "fd": 15,
+      "teamId": 6199,
+      "teamTag": "TS"
+    },
+    {
+      "playerId": 31829,
+      "playerSlug": "ivy",
+      "handle": "Ivy",
+      "country": "kr",
+      "agents": [
+        {
+          "agent": "Deadlock",
+          "pct": 53
+        },
+        {
+          "agent": "Killjoy",
+          "pct": 37
+        },
+        {
+          "agent": "Fade",
+          "pct": 11
+        }
+      ],
+      "agentsHidden": 0,
+      "maps": 19,
+      "rounds": 400,
+      "rating": 0.95,
+      "acs": 178,
+      "kd": 0.96,
+      "kast": 70,
+      "adr": 114.7,
+      "kpr": 0.64,
+      "apr": 0.21,
+      "fkfd": 0.93,
+      "fkPct": 7,
+      "fdPct": 7,
+      "hsPct": 28,
+      "clutchPct": 4,
+      "clutches": "2/46",
+      "clutchesWon": 2,
+      "clutchesPlayed": 46,
+      "kmax": 23,
+      "k": 256,
+      "d": 267,
+      "a": 85,
+      "fk": 26,
+      "fd": 28,
+      "teamId": 11060,
+      "teamTag": "NS"
+    },
+    {
+      "playerId": 29833,
+      "playerSlug": "izu",
+      "handle": "iZu",
+      "country": "kr",
+      "agents": [
+        {
+          "agent": "Neon",
+          "pct": 60
+        },
+        {
+          "agent": "Yoru",
+          "pct": 30
+        },
+        {
+          "agent": "Gekko",
+          "pct": 10
+        }
+      ],
+      "agentsHidden": 0,
+      "maps": 20,
+      "rounds": 442,
+      "rating": 0.92,
+      "acs": 211,
+      "kd": 0.98,
+      "kast": 65,
+      "adr": 136.6,
+      "kpr": 0.72,
+      "apr": 0.24,
+      "fkfd": 0.89,
+      "fkPct": 13,
+      "fdPct": 14,
+      "hsPct": 25,
+      "clutchPct": 13,
+      "clutches": "4/32",
+      "clutchesWon": 4,
+      "clutchesPlayed": 32,
+      "kmax": 29,
+      "k": 319,
+      "d": 326,
+      "a": 104,
+      "fk": 56,
+      "fd": 63,
+      "teamId": 14,
+      "teamTag": "T1"
+    },
+    {
+      "playerId": 24895,
+      "playerSlug": "jemkin",
+      "handle": "Jemkin",
+      "country": "ru",
+      "agents": [
+        {
+          "agent": "Yoru",
+          "pct": 52
+        },
+        {
+          "agent": "Waylay",
+          "pct": 33
+        },
+        {
+          "agent": "Jett",
+          "pct": 12
+        }
+      ],
+      "agentsHidden": 1,
+      "maps": 33,
+      "rounds": 696,
+      "rating": 1.12,
+      "acs": 227,
+      "kd": 1.24,
+      "kast": 72,
+      "adr": 141.9,
+      "kpr": 0.83,
+      "apr": 0.17,
+      "fkfd": 1.18,
+      "fkPct": 18,
+      "fdPct": 15,
+      "hsPct": 35,
+      "clutchPct": 7,
+      "clutches": "4/54",
+      "clutchesWon": 4,
+      "clutchesPlayed": 54,
+      "kmax": 31,
+      "k": 579,
+      "d": 468,
+      "a": 115,
+      "fk": 124,
+      "fd": 105,
+      "teamId": 878,
+      "teamTag": "RRQ"
+    },
+    {
+      "playerId": 2334,
+      "playerSlug": "jessievash",
+      "handle": "JessieVash",
+      "country": "ph",
+      "agents": [
+        {
+          "agent": "Sova",
+          "pct": 100
+        }
+      ],
+      "agentsHidden": 0,
+      "maps": 3,
+      "rounds": 61,
+      "rating": 0.75,
+      "acs": 142,
+      "kd": 0.7,
+      "kast": 59,
+      "adr": 103.7,
+      "kpr": 0.49,
+      "apr": 0.16,
+      "fkfd": 1,
+      "fkPct": 3,
+      "fdPct": 3,
+      "hsPct": 32,
+      "clutchPct": 0,
+      "clutches": "0/11",
+      "clutchesWon": 0,
+      "clutchesPlayed": 11,
+      "kmax": 16,
+      "k": 30,
+      "d": 43,
+      "a": 10,
+      "fk": 2,
+      "fd": 2,
+      "teamId": 6199,
+      "teamTag": "TS"
+    },
+    {
+      "playerId": 4052,
+      "playerSlug": "jinboong",
+      "handle": "Jinboong",
+      "country": "kr",
+      "agents": [
+        {
+          "agent": "Fade",
+          "pct": 29
+        },
+        {
+          "agent": "Cypher",
+          "pct": 21
+        },
+        {
+          "agent": "Killjoy",
+          "pct": 21
+        }
+      ],
+      "agentsHidden": 2,
+      "maps": 14,
+      "rounds": 274,
+      "rating": 0.96,
+      "acs": 185,
+      "kd": 0.95,
+      "kast": 69,
+      "adr": 122.3,
+      "kpr": 0.64,
+      "apr": 0.19,
+      "fkfd": 1.28,
+      "fkPct": 8,
+      "fdPct": 7,
+      "hsPct": 33,
+      "clutchPct": 18,
+      "clutches": "5/28",
+      "clutchesWon": 5,
+      "clutchesPlayed": 28,
+      "kmax": 23,
+      "k": 176,
+      "d": 186,
+      "a": 52,
+      "fk": 23,
+      "fd": 18,
+      "teamId": 278,
+      "teamTag": "DFM"
+    },
+    {
+      "playerId": 7378,
+      "playerSlug": "jinggg",
+      "handle": "Jinggg",
+      "country": "sg",
+      "agents": [
+        {
+          "agent": "Raze",
+          "pct": 67
+        },
+        {
+          "agent": "Omen",
+          "pct": 28
+        },
+        {
+          "agent": "Sage",
+          "pct": 6
+        }
+      ],
+      "agentsHidden": 0,
+      "maps": 18,
+      "rounds": 402,
+      "rating": 1.14,
+      "acs": 234,
+      "kd": 1.19,
+      "kast": 78,
+      "adr": 154.3,
+      "kpr": 0.81,
+      "apr": 0.29,
+      "fkfd": 1.39,
+      "fkPct": 13,
+      "fdPct": 9,
+      "hsPct": 24,
+      "clutchPct": 22,
+      "clutches": "5/23",
+      "clutchesWon": 5,
+      "clutchesPlayed": 23,
+      "kmax": 24,
+      "k": 325,
+      "d": 274,
+      "a": 116,
+      "fk": 53,
+      "fd": 38,
+      "teamId": 624,
+      "teamTag": "PRX"
+    },
+    {
+      "playerId": 13788,
+      "playerSlug": "jitboys",
+      "handle": "JitBoyS",
+      "country": "th",
+      "agents": [
+        {
+          "agent": "Cypher",
+          "pct": 30
+        },
+        {
+          "agent": "Astra",
+          "pct": 22
+        },
+        {
+          "agent": "Killjoy",
+          "pct": 22
+        }
+      ],
+      "agentsHidden": 3,
+      "maps": 23,
+      "rounds": 498,
+      "rating": 0.97,
+      "acs": 183,
+      "kd": 1,
+      "kast": 72,
+      "adr": 118.7,
+      "kpr": 0.65,
+      "apr": 0.25,
+      "fkfd": 0.71,
+      "fkPct": 7,
+      "fdPct": 10,
+      "hsPct": 35,
+      "clutchPct": 10,
+      "clutches": "6/63",
+      "clutchesWon": 6,
+      "clutchesPlayed": 63,
+      "kmax": 23,
+      "k": 325,
+      "d": 326,
+      "a": 125,
+      "fk": 37,
+      "fd": 52,
+      "teamId": 8304,
+      "teamTag": "TLN"
+    },
+    {
+      "playerId": 34974,
+      "playerSlug": "karon",
+      "handle": "Karon",
+      "country": "kr",
+      "agents": [
+        {
+          "agent": "Omen",
+          "pct": 100
+        }
+      ],
+      "agentsHidden": 0,
+      "maps": 15,
+      "rounds": 305,
+      "rating": 1.07,
+      "acs": 197,
+      "kd": 1.05,
+      "kast": 74,
+      "adr": 124.5,
+      "kpr": 0.71,
+      "apr": 0.47,
+      "fkfd": 1.53,
+      "fkPct": 10,
+      "fdPct": 6,
+      "hsPct": 35,
+      "clutchPct": 21,
+      "clutches": "7/33",
+      "clutchesWon": 7,
+      "clutchesPlayed": 33,
+      "kmax": 23,
+      "k": 216,
+      "d": 206,
+      "a": 144,
+      "fk": 29,
+      "fd": 19,
+      "teamId": 17,
+      "teamTag": "GEN"
+    },
+    {
+      "playerId": 7437,
+      "playerSlug": "kellys",
+      "handle": "kellyS",
+      "country": "ph",
+      "agents": [
+        {
+          "agent": "Deadlock",
+          "pct": 31
+        },
+        {
+          "agent": "Raze",
+          "pct": 31
+        },
+        {
+          "agent": "Breach",
+          "pct": 8
+        }
+      ],
+      "agentsHidden": 4,
+      "maps": 13,
+      "rounds": 256,
+      "rating": 0.9,
+      "acs": 191,
+      "kd": 0.83,
+      "kast": 68,
+      "adr": 125.6,
+      "kpr": 0.64,
+      "apr": 0.22,
+      "fkfd": 0.64,
+      "fkPct": 8,
+      "fdPct": 13,
+      "hsPct": 19,
+      "clutchPct": 4,
+      "clutches": "1/28",
+      "clutchesWon": 1,
+      "clutchesPlayed": 28,
+      "kmax": 25,
+      "k": 163,
+      "d": 197,
+      "a": 56,
+      "fk": 21,
+      "fd": 33,
+      "teamId": 6199,
+      "teamTag": "TS"
+    },
+    {
+      "playerId": 13784,
+      "playerSlug": "killua",
+      "handle": "Killua",
+      "country": "th",
+      "agents": [
+        {
+          "agent": "Sova",
+          "pct": 61
+        },
+        {
+          "agent": "Gekko",
+          "pct": 22
+        },
+        {
+          "agent": "Fade",
+          "pct": 17
+        }
+      ],
+      "agentsHidden": 0,
+      "maps": 23,
+      "rounds": 498,
+      "rating": 1.01,
+      "acs": 201,
+      "kd": 1.05,
+      "kast": 74,
+      "adr": 133.7,
+      "kpr": 0.73,
+      "apr": 0.21,
+      "fkfd": 1.03,
+      "fkPct": 8,
+      "fdPct": 8,
+      "hsPct": 41,
+      "clutchPct": 18,
+      "clutches": "9/49",
+      "clutchesWon": 9,
+      "clutchesPlayed": 49,
+      "kmax": 27,
+      "k": 366,
+      "d": 349,
+      "a": 103,
+      "fk": 41,
+      "fd": 40,
+      "teamId": 8304,
+      "teamTag": "TLN"
+    },
+    {
+      "playerId": 5796,
+      "playerSlug": "kr1stal",
+      "handle": "Kr1stal",
+      "country": "ru",
+      "agents": [
+        {
+          "agent": "Fade",
+          "pct": 33
+        },
+        {
+          "agent": "Sova",
+          "pct": 33
+        },
+        {
+          "agent": "Deadlock",
+          "pct": 25
+        }
+      ],
+      "agentsHidden": 1,
+      "maps": 12,
+      "rounds": 241,
+      "rating": 1.01,
+      "acs": 197,
+      "kd": 0.94,
+      "kast": 69,
+      "adr": 130.4,
+      "kpr": 0.68,
+      "apr": 0.23,
+      "fkfd": 1.05,
+      "fkPct": 9,
+      "fdPct": 9,
+      "hsPct": 28,
+      "clutchPct": 30,
+      "clutches": "6/20",
+      "clutchesWon": 6,
+      "clutchesPlayed": 20,
+      "kmax": 21,
+      "k": 164,
+      "d": 174,
+      "a": 56,
+      "fk": 22,
+      "fd": 21,
+      "teamId": 918,
+      "teamTag": "GE"
+    },
+    {
+      "playerId": 4866,
+      "playerSlug": "kushy",
+      "handle": "Kushy",
+      "country": "id",
+      "agents": [
+        {
+          "agent": "Sova",
+          "pct": 42
+        },
+        {
+          "agent": "Fade",
+          "pct": 36
+        },
+        {
+          "agent": "Vyse",
+          "pct": 9
+        }
+      ],
+      "agentsHidden": 2,
+      "maps": 33,
+      "rounds": 696,
+      "rating": 0.89,
+      "acs": 166,
+      "kd": 0.85,
+      "kast": 71,
+      "adr": 111.9,
+      "kpr": 0.57,
+      "apr": 0.25,
+      "fkfd": 0.76,
+      "fkPct": 6,
+      "fdPct": 8,
+      "hsPct": 32,
+      "clutchPct": 16,
+      "clutches": "11/67",
+      "clutchesWon": 11,
+      "clutchesPlayed": 67,
+      "kmax": 23,
+      "k": 396,
+      "d": 467,
+      "a": 177,
+      "fk": 44,
+      "fd": 58,
+      "teamId": 878,
+      "teamTag": "RRQ"
+    },
+    {
+      "playerId": 4462,
+      "playerSlug": "mako",
+      "handle": "MaKo",
+      "country": "kr",
+      "agents": [
+        {
+          "agent": "Omen",
+          "pct": 56
+        },
+        {
+          "agent": "Viper",
+          "pct": 25
+        },
+        {
+          "agent": "Brimstone",
+          "pct": 19
+        }
+      ],
+      "agentsHidden": 0,
+      "maps": 16,
+      "rounds": 333,
+      "rating": 1.05,
+      "acs": 196,
+      "kd": 1.03,
+      "kast": 72,
+      "adr": 128.4,
+      "kpr": 0.67,
+      "apr": 0.36,
+      "fkfd": 0.79,
+      "fkPct": 9,
+      "fdPct": 12,
+      "hsPct": 27,
+      "clutchPct": 11,
+      "clutches": "4/37",
+      "clutchesWon": 4,
+      "clutchesPlayed": 37,
+      "kmax": 22,
+      "k": 222,
+      "d": 216,
+      "a": 119,
+      "fk": 31,
+      "fd": 39,
+      "teamId": 8185,
+      "teamTag": "KRX"
+    },
+    {
+      "playerId": 6672,
+      "playerSlug": "meiy",
+      "handle": "Meiy",
+      "country": "jp",
+      "agents": [
+        {
+          "agent": "Yoru",
+          "pct": 50
+        },
+        {
+          "agent": "Jett",
+          "pct": 21
+        },
+        {
+          "agent": "Waylay",
+          "pct": 14
+        }
+      ],
+      "agentsHidden": 1,
+      "maps": 14,
+      "rounds": 274,
+      "rating": 1.25,
+      "acs": 267,
+      "kd": 1.35,
+      "kast": 74,
+      "adr": 167.2,
+      "kpr": 0.96,
+      "apr": 0.19,
+      "fkfd": 1.7,
+      "fkPct": 17,
+      "fdPct": 10,
+      "hsPct": 29,
+      "clutchPct": 17,
+      "clutches": "5/29",
+      "clutchesWon": 5,
+      "clutchesPlayed": 29,
+      "kmax": 39,
+      "k": 264,
+      "d": 195,
+      "a": 53,
+      "fk": 46,
+      "fd": 27,
+      "teamId": 278,
+      "teamTag": "DFM"
+    },
+    {
+      "playerId": 13039,
+      "playerSlug": "meteor",
+      "handle": "Meteor",
+      "country": "kr",
+      "agents": [
+        {
+          "agent": "Cypher",
+          "pct": 45
+        },
+        {
+          "agent": "Vyse",
+          "pct": 25
+        },
+        {
+          "agent": "Astra",
+          "pct": 15
+        }
+      ],
+      "agentsHidden": 1,
+      "maps": 20,
+      "rounds": 442,
+      "rating": 1.04,
+      "acs": 222,
+      "kd": 1.06,
+      "kast": 71,
+      "adr": 141.6,
+      "kpr": 0.76,
+      "apr": 0.29,
+      "fkfd": 1.1,
+      "fkPct": 10,
+      "fdPct": 9,
+      "hsPct": 29,
+      "clutchPct": 6,
+      "clutches": "3/51",
+      "clutchesWon": 3,
+      "clutchesPlayed": 51,
+      "kmax": 24,
+      "k": 338,
+      "d": 318,
+      "a": 126,
+      "fk": 44,
+      "fd": 40,
+      "teamId": 14,
+      "teamTag": "T1"
+    },
+    {
+      "playerId": 8497,
+      "playerSlug": "monyet",
+      "handle": "Monyet",
+      "country": "id",
+      "agents": [
+        {
+          "agent": "Neon",
+          "pct": 39
+        },
+        {
+          "agent": "Omen",
+          "pct": 33
+        },
+        {
+          "agent": "Viper",
+          "pct": 12
+        }
+      ],
+      "agentsHidden": 3,
+      "maps": 33,
+      "rounds": 696,
+      "rating": 1.06,
+      "acs": 219,
+      "kd": 1.08,
+      "kast": 73,
+      "adr": 141.3,
+      "kpr": 0.75,
+      "apr": 0.35,
+      "fkfd": 0.91,
+      "fkPct": 13,
+      "fdPct": 14,
+      "hsPct": 28,
+      "clutchPct": 22,
+      "clutches": "11/51",
+      "clutchesWon": 11,
+      "clutchesPlayed": 51,
+      "kmax": 24,
+      "k": 522,
+      "d": 485,
+      "a": 244,
+      "fk": 89,
+      "fd": 98,
+      "teamId": 878,
+      "teamTag": "RRQ"
+    },
+    {
+      "playerId": 2489,
+      "playerSlug": "munchkin",
+      "handle": "Munchkin",
+      "country": "kr",
+      "agents": [
+        {
+          "agent": "Viper",
+          "pct": 80
+        },
+        {
+          "agent": "KAY/O",
+          "pct": 20
+        }
+      ],
+      "agentsHidden": 0,
+      "maps": 15,
+      "rounds": 305,
+      "rating": 0.94,
+      "acs": 199,
+      "kd": 0.97,
+      "kast": 70,
+      "adr": 129.4,
+      "kpr": 0.67,
+      "apr": 0.32,
+      "fkfd": 1.02,
+      "fkPct": 14,
+      "fdPct": 13,
+      "hsPct": 23,
+      "clutchPct": 6,
+      "clutches": "2/32",
+      "clutchesWon": 2,
+      "clutchesPlayed": 32,
+      "kmax": 24,
+      "k": 203,
+      "d": 209,
+      "a": 99,
+      "fk": 42,
+      "fd": 41,
+      "teamId": 17,
+      "teamTag": "GEN"
+    },
+    {
+      "playerId": 14225,
+      "playerSlug": "n1zzy",
+      "handle": "n1zzy",
+      "country": "vn",
+      "agents": [
+        {
+          "agent": "Yoru",
+          "pct": 23
+        },
+        {
+          "agent": "Viper",
+          "pct": 23
+        },
+        {
+          "agent": "Killjoy",
+          "pct": 23
+        }
+      ],
+      "agentsHidden": 4,
+      "maps": 13,
+      "rounds": 256,
+      "rating": 0.98,
+      "acs": 192,
+      "kd": 0.91,
+      "kast": 67,
+      "adr": 130.2,
+      "kpr": 0.68,
+      "apr": 0.18,
+      "fkfd": 1,
+      "fkPct": 11,
+      "fdPct": 11,
+      "hsPct": 39,
+      "clutchPct": 20,
+      "clutches": "9/45",
+      "clutchesWon": 9,
+      "clutchesPlayed": 45,
+      "kmax": 22,
+      "k": 173,
+      "d": 190,
+      "a": 45,
+      "fk": 29,
+      "fd": 29,
+      "teamId": 6199,
+      "teamTag": "TS"
+    },
+    {
+      "playerId": 7043,
+      "playerSlug": "ncslasher",
+      "handle": "NcSlasher",
+      "country": "id",
+      "agents": [
+        {
+          "agent": "Fade",
+          "pct": 64
+        },
+        {
+          "agent": "Omen",
+          "pct": 9
+        },
+        {
+          "agent": "Deadlock",
+          "pct": 9
+        }
+      ],
+      "agentsHidden": 2,
+      "maps": 11,
+      "rounds": 235,
+      "rating": 0.78,
+      "acs": 165,
+      "kd": 0.75,
+      "kast": 65,
+      "adr": 106.1,
+      "kpr": 0.56,
+      "apr": 0.3,
+      "fkfd": 0.75,
+      "fkPct": 6,
+      "fdPct": 9,
+      "hsPct": 24,
+      "clutchPct": 4,
+      "clutches": "1/24",
+      "clutchesWon": 1,
+      "clutchesPlayed": 24,
+      "kmax": 19,
+      "k": 132,
+      "d": 175,
+      "a": 71,
+      "fk": 15,
+      "fd": 20,
+      "teamId": 466,
+      "teamTag": "BME"
+    },
+    {
+      "playerId": 13219,
+      "playerSlug": "papi",
+      "handle": "Papi",
+      "country": "ph",
+      "agents": [
+        {
+          "agent": "Viper",
+          "pct": 33
+        },
+        {
+          "agent": "Astra",
+          "pct": 25
+        },
+        {
+          "agent": "Omen",
+          "pct": 25
+        }
+      ],
+      "agentsHidden": 1,
+      "maps": 12,
+      "rounds": 241,
+      "rating": 0.88,
+      "acs": 170,
+      "kd": 0.86,
+      "kast": 71,
+      "adr": 113.6,
+      "kpr": 0.58,
+      "apr": 0.29,
+      "fkfd": 1,
+      "fkPct": 6,
+      "fdPct": 6,
+      "hsPct": 27,
+      "clutchPct": 6,
+      "clutches": "2/33",
+      "clutchesWon": 2,
+      "clutchesPlayed": 33,
+      "kmax": 17,
+      "k": 140,
+      "d": 163,
+      "a": 71,
+      "fk": 14,
+      "fd": 14,
+      "teamId": 918,
+      "teamTag": "GE"
+    },
+    {
+      "playerId": 13744,
+      "playerSlug": "patmen",
+      "handle": "PatMen",
+      "country": "ph",
+      "agents": [
+        {
+          "agent": "Fade",
+          "pct": 78
+        },
+        {
+          "agent": "Viper",
+          "pct": 17
+        },
+        {
+          "agent": "Sova",
+          "pct": 6
+        }
+      ],
+      "agentsHidden": 0,
+      "maps": 18,
+      "rounds": 402,
+      "rating": 0.93,
+      "acs": 174,
+      "kd": 0.95,
+      "kast": 72,
+      "adr": 116.4,
+      "kpr": 0.63,
+      "apr": 0.29,
+      "fkfd": 0.84,
+      "fkPct": 5,
+      "fdPct": 6,
+      "hsPct": 31,
+      "clutchPct": 10,
+      "clutches": "4/40",
+      "clutchesWon": 4,
+      "clutchesPlayed": 40,
+      "kmax": 25,
+      "k": 253,
+      "d": 267,
+      "a": 118,
+      "fk": 21,
+      "fd": 25,
+      "teamId": 624,
+      "teamTag": "PRX"
+    },
+    {
+      "playerId": 4122,
+      "playerSlug": "persia",
+      "handle": "Persia",
+      "country": "kr",
+      "agents": [
+        {
+          "agent": "Omen",
+          "pct": 79
+        },
+        {
+          "agent": "Viper",
+          "pct": 11
+        },
+        {
+          "agent": "Astra",
+          "pct": 11
+        }
+      ],
+      "agentsHidden": 0,
+      "maps": 19,
+      "rounds": 400,
+      "rating": 1.04,
+      "acs": 186,
+      "kd": 1.04,
+      "kast": 74,
+      "adr": 116.4,
+      "kpr": 0.67,
+      "apr": 0.39,
+      "fkfd": 0.97,
+      "fkPct": 8,
+      "fdPct": 8,
+      "hsPct": 29,
+      "clutchPct": 15,
+      "clutches": "9/60",
+      "clutchesWon": 9,
+      "clutchesPlayed": 60,
+      "kmax": 27,
+      "k": 266,
+      "d": 257,
+      "a": 157,
+      "fk": 30,
+      "fd": 31,
+      "teamId": 11060,
+      "teamTag": "NS"
+    },
+    {
+      "playerId": 25255,
+      "playerSlug": "primmie",
+      "handle": "primmie",
+      "country": "th",
+      "agents": [
+        {
+          "agent": "Deadlock",
+          "pct": 43
+        },
+        {
+          "agent": "Yoru",
+          "pct": 30
+        },
+        {
+          "agent": "Sage",
+          "pct": 26
+        }
+      ],
+      "agentsHidden": 0,
+      "maps": 23,
+      "rounds": 498,
+      "rating": 1.1,
+      "acs": 215,
+      "kd": 1.19,
+      "kast": 73,
+      "adr": 136.5,
+      "kpr": 0.79,
+      "apr": 0.22,
+      "fkfd": 1.06,
+      "fkPct": 11,
+      "fdPct": 10,
+      "hsPct": 39,
+      "clutchPct": 21,
+      "clutches": "10/48",
+      "clutchesWon": 10,
+      "clutchesPlayed": 48,
+      "kmax": 30,
+      "k": 394,
+      "d": 332,
+      "a": 110,
+      "fk": 55,
+      "fd": 52,
+      "teamId": 8304,
+      "teamTag": "TLN"
+    },
+    {
+      "playerId": 488,
+      "playerSlug": "rb",
+      "handle": "Rb",
+      "country": "kr",
+      "agents": [
+        {
+          "agent": "Viper",
+          "pct": 42
+        },
+        {
+          "agent": "Sova",
+          "pct": 37
+        },
+        {
+          "agent": "Cypher",
+          "pct": 11
+        }
+      ],
+      "agentsHidden": 2,
+      "maps": 19,
+      "rounds": 400,
+      "rating": 0.98,
+      "acs": 190,
+      "kd": 0.97,
+      "kast": 68,
+      "adr": 125.5,
+      "kpr": 0.67,
+      "apr": 0.25,
+      "fkfd": 1.03,
+      "fkPct": 10,
+      "fdPct": 10,
+      "hsPct": 28,
+      "clutchPct": 14,
+      "clutches": "8/56",
+      "clutchesWon": 8,
+      "clutchesPlayed": 56,
+      "kmax": 27,
+      "k": 266,
+      "d": 274,
+      "a": 101,
+      "fk": 39,
+      "fd": 38,
+      "teamId": 11060,
+      "teamTag": "NS"
+    },
+    {
+      "playerId": 10739,
+      "playerSlug": "shiro",
+      "handle": "Shiro",
+      "country": "id",
+      "agents": [
+        {
+          "agent": "Viper",
+          "pct": 45
+        },
+        {
+          "agent": "KAY/O",
+          "pct": 27
+        },
+        {
+          "agent": "Sova",
+          "pct": 27
+        }
+      ],
+      "agentsHidden": 0,
+      "maps": 11,
+      "rounds": 235,
+      "rating": 0.91,
+      "acs": 191,
+      "kd": 0.86,
+      "kast": 71,
+      "adr": 127.3,
+      "kpr": 0.64,
+      "apr": 0.31,
+      "fkfd": 1.04,
+      "fkPct": 11,
+      "fdPct": 11,
+      "hsPct": 25,
+      "clutchPct": 14,
+      "clutches": "3/22",
+      "clutchesWon": 3,
+      "clutchesPlayed": 22,
+      "kmax": 21,
+      "k": 151,
+      "d": 176,
+      "a": 72,
+      "fk": 27,
+      "fd": 26,
+      "teamId": 466,
+      "teamTag": "BME"
+    },
+    {
+      "playerId": 17086,
+      "playerSlug": "something",
+      "handle": "something",
+      "country": "ru",
+      "agents": [
+        {
+          "agent": "Yoru",
+          "pct": 83
+        },
+        {
+          "agent": "Sova",
+          "pct": 11
+        },
+        {
+          "agent": "Jett",
+          "pct": 6
+        }
+      ],
+      "agentsHidden": 0,
+      "maps": 18,
+      "rounds": 402,
+      "rating": 1.23,
+      "acs": 233,
+      "kd": 1.38,
+      "kast": 77,
+      "adr": 149.3,
+      "kpr": 0.85,
+      "apr": 0.21,
+      "fkfd": 1.87,
+      "fkPct": 18,
+      "fdPct": 9,
+      "hsPct": 26,
+      "clutchPct": 17,
+      "clutches": "10/59",
+      "clutchesWon": 10,
+      "clutchesPlayed": 59,
+      "kmax": 32,
+      "k": 340,
+      "d": 247,
+      "a": 86,
+      "fk": 71,
+      "fd": 38,
+      "teamId": 624,
+      "teamTag": "PRX"
+    },
+    {
+      "playerId": 21438,
+      "playerSlug": "ssees",
+      "handle": "SSeeS",
+      "country": "jp",
+      "agents": [
+        {
+          "agent": "Sova",
+          "pct": 57
+        },
+        {
+          "agent": "Omen",
+          "pct": 29
+        },
+        {
+          "agent": "Fade",
+          "pct": 14
+        }
+      ],
+      "agentsHidden": 0,
+      "maps": 14,
+      "rounds": 274,
+      "rating": 0.66,
+      "acs": 122,
+      "kd": 0.64,
+      "kast": 63,
+      "adr": 81.5,
+      "kpr": 0.43,
+      "apr": 0.2,
+      "fkfd": 0.46,
+      "fkPct": 5,
+      "fdPct": 10,
+      "hsPct": 25,
+      "clutchPct": 15,
+      "clutches": "6/41",
+      "clutchesWon": 6,
+      "clutchesPlayed": 41,
+      "kmax": 12,
+      "k": 117,
+      "d": 182,
+      "a": 54,
+      "fk": 13,
+      "fd": 28,
+      "teamId": 278,
+      "teamTag": "DFM"
+    },
+    {
+      "playerId": 485,
+      "playerSlug": "stax",
+      "handle": "stax",
+      "country": "kr",
+      "agents": [
+        {
+          "agent": "Sova",
+          "pct": 60
+        },
+        {
+          "agent": "Fade",
+          "pct": 30
+        },
+        {
+          "agent": "KAY/O",
+          "pct": 10
+        }
+      ],
+      "agentsHidden": 0,
+      "maps": 20,
+      "rounds": 442,
+      "rating": 0.88,
+      "acs": 156,
+      "kd": 0.84,
+      "kast": 68,
+      "adr": 107.9,
+      "kpr": 0.56,
+      "apr": 0.24,
+      "fkfd": 0.56,
+      "fkPct": 3,
+      "fdPct": 6,
+      "hsPct": 29,
+      "clutchPct": 16,
+      "clutches": "10/64",
+      "clutchesWon": 10,
+      "clutchesPlayed": 64,
+      "kmax": 21,
+      "k": 246,
+      "d": 292,
+      "a": 108,
+      "fk": 15,
+      "fd": 27,
+      "teamId": 14,
+      "teamTag": "T1"
+    },
+    {
+      "playerId": 6668,
+      "playerSlug": "sugarz3ro",
+      "handle": "SugarZ3ro",
+      "country": "jp",
+      "agents": [
+        {
+          "agent": "Omen",
+          "pct": 75
+        },
+        {
+          "agent": "Viper",
+          "pct": 17
+        },
+        {
+          "agent": "Brimstone",
+          "pct": 8
+        }
+      ],
+      "agentsHidden": 0,
+      "maps": 12,
+      "rounds": 238,
+      "rating": 1.05,
+      "acs": 208,
+      "kd": 0.99,
+      "kast": 70,
+      "adr": 132.2,
+      "kpr": 0.73,
+      "apr": 0.35,
+      "fkfd": 1.07,
+      "fkPct": 7,
+      "fdPct": 6,
+      "hsPct": 31,
+      "clutchPct": 17,
+      "clutches": "5/30",
+      "clutchesWon": 5,
+      "clutchesPlayed": 30,
+      "kmax": 23,
+      "k": 173,
+      "d": 174,
+      "a": 83,
+      "fk": 16,
+      "fd": 15,
+      "teamId": 5448,
+      "teamTag": "ZETA"
+    },
+    {
+      "playerId": 9196,
+      "playerSlug": "t3xture",
+      "handle": "t3xture",
+      "country": "kr",
+      "agents": [
+        {
+          "agent": "Neon",
+          "pct": 60
+        },
+        {
+          "agent": "Jett",
+          "pct": 27
+        },
+        {
+          "agent": "Raze",
+          "pct": 13
+        }
+      ],
+      "agentsHidden": 0,
+      "maps": 15,
+      "rounds": 305,
+      "rating": 1,
+      "acs": 215,
+      "kd": 1.05,
+      "kast": 67,
+      "adr": 138,
+      "kpr": 0.75,
+      "apr": 0.17,
+      "fkfd": 1.2,
+      "fkPct": 17,
+      "fdPct": 14,
+      "hsPct": 26,
+      "clutchPct": 16,
+      "clutches": "4/25",
+      "clutchesWon": 4,
+      "clutchesPlayed": 25,
+      "kmax": 24,
+      "k": 228,
+      "d": 217,
+      "a": 51,
+      "fk": 53,
+      "fd": 44,
+      "teamId": 17,
+      "teamTag": "GEN"
+    },
+    {
+      "playerId": 29839,
+      "playerSlug": "tenten",
+      "handle": "TenTen",
+      "country": "kr",
+      "agents": [
+        {
+          "agent": "Neon",
+          "pct": 33
+        },
+        {
+          "agent": "Raze",
+          "pct": 33
+        },
+        {
+          "agent": "Jett",
+          "pct": 17
+        }
+      ],
+      "agentsHidden": 2,
+      "maps": 12,
+      "rounds": 238,
+      "rating": 0.84,
+      "acs": 196,
+      "kd": 0.85,
+      "kast": 64,
+      "adr": 130.8,
+      "kpr": 0.66,
+      "apr": 0.21,
+      "fkfd": 0.55,
+      "fkPct": 13,
+      "fdPct": 23,
+      "hsPct": 17,
+      "clutchPct": 10,
+      "clutches": "2/20",
+      "clutchesWon": 2,
+      "clutchesPlayed": 20,
+      "kmax": 22,
+      "k": 157,
+      "d": 185,
+      "a": 51,
+      "fk": 30,
+      "fd": 55,
+      "teamId": 5448,
+      "teamTag": "ZETA"
+    },
+    {
+      "playerId": 42901,
+      "playerSlug": "thyy",
+      "handle": "thyy",
+      "country": "th",
+      "agents": [
+        {
+          "agent": "Raze",
+          "pct": 43
+        },
+        {
+          "agent": "Jett",
+          "pct": 22
+        },
+        {
+          "agent": "Yoru",
+          "pct": 17
+        }
+      ],
+      "agentsHidden": 2,
+      "maps": 23,
+      "rounds": 498,
+      "rating": 1.01,
+      "acs": 218,
+      "kd": 1.07,
+      "kast": 71,
+      "adr": 140.4,
+      "kpr": 0.79,
+      "apr": 0.2,
+      "fkfd": 1.33,
+      "fkPct": 15,
+      "fdPct": 12,
+      "hsPct": 30,
+      "clutchPct": 18,
+      "clutches": "7/39",
+      "clutchesWon": 7,
+      "clutchesPlayed": 39,
+      "kmax": 25,
+      "k": 391,
+      "d": 364,
+      "a": 101,
+      "fk": 77,
+      "fd": 58,
+      "teamId": 8304,
+      "teamTag": "TLN"
+    },
+    {
+      "playerId": 4428,
+      "playerSlug": "udotan",
+      "handle": "UdoTan",
+      "country": "kr",
+      "agents": [
+        {
+          "agent": "Raze",
+          "pct": 58
+        },
+        {
+          "agent": "Neon",
+          "pct": 25
+        },
+        {
+          "agent": "Chamber",
+          "pct": 17
+        }
+      ],
+      "agentsHidden": 0,
+      "maps": 12,
+      "rounds": 241,
+      "rating": 1.04,
+      "acs": 236,
+      "kd": 1.1,
+      "kast": 66,
+      "adr": 152.5,
+      "kpr": 0.82,
+      "apr": 0.14,
+      "fkfd": 1,
+      "fkPct": 16,
+      "fdPct": 16,
+      "hsPct": 22,
+      "clutchPct": 22,
+      "clutches": "5/23",
+      "clutchesWon": 5,
+      "clutchesPlayed": 23,
+      "kmax": 29,
+      "k": 198,
+      "d": 180,
+      "a": 34,
+      "fk": 38,
+      "fd": 38,
+      "teamId": 918,
+      "teamTag": "GE"
+    },
+    {
+      "playerId": 9740,
+      "playerSlug": "wild0reoo",
+      "handle": "Wild0reoo",
+      "country": "ph",
+      "agents": [
+        {
+          "agent": "Omen",
+          "pct": 31
+        },
+        {
+          "agent": "Viper",
+          "pct": 31
+        },
+        {
+          "agent": "Cypher",
+          "pct": 23
+        }
+      ],
+      "agentsHidden": 2,
+      "maps": 13,
+      "rounds": 256,
+      "rating": 0.76,
+      "acs": 164,
+      "kd": 0.7,
+      "kast": 63,
+      "adr": 107.5,
+      "kpr": 0.55,
+      "apr": 0.27,
+      "fkfd": 0.38,
+      "fkPct": 6,
+      "fdPct": 15,
+      "hsPct": 34,
+      "clutchPct": 26,
+      "clutches": "6/23",
+      "clutchesWon": 6,
+      "clutchesPlayed": 23,
+      "kmax": 23,
+      "k": 140,
+      "d": 199,
+      "a": 70,
+      "fk": 15,
+      "fd": 39,
+      "teamId": 6199,
+      "teamTag": "TS"
+    },
+    {
+      "playerId": 25221,
+      "playerSlug": "xdll",
+      "handle": "Xdll",
+      "country": "jp",
+      "agents": [
+        {
+          "agent": "Sova",
+          "pct": 50
+        },
+        {
+          "agent": "Fade",
+          "pct": 33
+        },
+        {
+          "agent": "Sage",
+          "pct": 8
+        }
+      ],
+      "agentsHidden": 1,
+      "maps": 12,
+      "rounds": 238,
+      "rating": 0.99,
+      "acs": 189,
+      "kd": 0.95,
+      "kast": 66,
+      "adr": 122.1,
+      "kpr": 0.69,
+      "apr": 0.23,
+      "fkfd": 0.86,
+      "fkPct": 8,
+      "fdPct": 9,
+      "hsPct": 34,
+      "clutchPct": 14,
+      "clutches": "4/28",
+      "clutchesWon": 4,
+      "clutchesPlayed": 28,
+      "kmax": 26,
+      "k": 164,
+      "d": 173,
+      "a": 54,
+      "fk": 18,
+      "fd": 21,
+      "teamId": 5448,
+      "teamTag": "ZETA"
+    },
+    {
+      "playerId": 4871,
+      "playerSlug": "xffero",
+      "handle": "xffero",
+      "country": "id",
+      "agents": [
+        {
+          "agent": "Cypher",
+          "pct": 52
+        },
+        {
+          "agent": "Viper",
+          "pct": 24
+        },
+        {
+          "agent": "Killjoy",
+          "pct": 12
+        }
+      ],
+      "agentsHidden": 2,
+      "maps": 33,
+      "rounds": 696,
+      "rating": 1.06,
+      "acs": 191,
+      "kd": 1.11,
+      "kast": 70,
+      "adr": 125.6,
+      "kpr": 0.69,
+      "apr": 0.24,
+      "fkfd": 1.31,
+      "fkPct": 7,
+      "fdPct": 5,
+      "hsPct": 29,
+      "clutchPct": 20,
+      "clutches": "22/109",
+      "clutchesWon": 22,
+      "clutchesPlayed": 109,
+      "kmax": 25,
+      "k": 482,
+      "d": 435,
+      "a": 167,
+      "fk": 47,
+      "fd": 36,
+      "teamId": 878,
+      "teamTag": "RRQ"
+    },
+    {
+      "playerId": 25081,
+      "playerSlug": "yoman",
+      "handle": "yoman",
+      "country": "kr",
+      "agents": [
+        {
+          "agent": "Sage",
+          "pct": 42
+        },
+        {
+          "agent": "Sova",
+          "pct": 17
+        },
+        {
+          "agent": "Vyse",
+          "pct": 17
+        }
+      ],
+      "agentsHidden": 3,
+      "maps": 12,
+      "rounds": 241,
+      "rating": 0.83,
+      "acs": 158,
+      "kd": 0.8,
+      "kast": 71,
+      "adr": 104,
+      "kpr": 0.57,
+      "apr": 0.3,
+      "fkfd": 1.29,
+      "fkPct": 7,
+      "fdPct": 6,
+      "hsPct": 27,
+      "clutchPct": 18,
+      "clutches": "7/38",
+      "clutchesWon": 7,
+      "clutchesPlayed": 38,
+      "kmax": 22,
+      "k": 137,
+      "d": 171,
+      "a": 72,
+      "fk": 18,
+      "fd": 14,
+      "teamId": 918,
+      "teamTag": "GE"
+    },
+    {
+      "playerId": 2380,
+      "playerSlug": "zesbeew",
+      "handle": "ZesBeeW",
+      "country": "sg",
+      "agents": [
+        {
+          "agent": "Omen",
+          "pct": 70
+        },
+        {
+          "agent": "Neon",
+          "pct": 20
+        },
+        {
+          "agent": "Viper",
+          "pct": 10
+        }
+      ],
+      "agentsHidden": 0,
+      "maps": 10,
+      "rounds": 195,
+      "rating": 0.76,
+      "acs": 158,
+      "kd": 0.72,
+      "kast": 64,
+      "adr": 101.2,
+      "kpr": 0.55,
+      "apr": 0.31,
+      "fkfd": 0.47,
+      "fkPct": 8,
+      "fdPct": 17,
+      "hsPct": 24,
+      "clutchPct": 20,
+      "clutches": "5/25",
+      "clutchesWon": 5,
+      "clutchesPlayed": 25,
+      "kmax": 28,
+      "k": 107,
+      "d": 148,
+      "a": 61,
+      "fk": 16,
+      "fd": 34,
+      "teamId": 6199,
+      "teamTag": "TS"
+    }
+  ],
+  "matches": [
+    {
+      "id": 530364,
+      "url": "https://www.vlr.gg/530364/talon-vs-rex-regum-qeon-vct-2025-pacific-stage-2-lf",
+      "series": "Lower Final",
+      "date": "2025-08-30",
+      "patch": "11.0",
+      "teams": [
+        {
+          "id": 8304,
+          "name": "TALON"
+        },
+        {
+          "id": 878,
+          "name": "Rex Regum Qeon"
+        }
+      ],
+      "score": [
+        2,
+        3
+      ],
+      "maps": [
+        {
+          "gameId": 231335,
+          "map": "Bind",
+          "score": [
+            13,
+            4
+          ],
+          "pickedBy": 1
+        },
+        {
+          "gameId": 231336,
+          "map": "Haven",
+          "score": [
+            13,
+            7
+          ],
+          "pickedBy": 2
+        },
+        {
+          "gameId": 231337,
+          "map": "Corrode",
+          "score": [
+            10,
+            13
+          ],
+          "pickedBy": 1
+        },
+        {
+          "gameId": 231338,
+          "map": "Icebox",
+          "score": [
+            6,
+            13
+          ],
+          "pickedBy": 2
+        },
+        {
+          "gameId": 231339,
+          "map": "Sunset",
+          "score": [
+            12,
+            14
+          ],
+          "pickedBy": null
+        }
+      ],
+      "vetoRaw": "TLN ban Ascent; RRQ ban Lotus; TLN pick Bind; RRQ pick Haven; TLN pick Corrode; RRQ pick Icebox; Sunset remains",
+      "veto": [
+        "TLN ban Ascent",
+        "RRQ ban Lotus",
+        "TLN pick Bind",
+        "RRQ pick Haven",
+        "TLN pick Corrode",
+        "RRQ pick Icebox",
+        "Sunset remains"
+      ]
+    },
+    {
+      "id": 530365,
+      "url": "https://www.vlr.gg/530365/paper-rex-vs-rex-regum-qeon-vct-2025-pacific-stage-2-gf",
+      "series": "Grand Final",
+      "date": "2025-08-31",
+      "patch": "11.0",
+      "teams": [
+        {
+          "id": 624,
+          "name": "Paper Rex"
+        },
+        {
+          "id": 878,
+          "name": "Rex Regum Qeon"
+        }
+      ],
+      "score": [
+        3,
+        1
+      ],
+      "maps": [
+        {
+          "gameId": 231341,
+          "map": "Ascent",
+          "score": [
+            13,
+            7
+          ],
+          "pickedBy": 2
+        },
+        {
+          "gameId": 231342,
+          "map": "Lotus",
+          "score": [
+            6,
+            13
+          ],
+          "pickedBy": 1
+        },
+        {
+          "gameId": 231343,
+          "map": "Haven",
+          "score": [
+            13,
+            7
+          ],
+          "pickedBy": 2
+        },
+        {
+          "gameId": 233353,
+          "map": "Bind",
+          "score": [
+            13,
+            8
+          ],
+          "pickedBy": 1
+        }
+      ],
+      "vetoRaw": "PRX ban Corrode; PRX ban Icebox; PRX pick Bind; RRQ pick Ascent; PRX pick Lotus; RRQ pick Haven; Sunset remains",
+      "veto": [
+        "PRX ban Corrode",
+        "PRX ban Icebox",
+        "PRX pick Bind",
+        "RRQ pick Ascent",
+        "PRX pick Lotus",
+        "RRQ pick Haven",
+        "Sunset remains"
+      ]
+    }
+  ]
+}

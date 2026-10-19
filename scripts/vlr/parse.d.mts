@@ -11,8 +11,19 @@ export interface ListedEvent {
   status: string | null;
 }
 export function parseEventListing(html: string): { events: ListedEvent[]; pages: number[] };
+export type VlrRegion = 'americas' | 'emea' | 'pacific' | 'china';
+export type VlrStage = 'league' | 'kickoff' | 'stage1' | 'stage2';
 export function classifyEventTitle(title: string): 'masters' | 'champions' | null;
-export function shortEventName(title: string, tier: 'masters' | 'champions', year: number | null): string;
+export function classifyRegionalTitle(title: string): { year: number; region: VlrRegion; stage: VlrStage } | null;
+export function classifyEvent(
+  title: string,
+): { tier: 'masters' | 'champions' | 'regional'; region: VlrRegion | null; stage: VlrStage | null } | null;
+export function shortEventName(
+  title: string,
+  tier: 'masters' | 'champions' | 'regional',
+  year: number | null,
+  regional?: { region: VlrRegion; stage: VlrStage } | null,
+): string;
 export function slugify(s: string): string;
 export function parseDateRange(text: string | null | undefined): { start: string | null; end: string | null };
 export function parsePlacement(text: string | null | undefined): { min: number; max: number } | null;
@@ -85,10 +96,13 @@ export function splitVeto(note: string | null | undefined): string[] | null;
 export interface MatchPage {
   date: string | null;
   patch: string | null;
-  teams: { id: number | null; name: string | null }[];
+  teams: { id: number | null; name: string | null; players: { id: number; handle: string; tag: string | null }[] }[];
   score: (number | null)[];
   maps: { gameId: number; map: string | null; score: (number | null)[]; pickedBy: 1 | 2 | null }[];
   vetoRaw: string | null;
   veto: string[] | null;
 }
 export function parseMatchPage(html: string): MatchPage;
+
+/** The subset of a full event file that src/data/real/cards.ts reads (vlr/slim.json). */
+export function slimEvent(event: unknown): unknown;

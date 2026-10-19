@@ -9,14 +9,27 @@ import {
   formatDecimal,
   formatPoints,
 } from '../../game/explain';
-import { DEFAULT_TEAM_NAME, TEAM_NAME_MAX, draftedLineup, rosterOf, type RunState } from '../../game/run';
+import type { Lineup, RosterEntry } from '../../engine/types';
+import { DEFAULT_TEAM_NAME, TEAM_NAME_MAX } from '../../game/run';
 import { AgentIcon } from '../components/GameImage';
 import { PlayerPhoto } from '../components/PlayerPhoto';
 import { TeamLogo } from '../components/TeamLogo';
 
-export function Team({ run, onStart }: { run: RunState; onStart: (name: string) => void }) {
-  const [name, setName] = useState(run.teamName ?? '');
-  const lineup = draftedLineup(run);
+interface Props {
+  lineup: Lineup;
+  pool: readonly RosterEntry[];
+  /** Name typed before (a saved run). */
+  initialName?: string;
+  /** Line under the title ("Draft concluído"). */
+  context?: string;
+  /** The button that starts the competition ("Começar Champions", "Começar a liga"). */
+  cta: string;
+  onStart: (name: string) => void;
+}
+
+export function Team({ lineup, pool, initialName, context, cta, onStart }: Props) {
+  const [name, setName] = useState(initialName ?? '');
+  const rosterOf = (teamId: string, eventId: string) => pool.find((e) => e.teamId === teamId && e.eventId === eventId);
   const { breakdown, parts, dimensions, warnings } = explainStrength(lineup);
   const points = parts.filter((p) => p.key === 'base' || p.key === 'composition');
 
@@ -24,7 +37,7 @@ export function Team({ run, onStart }: { run: RunState; onStart: (name: string) 
     <div className="screen team-screen">
       <header className="screen-head">
         <h1>Seu time</h1>
-        <p className="context">Draft concluído</p>
+        <p className="context">{context ?? 'Draft concluído'}</p>
       </header>
 
       <div className="team-grid">
@@ -127,7 +140,7 @@ export function Team({ run, onStart }: { run: RunState; onStart: (name: string) 
               />
             </label>
             <button type="submit" className="primary wide">
-              Começar Champions
+              {cta}
             </button>
           </form>
         </div>

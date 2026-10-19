@@ -9,17 +9,26 @@ import {
   type VetoState,
   type VetoStep,
 } from '../../engine/veto';
-import type { TeamIndex } from '../../engine/types';
+import type { BestOf, MapName, TeamIndex } from '../../engine/types';
 import { formatPoints } from '../../game/explain';
-import { RUN_MAP_POOL, teamInfo, userOpponent, userPendingMatch, vetoScouting, type RunState } from '../../game/run';
+import type { ScoutHint } from '../../game/run';
 import { MapSplash, mapLabel } from '../components/GameImage';
 import { Icon } from '../components/Icon';
 
 interface Props {
-  run: RunState;
+  match: { label: string; bestOf: BestOf };
+  /** The user's side (0 = a, 1 = b). */
+  side: TeamIndex;
+  veto: VetoState;
+  opponentName: string;
+  /** What the user's coach reveals about the opponent. */
+  scouting: { level: number; hints: ScoutHint[] };
+  mapPool: readonly MapName[];
   onChoose: (map: string) => void;
   onPlay: () => void;
   onBack: () => void;
+  /** Label of the back button ("Voltar ao torneio"). */
+  backLabel?: string;
 }
 
 /** How long the opponent "thinks" before each of its bans/picks (and the decider) appears. */
@@ -34,12 +43,8 @@ function seenSteps(state: VetoState, side: TeamIndex): number {
   return 0;
 }
 
-export function Veto({ run, onChoose, onPlay, onBack }: Props) {
-  const pending = userPendingMatch(run)!;
-  const veto = run.veto!.state;
-  const { match, side } = pending;
-  const oppId = userOpponent(match);
-  const opp = teamInfo(run, oppId);
+export function Veto({ match, side, veto, opponentName, scouting, mapPool, onChoose, onPlay, onBack, backLabel }: Props) {
+  const opp = { name: opponentName };
 
   // The engine resolves the opponent's answers at once; the UI reveals them one by one.
   const [shown, setShown] = useState(() => seenSteps(veto, side));
@@ -56,7 +61,6 @@ export function Veto({ run, onChoose, onPlay, onBack }: Props) {
   const done = !revealing && isVetoComplete(view);
   const myTurn = !revealing && !!turn && turn.team === side;
   const available = new Set(remainingMaps(view));
-  const scouting = vetoScouting(run, oppId);
   const hintOf = new Map(scouting.hints.map((h) => [h.map, h.value]));
   const stepOf = new Map(view.steps.map((s, i) => [s.map, { ...s, index: i }]));
   const playOrder = new Map(playedMaps(veto).map((p, i) => [p.map, i + 1]));
@@ -120,7 +124,7 @@ export function Veto({ run, onChoose, onPlay, onBack }: Props) {
       <ScoutNote level={scouting.level} hints={scouting.hints} />
 
       <div className={`map-grid${myTurn ? ` choosing ${turn!.action}` : ''}`}>
-        {RUN_MAP_POOL.map((map) => {
+        {mapPool.map((map) => {
           const step = stepOf.get(map);
           const hint = hintOf.get(map);
           const status = step
@@ -186,7 +190,7 @@ export function Veto({ run, onChoose, onPlay, onBack }: Props) {
         </section>
       )}
       <button type="button" className="secondary back" onClick={onBack}>
-        Voltar ao torneio
+        {backLabel ?? 'Voltar ao torneio'}
       </button>
     </div>
   );

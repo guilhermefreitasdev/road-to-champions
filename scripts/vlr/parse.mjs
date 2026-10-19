@@ -72,9 +72,35 @@ export function classifyEventTitle(title) {
   return null;
 }
 
-/** Short display name, e.g. "Masters Reykjavík 2021", "LOCK//IN São Paulo 2023", "Champions 2022". */
-export function shortEventName(title, tier, year) {
+const REGION_BY_LABEL = { Americas: 'americas', EMEA: 'emea', Pacific: 'pacific', China: 'china' };
+const STAGE_BY_LABEL = { League: 'league', Kickoff: 'kickoff', 'Stage 1': 'stage1', 'Stage 2': 'stage2' };
+const REGION_LABEL = { americas: 'Americas', emea: 'EMEA', pacific: 'Pacific', china: 'China' };
+const STAGE_LABEL = { league: 'League', kickoff: 'Kickoff', stage1: 'Stage 1', stage2: 'Stage 2' };
+
+/**
+ * Classifies a listing title as a VCT regional league stage (franchising era, 2023+):
+ * "Champions Tour 2023: Americas League", "Champions Tour 2024: EMEA Kickoff", "VCT 2025: Pacific Stage 2".
+ * Qualifiers, LCQs, Challengers, Ascension and the China Evolution Series are not league stages (null).
+ */
+export function classifyRegionalTitle(title) {
   const t = clean(title);
+  const m = t.match(/^(?:Champions Tour|VCT) (\d{4}): (Americas|EMEA|Pacific|China) (League|Kickoff|Stage [12])$/);
+  if (!m) return null;
+  return { year: Number(m[1]), region: REGION_BY_LABEL[m[2]], stage: STAGE_BY_LABEL[m[3]] };
+}
+
+/** Tier + region/stage of a listing title: international (masters/champions), regional, or null. */
+export function classifyEvent(title) {
+  const intl = classifyEventTitle(title);
+  if (intl) return { tier: intl, region: null, stage: null };
+  const regional = classifyRegionalTitle(title);
+  return regional ? { tier: 'regional', region: regional.region, stage: regional.stage } : null;
+}
+
+/** Short display name, e.g. "Masters Reykjavík 2021", "LOCK//IN São Paulo 2023", "Champions 2022", "Americas Kickoff 2024". */
+export function shortEventName(title, tier, year, regional = null) {
+  const t = clean(title);
+  if (tier === 'regional' && regional) return `${REGION_LABEL[regional.region]} ${STAGE_LABEL[regional.stage]} ${year}`;
   if (tier === 'champions') return `Champions ${year}`;
   const lockin = t.match(/LOCK\/\/IN\s+(.+)$/);
   if (lockin) return `LOCK//IN ${lockin[1].replace(/\s+\d{4}$/, '')} ${year}`;
@@ -386,6 +412,31 @@ export function parseMatchPage(html) {
     maps.push({ gameId: Number(gameId), map, score: scores.length === 2 ? scores : [null, null], pickedBy });
   });
 
+  // Scoreboard of the whole series ("all" tab, or the first map): one .ovw-table per team, in header order.
+  // Gives each team's player ids and the tag VLR uses for them, which the event stats page also uses.
+  const $board = $('.vm-stats-game[data-game-id="all"]').first().length
+    ? $('.vm-stats-game[data-game-id="all"]').first()
+    : $('.vm-stats-game').first();
+  $board.find('.ovw-table').each((i, table) => {
+    if (i > 1) return;
+    const players = [];
+    $(table)
+      .find('.ovw-row')
+      .not('.mod-head')
+      .each((_, row) => {
+        const $a = $(row).find('a[href^="/player/"]').first();
+        const pl = idFromHref($a.attr('href'), 'player');
+        if (!pl) return;
+        players.push({
+          id: pl.id,
+          handle: clean($a.find('.ovw-player-name').text()),
+          tag: clean($a.find('.ovw-player-tag').text()) || null,
+        });
+      });
+    teams[i].players = players;
+  });
+  for (const t of teams) t.players ??= [];
+
   return {
     date: ts ? ts.slice(0, 10) : null,
     patch: patchMatch ? patchMatch[1] : null,
@@ -394,5 +445,65 @@ export function parseMatchPage(html) {
     maps,
     vetoRaw,
     veto: splitVeto(vetoRaw),
+  };
+}
+
+// ---------------------------------------------------------------------------------------------
+// Slim event (what the game bundles)
+
+/**
+ * The subset of an event file that the card builder reads (src/data/real/cards.ts, `VlrEventData`): the 5
+ * main players' stats, the teams, the map pool and the vetoes. The game bundles only this (vlr/slim.json);
+ * the full files stay as the source of truth for the tests and for anything new.
+ */
+export function slimEvent(e) {
+  const mains = new Set(e.teams.flatMap((t) => t.players.filter((p) => p.main).map((p) => p.playerId)));
+  return {
+    slug: e.slug,
+    shortName: e.shortName,
+    year: e.year,
+    tier: e.tier,
+    region: e.region ?? null,
+    stage: e.stage ?? null,
+    startDate: e.startDate,
+    endDate: e.endDate,
+    mapPool: e.mapPool,
+    teams: e.teams.map((t) => ({
+      id: t.id,
+      slug: t.slug,
+      name: t.name,
+      tag: t.tag,
+      countryName: t.countryName ?? null,
+      placement: t.placement,
+      played: t.played,
+      players: t.players.map((p) => ({ playerId: p.playerId, main: p.main })),
+    })),
+    players: e.players
+      .filter((p) => mains.has(p.playerId))
+      .map((p) => ({
+        playerId: p.playerId,
+        playerSlug: p.playerSlug,
+        handle: p.handle,
+        country: p.country,
+        teamId: p.teamId,
+        agents: p.agents,
+        rounds: p.rounds,
+        rating: p.rating,
+        acs: p.acs,
+        kast: p.kast,
+        adr: p.adr,
+        kpr: p.kpr,
+        apr: p.apr,
+        fkPct: p.fkPct,
+        fdPct: p.fdPct,
+        hsPct: p.hsPct,
+        clutchesWon: p.clutchesWon,
+        clutchesPlayed: p.clutchesPlayed,
+      })),
+    matches: e.matches.map((m) => ({
+      teams: m.teams.map((t) => ({ id: t.id })),
+      maps: m.maps.map((g) => ({ map: g.map, pickedBy: g.pickedBy })),
+      veto: m.veto,
+    })),
   };
 }

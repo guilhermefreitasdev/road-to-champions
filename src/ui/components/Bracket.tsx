@@ -88,10 +88,12 @@ interface Props {
   cells: BracketCell[];
   team: (id: string) => TeamRef;
   onView?: (matchId: string) => void;
+  /** Placeholder of an unknown side; defaults to the group places ("1º Grupo A"). */
+  label?: (src: BracketSource) => string;
 }
 
 /** The 8-team double-elimination playoff bracket, drawn like Liquipedia: upper bracket on top, lower below, grand final on the right. */
-export function Bracket({ cells, team, onView }: Props) {
+export function Bracket({ cells, team, onView, label }: Props) {
   const wide = useWide();
   const colW = wide ? 196 : 172;
   const gap = wide ? 40 : 28;
@@ -116,7 +118,7 @@ export function Bracket({ cells, team, onView }: Props) {
     cy: slot.id === 'gf' ? gfCy : cyOf(slot.id),
     label: slot.label,
     bestOf: slot.bestOf,
-    sides: sidesOf(match, slot.a, slot.b),
+    sides: sidesOf(match, slot.a, slot.b, label),
     played: !!match?.result,
   }));
   const edges: CanvasEdge[] = EDGES.map(([from, to, toSide]) => {

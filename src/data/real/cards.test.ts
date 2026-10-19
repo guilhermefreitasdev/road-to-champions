@@ -9,10 +9,13 @@ import {
   percentile,
   pickRole,
   placementBonus,
+  regionalPlacementBonus,
   roleWeights,
   shrink,
   shrunkClutchRate,
   tacticFromPlacement,
+  tierBonus,
+  tierGroup,
   vetoAffinity,
   vetoFromExperience,
   type VlrEventData,
@@ -76,7 +79,12 @@ interface TeamSpec {
   players: PlayerSpec[];
 }
 
-function event(slug: string, year: number, teams: TeamSpec[], opts: { tier?: string; inflate?: number; maps?: string[] } = {}): VlrEventData {
+function event(
+  slug: string,
+  year: number,
+  teams: TeamSpec[],
+  opts: { tier?: string; inflate?: number; maps?: string[]; region?: 'americas' | 'emea' | 'pacific' | 'china'; country?: string } = {},
+): VlrEventData {
   const teamRows: VlrTeamRow[] = [];
   const players: VlrPlayerRow[] = [];
   teams.forEach((t, ti) => {
@@ -93,6 +101,7 @@ function event(slug: string, year: number, teams: TeamSpec[], opts: { tier?: str
       played: true,
       placement: t.placement ? { text: t.placement[0], min: t.placement[1], max: t.placement[1] } : null,
       players: rows.map((r) => ({ playerId: r.playerId, main: true })),
+      countryName: opts.country ?? 'Brazil',
     });
   });
   return {
@@ -100,6 +109,7 @@ function event(slug: string, year: number, teams: TeamSpec[], opts: { tier?: str
     shortName: slug,
     year,
     tier: opts.tier ?? 'masters',
+    region: opts.region ?? null,
     startDate: `${year}-06-01`,
     mapPool: (opts.maps ?? ['Ascent', 'Bind', 'Haven', 'Icebox', 'Lotus', 'Split', 'Sunset']).map((map) => ({ map, played: 1 })),
     teams: teamRows,
@@ -389,5 +399,68 @@ describe('vetoAffinity', () => {
     expect(vetoAffinity(ev, t0!)).toEqual({ Bind: -1, Haven: 2, Icebox: -1, Lotus: 1 });
     expect(vetoAffinity(ev, t1!)).toEqual({ Ascent: 1, Bind: -1, Split: -1 });
     expect(vetoAffinity(ev, t2!)).toEqual({ Haven: -1, Split: 1 });
+  });
+  it('ranks regional league rows among themselves, with the regional tier and placement bonuses', () => {
+    expect(tierGroup('regional')).toBe('regional');
+    expect(tierGroup('masters')).toBe('international');
+    expect(tierBonus('regional')).toBe(-2);
+    expect([1, 2, 3].map((min) => regionalPlacementBonus({ min }))).toEqual([2, 1, 0]);
+    expect(regionalPlacementBonus(null)).toBe(0);
+    // A league with the same 6-team ladder as a Masters of the same year: same percentiles, bonus apart.
+    const intl = event('m', 2023, ladder(6));
+    const league = event('league', 2023, ladder(6, 'L'), { tier: 'regional', region: 'emea' });
+    // Different organisations from the Masters' teams (the helper numbers teams 1000+ in every event).
+    league.teams.forEach((t) => (t.id += 100));
+    league.players.forEach((p) => (p.teamId += 100));
+    const pool = buildRealPool([intl, league], [], ROLES);
+    expect(pool.rosters.map((r) => r.eventId)).toEqual(['m', 'm', 'm', 'm', 'm', 'm']);
+    expect(pool.regionalRosters.map((r) => r.eventId)).toEqual(Array(6).fill('league'));
+    const ovr = (h: string) => [...pool.rosters, ...pool.regionalRosters].flatMap((r) => r.cards).find((c) => c.handle === h)!.ovr;
+    expect(ovr('L00')).toBe(ovr('T00') - 2);
+    expect(ovr('L54')).toBe(ovr('T54') - 2);
+    // Adding much weaker international rows does not move the league's percentiles (and vice versa).
+    const weak = event('m2', 2023, ladder(6, 'W'), { inflate: -0.5 });
+    const pool2 = buildRealPool([intl, league, weak], [], ROLES);
+    const ovr2 = (h: string) => [...pool2.rosters, ...pool2.regionalRosters].flatMap((r) => r.cards).find((c) => c.handle === h)!.ovr;
+    expect(ovr2('L00')).toBe(ovr('L00'));
+    expect(ovr2('L30')).toBe(ovr('L30'));
+    expect(ovr2('T30')).toBeGreaterThan(ovr('T30'));
+    // Region and tier on every entry; the league's region from the event, the Masters' from the league membership.
+    for (const r of pool.regionalRosters) expect(r).toMatchObject({ tier: 'regional', region: 'emea' });
+    for (const r of pool.rosters) expect(r).toMatchObject({ tier: 'international', region: 'americas' }); // country: Brazil
+    const same = event('m3', 2023, ladder(6, 'L'));
+    same.teams.forEach((t, i) => (t.id = league.teams[i]!.id));
+    const pool3 = buildRealPool([league, same], [], ROLES);
+    for (const r of pool3.rosters) expect(r.region).toBe('emea');
+    expect(pool3.mapPool).toEqual(pool.mapPool);
+  });
+
+  it('infers a league IGL only from the same team’s Liquipedia IGL at an international event of that year', () => {
+    const league = event('league', 2023, ladder(3, 'L'), { tier: 'regional', region: 'americas' });
+    const intl = event('m', 2023, ladder(3, 'L'));
+    const other = event('c', 2023, ladder(3, 'L'), { tier: 'champions' });
+    for (const ev of [intl, other]) {
+      ev.teams.forEach((t, i) => (t.id = league.teams[i]!.id));
+      ev.players.forEach((p, i) => (p.playerId = league.players[i]!.playerId));
+      ev.teams.forEach((t, i) => t.players.forEach((p, k) => (p.playerId = league.teams[i]!.players[k]!.playerId)));
+    }
+    const lp = (ev: VlrEventData, igls: (string | null)[]) =>
+      lpEvent(ev, ev.teams.map((t, i) => lpTeam(t, ev, { igl: igls[i] ?? null, iglSource: igls[i] ? 'event-captain' : 'none' })));
+    // Team 0: same IGL at both internationals → inferred. Team 1: two different → unknown. Team 2: none → unknown.
+    const pool = buildRealPool([league, intl, other], [lp(intl, ['L02', 'L13', null]), lp(other, ['L02', 'L14', null])], ROLES);
+    const [r0, r1, r2] = pool.regionalRosters;
+    expect(r0!.iglKnown).toBe(true);
+    expect(r0!.cards.filter((c) => c.isIGL).map((c) => [c.handle, c.iglSource])).toEqual([['L02', 'same-year-international']]);
+    expect(r0!.cards[2]!.attrs.decision).toBe(DECISION.infobox);
+    expect(r1!.iglKnown).toBe(false);
+    expect(r2!.iglKnown).toBe(false);
+    expect(pool.regionalRosters.every((r) => r.coach === undefined)).toBe(true);
+    // Another year: nothing carries over.
+    const next = event('league-2024', 2024, ladder(3, 'L'), { tier: 'regional', region: 'americas' });
+    next.teams.forEach((t, i) => (t.id = league.teams[i]!.id));
+    next.players.forEach((p, i) => (p.playerId = league.players[i]!.playerId));
+    next.teams.forEach((t, i) => t.players.forEach((p, k) => (p.playerId = league.teams[i]!.players[k]!.playerId)));
+    const pool2 = buildRealPool([league, intl, next], [lp(intl, ['L02', 'L13', null])], ROLES);
+    expect(pool2.regionalRosters.find((r) => r.eventId === 'league-2024')!.iglKnown).toBe(false);
   });
 });

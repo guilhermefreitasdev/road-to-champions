@@ -369,7 +369,10 @@ export function userGroup(run: RunState): GroupKey | undefined {
   return run.tournament && groupOf(run.tournament, USER_ID);
 }
 
-export function involvesUser(m: TMatch): boolean {
+/** The parts of a match the user helpers need (also satisfied by league matches). */
+export type MatchLike = Pick<TMatch, 'a' | 'b' | 'result'>;
+
+export function involvesUser(m: MatchLike): boolean {
   return m.a === USER_ID || m.b === USER_ID;
 }
 
@@ -379,11 +382,11 @@ export function userMatches(run: RunState): TMatch[] {
 }
 
 /** Did the user win this (played) match? */
-export function userWon(m: TMatch): boolean {
+export function userWon(m: MatchLike): boolean {
   return !!m.result && (m.result.winner === 0) === (m.a === USER_ID);
 }
 
-export function userOpponent(m: TMatch): string {
+export function userOpponent(m: MatchLike): string {
   return m.a === USER_ID ? m.b : m.a;
 }
 

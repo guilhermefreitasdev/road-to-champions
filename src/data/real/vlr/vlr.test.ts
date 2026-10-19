@@ -1,7 +1,9 @@
 import { describe, expect, it } from 'vitest';
 import {
   agentSlug,
+  classifyEvent,
   classifyEventTitle,
+  classifyRegionalTitle,
   isShowmatch,
   parseAgentsPageMaps,
   parseDateRange,
@@ -11,6 +13,7 @@ import {
   parseStatsPage,
   parseStatsStageGroups,
   shortEventName,
+  slimEvent,
   slugify,
   splitVeto,
 } from '../../../../scripts/vlr/parse.mjs';
@@ -19,6 +22,7 @@ import statsFixture from '../../../../scripts/vlr/__fixtures__/event-stats-1015.
 import matchFixture from '../../../../scripts/vlr/__fixtures__/match-130685.html?raw';
 import { AGENTS, MAPS } from '../../game';
 import index from './events.json';
+import slim from './slim.json';
 
 const AGENT_BY_SLUG = Object.fromEntries(AGENTS.map((a) => [agentSlug(a.name), a.name]));
 
@@ -90,8 +94,8 @@ describe('vlr parsers (fixtures)', () => {
     expect(m.date).toBe('2022-09-18');
     expect(m.patch).toBe('5.04');
     expect(m.teams).toEqual([
-      { id: 6961, name: 'LOUD' },
-      { id: 8127, name: 'OpTic Gaming' },
+      { id: 6961, name: 'LOUD', players: [] },
+      { id: 8127, name: 'OpTic Gaming', players: [] },
     ]);
     expect(m.score).toEqual([3, 1]);
     expect(m.maps).toEqual([
@@ -103,6 +107,46 @@ describe('vlr parsers (fixtures)', () => {
     );
     expect(m.veto).toHaveLength(7);
     expect(m.veto![6]).toBe('Icebox remains');
+  });
+
+  it('reads the series scoreboard: player ids and tags per team, in header order', () => {
+    const row = (id: number, handle: string, tag: string) =>
+      `<div class="ovw-row"><div class="ovw-cell mod-player"><div class="ovw-player"><a href="/player/${id}/${handle.toLowerCase()}">
+        <div class="ovw-player-name text-of">${handle}</div><div class="ovw-player-tag ge-text-light">${tag}</div></a></div></div></div>`;
+    const html = `<div class="match-header-vs"><a class="match-header-link mod-1" href="/team/8185/kiwoom-drx"><div class="wf-title-med">DRX</div></a>
+      <a class="match-header-link mod-2" href="/team/8304/talon"><div class="wf-title-med">TALON</div></a></div>
+      <div class="vm-stats-game" data-game-id="all"><div class="ovw-table"><div class="ovw-row mod-head"></div>${row(485, 'stax', 'KRX')}${row(4462, 'MaKo', 'KRX')}</div>
+      <div class="ovw-table">${row(3977, 'Crws', 'TLN')}</div></div>
+      <div class="vm-stats-game" data-game-id="1"><div class="ovw-table">${row(999, 'nope', 'X')}</div></div>`;
+    const m = parseMatchPage(html);
+    expect(m.teams).toEqual([
+      { id: 8185, name: 'DRX', players: [{ id: 485, handle: 'stax', tag: 'KRX' }, { id: 4462, handle: 'MaKo', tag: 'KRX' }] },
+      { id: 8304, name: 'TALON', players: [{ id: 3977, handle: 'Crws', tag: 'TLN' }] },
+    ]);
+  });
+
+  it('classifies regional league stages (and leaves qualifiers, Challengers and the Evolution Series out)', () => {
+    expect(classifyRegionalTitle('Champions Tour 2023: Americas League')).toEqual({ year: 2023, region: 'americas', stage: 'league' });
+    expect(classifyRegionalTitle('Champions Tour 2024: EMEA Kickoff')).toEqual({ year: 2024, region: 'emea', stage: 'kickoff' });
+    expect(classifyRegionalTitle('VCT 2025: Pacific Stage 2')).toEqual({ year: 2025, region: 'pacific', stage: 'stage2' });
+    expect(classifyRegionalTitle('VCT 2026: China Stage 1')).toEqual({ year: 2026, region: 'china', stage: 'stage1' });
+    for (const t of [
+      'Champions Tour 2023: Americas Last Chance Qualifier',
+      'Champions Tour 2023: Champions China Qualifier',
+      'Champions Tour EMEA Stage 2: Challengers',
+      'China Evolution Series 2026: Act 3',
+      'Champions Tour 2024: Pacific Ascension',
+      'Valorant Champions 2025',
+    ]) {
+      expect(classifyRegionalTitle(t), t).toBeNull();
+    }
+    expect(classifyEvent('VCT 2025: Pacific Stage 2')).toEqual({ tier: 'regional', region: 'pacific', stage: 'stage2' });
+    expect(classifyEvent('Valorant Champions 2025')).toEqual({ tier: 'champions', region: null, stage: null });
+    expect(classifyEvent('China Evolution Series: Epilogue')).toBeNull();
+    expect(shortEventName('VCT 2025: Pacific Stage 2', 'regional', 2025, { region: 'pacific', stage: 'stage2' })).toBe('Pacific Stage 2 2025');
+    expect(slugify(shortEventName('Champions Tour 2023: Americas League', 'regional', 2023, { region: 'americas', stage: 'league' }))).toBe(
+      'americas-league-2023',
+    );
   });
 
   it('reads stage groups (for the showmatch exclude filter) and the agents-page map list', () => {
@@ -177,6 +221,8 @@ interface VlrEvent {
   id: number;
   slug: string;
   tier: string;
+  region: string | null;
+  stage: string | null;
   year: number;
   startDate: string | null;
   endDate: string | null;
@@ -206,17 +252,61 @@ const RANGES: [keyof Player, number, number][] = [
   ['clutchPct', 0, 100],
 ];
 
+const INTERNATIONAL = EVENTS.filter((e) => e.tier !== 'regional');
+const REGIONAL = EVENTS.filter((e) => e.tier === 'regional');
+
 describe('vlr snapshot', () => {
-  it('has one file per index entry, all completed international events', () => {
+  it('has one file per index entry, all completed VCT events (international or regional league stages)', () => {
     expect(EVENTS.length).toBe(index.events.length);
-    expect(EVENTS.length).toBeGreaterThanOrEqual(15);
+    expect(INTERNATIONAL.length).toBeGreaterThanOrEqual(15);
     for (const e of index.events) expect(files[`./${e.file}`]).toBeDefined();
     for (const e of EVENTS) {
-      expect(['masters', 'champions']).toContain(e.tier);
+      expect(['masters', 'champions', 'regional']).toContain(e.tier);
       expect(e.year).toBeGreaterThanOrEqual(2021);
       expect(e.startDate).toMatch(/^\d{4}-\d{2}-\d{2}$/);
       expect(e.source.fetchedAt).toMatch(/^\d{4}-\d{2}-\d{2}$/);
       expect(e.source.urls.every((u) => u.startsWith('https://www.vlr.gg/'))).toBe(true);
+      if (e.tier === 'regional') {
+        expect(['americas', 'emea', 'pacific', 'china']).toContain(e.region);
+        expect(['league', 'kickoff', 'stage1', 'stage2']).toContain(e.stage);
+        expect(e.slug).toBe(`${e.region}-${e.stage!.replace(/(\d)$/, '-$1')}-${e.year}`);
+      } else {
+        expect(e.region).toBeNull();
+        expect(e.stage).toBeNull();
+      }
+    }
+    const idx = new Map(index.events.map((e) => [e.slug, e]));
+    for (const e of EVENTS) expect(idx.get(e.slug), e.slug).toMatchObject({ tier: e.tier, region: e.region, stage: e.stage, year: e.year });
+  });
+
+  it('bundles slim.json: exactly slimEvent() of every full file (main players only, builder fields only)', () => {
+    expect(slim.length).toBe(EVENTS.length);
+    const bySlug = new Map(slim.map((e) => [e.slug, e]));
+    for (const e of EVENTS) {
+      const s = bySlug.get(e.slug)!;
+      expect(s, e.slug).toEqual(slimEvent(e));
+      expect(s.players.length).toBe(e.teams.reduce((n, t) => n + t.players.filter((p) => p.main).length, 0));
+      expect(Object.keys(s.players[0] ?? {})).not.toContain('kd');
+    }
+  });
+
+  it('has every regional league stage 2023–2025 (3 leagues in 2023, then Kickoff/Stage 1/Stage 2 × 4 regions), one per key', () => {
+    const keys = new Set(REGIONAL.map((e) => `${e.region}:${e.stage}:${e.year}`));
+    expect(keys.size).toBe(REGIONAL.length);
+    for (const r of ['americas', 'emea', 'pacific']) expect(keys.has(`${r}:league:2023`), r).toBe(true);
+    for (const y of [2024, 2025]) {
+      for (const r of ['americas', 'emea', 'pacific', 'china']) {
+        for (const s of ['kickoff', 'stage1', 'stage2']) expect(keys.has(`${r}:${s}:${y}`), `${r} ${s} ${y}`).toBe(true);
+      }
+    }
+    // A league stage has its whole league: 10 teams in 2023, 11–12 afterwards (16 in the 2026 Stage 2, which
+    // opened with a play-in for Challengers teams), 5 main players each.
+    for (const e of REGIONAL) {
+      const played = e.teams.filter((t) => t.played);
+      expect(played.length, e.slug).toBeGreaterThanOrEqual(e.year === 2023 ? 10 : 11);
+      expect(played.length, e.slug).toBeLessThanOrEqual(16);
+      expect(e.teams.filter((t) => t.placement?.min === 1), e.slug).toHaveLength(1);
+      expect(e.players.length, e.slug).toBeGreaterThanOrEqual(5 * played.length);
     }
   });
 

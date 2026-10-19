@@ -27,36 +27,49 @@ Depois de regenerar, rode `npx vitest run src/data/game` para validar o snapshot
 - Os nomes, textos e imagens são da Riot Games. Usamos esse material sob a política de conteúdo de fãs da Riot ("Legal Jibber Jabber"), em um projeto gratuito e com aviso de não afiliação.
 - As imagens de habilidades e os minimapas **não são copiadas** para o repositório: guardamos só as URLs servidas por `media.valorant-api.com`. Os ícones de agentes e as imagens de mapa que o jogo mostra ficam locais (seção "Mídia" abaixo); a URL do valorant-api.com continua no JSON como reserva.
 
-# Stats de eventos internacionais (VLR.gg)
+# Stats de eventos do VCT (VLR.gg)
 
-Snapshot dos eventos internacionais do VCT já encerrados (Masters, LOCK//IN e Champions, de 2021 em diante), tirado do [VLR.gg](https://www.vlr.gg). É a base real dos cards ("jogador @ time, evento") e substitui aos poucos o `src/data/sample.ts` fictício.
+Snapshot dos eventos do VCT já encerrados, tirado do [VLR.gg](https://www.vlr.gg): os **internacionais** (Masters, LOCK//IN e Champions, de 2021 em diante) e as **ligas regionais** da era das franquias (Americas, EMEA, Pacific e China: a liga única de 2023 e, de 2024 em diante, Kickoff, Stage 1 e Stage 2). É a base real dos cards ("jogador @ time, evento") e substitui aos poucos o `src/data/sample.ts` fictício.
 
 ## O que tem
 
 Arquivos gerados em `src/data/real/vlr/` (não editar à mão):
 
-- `events.json`: índice (id do VLR, nome, nome curto, tier `masters` | `champions`, ano, datas, local, nº de times e jogadores, mapas, caminho do arquivo).
-- `events/<slug>.json` (ex.: `champions-2022.json`), um por evento:
-  - meta: `id`, `name`, `shortName`, `year`, `tier`, `startDate`/`endDate`, `location`, `prize` e um bloco `source` (URLs usadas e `fetchedAt`, só a data).
+- `events.json`: índice (id do VLR, nome, nome curto, tier `masters` | `champions` | `regional`, `region` e `stage` (só nas ligas), ano, datas, local, nº de times e jogadores, mapas, caminho do arquivo).
+- `events/<slug>.json` (ex.: `champions-2022.json`, `americas-kickoff-2024.json`, `pacific-league-2023.json`), um por evento:
+  - meta: `id`, `name`, `shortName`, `year`, `tier`, `region` (`americas` | `emea` | `pacific` | `china`, `null` nos internacionais), `stage` (`league` | `kickoff` | `stage1` | `stage2`, `null` nos internacionais), `startDate`/`endDate`, `location`, `prize` e um bloco `source` (URLs usadas e `fetchedAt`, só a data).
   - `players`: uma linha por jogador, da página de stats do evento (todos os mapas e fases, `min_rounds=0`): id e handle do VLR, `teamId`/`teamTag`, país (código da bandeira), agentes como aparecem (`{agent, pct}`, nomes iguais aos de `src/data/game/agents.json`), `maps`, `rounds`, `rating`, `acs`, `kd`, `kast`, `adr`, `kpr`, `apr`, `fkfd`, `fkPct`/`fdPct` (% dos rounds com first kill/death, como o VLR mostra), `hsPct`, `clutchPct`, `clutches` ("2/18") + `clutchesWon`/`clutchesPlayed`, `kmax`, `k`, `d`, `a`, `fk`, `fd`. Números crus, sem nenhum valor de jogo derivado.
-  - `teams`: todos os times, com colocação final (quando a página mostra) e jogadores em ordem de rounds; os 5 com mais rounds têm `main: true`, os demais são reservas. Time que aparece na classificação mas não jogou (ex.: desistência) fica com `played: false`.
+  - `teams`: todos os times, com `countryName` (país como o VLR mostra na classificação; "Europe" para times multinacionais da Europa), colocação final (quando a página mostra) e jogadores em ordem de rounds; os 5 com mais rounds têm `main: true`, os demais são reservas. Time que aparece na classificação mas não jogou (ex.: desistência) fica com `played: false`.
+  - Colocação: a aba padrão do evento no VLR (a fase final) classifica o evento inteiro; uma fase anterior (grupos, play-in, temporada regular) classifica só ela mesma, então dela entram apenas os times que ela eliminou, isto é, faixas que começam abaixo de tudo que já foi colocado ("7th–9th" depois de um playoff "1st…4th"; nunca o "2nd" de um play-in). Quem o VLR não classifica assim fica sem colocação (`null`), nunca com chute.
+  - Elenco sem jogadores na página da fase (acontece nas ligas da China em 2024): o time é resolvido pelo placar de uma série dele (a aba "All" da página da partida lista os ids dos jogadores de cada lado), uma página a mais por time.
   - `mapPool`: mapas jogados no evento e quantas vezes (página de agentes do evento).
   - `matches`: algumas séries (da final para trás, até cobrir o pool, no máximo 12) com placar, mapas, quem escolheu cada mapa e o veto cru (`vetoRaw`, e `veto` só separado por `;`).
+- `slim.json`: o que o jogo empacota. É exatamente o subconjunto que `src/data/real/cards.ts` lê (`VlrEventData`): meta, pool de mapas, times (com `countryName`, colocação e a lista `{ playerId, main }`), só os titulares (`main`) com os stats que viram atributos, e as séries reduzidas a times, mapas (com quem escolheu) e veto. Gerado por `slimEvent()` (`scripts/vlr/parse.mjs`) a partir dos arquivos completos a cada rodada; o teste confere que é idêntico a `slimEvent()` de cada arquivo. Os arquivos completos continuam sendo a fonte da verdade (e são o que os testes de verificação leem); `index.ts` e `regions.ts` importam só o `slim.json`, para o bundle não crescer com reservas, URLs e colunas que o jogo não usa.
 - Showmatches (times de streamers/all-star) ficam de fora: as abas "Showmatch" são ignoradas e as stats usam o filtro `exclude` do próprio VLR quando a fase aparece nelas.
 - Limite conhecido: o VLR mostra só os 3 agentes mais jogados de cada jogador e um "+N"; guardamos os 3 e `agentsHidden: N`, sem adivinhar os outros.
+
+### Ligas regionais
+
+- Descoberta: a mesma listagem `/events/?tier=60` ("VCT") do VLR. Entra o que tem título "Champions Tour AAAA: <Região> League" (2023) ou "Champions Tour AAAA: <Região> Kickoff | Stage 1 | Stage 2" (2024) / "VCT AAAA: <Região> …" (2025+). Ficam de fora qualificatórias (LCQ, "Champions China Qualifier"), Challengers, Ascension e a China Evolution Series (segunda divisão chinesa). Em 2023 não existia liga da China (EDG, BLG e FPX foram aos internacionais por qualificatória), então 2023 tem só Americas, EMEA e Pacific.
+- Nome curto `"<Região> <Fase> <ano>"` (ex.: "Americas Kickoff 2024", "Pacific League 2023") e slug `<região>-<fase>-<ano>` (`emea-stage-1-2025`).
+- Mesma forma dos internacionais: stats de todos os jogadores, 5 titulares por time, pool de mapas e algumas séries com veto (da final para trás até cobrir o pool).
+- Tamanhos (2026-10-19): 57 arquivos completos somam 4,4 MB (18 internacionais 1,5 MB + 39 regionais 2,9 MB); `slim.json` tem 3,2 MB formatado, 1,5 MB compacto, e o bundle do jogo foi de 1,54 MB para 2,42 MB (405 KB gzip). As etapas de 2026 Stage 2 têm 16 times (14 na China): abriram com um play-in de times de Challengers; os eliminados nele ficam sem colocação.
+- Correção que veio com a regra de colocação: no Masters Tokyo 2023 a tabela da fase de grupos do VLR é por fase, então T1, FUT, ASE e NAVI (9º–12º de fato) ficavam com "5th–6th"/"7th–8th" e seus técnicos com tática 1; agora ficam sem colocação (tática 0). Nenhum outro card internacional mudou.
+- Eventos coletados (id do VLR): 2023 — Americas 1189, EMEA 1190, Pacific 1191. 2024 — Kickoff: Americas 1923, Pacific 1924, EMEA 1925, China 1926; Stage 1: EMEA 1998, Pacific 2002, Americas 2004, China 2006; Stage 2: EMEA 2094, Americas 2095, China 2096, Pacific 2005. 2025 — Kickoff: Americas 2274, China 2275, EMEA 2276, Pacific 2277; Stage 1: Americas 2347, China 2359, Pacific 2379, EMEA 2380; Stage 2: EMEA 2498, China 2499, Pacific 2500, Americas 2501. 2026 — Kickoff: Americas 2682, Pacific 2683, EMEA 2684, China 2685; Stage 1: Pacific 2775, Americas 2860, EMEA 2863, China 2864; Stage 2: Pacific 2776, EMEA 2976, Americas 2977, China 2978.
 
 ## Como regenerar
 
 ```bash
 npm run data:vlr                     # tudo (usa o cache quando existe)
+npm run data:vlr -- --tier regional  # só as ligas regionais (ou: international, all)
 npm run data:vlr -- --event 1015     # só um evento (id do VLR)
 npm run data:vlr -- --offline        # reconstrói o JSON só a partir do cache, sem rede
 npm run data:vlr -- --refresh        # baixa de novo páginas já em cache
 ```
 
-O script (`scripts/vlr/`, Node 22, única dependência `cheerio`) tem três partes: `fetch.mjs` (HTTP, cache e limites), `parse.mjs` (parsers puros) e `run.mjs` (descoberta dos eventos em `/events/?tier=60` e montagem do JSON). Toda página baixada fica em `.cache/vlr/<caminho>.html` (fora do git). Uma rodada nova só busca o que falta, e `--offline` gera arquivos idênticos byte a byte. Para um evento novo, basta rodar de novo depois que ele terminar: a listagem fica em cache, então use `--refresh` para enxergar eventos novos (isso baixa tudo de novo e demora).
+O script (`scripts/vlr/`, Node 22, única dependência `cheerio`) tem três partes: `fetch.mjs` (HTTP, cache e limites), `parse.mjs` (parsers puros) e `run.mjs` (descoberta dos eventos em `/events/?tier=60` e montagem do JSON). Toda página baixada fica em `.cache/vlr/<caminho>.html` (fora do git). Uma rodada nova só busca o que falta, e `--offline` gera arquivos idênticos byte a byte. Para um evento novo, basta rodar de novo depois que ele terminar: a listagem fica em cache, então use `--refresh` para enxergar eventos novos (isso baixa tudo de novo e demora). As 39 etapas regionais custaram cerca de 530 requisições (uns 25 min) na primeira vez; com o cache, a rodada completa dos 57 eventos leva menos de 2 min e `--offline` gera os mesmos bytes.
 
-Validação: `npx vitest run src/data/real/vlr` testa os parsers com trechos de HTML salvos em `scripts/vlr/__fixtures__/` e confere o snapshot (≥ 8 times por evento, 5 titulares por time, números em faixas plausíveis, agentes e mapas conhecidos).
+Validação: `npx vitest run src/data/real/vlr` testa os parsers com trechos de HTML salvos em `scripts/vlr/__fixtures__/` e confere o snapshot (≥ 8 times por evento e a liga inteira nas etapas regionais — 10 times em 2023, 11–12 depois —, 5 titulares por time, números em faixas plausíveis, agentes e mapas conhecidos, uma etapa por região/fase/ano).
 
 ## Regras de educação com o site
 
@@ -125,12 +138,36 @@ O conteúdo da Liquipedia é [CC-BY-SA 3.0](https://creativecommons.org/licenses
 
 # Cards do jogo (VLR + Liquipedia → cards)
 
-`src/data/real/cards.ts` transforma os dois snapshots acima nos elencos que o jogo usa (`REAL_ROSTERS`, exportado por `src/data/real/index.ts` junto com `realLineup` e `REAL_MAP_POOL`). É código puro e determinístico, rodado no carregamento da página; não há JSON de cards gerado. As fórmulas (função pelos agentes, percentis no ano, encolhimento por amostra, OVR, liderança, coach, conforto de mapa e pool do veto) estão em `docs/design.md`, seção "Cards reais".
+`src/data/real/cards.ts` transforma os dois snapshots acima nos elencos que o jogo usa, exportados por `src/data/real/index.ts`: `REAL_ROSTERS` (internacionais, tier `international`), `REGIONAL_ROSTERS` (etapas das ligas regionais, tier `regional`), `ALL_ROSTERS` (os dois juntos), `REGIONAL_EVENTS` (as etapas, com região, fase, datas e pool), `teamRegion`, `realLineup` e `REAL_MAP_POOL`. É código puro e determinístico, rodado no carregamento da página; não há JSON de cards gerado. As fórmulas (função pelos agentes, percentis no ano, encolhimento por amostra, OVR, liderança, coach, conforto de mapa e pool do veto) estão em `docs/design.md`, seção "Cards reais".
 
-- Casamento VLR ↔ Liquipedia: um time da Liquipedia é o do VLR quando tem pelo menos 3 dos 5 titulares em comum (pelo `vlrPlayerId` do perfil ou pelo handle normalizado, ex.: "FNS" na Liquipedia é o "FiNESSE" do VLR pelo id 817). Os 250 elencos casam.
-- Cobertura: IGL conhecido em 187 de 250 elencos, técnico em 249.
-- Testes: `cards.test.ts` (fórmulas com dados sintéticos) e `real.test.ts` (o pool real: 5 cards por elenco, ids únicos, stats copiados sem alteração, faixa de OVR, funções, IGL e coach batendo com a Liquipedia). `REAL_REPORT=1 npx vitest run src/data/real/real --silent=false` imprime a distribuição de OVR e os melhores cards com os stats de origem.
+- Casamento VLR ↔ Liquipedia: um time da Liquipedia é o do VLR quando tem pelo menos 3 dos 5 titulares em comum (pelo `vlrPlayerId` do perfil ou pelo handle normalizado, ex.: "FNS" na Liquipedia é o "FiNESSE" do VLR pelo id 817). Os 250 elencos internacionais casam.
+- Cobertura (internacionais): IGL conhecido em 187 de 250 elencos, técnico em 249.
+- Todo elenco dos dois pools carrega `region` (seção "Regiões" abaixo) e `tier`.
+- Cobertura (ligas): 464 elencos (2.320 cards) em 39 etapas; IGL conhecido em 176 (pela regra do mesmo ano, abaixo); nenhum técnico. OVR mín./p10/mediana/p90/máx. 63/68/76/84/90 (internacionais: 68/72/79/87/94).
+- Testes: `cards.test.ts` (fórmulas com dados sintéticos), `real.test.ts` (os pools reais: 5 cards por elenco, ids únicos entre os dois pools, stats copiados sem alteração, faixa de OVR, funções, IGL e coach batendo com a Liquipedia; ≥ 8 elencos por etapa regional) e `regions.test.ts`. `REAL_REPORT=1 npx vitest run src/data/real/real --silent=false` imprime a distribuição de OVR e os melhores cards com os stats de origem (dos dois pools); o mesmo com `src/data/real/regions` imprime os elencos por região e ano.
 - O jogo mostra os créditos no rodapé: VLR.gg e Liquipedia (CC-BY-SA 3.0), com links.
+
+## Elencos das ligas regionais (`REGIONAL_ROSTERS`)
+
+Mesmo construtor, mesmas fórmulas, com estas diferenças (todas em `cards.ts`):
+
+- **Ranking separado.** Os percentis (de cada stat e do desempenho para o OVR) são tirados dentro do ano **e do grupo** (internacional ou regional): um titular de liga é comparado só com os titulares de liga daquele ano, e o pool internacional mantém exatamente os números que tinha antes das ligas entrarem (o teste `real.test.ts` garante que nada muda; os ids de time também não mudam quando um time só de liga tem o mesmo slug de um internacional — `regions.ts`, `teamIdResolver`). Motivo: um mesmo jogador tem uma linha na liga e outra no Masters do mesmo ano; misturar as duas num ranking só mudaria o pool original e faria o nível das ligas depender de quantos times fortes foram aos internacionais.
+- **Bônus.** Tier −2 (`REGIONAL_TIER_BONUS`; Champions +2, Masters 0) e colocação na etapa: campeão +2, vice +1 (no internacional é +3/+2/+1 até o 4º). Resultado: a mediana de OVR das ligas fica uns 2 pontos abaixo da dos internacionais e o teto um pouco abaixo (veja o relatório).
+- **Função.** O desempate pela carreira usa só eventos internacionais para as linhas internacionais (para não mover cards existentes) e todos os eventos para as linhas de liga.
+- **IGL.** A Liquipedia não entra nas ligas (nenhuma página a mais é lida). O IGL de um elenco de liga vem só de um fato já nos dados: o mesmo time (id do VLR) teve, num evento internacional **do mesmo ano**, um IGL conhecido pela Liquipedia, e ele é um dos 5 titulares da etapa → `isIGL` com `iglSource: 'same-year-international'` e decisão 80 (a mesma do IGL de infobox). Dois nomes diferentes no ano → desconhecido. Sem isso, `iglKnown: false` (decisão neutra no motor). Limite conhecido: uma troca de IGL no meio do ano não é detectada.
+- **Técnico.** Nenhum (`coach` ausente): o VLR não diz quem era, e não lemos a Liquipedia para as ligas.
+- **Pool do veto** (`REAL_MAP_POOL`) continua sendo o do internacional mais recente com 7 mapas; o pool de cada etapa fica em `REGIONAL_EVENTS[].maps` e em `REAL_POOL.eventMapPools`.
+
+## Regiões (`src/data/real/regions.ts`)
+
+`teamRegion(teamId, eventId | ano)` dá a região (`americas` | `emea` | `pacific` | `china`) de um time do pool num evento ou num ano, só a partir dos dados versionados, nesta ordem:
+
+1. Etapa de liga regional: a região da própria etapa (do título na listagem do VLR).
+2. Era das franquias (2023+): a liga em que o time (id do VLR) jogou naquele ano. Times chineses nos internacionais de 2023 (antes da liga da China) caem na regra 3 e viram `china`.
+3. Senão (2021–22, ou time sem liga nos dados): o país que o VLR mostra na classificação do evento (`countryName`), mapeado para a sub-região de onde o time se classificou: NA/BR/LATAM → `americas`; EU/CIS/TR → `emea`; KR/JP/SEA/OCE/Sul da Ásia → `pacific`; CN → `china` (tabela `COUNTRY_REGION`; "Europe" é como o VLR mostra times europeus multinacionais).
+4. `REGION_OVERRIDES` (vazio hoje): só para time sem país no VLR, com a fonte em comentário.
+
+`regions.test.ts` garante que todo elenco de `ALL_ROSTERS` tem região, que `teamRegion` concorda com `RosterEntry.region` e que todo país presente nos dados está na tabela.
 
 # Mídia (logos, fotos, mapas e agentes)
 

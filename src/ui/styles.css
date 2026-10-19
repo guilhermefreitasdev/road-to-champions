@@ -3173,3 +3173,238 @@ abbr[title] {
   line-height: 1.35;
   overflow-wrap: anywhere;
 }
+
+/* --- Complete Trials --- */
+/* Region pick, field toggle, season hub (stage path, league tables, league playoffs) and season end. */
+
+.mode-card.trials {
+  border-color: var(--gold);
+  background: linear-gradient(160deg, var(--gold-tint), var(--surface) 60%);
+}
+
+.mode-card.trials .mode-go {
+  color: var(--gold);
+}
+
+@media (min-width: 640px) {
+  .mode-card.trials {
+    grid-column: 1 / -1;
+  }
+}
+
+.field-toggle {
+  margin: 0;
+  padding: var(--sp-3) var(--sp-4);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+}
+
+.field-toggle legend {
+  padding: 0 var(--sp-1);
+  font-family: var(--font-display);
+  font-size: var(--fs-md);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.field-toggle p {
+  margin: var(--sp-2) 0 0;
+  min-height: 1.5em;
+}
+
+.segmented {
+  display: inline-flex;
+  padding: 3px;
+  gap: 3px;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
+  background: var(--bg);
+}
+
+.segment {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 96px;
+  min-height: 38px;
+  padding: 6px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: var(--font-display);
+  font-size: var(--fs-md);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  transition:
+    background-color var(--dur-fast),
+    color var(--dur-fast);
+}
+
+.segment input {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.segment:hover {
+  color: var(--text);
+}
+
+.segment.is-on {
+  background: var(--accent-strong);
+  color: var(--accent-ink);
+}
+
+.segment:has(input:focus-visible) {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+}
+
+.region-grid {
+  display: grid;
+  gap: var(--sp-3);
+}
+
+@media (min-width: 640px) {
+  .region-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.region-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-1);
+  width: 100%;
+  padding: var(--sp-4);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  font-weight: normal;
+}
+
+.region-card:hover:not(:disabled) {
+  background: var(--surface-2);
+  border-color: var(--accent);
+}
+
+.region-logos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: var(--sp-2);
+}
+
+/* Season path: region + three stages (the main mode's .stage-path has five). */
+.stage-path.trials {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.stage-path.compact {
+  max-width: 440px;
+  margin: var(--sp-2) 0 0;
+}
+
+.stage-path.compact .stage-dot {
+  width: 22px;
+  height: 22px;
+  font-size: 0.8rem;
+}
+
+.stage-path.compact .stage + .stage::before {
+  top: 10px;
+}
+
+.stage-detail {
+  color: var(--muted);
+  font-size: var(--fs-xs);
+  text-align: center;
+  line-height: 1.2;
+}
+
+.stage.reached .stage-detail {
+  color: var(--gold);
+}
+
+.stage.locked {
+  opacity: 0.55;
+}
+
+.tab:disabled {
+  opacity: 0.4;
+}
+
+.hub-subtitle {
+  margin: var(--sp-4) 0 var(--sp-2);
+  font-family: var(--font-display);
+  font-size: var(--fs-lg);
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.league-stage {
+  display: flex;
+  flex-direction: column;
+  padding-top: var(--sp-3);
+}
+
+.league-stage .bk-note {
+  margin: 0 0 var(--sp-3);
+}
+
+.league-tables {
+  display: grid;
+  gap: var(--sp-4);
+  grid-template-columns: minmax(0, 1fr);
+}
+
+@media (min-width: 900px) {
+  .league-tables {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.league-tables .group-card:not(.is-selected) {
+  display: flex;
+}
+
+/* Six columns: place, team, series, map diff, round diff, status. */
+.league-table th:nth-child(3),
+.league-table th:nth-child(4),
+.league-table th:nth-child(5) {
+  width: 52px;
+}
+
+.league-table th:nth-child(6) {
+  width: 96px;
+}
+
+.league-table td:nth-child(4),
+.league-table td:nth-child(5) {
+  font-variant-numeric: tabular-nums;
+  color: var(--muted);
+}
+
+@media (max-width: 479px) {
+  .league-table th:nth-child(5),
+  .league-table td:nth-child(5) {
+    display: none;
+  }
+
+  .league-table th:nth-child(6) {
+    width: 34px;
+  }
+}
+
+.league-bracket .bk-canvas {
+  margin-top: var(--sp-1);
+}

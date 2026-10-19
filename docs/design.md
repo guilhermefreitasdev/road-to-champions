@@ -8,6 +8,7 @@ jogadores históricos (card = jogador + evento, ex.: "aspas @ LOUD, Champions 20
 |---|---|
 | Draft (MVP) | Roleta time+evento → escolhe 1 jogador → slot de função (DUE/INI/CON/SEN/FLEX). 5 picks + coach, 3 rerolls. Champions de 16 times: 4 grupos GSL (A–D) → playoffs dupla eliminação, final MD5 (ver "Formato do Champions") |
 | Ultimate Draft | 5 opções fixas por pick (seed por run), sem reroll |
+| Complete Trials (secundário) | Comece do seu servidor: escolha a região (Americas/EMEA/Pacific/China) e o campo (Atual ou Prime), drafte só com elencos de times dela, dispute a liga regional (12 times), o Masters (8) e o Champions (16). Ver "Modo Complete Trials" |
 | Diário / Valdle | Hub de minijogos diários: Cena Pro + Jogo (detalhado abaixo) |
 | Carreira | Org em liga regional (Americas/EMEA/Pacific/China): Kickoff → Stage 1 → Masters → Stage 2 → Champions. Transferências, patrocínio, base (Challengers), aura Rising→Star→Legend→GOAT |
 | Online | Ranked 1v1, lobby de 8 managers (fase final, precisa backend) |
@@ -71,6 +72,35 @@ Igual ao VCT Champions real: 16 times, fase de grupos e playoffs. Tudo MD3, meno
 - **Colocação de quem cai nos grupos**: 3º do grupo = 9º–12º; 4º = 13º–16º. Nos playoffs: 7º–8º (inferior R1), 5º–6º (R2), 4º (R3), 3º (final inferior), 2º (grande final).
 - **Na tela**: aba "Grupos" com cada grupo desenhado como chave GSL (Abertura → Vencedores → Classificado ✔ em cima, Eliminação → Decisiva → Classificado ✔ embaixo) e a tabela 1º–4º; no celular um grupo por vez (começa no seu), no desktop os quatro em 2×2 com o seu primeiro. Aba "Playoffs" com a chave completa (superior em cima, inferior embaixo, grande final à direita), linhas de ligação, placares e MD3/MD5; vagas vazias dizem de onde vem o time ("1º Grupo A", "Vencedor Quartas 1"). No celular a chave rola para o lado dentro da caixa, nunca a página. Para leitor de tela cada partida tem um resumo falado e "Ver série" é alcançável pelo teclado.
 - Saves do formato antigo (Suíça) são descartados (RunState v3); o Modelo v2 da força subiu para v4 (chave `rtc:run:v4`).
+
+## Modo Complete Trials (`src/game/season.ts`)
+
+Modo secundário, aprovado e implementado em 2026-10-19: a temporada começa no servidor do jogador. O modo principal (draft → Champions) continua intacto; a temporada tem seu próprio save (`rtc:season:v1`), e os dois podem coexistir.
+
+Fluxo: **Região** → **Draft** (clássico, 3 rerolls, roleta limitada aos elencos da região, de qualquer época) → **Coach** → **Seu time** → **Liga regional** → **Masters** → **Champions** → fim. Quem não fica entre os 3 primeiros da liga termina a run ali ("Eliminado na liga"). Tudo é determinístico pela seed + escolhas (região, campo, draft, veto); as partidas da IA são simuladas em ordem de tabela até a próxima partida do usuário, como no modo principal.
+
+### Campo adversário: Atual × Prime
+Escolhido na tela de região (padrão **Atual**), guardado em `SeasonState.field` e travado quando a liga começa. Os adversários são sempre **um elenco por time** (`fieldRosterFor(teamId, mode)`):
+- **Atual**: o elenco mais recente do time nos dados (maior `year`; com mais de um no mesmo ano, o último na ordem do pool, que lista os eventos internacionais por data e depois as etapas regionais). Só o draft do usuário sorteia todas as épocas.
+- **Prime** ("Modo Prime: todos os times no auge"): o elenco mais forte que o time já teve (maior `teamStrength(realLineup(entry)).total`; empate → o primeiro no pool). Nas tabelas, chaves e resultados o time aparece como "LOUD · Champions 2022", para o usuário ver qual versão enfrenta.
+
+### Liga regional (`src/engine/league.ts`)
+12 times: o usuário + 11 times distintos da região (sorteio com seed; elencos com um jogador do usuário só entram se não houver outro), seeds pela força. Dois grupos de 6 por "cobra" em potes de 2 (A = 1, 4, 5, 8, 9, 12 · B = 2, 3, 6, 7, 10, 11). Turno único em MD3 (5 séries por time, 30 no total), rodadas alternando A e B. Classificação: vitórias → saldo de mapas → saldo de rounds → seed do grupo; as colocações fecham quando os 15 jogos do grupo acabam. Os 3 primeiros de cada grupo vão aos playoffs (6 times, eliminação simples): Quartas A2 × B3 e B2 × A3 (MD3) → Semis A1 × venc. Q2 e B1 × venc. Q1 (MD3) → Decisão de 3º lugar (MD3, vale a última vaga do Masters) e Grande final (MD5). Colocações: 1º–4º pelos playoffs, 5º–6º quartas, 7º–8º os 4ºs dos grupos, 9º–10º os 5ºs, 11º–12º os 6ºs. **Os 3 primeiros vão ao Masters.**
+
+### Masters (`src/engine/bracket.ts`)
+8 times: os 3 da liga do usuário + 5 das outras regiões (2 de duas regiões e 1 da terceira; qual leva 1 é sorteado pela seed). Cada região manda os mais fortes de um sorteio de 2× o número de vagas (um Masters tem os favoritos da região, com alguma sorte). Chave de dupla eliminação de 8 reaproveitando o esqueleto dos playoffs do Champions (`PLAYOFF_BRACKET`), seeds pela força: quartas 1 × 8, 4 × 5, 2 × 7, 3 × 6; tudo MD3 e grande final MD5. Colocações como nos playoffs do Champions (7º–8º, 5º–6º, 4º, 3º, 2º, 1º). Quem joga o Masters sempre segue ao Champions, independentemente da colocação.
+
+### Champions
+16 times, 4 por região, no formato do modo principal (`createTournament`: grupos GSL + playoffs). A região do usuário manda os 4 primeiros da liga (os 3 do Masters + o 4º colocado); cada outra região manda seus times do Masters mais sorteios de times distintos para completar 4. Seeds pela força.
+
+### Tela, fim e compartilhamento
+- Início: terceiro card "Complete Trials — comece do seu servidor" e "Temporada salva" separada da "Run salva".
+- Região: 4 cards (blurb, número de times e elencos, logos dos times mais presentes) e o seletor Atual/Prime.
+- Hub da temporada: trilha Região → Liga → Masters → Champions (com a colocação de cada etapa), abas Liga (tabelas dos grupos com V-D, saldo de mapas e de rounds, e a chave dos playoffs), Masters (chave) e Champions (grupos GSL + chave, os mesmos componentes do modo principal), próxima partida e todas as suas partidas da temporada. Veto e série reutilizam as telas do modo principal.
+- Fim: título ("Campeão!", "Vice-campeão", "Eliminado", "Eliminado na liga"), a trilha, resumo por etapa, MVP, campeão da liga/Champions e o texto para compartilhar sem spoiler, ex.: "Americas → Liga 2º → Masters 3º → Champions 🏆".
+
+### Balanceamento (medido em `src/game/season.test.ts`, `TRIALS_REPORT=1`)
+Com o drafter guloso por OVR (o mesmo do `balance.test.ts`), n = 40 por campo: **Atual**: 15% chegam ao Masters, 8% ao top 4 do Masters, 0% de título; **Prime**: 13% / 5% / 0%. Ficar entre os 3 de 12 contra elencos reais de nível internacional é bem mais duro que o top 8 de 16 do modo principal (~74%). Pendente: decidir se a liga deve ter mais vagas, um teto de elencos de elite (como `FIELD_ELITE_CAP` no modo principal) ou rerolls extras; nada no motor foi tocado.
 
 ## Modo Diário (inspirado em valdle.gg / Loldle)
 

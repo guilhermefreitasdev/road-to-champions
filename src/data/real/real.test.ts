@@ -8,7 +8,7 @@ import { rosterKey } from '../../engine/roster';
 import { DIMENSION_REFERENCE, teamStrength } from '../../engine/team';
 import { MAPS } from '../game';
 import { normHandle, type VlrEventData } from './cards';
-import { REAL_MAP_POOL, REAL_POOL, REAL_ROSTERS, realLineup } from './index';
+import { ALL_ROSTERS, REAL_MAP_POOL, REAL_POOL, REAL_ROSTERS, REGIONAL_EVENTS, REGIONAL_ROSTERS, realLineup } from './index';
 import { LIQUIPEDIA_EVENTS } from './liquipedia';
 
 const env = (globalThis as { process?: { env: Record<string, string | undefined> } }).process?.env ?? {};
@@ -42,7 +42,9 @@ describe('REAL_ROSTERS', () => {
       expect(r.cards, rosterKey(r)).toHaveLength(5);
       expect(new Set(r.cards.map((c) => c.playerId)).size).toBe(5);
     }
-    expect(REAL_POOL.skipped.length).toBeLessThanOrEqual(5);
+    const regionalIds = REGIONAL_EVENTS.map((e) => e.id);
+    expect(REAL_POOL.skipped.filter((s) => !regionalIds.some((id) => s.includes(`-${id}:`))).length).toBeLessThanOrEqual(5);
+    for (const r of REAL_ROSTERS) expect(r.tier).toBe('international');
   });
 
   it('has unique card ids, roster keys and coach ids in the expected format', () => {
@@ -179,5 +181,86 @@ describe('REAL_ROSTERS', () => {
       lines.push(`TOP ${year}`, ...top.filter((c) => c.roster.year === year).slice(0, 3).map(fmt));
     }
     console.log(lines.join('\n'));
+  });
+});
+
+describe('REGIONAL_ROSTERS', () => {
+  const regionalCards = REGIONAL_ROSTERS.flatMap((r) => r.cards.map((card) => ({ card, roster: r })));
+  const regionalOvrs = regionalCards.map((c) => c.card.ovr).sort((a, b) => a - b);
+  const rq = (q: number) => regionalOvrs[Math.round(q * (regionalOvrs.length - 1))]!;
+
+  it('has every league stage with at least 8 rosters of 5 cards, tier regional, region set, ids unique across pools', () => {
+    expect(REGIONAL_EVENTS.length).toBeGreaterThanOrEqual(27);
+    for (const e of REGIONAL_EVENTS) {
+      const rosters = REGIONAL_ROSTERS.filter((r) => r.eventId === e.id);
+      expect(rosters.length, e.id).toBeGreaterThanOrEqual(8);
+      expect(rosters.every((r) => r.region === e.region && r.year === e.year && r.eventName === e.name), e.id).toBe(true);
+      expect(e.maps.length).toBeGreaterThanOrEqual(7);
+    }
+    for (const r of REGIONAL_ROSTERS) {
+      expect(r.tier).toBe('regional');
+      expect(r.cards, rosterKey(r)).toHaveLength(5);
+      expect(new Set(r.cards.map((c) => c.playerId)).size).toBe(5);
+      expect(r.coach).toBeUndefined();
+    }
+    const ids = ALL_ROSTERS.flatMap((r) => r.cards.map((c) => c.id));
+    expect(new Set(ids).size).toBe(ids.length);
+    const keys = ALL_ROSTERS.map(rosterKey);
+    expect(new Set(keys).size).toBe(keys.length);
+  });
+
+  it('copies the source stats verbatim and keeps attributes and OVR in range (a notch below the internationals)', () => {
+    for (const { card, roster } of regionalCards) {
+      const row = VLR.get(roster.eventId)!.players.find((p) => String(p.playerId) === card.playerId)!;
+      expect(row.handle).toBe(card.handle);
+      expect(card.stats).toEqual({ rounds: row.rounds, rating: row.rating, acs: row.acs, kast: row.kast });
+      for (const v of Object.values(card.attrs)) {
+        expect(v).toBeGreaterThanOrEqual(40);
+        expect(v).toBeLessThanOrEqual(99);
+      }
+    }
+    expect(rq(0)).toBeGreaterThanOrEqual(58);
+    expect(rq(0.5)).toBeGreaterThanOrEqual(72);
+    expect(rq(0.5)).toBeLessThanOrEqual(quantile(0.5));
+    expect(rq(1)).toBeLessThanOrEqual(quantile(1));
+    expect(rq(1)).toBeGreaterThanOrEqual(88);
+  });
+
+  it('marks an IGL only when the same team had a Liquipedia IGL at an international event of that year', () => {
+    let known = 0;
+    for (const r of REGIONAL_ROSTERS) {
+      const igls = r.cards.filter((c) => c.isIGL);
+      if (r.iglKnown) {
+        known++;
+        expect(igls).toHaveLength(1);
+        expect(igls[0]!.iglSource).toBe('same-year-international');
+        const intl = REAL_ROSTERS.filter(
+          (x) => x.year === r.year && x.iglKnown && x.cards.some((c) => c.playerId === igls[0]!.playerId && c.isIGL),
+        );
+        expect(intl.length, rosterKey(r)).toBeGreaterThan(0);
+        expect(realLineup(r).iglKnown).toBeUndefined();
+      } else {
+        expect(igls).toHaveLength(0);
+        expect(realLineup(r).iglKnown).toBe(false);
+      }
+      expect(() => teamStrength(realLineup(r))).not.toThrow();
+    }
+    expect(known / REGIONAL_ROSTERS.length).toBeGreaterThan(0.25);
+  });
+
+  it('prints a regional report with REAL_REPORT=1', () => {
+    if (!REPORT) return;
+    const top = [...regionalCards].sort((a, b) => b.card.ovr - a.card.ovr || a.card.id.localeCompare(b.card.id));
+    const fmt = ({ card: c, roster: r }: (typeof regionalCards)[number]) =>
+      `${String(c.ovr).padStart(3)} ${c.handle.padEnd(11)} ${`${r.teamName} · ${r.eventName}`.padEnd(42)} ${c.role.padEnd(10)} ${String(r.placement ?? '').padEnd(8)} rounds ${c.stats!.rounds} rating ${c.stats!.rating ?? '—'} ACS ${c.stats!.acs ?? '—'}${c.isIGL ? ' IGL' : ''}`;
+    console.log(
+      [
+        `${REGIONAL_ROSTERS.length} regional rosters, ${regionalCards.length} cards; OVR min/p10/p50/p90/max ${rq(0)}/${rq(0.1)}/${rq(0.5)}/${rq(0.9)}/${rq(1)}`,
+        `IGL known ${REGIONAL_ROSTERS.filter((r) => r.iglKnown).length}, affinity ${REGIONAL_ROSTERS.filter((r) => REAL_POOL.affinity[rosterKey(r)]).length}`,
+        `skipped: ${REAL_POOL.skipped.filter((s) => REGIONAL_EVENTS.some((e) => s.includes(`-${e.id}:`))).join(' | ')}`,
+        'TOP 10',
+        ...top.slice(0, 10).map(fmt),
+      ].join('\n'),
+    );
   });
 });

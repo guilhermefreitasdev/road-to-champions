@@ -1,10 +1,13 @@
 #!/usr/bin/env node
-// Scrapes completed VCT international events (Masters + Champions, 2021 onwards) from vlr.gg and
-// writes deterministic JSON to src/data/real/vlr/. Node 22+, ESM, depends only on cheerio.
+// Scrapes completed VCT events from vlr.gg and writes deterministic JSON to src/data/real/vlr/:
+// international events (Masters + Champions, 2021 onwards) and the regional league stages of the
+// franchising era (Americas/EMEA/Pacific/China: 2023 League, then Kickoff/Stage 1/Stage 2).
+// Node 22+, ESM, depends only on cheerio.
 //
 // Usage:
 //   npm run data:vlr                      # discover + scrape everything (uses .cache/vlr when present)
 //   npm run data:vlr -- --event 1015      # only this event id (repeatable or comma-separated)
+//   npm run data:vlr -- --tier regional   # only regional league stages (or: international, all)
 //   npm run data:vlr -- --offline         # rebuild JSON from the cache only, no network
 //   npm run data:vlr -- --refresh         # re-fetch pages even if cached
 //   npm run data:vlr -- --max-matches 12  # cap of match pages per event (default 12)
@@ -15,7 +18,7 @@ import { fileURLToPath } from 'node:url';
 import { BASE, VlrClient, cachePathFor, proxyHint } from './fetch.mjs';
 import {
   agentSlug,
-  classifyEventTitle,
+  classifyEvent,
   parseAgentsPageMaps,
   parseDateRange,
   parseEventListing,
@@ -26,6 +29,7 @@ import {
   parseStatsStageGroups,
   isShowmatch,
   shortEventName,
+  slimEvent,
   slugify,
 } from './parse.mjs';
 
@@ -54,16 +58,26 @@ const EXPECTED = [
   'champions-2025',
 ];
 
+/** Regional league stages we expect (2023: one league per region, no China league; 2024+: 3 stages × 4 regions). */
+const EXPECTED_REGIONAL = [
+  ...['americas', 'emea', 'pacific'].map((r) => `${r}-league-2023`),
+  ...[2024, 2025].flatMap((y) =>
+    ['americas', 'emea', 'pacific', 'china'].flatMap((r) => ['kickoff', 'stage-1', 'stage-2'].map((s) => `${r}-${s}-${y}`)),
+  ),
+];
+
 function parseArgs(argv) {
-  const args = { events: [], offline: false, refresh: false, maxMatches: 12 };
+  const args = { events: [], offline: false, refresh: false, maxMatches: 12, tier: 'all' };
   for (let i = 0; i < argv.length; i++) {
     const a = argv[i];
     if (a === '--offline') args.offline = true;
     else if (a === '--refresh') args.refresh = true;
     else if (a === '--event') args.events.push(...argv[++i].split(',').map(Number));
     else if (a === '--max-matches') args.maxMatches = Number(argv[++i]);
+    else if (a === '--tier') args.tier = argv[++i];
     else throw new Error(`unknown argument ${a}`);
   }
+  if (!['all', 'international', 'regional'].includes(args.tier)) throw new Error(`--tier must be all, international or regional`);
   return args;
 }
 
@@ -107,10 +121,10 @@ async function discoverEvents(client) {
   }
   const unique = new Map();
   for (const e of all) if (!unique.has(e.id)) unique.set(e.id, e);
-  const intl = [...unique.values()]
-    .map((e) => ({ ...e, tier: classifyEventTitle(e.title) }))
+  const vct = [...unique.values()]
+    .map((e) => ({ ...e, ...(classifyEvent(e.title) ?? { tier: null }) }))
     .filter((e) => e.tier);
-  return { listingPages: seen.size, intl };
+  return { listingPages: seen.size, vct };
 }
 
 /** Selects match pages newest-first until the union of maps covers the event's pool (or the cap). */
@@ -124,6 +138,7 @@ async function collectMatches(client, matchList, poolNames, eventTeamIds, maxMat
     if (poolNames.size && [...poolNames].every((p) => union.has(p))) break;
     if (!poolNames.size && idle >= 4) break;
     const parsed = parseMatchPage(await client.get(m.path));
+    for (const t of parsed.teams) delete t.players; // resolved above; not stored
     if (parsed.teams.some((t) => !eventTeamIds.has(t.id))) {
       log(`    skip match ${m.id} (${parsed.teams.map((t) => t.name).join(' vs ')}): not between event teams`);
       continue;
@@ -146,14 +161,26 @@ async function scrapeEvent(client, listed, agentBySlug, opts, log) {
 
   // 1. Event pages: overview (= active stage) + the other stage tabs, for meta, standings and rosters.
   //    Showmatch tabs (celebrity/all-star teams) are not part of the competition and are skipped.
+  //    Placements: the overview (VLR's default tab, the final stage) ranks the whole event; an earlier
+  //    stage (group stage, play-ins, regular season) ranks only itself, so from those we keep just the
+  //    teams it eliminated, i.e. ranks that start below everything already placed ("7th–9th" after a
+  //    "1st…4th" playoffs, never a play-in "2nd"). Teams VLR does not rank that way stay unplaced.
   const overview = parseEventPage(await get(listed.path));
   const activeStage = overview.stages.find((s) => s.active);
   const standings = activeStage && isShowmatch(activeStage.title) ? [] : [...overview.standings];
   const rosters = activeStage && isShowmatch(activeStage.title) ? [] : [...overview.rosters];
+  const standingRows = [...standings]; // every ranked row, for team names/countries (not placements)
+  const placedMax = () => Math.max(0, ...standings.map((s) => s.place?.max ?? 0));
   for (const stage of overview.stages) {
     if (stage.active || !stage.path || stage.path === listed.path || isShowmatch(stage.title)) continue;
     const page = parseEventPage(await get(stage.path));
-    standings.push(...page.standings);
+    const floor = placedMax();
+    const placed = new Set(standings.map((s) => s.teamId));
+    const accepted = page.standings.filter((s) => !placed.has(s.teamId) && (floor === 0 || (s.place?.min ?? 0) > floor));
+    const dropped = page.standings.filter((s) => !accepted.includes(s) && !placed.has(s.teamId));
+    if (dropped.length) log(`    ${stage.title}: ignoring stage-only ranks of ${dropped.map((s) => `${s.name} (${s.placeText})`).join(', ')}`);
+    standings.push(...accepted);
+    standingRows.push(...page.standings);
     rosters.push(...page.rosters);
   }
 
@@ -186,11 +213,53 @@ async function scrapeEvent(client, listed, agentBySlug, opts, log) {
     if (!teamInfo.has(r.teamId)) teamInfo.set(r.teamId, { id: r.teamId, slug: r.teamSlug, name: r.name });
     for (const p of r.players) if (!teamByPlayer.has(p.id)) teamByPlayer.set(p.id, r.teamId);
   }
+  // Some stage pages list a team with an empty roster card (e.g. group stages of the 2024 China Kickoff).
+  // For such a team, one of its match pages (the series scoreboard) says exactly who played for it.
+  const matchList = parseMatchList(await get(`/event/matches/${listed.id}/?series_id=all`)).filter(
+    (m) => !isShowmatch(m.series),
+  );
+  const matchPages = new Map();
+  const rosterless = () => [...teamInfo.values()].filter((t) => ![...teamByPlayer.values()].includes(t.id));
+  const registerScoreboard = (parsed) => {
+    for (const t of parsed.teams) {
+      if (!t.id || !teamInfo.has(t.id)) continue;
+      for (const p of t.players) if (!teamByPlayer.has(p.id)) teamByPlayer.set(p.id, t.id);
+    }
+  };
+  const completedMatches = matchList.filter((x) => /completed/i.test(x.status ?? ''));
+  // The standings may use a sponsored name ("JD Mall JDG Esports") where the match list says "JD Gaming":
+  // the team's VLR slug ("jd-gaming") is the stable form, so names are also compared slug-wise.
+  const slugish = (name) => (name ?? '').normalize('NFKD').toLowerCase().replace(/[^a-z0-9]/g, '');
+  const sameTeam = (name, team) => name === team.name || slugish(name) === slugish(team.slug);
+  for (const team of rosterless()) {
+    const m = completedMatches.find((x) => x.teams.some((n) => sameTeam(n, team)));
+    if (!m) continue; // handled below by team id
+    const parsed = parseMatchPage(await get(m.path));
+    matchPages.set(m.id, parsed);
+    registerScoreboard(parsed);
+    log(`    ${team.name}: roster taken from the scoreboard of match ${m.id}`);
+  }
+  // Still unresolved (the standings name is not the match-list name, e.g. "JD Mall JDG Esports" vs
+  // "JD Gaming"): walk the oldest matches (group stage first), which name teams by id, up to a few pages.
+  for (let i = completedMatches.length - 1, tries = 0; i >= 0 && rosterless().length && tries < 8; i--) {
+    const m = completedMatches[i];
+    if (matchPages.has(m.id)) continue;
+    tries++;
+    const parsed = parseMatchPage(await get(m.path));
+    matchPages.set(m.id, parsed);
+    const before = rosterless().map((t) => t.name);
+    registerScoreboard(parsed);
+    const solved = before.filter((n) => !rosterless().some((t) => t.name === n));
+    if (solved.length) log(`    ${solved.join(', ')}: roster taken from the scoreboard of match ${m.id} (found by team id)`);
+  }
+  for (const team of rosterless()) log(`    WARN ${team.name} has no roster card and no match page naming it`);
   const placementByTeam = new Map();
-  for (const s of standings) {
+  for (const s of standingRows) {
     if (!teamInfo.has(s.teamId)) teamInfo.set(s.teamId, { id: s.teamId, slug: s.teamSlug, name: s.name });
     else teamInfo.get(s.teamId).name = s.name;
     teamInfo.get(s.teamId).countryName = s.country;
+  }
+  for (const s of standings) {
     if (!placementByTeam.has(s.teamId)) placementByTeam.set(s.teamId, { text: s.placeText, ...s.place });
   }
   const teamByTag = new Map();
@@ -218,9 +287,6 @@ async function scrapeEvent(client, listed, agentBySlug, opts, log) {
 
   // 4. Match pages for vetoes (and to confirm maps). Showmatches are skipped.
   const eventTeamIds = new Set(teamInfo.keys());
-  const matchList = parseMatchList(await get(`/event/matches/${listed.id}/?series_id=all`)).filter(
-    (m) => !isShowmatch(m.series),
-  );
   const matches = await collectMatches(
     client,
     matchList,
@@ -276,7 +342,8 @@ async function scrapeEvent(client, listed, agentBySlug, opts, log) {
 
   const dates = parseDateRange(overview.datesText);
   const year = Number((dates.end ?? dates.start ?? '').slice(0, 4)) || Number(listed.title.match(/\d{4}/)?.[0]) || null;
-  const shortName = shortEventName(listed.title, listed.tier, year);
+  const regional = listed.tier === 'regional' ? { region: listed.region, stage: listed.stage } : null;
+  const shortName = shortEventName(listed.title, listed.tier, year, regional);
   const slug = slugify(shortName);
   const fetchedAt = await fetchedDate(statsPath);
 
@@ -287,6 +354,9 @@ async function scrapeEvent(client, listed, agentBySlug, opts, log) {
     shortName,
     year,
     tier: listed.tier,
+    // Regional league stages only: the league's region and the stage within the season.
+    region: regional?.region ?? null,
+    stage: regional?.stage ?? null,
     startDate: dates.start,
     endDate: dates.end,
     datesText: overview.datesText,
@@ -318,14 +388,18 @@ async function writeJson(path, data) {
 async function writeIndex(log) {
   const files = (await readdir(EVENTS_DIR)).filter((f) => f.endsWith('.json'));
   const events = [];
+  const slim = [];
   for (const f of files) {
     const e = JSON.parse(await readFile(join(EVENTS_DIR, f), 'utf8'));
+    slim.push(slimEvent(e));
     events.push({
       id: e.id,
       slug: e.slug,
       name: e.name,
       shortName: e.shortName,
       tier: e.tier,
+      region: e.region ?? null,
+      stage: e.stage ?? null,
       year: e.year,
       startDate: e.startDate,
       endDate: e.endDate,
@@ -339,6 +413,9 @@ async function writeIndex(log) {
     });
   }
   events.sort(byKey('startDate', 'id'));
+  slim.sort(byKey('startDate', 'slug'));
+  await writeJson(join(OUT_DIR, 'slim.json'), slim);
+  log(`wrote ${join(OUT_DIR, 'slim.json')} (${slim.length} events, ${JSON.stringify(slim).length} bytes compact)`);
   await writeJson(join(OUT_DIR, 'events.json'), {
     source: {
       site: 'VLR.gg',
@@ -359,14 +436,19 @@ async function main() {
   await client.init();
   const agentBySlug = await loadAgentSlugs();
 
-  const { listingPages, intl } = await discoverEvents(client);
-  log(`listing: ${listingPages} pages, ${intl.length} international events`);
-  const completed = intl.filter((e) => /completed/i.test(e.status ?? ''));
-  for (const e of intl.filter((x) => !completed.includes(x))) log(`  skip (${e.status}): ${e.title} [${e.id}]`);
+  const { listingPages, vct } = await discoverEvents(client);
+  const wanted = vct.filter(
+    (e) => args.tier === 'all' || (args.tier === 'regional') === (e.tier === 'regional'),
+  );
+  log(
+    `listing: ${listingPages} pages, ${vct.filter((e) => e.tier !== 'regional').length} international events, ${vct.filter((e) => e.tier === 'regional').length} regional league stages`,
+  );
+  const completed = wanted.filter((e) => /completed/i.test(e.status ?? ''));
+  for (const e of wanted.filter((x) => !completed.includes(x))) log(`  skip (${e.status}): ${e.title} [${e.id}]`);
   completed.sort(byKey('id'));
 
   const targets = args.events.length ? completed.filter((e) => args.events.includes(e.id)) : completed;
-  for (const id of args.events) if (!targets.some((e) => e.id === id)) log(`WARN event ${id} is not a completed international event`);
+  for (const id of args.events) if (!targets.some((e) => e.id === id)) log(`WARN event ${id} is not a completed VCT event of the requested tier`);
 
   const written = [];
   for (const [i, listed] of targets.entries()) {
@@ -381,7 +463,8 @@ async function main() {
 
   const index = await writeIndex(log);
   const slugs = new Set(index.map((e) => e.slug));
-  const missing = args.events.length ? [] : EXPECTED.filter((s) => !slugs.has(s));
+  const expected = args.tier === 'international' ? EXPECTED : args.tier === 'regional' ? EXPECTED_REGIONAL : [...EXPECTED, ...EXPECTED_REGIONAL];
+  const missing = args.events.length ? [] : expected.filter((s) => !slugs.has(s));
   if (missing.length) log(`WARN expected events not found: ${missing.join(', ')}`);
   log(
     `done: ${written.length} events scraped, ${client.requests} network requests, ${client.cacheHits} cache hits, ${Math.round((Date.now() - t0) / 1000)} s`,

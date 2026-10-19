@@ -1,9 +1,8 @@
-import { useEffect, useRef, useState, type Ref } from 'react';
-import { SLOTS, openSlots } from '../../engine/draft';
+import { useEffect, useMemo, useRef, useState, type Ref } from 'react';
+import { SLOTS, availableCards, openSlots, type DraftState } from '../../engine/draft';
 import { roleFit } from '../../engine/team';
-import type { Card, Slot } from '../../engine/types';
+import type { Card, RosterEntry, Slot } from '../../engine/types';
 import { SLOT_LABELS, SLOT_SHORT, fitLabel, placementLabel } from '../../game/explain';
-import { MODE_LABELS, RUN_POOL, draftOptions, rolledRoster, type RunState } from '../../game/run';
 import { findCard } from '../../engine/roster';
 import { TeamLogo } from '../components/TeamLogo';
 import { Icon } from '../components/Icon';
@@ -17,20 +16,26 @@ const REVEAL_TICKS = 12;
 const REVEAL_MS = 900;
 
 interface Props {
-  run: RunState;
+  draft: DraftState;
+  /** Rosters the draft rolls from (the whole pool, or one region's in Complete Trials). */
+  pool: readonly RosterEntry[];
+  /** Line under the title: the mode ("Draft clássico", "Complete Trials · Americas"). */
+  context: string;
   onRoll: () => void;
   onReroll: () => void;
   onPick: (cardId: string, slot: Slot) => void;
 }
 
-export function Draft({ run, onRoll, onReroll, onPick }: Props) {
-  const { draft } = run;
+export function Draft({ draft, pool, context, onRoll, onReroll, onPick }: Props) {
   const [selected, setSelected] = useState<string | null>(null);
   const [revealing, setRevealing] = useState(false);
   const reducedMotion = usePrefersReducedMotion();
-  const options = draftOptions(run);
+  const options = availableCards(draft, pool);
   const card = options.find((c) => c.id === selected);
-  const roster = rolledRoster(run);
+  const cur = draft.current;
+  const roster = cur && pool.find((e) => e.teamId === cur.teamId && e.eventId === cur.eventId);
+  // Names flashed by the roulette reveal (display only).
+  const rosterNames = useMemo(() => Array.from(new Set(pool.map((r) => `${r.teamName} · ${r.eventName}`))), [pool]);
   const pickNumber = Math.min(draft.picks.length + 1, SLOTS.length);
   // -Infinity, not 0: performance.now() starts at page load, so 0 would swallow a roll in the first 600 ms.
   const lastSpin = useRef(-Infinity);
@@ -88,7 +93,7 @@ export function Draft({ run, onRoll, onReroll, onPick }: Props) {
           Pick {pickNumber}/{SLOTS.length}
         </h1>
         <p className="context">
-          {MODE_LABELS[run.mode]}
+          {context}
           {draft.mode === 'classic' && ` · ${draft.rerollsLeft} reroll${draft.rerollsLeft === 1 ? '' : 's'}`}
         </p>
       </header>
@@ -111,7 +116,7 @@ export function Draft({ run, onRoll, onReroll, onPick }: Props) {
               <div className="roll-head">
                 {roster ? (
                   revealing ? (
-                    <RouletteTitle final={`${roster.teamName} · ${roster.eventName}`} onDone={endReveal} />
+                    <RouletteTitle final={`${roster.teamName} · ${roster.eventName}`} names={rosterNames} onDone={endReveal} />
                   ) : (
                     <h2 className="roll-title landed" ref={titleRef} tabIndex={-1}>
                       <TeamLogo teamId={roster.teamId} eventId={roster.eventId} name={roster.teamName} size={28} />
@@ -167,7 +172,7 @@ export function Draft({ run, onRoll, onReroll, onPick }: Props) {
           )}
         </div>
 
-        <Lineup run={run} target={card} />
+        <Lineup draft={draft} pool={pool} target={card} />
         {card ? (
           <SlotPicker
             ref={pickerRef}
@@ -203,11 +208,8 @@ function StepIndicator({ step }: { step: 1 | 2 | number }) {
   );
 }
 
-/** Names of the rosters in the pool, flashed during the roulette reveal (display only). */
-const ROSTER_NAMES = Array.from(new Set(RUN_POOL.map((r) => `${r.teamName} · ${r.eventName}`)));
-
 /** Slot-machine title: flashes roster names with an ease-out cadence, then lands on the rolled one. */
-function RouletteTitle({ final, onDone }: { final: string; onDone: () => void }) {
+function RouletteTitle({ final, names, onDone }: { final: string; names: string[]; onDone: () => void }) {
   const [tick, setTick] = useState(0);
   const done = useRef(onDone);
   useEffect(() => {
@@ -233,8 +235,8 @@ function RouletteTitle({ final, onDone }: { final: string; onDone: () => void })
     return () => window.removeEventListener('keydown', onKey);
   }, []);
 
-  const offset = final.length % ROSTER_NAMES.length;
-  const name = tick >= REVEAL_TICKS - 1 ? final : ROSTER_NAMES[(offset + tick * 7) % ROSTER_NAMES.length];
+  const offset = final.length % names.length;
+  const name = tick >= REVEAL_TICKS - 1 ? final : names[(offset + tick * 7) % names.length];
   return (
     <h2 className="roll-title spinning" aria-live="off">
       <span className="sr-only">Sorteando…</span>
@@ -289,13 +291,13 @@ function SlotPicker({ card, open, onChoose, onCancel, ref }: SlotPickerProps) {
 }
 
 /** The 5 slots with the cards already drafted; open slots light up as targets while a card is selected. */
-function Lineup({ run, target }: { run: RunState; target?: Card }) {
-  const bySlot = new Map(run.draft.picks.map((p) => [p.slot, p.cardId]));
+function Lineup({ draft, pool, target }: { draft: DraftState; pool: readonly RosterEntry[]; target?: Card }) {
+  const bySlot = new Map(draft.picks.map((p) => [p.slot, p.cardId]));
   return (
     <ol className={`slots${target ? ' targeting' : ''}`} aria-label="Seu time">
       {SLOTS.map((slot) => {
         const id = bySlot.get(slot);
-        const card = id ? findCard(RUN_POOL, id) : undefined;
+        const card = id ? findCard(pool, id) : undefined;
         return (
           <li
             key={slot}

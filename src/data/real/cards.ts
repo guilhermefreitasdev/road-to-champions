@@ -6,8 +6,9 @@
  * source does not have counts as the neutral 50th percentile (never a guess), and the card keeps `null` in
  * its `stats`. The formulas are summarized in pt-BR in docs/design.md ("Núcleo de simulação").
  */
-import type { Attributes, Card, Coach, MapName, Role, RosterEntry } from '../../engine/types';
+import type { Attributes, Card, Coach, EventTier, MapName, Region, Role, RosterEntry } from '../../engine/types';
 import type { LiquipediaEvent, LiquipediaPlayer, LiquipediaTeam } from './liquipedia';
+import { buildRegionIndex, teamIdResolver } from './regions';
 
 // ---------------------------------------------------------------------------
 // Input shapes: the subset of the generated JSON the builder reads (see docs/data.md).
@@ -47,6 +48,8 @@ export interface VlrTeamRow {
   played: boolean;
   placement: { text: string; min: number; max: number } | null;
   players: { playerId: number; main: boolean }[];
+  /** Country as VLR prints it in the event standings (e.g. "Brazil", "Europe"); null when VLR has none. */
+  countryName?: string | null;
 }
 
 export interface VlrMatch {
@@ -59,8 +62,13 @@ export interface VlrEventData {
   slug: string;
   shortName: string;
   year: number;
+  /** 'masters' | 'champions' (international) or 'regional' (a VCT regional league stage). */
   tier: string;
+  /** Regional league stages only: the league's region and the stage ('league' | 'kickoff' | 'stage1' | 'stage2'). */
+  region?: Region | null;
+  stage?: string | null;
   startDate: string | null;
+  endDate?: string | null;
   mapPool: { map: string; played: number | null }[];
   teams: VlrTeamRow[];
   players: VlrPlayerRow[];
@@ -242,20 +250,39 @@ export function placementBonus(placement: { min: number } | null): number {
   return 0;
 }
 
-/** OVR bonus for the event tier: Champions +2, Masters / LOCK//IN 0. */
+/** OVR bonus for the event tier: Champions +2, Masters / LOCK//IN 0, regional league stage −2. */
 export function tierBonus(tier: string): number {
-  return tier === 'champions' ? 2 : 0;
+  if (tier === 'champions') return 2;
+  if (tier === 'regional') return REGIONAL_TIER_BONUS;
+  return 0;
 }
+
+/** Regional league stages: −2 OVR (its percentiles are taken among regional rows only, see docs/data.md). */
+export const REGIONAL_TIER_BONUS = -2;
+
+/** OVR bonus for a regional league placement: league stage champion +2, finalist +1 (top 4 nothing). */
+export function regionalPlacementBonus(placement: { min: number } | null): number {
+  if (!placement) return 0;
+  if (placement.min === 1) return 2;
+  if (placement.min === 2) return 1;
+  return 0;
+}
+
+/** International or regional? Rows of the two groups are ranked separately (percentiles within year + group). */
+export const tierGroup = (tier: string): EventTier => (tier === 'regional' ? 'regional' : 'international');
 
 // ---------------------------------------------------------------------------
 // Builder
 // ---------------------------------------------------------------------------
 
 export interface RealPool {
+  /** International rosters (Masters, LOCK//IN, Champions): the original pool. */
   rosters: RosterEntry[];
+  /** Regional league stage rosters (tier 'regional'), same card builder, ranked among themselves. */
+  regionalRosters: RosterEntry[];
   /** Map comfort per roster key (`${teamId}-${eventId}`), from the vetoes stored for that event. */
   affinity: Record<string, Partial<Record<MapName, number>>>;
-  /** Veto pool: the map pool of the most recent event (by start date) that has exactly 7 maps. */
+  /** Veto pool: the map pool of the most recent international event (by start date) that has exactly 7 maps. */
   mapPool: MapName[];
   mapPoolEventId: string;
   /** Map pool of every event, by event id. */
@@ -292,12 +319,10 @@ export function buildRealPool(
   const skipped: string[] = [];
   const notes: string[] = [];
 
-  // Team ids: the VLR slug, plus the VLR id when two different teams share a slug.
-  const idsBySlug = new Map<string, Set<number>>();
-  for (const e of events) {
-    for (const t of e.teams) idsBySlug.set(t.slug, (idsBySlug.get(t.slug) ?? new Set()).add(t.id));
-  }
-  const teamIdOf = (t: VlrTeamRow) => ((idsBySlug.get(t.slug)?.size ?? 1) > 1 ? `${t.slug}-${t.id}` : t.slug);
+  // Team ids: the VLR slug, plus the VLR id when two different teams share a slug (regions.ts, so that
+  // international ids never change when a regional team shares a slug). Regions come from the same data.
+  const teamIdOf = teamIdResolver(events);
+  const regions = buildRegionIndex(events);
 
   // 1. Main players of every roster that played and has enough rounds.
   type Draft = Omit<Row, 'role'> & { weights: RoleWeights };
@@ -336,14 +361,20 @@ export function buildRealPool(
   }
 
   // 2. Roles: this event's agents; ties broken by the player's agents over all events (weighted by rounds).
-  const career = new Map<number, RoleWeights>();
+  //    International rows look only at international events (their cards do not move when regional data is
+  //    added); regional rows use everything.
+  const careerIntl = new Map<number, RoleWeights>();
+  const careerAll = new Map<number, RoleWeights>();
   for (const r of rosters.flatMap((x) => x.rows)) {
     const total = Object.values(r.weights).reduce((s, v) => s + v, 0) || 1;
-    const c = career.get(r.vlr.playerId) ?? { duelist: 0, initiator: 0, controller: 0, sentinel: 0 };
-    for (const role of ROLES) c[role] += (r.weights[role] / total) * r.rounds;
-    career.set(r.vlr.playerId, c);
+    for (const career of tierGroup(r.event.tier) === 'regional' ? [careerAll] : [careerIntl, careerAll]) {
+      const c = career.get(r.vlr.playerId) ?? { duelist: 0, initiator: 0, controller: 0, sentinel: 0 };
+      for (const role of ROLES) c[role] += (r.weights[role] / total) * r.rounds;
+      career.set(r.vlr.playerId, c);
+    }
   }
   const rows: Row[] = rosters.flatMap((x) => {
+    const career = tierGroup(x.event.tier) === 'regional' ? careerAll : careerIntl;
     const primary = x.rows.map((r) => pickRole(r.weights, career.get(r.vlr.playerId)));
     const roles = coverRoles(
       primary,
@@ -352,17 +383,20 @@ export function buildRealPool(
     return x.rows.map(({ weights: _w, ...r }, i) => ({ ...r, role: roles[i]! }));
   });
 
-  // 3. Percentiles within the year (and within year + role for the OVR).
-  const clutchPrior = new Map<number, number>();
-  for (const year of new Set(rows.map((r) => r.event.year))) {
+  // 3. Percentiles within the year and tier group (international / regional), and within year + group +
+  //    role for the OVR. The two groups never share a ranking: a regional star is the 100th percentile of the
+  //    regional rows of that year, and the international pool keeps the numbers it had before regional data.
+  const groupOf = (r: Row) => `${r.event.year}:${tierGroup(r.event.tier)}`;
+  const clutchPrior = new Map<string, number>();
+  for (const g of new Set(rows.map(groupOf))) {
     let won = 0;
     let played = 0;
     for (const r of rows) {
-      if (r.event.year !== year || r.vlr.clutchesWon === null || r.vlr.clutchesPlayed === null) continue;
+      if (groupOf(r) !== g || r.vlr.clutchesWon === null || r.vlr.clutchesPlayed === null) continue;
       won += r.vlr.clutchesWon;
       played += r.vlr.clutchesPlayed;
     }
-    clutchPrior.set(year, played > 0 ? (100 * won) / played : 0);
+    clutchPrior.set(g, played > 0 ? (100 * won) / played : 0);
   }
   const stat = (r: Row, k: StatKey): number | null => {
     const v = r.vlr;
@@ -374,7 +408,7 @@ export function buildRealPool(
       case 'fk':
         return v.fkPct;
       case 'clutch':
-        return shrunkClutchRate(v.clutchesWon, v.clutchesPlayed, clutchPrior.get(r.event.year)!);
+        return shrunkClutchRate(v.clutchesWon, v.clutchesPlayed, clutchPrior.get(groupOf(r))!);
       default:
         return v[k];
     }
@@ -389,18 +423,18 @@ export function buildRealPool(
   const KEYS: StatKey[] = ['rating', 'acs', 'kast', 'adr', 'kpr', 'apr', 'hs', 'net', 'fk', 'clutch'];
   for (const r of rows) {
     for (const k of KEYS) {
-      add(`${r.event.year}:${k}`, stat(r, k));
-      add(`${r.event.year}:${r.role}:${k}`, stat(r, k));
+      add(`${groupOf(r)}:${k}`, stat(r, k));
+      add(`${groupOf(r)}:${r.role}:${k}`, stat(r, k));
     }
   }
   for (const list of groups.values()) list.sort((a, b) => a - b);
   const pYear = (r: Row, k: StatKey) => {
     const v = stat(r, k);
-    return v === null ? null : percentile(groups.get(`${r.event.year}:${k}`) ?? [], v);
+    return v === null ? null : percentile(groups.get(`${groupOf(r)}:${k}`) ?? [], v);
   };
   const pRole = (r: Row, k: StatKey) => {
     const v = stat(r, k);
-    return v === null ? null : percentile(groups.get(`${r.event.year}:${r.role}:${k}`) ?? [], v);
+    return v === null ? null : percentile(groups.get(`${groupOf(r)}:${r.role}:${k}`) ?? [], v);
   };
 
   // Data gaps, reported once per event and stat.
@@ -421,11 +455,26 @@ export function buildRealPool(
     if (!t?.igl) return null;
     return t.players.find((p) => p.handle === t.igl) ?? null;
   };
-  const isIglRow = (r: Row) => {
+  const isLiquipediaIgl = (r: Row) => {
     const igl = iglOf(r);
     return !!igl && !!r.lpPlayer && igl === r.lpPlayer;
   };
-  const everIgl = new Set(rows.filter(isIglRow).map((r) => r.vlr.playerId));
+  // Regional rosters have no Liquipedia page in the data. Their IGL is taken only from the same team's
+  // international rosters of the same year (Liquipedia-backed): one and the same player there, and among
+  // the regional roster's 5 → IGL with source 'same-year-international'. Two different names → unknown.
+  const intlIglByTeamYear = new Map<string, Set<number>>();
+  for (const r of rows) {
+    if (tierGroup(r.event.tier) === 'regional' || !isLiquipediaIgl(r)) continue;
+    const key = `${r.team.id}:${r.event.year}`;
+    intlIglByTeamYear.set(key, (intlIglByTeamYear.get(key) ?? new Set()).add(r.vlr.playerId));
+  }
+  const isInferredIgl = (r: Row) => {
+    if (tierGroup(r.event.tier) !== 'regional') return false;
+    const ids = intlIglByTeamYear.get(`${r.team.id}:${r.event.year}`);
+    return ids?.size === 1 && ids.has(r.vlr.playerId);
+  };
+  const isIglRow = (r: Row) => isLiquipediaIgl(r) || isInferredIgl(r);
+  const everIgl = new Set(rows.filter(isLiquipediaIgl).map((r) => r.vlr.playerId));
 
   // 5. Coaches: experience counted in event order.
   const coachSeen = new Map<string, number>();
@@ -446,12 +495,14 @@ export function buildRealPool(
     rowsByRoster.set(key, [...(rowsByRoster.get(key) ?? []), r]);
   }
   const out: RosterEntry[] = [];
+  const regionalOut: RosterEntry[] = [];
   const affinity: Record<string, Partial<Record<MapName, number>>> = {};
   for (const { event, team } of rosters) {
     const teamId = teamIdOf(team);
     const key = `${teamId}-${event.slug}`;
     const rr = rowsByRoster.get(key)!;
     const cards = rr.map((r) => buildCard(r));
+    const tier = tierGroup(event.tier);
     const entry: RosterEntry = {
       teamId,
       teamName: team.name ?? team.slug,
@@ -460,7 +511,11 @@ export function buildRealPool(
       year: event.year,
       cards,
       iglKnown: cards.some((c) => c.isIGL),
+      tier,
     };
+    const region = regions.regionOf(team, event);
+    if (region) entry.region = region;
+    else notes.push(`${key}: sem região (país "${team.countryName ?? '—'}" não mapeado em regions.ts)`);
     if (team.placement) entry.placement = team.placement.text;
     const lpCoach = rr[0]!.lpTeam?.coach;
     if (lpCoach) {
@@ -474,7 +529,7 @@ export function buildRealPool(
       };
       entry.coach = coach;
     }
-    out.push(entry);
+    (tier === 'regional' ? regionalOut : out).push(entry);
     const aff = vetoAffinity(event, team);
     if (Object.keys(aff).length > 0) affinity[key] = aff;
   }
@@ -492,7 +547,7 @@ export function buildRealPool(
     const isDuelist = r.role === 'duelist';
     const netWeight = isDuelist ? 0.7 : 0.4;
     const isIGL = isIglRow(r);
-    const igl = isIGL ? r.lpTeam!.iglSource : null;
+    const igl = !isIGL ? null : isLiquipediaIgl(r) ? r.lpTeam!.iglSource : 'same-year-international';
     const attrs: Attributes = {
       aim: attr(blend([[pYear(r, 'hs'), 1], [pYear(r, 'kpr'), 1], [pYear(r, 'adr'), 1]])),
       entry: attr(blend([[pYear(r, 'net'), netWeight], [pYear(r, 'fk'), 1 - netWeight]])),
@@ -509,7 +564,9 @@ export function buildRealPool(
     const perf = (p: (r: Row, k: StatKey) => number | null) =>
       blend([[p(r, 'rating'), 0.5], [p(r, 'acs'), 0.3], [p(r, 'kast'), 0.2]]);
     const performance = blend([[perf(pYear), 1], [perf(pRole), 1]]);
-    const raw = OVR_FLOOR + (OVR_SPAN * shrink(performance, n)) / 100 + placementBonus(r.team.placement) + tierBonus(r.event.tier);
+    const bonus =
+      tierGroup(r.event.tier) === 'regional' ? regionalPlacementBonus(r.team.placement) : placementBonus(r.team.placement);
+    const raw = OVR_FLOOR + (OVR_SPAN * shrink(performance, n)) / 100 + bonus + tierBonus(r.event.tier);
     const ovr = Math.max(OVR_MIN, Math.min(OVR_MAX, Math.round(raw)));
 
     const lpFlag = r.lpPlayer?.flag;
@@ -535,12 +592,13 @@ export function buildRealPool(
   // 7. Map pools.
   const eventMapPools: Record<string, MapName[]> = {};
   for (const e of events) eventMapPools[e.slug] = e.mapPool.map((m) => m.map).sort();
-  const full = events.filter((e) => eventMapPools[e.slug]!.length === 7);
+  const full = events.filter((e) => tierGroup(e.tier) === 'international' && eventMapPools[e.slug]!.length === 7);
   const latest = full[full.length - 1];
   if (!latest) throw new Error('No event with a 7-map pool');
 
   return {
     rosters: out,
+    regionalRosters: regionalOut,
     affinity,
     mapPool: eventMapPools[latest.slug]!,
     mapPoolEventId: latest.slug,
