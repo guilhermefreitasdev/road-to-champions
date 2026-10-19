@@ -32,4 +32,4 @@ Design completo: `docs/design.md`. Ideias guardadas, que ainda NÃO devem ser im
 - Nunca inventar estatísticas para jogadores reais. Dados reais vêm só do pipeline (VLR + Liquipedia + valorant-api.com), com crédito ao VLR.gg e à Liquipedia (CC-BY-SA) no rodapé. Todo número de um card sai de `src/data/real/cards.ts` por fórmula documentada; stat ausente vira percentil neutro e aparece como "—", nunca chute.
 - Mudou o formato da run ou o pool de forma que saves antigos não fazem sentido: suba `RUN_VERSION` (`run.ts`) e a chave em `storage.ts`.
 - Texto da interface e dos docs em português (pt-BR); identificadores e comentários de código em inglês.
-- Projeto de fã: gratuito, seguindo a política "Legal Jibber Jabber" da Riot e com aviso de não afiliação. Sem fotos de jogadores e sem logos de times.
+- Projeto de fã: gratuito, seguindo a política "Legal Jibber Jabber" da Riot e com aviso de não afiliação. Logos de times e fotos de jogadores são usados por decisão do dono do projeto (19/10/2026): da época do evento quando a fonte tiver, senão os atuais; sempre com crédito da fonte e retirada imediata se o titular pedir.
