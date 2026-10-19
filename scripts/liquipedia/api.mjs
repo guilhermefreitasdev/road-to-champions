@@ -12,6 +12,8 @@ import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 export const API_URL = 'https://liquipedia.net/valorant/api.php';
+/** Other Liquipedia wikis we read (same terms, same shared rate limit). `commons` hosts team templates and image files. */
+const apiUrlFor = (wiki = 'valorant') => `https://liquipedia.net/${wiki}/api.php`;
 export const USER_AGENT = 'RoadToChampions/0.1 (fan project; github.com/guilhermefreitasdev/road-to-champions)';
 export const CACHE_DIR = join(dirname(fileURLToPath(import.meta.url)), '..', '..', '.cache', 'liquipedia');
 
@@ -50,13 +52,14 @@ async function waitForSlot(heavy) {
 }
 
 /** One GET to api.php. Never called for action=parse. Retries politely on 429/5xx. */
-async function apiGet(params) {
+async function apiGet(params, wiki = 'valorant') {
   if (params.action === 'parse') throw new Error('action=parse is not used by this client (30 s rate limit)');
   const heavy = params.action === 'expandtemplates';
   const search = new URLSearchParams({ format: 'json', formatversion: '2', ...params });
   // Long wikitext snippets go in a POST body instead of the URL.
   const post = heavy;
-  const url = post ? API_URL : `${API_URL}?${search}`;
+  const base = apiUrlFor(wiki);
+  const url = post ? base : `${base}?${search}`;
   for (let attempt = 1; ; attempt++) {
     await waitForSlot(heavy);
     stats.requests++;
@@ -81,10 +84,11 @@ async function apiGet(params) {
   }
 }
 
-const pageFile = (title) => {
+const pageFile = (title, wiki = 'valorant') => {
   const safe = title.replace(/[^A-Za-z0-9._-]+/g, '_').slice(0, 80);
   const hash = createHash('sha1').update(title).digest('hex').slice(0, 8);
-  return join(CACHE_DIR, 'pages', `${safe}.${hash}.json`);
+  // The valorant wiki keeps the original layout; other wikis get their own folder.
+  return join(CACHE_DIR, wiki === 'valorant' ? 'pages' : `pages-${wiki}`, `${safe}.${hash}.json`);
 };
 
 async function readJson(file) {
@@ -105,11 +109,11 @@ async function writeJson(file, data) {
  * Follows redirects. Returns Map<requestedTitle, { title, pageid, revid, timestamp, content } | { title, missing: true }>.
  * offline: only the cache is used; uncached titles come back as { title, uncached: true }.
  */
-export async function getPages(titles, { refresh = false, offline = false } = {}) {
+export async function getPages(titles, { refresh = false, offline = false, wiki = 'valorant' } = {}) {
   const out = new Map();
   const todo = [];
   for (const t of [...new Set(titles)]) {
-    const cached = refresh ? undefined : await readJson(pageFile(t));
+    const cached = refresh ? undefined : await readJson(pageFile(t, wiki));
     if (cached) {
       stats.cacheHits++;
       out.set(t, cached);
@@ -128,7 +132,7 @@ export async function getPages(titles, { refresh = false, offline = false } = {}
       rvslots: 'main',
       redirects: '1',
       titles: batch.join('|'),
-    });
+    }, wiki);
     const q = body.query ?? {};
     // requested -> normalized -> redirect target
     const resolve = (t) => {
@@ -161,7 +165,7 @@ export async function getPages(titles, { refresh = false, offline = false } = {}
         };
         if (p.title !== t) entry.requestedTitle = t;
       }
-      await writeJson(pageFile(t), entry);
+      await writeJson(pageFile(t, wiki), entry);
       out.set(t, entry);
     }
     if (done === 0) throw new Error(`no progress fetching ${batch.length} titles (response size limit?)`);
@@ -174,8 +178,8 @@ export async function getPage(title, opts) {
 }
 
 /** Any other read-only query (e.g. list=search, list=allpages), cached by its parameters. */
-export async function query(params, { refresh = false, offline = false } = {}) {
-  const key = createHash('sha1').update(JSON.stringify(params)).digest('hex');
+export async function query(params, { refresh = false, offline = false, wiki = 'valorant' } = {}) {
+  const key = createHash('sha1').update(JSON.stringify(wiki === 'valorant' ? params : { wiki, ...params })).digest('hex');
   const file = join(CACHE_DIR, 'queries', `${key}.json`);
   if (!refresh) {
     const cached = await readJson(file);
@@ -185,8 +189,8 @@ export async function query(params, { refresh = false, offline = false } = {}) {
     }
   }
   if (offline) throw new Error(`offline and not cached: ${JSON.stringify(params)}`);
-  const body = await apiGet({ action: 'query', ...params });
-  await writeJson(file, { params, body });
+  const body = await apiGet({ action: 'query', ...params }, wiki);
+  await writeJson(file, { params, wiki, body });
   return body;
 }
 
@@ -210,4 +214,120 @@ export async function expand(title, revid, text, { refresh = false, offline = fa
   const wikitext = body.expandtemplates?.wikitext ?? '';
   await writeJson(file, { title, revid, wikitext });
   return wikitext;
+}
+
+/**
+ * Image info (file URL, size, MIME, upload date, uploader-facing description URL) for many `File:` titles,
+ * batched (<= 50 per request) and cached per title. `width` asks for a server-side thumbnail URL too.
+ * Returns Map<requestedTitle, { title, url, thumburl?, width, height, mime, timestamp, descriptionurl } | { title, missing: true }>.
+ */
+export async function imageInfo(titles, { refresh = false, offline = false, wiki = 'valorant', width } = {}) {
+  const out = new Map();
+  const todo = [];
+  const fileOf = (t) =>
+    join(CACHE_DIR, 'imageinfo', `${createHash('sha1').update(`v2\n${wiki}\n${width ?? ''}\n${t}`).digest('hex')}.json`);
+  for (const t of [...new Set(titles)]) {
+    const cached = refresh ? undefined : await readJson(fileOf(t));
+    if (cached) {
+      stats.cacheHits++;
+      out.set(t, cached);
+    } else if (offline) {
+      out.set(t, { title: t, uncached: true });
+    } else {
+      todo.push(t);
+    }
+  }
+  for (let i = 0; i < todo.length; i += MAX_TITLES) {
+    const batch = todo.slice(i, i + MAX_TITLES);
+    const params = {
+      action: 'query',
+      prop: 'imageinfo',
+      iiprop: 'url|size|mime|timestamp|extmetadata',
+      iiextmetadatafilter: 'LicenseShortName|Artist|Credit',
+      redirects: '1',
+      titles: batch.join('|'),
+    };
+    if (width) params.iiurlwidth = String(width);
+    const body = await apiGet(params, wiki);
+    const q = body.query ?? {};
+    const resolve = (t) => {
+      let cur = t;
+      for (const n of q.normalized ?? []) if (n.from === cur) cur = n.to;
+      for (const r of q.redirects ?? []) if (r.from === cur) cur = r.to;
+      return cur;
+    };
+    const byTitle = new Map((q.pages ?? []).map((p) => [p.title, p]));
+    for (const t of batch) {
+      const p = byTitle.get(resolve(t));
+      const ii = p?.imageinfo?.[0];
+      const entry = ii
+        ? {
+            title: p.title,
+            url: ii.url,
+            thumburl: ii.thumburl,
+            width: ii.width,
+            height: ii.height,
+            mime: ii.mime,
+            timestamp: ii.timestamp,
+            descriptionurl: ii.descriptionurl,
+            license: ii.extmetadata?.LicenseShortName?.value ?? null,
+            artist: ii.extmetadata?.Artist?.value ?? null,
+            credit: ii.extmetadata?.Credit?.value ?? null,
+          }
+        : { title: resolve(t), missing: true };
+      await writeJson(fileOf(t), entry);
+      out.set(t, entry);
+    }
+  }
+  return out;
+}
+
+/**
+ * Downloads one image file served by liquipedia.net (an imageinfo URL), through the same shared 1-per-2-s
+ * limiter as the API. Cached by URL in .cache/liquipedia/files/; never downloaded twice unless refresh.
+ * Returns a Buffer, or undefined when offline and not cached.
+ */
+export async function getFile(url, { refresh = false, offline = false } = {}) {
+  if (!/^https:\/\/liquipedia\.net\//.test(url)) throw new Error(`not a liquipedia.net file: ${url}`);
+  const ext = (url.match(/\.(png|jpe?g|webp|svg|gif)(?:$|\?)/i)?.[1] ?? 'bin').toLowerCase();
+  const file = join(CACHE_DIR, 'files', `${createHash('sha1').update(url).digest('hex')}.${ext}`);
+  if (!refresh) {
+    try {
+      const buf = await readFile(file);
+      stats.cacheHits++;
+      return buf;
+    } catch {
+      // not cached
+    }
+  }
+  if (offline) return undefined;
+  for (let attempt = 1; ; attempt++) {
+    await waitForSlot(false);
+    stats.requests++;
+    let res;
+    try {
+      res = await fetch(url, { headers: { 'User-Agent': USER_AGENT, 'Accept-Encoding': 'gzip', Accept: 'image/*' } });
+    } catch (err) {
+      // Transient network error (proxy hiccup, reset): retried like a 5xx.
+      if (attempt >= 4) throw err;
+      console.warn(`${err.message} for ${url}; waiting 30s before retry ${attempt}`);
+      await sleep(30_000);
+      continue;
+    }
+    if (res.status === 200) {
+      const buf = Buffer.from(await res.arrayBuffer());
+      await mkdir(dirname(file), { recursive: true });
+      await writeFile(file, buf);
+      return buf;
+    }
+    await res.body?.cancel();
+    if ((res.status === 429 || res.status >= 500) && attempt < 4) {
+      const retryAfter = Number(res.headers.get('retry-after')) * 1000 || 0;
+      const backoff = Math.max(retryAfter, 60_000 * attempt);
+      console.warn(`HTTP ${res.status} for ${url}; waiting ${backoff / 1000}s before retry ${attempt}`);
+      await sleep(backoff);
+      continue;
+    }
+    throw new Error(`GET ${url} failed: HTTP ${res.status} ${res.statusText}`);
+  }
 }

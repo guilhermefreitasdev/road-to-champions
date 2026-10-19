@@ -16,6 +16,17 @@ export function Footer() {
         </a>
         ). OVR e atributos são calculados a partir desses números.
       </p>
+      <p className="footer-credits">
+        Logos e fotos:{' '}
+        <a href="https://www.vlr.gg" target="_blank" rel="noopener noreferrer">
+          VLR.gg
+        </a>{' '}
+        /{' '}
+        <a href="https://liquipedia.net/valorant/" target="_blank" rel="noopener noreferrer">
+          Liquipedia
+        </a>{' '}
+        — retiramos qualquer imagem a pedido do titular. Imagens de mapas e agentes são da Riot Games.
+      </p>
       <p>
         Road to Champions é um projeto de fã, não oficial, e não é endossado pela Riot Games. Não reflete as opiniões
         de ninguém oficialmente envolvido na produção ou gestão de propriedades da Riot Games. Riot Games e todas as

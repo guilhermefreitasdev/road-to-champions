@@ -11,6 +11,8 @@ import { rosterOf } from '../../game/run';
 import type { Card } from '../../engine/types';
 import { AgentIcon } from './GameImage';
 import { Icon } from './Icon';
+import { PlayerPhoto } from './PlayerPhoto';
+import { TeamLogo } from './TeamLogo';
 
 interface Props {
   card: Card;
@@ -30,6 +32,7 @@ export function PlayerCard({ card, selected = false, onSelect, index = 0 }: Prop
   const body = (
     <>
       <span className="card-head">
+        <PlayerPhoto playerId={card.playerId} eventId={card.eventId} handle={card.handle} country={card.country} size={44} />
         <span className="card-name">
           <strong>{card.handle}</strong>
           {card.country && (
@@ -44,6 +47,7 @@ export function PlayerCard({ card, selected = false, onSelect, index = 0 }: Prop
         </span>
       </span>
       <span className="card-roster muted">
+        <TeamLogo teamId={card.teamId} eventId={card.eventId} name={roster?.teamName ?? card.teamId} size={18} />
         {roster ? `${roster.teamName} · ${roster.eventName}` : `${card.teamId} · ${card.eventId}`}
       </span>
       <span className="badges">

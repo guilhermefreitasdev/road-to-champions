@@ -25,7 +25,7 @@ Depois de regenerar, rode `npx vitest run src/data/game` para validar o snapshot
 
 - Fonte: [valorant-api.com](https://valorant-api.com), uma API **comunitária e não oficial**, gratuita e sem chave. Não é afiliada à Riot Games.
 - Os nomes, textos e imagens são da Riot Games. Usamos esse material sob a política de conteúdo de fãs da Riot ("Legal Jibber Jabber"), em um projeto gratuito e com aviso de não afiliação.
-- As imagens (ícones de agentes e habilidades, minimapas, splashes) **não são copiadas** para o repositório: guardamos só as URLs servidas por `media.valorant-api.com`.
+- As imagens de habilidades e os minimapas **não são copiadas** para o repositório: guardamos só as URLs servidas por `media.valorant-api.com`. Os ícones de agentes e as imagens de mapa que o jogo mostra ficam locais (seção "Mídia" abaixo); a URL do valorant-api.com continua no JSON como reserva.
 
 # Stats de eventos internacionais (VLR.gg)
 
@@ -121,7 +121,7 @@ O conteúdo da Liquipedia é [CC-BY-SA 3.0](https://creativecommons.org/licenses
 
 - O JSON guarda o título e a revisão de cada página usada (`sources`), e `source.credit` traz o texto de crédito.
 - O jogo vai mostrar, na tela "Sobre/Créditos" e no rodapé das telas que usam elencos, técnicos ou IGLs: "Elencos, técnicos e IGLs: Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0", com link para a Liquipedia e para a licença. Os dados derivados (o `events.json`) seguem sob a mesma licença CC-BY-SA 3.0.
-- Não usamos fotos de jogadores nem logos de times da Liquipedia (só texto).
+- Logos de times e fotos de jogadores vêm da Liquipedia pela API (seção "Mídia" abaixo), com a página de cada arquivo guardada para crédito e retirada a pedido.
 
 # Cards do jogo (VLR + Liquipedia → cards)
 
@@ -131,3 +131,39 @@ O conteúdo da Liquipedia é [CC-BY-SA 3.0](https://creativecommons.org/licenses
 - Cobertura: IGL conhecido em 187 de 250 elencos, técnico em 249.
 - Testes: `cards.test.ts` (fórmulas com dados sintéticos) e `real.test.ts` (o pool real: 5 cards por elenco, ids únicos, stats copiados sem alteração, faixa de OVR, funções, IGL e coach batendo com a Liquipedia). `REAL_REPORT=1 npx vitest run src/data/real/real --silent=false` imprime a distribuição de OVR e os melhores cards com os stats de origem.
 - O jogo mostra os créditos no rodapé: VLR.gg e Liquipedia (CC-BY-SA 3.0), com links.
+
+# Mídia (logos, fotos, mapas e agentes)
+
+Por decisão do dono do projeto (19/10/2026), o jogo mostra logos de times e fotos de jogadores: da época do evento quando a fonte tem, senão os atuais; sempre com crédito e com retirada imediata se o titular pedir. Tudo é baixado em tempo de build de dados e commitado em `public/media/` como WebP, para aparecer sempre, inclusive em previews cuja CSP bloqueia imagens externas.
+
+## O que tem
+
+- `public/media/maps/<mapa>.webp` (640×360, 13 mapas), `public/media/agents/<agente>.webp` (64×64, 29 agentes), `public/media/teams/<time>[-<evento>].webp` (até 96 px, `fit: inside`) e `public/media/players/<vlrPlayerId>[@<evento>].webp` (128×128, corte "attention").
+- `src/data/game/media.json`: `maps[nome]` → `{ image, source, sourceUrl, file, credit }` e `agents[nome]` → `{ icon, … }`. Os JSONs de agentes e mapas continuam com `displayIcon`/`splash` remotos como reserva.
+- `src/data/real/media.json`: `teams[chave]` → `{ logo, eraSpecific, … }`, onde a chave é `${teamId}-${eventId}` (logo da época) ou só `${teamId}` (logo atual); `players[chave]` → `{ photo, eraSpecific, liquipediaId, … }`, chave `${vlrPlayerId}@${eventId}` (foto tirada no evento) ou só `${vlrPlayerId}` (foto atual do infobox). Cada entrada guarda `sourceUrl` (página do arquivo na Liquipedia) e `credit`.
+- `src/data/media.ts`: `mapMedia`, `agentMedia`, `teamMedia(teamId, eventId)` (tenta a época, depois a atual), `playerMedia(playerId, eventId)` e `mediaUrl` (prefixa o `BASE_URL` do Vite). Os componentes `TeamLogo`, `PlayerPhoto`, `AgentIcon` e `MapSplash` sempre desenham o fallback (iniciais, bandeira, placeholder colorido) por baixo da imagem.
+- `src/data/currentMapPool.ts`: `CURRENT_MAP_POOL` (7 mapas) e `CURRENT_MAP_POOL_SOURCE` (página, `revid` e data da revisão), da lista "Current Competitive Map Pool" de `Portal:Maps` na Liquipedia.
+
+## De onde vem cada imagem
+
+- **Mapas**: `|image=` do `{{Infobox map}}` da página do mapa (ex.: `Ascent Map.png`, 1024×512, arte da Riot).
+- **Agentes**: ícone atual de `Module:CharacterIcon/Data` (ex.: `Jett VALORANT Icon.png`, 128×128).
+- **Logos da época**: os ícones de time que a Liquipedia renderiza na página do evento (os *team templates* resolvem pela data do evento: `Fnatic 2020 allmode.png` no Champions 2022, `Furia eSports.png` em 2021). Vêm das mesmas expansões (`expandtemplates`) que o coletor de elencos já guarda em cache, então custam zero requisições novas; um evento novo custa uma chamada. Com variantes claro/escuro, usamos a escura (a interface é escura).
+- **Logos atuais** (fallback): `|imagedark=`/`|image=` do `{{Infobox team}}`.
+- **Fotos no evento**: um arquivo da página do jogador cujo nome cita o evento (`Alfajer at VCT 2023 LOCKIN São Paulo.jpg`); ano no nome tem que bater com o do evento. **Fotos atuais** (fallback): `|image=` do `{{Infobox player}}`.
+- O VLR não é usado como fonte de imagem (o `owcdn.net` não é alcançável do ambiente de build); o crédito no rodapé cita VLR.gg porque nomes e ids de times/jogadores vêm de lá.
+
+Tudo passa só pela API MediaWiki (`prop=imageinfo` com `iiurlwidth` para thumbnails, 50 títulos por requisição) e pelos arquivos servidos em `liquipedia.net`, com o mesmo cliente de `scripts/liquipedia/api.mjs` (1 requisição a cada 2 s, compartilhada entre processos; `.cache/liquipedia/imageinfo/` e `.cache/liquipedia/files/`). As imagens de mapas e agentes são da Riot Games (política de conteúdo de fãs); logos e fotos são dos seus titulares, hospedadas na Liquipedia (CC-BY-SA 3.0 para o conteúdo da wiki). `npx vitest run src/data/media` confere que todo arquivo citado existe, é pequeno (< 120 KB) e tem página de origem, e que o total fica abaixo de 8 MB.
+
+## Como regenerar
+
+```bash
+npm run data:media                              # tudo (usa o cache; só baixa o que falta)
+npm run data:media -- --only=maps,agents,pool    # só mapas, agentes e o pool atual
+npm run data:media -- --only=teams               # só logos
+npm run data:media -- --only=players             # só fotos (a parte mais longa: ~600 arquivos, uns 20 min)
+npm run data:media -- --offline                  # só o cache, sem rede
+npm run data:media -- --refresh                  # baixa de novo
+```
+
+Depende de `sharp` (devDependency) para redimensionar e converter. Rodar de novo sem mudanças na wiki gera arquivos idênticos. Para remover uma imagem a pedido do titular: apague o arquivo e a entrada no JSON (o fallback de iniciais assume), e anote o pedido para a próxima regeneração.

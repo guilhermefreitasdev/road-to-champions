@@ -1,5 +1,6 @@
 import { placementLabel } from '../../game/explain';
 import { coachOptions, rosterOf, type RunState } from '../../game/run';
+import { TeamLogo } from '../components/TeamLogo';
 
 const SCOUT_TEXT = [
   'não revela nada do adversário no veto',
@@ -25,7 +26,8 @@ export function Coach({ run, onPick }: { run: RunState; onPick: (coachId: string
           return (
             <button key={c.id} type="button" className="coach-card" onClick={() => onPick(c.id)}>
               <strong className="coach-name">{c.name}</strong>
-              <span className="small muted">
+              <span className="small muted coach-team">
+                <TeamLogo teamId={c.teamId} eventId={c.eventId} name={roster?.teamName ?? c.teamId} size={18} />
                 {roster ? `${roster.teamName} · ${roster.eventName}` : c.eventId}
                 {roster?.placement && ` (${placementLabel(roster.placement)})`}
               </span>
