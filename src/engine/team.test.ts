@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { SAMPLE_AURORA, SAMPLE_TEMPESTADE } from '../data/sample';
-import { roleFit, teamStrength } from './team';
+import { chemistryPairs, roleFit, teamStrength } from './team';
 import type { Lineup } from './types';
 
 describe('roleFit', () => {
@@ -27,8 +27,34 @@ describe('teamStrength', () => {
   });
 
   it('caps chemistry for a full roster from the same team and event', () => {
-    // 5 teammates = 10 pairs × 0.5 = 5, capped at 4.
-    expect(teamStrength(SAMPLE_AURORA).chemistry).toBe(4);
+    // 5 teammates = 10 pairs × 0.5 = 5, capped at 3.
+    expect(chemistryPairs(SAMPLE_AURORA)).toEqual({ teammates: 10, compatriots: 0 });
+    expect(teamStrength(SAMPLE_AURORA).chemistry).toBe(3);
+  });
+
+  it('gives a smaller bonus to compatriots who were not teammates', () => {
+    const withCountries = (countries: string[]): Lineup => ({
+      ...SAMPLE_AURORA,
+      players: SAMPLE_AURORA.players.map((p, i) => ({
+        ...p,
+        card: { ...p.card, teamId: `team-${i}`, country: countries[i]! },
+      })),
+    });
+    // All BR, all from different teams: 10 pairs × 0.25.
+    expect(teamStrength(withCountries(['BR', 'BR', 'BR', 'BR', 'BR'])).chemistry).toBe(2.5);
+    // BR-BR-BR = 3 pairs, AR-AR = 1 pair.
+    expect(chemistryPairs(withCountries(['BR', 'BR', 'BR', 'AR', 'AR']))).toEqual({ teammates: 0, compatriots: 4 });
+    expect(teamStrength(withCountries(['BR', 'PT', 'AR', 'CL', 'UY'])).chemistry).toBe(0);
+  });
+
+  it('counts a pair of teammates once, not also as compatriots', () => {
+    // 2 teammates (1 pair × 0.5) + 3 compatriots from other teams (the other 9 pairs × 0.25), capped at 3.
+    const lineup: Lineup = {
+      ...SAMPLE_AURORA,
+      players: SAMPLE_AURORA.players.map((p, i) => (i < 2 ? p : { ...p, card: { ...p.card, teamId: `team-${i}` } })),
+    };
+    expect(chemistryPairs(lineup)).toEqual({ teammates: 1, compatriots: 9 });
+    expect(teamStrength(lineup).chemistry).toBe(2.75);
   });
 
   it('sums the parts into the total', () => {

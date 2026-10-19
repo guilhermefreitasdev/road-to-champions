@@ -15,7 +15,9 @@ jogadores históricos (card = jogador + evento, ex.: "aspas @ LOUD, Champions 20
 ## Núcleo de simulação
 - Card: atributos MIRA, ENTRADA, UTILIDADE, CLUTCH, CONSISTÊNCIA, LIDERANÇA; OVR = z-score por função/ano, ajustado por amostra e peso do evento.
 - Força do time = média(OVR × encaixe de função) + composição (≥1 controlador) + química + IGL + coach + meta do mapa.
-- Round a round: logística da diferença de força + lado + economia + ults. 13 rounds, troca no 12, OT vence por 2.
+- Química: +0,5 por dupla que jogou no mesmo time e evento; +0,25 por dupla do mesmo país que não foi companheira nesse evento (cada dupla conta uma vez); máximo +3 no total. O teto é 3 (era 4) porque o OVR de um elenco real já vem de stats que ele fez junto: a química é um desempate, e um time draftado com compatriotas e algumas duplas reais chega perto do mesmo teto.
+- Round a round: logística da diferença de força (escala 30 pontos) + forma do dia por mapa (até ±12 por time, σ ≈ 4) + lado + economia + ults. 13 rounds, troca no 12, OT vence por 2.
+- Calibragem (medida em `src/game/balance.test.ts`): num mapa, +10 de força vence ~78% e +20 ~94%. Zebras acontecem; série e torneio ainda premiam o time mais forte.
 - Veto MD3 em pool de 7 + escolha de comp por mapa. Placar estilo VLR.
 - Tudo com RNG de seed (mulberry32).
 
@@ -78,3 +80,11 @@ Tempo real: ver docs/ideias-futuras.md (em espera).
 2. Diário/Valdle (Jogo + Cena Pro) + Ultimate Draft — ciclo viral diário.
 3. Carreira.
 4. Contas + Online.
+
+## Balanceamento (estado atual, com dados fictícios)
+Medido em `src/game/balance.test.ts` (`BALANCE_REPORT=1 npx vitest run src/game/balance` imprime os números).
+- Mapa: favorito com +10 de força vence ~76%; com +20, ~95%.
+- Draft clássico: time mediano chega aos playoffs em ~75–80% das runs; títulos ainda raros (~1% no mediano, ~13% no top 10%).
+- Ultimate: mediano ~88% playoffs / ~13% título.
+- Pendente: título no clássico abaixo da meta (8–20% no mediano). O limite está nas regras do draft + campo com superelencos fictícios (~96).
+  Revisitar quando os dados reais entrarem (mais rerolls, roleta ponderada por tier ou campo com menos superelencos).

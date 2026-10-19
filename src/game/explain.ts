@@ -1,7 +1,15 @@
 /**
  * pt-BR labels and plain-language explanations of the engine's numbers, shared by the UI and its tests.
  */
-import { roleFit, teamStrength, type StrengthBreakdown } from '../engine/team';
+import {
+  CHEMISTRY_CAP,
+  CHEMISTRY_PER_PAIR,
+  COUNTRY_CHEMISTRY_PER_PAIR,
+  chemistryPairs,
+  roleFit,
+  teamStrength,
+  type StrengthBreakdown,
+} from '../engine/team';
 import type { Attributes, Lineup, Role, Slot } from '../engine/types';
 
 export const ROLE_LABELS: Record<Role, string> = {
@@ -80,12 +88,18 @@ export function explainStrength(lineup: Lineup): { breakdown: StrengthBreakdown;
   const igls = players.filter((p) => p.card.isIGL).length;
   const igl = [igls === 0 ? 'sem IGL: −4' : igls === 1 ? '1 IGL: +2' : `${igls} IGLs disputando a call: +0`];
 
-  const pairs = Math.round(breakdown.chemistry / 0.5);
-  const chemistry = [
-    breakdown.chemistry === 0
-      ? 'nenhuma dupla que jogou junta no mesmo evento'
-      : `${pairs >= 8 ? '8+' : pairs} dupla${pairs === 1 ? '' : 's'} do mesmo time e evento: +0,5 cada (máx. +4)`,
-  ];
+  const { teammates, compatriots } = chemistryPairs(lineup);
+  const duplas = (n: number) => `${n} dupla${n === 1 ? '' : 's'}`;
+  const plus = (n: number) => `+${String(n).replace('.', ',')}`;
+  const chemistry: string[] = [];
+  if (teammates > 0) {
+    chemistry.push(`${duplas(teammates)} do mesmo time e evento: ${plus(CHEMISTRY_PER_PAIR)} cada`);
+  }
+  if (compatriots > 0) {
+    chemistry.push(`${duplas(compatriots)} do mesmo país: ${plus(COUNTRY_CHEMISTRY_PER_PAIR)} cada`);
+  }
+  if (chemistry.length === 0) chemistry.push('nenhuma dupla do mesmo time e evento ou do mesmo país');
+  else chemistry.push(`máx. ${plus(CHEMISTRY_CAP)} no total`);
 
   const coach = [lineup.coach ? `${lineup.coach.name}: tática +${lineup.coach.tacticBonus}` : 'sem coach'];
 

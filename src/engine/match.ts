@@ -55,8 +55,14 @@ const ROUNDS_TO_WIN = 13;
 const HALF_LENGTH = 12;
 const REGULATION_ROUNDS = 24;
 const MAX_ROUNDS = 200;
-/** Strength points per logistic unit: higher = more upsets. */
-const ROUND_SCALE = 15;
+/**
+ * Strength points per logistic unit: higher = more upsets. Tuned with FORM_SWING so that, over a whole map,
+ * +10 strength wins ≈ 78% and +20 ≈ 94% (was 15: +10 ≈ 94%, which made every series a formality).
+ * src/game/balance.test.ts measures it.
+ */
+const ROUND_SCALE = 30;
+/** Width of each team's map-level form: a team plays a map up to ±1.5 × FORM_SWING points off its level. */
+const FORM_SWING = 8;
 /** Edge for the team that won the pistol round in the following (anti-eco) round. */
 const ANTI_ECO_EDGE = 6;
 const ASSIST_CHANCE = 0.5;
@@ -78,9 +84,9 @@ function isPistol(round: number): boolean {
   return round === 1 || round === HALF_LENGTH + 1;
 }
 
-/** Map-level form swing (≈ ±6 points), so the stronger lineup does not always win. */
+/** Map-level form swing (≈ ±12 points, σ ≈ 4), so the stronger lineup does not always win: upsets happen on bad days. */
 function formSwing(rng: Rng): number {
-  return (rng.next() + rng.next() + rng.next() - 1.5) * 4;
+  return (rng.next() + rng.next() + rng.next() - 1.5) * FORM_SWING;
 }
 
 function killWeight(p: LineupPlayer, opening: boolean): number {
