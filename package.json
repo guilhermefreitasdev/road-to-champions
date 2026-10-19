@@ -11,7 +11,8 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "typecheck": "tsc --noEmit",
-    "data:game": "node scripts/fetch-game-data.mjs"
+    "data:game": "node scripts/fetch-game-data.mjs",
+    "data:vlr": "NODE_USE_ENV_PROXY=1 node scripts/vlr/run.mjs"
   },
   "dependencies": {
     "react": "^19.3.1",
@@ -21,6 +22,7 @@
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
     "@vitejs/plugin-react": "^6.1.2",
+    "cheerio": "^1.2.0",
     "typescript": "^7.0.2",
     "vite": "^8.3.4",
     "vitest": "^5.0.5"
