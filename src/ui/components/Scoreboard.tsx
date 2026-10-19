@@ -2,6 +2,7 @@ import type { MapResult, PlayerLine } from '../../engine/match';
 import type { TeamIndex } from '../../engine/types';
 import { formatDecimal } from '../../game/explain';
 import { mapLabel } from './GameImage';
+import { YouTag } from './Icon';
 
 interface Props {
   result: MapResult;
@@ -12,12 +13,26 @@ interface Props {
   caption?: string;
 }
 
-function TeamTable({ name, won, lines, strength }: { name: string; won: boolean; lines: PlayerLine[]; strength: number }) {
+function TeamTable({
+  name,
+  won,
+  mine,
+  lines,
+  strength,
+}: {
+  name: string;
+  won: boolean;
+  mine: boolean;
+  lines: PlayerLine[];
+  strength: number;
+}) {
   const sorted = [...lines].sort((a, b) => b.acs - a.acs);
   return (
     <div className="team">
       <h4 className={won ? 'won' : undefined}>
-        {name} <span className="muted">· força {formatDecimal(strength)}</span>
+        {name}
+        {mine && <YouTag />} <span className="muted">· força {formatDecimal(strength)}</span>
+        {won && <span className="sr-only"> (venceu)</span>}
       </h4>
       <div className="table-wrap">
         <table>
@@ -76,11 +91,17 @@ export function Scoreboard({ result, teamNames, userSide, caption }: Props) {
         <h3>{mapLabel(result.map)}</h3>
         {caption && <span className="muted small">{caption}</span>}
         <p className="map-score">
-          <span className={result.winner === 0 ? 'win' : undefined}>{teamNames[0]}</span>
+          <span className={result.winner === 0 ? 'win' : undefined}>
+            {teamNames[0]}
+            {userSide === 0 && <YouTag />}
+          </span>
           <strong>
             {a} – {b}
           </strong>
-          <span className={result.winner === 1 ? 'win' : undefined}>{teamNames[1]}</span>
+          <span className={result.winner === 1 ? 'win' : undefined}>
+            {userSide === 1 && <YouTag />}
+            {teamNames[1]}
+          </span>
         </p>
       </header>
       <ol className="rounds" aria-label={`Rounds: ${teamNames[0]} ${a}, ${teamNames[1]} ${b}`}>
@@ -93,18 +114,21 @@ export function Scoreboard({ result, teamNames, userSide, caption }: Props) {
         ))}
       </ol>
       <p className="legend small muted">
-        <span className="dot a" aria-hidden="true" /> {teamNames[sides[0]]} <span className="dot b" aria-hidden="true" />{' '}
-        {teamNames[sides[1]]}
+        <span className="dot a" aria-hidden="true" /> {teamNames[sides[0]]}{' '}
+        <span className="dot b" aria-hidden="true" /> {teamNames[sides[1]]}
       </p>
-      {sides.map((i) => (
-        <TeamTable
-          key={i}
-          name={teamNames[i]}
-          won={result.winner === i}
-          lines={result.players[i]}
-          strength={result.strength[i].total}
-        />
-      ))}
+      <div className="team-tables">
+        {sides.map((i) => (
+          <TeamTable
+            key={i}
+            name={teamNames[i]}
+            won={result.winner === i}
+            mine={userSide === i}
+            lines={result.players[i]}
+            strength={result.strength[i].total}
+          />
+        ))}
+      </div>
     </section>
   );
 }

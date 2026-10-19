@@ -230,6 +230,28 @@ describe('selectors', () => {
     const expected: Record<number, string> = { 2: '9º–11º', 1: '12º–14º', 0: '15º–16º' };
     for (const [wins, place] of seen) expect(place).toBe(expected[wins]);
   });
+
+  it('maps every finish to the furthest stage reached', () => {
+    const expected: Record<string, string> = {
+      '1º': 'champion',
+      '2º': 'final',
+      '3º': 'top4',
+      '4º': 'top4',
+      '5º–6º': 'playoffs',
+      '7º–8º': 'playoffs',
+      '9º–11º': 'swiss',
+      '12º–14º': 'swiss',
+      '15º–16º': 'swiss',
+    };
+    const stages = new Set<string>();
+    for (let i = 0; i < 40; i++) {
+      const finish = userFinish(fullRun(i % 2 ? 'classic' : 'ultimate', `stage-${i}`))!;
+      expect(finish.stage).toBe(expected[finish.place]);
+      expect(finish.champion).toBe(finish.stage === 'champion');
+      stages.add(finish.stage);
+    }
+    expect(stages.size).toBeGreaterThan(1);
+  });
 });
 
 describe('explainStrength', () => {

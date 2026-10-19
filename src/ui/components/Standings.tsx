@@ -1,4 +1,5 @@
 import type { StandingRow } from '../../game/run';
+import { YouTag } from './Icon';
 
 const STATUS_LABELS = { alive: 'Vivo', advanced: 'Classificado', eliminated: 'Eliminado' } as const;
 
@@ -23,14 +24,16 @@ export function Standings({ rows }: { rows: StandingRow[] }) {
             <tr key={r.id} className={r.isUser ? 'user-row' : undefined}>
               <td>{i + 1}</td>
               <td>
-                {r.name}
-                {r.isUser && <span className="badge you">você</span>}
+                <span className="team-cell">
+                  {r.name}
+                  {r.isUser && <YouTag />}
+                </span>
               </td>
               <td>
                 {r.wins}-{r.losses}
               </td>
               <td>{r.buchholz}</td>
-              <td className={`status-${r.status}`}>{STATUS_LABELS[r.status]}</td>
+              <td className={`status status-${r.status}`}>{STATUS_LABELS[r.status]}</td>
             </tr>
           ))}
         </tbody>

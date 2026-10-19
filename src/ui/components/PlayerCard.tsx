@@ -1,16 +1,20 @@
+import type { CSSProperties } from 'react';
 import { ATTRIBUTE_KEYS, ATTRIBUTE_LABELS, ROLE_LABELS, flagEmoji } from '../../game/explain';
 import { rosterOf } from '../../game/run';
 import type { Card } from '../../engine/types';
 import { AgentIcon } from './GameImage';
+import { Icon } from './Icon';
 
 interface Props {
   card: Card;
   selected?: boolean;
   onSelect?: () => void;
+  /** Position in a dealt hand, for the staggered entrance. */
+  index?: number;
 }
 
 /** A player card: handle, origin, roster, role, OVR, attributes and agents. Clickable when onSelect is set. */
-export function PlayerCard({ card, selected = false, onSelect }: Props) {
+export function PlayerCard({ card, selected = false, onSelect, index = 0 }: Props) {
   const roster = rosterOf(card.teamId, card.eventId);
   const body = (
     <>
@@ -54,7 +58,19 @@ export function PlayerCard({ card, selected = false, onSelect }: Props) {
 
   if (!onSelect) return <div className="player-card">{body}</div>;
   return (
-    <button type="button" className={`player-card selectable${selected ? ' selected' : ''}`} aria-pressed={selected} onClick={onSelect}>
+    <button
+      type="button"
+      className={`player-card selectable${selected ? ' selected' : ''}`}
+      aria-pressed={selected}
+      onClick={onSelect}
+      style={{ '--i': index } as CSSProperties}
+    >
+      {selected && (
+        <span className="selected-tag">
+          <Icon name="check" />
+          Escolhido
+        </span>
+      )}
       {body}
     </button>
   );

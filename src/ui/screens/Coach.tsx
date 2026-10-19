@@ -11,9 +11,9 @@ export function Coach({ run, onPick }: { run: RunState; onPick: (coachId: string
   return (
     <div className="screen coach">
       <header className="screen-head">
-        <p className="eyebrow">Último pick</p>
         <h1>Escolha o coach</h1>
-        <p className="muted">O coach não joga, mas soma força em todo mapa e ajuda você a ler o veto.</p>
+        <p className="context">Último pick</p>
+        <p className="muted measure">O coach não joga, mas soma força em todo mapa e ajuda você a ler o veto.</p>
       </header>
       <div className="coach-list">
         {coachOptions(run).map((c) => {
@@ -24,7 +24,9 @@ export function Coach({ run, onPick }: { run: RunState; onPick: (coachId: string
               <span className="small muted">{roster ? `${roster.teamName} · ${roster.eventName}` : c.eventId}</span>
               <span className="coach-stat">
                 <span className="badge">Tática +{c.tacticBonus}</span>
-                <span className="small">soma {c.tacticBonus} ponto{c.tacticBonus === 1 ? '' : 's'} de força em todo mapa</span>
+                <span className="small">
+                  soma {c.tacticBonus} ponto{c.tacticBonus === 1 ? '' : 's'} de força em todo mapa
+                </span>
               </span>
               <span className="coach-stat">
                 <span className="badge">Veto +{c.vetoBonus}</span>

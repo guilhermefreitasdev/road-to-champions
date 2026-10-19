@@ -323,25 +323,34 @@ export interface UserFinish {
   /** "Campeão", "Vice-campeão", "Eliminado na Suíça (1-3)"… */
   label: string;
   champion: boolean;
+  /** Furthest stage reached, for the end screen's path: Swiss → playoffs → top 4 → final → title. */
+  stage: FinishStage;
 }
+
+export type FinishStage = 'swiss' | 'playoffs' | 'top4' | 'final' | 'champion';
+
+/** Stages of the run's path, in order. */
+export const FINISH_STAGES: readonly FinishStage[] = ['swiss', 'playoffs', 'top4', 'final', 'champion'];
 
 /** Where the user's run ended; null while the user is still alive. */
 export function userFinish(run: RunState): UserFinish | null {
   const t = run.tournament;
   if (!t) return null;
-  if (t.champion === USER_ID) return { place: '1º', label: 'Campeão', champion: true };
+  if (t.champion === USER_ID) return { place: '1º', label: 'Campeão', champion: true, stage: 'champion' };
   const rec = userRecord(run);
   if (rec.swiss.status === 'eliminated') {
     // 8 teams go out of the Swiss: three at 2-3, three at 1-3 and two at 0-3.
     const place = rec.swiss.wins === 2 ? '9º–11º' : rec.swiss.wins === 1 ? '12º–14º' : '15º–16º';
-    return { place, label: `Eliminado na Suíça (${rec.swiss.wins}-${rec.swiss.losses})`, champion: false };
+    const label = `Eliminado na Suíça (${rec.swiss.wins}-${rec.swiss.losses})`;
+    return { place, label, champion: false, stage: 'swiss' };
   }
   const fatal = rec.results.find((r) => !r.won && (r.match.round.startsWith('lb-') || r.match.round === 'gf'));
   if (!fatal) return null;
   const places: Record<string, string> = { gf: '2º', 'lb-final': '3º', 'lb-r3': '4º', 'lb-r2': '5º–6º', 'lb-r1': '7º–8º' };
   const place = places[fatal.match.round] ?? '—';
   const label = fatal.match.round === 'gf' ? 'Vice-campeão' : `Eliminado em ${fatal.match.label}`;
-  return { place, label, champion: false };
+  const stages: Record<string, FinishStage> = { gf: 'final', 'lb-final': 'top4', 'lb-r3': 'top4' };
+  return { place, label, champion: false, stage: stages[fatal.match.round] ?? 'playoffs' };
 }
 
 export interface PlayerStat {

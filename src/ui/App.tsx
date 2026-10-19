@@ -108,8 +108,14 @@ function Game() {
 
   return (
     <div className="app">
+      <a className="skip-link" href="#main">
+        Pular para o conteúdo
+      </a>
       <nav className="topbar" aria-label="Navegação">
-        <span className="brand">Road to Champions</span>
+        <span className="brand" translate="no">
+          <span className="brand-mark" aria-hidden="true" />
+          Road to Champions
+        </span>
         {screen !== 'home' && (
           <button type="button" className="ghost" onClick={() => setView({ kind: 'home' })}>
             Início
@@ -117,7 +123,7 @@ function Game() {
         )}
       </nav>
 
-      <main ref={headingRef} tabIndex={-1} className="main" data-screen={screen}>
+      <main ref={headingRef} id="main" tabIndex={-1} className="main" data-screen={screen}>
         {error && (
           <p className="error" role="alert">
             Algo deu errado: {error}
@@ -157,7 +163,9 @@ function Game() {
         {run && screen === 'series' && view.kind === 'series' && (
           <Series run={run} matchId={view.matchId} onContinue={() => setView({ kind: 'hub' })} />
         )}
-        {run && screen === 'end' && <End run={run} onNewRun={() => setView({ kind: 'home' })} onViewSeries={viewSeries} />}
+        {run && screen === 'end' && (
+          <End run={run} onNewRun={() => setView({ kind: 'home' })} onViewSeries={viewSeries} />
+        )}
       </main>
 
       <Footer />

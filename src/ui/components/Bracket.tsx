@@ -1,5 +1,6 @@
 import type { BracketSource } from '../../engine/tournament';
 import { USER_ID, type BracketCell } from '../../game/run';
+import { YouTag } from './Icon';
 
 const GROUPS: { title: string; prefix: string }[] = [
   { title: 'Chave superior', prefix: 'ub-' },
@@ -42,15 +43,21 @@ export function Bracket({ cells, nameOf }: Props) {
                 const teams = match ? [match.a, match.b] : [];
                 return (
                   <li key={slot.id} className={`bracket-match${teams.includes(USER_ID) ? ' has-user' : ''}`}>
-                    <span className="small muted">
-                      {slot.label} · MD{slot.bestOf}
+                    <span className="bracket-head small muted">
+                      <span>
+                        {slot.label} · MD{slot.bestOf}
+                      </span>
+                      {teams.includes(USER_ID) && <span className="your-match">Sua partida</span>}
                     </span>
                     {([0, 1] as const).map((i) => {
                       const id = teams[i];
                       const won = match?.result && match.result.winner === i;
                       return (
                         <span key={i} className={`bracket-team${won ? ' win' : ''}${id === USER_ID ? ' user' : ''}`}>
-                          <span>{id ? nameOf(id) : sourceLabel(i === 0 ? slot.a : slot.b)}</span>
+                          <span className="bracket-name">
+                            {id ? nameOf(id) : sourceLabel(i === 0 ? slot.a : slot.b)}
+                            {id === USER_ID && <YouTag />}
+                          </span>
                           <span className="bracket-score">{match?.result ? match.result.score[i] : ''}</span>
                         </span>
                       );
