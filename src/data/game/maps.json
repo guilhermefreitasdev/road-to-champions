@@ -1,0 +1,3184 @@
+[
+  {
+    "uuid": "224b0a95-48b9-f703-1bd8-67aca101a61f",
+    "name": "Abyss",
+    "displayName": "Abyss",
+    "coordinates": "70° 50' AJ\" N, 9° 00' VX\" O",
+    "displayIcon": "https://media.valorant-api.com/maps/224b0a95-48b9-f703-1bd8-67aca101a61f/displayicon.png",
+    "splash": "https://media.valorant-api.com/maps/224b0a95-48b9-f703-1bd8-67aca101a61f/splash.png",
+    "xMultiplier": 0.000081,
+    "yMultiplier": -0.000081,
+    "xScalarToAdd": 0.5,
+    "yScalarToAdd": 0.5,
+    "callouts": [
+      {
+        "regionName": "Ponte",
+        "superRegionName": "A",
+        "regionNameEn": "Bridge",
+        "superRegionNameEn": "A",
+        "location": {
+          "x": 5700,
+          "y": -375
+        }
+      },
+      {
+        "regionName": "Link",
+        "superRegionName": "A",
+        "regionNameEn": "Link",
+        "superRegionNameEn": "A",
+        "location": {
+          "x": 2800,
+          "y": -2450
+        }
+      },
+      {
+        "regionName": "Acesso",
+        "superRegionName": "A",
+        "regionNameEn": "Lobby",
+        "superRegionNameEn": "A",
+        "location": {
+          "x": 3250,
+          "y": 3400
+        }
+      },
+      {
+        "regionName": "Principal",
+        "superRegionName": "A",
+        "regionNameEn": "Main",
+        "superRegionNameEn": "A",
+        "location": {
+          "x": 3800,
+          "y": 1650
+        }
+      },
+      {
+        "regionName": "Beirada",
+        "superRegionName": "A",
+        "regionNameEn": "Secret",
+        "superRegionNameEn": "A",
+        "location": {
+          "x": 3775,
+          "y": -3850
+        }
+      },
+      {
+        "regionName": "Segurança",
+        "superRegionName": "A",
+        "regionNameEn": "Security",
+        "superRegionNameEn": "A",
+        "location": {
+          "x": 4900,
+          "y": -2975
+        }
+      },
+      {
+        "regionName": "Ponto",
+        "superRegionName": "A",
+        "regionNameEn": "Site",
+        "superRegionNameEn": "A",
+        "location": {
+          "x": 4300,
+          "y": -200
+        }
+      },
+      {
+        "regionName": "Torre",
+        "superRegionName": "A",
+        "regionNameEn": "Tower",
+        "superRegionNameEn": "A",
+        "location": {
+          "x": 3025,
+          "y": -125
+        }
+      },
+      {
+        "regionName": "Duto",
+        "superRegionName": "A",
+        "regionNameEn": "Vent",
+        "superRegionNameEn": "A",
+        "location": {
+          "x": 1700,
+          "y": -325
+        }
+      },
+      {
+        "regionName": "Surgimento",
+        "superRegionName": "no Lado Atacante",
+        "regionNameEn": "Spawn",
+        "superRegionNameEn": "Attacker Side",
+        "location": {
+          "x": 950,
+          "y": 4950
+        }
+      },
+      {
+        "regionName": "Queda",
+        "superRegionName": "B",
+        "regionNameEn": "Danger",
+        "superRegionNameEn": "B",
+        "location": {
+          "x": -5850,
+          "y": 700
+        }
+      },
+      {
+        "regionName": "Link",
+        "superRegionName": "B",
+        "regionNameEn": "Link",
+        "superRegionNameEn": "B",
+        "location": {
+          "x": -2000,
+          "y": -2350
+        }
+      },
+      {
+        "regionName": "Acesso",
+        "superRegionName": "B",
+        "regionNameEn": "Lobby",
+        "superRegionNameEn": "B",
+        "location": {
+          "x": -3650,
+          "y": 4025
+        }
+      },
+      {
+        "regionName": "Principal",
+        "superRegionName": "B",
+        "regionNameEn": "Main",
+        "superRegionNameEn": "B",
+        "location": {
+          "x": -4450,
+          "y": 1525
+        }
+      },
+      {
+        "regionName": "Ninho",
+        "superRegionName": "B",
+        "regionNameEn": "Nest",
+        "superRegionNameEn": "B",
+        "location": {
+          "x": -4975,
+          "y": 2150
+        }
+      },
+      {
+        "regionName": "Ponto",
+        "superRegionName": "B",
+        "regionNameEn": "Site",
+        "superRegionNameEn": "B",
+        "location": {
+          "x": -4425,
+          "y": -1175
+        }
+      },
+      {
+        "regionName": "Torre",
+        "superRegionName": "B",
+        "regionNameEn": "Tower",
+        "superRegionNameEn": "B",
+        "location": {
+          "x": -3925,
+          "y": -2500
+        }
+      },
+      {
+        "regionName": "Surgimento",
+        "superRegionName": "no Lado Defensor",
+        "regionNameEn": "Spawn",
+        "superRegionNameEn": "Defender Side",
+        "location": {
+          "x": 950,
+          "y": -5275
+        }
+      },
+      {
+        "regionName": "Quina",
+        "superRegionName": "Meio",
+        "regionNameEn": "Bend",
+        "superRegionNameEn": "Mid",
+        "location": {
+          "x": -1700,
+          "y": 1075
+        }
+      },
+      {
+        "regionName": "Baixo",
+        "superRegionName": "Meio",
+        "regionNameEn": "Bottom",
+        "superRegionNameEn": "Mid",
+        "location": {
+          "x": -400,
+          "y": 575
+        }
+      },
+      {
+        "regionName": "Passarela",
+        "superRegionName": "Meio",
+        "regionNameEn": "Catwalk",
+        "superRegionNameEn": "Mid",
+        "location": {
+          "x": 600,
+          "y": 525
+        }
+      },
+      {
+        "regionName": "Biblioteca",
+        "superRegionName": "Meio",
+        "regionNameEn": "Library",
+        "superRegionNameEn": "Mid",
+        "location": {
+          "x": -325,
+          "y": -600
+        }
+      },
+      {
+        "regionName": "Topo",
+        "superRegionName": "Meio",
+        "regionNameEn": "Top",
+        "superRegionNameEn": "Mid",
+        "location": {
+          "x": 775,
+          "y": -2375
+        }
+      }
+    ]
+  },
+  {
+    "uuid": "7eaecc1b-4337-bbf6-6ab9-04b8f06b3319",
+    "name": "Ascent",
+    "displayName": "Ascent",
+    "coordinates": "45°26'BF'N,12°20'Q'E",
+    "displayIcon": "https://media.valorant-api.com/maps/7eaecc1b-4337-bbf6-6ab9-04b8f06b3319/displayicon.png",
+    "splash": "https://media.valorant-api.com/maps/7eaecc1b-4337-bbf6-6ab9-04b8f06b3319/splash.png",
+    "xMultiplier": 0.00007,
+    "yMultiplier": -0.00007,
+    "xScalarToAdd": 0.813895,
+    "yScalarToAdd": 0.573242,
+    "callouts": [
+      {
+        "regionName": "Jardim",
+        "superRegionName": "A",
+        "regionNameEn": "Garden",
+        "superRegionNameEn": "A",
+        "location": {
+          "x": 3773.67,
+          "y": -7551.35
+        }
+      },
+      {
+        "regionName": "Acesso",
+        "superRegionName": "A",
+        "regionNameEn": "Lobby",
+        "superRegionNameEn": "A",
+        "location": {
+          "x": 4489.03,
+          "y": -3014.05
+        }
+      },
+      {
+        "regionName": "Principal",
+        "superRegionName": "A",
+        "regionNameEn": "Main",
+        "superRegionNameEn": "A",
+        "location": {
+          "x": 5321.62,
+          "y": -4710.13
+        }
+      },
+      {
+        "regionName": "Vigas",
+        "superRegionName": "A",
+        "regionNameEn": "Rafters",
+        "superRegionNameEn": "A",
+        "location": {
+          "x": 6129.89,
+          "y": -8210
+        }
+      },
+      {
+        "regionName": "Ponto",
+        "superRegionName": "A",
+        "regionNameEn": "Site",
+        "superRegionNameEn": "A",
+        "location": {
+          "x": 6153.59,
+          "y": -6626.21
+        }
+      },
+      {
+        "regionName": "Árvore",
+        "superRegionName": "A",
+        "regionNameEn": "Tree",
+        "superRegionNameEn": "A",
+        "location": {
+          "x": 3980.91,
+          "y": -5938.76
+        }
+      },
+      {
+        "regionName": "Janela",
+        "superRegionName": "A",
+        "regionNameEn": "Window",
+        "superRegionNameEn": "A",
+        "location": {
+          "x": 4023.02,
+          "y": -8180.69
+        }
+      },
+      {
+        "regionName": "Vinho",
+        "superRegionName": "A",
+        "regionNameEn": "Wine",
+        "superRegionNameEn": "A",
+        "location": {
+          "x": 7358.74,
+          "y": -4689.27
+        }
+      },
+      {
+        "regionName": "Surgimento",
+        "superRegionName": "no Lado Atacante",
+        "regionNameEn": "Spawn",
+        "superRegionNameEn": "Attacker Side",
+        "location": {
+          "x": 60,
+          "y": 50
+        }
+      },
+      {
+        "regionName": "Casa de Barcos",
+        "superRegionName": "B",
+        "regionNameEn": "Boat House",
+        "superRegionNameEn": "B",
+        "location": {
+          "x": -4484.77,
+          "y": -7763.36
+        }
+      },
+      {
+        "regionName": "Acesso",
+        "superRegionName": "B",
+        "regionNameEn": "Lobby",
+        "superRegionNameEn": "B",
+        "location": {
+          "x": -1490.59,
+          "y": -1389.97
+        }
+      },
+      {
+        "regionName": "Principal",
+        "superRegionName": "B",
+        "regionNameEn": "Main",
+        "superRegionNameEn": "B",
+        "location": {
+          "x": -1983.67,
+          "y": -5840.81
+        }
+      },
+      {
+        "regionName": "Ponto",
+        "superRegionName": "B",
+        "regionNameEn": "Site",
+        "superRegionNameEn": "B",
+        "location": {
+          "x": -2344.06,
+          "y": -7548.51
+        }
+      },
+      {
+        "regionName": "Surgimento",
+        "superRegionName": "no Lado Defensor",
+        "regionNameEn": "Spawn",
+        "superRegionNameEn": "Defender Side",
+        "location": {
+          "x": 1995.24,
+          "y": -9744.92
+        }
+      },
+      {
+        "regionName": "Baixo",
+        "superRegionName": "Meio",
+        "regionNameEn": "Bottom",
+        "superRegionNameEn": "Mid",
+        "location": {
+          "x": 1122.23,
+          "y": -5951.7
+        }
+      },
+      {
+        "regionName": "Passarela",
+        "superRegionName": "Meio",
+        "regionNameEn": "Catwalk",
+        "superRegionNameEn": "Mid",
+        "location": {
+          "x": 2315.79,
+          "y": -4127.26
+        }
+      },
+      {
+        "regionName": "Pátio",
+        "superRegionName": "Meio",
+        "regionNameEn": "Courtyard",
+        "superRegionNameEn": "Mid",
+        "location": {
+          "x": 1222.7,
+          "y": -4586.6
+        }
+      },
+      {
+        "regionName": "Nicho",
+        "superRegionName": "Meio",
+        "regionNameEn": "Cubby",
+        "superRegionNameEn": "Mid",
+        "location": {
+          "x": 3387.32,
+          "y": -5129.76
+        }
+      },
+      {
+        "regionName": "Link",
+        "superRegionName": "Meio",
+        "regionNameEn": "Link",
+        "superRegionNameEn": "Mid",
+        "location": {
+          "x": -632.09,
+          "y": -4280.26
+        }
+      },
+      {
+        "regionName": "Mercado",
+        "superRegionName": "Meio",
+        "regionNameEn": "Market",
+        "superRegionNameEn": "Mid",
+        "location": {
+          "x": 1089.1,
+          "y": -7363.19
+        }
+      },
+      {
+        "regionName": "Pizza",
+        "superRegionName": "Meio",
+        "regionNameEn": "Pizza",
+        "superRegionNameEn": "Mid",
+        "location": {
+          "x": 1801.57,
+          "y": -7262.17
+        }
+      },
+      {
+        "regionName": "Topo",
+        "superRegionName": "Meio",
+        "regionNameEn": "Top",
+        "superRegionNameEn": "Mid",
+        "location": {
+          "x": 2753.93,
+          "y": -2129.62
+        }
+      }
+    ]
+  },
+  {
+    "uuid": "2c9d57ec-4431-9c5e-2939-8f9ef6dd5cba",
+    "name": "Bind",
+    "displayName": "Bind",
+    "coordinates": "34°2'A'N,6°51'Z'W",
+    "displayIcon": "https://media.valorant-api.com/maps/2c9d57ec-4431-9c5e-2939-8f9ef6dd5cba/displayicon.png",
+    "splash": "https://media.valorant-api.com/maps/2c9d57ec-4431-9c5e-2939-8f9ef6dd5cba/splash.png",
+    "xMultiplier": 0.000059,
+    "yMultiplier": -0.000059,
+    "xScalarToAdd": 0.576941,
+    "yScalarToAdd": 0.967566,
+    "callouts": [
+      {
+        "regionName": "Banheiro",
+        "superRegionName": "A",
+        "regionNameEn": "Bath",
+        "superRegionNameEn": "A",
+        "location": {
+          "x": 9106.54,
+          "y": 4449.66
+        }
+      },
+      {
+        "regionName": "Nicho",
+        "superRegionName": "A",
+        "regionNameEn": "Cubby",
+        "superRegionNameEn": "A",
+        "location": {
+          "x": 8605.17,
+          "y": 174.9
+        }
+      },
+      {
+        "regionName": "Saída",
+        "superRegionName": "A",
+        "regionNameEn": "Exit",
+        "superRegionNameEn": "A",
+        "location": {
+          "x": 7550.41,
+          "y": 5874.5
+        }
+      },
+      {
+        "regionName": "Luzes",
+        "superRegionName": "A",
+        "regionNameEn": "Lamps",
+        "superRegionNameEn": "A",
+        "location": {
+          "x": 10649.47,
+          "y": 79.9
+        }
+      },
+      {
+        "regionName": "Link",
+        "superRegionName": "A",
+        "regionNameEn": "Link",
+        "superRegionNameEn": "A",
+        "location": {
+          "x": 6365.64,
+          "y": -1007.02
+        }
+      },
+      {
+        "regionName": "Acesso",
+        "superRegionName": "A",
+        "regionNameEn": "Lobby",
+        "superRegionNameEn": "A",
+        "location": {
+          "x": 6113.24,
+          "y": 3158.82
+        }
+      },
+      {
+        "regionName": "Curto",
+        "superRegionName": "A",
+        "regionNameEn": "Short",
+        "superRegionNameEn": "A",
+        "location": {
+          "x": 7983.35,
+          "y": 803.96
+        }
+      },
+      {
+        "regionName": "Ponto",
+        "superRegionName": "A",
+        "regionNameEn": "Site",
+        "superRegionNameEn": "A",
+        "location": {
+          "x": 10747.9,
+          "y": 2664.44
+        }
+      },
+      {
+        "regionName": "Teleportador",
+        "superRegionName": "A",
+        "regionNameEn": "Teleporter",
+        "superRegionNameEn": "A",
+        "location": {
+          "x": 9432.3,
+          "y": 489.88
+        }
+      },
+      {
+        "regionName": "Torre",
+        "superRegionName": "A",
+        "regionNameEn": "Tower",
+        "superRegionNameEn": "A",
+        "location": {
+          "x": 12872.58,
+          "y": 2556.77
+        }
+      },
+      {
+        "regionName": "Caverna",
+        "superRegionName": "no Lado Atacante",
+        "regionNameEn": "Cave",
+        "superRegionNameEn": "Attacker Side",
+        "location": {
+          "x": 3920.39,
+          "y": 256.94
+        }
+      },
+      {
+        "regionName": "Surgimento",
+        "superRegionName": "no Lado Atacante",
+        "regionNameEn": "Spawn",
+        "superRegionNameEn": "Attacker Side",
+        "location": {
+          "x": 161.65,
+          "y": 77.51
+        }
+      },
+      {
+        "regionName": "Esquina",
+        "superRegionName": "B",
+        "regionNameEn": "Elbow",
+        "superRegionNameEn": "B",
+        "location": {
+          "x": 11212.9,
+          "y": -7095.33
+        }
+      },
+      {
+        "regionName": "Saída",
+        "superRegionName": "B",
+        "regionNameEn": "Exit",
+        "superRegionNameEn": "B",
+        "location": {
+          "x": 8921.41,
+          "y": -1763.23
+        }
+      },
+      {
+        "regionName": "Fonte",
+        "superRegionName": "B",
+        "regionNameEn": "Fountain",
+        "superRegionNameEn": "B",
+        "location": {
+          "x": 5737.15,
+          "y": -5390.45
+        }
+      },
+      {
+        "regionName": "Jardim",
+        "superRegionName": "B",
+        "regionNameEn": "Garden",
+        "superRegionNameEn": "B",
+        "location": {
+          "x": 9144.1,
+          "y": -5598.13
+        }
+      },
+      {
+        "regionName": "Salão",
+        "superRegionName": "B",
+        "regionNameEn": "Hall",
+        "superRegionNameEn": "B",
+        "location": {
+          "x": 12981.88,
+          "y": -4941.75
+        }
+      },
+      {
+        "regionName": "Link",
+        "superRegionName": "B",
+        "regionNameEn": "Link",
+        "superRegionNameEn": "B",
+        "location": {
+          "x": 6361.57,
+          "y": -2621.18
+        }
+      },
+      {
+        "regionName": "Longo",
+        "superRegionName": "B",
+        "regionNameEn": "Long",
+        "superRegionNameEn": "B",
+        "location": {
+          "x": 7666.67,
+          "y": -6512.8
+        }
+      },
+      {
+        "regionName": "Curto",
+        "superRegionName": "B",
+        "regionNameEn": "Short",
+        "superRegionNameEn": "B",
+        "location": {
+          "x": 7424.13,
+          "y": -3056.45
+        }
+      },
+      {
+        "regionName": "Ponto",
+        "superRegionName": "B",
+        "regionNameEn": "Site",
+        "superRegionNameEn": "B",
+        "location": {
+          "x": 11108.11,
+          "y": -4831.46
+        }
+      },
+      {
+        "regionName": "Teleportador",
+        "superRegionName": "B",
+        "regionNameEn": "Teleporter",
+        "superRegionNameEn": "B",
+        "location": {
+          "x": 9027.78,
+          "y": -7223.81
+        }
+      },
+      {
+        "regionName": "Janela",
+        "superRegionName": "B",
+        "regionNameEn": "Window",
+        "superRegionNameEn": "B",
+        "location": {
+          "x": 8826.79,
+          "y": -4309.41
+        }
+      },
+      {
+        "regionName": "Surgimento",
+        "superRegionName": "no Lado Defensor",
+        "regionNameEn": "Spawn",
+        "superRegionNameEn": "Defender Side",
+        "location": {
+          "x": 14641.92,
+          "y": -1017.67
+        }
+      }
+    ]
+  },
+  {
+    "uuid": "2fb9a4fd-47b8-4e7d-a969-74b4046ebd53",
+    "name": "Breeze",
+    "displayName": "Breeze",
+    "coordinates": "26°11'AG\"N 71°10'WY\"O",
+    "displayIcon": "https://media.valorant-api.com/maps/2fb9a4fd-47b8-4e7d-a969-74b4046ebd53/displayicon.png",
+    "splash": "https://media.valorant-api.com/maps/2fb9a4fd-47b8-4e7d-a969-74b4046ebd53/splash.png",
+    "xMultiplier": 0.00007,
+    "yMultiplier": -0.00007,
+    "xScalarToAdd": 0.465123,
+    "yScalarToAdd": 0.833078,
+    "callouts": [
+      {
+        "regionName": "Ponte",
+        "superRegionName": "A",
+        "regionNameEn": "Bridge",
+        "superRegionNameEn": "A",
+        "location": {
+          "x": 8400,
+          "y": 3525
+        }
+      },
+      {
+        "regionName": "Acesso",
+        "superRegionName": "A",
+        "regionNameEn": "Lobby",
+        "superRegionNameEn": "A",
+        "location": {
+          "x": -1250,
+          "y": 3400
+        }
+      },
+      {
+        "regionName": "Pirâmides",
+        "superRegionName": "A",
+        "regionNameEn": "Pyramids",
+        "superRegionNameEn": "A",
+        "location": {
+          "x": 5200,
+          "y": 5450
+        }
+      },
+      {
+        "regionName": "Rampa",
+        "superRegionName": "A",
+        "regionNameEn": "Ramp",
+        "superRegionNameEn": "A",
+        "location": {
+          "x": 7300,
+          "y": 2725
+        }
+      },
+      {
+        "regionName": "Loja",
+        "superRegionName": "A",
+        "regionNameEn": "Shop",
+        "superRegionNameEn": "A",
+        "location": {
+          "x": 2150,
+          "y": 4250
+        }
+      },
+      {
+        "regionName": "Ponto",
+        "superRegionName": "A",
+        "regionNameEn": "Site",
+        "superRegionNameEn": "A",
+        "location": {
+          "x": 4825,
+          "y": 6325
+        }
+      },
+      {
+        "regionName": "Surgimento",
+        "superRegionName": "no Lado Atacante",
+        "regionNameEn": "Spawn",
+        "superRegionNameEn": "Attacker Side",
+        "location": {
+          "x": -575,
+          "y": -450
+        }
+      },
+      {
+        "regionName": "Fundos",
+        "superRegionName": "B",
+        "regionNameEn": "Back",
+        "superRegionNameEn": "B",
+        "location": {
+          "x": 7550,
+          "y": -5675
+        }
+      },
+      {
+        "regionName": "Esquina",
+        "superRegionName": "B",
+        "regionNameEn": "Elbow",
+        "superRegionNameEn": "B",
+        "location": {
+          "x": 4675,
+          "y": -2900
+        }
+      },
+      {
+        "regionName": "Principal",
+        "superRegionName": "B",
+        "regionNameEn": "Main",
+        "superRegionNameEn": "B",
+        "location": {
+          "x": 3550,
+          "y": -4450
+        }
+      },
+      {
+        "regionName": "Ponto",
+        "superRegionName": "B",
+        "regionNameEn": "Site",
+        "superRegionNameEn": "B",
+        "location": {
+          "x": 6450,
+          "y": -5650
+        }
+      },
+      {
+        "regionName": "Túnel",
+        "superRegionName": "B",
+        "regionNameEn": "Tunnel",
+        "superRegionNameEn": "B",
+        "location": {
+          "x": 6450,
+          "y": -1450
+        }
+      },
+      {
+        "regionName": "Parede",
+        "superRegionName": "B",
+        "regionNameEn": "Wall",
+        "superRegionNameEn": "B",
+        "location": {
+          "x": 8550,
+          "y": -3000
+        }
+      },
+      {
+        "regionName": "Janela",
+        "superRegionName": "B",
+        "regionNameEn": "Window",
+        "superRegionNameEn": "B",
+        "location": {
+          "x": 2225,
+          "y": -4175
+        }
+      },
+      {
+        "regionName": "Arcos",
+        "superRegionName": "no Lado Defensor",
+        "regionNameEn": "Arches",
+        "superRegionNameEn": "Defender Side",
+        "location": {
+          "x": 9400,
+          "y": -1300
+        }
+      },
+      {
+        "regionName": "Surgimento",
+        "superRegionName": "no Lado Defensor",
+        "regionNameEn": "Spawn",
+        "superRegionNameEn": "Defender Side",
+        "location": {
+          "x": 8900,
+          "y": 3525
+        }
+      },
+      {
+        "regionName": "Baixo",
+        "superRegionName": "Meio",
+        "regionNameEn": "Bottom",
+        "superRegionNameEn": "Mid",
+        "location": {
+          "x": 1575,
+          "y": 475
+        }
+      },
+      {
+        "regionName": "Canhão",
+        "superRegionName": "Meio",
+        "regionNameEn": "Cannon",
+        "superRegionNameEn": "Mid",
+        "location": {
+          "x": 2900,
+          "y": -1850
+        }
+      },
+      {
+        "regionName": "Corredor",
+        "superRegionName": "Meio",
+        "regionNameEn": "Hall",
+        "superRegionNameEn": "Mid",
+        "location": {
+          "x": 4256.57,
+          "y": 2491.05
+        }
+      },
+      {
+        "regionName": "Ninho",
+        "superRegionName": "Meio",
+        "regionNameEn": "Nest",
+        "superRegionNameEn": "Mid",
+        "location": {
+          "x": 8650,
+          "y": 275
+        }
+      },
+      {
+        "regionName": "Pilar",
+        "superRegionName": "Meio",
+        "regionNameEn": "Pillar",
+        "superRegionNameEn": "Mid",
+        "location": {
+          "x": 4175,
+          "y": 475
+        }
+      },
+      {
+        "regionName": "Topo",
+        "superRegionName": "Meio",
+        "regionNameEn": "Top",
+        "superRegionNameEn": "Mid",
+        "location": {
+          "x": 6175,
+          "y": 525
+        }
+      },
+      {
+        "regionName": "Portas de Madeira",
+        "superRegionName": "Meio",
+        "regionNameEn": "Wood Doors",
+        "superRegionNameEn": "Mid",
+        "location": {
+          "x": 4825,
+          "y": 2550
+        }
+      }
+    ]
+  },
+  {
+    "uuid": "1c18ab1f-420d-0d8b-71d0-77ad3c439115",
+    "name": "Corrode",
+    "displayName": "Corrode",
+    "coordinates": "48° 38' FH\" N8, 1° 33' YV\" W8",
+    "displayIcon": "https://media.valorant-api.com/maps/1c18ab1f-420d-0d8b-71d0-77ad3c439115/displayicon.png",
+    "splash": "https://media.valorant-api.com/maps/1c18ab1f-420d-0d8b-71d0-77ad3c439115/splash.png",
+    "xMultiplier": 0.00007,
+    "yMultiplier": -0.00007,
+    "xScalarToAdd": 0.526158,
+    "yScalarToAdd": 0.5,
+    "callouts": [
+      {
+        "regionName": "Guindaste",
+        "superRegionName": "A",
+        "regionNameEn": "Crane",
+        "superRegionNameEn": "A",
+        "location": {
+          "x": 4236.1,
+          "y": -4045
+        }
+      },
+      {
+        "regionName": "Passagem",
+        "superRegionName": "A",
+        "regionNameEn": "Elbow",
+        "superRegionNameEn": "A",
+        "location": {
+          "x": 5583.28,
+          "y": -2074.5
+        }
+      },
+      {
+        "regionName": "Link",
+        "superRegionName": "A",
+        "regionNameEn": "Link",
+        "superRegionNameEn": "A",
+        "location": {
+          "x": 1783.28,
+          "y": -1049.51
+        }
+      },
+      {
+        "regionName": "Acesso",
+        "superRegionName": "A",
+        "regionNameEn": "Lobby",
+        "superRegionNameEn": "A",
+        "location": {
+          "x": 4333.28,
+          "y": 2600.5
+        }
+      },
+      {
+        "regionName": "Principal",
+        "superRegionName": "A",
+        "regionNameEn": "Main",
+        "superRegionNameEn": "A",
+        "location": {
+          "x": 5933.28,
+          "y": 1225.5
+        }
+      },
+      {
+        "regionName": "Portinha",
+        "superRegionName": "A",
+        "regionNameEn": "Pocket",
+        "superRegionNameEn": "A",
+        "location": {
+          "x": 5583.28,
+          "y": -799.5
+        }
+      },
+      {
+        "regionName": "Ponto",
+        "superRegionName": "A",
+        "regionNameEn": "Site",
+        "superRegionNameEn": "A",
+        "location": {
+          "x": 3458.28,
+          "y": -1824.5
+        }
+      },
+      {
+        "regionName": "Pátio",
+        "superRegionName": "A",
+        "regionNameEn": "Yard",
+        "superRegionNameEn": "A",
+        "location": {
+          "x": 4333.28,
+          "y": -799.5
+        }
+      },
+      {
+        "regionName": "Surgimento",
+        "superRegionName": "no Lado Atacante",
+        "regionNameEn": "Spawn",
+        "superRegionNameEn": "Attacker Side",
+        "location": {
+          "x": -25,
+          "y": 5675
+        }
+      },
+      {
+        "regionName": "Arco",
+        "superRegionName": "B",
+        "regionNameEn": "Arch",
+        "superRegionNameEn": "B",
+        "location": {
+          "x": -3098.56,
+          "y": -4399.52
+        }
+      },
+      {
+        "regionName": "Passagem",
+        "superRegionName": "B",
+        "regionNameEn": "Elbow",
+        "superRegionNameEn": "B",
+        "location": {
+          "x": -5591.72,
+          "y": -2924.52
+        }
+      },
+      {
+        "regionName": "Link",
+        "superRegionName": "B",
+        "regionNameEn": "Link",
+        "superRegionNameEn": "B",
+        "location": {
+          "x": -1291.72,
+          "y": -1824.51
+        }
+      },
+      {
+        "regionName": "Acesso",
+        "superRegionName": "B",
+        "regionNameEn": "Lobby",
+        "superRegionNameEn": "B",
+        "location": {
+          "x": -1666.73,
+          "y": 2775.49
+        }
+      },
+      {
+        "regionName": "Principal",
+        "superRegionName": "B",
+        "regionNameEn": "Main",
+        "superRegionNameEn": "B",
+        "location": {
+          "x": -2716.72,
+          "y": 750.49
+        }
+      },
+      {
+        "regionName": "Ponto",
+        "superRegionName": "B",
+        "regionNameEn": "Site",
+        "superRegionNameEn": "B",
+        "location": {
+          "x": -2716.72,
+          "y": -1174.51
+        }
+      },
+      {
+        "regionName": "Torre",
+        "superRegionName": "B",
+        "regionNameEn": "Tower",
+        "superRegionNameEn": "B",
+        "location": {
+          "x": -3516.72,
+          "y": -2924.52
+        }
+      },
+      {
+        "regionName": "Surgimento",
+        "superRegionName": "no Lado Defensor",
+        "regionNameEn": "Spawn",
+        "superRegionNameEn": "Defender Side",
+        "location": {
+          "x": 8.29,
+          "y": -5749.51
+        }
+      },
+      {
+        "regionName": "Flor",
+        "superRegionName": "Meio",
+        "regionNameEn": "Bottom",
+        "superRegionNameEn": "Mid",
+        "location": {
+          "x": 133.28,
+          "y": 175.49
+        }
+      },
+      {
+        "regionName": "Escadas",
+        "superRegionName": "Meio",
+        "regionNameEn": "Stairs",
+        "superRegionNameEn": "Mid",
+        "location": {
+          "x": 133.28,
+          "y": -1474.51
+        }
+      },
+      {
+        "regionName": "Patamar",
+        "superRegionName": "Meio",
+        "regionNameEn": "Top",
+        "superRegionNameEn": "Mid",
+        "location": {
+          "x": 133.28,
+          "y": -1824.51
+        }
+      },
+      {
+        "regionName": "Janela",
+        "superRegionName": "Meio",
+        "regionNameEn": "Window",
+        "superRegionNameEn": "Mid",
+        "location": {
+          "x": 133.28,
+          "y": -3099.51
+        }
+      }
+    ]
+  },
+  {
+    "uuid": "b529448b-4d60-346e-e89e-00a4c527a405",
+    "name": "Fracture",
+    "displayName": "Fracture",
+    "coordinates": "35°48'BI\"N 106°08'YQ\"O",
+    "displayIcon": "https://media.valorant-api.com/maps/b529448b-4d60-346e-e89e-00a4c527a405/displayicon.png",
+    "splash": "https://media.valorant-api.com/maps/b529448b-4d60-346e-e89e-00a4c527a405/splash.png",
+    "xMultiplier": 0.000078,
+    "yMultiplier": -0.000078,
+    "xScalarToAdd": 0.556952,
+    "yScalarToAdd": 1.155886,
+    "callouts": [
+      {
+        "regionName": "Antena",
+        "superRegionName": "A",
+        "regionNameEn": "Dish",
+        "superRegionNameEn": "A",
+        "location": {
+          "x": 11296.67,
+          "y": 1391.71
+        }
+      },
+      {
+        "regionName": "Porta",
+        "superRegionName": "A",
+        "regionNameEn": "Door",
+        "superRegionNameEn": "A",
+        "location": {
+          "x": 5807.86,
+          "y": 1940.46
+        }
+      },
+      {
+        "regionName": "Descida",
+        "superRegionName": "A",
+        "regionNameEn": "Drop",
+        "superRegionNameEn": "A",
+        "location": {
+          "x": 9306.8,
+          "y": 2826.16
+        }
+      },
+      {
+        "regionName": "Portão",
+        "superRegionName": "A",
+        "regionNameEn": "Gate",
+        "superRegionNameEn": "A",
+        "location": {
+          "x": 12962,
+          "y": 1565
+        }
+      },
+      {
+        "regionName": "Salão",
+        "superRegionName": "A",
+        "regionNameEn": "Hall",
+        "superRegionNameEn": "A",
+        "location": {
+          "x": 5063.55,
+          "y": 2057.66
+        }
+      },
+      {
+        "regionName": "Link",
+        "superRegionName": "A",
+        "regionNameEn": "Link",
+        "superRegionNameEn": "A",
+        "location": {
+          "x": 8578,
+          "y": 1302
+        }
+      },
+      {
+        "regionName": "Principal",
+        "superRegionName": "A",
+        "regionNameEn": "Main",
+        "superRegionNameEn": "A",
+        "location": {
+          "x": 5878.79,
+          "y": 3450.96
+        }
+      },
+      {
+        "regionName": "Corda",
+        "superRegionName": "A",
+        "regionNameEn": "Rope",
+        "superRegionNameEn": "A",
+        "location": {
+          "x": 6638.83,
+          "y": 1052.65
+        }
+      },
+      {
+        "regionName": "Ponto",
+        "superRegionName": "A",
+        "regionNameEn": "Site",
+        "superRegionNameEn": "A",
+        "location": {
+          "x": 8125.76,
+          "y": 3373.79
+        }
+      },
+      {
+        "regionName": "Ponte",
+        "superRegionName": "no Lado Atacante",
+        "regionNameEn": "Bridge",
+        "superRegionNameEn": "Attacker Side",
+        "location": {
+          "x": 13204,
+          "y": -756
+        }
+      },
+      {
+        "regionName": "Surgimento",
+        "superRegionName": "no Lado Atacante",
+        "regionNameEn": "Spawn",
+        "superRegionNameEn": "Attacker Side",
+        "location": {
+          "x": 4345.55,
+          "y": -948.45
+        }
+      },
+      {
+        "regionName": "Fliperama",
+        "superRegionName": "B",
+        "regionNameEn": "Arcade",
+        "superRegionNameEn": "B",
+        "location": {
+          "x": 10181,
+          "y": -4179
+        }
+      },
+      {
+        "regionName": "Banco",
+        "superRegionName": "B",
+        "regionNameEn": "Bench",
+        "superRegionNameEn": "B",
+        "location": {
+          "x": 11473,
+          "y": -2897
+        }
+      },
+      {
+        "regionName": "Refeitório",
+        "superRegionName": "B",
+        "regionNameEn": "Canteen",
+        "superRegionNameEn": "B",
+        "location": {
+          "x": 7111,
+          "y": -3138
+        }
+      },
+      {
+        "regionName": "Gerador",
+        "superRegionName": "B",
+        "regionNameEn": "Generator",
+        "superRegionNameEn": "B",
+        "location": {
+          "x": 8362,
+          "y": -3380
+        }
+      },
+      {
+        "regionName": "Link",
+        "superRegionName": "B",
+        "regionNameEn": "Link",
+        "superRegionNameEn": "B",
+        "location": {
+          "x": 9198,
+          "y": -2741
+        }
+      },
+      {
+        "regionName": "Principal",
+        "superRegionName": "B",
+        "regionNameEn": "Main",
+        "superRegionNameEn": "B",
+        "location": {
+          "x": 5967,
+          "y": -5343
+        }
+      },
+      {
+        "regionName": "Ponto",
+        "superRegionName": "B",
+        "regionNameEn": "Site",
+        "superRegionNameEn": "B",
+        "location": {
+          "x": 8178,
+          "y": -5942
+        }
+      },
+      {
+        "regionName": "Torre",
+        "superRegionName": "B",
+        "regionNameEn": "Tower",
+        "superRegionNameEn": "B",
+        "location": {
+          "x": 9155,
+          "y": -5601
+        }
+      },
+      {
+        "regionName": "Árvore",
+        "superRegionName": "B",
+        "regionNameEn": "Tree",
+        "superRegionNameEn": "B",
+        "location": {
+          "x": 4965,
+          "y": -4109
+        }
+      },
+      {
+        "regionName": "Túnel",
+        "superRegionName": "B",
+        "regionNameEn": "Tunnel",
+        "superRegionNameEn": "B",
+        "location": {
+          "x": 7402,
+          "y": -4058
+        }
+      },
+      {
+        "regionName": "Surgimento",
+        "superRegionName": "no Lado Defensor",
+        "regionNameEn": "Spawn",
+        "superRegionNameEn": "Defender Side",
+        "location": {
+          "x": 9156,
+          "y": -677
+        }
+      }
+    ]
+  },
+  {
+    "uuid": "2bee0dc9-4ffe-519b-1cbd-7fbe763a6047",
+    "name": "Haven",
+    "displayName": "Haven",
+    "coordinates": "27°28'A'N,89°38'WZ'E",
+    "displayIcon": "https://media.valorant-api.com/maps/2bee0dc9-4ffe-519b-1cbd-7fbe763a6047/displayicon.png",
+    "splash": "https://media.valorant-api.com/maps/2bee0dc9-4ffe-519b-1cbd-7fbe763a6047/splash.png",
+    "xMultiplier": 0.000075,
+    "yMultiplier": -0.000075,
+    "xScalarToAdd": 1.09345,
+    "yScalarToAdd": 0.642728,
+    "callouts": [
+      {
+        "regionName": "Jardim",
+        "superRegionName": "A",
+        "regionNameEn": "Garden",
+        "superRegionNameEn": "A",
+        "location": {
+          "x": 3100.26,
+          "y": -4683.6
+        }
+      },
+      {
+        "regionName": "Link",
+        "superRegionName": "A",
+        "regionNameEn": "Link",
+        "superRegionNameEn": "A",
+        "location": {
+          "x": 4244.42,
+          "y": -10715.68
+        }
+      },
+      {
+        "regionName": "Acesso",
+        "superRegionName": "A",
+        "regionNameEn": "Lobby",
+        "superRegionNameEn": "A",
+        "location": {
+          "x": 3438.54,
+          "y": -6260.41
+        }
+      },
+      {
+        "regionName": "Longo",
+        "superRegionName": "A",
+        "regionNameEn": "Long",
+        "superRegionNameEn": "A",
+        "location": {
+          "x": 6209.7,
+          "y": -6901.14
+        }
+      },
+      {
+        "regionName": "Esgoto",
+        "superRegionName": "A",
+        "regionNameEn": "Sewer",
+        "superRegionNameEn": "A",
+        "location": {
+          "x": 3452.87,
+          "y": -7915.72
+        }
+      },
+      {
+        "regionName": "Ponto",
+        "superRegionName": "A",
+        "regionNameEn": "Site",
+        "superRegionNameEn": "A",
+        "location": {
+          "x": 6309.31,
+          "y": -9225.7
+        }
+      },
+      {
+        "regionName": "Torre",
+        "superRegionName": "A",
+        "regionNameEn": "Tower",
+        "superRegionNameEn": "A",
+        "location": {
+          "x": 6721.4,
+          "y": -10472.52
+        }
+      },
+      {
+        "regionName": "Surgimento",
+        "superRegionName": "no Lado Atacante",
+        "regionNameEn": "Spawn",
+        "superRegionNameEn": "Attacker Side",
+        "location": {
+          "x": 1741.76,
+          "y": -2642.79
+        }
+      },
+      {
+        "regionName": "Traseira",
+        "superRegionName": "B",
+        "regionNameEn": "Back",
+        "superRegionNameEn": "B",
+        "location": {
+          "x": 1966.16,
+          "y": -10664.77
+        }
+      },
+      {
+        "regionName": "Ponto",
+        "superRegionName": "B",
+        "regionNameEn": "Site",
+        "superRegionNameEn": "B",
+        "location": {
+          "x": 1884.71,
+          "y": -9231.33
+        }
+      },
+      {
+        "regionName": "Nicho",
+        "superRegionName": "C",
+        "regionNameEn": "Cubby",
+        "superRegionNameEn": "C",
+        "location": {
+          "x": -2119.77,
+          "y": -6561.6
+        }
+      },
+      {
+        "regionName": "Garagem",
+        "superRegionName": "C",
+        "regionNameEn": "Garage",
+        "superRegionNameEn": "C",
+        "location": {
+          "x": 180.08,
+          "y": -7999.58
+        }
+      },
+      {
+        "regionName": "Link",
+        "superRegionName": "C",
+        "regionNameEn": "Link",
+        "superRegionNameEn": "C",
+        "location": {
+          "x": -87.76,
+          "y": -10004.42
+        }
+      },
+      {
+        "regionName": "Acesso",
+        "superRegionName": "C",
+        "regionNameEn": "Lobby",
+        "superRegionNameEn": "C",
+        "location": {
+          "x": -1642.19,
+          "y": -5720.34
+        }
+      },
+      {
+        "regionName": "Longo",
+        "superRegionName": "C",
+        "regionNameEn": "Long",
+        "superRegionNameEn": "C",
+        "location": {
+          "x": -3356.81,
+          "y": -5990.87
+        }
+      },
+      {
+        "regionName": "Ponto",
+        "superRegionName": "C",
+        "regionNameEn": "Site",
+        "superRegionNameEn": "C",
+        "location": {
+          "x": -2378.13,
+          "y": -9010.56
+        }
+      },
+      {
+        "regionName": "Janela",
+        "superRegionName": "C",
+        "regionNameEn": "Window",
+        "superRegionNameEn": "C",
+        "location": {
+          "x": -10.13,
+          "y": -8993.24
+        }
+      },
+      {
+        "regionName": "Surgimento",
+        "superRegionName": "no Lado Defensor",
+        "regionNameEn": "Spawn",
+        "superRegionNameEn": "Defender Side",
+        "location": {
+          "x": 2946.3,
+          "y": -12714.71
+        }
+      },
+      {
+        "regionName": "Pátio",
+        "superRegionName": "Meio",
+        "regionNameEn": "Courtyard",
+        "superRegionNameEn": "Mid",
+        "location": {
+          "x": 1822.13,
+          "y": -6712.69
+        }
+      },
+      {
+        "regionName": "Portas",
+        "superRegionName": "Meio",
+        "regionNameEn": "Doors",
+        "superRegionNameEn": "Mid",
+        "location": {
+          "x": 151.12,
+          "y": -6262.92
+        }
+      },
+      {
+        "regionName": "Janela",
+        "superRegionName": "Meio",
+        "regionNameEn": "Window",
+        "superRegionNameEn": "Mid",
+        "location": {
+          "x": 1950.22,
+          "y": -5567.91
+        }
+      }
+    ]
+  },
+  {
+    "uuid": "e2ad5c54-4114-a870-9641-8ea21279579a",
+    "name": "Icebox",
+    "displayName": "Icebox",
+    "coordinates": "76°44' A\"N 149°30' Z\"E",
+    "displayIcon": "https://media.valorant-api.com/maps/e2ad5c54-4114-a870-9641-8ea21279579a/displayicon.png",
+    "splash": "https://media.valorant-api.com/maps/e2ad5c54-4114-a870-9641-8ea21279579a/splash.png",
+    "xMultiplier": 0.000072,
+    "yMultiplier": -0.000072,
+    "xScalarToAdd": 0.460214,
+    "yScalarToAdd": 0.304687,
+    "callouts": [
+      {
+        "regionName": "Esteira",
+        "superRegionName": "A",
+        "regionNameEn": "Belt",
+        "superRegionNameEn": "A",
+        "location": {
+          "x": -7200,
+          "y": -850
+        }
+      },
+      {
+        "regionName": "Ninho",
+        "superRegionName": "A",
+        "regionNameEn": "Nest",
+        "superRegionNameEn": "A",
+        "location": {
+          "x": -6650,
+          "y": 900
+        }
+      },
+      {
+        "regionName": "Canos",
+        "superRegionName": "A",
+        "regionNameEn": "Pipes",
+        "superRegionNameEn": "A",
+        "location": {
+          "x": -6150,
+          "y": 450
+        }
+      },
+      {
+        "regionName": "Vigas",
+        "superRegionName": "A",
+        "regionNameEn": "Rafters",
+        "superRegionNameEn": "A",
+        "location": {
+          "x": -6450,
+          "y": 4250
+        }
+      },
+      {
+        "regionName": "Tela",
+        "superRegionName": "A",
+        "regionNameEn": "Screen",
+        "superRegionNameEn": "A",
+        "location": {
+          "x": -5100,
+          "y": 3325
+        }
+      },
+      {
+        "regionName": "Ponto",
+        "superRegionName": "A",
+        "regionNameEn": "Site",
+        "superRegionNameEn": "A",
+        "location": {
+          "x": -6400,
+          "y": 3200
+        }
+      },
+      {
+        "regionName": "Surgimento",
+        "superRegionName": "no Lado Atacante",
+        "regionNameEn": "Spawn",
+        "superRegionNameEn": "Attacker Side",
+        "location": {
+          "x": -3925,
+          "y": -4450
+        }
+      },
+      {
+        "regionName": "Fundos",
+        "superRegionName": "B",
+        "regionNameEn": "Back",
+        "superRegionNameEn": "B",
+        "location": {
+          "x": 251,
+          "y": 4269
+        }
+      },
+      {
+        "regionName": "Nicho",
+        "superRegionName": "B",
+        "regionNameEn": "Cubby",
+        "superRegionNameEn": "B",
+        "location": {
+          "x": 1050,
+          "y": -975
+        }
+      },
+      {
+        "regionName": "Cerca",
+        "superRegionName": "B",
+        "regionNameEn": "Fence",
+        "superRegionNameEn": "B",
+        "location": {
+          "x": 363,
+          "y": 3595
+        }
+      },
+      {
+        "regionName": "Garagem",
+        "superRegionName": "B",
+        "regionNameEn": "Garage",
+        "superRegionNameEn": "B",
+        "location": {
+          "x": -1250,
+          "y": -1425
+        }
+      },
+      {
+        "regionName": "Verde",
+        "superRegionName": "B",
+        "regionNameEn": "Green",
+        "superRegionNameEn": "B",
+        "location": {
+          "x": -450,
+          "y": -700
+        }
+      },
+      {
+        "regionName": "Salão",
+        "superRegionName": "B",
+        "regionNameEn": "Hall",
+        "superRegionNameEn": "B",
+        "location": {
+          "x": 300,
+          "y": 3050
+        }
+      },
+      {
+        "regionName": "Abrigo",
+        "superRegionName": "B",
+        "regionNameEn": "Hut",
+        "superRegionNameEn": "B",
+        "location": {
+          "x": -1425,
+          "y": 4400
+        }
+      },
+      {
+        "regionName": "Cozinha",
+        "superRegionName": "B",
+        "regionNameEn": "Kitchen",
+        "superRegionNameEn": "B",
+        "location": {
+          "x": -2221.36,
+          "y": 3403.65
+        }
+      },
+      {
+        "regionName": "Laranja",
+        "superRegionName": "B",
+        "regionNameEn": "Orange",
+        "superRegionNameEn": "B",
+        "location": {
+          "x": -632,
+          "y": 1700
+        }
+      },
+      {
+        "regionName": "Ponto",
+        "superRegionName": "B",
+        "regionNameEn": "Site",
+        "superRegionNameEn": "B",
+        "location": {
+          "x": 1725,
+          "y": 2575
+        }
+      },
+      {
+        "regionName": "Monte de Neve",
+        "superRegionName": "B",
+        "regionNameEn": "Snow Pile",
+        "superRegionNameEn": "B",
+        "location": {
+          "x": -1775,
+          "y": 2500
+        }
+      },
+      {
+        "regionName": "Boneco de Neve",
+        "superRegionName": "B",
+        "regionNameEn": "Snowman",
+        "superRegionNameEn": "B",
+        "location": {
+          "x": 2250,
+          "y": 3960.32
+        }
+      },
+      {
+        "regionName": "Tubo",
+        "superRegionName": "B",
+        "regionNameEn": "Tube",
+        "superRegionNameEn": "B",
+        "location": {
+          "x": -2300,
+          "y": 1275
+        }
+      },
+      {
+        "regionName": "Amarelo",
+        "superRegionName": "B",
+        "regionNameEn": "Yellow",
+        "superRegionNameEn": "B",
+        "location": {
+          "x": 2050,
+          "y": -25
+        }
+      },
+      {
+        "regionName": "Surgimento",
+        "superRegionName": "no Lado Defensor",
+        "regionNameEn": "Spawn",
+        "superRegionNameEn": "Defender Side",
+        "location": {
+          "x": -3750,
+          "y": 7075
+        }
+      },
+      {
+        "regionName": "Azul",
+        "superRegionName": "Meio",
+        "regionNameEn": "Blue",
+        "superRegionNameEn": "Mid",
+        "location": {
+          "x": -2825,
+          "y": 975
+        }
+      },
+      {
+        "regionName": "Caldeira",
+        "superRegionName": "Meio",
+        "regionNameEn": "Boiler",
+        "superRegionNameEn": "Mid",
+        "location": {
+          "x": -3375,
+          "y": 2925
+        }
+      },
+      {
+        "regionName": "Palete",
+        "superRegionName": "Meio",
+        "regionNameEn": "Pallet",
+        "superRegionNameEn": "Mid",
+        "location": {
+          "x": -4450,
+          "y": 1775
+        }
+      }
+    ]
+  },
+  {
+    "uuid": "2fe4ed3a-450a-948b-6d6b-e89a78e680a9",
+    "name": "Lotus",
+    "displayName": "Lotus",
+    "coordinates": "14°07'AD.4\"N8 74°53'XY\"E8",
+    "displayIcon": "https://media.valorant-api.com/maps/2fe4ed3a-450a-948b-6d6b-e89a78e680a9/displayicon.png",
+    "splash": "https://media.valorant-api.com/maps/2fe4ed3a-450a-948b-6d6b-e89a78e680a9/splash.png",
+    "xMultiplier": 0.000072,
+    "yMultiplier": -0.000072,
+    "xScalarToAdd": 0.454789,
+    "yScalarToAdd": 0.917752,
+    "callouts": [
+      {
+        "regionName": "Porta",
+        "superRegionName": "A",
+        "regionNameEn": "Door",
+        "superRegionNameEn": "A",
+        "location": {
+          "x": 5608.76,
+          "y": 5203.91
+        }
+      },
+      {
+        "regionName": "Descida",
+        "superRegionName": "A",
+        "regionNameEn": "Drop",
+        "superRegionNameEn": "A",
+        "location": {
+          "x": 9516.38,
+          "y": 6092.89
+        }
+      },
+      {
+        "regionName": "Cabana",
+        "superRegionName": "A",
+        "regionNameEn": "Hut",
+        "superRegionNameEn": "A",
+        "location": {
+          "x": 7917.46,
+          "y": 5557.31
+        }
+      },
+      {
+        "regionName": "Link",
+        "superRegionName": "A",
+        "regionNameEn": "Link",
+        "superRegionNameEn": "A",
+        "location": {
+          "x": 6011.07,
+          "y": 2087.65
+        }
+      },
+      {
+        "regionName": "Acesso",
+        "superRegionName": "A",
+        "regionNameEn": "Lobby",
+        "superRegionNameEn": "A",
+        "location": {
+          "x": 2685.95,
+          "y": 2927.18
+        }
+      },
+      {
+        "regionName": "Principal",
+        "superRegionName": "A",
+        "regionNameEn": "Main",
+        "superRegionNameEn": "A",
+        "location": {
+          "x": 5288.3,
+          "y": 4159.76
+        }
+      },
+      {
+        "regionName": "Raiz",
+        "superRegionName": "A",
+        "regionNameEn": "Root",
+        "superRegionNameEn": "A",
+        "location": {
+          "x": 4401.07,
+          "y": 3294.15
+        }
+      },
+      {
+        "regionName": "Destroços",
+        "superRegionName": "A",
+        "regionNameEn": "Rubble",
+        "superRegionNameEn": "A",
+        "location": {
+          "x": 4401.07,
+          "y": 4918.19
+        }
+      },
+      {
+        "regionName": "Ponto",
+        "superRegionName": "A",
+        "regionNameEn": "Site",
+        "superRegionNameEn": "A",
+        "location": {
+          "x": 7735.54,
+          "y": 5557.31
+        }
+      },
+      {
+        "regionName": "Escada",
+        "superRegionName": "A",
+        "regionNameEn": "Stairs",
+        "superRegionNameEn": "A",
+        "location": {
+          "x": 8257.88,
+          "y": 3860.93
+        }
+      },
+      {
+        "regionName": "Topo",
+        "superRegionName": "A",
+        "regionNameEn": "Top",
+        "superRegionNameEn": "A",
+        "location": {
+          "x": 9260.3,
+          "y": 5045.59
+        }
+      },
+      {
+        "regionName": "Árvore",
+        "superRegionName": "A",
+        "regionNameEn": "Tree",
+        "superRegionNameEn": "A",
+        "location": {
+          "x": 6149.53,
+          "y": 5557.31
+        }
+      },
+      {
+        "regionName": "Base",
+        "superRegionName": "no Lado Atacante",
+        "regionNameEn": "Spawn",
+        "superRegionNameEn": "Attacker Side",
+        "location": {
+          "x": 1401.29,
+          "y": 777.3
+        }
+      },
+      {
+        "regionName": "Principal",
+        "superRegionName": "B",
+        "regionNameEn": "Main",
+        "superRegionNameEn": "B",
+        "location": {
+          "x": 4876.83,
+          "y": -47.87
+        }
+      },
+      {
+        "regionName": "Pilares",
+        "superRegionName": "B",
+        "regionNameEn": "Pillars",
+        "superRegionNameEn": "B",
+        "location": {
+          "x": 3565.37,
+          "y": 668.18
+        }
+      },
+      {
+        "regionName": "Ponto",
+        "superRegionName": "B",
+        "regionNameEn": "Site",
+        "superRegionNameEn": "B",
+        "location": {
+          "x": 6368.03,
+          "y": 668.18
+        }
+      },
+      {
+        "regionName": "Superior",
+        "superRegionName": "B",
+        "regionNameEn": "Upper",
+        "superRegionNameEn": "B",
+        "location": {
+          "x": 7682.94,
+          "y": 1517.36
+        }
+      },
+      {
+        "regionName": "Desvio",
+        "superRegionName": "C",
+        "regionNameEn": "Bend",
+        "superRegionNameEn": "C",
+        "location": {
+          "x": 5657.52,
+          "y": -5281.44
+        }
+      },
+      {
+        "regionName": "Porta",
+        "superRegionName": "C",
+        "regionNameEn": "Door",
+        "superRegionNameEn": "C",
+        "location": {
+          "x": 4818.67,
+          "y": -1752.8
+        }
+      },
+      {
+        "regionName": "Cascalho",
+        "superRegionName": "C",
+        "regionNameEn": "Gravel",
+        "superRegionNameEn": "C",
+        "location": {
+          "x": 8936.88,
+          "y": -1752.29
+        }
+      },
+      {
+        "regionName": "Salão",
+        "superRegionName": "C",
+        "regionNameEn": "Hall",
+        "superRegionNameEn": "C",
+        "location": {
+          "x": 7902.06,
+          "y": -4265.88
+        }
+      },
+      {
+        "regionName": "Link",
+        "superRegionName": "C",
+        "regionNameEn": "Link",
+        "superRegionNameEn": "C",
+        "location": {
+          "x": 7504.11,
+          "y": -1377.89
+        }
+      },
+      {
+        "regionName": "Acesso",
+        "superRegionName": "C",
+        "regionNameEn": "Lobby",
+        "superRegionNameEn": "C",
+        "location": {
+          "x": 1403.57,
+          "y": -1576.59
+        }
+      },
+      {
+        "regionName": "Principal",
+        "superRegionName": "C",
+        "regionNameEn": "Main",
+        "superRegionNameEn": "C",
+        "location": {
+          "x": 5311.26,
+          "y": -3148.16
+        }
+      },
+      {
+        "regionName": "Monte",
+        "superRegionName": "C",
+        "regionNameEn": "Mound",
+        "superRegionNameEn": "C",
+        "location": {
+          "x": 3863.72,
+          "y": -1576.59
+        }
+      },
+      {
+        "regionName": "Ponto",
+        "superRegionName": "C",
+        "regionNameEn": "Site",
+        "superRegionNameEn": "C",
+        "location": {
+          "x": 6676.66,
+          "y": -4265.88
+        }
+      },
+      {
+        "regionName": "Cachoeira",
+        "superRegionName": "C",
+        "regionNameEn": "Waterfall",
+        "superRegionNameEn": "C",
+        "location": {
+          "x": 6719.8,
+          "y": -1994.3
+        }
+      },
+      {
+        "regionName": "Base",
+        "superRegionName": "no Lado Defensor",
+        "regionNameEn": "Spawn",
+        "superRegionNameEn": "Defender Side",
+        "location": {
+          "x": 9686.77,
+          "y": 1697.82
+        }
+      }
+    ]
+  },
+  {
+    "uuid": "fd267378-4d1d-484f-ff52-77821ed10dc2",
+    "name": "Pearl",
+    "displayName": "Pearl",
+    "coordinates": "38°42'ED\"N8 9°08'XS\"W8",
+    "displayIcon": "https://media.valorant-api.com/maps/fd267378-4d1d-484f-ff52-77821ed10dc2/displayicon.png",
+    "splash": "https://media.valorant-api.com/maps/fd267378-4d1d-484f-ff52-77821ed10dc2/splash.png",
+    "xMultiplier": 0.000078,
+    "yMultiplier": -0.000078,
+    "xScalarToAdd": 0.480469,
+    "yScalarToAdd": 0.916016,
+    "callouts": [
+      {
+        "regionName": "Grafite",
+        "superRegionName": "A",
+        "regionNameEn": "Art",
+        "superRegionNameEn": "A",
+        "location": {
+          "x": 4561.95,
+          "y": 3406.88
+        }
+      },
+      {
+        "regionName": "Bunker",
+        "superRegionName": "A",
+        "regionNameEn": "Dugout",
+        "superRegionNameEn": "A",
+        "location": {
+          "x": 7660.66,
+          "y": 5854.07
+        }
+      },
+      {
+        "regionName": "Flores",
+        "superRegionName": "A",
+        "regionNameEn": "Flowers",
+        "superRegionNameEn": "A",
+        "location": {
+          "x": 9263.97,
+          "y": 2507.34
+        }
+      },
+      {
+        "regionName": "Link",
+        "superRegionName": "A",
+        "regionNameEn": "Link",
+        "superRegionNameEn": "A",
+        "location": {
+          "x": 6055.21,
+          "y": 3782.7
+        }
+      },
+      {
+        "regionName": "Principal",
+        "superRegionName": "A",
+        "regionNameEn": "Main",
+        "superRegionNameEn": "A",
+        "location": {
+          "x": 6368.57,
+          "y": 3825
+        }
+      },
+      {
+        "regionName": "Restaurante",
+        "superRegionName": "A",
+        "regionNameEn": "Restaurant",
+        "superRegionNameEn": "A",
+        "location": {
+          "x": 4430.45,
+          "y": 2813.13
+        }
+      },
+      {
+        "regionName": "Segredo",
+        "superRegionName": "A",
+        "regionNameEn": "Secret",
+        "superRegionNameEn": "A",
+        "location": {
+          "x": 10458.14,
+          "y": 3831.51
+        }
+      },
+      {
+        "regionName": "Ponto",
+        "superRegionName": "A",
+        "regionNameEn": "Site",
+        "superRegionNameEn": "A",
+        "location": {
+          "x": 6613.85,
+          "y": 5569.53
+        }
+      },
+      {
+        "regionName": "Surgimento",
+        "superRegionName": "no Lado Atacante",
+        "regionNameEn": "Spawn",
+        "superRegionNameEn": "Attacker Side",
+        "location": {
+          "x": -550,
+          "y": -600
+        }
+      },
+      {
+        "regionName": "Clube",
+        "superRegionName": "B",
+        "regionNameEn": "Club",
+        "superRegionNameEn": "B",
+        "location": {
+          "x": 800,
+          "y": -1450
+        }
+      },
+      {
+        "regionName": "Salão",
+        "superRegionName": "B",
+        "regionNameEn": "Hall",
+        "superRegionNameEn": "B",
+        "location": {
+          "x": 7495.62,
+          "y": -4954.14
+        }
+      },
+      {
+        "regionName": "Link",
+        "superRegionName": "B",
+        "regionNameEn": "Link",
+        "superRegionNameEn": "B",
+        "location": {
+          "x": 4503.36,
+          "y": -591.64
+        }
+      },
+      {
+        "regionName": "Principal",
+        "superRegionName": "B",
+        "regionNameEn": "Main",
+        "superRegionNameEn": "B",
+        "location": {
+          "x": 4050,
+          "y": -4375
+        }
+      },
+      {
+        "regionName": "Rampa",
+        "superRegionName": "B",
+        "regionNameEn": "Ramp",
+        "superRegionNameEn": "B",
+        "location": {
+          "x": 1750,
+          "y": -3800
+        }
+      },
+      {
+        "regionName": "Tela",
+        "superRegionName": "B",
+        "regionNameEn": "Screen",
+        "superRegionNameEn": "B",
+        "location": {
+          "x": 6260.43,
+          "y": -5000.93
+        }
+      },
+      {
+        "regionName": "Ponto",
+        "superRegionName": "B",
+        "regionNameEn": "Site",
+        "superRegionNameEn": "B",
+        "location": {
+          "x": 5800,
+          "y": -2850
+        }
+      },
+      {
+        "regionName": "Torre",
+        "superRegionName": "B",
+        "regionNameEn": "Tower",
+        "superRegionNameEn": "B",
+        "location": {
+          "x": 8533.42,
+          "y": -2851.35
+        }
+      },
+      {
+        "regionName": "Túnel",
+        "superRegionName": "B",
+        "regionNameEn": "Tunnel",
+        "superRegionNameEn": "B",
+        "location": {
+          "x": 8973.15,
+          "y": -2155.13
+        }
+      },
+      {
+        "regionName": "Arquivos",
+        "superRegionName": "no Lado Defensor",
+        "regionNameEn": "Records",
+        "superRegionNameEn": "Defender Side",
+        "location": {
+          "x": 8973.15,
+          "y": -1470.27
+        }
+      },
+      {
+        "regionName": "Surgimento",
+        "superRegionName": "no Lado Defensor",
+        "regionNameEn": "Spawn",
+        "superRegionNameEn": "Defender Side",
+        "location": {
+          "x": 11092.46,
+          "y": 378.8
+        }
+      },
+      {
+        "regionName": "Água",
+        "superRegionName": "no Lado Defensor",
+        "regionNameEn": "Water",
+        "superRegionNameEn": "Defender Side",
+        "location": {
+          "x": 7808.02,
+          "y": 1800.04
+        }
+      },
+      {
+        "regionName": "Passagem",
+        "superRegionName": "Meio",
+        "regionNameEn": "Connector",
+        "superRegionNameEn": "Mid",
+        "location": {
+          "x": 6047.05,
+          "y": 1800.04
+        }
+      },
+      {
+        "regionName": "Portas",
+        "superRegionName": "Meio",
+        "regionNameEn": "Doors",
+        "superRegionNameEn": "Mid",
+        "location": {
+          "x": 4701.24,
+          "y": 597.23
+        }
+      },
+      {
+        "regionName": "Praça",
+        "superRegionName": "Meio",
+        "regionNameEn": "Plaza",
+        "superRegionNameEn": "Mid",
+        "location": {
+          "x": 2750,
+          "y": -325
+        }
+      },
+      {
+        "regionName": "Lojas",
+        "superRegionName": "Meio",
+        "regionNameEn": "Shops",
+        "superRegionNameEn": "Mid",
+        "location": {
+          "x": 800,
+          "y": -1450
+        }
+      },
+      {
+        "regionName": "Topo",
+        "superRegionName": "Meio",
+        "regionNameEn": "Top",
+        "superRegionNameEn": "Mid",
+        "location": {
+          "x": 2075,
+          "y": 725
+        }
+      }
+    ]
+  },
+  {
+    "uuid": "d960549e-485c-e861-8d71-aa9d1aed12a2",
+    "name": "Split",
+    "displayName": "Split",
+    "coordinates": "35°41'CD'N,139°41'WX'E",
+    "displayIcon": "https://media.valorant-api.com/maps/d960549e-485c-e861-8d71-aa9d1aed12a2/displayicon.png",
+    "splash": "https://media.valorant-api.com/maps/d960549e-485c-e861-8d71-aa9d1aed12a2/splash.png",
+    "xMultiplier": 0.000078,
+    "yMultiplier": -0.000078,
+    "xScalarToAdd": 0.842188,
+    "yScalarToAdd": 0.697578,
+    "callouts": [
+      {
+        "regionName": "Fundos",
+        "superRegionName": "A",
+        "regionNameEn": "Back",
+        "superRegionNameEn": "A",
+        "location": {
+          "x": 7345.05,
+          "y": -7858.04
+        }
+      },
+      {
+        "regionName": "Acesso",
+        "superRegionName": "A",
+        "regionNameEn": "Lobby",
+        "superRegionNameEn": "A",
+        "location": {
+          "x": 6814.22,
+          "y": -2457.75
+        }
+      },
+      {
+        "regionName": "Principal",
+        "superRegionName": "A",
+        "regionNameEn": "Main",
+        "superRegionNameEn": "A",
+        "location": {
+          "x": 6279.98,
+          "y": -4492.83
+        }
+      },
+      {
+        "regionName": "Vigas",
+        "superRegionName": "A",
+        "regionNameEn": "Rafters",
+        "superRegionNameEn": "A",
+        "location": {
+          "x": 5434.73,
+          "y": -6258.44
+        }
+      },
+      {
+        "regionName": "Rampas",
+        "superRegionName": "A",
+        "regionNameEn": "Ramps",
+        "superRegionNameEn": "A",
+        "location": {
+          "x": 4330,
+          "y": -4750
+        }
+      },
+      {
+        "regionName": "Telas",
+        "superRegionName": "A",
+        "regionNameEn": "Screens",
+        "superRegionNameEn": "A",
+        "location": {
+          "x": 5648.71,
+          "y": -8868.61
+        }
+      },
+      {
+        "regionName": "Esgoto",
+        "superRegionName": "A",
+        "regionNameEn": "Sewer",
+        "superRegionNameEn": "A",
+        "location": {
+          "x": 4862.61,
+          "y": -2367.26
+        }
+      },
+      {
+        "regionName": "Ponto",
+        "superRegionName": "A",
+        "regionNameEn": "Site",
+        "superRegionNameEn": "A",
+        "location": {
+          "x": 6588.66,
+          "y": -6761.13
+        }
+      },
+      {
+        "regionName": "Torre",
+        "superRegionName": "A",
+        "regionNameEn": "Tower",
+        "superRegionNameEn": "A",
+        "location": {
+          "x": 4636.79,
+          "y": -6748.23
+        }
+      },
+      {
+        "regionName": "Surgimento",
+        "superRegionName": "no Lado Atacante",
+        "regionNameEn": "Spawn",
+        "superRegionNameEn": "Attacker Side",
+        "location": {
+          "x": 1901.97,
+          "y": 59.59
+        }
+      },
+      {
+        "regionName": "Beco",
+        "superRegionName": "B",
+        "regionNameEn": "Alley",
+        "superRegionNameEn": "B",
+        "location": {
+          "x": -1158,
+          "y": -8066.3
+        }
+      },
+      {
+        "regionName": "Fundos",
+        "superRegionName": "B",
+        "regionNameEn": "Back",
+        "superRegionNameEn": "B",
+        "location": {
+          "x": -3107.18,
+          "y": -7417.26
+        }
+      },
+      {
+        "regionName": "Garagem",
+        "superRegionName": "B",
+        "regionNameEn": "Garage",
+        "superRegionNameEn": "B",
+        "location": {
+          "x": -2190.78,
+          "y": -3848.03
+        }
+      },
+      {
+        "regionName": "Link",
+        "superRegionName": "B",
+        "regionNameEn": "Link",
+        "superRegionNameEn": "B",
+        "location": {
+          "x": -27.67,
+          "y": -2369.78
+        }
+      },
+      {
+        "regionName": "Acesso",
+        "superRegionName": "B",
+        "regionNameEn": "Lobby",
+        "superRegionNameEn": "B",
+        "location": {
+          "x": -1271.64,
+          "y": -1983.62
+        }
+      },
+      {
+        "regionName": "Vigas",
+        "superRegionName": "B",
+        "regionNameEn": "Rafters",
+        "superRegionNameEn": "B",
+        "location": {
+          "x": -637.14,
+          "y": -6070.62
+        }
+      },
+      {
+        "regionName": "Ponto",
+        "superRegionName": "B",
+        "regionNameEn": "Site",
+        "superRegionNameEn": "B",
+        "location": {
+          "x": -2167.25,
+          "y": -6264.77
+        }
+      },
+      {
+        "regionName": "Escada",
+        "superRegionName": "B",
+        "regionNameEn": "Stairs",
+        "superRegionNameEn": "B",
+        "location": {
+          "x": 1061.49,
+          "y": -6760.98
+        }
+      },
+      {
+        "regionName": "Torre",
+        "superRegionName": "B",
+        "regionNameEn": "Tower",
+        "superRegionNameEn": "B",
+        "location": {
+          "x": 168.9,
+          "y": -5290.19
+        }
+      },
+      {
+        "regionName": "Surgimento",
+        "superRegionName": "no Lado Defensor",
+        "regionNameEn": "Spawn",
+        "superRegionNameEn": "Defender Side",
+        "location": {
+          "x": 2142.36,
+          "y": -8964.97
+        }
+      },
+      {
+        "regionName": "Baixo",
+        "superRegionName": "Meio",
+        "regionNameEn": "Bottom",
+        "superRegionNameEn": "Mid",
+        "location": {
+          "x": 1922.66,
+          "y": -2899.46
+        }
+      },
+      {
+        "regionName": "Correio",
+        "superRegionName": "Meio",
+        "regionNameEn": "Mail",
+        "superRegionNameEn": "Mid",
+        "location": {
+          "x": 1155.33,
+          "y": -4808.64
+        }
+      },
+      {
+        "regionName": "Topo",
+        "superRegionName": "Meio",
+        "regionNameEn": "Top",
+        "superRegionNameEn": "Mid",
+        "location": {
+          "x": 2021.96,
+          "y": -4596.94
+        }
+      },
+      {
+        "regionName": "Duto",
+        "superRegionName": "Meio",
+        "regionNameEn": "Vent",
+        "superRegionNameEn": "Mid",
+        "location": {
+          "x": 3155.16,
+          "y": -5338.52
+        }
+      }
+    ]
+  },
+  {
+    "uuid": "756da597-416b-c0f2-f47b-afbdf28670bc",
+    "name": "Summit",
+    "displayName": "Summit",
+    "coordinates": "29° 18' FC\" N, 110° 25' ZQ\" E",
+    "displayIcon": "https://media.valorant-api.com/maps/756da597-416b-c0f2-f47b-afbdf28670bc/displayicon.png",
+    "splash": "https://media.valorant-api.com/maps/756da597-416b-c0f2-f47b-afbdf28670bc/splash.png",
+    "xMultiplier": 0.000075,
+    "yMultiplier": -0.000075,
+    "xScalarToAdd": 0.047401,
+    "yScalarToAdd": 0.978891,
+    "callouts": [
+      {
+        "regionName": "Arte",
+        "superRegionName": "A",
+        "regionNameEn": "Art",
+        "superRegionNameEn": "A",
+        "location": {
+          "x": 9525,
+          "y": 9925
+        }
+      },
+      {
+        "regionName": "Caverna",
+        "superRegionName": "A",
+        "regionNameEn": "Cave",
+        "superRegionNameEn": "A",
+        "location": {
+          "x": 9525,
+          "y": 12125
+        }
+      },
+      {
+        "regionName": "Jardim",
+        "superRegionName": "A",
+        "regionNameEn": "Garden",
+        "superRegionNameEn": "A",
+        "location": {
+          "x": 7675,
+          "y": 9925
+        }
+      },
+      {
+        "regionName": "Salão",
+        "superRegionName": "A",
+        "regionNameEn": "Hall",
+        "superRegionNameEn": "A",
+        "location": {
+          "x": 9525,
+          "y": 8600
+        }
+      },
+      {
+        "regionName": "Link",
+        "superRegionName": "A",
+        "regionNameEn": "Link",
+        "superRegionNameEn": "A",
+        "location": {
+          "x": 8250,
+          "y": 8050
+        }
+      },
+      {
+        "regionName": "Saguão",
+        "superRegionName": "A",
+        "regionNameEn": "Lobby",
+        "superRegionNameEn": "A",
+        "location": {
+          "x": 3175,
+          "y": 8625
+        }
+      },
+      {
+        "regionName": "Principal",
+        "superRegionName": "A",
+        "regionNameEn": "Main",
+        "superRegionNameEn": "A",
+        "location": {
+          "x": 5500,
+          "y": 8625
+        }
+      },
+      {
+        "regionName": "Ponto",
+        "superRegionName": "A",
+        "regionNameEn": "Site",
+        "superRegionNameEn": "A",
+        "location": {
+          "x": 7675,
+          "y": 11600
+        }
+      },
+      {
+        "regionName": "Base",
+        "superRegionName": "no Lado Atacante",
+        "regionNameEn": "Spawn",
+        "superRegionNameEn": "Attacker Side",
+        "location": {
+          "x": 1100,
+          "y": -100
+        }
+      },
+      {
+        "regionName": "Descida",
+        "superRegionName": "B",
+        "regionNameEn": "Drop",
+        "superRegionNameEn": "B",
+        "location": {
+          "x": 9850,
+          "y": 75
+        }
+      },
+      {
+        "regionName": "Academia",
+        "superRegionName": "B",
+        "regionNameEn": "Gym",
+        "superRegionNameEn": "B",
+        "location": {
+          "x": 10525,
+          "y": 3100
+        }
+      },
+      {
+        "regionName": "Link",
+        "superRegionName": "B",
+        "regionNameEn": "Link",
+        "superRegionNameEn": "B",
+        "location": {
+          "x": 7500,
+          "y": 3775
+        }
+      },
+      {
+        "regionName": "Saguão",
+        "superRegionName": "B",
+        "regionNameEn": "Lobby",
+        "superRegionNameEn": "B",
+        "location": {
+          "x": 5125,
+          "y": 3225
+        }
+      },
+      {
+        "regionName": "Principal",
+        "superRegionName": "B",
+        "regionNameEn": "Main",
+        "superRegionNameEn": "B",
+        "location": {
+          "x": 6500,
+          "y": 1850
+        }
+      },
+      {
+        "regionName": "Ponto",
+        "superRegionName": "B",
+        "regionNameEn": "Site",
+        "superRegionNameEn": "B",
+        "location": {
+          "x": 8550,
+          "y": 1375
+        }
+      },
+      {
+        "regionName": "Torre",
+        "superRegionName": "B",
+        "regionNameEn": "Tower",
+        "superRegionNameEn": "B",
+        "location": {
+          "x": 10175,
+          "y": 1450
+        }
+      },
+      {
+        "regionName": "Troféu",
+        "superRegionName": "B",
+        "regionNameEn": "Trophy",
+        "superRegionNameEn": "B",
+        "location": {
+          "x": 9075,
+          "y": 3675
+        }
+      },
+      {
+        "regionName": "Base",
+        "superRegionName": "no Lado Defensor",
+        "regionNameEn": "Spawn",
+        "superRegionNameEn": "Defender Side",
+        "location": {
+          "x": 12075,
+          "y": 6175
+        }
+      },
+      {
+        "regionName": "Desvio",
+        "superRegionName": "Meio",
+        "regionNameEn": "Bend",
+        "superRegionNameEn": "Mid",
+        "location": {
+          "x": 6475,
+          "y": 7850
+        }
+      },
+      {
+        "regionName": "Fundo",
+        "superRegionName": "Meio",
+        "regionNameEn": "Bottom",
+        "superRegionNameEn": "Mid",
+        "location": {
+          "x": 7500,
+          "y": 5825
+        }
+      },
+      {
+        "regionName": "Fonte",
+        "superRegionName": "Meio",
+        "regionNameEn": "Fountain",
+        "superRegionNameEn": "Mid",
+        "location": {
+          "x": 5675,
+          "y": 6175
+        }
+      },
+      {
+        "regionName": "Ladrilhos",
+        "superRegionName": "Meio",
+        "regionNameEn": "Tiles",
+        "superRegionNameEn": "Mid",
+        "location": {
+          "x": 4960.94,
+          "y": 4233.58
+        }
+      },
+      {
+        "regionName": "Topo",
+        "superRegionName": "Meio",
+        "regionNameEn": "Top",
+        "superRegionNameEn": "Mid",
+        "location": {
+          "x": 4025,
+          "y": 6525
+        }
+      },
+      {
+        "regionName": "Janela",
+        "superRegionName": "Meio",
+        "regionNameEn": "Window",
+        "superRegionNameEn": "Mid",
+        "location": {
+          "x": 8700,
+          "y": 5825
+        }
+      }
+    ]
+  },
+  {
+    "uuid": "92584fbe-486a-b1b2-9faa-39b0f486b498",
+    "name": "Sunset",
+    "displayName": "Sunset",
+    "coordinates": "34° 2' C\" N, 118° 12' YT\" W",
+    "displayIcon": "https://media.valorant-api.com/maps/92584fbe-486a-b1b2-9faa-39b0f486b498/displayicon.png",
+    "splash": "https://media.valorant-api.com/maps/92584fbe-486a-b1b2-9faa-39b0f486b498/splash.png",
+    "xMultiplier": 0.000078,
+    "yMultiplier": -0.000078,
+    "xScalarToAdd": 0.5,
+    "yScalarToAdd": 0.515625,
+    "callouts": [
+      {
+        "regionName": "Beco",
+        "superRegionName": "A",
+        "regionNameEn": "Alley",
+        "superRegionNameEn": "A",
+        "location": {
+          "x": 3400,
+          "y": 3600
+        }
+      },
+      {
+        "regionName": "Viaduto",
+        "superRegionName": "A",
+        "regionNameEn": "Elbow",
+        "superRegionNameEn": "A",
+        "location": {
+          "x": 200,
+          "y": 4200
+        }
+      },
+      {
+        "regionName": "Link",
+        "superRegionName": "A",
+        "regionNameEn": "Link",
+        "superRegionNameEn": "A",
+        "location": {
+          "x": 2200,
+          "y": 3000
+        }
+      },
+      {
+        "regionName": "Acesso",
+        "superRegionName": "A",
+        "regionNameEn": "Lobby",
+        "superRegionNameEn": "A",
+        "location": {
+          "x": -1800,
+          "y": 2000
+        }
+      },
+      {
+        "regionName": "Principal",
+        "superRegionName": "A",
+        "regionNameEn": "Main",
+        "superRegionNameEn": "A",
+        "location": {
+          "x": -400,
+          "y": 2200
+        }
+      },
+      {
+        "regionName": "Ponto",
+        "superRegionName": "A",
+        "regionNameEn": "Site",
+        "superRegionNameEn": "A",
+        "location": {
+          "x": 1000,
+          "y": 3200
+        }
+      },
+      {
+        "regionName": "Surgimento",
+        "superRegionName": "no Lado Atacante",
+        "regionNameEn": "Spawn",
+        "superRegionNameEn": "Attacker Side",
+        "location": {
+          "x": -6025,
+          "y": -400
+        }
+      },
+      {
+        "regionName": "Loja de Boba",
+        "superRegionName": "B",
+        "regionNameEn": "Boba",
+        "superRegionNameEn": "B",
+        "location": {
+          "x": 2200,
+          "y": -4800
+        }
+      },
+      {
+        "regionName": "Acesso",
+        "superRegionName": "B",
+        "regionNameEn": "Lobby",
+        "superRegionNameEn": "B",
+        "location": {
+          "x": -3400,
+          "y": -2600
+        }
+      },
+      {
+        "regionName": "Principal",
+        "superRegionName": "B",
+        "regionNameEn": "Main",
+        "superRegionNameEn": "B",
+        "location": {
+          "x": -2000,
+          "y": -5650
+        }
+      },
+      {
+        "regionName": "Mercado",
+        "superRegionName": "B",
+        "regionNameEn": "Market",
+        "superRegionNameEn": "B",
+        "location": {
+          "x": -200,
+          "y": -3400
+        }
+      },
+      {
+        "regionName": "Ponto",
+        "superRegionName": "B",
+        "regionNameEn": "Site",
+        "superRegionNameEn": "B",
+        "location": {
+          "x": -600,
+          "y": -5850
+        }
+      },
+      {
+        "regionName": "Surgimento",
+        "superRegionName": "no Lado Defensor",
+        "regionNameEn": "Spawn",
+        "superRegionNameEn": "Defender Side",
+        "location": {
+          "x": 3805.48,
+          "y": -1989.1
+        }
+      },
+      {
+        "regionName": "Churros",
+        "superRegionName": "Meio",
+        "regionNameEn": "Bottom",
+        "superRegionNameEn": "Mid",
+        "location": {
+          "x": -1800,
+          "y": -2025
+        }
+      },
+      {
+        "regionName": "Pátio",
+        "superRegionName": "Meio",
+        "regionNameEn": "Courtyard",
+        "superRegionNameEn": "Mid",
+        "location": {
+          "x": -600,
+          "y": -1200
+        }
+      },
+      {
+        "regionName": "Ladrilhos",
+        "superRegionName": "Meio",
+        "regionNameEn": "Tiles",
+        "superRegionNameEn": "Mid",
+        "location": {
+          "x": -1800,
+          "y": 400
+        }
+      },
+      {
+        "regionName": "Topo",
+        "superRegionName": "Meio",
+        "regionNameEn": "Top",
+        "superRegionNameEn": "Mid",
+        "location": {
+          "x": 2000,
+          "y": -2000
+        }
+      }
+    ]
+  }
+]
