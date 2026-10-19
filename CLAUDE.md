@@ -18,8 +18,9 @@ Design completo: `docs/design.md`. Ideias guardadas, que ainda NÃO devem ser im
   - `rng.ts`: RNG com seed (mulberry32) + `hashSeed`
   - `team.ts`: força do time (encaixe de função, composição, IGL, química)
   - `match.ts`: simulação de mapa round a round (13 rounds, troca no 12, OT vence por 2) e placar
+- `src/game/`: cola do jogo, pura e testada. `run.ts` = RunState JSON de uma run (draft → coach → Champions, veto do usuário, partidas da IA) + seletores; `explain.ts` = rótulos pt-BR e explicação da força.
 - `src/data/`: dados. `sample.ts` é FICTÍCIO e só serve enquanto o pipeline real não existe.
-- `src/ui/`: React.
+- `src/ui/`: React. `App.tsx` = máquina de telas; `screens/` (Início, Draft, Coach, Seu time, Torneio, Veto, Série, Fim); `components/`; `storage.ts` salva a run em localStorage (`rtc:run:v1`).
 - `docs/`: design e decisões.
 
 ## Regras

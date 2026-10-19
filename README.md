@@ -3,7 +3,7 @@
 Simulador de Valorant no navegador: monte um dream team com jogadores históricos do VCT, faça o veto de mapas
 e tente vencer o Champions.
 
-> Status: protótipo. Por enquanto só existe o motor de simulação de um mapa, com times **fictícios** de exemplo.
+> Status: protótipo jogável (Draft clássico e Ultimate Draft → Champions com veto, série e tela final), ainda com times e jogadores **fictícios** de exemplo.
 
 ## Rodando
 
