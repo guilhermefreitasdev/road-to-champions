@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import type { Role } from '../../engine/types';
 import {
-  LEADERSHIP,
+  DECISION,
   MIN_ROUNDS,
   blend,
   buildRealPool,
@@ -307,10 +307,15 @@ describe('buildRealPool', () => {
     const [r0, r1, r2, r3] = pool.rosters;
     expect(r0!.cards.filter((c) => c.isIGL).map((c) => c.handle)).toEqual(['T02']);
     expect(r0!.cards[2]!.iglSource).toBe('event-captain');
-    expect(r0!.cards[2]!.attrs.leadership).toBe(LEADERSHIP.captain);
+    expect(r0!.cards[2]!.attrs.decision).toBe(DECISION.captain);
     expect(r0!.iglKnown).toBe(true);
-    expect(r1!.cards[3]!.attrs.leadership).toBe(LEADERSHIP.infobox);
-    expect(r1!.cards[0]!.attrs.leadership).toBe(LEADERSHIP.none);
+    expect(r1!.cards[3]!.attrs.decision).toBe(DECISION.infobox);
+    // Non-IGLs: 45 ± swing by APR/KAST, never into the IGL range.
+    expect(Math.abs(r1!.cards[0]!.attrs.decision - DECISION.none)).toBeLessThanOrEqual(DECISION.swing);
+    for (const c of pool.rosters.flatMap((r) => r.cards)) {
+      if (!c.isIGL) expect(c.attrs.decision).toBeLessThanOrEqual(DECISION.iglElsewhere + DECISION.swing);
+      else expect(c.attrs.decision).toBeGreaterThanOrEqual(DECISION.infobox);
+    }
     // No IGL in the data, or an IGL who is not one of the 5 main players: unknown.
     expect(r2!.iglKnown).toBe(false);
     expect(r3!.iglKnown).toBe(false);
@@ -340,8 +345,9 @@ describe('buildRealPool', () => {
     const pool = buildRealPool([...evs].reverse(), lp, ROLES);
     const t0 = pool.rosters.filter((r) => r.teamId === 't0');
     expect(t0.map((r) => r.coach!.vetoBonus)).toEqual([0, 1, 1, 2]);
-    expect(t0[0]!.cards[2]!.attrs.leadership).toBe(LEADERSHIP.captain);
-    expect(t0[3]!.cards[2]!.attrs.leadership).toBe(LEADERSHIP.iglElsewhere);
+    expect(t0[0]!.cards[2]!.attrs.decision).toBe(DECISION.captain);
+    expect(Math.abs(t0[3]!.cards[2]!.attrs.decision - DECISION.iglElsewhere)).toBeLessThanOrEqual(DECISION.swing);
+    expect(t0[3]!.cards[2]!.attrs.decision).toBeGreaterThan(t0[3]!.cards[0]!.attrs.decision);
   });
 
   it('is deterministic and independent of input order', () => {

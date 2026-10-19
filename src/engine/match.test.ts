@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { SAMPLE_AURORA, SAMPLE_TEMPESTADE } from '../data/sample';
-import { simulateMap } from './match';
+import { decisionMapFactor, simulateMap } from './match';
 import { createRng } from './rng';
 
 const play = (seed: number | string) =>
@@ -64,6 +64,69 @@ describe('simulateMap', () => {
     for (let seed = 0; seed < n; seed++) if (play(seed).winner === 0) wins++;
     expect(wins / n).toBeGreaterThan(0.75);
     expect(wins / n).toBeLessThan(1);
+  });
+});
+
+describe('simulateMap economy and decision terms', () => {
+  const equal = (seed: number, opts: Partial<Parameters<typeof simulateMap>[3]> = {}, b = SAMPLE_AURORA) =>
+    simulateMap(SAMPLE_AURORA, b, createRng(seed), { map: 'Ascent', ...opts });
+
+  it('gives the pistol winner round 2 (~87%) but not round 3 (~38%), in both halves', () => {
+    let r2 = 0;
+    let r3 = 0;
+    let r14 = 0;
+    let r15 = 0;
+    let second = 0;
+    const n = 1500;
+    for (let seed = 0; seed < n; seed++) {
+      const { rounds } = equal(seed);
+      if (rounds[1]!.winner === rounds[0]!.winner) r2++;
+      if (rounds[2]!.winner === rounds[0]!.winner) r3++;
+      if (rounds.length < 15) continue; // 13–0 and 13–1 maps have no second-half round 3
+      second++;
+      if (rounds[13]!.winner === rounds[12]!.winner) r14++;
+      if (rounds[14]!.winner === rounds[12]!.winner) r15++;
+    }
+    expect(r2 / n).toBeGreaterThan(0.83);
+    expect(r2 / n).toBeLessThan(0.91);
+    expect(r3 / n).toBeGreaterThan(0.32);
+    expect(r3 / n).toBeLessThan(0.44);
+    expect(second).toBeGreaterThan(n * 0.9);
+    expect(r14 / second).toBeGreaterThan(0.83);
+    expect(r15 / second).toBeLessThan(0.45);
+  });
+
+  it('weighs decision more on later maps of a series and never on the pistol rounds', () => {
+    const rudderless = {
+      ...SAMPLE_AURORA,
+      players: SAMPLE_AURORA.players.map((p) => ({ ...p, card: { ...p.card, isIGL: false, attrs: { ...p.card.attrs, decision: 45 } } })),
+    };
+    const winRate = (seriesMap: number) => {
+      let wins = 0;
+      for (let seed = 0; seed < 600; seed++) if (equal(seed, { seriesMap }, rudderless).winner === 0) wins++;
+      return wins / 600;
+    };
+    const map1 = winRate(1);
+    const map3 = winRate(3);
+    expect(map1).toBeGreaterThan(0.55);
+    expect(map3).toBeGreaterThan(map1);
+    expect(decisionMapFactor(1)).toBe(1);
+    expect(decisionMapFactor(2)).toBe(1.25);
+    expect(decisionMapFactor(3)).toBe(1.5);
+    expect(decisionMapFactor(5)).toBe(1.5);
+    // Pistols are decided by aim and nerves, not by the calls: the same as with no decision gap at all.
+    let pistols = 0;
+    for (let seed = 0; seed < 600; seed++) {
+      const { rounds } = equal(seed, {}, rudderless);
+      if (rounds[0]!.winner === 0) pistols++;
+      if (rounds[12]!.winner === 0) pistols++;
+    }
+    expect(pistols / 1200).toBeGreaterThan(0.44);
+    expect(pistols / 1200).toBeLessThan(0.56);
+  });
+
+  it('keeps the series position out of the result when it does not change the maps', () => {
+    expect(equal(7, { seriesMap: 1 })).toEqual(equal(7));
   });
 });
 

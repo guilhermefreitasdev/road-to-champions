@@ -79,7 +79,7 @@ describe('SAMPLE_ROSTERS invariants', () => {
     for (const c of SAMPLE_ROSTERS.flatMap((r) => r.cards)) {
       if (c.role === 'duelist') expect(c.attrs.entry).toBeGreaterThan(c.attrs.utility);
       if (c.role === 'controller') expect(c.attrs.utility).toBeGreaterThan(c.attrs.entry);
-      if (c.isIGL) expect(c.attrs.leadership).toBeGreaterThanOrEqual(70);
+      if (c.isIGL) expect(c.attrs.decision).toBeGreaterThanOrEqual(70);
     }
   });
 

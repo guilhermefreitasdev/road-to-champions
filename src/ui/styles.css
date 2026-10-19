@@ -2951,3 +2951,225 @@ abbr[title] {
     scroll-behavior: auto !important;
   }
 }
+
+/* --- Media --- */
+/* Local images (public/media): team logos, player photos, map images, agent icons. Every box keeps its
+   fallback (initials / flag / tinted placeholder) underneath, so a missing or blocked image never breaks layout. */
+.team-logo {
+  position: relative;
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.team-logo .team-logo-initials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 3px;
+  background: var(--surface-3);
+  color: var(--muted);
+  font-family: var(--font-display);
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.team-logo img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 1px;
+  color: transparent;
+}
+
+.team-logo.has-image .team-logo-initials {
+  background: transparent;
+  color: transparent;
+}
+
+.player-photo {
+  position: relative;
+  display: inline-flex;
+  flex: none;
+  overflow: hidden;
+  border-radius: var(--radius);
+  background: var(--surface-3);
+  border: 1px solid var(--line-strong);
+}
+
+.player-photo-fallback {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  gap: 1px;
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1;
+}
+
+.player-photo-flag {
+  font-size: 0.7rem;
+}
+
+.player-photo img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  color: transparent;
+}
+
+.card-head .player-photo {
+  margin-right: var(--sp-2);
+  align-self: flex-start;
+}
+
+.card-head .card-name {
+  flex: 1;
+  min-width: 0;
+}
+
+.card-roster,
+.coach-team,
+.lineup-origin {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.roll-title.landed .team-logo {
+  margin-right: 8px;
+}
+
+.lineup-row {
+  grid-template-columns: 84px auto minmax(0, 1fr) auto auto;
+}
+
+@media (max-width: 479px) {
+  .lineup-row {
+    grid-template-columns: 64px auto minmax(0, 1fr) auto auto;
+  }
+}
+
+/* --- Strength v2 --- */
+
+.strength-warnings {
+  list-style: none;
+  margin: 0 0 var(--sp-3);
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.strength-warnings li {
+  font-size: var(--fs-sm);
+  line-height: 1.4;
+  padding: var(--sp-2) 10px;
+  border-left: 3px solid var(--accent);
+  background: var(--accent-tint);
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+
+.dims {
+  list-style: none;
+  margin: 0;
+  padding: var(--sp-2) 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.dim {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto auto;
+  grid-template-areas:
+    'label level points'
+    'bar bar bar'
+    'notes notes notes';
+  gap: 2px 10px;
+  align-items: baseline;
+  padding-bottom: var(--sp-2);
+  border-bottom: 1px solid var(--line);
+}
+
+.dim-label {
+  grid-area: label;
+  font-weight: 600;
+}
+
+.dim-level {
+  grid-area: level;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.25rem;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+
+.dim-points {
+  grid-area: points;
+  min-width: 3ch;
+  text-align: right;
+  font-weight: 700;
+  font-size: var(--fs-sm);
+  font-variant-numeric: tabular-nums;
+  color: var(--muted);
+}
+
+.dim-bar {
+  grid-area: bar;
+  position: relative;
+  display: block;
+  height: 6px;
+  margin-top: 4px;
+  background: var(--bg);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.dim-fill {
+  display: block;
+  height: 100%;
+  background: var(--accent);
+  border-radius: 3px;
+}
+
+.dim-ref {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  margin-left: -1px;
+  background: var(--text);
+  opacity: 0.6;
+}
+
+.dim-alert .dim-fill {
+  background: var(--loss-text);
+}
+
+.dim-alert .dim-level {
+  color: var(--loss-text);
+}
+
+.dim-notes {
+  grid-area: notes;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}

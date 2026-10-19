@@ -52,7 +52,7 @@ export function simulateSeries(a: Lineup, b: Lineup, rng: Rng, opts: SeriesOptio
     const side = chosenSide(defenderBias);
     const teamAStartsOn: Side = chooser === 0 ? side : side === 'attack' ? 'defense' : 'attack';
 
-    const result = simulateMap(a, b, rng, { map, teamAStartsOn, defenderBias });
+    const result = simulateMap(a, b, rng, { map, teamAStartsOn, defenderBias, seriesMap: maps.length + 1 });
     maps.push(result);
     score[result.winner]++;
   }

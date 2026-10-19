@@ -16,14 +16,14 @@ Design completo: `docs/design.md`. Ideias guardadas, que ainda NÃO devem ser im
 ## Estrutura
 - `src/engine/`: motor de simulação em TypeScript puro (sem React/DOM), sempre testado.
   - `rng.ts`: RNG com seed (mulberry32) + `hashSeed`
-  - `team.ts`: força do time (encaixe de função, composição, IGL, química)
-  - `match.ts`: simulação de mapa round a round (13 rounds, troca no 12, OT vence por 2) e placar
+  - `team.ts`: força do time v2 = base (OVR × encaixe) + composição + cinco dimensões explicáveis (Mecânica, Utilidade, Tomada de decisão com IGL e coach, Comunicação, Clutch); "sem IGL" = decisão ×0,75 com teto 55
+  - `match.ts`: simulação de mapa round a round (13 rounds, troca no 12, OT vence por 2) e placar; economia pós-pistol (R2 87% / R3 38%) e termos de decisão e clutch por contexto
 - `src/game/`: cola do jogo, pura e testada. `run.ts` = RunState JSON de uma run (draft → coach → Champions, veto do usuário, partidas da IA, composição do campo) + seletores, sobre o pool real; `explain.ts` = rótulos pt-BR e explicação da força; `balance.test.ts` mede o balanceamento.
 - `src/data/`: dados.
   - `real/`: snapshots do VLR (`vlr/`) e da Liquipedia (`liquipedia/`); `cards.ts` = construtor puro e testado dos cards reais (fórmulas em `docs/design.md`, "Cards reais"); `index.ts` = `REAL_ROSTERS`, `realLineup`, `REAL_MAP_POOL`, o pool que o jogo usa.
   - `game/`: snapshot do valorant-api.com (agentes com função, mapas, callouts).
   - `sample.ts` e `mapPools.ts`: FICTÍCIOS, só para testes unitários do motor.
-- `src/ui/`: React. `App.tsx` = máquina de telas; `screens/` (Início, Draft, Coach, Seu time, Torneio, Veto, Série, Fim); `components/`; `storage.ts` salva a run em localStorage (`rtc:run:v2`; saves `v1` do pool fictício são descartados).
+- `src/ui/`: React. `App.tsx` = máquina de telas; `screens/` (Início, Draft, Coach, Seu time, Torneio, Veto, Série, Fim); `components/`; `storage.ts` salva a run em localStorage (`rtc:run:v4`; saves antigos são descartados).
 - `docs/`: design e decisões.
 
 ## Regras

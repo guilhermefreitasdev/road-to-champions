@@ -13,14 +13,38 @@ jogadores históricos (card = jogador + evento, ex.: "aspas @ LOUD, Champions 20
 | Online | Ranked 1v1, lobby de 8 managers (fase final, precisa backend) |
 
 ## Núcleo de simulação
-- Card: atributos MIRA, ENTRADA, UTILIDADE, CLUTCH, CONSISTÊNCIA, LIDERANÇA e um OVR, todos calculados a partir dos dados reais (ver "Cards reais" abaixo).
-- Força do time = média(OVR × encaixe de função) + composição (≥1 controlador) + química + IGL + coach + meta do mapa.
-- IGL: +2 com exatamente um IGL, 0 com dois ou mais, −4 sem nenhum. Elenco da IA cujo IGL não está nos dados (`iglKnown: false`) fica com 0 em vez de −4; o time draftado segue a regra normal.
-- Química: +0,5 por dupla que jogou no mesmo time e evento; +0,25 por dupla do mesmo país que não foi companheira nesse evento (cada dupla conta uma vez; país desconhecido não conta); máximo +2 no total. O teto caiu de 4 para 3 e depois para 2 porque o OVR de um elenco real já vem de stats que ele fez junto: a química é um desempate, e com teto 3 todo elenco da IA ganhava +3 de graça.
-- Round a round: logística da diferença de força (escala 30 pontos) + forma do dia por mapa (até ±15 por time, σ ≈ 5) + lado + economia + ults. 13 rounds, troca no 12, OT vence por 2.
-- Calibragem (medida em `src/game/balance.test.ts`): num mapa, +10 de força vence ~75% e +20 ~94%. Zebras acontecem; série e torneio ainda premiam o time mais forte.
+- Card: atributos MIRA, ENTRADA, UTILIDADE, CLUTCH, CONSISTÊNCIA, DECISÃO e um OVR, todos calculados a partir dos dados reais (ver "Cards reais" abaixo).
+- Força do time (Modelo v2, abaixo) = base (média de OVR × encaixe de função) + composição + cinco dimensões explicáveis: Mecânica, Utilidade, Tomada de decisão (IGL + coach), Comunicação (química) e Clutch.
+- Round a round: logística da diferença de força (escala 30 pontos) + forma do dia por mapa (até ±15 por time, σ ≈ 5) + lado + economia pós-pistol + termos de decisão e clutch por contexto. 13 rounds, troca no 12, OT vence por 2.
+- Calibragem (medida em `src/game/balance.test.ts`): num mapa, +10 de força vence ~75% e +20 ~93%. Zebras acontecem; série e torneio ainda premiam o time mais forte.
 - Veto MD3 em pool de 7 + escolha de comp por mapa. Placar estilo VLR.
 - Tudo com RNG de seed (mulberry32).
+
+### Força do time v2 (`src/engine/team.ts`)
+Implementa o "Modelo v2" de `docs/pesquisa-taticas.md` (seção 6), na forma incremental (Opção A). Motivação: o IGL some do scoreboard (rating −0,05, ACS −17, assistências +21%), então o OVR o subestima e o valor dele precisa de uma dimensão própria; e o jogador precisa ver **por que** o time é forte e **o que custa** ficar sem IGL.
+
+`total = base + composição + Σ peso_d × (dimensão_d − referência_d) / 10`
+
+| Dimensão (0–100) | Fórmula | Peso (pontos a cada 10) | Referência |
+|---|---|---|---|
+| **Mecânica** | média de encaixe × (0,6 mira + 0,4 entrada) | 0,3 | 68 |
+| **Utilidade** | média de encaixe × utilidade, × cobertura: sem controlador ×0,70, sem iniciador ×0,90, dois controladores com iniciador +3 | 0,3 | 69 |
+| **Tomada de decisão** | 0,70 × decisão do IGL + 0,15 × melhor decisão dos outros + 0,15 × coach (40 + 20 × tática: 40–100; sem coach 40) | 1,0 | 74 |
+| **Comunicação** | min(100, 50 + 6 × duplas do mesmo time e evento + 3 × duplas do mesmo país); dois IGLs −5 | 0,4 | 50 |
+| **Clutch** | 0,5 × clutch médio + 0,3 × melhor clutch + 0,2 × consistência média | 0,3 | 74 |
+
+- As referências são as medianas dos elencos reais (medidas em 2026-10-19): um elenco típico soma 0 em cada dimensão, então o OVR, que já carrega a mecânica, não é contado duas vezes. Mecânica, Utilidade e Clutch só dão um empurrão (±1 ponto numa faixa típica); a Comunicação reproduz o teto antigo da química (+2 para um elenco real completo, +0,6 para um time draftado com uma dupla e três compatriotas); a Tomada de decisão é onde o IGL mora.
+- **Sem IGL**: a decisão vira 0,75 × (0,70 × melhor decisão dos cinco + 0,15 × segunda + 0,15 × coach), com **teto 55**. Um elenco real típico (decisão 75) cai para 55: −2 pontos fixos, mais o termo de round (abaixo). Medido com o mesmo elenco com e sem IGL: o lado com IGL vence ~58% dos mapas no mapa 1 e ~59% no mapa 3 (≈ 3 e 3,5 pontos de força). Um time draftado só de não-IGLs (decisão ~45) com coach campeão fica em 40 (−3,4 fixos e ~−1,7 nos rounds). O coach cobre parte (15%) mas nunca iguala um time com IGL. A pesquisa pedia 4–5 pontos (peso 1,4 e 0,7 por round); com isso o time mediano do drafter automático (que ignora o IGL) caiu para 62% de playoffs e 1% de título e o decil de cima (só times com IGL) subiu a 54%, então o peso ficou em 1,0 / 0,5 (ver "Balanceamento").
+- **Dois IGLs**: decisão +5 (segunda voz no mid-round) e comunicação −5 (duas vozes nas calls): +0,5 líquido, nunca punição.
+- **IGL desconhecido** (`iglKnown: false`, elenco da IA sem dado na Liquipedia): decisão = referência (74), 0 pontos: nem punição nem bônus, e a tela diz isso.
+- **Composição**: sem controlador −8, sem iniciador −3, sem duelista −2, **sem sentinela 0** (19% das composições de elite jogam sem e vencem igual; pesquisa 4.1). Encaixe de função segue 1 / 0,9 flex / 0,75 fora.
+- Tela "Seu time": base e composição em pontos, as cinco barras com valor, pontos e marca da referência, as notas de cada uma (IGL com fonte, segunda voz, coach com "cobre parte da tática, mas não faz calls durante o round") e avisos em destaque ("Sem IGL: Tomada de decisão −25% (máx. 55) — força ≈ −X…", "Dois IGLs…", "Sem controlador…").
+
+### Round v2 (`src/engine/match.ts`)
+Só as mudanças baratas e bem apoiadas pela pesquisa (seção 3):
+- **Economia pós-pistol**: o vencedor do pistol ganha +57 pontos no round 2 (anti-eco: 87% real, medido 87% no motor) e −15 no round 3 (round bônus: 38% real, 36% no motor). Antes era +6 só no round 2 (~55%). Nada de embalo além disso (full × full repete o vencedor em 49,9%). Quem vence os dois pistols leva o mapa em 76% (real 70%); prorrogação em 14% dos mapas (real 13,6%).
+- **Decisão por contexto**: em todo round com arma (compra depois de derrota, pós-plant, retake), 0,5 ponto a cada 10 de diferença na Tomada de decisão; ×1,25 no 2º mapa da série e ×1,5 do 3º em diante (adaptação e anti-strat, `MapOptions.seriesMap`, passado por `simulateSeries`); ×1,5 na prorrogação (cada round de OT reinicia a economia).
+- **Clutch na prorrogação**: 0,5 ponto a cada 10 de diferença na dimensão Clutch, só nos rounds de OT. O simulador de kills roda depois do resultado do round, então "clutch em desvantagem numérica" ficou de fora (a cadeia de duelos, Opção B da pesquisa, é trabalho futuro).
 
 ### Cards reais (`src/data/real/cards.ts`)
 Um card por linha jogador-evento do VLR, só para os 5 titulares (os 5 com mais rounds) de cada time que jogou. Nenhum número é digitado à mão: tudo sai dos JSON versionados por fórmulas fixas e determinísticas.
@@ -29,13 +53,13 @@ Um card por linha jogador-evento do VLR, só para os 5 titulares (os 5 com mais 
 - **Percentil no ano**: cada stat vira percentil (posição média) entre todos os titulares do mesmo ano, porque os números sobem e descem com a época. Stat ausente no VLR (ex.: Masters Shanghai 2024 não tem Rating, KAST, HS% nem clutch) conta como percentil neutro 50; o card guarda `null` e mostra "—".
 - **Encolhimento por amostra**: percentil final = 50 + (p − 50) × rounds / (rounds + 60). Com 60 rounds, metade do desvio; com 400, 87%.
 - **Atributos** (escala 40–99: 40 + 0,59 × percentil encolhido): Mira = HS%, KPR e ADR; Entrada = FK% − FD% (peso 0,7 para duelistas, 0,4 para os demais) e FK% (o resto); Utilidade = APR e KAST; Clutch = taxa de clutch encolhida para a média do ano como se tivesse mais 10 tentativas; Consistência = KAST e Rating.
-- **Liderança** (regra, não stat): IGL marcado como capitão na Liquipedia 90; IGL só pelo perfil de carreira (infobox) 80; foi IGL de algum time em outro evento 60; os demais 45.
+- **Decisão** (regra sobre fatos, não stat): IGL marcado como capitão na Liquipedia 90; IGL só pelo perfil de carreira (infobox) 80. Quem não é o IGL do evento parte de 60 (foi IGL de outro elenco nos dados) ou 45, ± até 5 pelo percentil encolhido de APR e KAST (as stats em que o IGL se destaca: assistências e ficar vivo); stat ausente não mexe. A UI diz que é escala do jogo, não estatística.
 - **OVR** = 63 + 0,29 × percentil encolhido de desempenho + bônus. Desempenho = média de (Rating 50%, ACS 30%, KAST 20%) em percentil no ano e em percentil no ano dentro da função (um controlador não perde por ter ACS baixo). Bônus: campeão +3, vice +2, 3º–4º +1; Champions +2 (Masters e LOCK//IN 0). Resultado: mín. 68, p10 72, mediana 79, p90 87, máx. 94; os melhores jogadores dos campeões do Champions ficam no topo.
 - **IGL**: `isIGL` só quando a Liquipedia dá um IGL para aquele time e evento e ele é um dos 5 titulares (casado pelo id do VLR no perfil ou pelo handle normalizado); o card guarda `iglSource`. Sem isso, o elenco fica com `iglKnown: false`.
-- **Coach**: o técnico da Liquipedia. Tática = colocação do time no evento (1º 3, 2º–4º 2, 5º–8º 1, resto 0). Veto = experiência: eventos internacionais com esse técnico nos dados até aquele evento, inclusive (1 → 0, 2–3 → 1, 4–5 → 2, 6+ → 3). Elenco sem técnico não oferece coach.
+- **Coach**: o técnico da Liquipedia. Tática = colocação do time no evento (1º 3, 2º–4º 2, 5º–8º 1, resto 0); entra como 15% da Tomada de decisão (40 + 20 × tática), não como pontos fixos. Veto = experiência: eventos internacionais com esse técnico nos dados até aquele evento, inclusive (1 → 0, 2–3 → 1, 4–5 → 2, 6+ → 3). Elenco sem técnico não oferece coach.
 - **Conforto de mapa da IA**: só dos vetos guardados daquele evento: +1 por mapa escolhido, −1 por mapa banido, limitado a ±2. Elenco sem veto guardado não tem conforto.
 - **Pool do veto**: o pool do evento mais recente (pela data de início) com exatamente 7 mapas; hoje é o do Champions 2026 (Abyss, Ascent, Haven, Lotus, Split, Summit, Sunset). Atualiza sozinho quando um evento novo entra.
-- **Campo do Champions**: 15 adversários de times diferentes (um elenco por time, sorteado), sem nenhum jogador do usuário, e no máximo 2 elencos "de elite" (os 20% mais fortes do pool) por campo: um Champions tem poucos favoritos.
+- **Campo do Champions**: 15 adversários de times diferentes (um elenco por time, sorteado), sem nenhum jogador do usuário, e no máximo 3 elencos "de elite" (os 20% mais fortes do pool) por campo (era 2 até a força v2): um Champions tem poucos favoritos.
 
 ## Formato do Champions (`src/engine/tournament.ts`)
 Igual ao VCT Champions real: 16 times, fase de grupos e playoffs. Tudo MD3, menos final da chave inferior e grande final (MD5). 34 partidas no total (20 nos grupos + 14 nos playoffs).
@@ -46,7 +70,7 @@ Igual ao VCT Champions real: 16 times, fase de grupos e playoffs. Tudo MD3, meno
 - **Playoffs (8 times, dupla eliminação sem reset)**: cada 1º enfrenta o 2º de outro grupo nas quartas, e cada metade da chave tem um time de cada grupo: metade 1 = A1 × B2 e C1 × D2; metade 2 = B1 × A2 e D1 × C2. Times do mesmo grupo só se reencontram na final superior, na chave inferior a partir da rodada 2 ou na grande final. A rodada 2 da inferior cruza as metades para não repetir as quartas.
 - **Colocação de quem cai nos grupos**: 3º do grupo = 9º–12º; 4º = 13º–16º. Nos playoffs: 7º–8º (inferior R1), 5º–6º (R2), 4º (R3), 3º (final inferior), 2º (grande final).
 - **Na tela**: aba "Grupos" com cada grupo desenhado como chave GSL (Abertura → Vencedores → Classificado ✔ em cima, Eliminação → Decisiva → Classificado ✔ embaixo) e a tabela 1º–4º; no celular um grupo por vez (começa no seu), no desktop os quatro em 2×2 com o seu primeiro. Aba "Playoffs" com a chave completa (superior em cima, inferior embaixo, grande final à direita), linhas de ligação, placares e MD3/MD5; vagas vazias dizem de onde vem o time ("1º Grupo A", "Vencedor Quartas 1"). No celular a chave rola para o lado dentro da caixa, nunca a página. Para leitor de tela cada partida tem um resumo falado e "Ver série" é alcançável pelo teclado.
-- Saves do formato antigo (Suíça) são descartados (RunState v3, chave `rtc:run:v3`).
+- Saves do formato antigo (Suíça) são descartados (RunState v3); o Modelo v2 da força subiu para v4 (chave `rtc:run:v4`).
 
 ## Modo Diário (inspirado em valdle.gg / Loldle)
 
@@ -110,9 +134,10 @@ Tempo real: ver docs/ideias-futuras.md (em espera).
 
 ## Balanceamento (estado atual, com dados reais)
 Medido em `src/game/balance.test.ts` (`BALANCE_REPORT=1 BT=12 npx vitest run src/game/balance --silent=false` imprime os números com 12 Champions por time).
-- Mapa: favorito com +10 de força vence ~75%; com +20, ~94%.
-- Draft clássico (drafter automático que só olha OVR): p10/p50/p90 da força 79,3 / 83,2 / 88,4. Mediano: ~75% playoffs, ~6% título; top 10%: ~43% título; 10% piores: ~31% playoffs (BT=30).
-- Ultimate (BT=12): mediano ~67% playoffs / ~1% título; top 10% ~25% título.
+- Mapa: favorito com +10 de força vence ~74%; com +20, ~93% (a economia pós-pistol, R2 87% / R3 38%, tirou ~1 pp do favorito).
+- Draft clássico (drafter automático que só olha OVR): p10/p50/p90 da força 78,4 / 81,9 / 85,8. Mediano: ~74% playoffs, ~6% título; top 10%: ~46% título; 10% piores: ~32% playoffs (BT=12).
+- Ultimate (BT=12): mediano ~61% playoffs / ~0% título; top 10% ~33% título.
+- **Força v2** (2026-10-19): antes da troca (força v1, BT=12): mapa 75% / 94%; clássico 79,3 / 83,2 / 88,4, mediano 77% / 5%, top 44%, piores 32%; ultimate mediano 67% / 1%, top 25%. Com os pesos da pesquisa (decisão 1,4 e 0,7 por round, 2 elites por campo) o mediano caiu para 62% / 1% e o top subiu a 54% (BT=30): o drafter automático ignora o IGL, então a decisão passou a ordenar os decis (10% piores: 0% com IGL; mediano: 15%; top: 100%). Alavancas usadas: peso da decisão 1,4 → 1,0 e termo de round 0,7 → 0,5 (mediano 74% / 6%, top 52%) e depois 3 elencos de elite por campo em vez de 2 (top 46%, ultimate 33%, sem mexer no mediano). `FORM_SWING` não foi tocado porque o +10 já está em 74% (meta ≥ 72%).
 - Troca da Suíça pelos grupos GSL (sem mexer no motor): o mediano clássico subiu de ~65% para ~75% de playoffs (provavelmente porque todo jogo de grupo é MD3, enquanto a Suíça tinha MD1 nas primeiras rodadas, com mais zebra); título 7% → 6%, top 10% 42% → 43%, 10% piores 30% → 31%. Como o mediano ficou no limite da meta (55–75%), as constantes do motor não mudaram.
 - Alavancas usadas na troca para os dados reais: teto de química 3 → 2, forma por mapa 8 → 10 e no máximo 2 elencos de elite por campo. Antes do ajuste (dados reais, alavancas antigas): mediano 53% playoffs / 0% título, top 23% título, 10% piores 17% playoffs.
 - Pendente: título do mediano um pouco abaixo da meta (8–20%). A força draftada varia pouco (p10→p90 = 9 pontos), então mais zebra levaria os 10% piores acima de 35% de playoffs antes de dar mais títulos ao mediano. Fechar isso pede mexer no draft (ex.: mais rerolls ou roleta ponderada), não no motor.

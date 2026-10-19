@@ -22,7 +22,7 @@ function lineup(name: string, ovr = 80, mapAffinity?: Partial<Record<MapName, nu
         role,
         isIGL: i === 2,
         agents: [],
-        attrs: { aim: ovr, entry: ovr, utility: ovr, clutch: ovr, consistency: ovr, leadership: ovr },
+        attrs: { aim: ovr, entry: ovr, utility: ovr, clutch: ovr, consistency: ovr, decision: ovr },
         ovr,
       };
       return { card, slot: role };
@@ -93,6 +93,27 @@ describe('simulateSeries', () => {
     expect(isVetoComplete(r.veto)).toBe(true);
     expect(r.veto.bestOf).toBe(3);
     expect(r.veto.steps[0]!.team).toBe(1);
+  });
+
+  it('tells simulateMap the position of each map in the series', () => {
+    // Same seed, same maps: map 3 of a series is simulated with seriesMap 3, so a decision gap weighs more there.
+    const veto = vetoInOrder(3);
+    const weak = lineup('B', 80);
+    weak.players.forEach((p) => {
+      p.card.isIGL = false;
+      p.card.attrs.decision = 45;
+    });
+    let third = 0;
+    let thirdWins = 0;
+    for (let seed = 0; seed < 300; seed++) {
+      const r = simulateSeries(A, weak, createRng(seed), { bestOf: 3, pool: POOL, veto });
+      if (r.maps.length === 3) {
+        third++;
+        if (r.maps[2]!.winner === 0) thirdWins++;
+      }
+    }
+    expect(third).toBeGreaterThan(50);
+    expect(thirdWins / third).toBeGreaterThan(0.55);
   });
 
   it('respects a provided veto', () => {

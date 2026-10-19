@@ -1,13 +1,24 @@
 import { useState } from 'react';
 import { roleFit } from '../../engine/team';
-import { ROLE_LABELS, SLOT_LABELS, explainStrength, fitLabel, formatDecimal, formatPoints } from '../../game/explain';
-import { DEFAULT_TEAM_NAME, TEAM_NAME_MAX, draftedLineup, type RunState } from '../../game/run';
+import {
+  DIMENSION_HINTS,
+  ROLE_LABELS,
+  SLOT_LABELS,
+  explainStrength,
+  fitLabel,
+  formatDecimal,
+  formatPoints,
+} from '../../game/explain';
+import { DEFAULT_TEAM_NAME, TEAM_NAME_MAX, draftedLineup, rosterOf, type RunState } from '../../game/run';
 import { AgentIcon } from '../components/GameImage';
+import { PlayerPhoto } from '../components/PlayerPhoto';
+import { TeamLogo } from '../components/TeamLogo';
 
 export function Team({ run, onStart }: { run: RunState; onStart: (name: string) => void }) {
   const [name, setName] = useState(run.teamName ?? '');
   const lineup = draftedLineup(run);
-  const { breakdown, parts } = explainStrength(lineup);
+  const { breakdown, parts, dimensions, warnings } = explainStrength(lineup);
+  const points = parts.filter((p) => p.key === 'base' || p.key === 'composition');
 
   return (
     <div className="screen team-screen">
@@ -22,12 +33,14 @@ export function Team({ run, onStart }: { run: RunState; onStart: (name: string) 
             {lineup.players.map(({ card, slot }) => (
               <li key={card.id} className="lineup-row">
                 <span className="lineup-slot">{SLOT_LABELS[slot]}</span>
+                <PlayerPhoto playerId={card.playerId} eventId={card.eventId} handle={card.handle} country={card.country} size={36} />
                 <span className="lineup-player">
                   <strong>
                     {card.handle}
                     {card.isIGL && <span className="badge igl">IGL</span>}
                   </strong>
-                  <span className="small muted">
+                  <span className="small muted lineup-origin">
+                    <TeamLogo teamId={card.teamId} eventId={card.eventId} name={rosterOf(card.teamId, card.eventId)?.teamName ?? card.teamId} size={14} />
                     {ROLE_LABELS[card.role]} · {fitLabel(card.role, slot)}
                   </span>
                 </span>
@@ -48,8 +61,15 @@ export function Team({ run, onStart }: { run: RunState; onStart: (name: string) 
         <div className="team-side">
           <section className="panel">
             <h2>Força do time</h2>
+            {warnings.length > 0 && (
+              <ul className="strength-warnings" aria-label="Avisos sobre o time">
+                {warnings.map((w) => (
+                  <li key={w}>{w}</li>
+                ))}
+              </ul>
+            )}
             <dl className="breakdown">
-              {parts.map((p) => (
+              {points.map((p) => (
                 <div key={p.key} className="breakdown-row">
                   <dt>{p.label}</dt>
                   <dd className={p.key === 'base' ? undefined : p.value < 0 ? 'neg' : p.value > 0 ? 'pos' : undefined}>
@@ -58,6 +78,28 @@ export function Team({ run, onStart }: { run: RunState; onStart: (name: string) 
                   <dd className="breakdown-notes small muted">{p.notes.join(' · ')}</dd>
                 </div>
               ))}
+            </dl>
+            <ul className="dims" aria-label="Dimensões do time">
+              {dimensions.map((d) => (
+                <li key={d.key} className={`dim${d.key === 'decision' && breakdown.igl === 'none' ? ' dim-alert' : ''}`}>
+                  <span className="dim-label" title={DIMENSION_HINTS[d.key]}>
+                    {d.label}
+                  </span>
+                  <span className="dim-level" aria-label={`${d.label}: ${Math.round(d.level)} de 100`}>
+                    {Math.round(d.level)}
+                  </span>
+                  <span className={`dim-points${d.value < 0 ? ' neg' : d.value > 0 ? ' pos' : ''}`} title="Pontos de força">
+                    {formatPoints(d.value)}
+                  </span>
+                  <span className="dim-bar" aria-hidden="true">
+                    <span className="dim-fill" style={{ width: `${Math.max(0, Math.min(100, d.level))}%` }} />
+                    <span className="dim-ref" style={{ left: `${d.reference}%` }} title={`Referência: ${d.reference}`} />
+                  </span>
+                  <span className="dim-notes small muted">{d.notes.join(' · ')}</span>
+                </li>
+              ))}
+            </ul>
+            <dl className="breakdown">
               <div className="breakdown-row total">
                 <dt>Total</dt>
                 <dd>{formatDecimal(breakdown.total)}</dd>

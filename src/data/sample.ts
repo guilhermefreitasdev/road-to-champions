@@ -29,13 +29,13 @@ function card(
   };
 }
 
-const attrs = (aim: number, entry: number, utility: number, clutch: number, consistency: number, leadership: number): Attributes => ({
+const attrs = (aim: number, entry: number, utility: number, clutch: number, consistency: number, decision: number): Attributes => ({
   aim,
   entry,
   utility,
   clutch,
   consistency,
-  leadership,
+  decision,
 });
 
 export const SAMPLE_CARDS = {
@@ -136,12 +136,12 @@ const ROLE_AGENTS: Record<Role, string[]> = {
   sentinel: ['Killjoy', 'Cypher', 'Sage', 'Chamber', 'Deadlock'],
 };
 
-/** Attribute offsets from OVR per role (leadership is absolute), so attributes match the role. */
+/** Attribute offsets from OVR per role (decision is absolute), so attributes match the role. */
 const ROLE_PROFILE: Record<Role, Attributes> = {
-  duelist: { aim: 4, entry: 7, utility: -24, clutch: -6, consistency: -8, leadership: 25 },
-  initiator: { aim: -3, entry: -12, utility: 5, clutch: -10, consistency: 1, leadership: 45 },
-  controller: { aim: -8, entry: -30, utility: 7, clutch: -2, consistency: 2, leadership: 55 },
-  sentinel: { aim: -4, entry: -35, utility: -1, clutch: 4, consistency: 4, leadership: 40 },
+  duelist: { aim: 4, entry: 7, utility: -24, clutch: -6, consistency: -8, decision: 25 },
+  initiator: { aim: -3, entry: -12, utility: 5, clutch: -10, consistency: 1, decision: 45 },
+  controller: { aim: -8, entry: -30, utility: 7, clutch: -2, consistency: 2, decision: 55 },
+  sentinel: { aim: -4, entry: -35, utility: -1, clutch: 4, consistency: 4, decision: 40 },
 };
 
 const ROLE_CODE = { D: 'duelist', I: 'initiator', C: 'controller', S: 'sentinel' } as const;
@@ -187,7 +187,7 @@ function sampleCard(def: PlayerDef, teamId: string, eventId: string): Card {
       utility: clamp(ovr + p.utility + jitter()),
       clutch: clamp(ovr + p.clutch + jitter()),
       consistency: clamp(ovr + p.consistency + jitter()),
-      leadership: clamp(isIGL ? 78 + (ovr - 70) / 2 + jitter() : p.leadership + jitter() * 3),
+      decision: clamp(isIGL ? 78 + (ovr - 70) / 2 + jitter() : p.decision + jitter() * 3),
     },
     ovr,
   };

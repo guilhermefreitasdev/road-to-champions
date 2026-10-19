@@ -14,7 +14,11 @@ export interface Attributes {
   utility: number;
   clutch: number;
   consistency: number;
-  leadership: number;
+  /**
+   * Decision-making (calls, buys, mid-round). A game scale over Liquipedia facts, not a stat: the event's IGL
+   * is high, an IGL elsewhere moderate, the rest around 45 nudged by APR/KAST (see docs/design.md).
+   */
+  decision: number;
 }
 
 /** Real numbers behind a card, as published for that event (null when the source has no value). Display only. */
@@ -52,7 +56,7 @@ export interface Coach {
   eventId: string;
   /** Helps the AI veto and is shown to the player. 0–3. */
   vetoBonus: number;
-  /** Added to team strength on every map. 0–3. */
+  /** Preparation, half-time and timeouts: 15% of the team's decision dimension (0 → 40, 3 → 100). 0–3. */
   tacticBonus: number;
 }
 
@@ -65,7 +69,7 @@ export interface RosterEntry {
   year: number;
   cards: Card[];
   coach?: Coach;
-  /** false when the source does not say who the IGL was: the team is then not penalized for "no IGL". */
+  /** false when the source does not say who the IGL was: the team then gets a neutral decision, not the "no IGL" rule. */
   iglKnown?: boolean;
   /** Final placement at the event as published ("1st", "3rd–4th"…). */
   placement?: string;
@@ -80,7 +84,7 @@ export interface Lineup {
   name: string;
   players: LineupPlayer[];
   coach?: Coach;
-  /** false = IGL unknown (AI rosters without data): no IGL term instead of the −4 for a team without one. */
+  /** false = IGL unknown (AI rosters without data): neutral decision instead of the "no IGL" rule. */
   iglKnown?: boolean;
   /** Strength points added on specific maps (map comfort). Missing maps count as 0. */
   mapAffinity?: Partial<Record<MapName, number>>;

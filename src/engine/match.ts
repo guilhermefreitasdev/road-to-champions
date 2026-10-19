@@ -13,6 +13,8 @@ export interface MapOptions {
   defenderBias?: number;
   /** Extra strength points per team for this map (e.g. veto/comp bonuses), on top of lineup.mapAffinity. */
   adjust?: [number, number];
+  /** 1-based position of this map in its series (1 when omitted): decision weighs more on later maps. */
+  seriesMap?: number;
 }
 
 export interface KillEvent {
@@ -67,8 +69,25 @@ const ROUND_SCALE = 30;
  * without changing the map calibration much (+10 ≈ 75%, +20 ≈ 94%).
  */
 const FORM_SWING = 10;
-/** Edge for the team that won the pistol round in the following (anti-eco) round. */
-const ANTI_ECO_EDGE = 6;
+/**
+ * Economy after the pistol (docs/pesquisa-taticas.md §3.3, 541 pro pistols): the pistol winner takes round 2
+ * (half buy vs eco) 87% of the time → logit 1.9 → 57 points at ROUND_SCALE 30; and only 38% of round 3 (the
+ * "bonus round": the pistol loser has a full buy) → logit −0.48 → −15 points. There is no momentum beyond that
+ * (full buy vs full buy repeats the previous winner 49.9%).
+ */
+const ROUND2_EDGE = 57;
+const ROUND3_EDGE = -15;
+/**
+ * Decision (tactics) in the rounds where calls act — buys after a loss, post-plant, retakes — i.e. every gun
+ * round: strength points per 10 points of decision difference. Larger late in a series (×1.25 on map 2, ×1.5
+ * from map 3: adaptation and anti-strat) and in overtime (×1.5: every OT round resets the economy, so the calls
+ * and the nerves decide). A typical "no IGL" gap (75 → 55, 20 points) costs ≈ 1 point on map 1 and ≈ 1.5 on
+ * map 3, on top of the static decision term in src/engine/team.ts (≈ 2): ≈ 57–59% of maps for the IGL side.
+ */
+const DECISION_EDGE = 0.5;
+const DECISION_OT_FACTOR = 1.5;
+/** Clutch and composure: strength points per 10 points of clutch difference, overtime rounds only. */
+const CLUTCH_OT_EDGE = 0.5;
 const ASSIST_CHANCE = 0.5;
 
 /** Kills by the round winner: 5 (elimination) is most common, 3–4 when the spike decides. */
@@ -86,6 +105,11 @@ function sideOf(round: number, start: Side): Side {
 
 function isPistol(round: number): boolean {
   return round === 1 || round === HALF_LENGTH + 1;
+}
+
+/** Decision weight by position in the series: ×1 on map 1, ×1.25 on map 2, ×1.5 from map 3. */
+export function decisionMapFactor(seriesMap: number): number {
+  return seriesMap >= 3 ? 1.5 : seriesMap === 2 ? 1.25 : 1;
 }
 
 /** Map-level form swing (≈ ±15 points, σ ≈ 5), so the stronger lineup does not always win: upsets happen on bad days. */
@@ -192,6 +216,9 @@ export function simulateMap(a: Lineup, b: Lineup, rng: Rng, opts: MapOptions): M
   const form = formSwing(rng) - formSwing(rng);
   const affinity = (l: Lineup) => l.mapAffinity?.[opts.map] ?? 0;
   const adjust = (opts.adjust?.[0] ?? 0) + affinity(a) - (opts.adjust?.[1] ?? 0) - affinity(b);
+  const dimension = (key: 'decision' | 'clutch') => strength[0].dimensions[key] - strength[1].dimensions[key];
+  const decisionEdge = (DECISION_EDGE * dimension('decision') * decisionMapFactor(opts.seriesMap ?? 1)) / 10;
+  const clutchEdge = (CLUTCH_OT_EDGE * dimension('clutch')) / 10;
 
   const score: [number, number] = [0, 0];
   const rounds: RoundResult[] = [];
@@ -202,10 +229,16 @@ export function simulateMap(a: Lineup, b: Lineup, rng: Rng, opts: MapOptions): M
     let diff = strength[0].total - strength[1].total + form + adjust;
     diff += teamASide === 'defense' ? defenderBias : -defenderBias;
 
+    // Economy: anti-eco (round 2) and bonus round (round 3) after each pistol.
     const prev = rounds[rounds.length - 1];
-    if (prev && isPistol(prev.number)) {
-      diff += prev.winner === 0 ? ANTI_ECO_EDGE : -ANTI_ECO_EDGE;
-    }
+    const prev2 = rounds[rounds.length - 2];
+    if (prev && isPistol(prev.number)) diff += prev.winner === 0 ? ROUND2_EDGE : -ROUND2_EDGE;
+    else if (prev2 && isPistol(prev2.number)) diff += prev2.winner === 0 ? ROUND3_EDGE : -ROUND3_EDGE;
+
+    // Tactics in gun rounds (buys, post-plant, retakes); calls and nerves weigh more in overtime.
+    const overtime = n > REGULATION_ROUNDS;
+    if (!isPistol(n)) diff += overtime ? decisionEdge * DECISION_OT_FACTOR : decisionEdge;
+    if (overtime) diff += clutchEdge;
 
     const pA = 1 / (1 + Math.exp(-diff / ROUND_SCALE));
     const winner: TeamIndex = rng.next() < pA ? 0 : 1;

@@ -9,12 +9,14 @@
  * - median drafted team: playoffs 55–75%, title 8–20%;
  * - top-decile drafted team: title 25–45%;
  * - bottom-decile drafted team: playoffs ≤ 35%.
- * Real pool (VLR + Liquipedia), with CHEMISTRY_CAP 2, FORM_SWING 10 and at most 2 elite rosters per field
- * (run.ts), GSL groups + double-elimination playoffs, BT=30: bottom 31% playoffs; median 75% playoffs, 6% title;
- * top decile 43% title (the Swiss format gave 30% / 65% / 7% / 42%; likely because Bo3 group games favour the stronger side
- * more than the Swiss Bo1 rounds did). "Playoffs" = qualified from the group (top 2). The median title
- * sits just under 8%: the drafted spread is narrow (p10 79 → p90 88), so more upsets would push the bottom
- * decile past 35% before the median gets more titles. Closing it needs a draft change, not an engine lever.
+ * Real pool (VLR + Liquipedia), strength v2 (five dimensions, decision weight 1.0, in-round decision edge 0.5),
+ * FORM_SWING 10 and at most 3 elite rosters per field (run.ts), GSL groups + double-elimination playoffs, BT=12:
+ * bottom 32% playoffs; median 74% playoffs, 6% title; top decile 46% title. Strength v1 (IGL ±, flat coach, chemistry
+ * cap 2, 2 elite rosters) gave 32% / 77% / 5% / 44%. The greedy drafter ignores the IGL, so v2 sorts its deciles by
+ * decision too (bottom 0% IGL, median 15%, top 100%): the research weights (1.4 / 0.7) dropped the median to 62% / 1%
+ * and lifted the top to 54%; 1.0 / 0.5 plus the third elite roster brought both back. "Playoffs" = qualified from the
+ * group (top 2). The median title still sits under 8%: the drafted spread is narrow (p10 78 → p90 86), so more upsets
+ * would push the bottom decile past 35% first. Closing it needs a draft change (e.g. showing the IGL), not an engine lever.
  */
 import { describe, expect, it } from 'vitest';
 import { SAMPLE_AURORA } from '../data/sample';

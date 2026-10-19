@@ -90,8 +90,13 @@ export const CLUTCH_PRIOR_ATTEMPTS = 10;
  * of the missing role in at least this share of their picks at the event (e.g. a Viper player with 30% Killjoy).
  */
 export const FLEX_MIN_SHARE = 0.2;
-/** Leadership (not a stat: a rule over the Liquipedia IGL data). */
-export const LEADERSHIP = { captain: 90, infobox: 80, iglElsewhere: 60, none: 45 } as const;
+/**
+ * Decision (not a stat: a rule over the Liquipedia IGL data). The event's IGL: 90 when marked captain, 80 when
+ * only the career infobox says so. Everyone else starts at 60 (IGL of another roster in the data) or 45, nudged by
+ * up to ±DECISION.swing by the shrunk percentile of APR and KAST (assists and staying alive are the stats where
+ * IGLs stand out, docs/pesquisa-taticas.md §2.4); a missing stat nudges nothing.
+ */
+export const DECISION = { captain: 90, infobox: 80, iglElsewhere: 60, none: 45, swing: 5 } as const;
 
 const ROLES: readonly Role[] = ['duelist', 'initiator', 'controller', 'sentinel'];
 
@@ -474,6 +479,13 @@ export function buildRealPool(
     if (Object.keys(aff).length > 0) affinity[key] = aff;
   }
 
+  /** ±DECISION.swing from the shrunk APR + KAST percentile (0 when both stats are missing). */
+  function decisionSwing(r: Row): number {
+    const p = blend([[pYear(r, 'apr'), 1], [pYear(r, 'kast'), 1]]);
+    if (p === null) return 0;
+    return Math.round((DECISION.swing * (shrink(p, r.rounds) - 50)) / 50);
+  }
+
   function buildCard(r: Row): Card {
     const n = r.rounds;
     const attr = (p: number | null) => Math.round(ATTR_FLOOR + (ATTR_SPAN * shrink(p, n)) / 100);
@@ -487,14 +499,12 @@ export function buildRealPool(
       utility: attr(blend([[pYear(r, 'apr'), 1], [pYear(r, 'kast'), 1]])),
       clutch: attr(pYear(r, 'clutch')),
       consistency: attr(blend([[pYear(r, 'kast'), 1], [pYear(r, 'rating'), 1]])),
-      leadership:
+      decision:
         igl === 'event-captain' || igl === 'squad-captain'
-          ? LEADERSHIP.captain
+          ? DECISION.captain
           : igl
-            ? LEADERSHIP.infobox
-            : everIgl.has(r.vlr.playerId)
-              ? LEADERSHIP.iglElsewhere
-              : LEADERSHIP.none,
+            ? DECISION.infobox
+            : (everIgl.has(r.vlr.playerId) ? DECISION.iglElsewhere : DECISION.none) + decisionSwing(r),
     };
     const perf = (p: (r: Row, k: StatKey) => number | null) =>
       blend([[p(r, 'rating'), 0.5], [p(r, 'acs'), 0.3], [p(r, 'kast'), 0.2]]);

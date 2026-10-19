@@ -334,12 +334,18 @@ describe('explainStrength', () => {
       // Force some gaps: put everyone in flex/duelist to trigger penalties.
       const odd = { ...lineup, players: lineup.players.map((p, i) => ({ ...p, slot: i < 2 ? p.slot : ('flex' as const) })) };
       for (const l of [lineup, odd]) {
-        const { breakdown, parts } = explainStrength(l);
+        const { breakdown, parts, dimensions } = explainStrength(l);
         const missing = (Object.keys(MISSING_ROLE_PENALTY) as (keyof typeof MISSING_ROLE_PENALTY)[]).filter(
           (role) => !l.players.some((p) => p.slot === role),
         );
         expect(0 - missing.reduce((s, role) => s + MISSING_ROLE_PENALTY[role], 0)).toBe(breakdown.composition + 0);
         expect(parts.reduce((s, p) => s + p.value, 0)).toBeCloseTo(teamStrength(l).total);
+        expect(dimensions.map((d) => d.key)).toEqual(['mechanics', 'utility', 'decision', 'communication', 'clutch']);
+        for (const d of dimensions) {
+          expect(d.level).toBe(breakdown.dimensions[d.key]);
+          expect(d.value).toBe(breakdown.points[d.key]);
+          expect(d.notes.length).toBeGreaterThan(0);
+        }
       }
     }
   });
@@ -356,8 +362,29 @@ describe('explainStrength', () => {
     const r = startTournament(autoDraft(createRun('classic', 'igl')), 'I');
     const unknown = r.opponents!.map((id) => lineupOf(r, id)).find((l) => l.iglKnown === false);
     if (unknown) {
-      expect(teamStrength(unknown).igl).toBe(0);
-      expect(explainStrength(unknown).parts.find((p) => p.key === 'igl')!.notes[0]).toMatch(/desconhecido/);
+      expect(teamStrength(unknown).igl).toBe('unknown');
+      const { dimensions, warnings } = explainStrength(unknown);
+      expect(dimensions.find((d) => d.key === 'decision')!.notes[0]).toMatch(/não consta/);
+      expect(warnings.some((w) => w.startsWith('Sem IGL'))).toBe(false);
+    }
+  });
+
+  it('spells out what a missing IGL costs, and names the IGL when there is one', () => {
+    const lineup = draftedLineup(autoDraft(createRun('classic', 'igl-explain')));
+    const noIgl = { ...lineup, players: lineup.players.map((p) => ({ ...p, card: { ...p.card, isIGL: false } })) };
+    const without = explainStrength(noIgl);
+    expect(without.breakdown.igl).toBe('none');
+    expect(without.warnings.some((w) => /^Sem IGL: Tomada de decisão −25% \(máx\. 55\) — força ≈ −/.test(w))).toBe(true);
+    expect(without.dimensions.find((d) => d.key === 'decision')!.level).toBeLessThanOrEqual(55);
+    const igl = lineup.players.find((p) => p.card.isIGL);
+    if (igl) {
+      const withIgl = explainStrength(lineup);
+      expect(withIgl.dimensions.find((d) => d.key === 'decision')!.notes[0]).toContain(`IGL: ${igl.card.handle}`);
+      expect(withIgl.dimensions.find((d) => d.key === 'decision')!.notes[0]).toMatch(/fonte: /);
+      expect(withIgl.breakdown.total).toBeGreaterThan(without.breakdown.total);
+    }
+    if (lineup.coach) {
+      expect(without.dimensions.find((d) => d.key === 'decision')!.notes.join(' ')).toContain('coach cobre parte da tática');
     }
   });
 

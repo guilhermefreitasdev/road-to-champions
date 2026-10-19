@@ -53,10 +53,11 @@ export const RUN_POOL: readonly RosterEntry[] = REAL_ROSTERS;
 /** Veto pool of every match: the map pool of the most recent event with exactly 7 maps. */
 export const RUN_MAP_POOL: readonly MapName[] = REAL_MAP_POOL;
 /**
- * Save format version: bumped when saved runs stop making sense (v3 = GSL groups instead of the Swiss stage;
- * v2 = real pool; v1 saves used fictional cards).
+ * Save format version: bumped when saved runs stop making sense (v4 = strength v2: five dimensions and the
+ * `decision` attribute, stored in every map result; v3 = GSL groups instead of the Swiss stage; v2 = real pool;
+ * v1 saves used fictional cards).
  */
-export const RUN_VERSION = 3;
+export const RUN_VERSION = 4;
 
 /** Entrant id of the user's team. Opponents use their roster key (`${teamId}-${eventId}`). */
 export const USER_ID = 'user';
@@ -178,7 +179,8 @@ export function startTournament(run: RunState, teamName: string): RunState {
  * is skipped and the next team takes its place.
  */
 export const FIELD_ELITE_SHARE = 0.2;
-export const FIELD_ELITE_CAP = 2;
+/** 3 since strength v2 (was 2): the IGL-only top decile of drafted teams needed one more real contender. */
+export const FIELD_ELITE_CAP = 3;
 
 const aiStrength = (entry: RosterEntry): number => teamStrength(realLineup(entry)).total;
 const ELITE_FLOOR = (() => {

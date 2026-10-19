@@ -5,7 +5,7 @@
  */
 import { describe, expect, it } from 'vitest';
 import { rosterKey } from '../../engine/roster';
-import { teamStrength } from '../../engine/team';
+import { DIMENSION_REFERENCE, teamStrength } from '../../engine/team';
 import { MAPS } from '../game';
 import { normHandle, type VlrEventData } from './cards';
 import { REAL_MAP_POOL, REAL_POOL, REAL_ROSTERS, realLineup } from './index';
@@ -94,6 +94,26 @@ describe('REAL_ROSTERS', () => {
     const full = REAL_ROSTERS.filter((r) => new Set(r.cards.map((c) => c.role)).size === 4).length;
     expect(full / REAL_ROSTERS.length).toBeGreaterThan(0.95);
     expect(REAL_ROSTERS.every((r) => r.cards.some((c) => c.role === 'controller'))).toBe(true);
+  });
+
+  it('has the dimension references of src/engine/team.ts at the pool medians (a typical roster scores 0 points)', () => {
+    const median = (xs: number[]) => [...xs].sort((a, b) => a - b)[Math.floor(xs.length / 2)]!;
+    const dims = REAL_ROSTERS.map((r) => teamStrength(realLineup(r)).dimensions);
+    for (const key of ['mechanics', 'utility', 'decision', 'clutch'] as const) {
+      expect(Math.abs(median(dims.map((d) => d[key])) - DIMENSION_REFERENCE[key]), key).toBeLessThanOrEqual(3);
+    }
+    // Every real roster is 5 teammates: communication maxes out, as the old chemistry cap did (+2).
+    expect(median(dims.map((d) => d.communication))).toBe(100);
+    // Removing the IGL from a real roster costs 1.5–3.5 points of strength before the in-round term.
+    const costs = REAL_ROSTERS.filter((r) => r.iglKnown).map((r) => {
+      const l = realLineup(r);
+      const without = { ...l, iglKnown: true, players: l.players.map((p) => ({ ...p, card: { ...p.card, isIGL: false } })) };
+      return teamStrength(l).total - teamStrength(without).total;
+    });
+    expect(Math.min(...costs)).toBeGreaterThan(1.5);
+    expect(Math.max(...costs)).toBeLessThan(3.5);
+    expect(median(costs)).toBeGreaterThan(1.8);
+    expect(median(costs)).toBeLessThan(2.5);
   });
 
   it('marks the IGL only when Liquipedia names one of the 5, and has the coach whenever Liquipedia has one', () => {
