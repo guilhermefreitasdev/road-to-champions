@@ -1,0 +1,1988 @@
+{
+  "source": {
+    "site": "Liquipedia",
+    "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0",
+    "license": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "note": "Imagens baixadas pela API da Liquipedia (imageinfo) e redimensionadas; cada entrada guarda a página do arquivo. Retiramos qualquer imagem a pedido do titular.",
+    "generator": "scripts/media/run.mjs"
+  },
+  "teams": {
+    "100-thieves-champions-2022": {
+      "logo": "media/teams/100-thieves-champions-2022.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:100_Thieves_darkmode.png",
+      "file": "100 Thieves darkmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "100-thieves-champions-2026": {
+      "logo": "media/teams/100-thieves-champions-2026.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:100_Thieves_darkmode.png",
+      "file": "100 Thieves darkmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "100-thieves-lock-in-sao-paulo-2023": {
+      "logo": "media/teams/100-thieves-lock-in-sao-paulo-2023.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:100_Thieves_darkmode.png",
+      "file": "100 Thieves darkmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "100-thieves-masters-berlin-2021": {
+      "logo": "media/teams/100-thieves-masters-berlin-2021.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:100_Thieves_darkmode.png",
+      "file": "100 Thieves darkmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "100-thieves-masters-shanghai-2024": {
+      "logo": "media/teams/100-thieves-masters-shanghai-2024.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:100_Thieves_darkmode.png",
+      "file": "100 Thieves darkmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "acend-champions-2021": {
+      "logo": "media/teams/acend-champions-2021.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Acend_allmode.png",
+      "file": "Acend Purple teamcardimage.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "acend-masters-berlin-2021": {
+      "logo": "media/teams/acend-masters-berlin-2021.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Acend_allmode.png",
+      "file": "Acend Purple teamcardimage.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "all-gamers-masters-santiago-2026": {
+      "logo": "media/teams/all-gamers-masters-santiago-2026.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:All_Gamers_allmode.png",
+      "file": "All Gamers allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "attacking-soul-esports-masters-tokyo-2023": {
+      "logo": "media/teams/attacking-soul-esports-masters-tokyo-2023.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Attacking_Soul_Esports_allmode.png",
+      "file": "Attacking Soul Esports allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "bbl-esports-lock-in-sao-paulo-2023": {
+      "logo": "media/teams/bbl-esports-lock-in-sao-paulo-2023.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:BBL_Esports_2022_darkmode.png",
+      "file": "BBL Esports 2022 darkmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "bbl-esports-masters-santiago-2026": {
+      "logo": "media/teams/bbl-esports-masters-santiago-2026.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:BBL_Esports_2022_darkmode.png",
+      "file": "BBL Esports 2022 darkmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "bilibili-gaming-champions-2023": {
+      "logo": "media/teams/bilibili-gaming-champions-2023.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Bilibili_Gaming_2021_allmode.png",
+      "file": "Bilibili Gaming 2021 allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "bilibili-gaming-champions-2024": {
+      "logo": "media/teams/bilibili-gaming-champions-2024.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Bilibili_Gaming_2021_allmode.png",
+      "file": "Bilibili Gaming 2021 allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "bilibili-gaming-champions-2025": {
+      "logo": "media/teams/bilibili-gaming-champions-2025.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Bilibili_Gaming_2021_allmode.png",
+      "file": "Bilibili Gaming 2021 allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "bilibili-gaming-masters-toronto-2025": {
+      "logo": "media/teams/bilibili-gaming-masters-toronto-2025.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Bilibili_Gaming_2021_allmode.png",
+      "file": "Bilibili Gaming 2021 allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "boom-esports-champions-2022": {
+      "logo": "media/teams/boom-esports-champions-2022.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Boom_Esports_allmode.png",
+      "file": "Boom Esports allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "cloud9-champions-2021": {
+      "logo": "media/teams/cloud9-champions-2021.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Cloud9_allmode.png",
+      "file": "Cloud9 allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "cloud9-lock-in-sao-paulo-2023": {
+      "logo": "media/teams/cloud9-lock-in-sao-paulo-2023.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Cloud9_2023_allmode.png",
+      "file": "Cloud9 2023 allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "crazy-raccoon-champions-2021": {
+      "logo": "media/teams/crazy-raccoon-champions-2021.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Crazy_Raccoon_2021_allmode.png",
+      "file": "Crazy Raccoon 2021 allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "crazy-raccoon-masters-berlin-2021": {
+      "logo": "media/teams/crazy-raccoon-masters-berlin-2021.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Crazy_Raccoon_2021_allmode.png",
+      "file": "Crazy Raccoon 2021 allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "crazy-raccoon-masters-reykjavik-2021": {
+      "logo": "media/teams/crazy-raccoon-masters-reykjavik-2021.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Crazy_Raccoon_2021_allmode.png",
+      "file": "Crazy Raccoon 2021 allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "dragon-ranger-gaming-champions-2025": {
+      "logo": "media/teams/dragon-ranger-gaming-champions-2025.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Dragon_Ranger_Gaming_allmode.png",
+      "file": "Dragon Ranger Gaming allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "dragon-ranger-gaming-masters-london-2026": {
+      "logo": "media/teams/dragon-ranger-gaming-masters-london-2026.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Dragon_Ranger_Gaming_allmode.png",
+      "file": "Dragon Ranger Gaming allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "dragon-ranger-gaming-masters-shanghai-2024": {
+      "logo": "media/teams/dragon-ranger-gaming-masters-shanghai-2024.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Dragon_Ranger_Gaming_allmode.png",
+      "file": "Dragon Ranger Gaming allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "edward-gaming-champions-2022": {
+      "logo": "media/teams/edward-gaming-champions-2022.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:EDward_Gaming_2017_darkmode.png",
+      "file": "EDward Gaming 2017 darkmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "edward-gaming-champions-2023": {
+      "logo": "media/teams/edward-gaming-champions-2023.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:EDward_Gaming_2017_darkmode.png",
+      "file": "EDward Gaming 2017 darkmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "edward-gaming-champions-2024": {
+      "logo": "media/teams/edward-gaming-champions-2024.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:EDward_Gaming_2017_darkmode.png",
+      "file": "EDward Gaming 2017 darkmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "edward-gaming-champions-2025": {
+      "logo": "media/teams/edward-gaming-champions-2025.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:EDward_Gaming_2017_darkmode.png",
+      "file": "EDward Gaming 2017 darkmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "edward-gaming-champions-2026": {
+      "logo": "media/teams/edward-gaming-champions-2026.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:EDward_Gaming_2017_darkmode.png",
+      "file": "EDward Gaming 2017 darkmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "edward-gaming-lock-in-sao-paulo-2023": {
+      "logo": "media/teams/edward-gaming-lock-in-sao-paulo-2023.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:EDward_Gaming_2017_darkmode.png",
+      "file": "EDward Gaming 2017 darkmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "edward-gaming-masters-bangkok-2025": {
+      "logo": "media/teams/edward-gaming-masters-bangkok-2025.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:EDward_Gaming_2017_darkmode.png",
+      "file": "EDward Gaming 2017 darkmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "edward-gaming-masters-london-2026": {
+      "logo": "media/teams/edward-gaming-masters-london-2026.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:EDward_Gaming_2017_darkmode.png",
+      "file": "EDward Gaming 2017 darkmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "edward-gaming-masters-madrid-2024": {
+      "logo": "media/teams/edward-gaming-masters-madrid-2024.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:EDward_Gaming_2017_darkmode.png",
+      "file": "EDward Gaming 2017 darkmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "edward-gaming-masters-santiago-2026": {
+      "logo": "media/teams/edward-gaming-masters-santiago-2026.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:EDward_Gaming_2017_darkmode.png",
+      "file": "EDward Gaming 2017 darkmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "edward-gaming-masters-shanghai-2024": {
+      "logo": "media/teams/edward-gaming-masters-shanghai-2024.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:EDward_Gaming_2017_darkmode.png",
+      "file": "EDward Gaming 2017 darkmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "edward-gaming-masters-tokyo-2023": {
+      "logo": "media/teams/edward-gaming-masters-tokyo-2023.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:EDward_Gaming_2017_darkmode.png",
+      "file": "EDward Gaming 2017 darkmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "envy": {
+      "logo": "media/teams/envy.webp",
+      "eraSpecific": false,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:ENVY_2025_full_darkmode.png",
+      "file": "ENVY 2025 full darkmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "evil-geniuses-champions-2023": {
+      "logo": "media/teams/evil-geniuses-champions-2023.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Evil_Geniuses_2020_darkmode.png",
+      "file": "Evil Geniuses 2020 darkmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "evil-geniuses-lock-in-sao-paulo-2023": {
+      "logo": "media/teams/evil-geniuses-lock-in-sao-paulo-2023.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Evil_Geniuses_2020_darkmode.png",
+      "file": "Evil Geniuses 2020 darkmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "evil-geniuses-masters-tokyo-2023": {
+      "logo": "media/teams/evil-geniuses-masters-tokyo-2023.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Evil_Geniuses_2020_darkmode.png",
+      "file": "Evil Geniuses 2020 darkmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "f4q": {
+      "logo": "media/teams/f4q.webp",
+      "eraSpecific": false,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:F4q_logo.png",
+      "file": "F4q logo.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "fnatic-champions-2021": {
+      "logo": "media/teams/fnatic-champions-2021.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Fnatic_2020_allmode.png",
+      "file": "Fnatic 2020 allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "fnatic-champions-2022": {
+      "logo": "media/teams/fnatic-champions-2022.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Fnatic_2020_allmode.png",
+      "file": "Fnatic 2020 allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "fnatic-champions-2023": {
+      "logo": "media/teams/fnatic-champions-2023.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Fnatic_2020_allmode.png",
+      "file": "Fnatic 2020 allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "fnatic-champions-2024": {
+      "logo": "media/teams/fnatic-champions-2024.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Fnatic_2020_allmode.png",
+      "file": "Fnatic 2020 allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "fnatic-champions-2025": {
+      "logo": "media/teams/fnatic-champions-2025.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Fnatic_2020_allmode.png",
+      "file": "Fnatic 2020 allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "fnatic-lock-in-sao-paulo-2023": {
+      "logo": "media/teams/fnatic-lock-in-sao-paulo-2023.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Fnatic_2020_allmode.png",
+      "file": "Fnatic 2020 allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "fnatic-masters-copenhagen-2022": {
+      "logo": "media/teams/fnatic-masters-copenhagen-2022.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Fnatic_2020_allmode.png",
+      "file": "Fnatic 2020 allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "fnatic-masters-reykjavik-2021": {
+      "logo": "media/teams/fnatic-masters-reykjavik-2021.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Fnatic_2020_allmode.png",
+      "file": "Fnatic 2020 allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "fnatic-masters-reykjavik-2022": {
+      "logo": "media/teams/fnatic-masters-reykjavik-2022.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Fnatic_2020_allmode.png",
+      "file": "Fnatic 2020 allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "fnatic-masters-shanghai-2024": {
+      "logo": "media/teams/fnatic-masters-shanghai-2024.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Fnatic_2020_allmode.png",
+      "file": "Fnatic 2020 allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "fnatic-masters-tokyo-2023": {
+      "logo": "media/teams/fnatic-masters-tokyo-2023.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Fnatic_2020_allmode.png",
+      "file": "Fnatic 2020 allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "fnatic-masters-toronto-2025": {
+      "logo": "media/teams/fnatic-masters-toronto-2025.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Fnatic_2020_allmode.png",
+      "file": "Fnatic 2020 allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "full-sense-champions-2021": {
+      "logo": "media/teams/full-sense-champions-2021.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:FULL_SENSE_allmode.png",
+      "file": "FULL SENSE allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "full-sense-masters-london-2026": {
+      "logo": "media/teams/full-sense-masters-london-2026.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:FULL_SENSE_2025_allmode.png",
+      "file": "FULL SENSE 2025 allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "funplus-phoenix-11328-champions-2023": {
+      "logo": "media/teams/funplus-phoenix-11328-champions-2023.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:FunPlus_Phoenix_2021_allmode.png",
+      "file": "FunPlus Phoenix 2021 allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "funplus-phoenix-11328-champions-2024": {
+      "logo": "media/teams/funplus-phoenix-11328-champions-2024.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:FunPlus_Phoenix_2021_allmode.png",
+      "file": "FunPlus Phoenix 2021 allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "funplus-phoenix-11328-lock-in-sao-paulo-2023": {
+      "logo": "media/teams/funplus-phoenix-11328-lock-in-sao-paulo-2023.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:FunPlus_Phoenix_2021_allmode.png",
+      "file": "FunPlus Phoenix 2021 allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "funplus-phoenix-11328-masters-madrid-2024": {
+      "logo": "media/teams/funplus-phoenix-11328-masters-madrid-2024.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:FunPlus_Phoenix_2021_allmode.png",
+      "file": "FunPlus Phoenix 2021 allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "funplus-phoenix-11328-masters-shanghai-2024": {
+      "logo": "media/teams/funplus-phoenix-11328-masters-shanghai-2024.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:FunPlus_Phoenix_2021_allmode.png",
+      "file": "FunPlus Phoenix 2021 allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "funplus-phoenix-628-champions-2022": {
+      "logo": "media/teams/funplus-phoenix-628-champions-2022.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:FunPlus_Phoenix_2021_allmode.png",
+      "file": "FunPlus Phoenix 2021 allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "funplus-phoenix-628-masters-copenhagen-2022": {
+      "logo": "media/teams/funplus-phoenix-628-masters-copenhagen-2022.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:FunPlus_Phoenix_2021_allmode.png",
+      "file": "FunPlus Phoenix 2021 allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "furia": {
+      "logo": "media/teams/furia.webp",
+      "eraSpecific": false,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:FURIA_Esports_full_darkmode.png",
+      "file": "FURIA Esports full darkmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "furia-masters-santiago-2026": {
+      "logo": "media/teams/furia-masters-santiago-2026.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:FURIA_Esports_allmode.png",
+      "file": "Furia eSports.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "fut-esports-champions-2023": {
+      "logo": "media/teams/fut-esports-champions-2023.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Futbolist_2021_darkmode.png",
+      "file": "Futbolist 2021 darkmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "fut-esports-champions-2024": {
+      "logo": "media/teams/fut-esports-champions-2024.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Futbolist_2021_darkmode.png",
+      "file": "Futbolist 2021 darkmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "fut-esports-champions-2026": {
+      "logo": "media/teams/fut-esports-champions-2026.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Futbolist_2021_darkmode.png",
+      "file": "Futbolist 2021 darkmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "fut-esports-lock-in-sao-paulo-2023": {
+      "logo": "media/teams/fut-esports-lock-in-sao-paulo-2023.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Futbolist_2021_darkmode.png",
+      "file": "Futbolist 2021 darkmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "fut-esports-masters-london-2026": {
+      "logo": "media/teams/fut-esports-masters-london-2026.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Futbolist_2021_darkmode.png",
+      "file": "Futbolist 2021 darkmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "fut-esports-masters-shanghai-2024": {
+      "logo": "media/teams/fut-esports-masters-shanghai-2024.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Futbolist_2021_darkmode.png",
+      "file": "Futbolist 2021 darkmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "fut-esports-masters-tokyo-2023": {
+      "logo": "media/teams/fut-esports-masters-tokyo-2023.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Futbolist_2021_darkmode.png",
+      "file": "Futbolist 2021 darkmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "g2-esports-11058-champions-2024": {
+      "logo": "media/teams/g2-esports-11058-champions-2024.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:G2_Esports_2020_lightmode.png",
+      "file": "G2 Esports 2020 lightmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "g2-esports-11058-champions-2025": {
+      "logo": "media/teams/g2-esports-11058-champions-2025.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:G2_Esports_2020_lightmode.png",
+      "file": "G2 Esports 2020 lightmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "g2-esports-11058-champions-2026": {
+      "logo": "media/teams/g2-esports-11058-champions-2026.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:G2_Esports_2020_lightmode.png",
+      "file": "G2 Esports 2020 lightmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "g2-esports-11058-masters-bangkok-2025": {
+      "logo": "media/teams/g2-esports-11058-masters-bangkok-2025.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:G2_Esports_2020_lightmode.png",
+      "file": "G2 Esports 2020 lightmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "g2-esports-11058-masters-london-2026": {
+      "logo": "media/teams/g2-esports-11058-masters-london-2026.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:G2_Esports_2020_lightmode.png",
+      "file": "G2 Esports 2020 lightmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "g2-esports-11058-masters-santiago-2026": {
+      "logo": "media/teams/g2-esports-11058-masters-santiago-2026.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:G2_Esports_2020_lightmode.png",
+      "file": "G2 Esports 2020 lightmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "g2-esports-11058-masters-shanghai-2024": {
+      "logo": "media/teams/g2-esports-11058-masters-shanghai-2024.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:G2_Esports_2020_lightmode.png",
+      "file": "G2 Esports 2020 lightmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "g2-esports-11058-masters-toronto-2025": {
+      "logo": "media/teams/g2-esports-11058-masters-toronto-2025.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:G2_Esports_2020_lightmode.png",
+      "file": "G2 Esports 2020 lightmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "g2-esports-257-masters-berlin-2021": {
+      "logo": "media/teams/g2-esports-257-masters-berlin-2021.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:G2_Esports_2020_lightmode.png",
+      "file": "G2 Esports 2020 lightmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "g2-esports-257-masters-reykjavik-2022": {
+      "logo": "media/teams/g2-esports-257-masters-reykjavik-2022.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:G2_Esports_2020_lightmode.png",
+      "file": "G2 Esports 2020 lightmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "gambit-esports-champions-2021": {
+      "logo": "media/teams/gambit-esports-champions-2021.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Gambit_Esports_sep_2020_allmode.png",
+      "file": "Gambit Esports sep 2020 allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "gambit-esports-masters-berlin-2021": {
+      "logo": "media/teams/gambit-esports-masters-berlin-2021.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Gambit_Esports_sep_2020_allmode.png",
+      "file": "Gambit Esports sep 2020 allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "gen-g-champions-2024": {
+      "logo": "media/teams/gen-g-champions-2024.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Gen.G_Esports_darkmode.png",
+      "file": "Gen.G Esports darkmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "gen-g-lock-in-sao-paulo-2023": {
+      "logo": "media/teams/gen-g-lock-in-sao-paulo-2023.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Gen.G_Esports_darkmode.png",
+      "file": "Gen.G Esports darkmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "gen-g-masters-madrid-2024": {
+      "logo": "media/teams/gen-g-masters-madrid-2024.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Gen.G_Esports_darkmode.png",
+      "file": "Gen.G Esports darkmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "gen-g-masters-shanghai-2024": {
+      "logo": "media/teams/gen-g-masters-shanghai-2024.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Gen.G_Esports_darkmode.png",
+      "file": "Gen.G Esports darkmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "gen-g-masters-toronto-2025": {
+      "logo": "media/teams/gen-g-masters-toronto-2025.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Gen.G_Esports_2025_darkmode.png",
+      "file": "Gen.G Esports 2025 darkmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "gentle-mates-masters-santiago-2026": {
+      "logo": "media/teams/gentle-mates-masters-santiago-2026.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Gentle_Mates_2024_darkmode.png",
+      "file": "Gentle Mates darkmode 2024.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "giants-gaming-champions-2023": {
+      "logo": "media/teams/giants-gaming-champions-2023.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Giants_Gaming_2021_darkmode.png",
+      "file": "Giants Gaming 2021 darkmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "giants-gaming-lock-in-sao-paulo-2023": {
+      "logo": "media/teams/giants-gaming-lock-in-sao-paulo-2023.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Giants_Gaming_2021_darkmode.png",
+      "file": "Giants Gaming 2021 darkmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "giantx-champions-2025": {
+      "logo": "media/teams/giantx-champions-2025.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:GIANTX_darkmode.png",
+      "file": "GIANTX darkmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "global-esports-champions-2026": {
+      "logo": "media/teams/global-esports-champions-2026.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Global_Esports_2020_allmode.png",
+      "file": "Global Esports 2020 allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "global-esports-lock-in-sao-paulo-2023": {
+      "logo": "media/teams/global-esports-lock-in-sao-paulo-2023.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Global_Esports_2020_allmode.png",
+      "file": "Global Esports 2020 allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "global-esports-masters-london-2026": {
+      "logo": "media/teams/global-esports-masters-london-2026.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Global_Esports_2020_allmode.png",
+      "file": "Global Esports 2020 allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "guild-esports-masters-copenhagen-2022": {
+      "logo": "media/teams/guild-esports-masters-copenhagen-2022.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Guild_Esports_allmode.png",
+      "file": "Guild Esports allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "jd-gaming-champions-2026": {
+      "logo": "media/teams/jd-gaming-champions-2026.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:JD_Gaming_2021_allmode.png",
+      "file": "JD Gaming 2021 allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "karmine-corp-champions-2026": {
+      "logo": "media/teams/karmine-corp-champions-2026.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Karmine_Corp_allmode.png",
+      "file": "Karmine Corp allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "karmine-corp-lock-in-sao-paulo-2023": {
+      "logo": "media/teams/karmine-corp-lock-in-sao-paulo-2023.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Karmine_Corp_allmode.png",
+      "file": "Karmine Corp allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "karmine-corp-masters-madrid-2024": {
+      "logo": "media/teams/karmine-corp-masters-madrid-2024.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Karmine_Corp_allmode.png",
+      "file": "Karmine Corp allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "keyd-stars-champions-2021": {
+      "logo": "media/teams/keyd-stars-champions-2021.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Keyd_Stars_2017_allmode.png",
+      "file": "Keyd stars 2017.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "keyd-stars-masters-berlin-2021": {
+      "logo": "media/teams/keyd-stars-masters-berlin-2021.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Keyd_Stars_2017_allmode.png",
+      "file": "Keyd stars 2017.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "kiwoom-drx-champions-2022": {
+      "logo": "media/teams/kiwoom-drx-champions-2022.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:DRX_allmode.png",
+      "file": "DRX allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "kiwoom-drx-champions-2023": {
+      "logo": "media/teams/kiwoom-drx-champions-2023.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:DRX_2023_darkmode.png",
+      "file": "DRX 2023 darkmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "kiwoom-drx-champions-2024": {
+      "logo": "media/teams/kiwoom-drx-champions-2024.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:DRX_2023_darkmode.png",
+      "file": "DRX 2023 darkmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "kiwoom-drx-champions-2025": {
+      "logo": "media/teams/kiwoom-drx-champions-2025.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:DRX_2023_darkmode.png",
+      "file": "DRX 2023 darkmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "kiwoom-drx-lock-in-sao-paulo-2023": {
+      "logo": "media/teams/kiwoom-drx-lock-in-sao-paulo-2023.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:DRX_2023_darkmode.png",
+      "file": "DRX 2023 darkmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "kiwoom-drx-masters-bangkok-2025": {
+      "logo": "media/teams/kiwoom-drx-masters-bangkok-2025.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:DRX_2023_darkmode.png",
+      "file": "DRX 2023 darkmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "kiwoom-drx-masters-copenhagen-2022": {
+      "logo": "media/teams/kiwoom-drx-masters-copenhagen-2022.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:DRX_allmode.png",
+      "file": "DRX allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "kiwoom-drx-masters-reykjavik-2022": {
+      "logo": "media/teams/kiwoom-drx-masters-reykjavik-2022.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:DRX_allmode.png",
+      "file": "DRX allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "kiwoom-drx-masters-tokyo-2023": {
+      "logo": "media/teams/kiwoom-drx-masters-tokyo-2023.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:DRX_2023_darkmode.png",
+      "file": "DRX 2023 darkmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "koi-lock-in-sao-paulo-2023": {
+      "logo": "media/teams/koi-lock-in-sao-paulo-2023.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:KOI_allmode.png",
+      "file": "KOI allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "kr-esports-champions-2021": {
+      "logo": "media/teams/kr-esports-champions-2021.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:KRU_Esports_allmode.png",
+      "file": "KRU Esports allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "kr-esports-champions-2022": {
+      "logo": "media/teams/kr-esports-champions-2022.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:KRU_Esports_allmode.png",
+      "file": "KRU Esports allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "kr-esports-champions-2023": {
+      "logo": "media/teams/kr-esports-champions-2023.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:KRU_Esports_allmode.png",
+      "file": "KRU Esports allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "kr-esports-champions-2024": {
+      "logo": "media/teams/kr-esports-champions-2024.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:KRU_Esports_allmode.png",
+      "file": "KRU Esports allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "kr-esports-lock-in-sao-paulo-2023": {
+      "logo": "media/teams/kr-esports-lock-in-sao-paulo-2023.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:KRU_Esports_allmode.png",
+      "file": "KRU Esports allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "kr-esports-masters-berlin-2021": {
+      "logo": "media/teams/kr-esports-masters-berlin-2021.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:KRU_Esports_allmode.png",
+      "file": "KRU Esports allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "kr-esports-masters-copenhagen-2022": {
+      "logo": "media/teams/kr-esports-masters-copenhagen-2022.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:KRU_Esports_allmode.png",
+      "file": "KRU Esports allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "kr-esports-masters-reykjavik-2021": {
+      "logo": "media/teams/kr-esports-masters-reykjavik-2021.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:KRU_Esports_allmode.png",
+      "file": "KRU Esports allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "kr-esports-masters-reykjavik-2022": {
+      "logo": "media/teams/kr-esports-masters-reykjavik-2022.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:KRU_Esports_allmode.png",
+      "file": "KRU Esports allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "leviat-n-champions-2022": {
+      "logo": "media/teams/leviat-n-champions-2022.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Leviat%C3%A1n_allmode.png",
+      "file": "Leviatán allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "leviat-n-champions-2024": {
+      "logo": "media/teams/leviat-n-champions-2024.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Leviat%C3%A1n_allmode.png",
+      "file": "Leviatán allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "leviat-n-lock-in-sao-paulo-2023": {
+      "logo": "media/teams/leviat-n-lock-in-sao-paulo-2023.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Leviat%C3%A1n_allmode.png",
+      "file": "Leviatán allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "leviat-n-masters-copenhagen-2022": {
+      "logo": "media/teams/leviat-n-masters-copenhagen-2022.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Leviat%C3%A1n_allmode.png",
+      "file": "Leviatán allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "leviat-n-masters-london-2026": {
+      "logo": "media/teams/leviat-n-masters-london-2026.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Leviat%C3%A1n_allmode.png",
+      "file": "Leviatán allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "leviat-n-masters-shanghai-2024": {
+      "logo": "media/teams/leviat-n-masters-shanghai-2024.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Leviat%C3%A1n_allmode.png",
+      "file": "Leviatán allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "liberty": {
+      "logo": "media/teams/liberty.webp",
+      "eraSpecific": false,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Liberty_2021_full_allmode.png",
+      "file": "Liberty 2021 full allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "loud-champions-2022": {
+      "logo": "media/teams/loud-champions-2022.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:LOUD_allmode.png",
+      "file": "LOUD Logo teamcard.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "loud-champions-2023": {
+      "logo": "media/teams/loud-champions-2023.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:LOUD_allmode.png",
+      "file": "LOUD Logo teamcard.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "loud-champions-2026": {
+      "logo": "media/teams/loud-champions-2026.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:LOUD_allmode.png",
+      "file": "LOUD Logo teamcard.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "loud-lock-in-sao-paulo-2023": {
+      "logo": "media/teams/loud-lock-in-sao-paulo-2023.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:LOUD_allmode.png",
+      "file": "LOUD Logo teamcard.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "loud-masters-copenhagen-2022": {
+      "logo": "media/teams/loud-masters-copenhagen-2022.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:LOUD_allmode.png",
+      "file": "LOUD Logo teamcard.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "loud-masters-madrid-2024": {
+      "logo": "media/teams/loud-masters-madrid-2024.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:LOUD_allmode.png",
+      "file": "LOUD Logo teamcard.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "loud-masters-reykjavik-2022": {
+      "logo": "media/teams/loud-masters-reykjavik-2022.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:LOUD_allmode.png",
+      "file": "LOUD Logo teamcard.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "loud-masters-tokyo-2023": {
+      "logo": "media/teams/loud-masters-tokyo-2023.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:LOUD_allmode.png",
+      "file": "LOUD Logo teamcard.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "mibr-champions-2025": {
+      "logo": "media/teams/mibr-champions-2025.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:MIBR_2018_darkmode.png",
+      "file": "MIBR 2018 darkmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "mibr-lock-in-sao-paulo-2023": {
+      "logo": "media/teams/mibr-lock-in-sao-paulo-2023.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:MIBR_2018_darkmode.png",
+      "file": "MIBR 2018 darkmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "mibr-masters-toronto-2025": {
+      "logo": "media/teams/mibr-masters-toronto-2025.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:MIBR_2018_darkmode.png",
+      "file": "MIBR 2018 darkmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "natus-vincere-champions-2023": {
+      "logo": "media/teams/natus-vincere-champions-2023.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Natus_Vincere_2021_allmode.png",
+      "file": "Natus Vincere 2021 allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "natus-vincere-lock-in-sao-paulo-2023": {
+      "logo": "media/teams/natus-vincere-lock-in-sao-paulo-2023.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Natus_Vincere_2021_allmode.png",
+      "file": "Natus Vincere 2021 allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "natus-vincere-masters-tokyo-2023": {
+      "logo": "media/teams/natus-vincere-masters-tokyo-2023.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Natus_Vincere_2021_allmode.png",
+      "file": "Natus Vincere 2021 allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "ninjas-in-pyjamas-masters-reykjavik-2022": {
+      "logo": "media/teams/ninjas-in-pyjamas-masters-reykjavik-2022.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Ninjas_in_Pyjamas_2021_darkmode.png",
+      "file": "Ninjas in Pyjamas 2021 darkmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "nongshim-redforce-champions-2026": {
+      "logo": "media/teams/nongshim-redforce-champions-2026.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Nongshim_RedForce_allmode.png",
+      "file": "NS Redforce allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "nongshim-redforce-masters-santiago-2026": {
+      "logo": "media/teams/nongshim-redforce-masters-santiago-2026.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Nongshim_RedForce_allmode.png",
+      "file": "NS Redforce allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "northeption-masters-copenhagen-2022": {
+      "logo": "media/teams/northeption-masters-copenhagen-2022.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Northeption_2022_allmode.png",
+      "file": "Northeption 2022 allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "nrg-champions-2023": {
+      "logo": "media/teams/nrg-champions-2023.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:NRG_2020_darkmode.png",
+      "file": "NRG 2020 darkmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "nrg-champions-2025": {
+      "logo": "media/teams/nrg-champions-2025.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:NRG_2024_allmode.png",
+      "file": "NRG 2024 allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "nrg-champions-2026": {
+      "logo": "media/teams/nrg-champions-2026.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:NRG_2024_allmode.png",
+      "file": "NRG 2024 allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "nrg-lock-in-sao-paulo-2023": {
+      "logo": "media/teams/nrg-lock-in-sao-paulo-2023.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:NRG_2020_darkmode.png",
+      "file": "NRG 2020 darkmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "nrg-masters-london-2026": {
+      "logo": "media/teams/nrg-masters-london-2026.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:NRG_2024_allmode.png",
+      "file": "NRG 2024 allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "nrg-masters-santiago-2026": {
+      "logo": "media/teams/nrg-masters-santiago-2026.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:NRG_2024_allmode.png",
+      "file": "NRG 2024 allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "nrg-masters-tokyo-2023": {
+      "logo": "media/teams/nrg-masters-tokyo-2023.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:NRG_2020_darkmode.png",
+      "file": "NRG 2020 darkmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "nuturn-masters-reykjavik-2021": {
+      "logo": "media/teams/nuturn-masters-reykjavik-2021.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:NUTURN_Gaming_darkmode.png",
+      "file": "NUTURN Gaming darkmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "optic-gaming-champions-2022": {
+      "logo": "media/teams/optic-gaming-champions-2022.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:OpTic_Gaming_darkmode.png",
+      "file": "OpTic Gaming darkmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "optic-gaming-masters-copenhagen-2022": {
+      "logo": "media/teams/optic-gaming-masters-copenhagen-2022.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:OpTic_Gaming_darkmode.png",
+      "file": "OpTic Gaming darkmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "optic-gaming-masters-reykjavik-2022": {
+      "logo": "media/teams/optic-gaming-masters-reykjavik-2022.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:OpTic_Gaming_darkmode.png",
+      "file": "OpTic Gaming darkmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "papara-supermassive": {
+      "logo": "media/teams/papara-supermassive.webp",
+      "eraSpecific": false,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Papara_SuperMassive_Aug_2023_full_darkmode.png",
+      "file": "Papara SuperMassive Aug 2023 full darkmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "paper-rex-champions-2022": {
+      "logo": "media/teams/paper-rex-champions-2022.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Paper_Rex_darkmode.png",
+      "file": "Paper Rex darkmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "paper-rex-champions-2023": {
+      "logo": "media/teams/paper-rex-champions-2023.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Paper_Rex_darkmode.png",
+      "file": "Paper Rex darkmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "paper-rex-champions-2024": {
+      "logo": "media/teams/paper-rex-champions-2024.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Paper_Rex_darkmode.png",
+      "file": "Paper Rex darkmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "paper-rex-champions-2025": {
+      "logo": "media/teams/paper-rex-champions-2025.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Paper_Rex_darkmode.png",
+      "file": "Paper Rex darkmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "paper-rex-champions-2026": {
+      "logo": "media/teams/paper-rex-champions-2026.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Paper_Rex_darkmode.png",
+      "file": "Paper Rex darkmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "paper-rex-lock-in-sao-paulo-2023": {
+      "logo": "media/teams/paper-rex-lock-in-sao-paulo-2023.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Paper_Rex_darkmode.png",
+      "file": "Paper Rex darkmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "paper-rex-masters-berlin-2021": {
+      "logo": "media/teams/paper-rex-masters-berlin-2021.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Paper_Rex_darkmode.png",
+      "file": "Paper Rex darkmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "paper-rex-masters-copenhagen-2022": {
+      "logo": "media/teams/paper-rex-masters-copenhagen-2022.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Paper_Rex_darkmode.png",
+      "file": "Paper Rex darkmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "paper-rex-masters-london-2026": {
+      "logo": "media/teams/paper-rex-masters-london-2026.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Paper_Rex_darkmode.png",
+      "file": "Paper Rex darkmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "paper-rex-masters-madrid-2024": {
+      "logo": "media/teams/paper-rex-masters-madrid-2024.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Paper_Rex_darkmode.png",
+      "file": "Paper Rex darkmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "paper-rex-masters-reykjavik-2022": {
+      "logo": "media/teams/paper-rex-masters-reykjavik-2022.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Paper_Rex_darkmode.png",
+      "file": "Paper Rex darkmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "paper-rex-masters-santiago-2026": {
+      "logo": "media/teams/paper-rex-masters-santiago-2026.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Paper_Rex_darkmode.png",
+      "file": "Paper Rex darkmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "paper-rex-masters-shanghai-2024": {
+      "logo": "media/teams/paper-rex-masters-shanghai-2024.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Paper_Rex_darkmode.png",
+      "file": "Paper Rex darkmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "paper-rex-masters-tokyo-2023": {
+      "logo": "media/teams/paper-rex-masters-tokyo-2023.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Paper_Rex_darkmode.png",
+      "file": "Paper Rex darkmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "paper-rex-masters-toronto-2025": {
+      "logo": "media/teams/paper-rex-masters-toronto-2025.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Paper_Rex_darkmode.png",
+      "file": "Paper Rex darkmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "rex-regum-qeon-champions-2025": {
+      "logo": "media/teams/rex-regum-qeon-champions-2025.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Rex_Regum_Qeon_allmode.png",
+      "file": "Rex Regum Qeon allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "rex-regum-qeon-masters-toronto-2025": {
+      "logo": "media/teams/rex-regum-qeon-masters-toronto-2025.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Rex_Regum_Qeon_allmode.png",
+      "file": "Rex Regum Qeon allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "sentinels-champions-2021": {
+      "logo": "media/teams/sentinels-champions-2021.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Sentinels_2020_allmode.png",
+      "file": "Sentinels 2020 allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "sentinels-champions-2024": {
+      "logo": "media/teams/sentinels-champions-2024.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Sentinels_2020_allmode.png",
+      "file": "Sentinels 2020 allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "sentinels-champions-2025": {
+      "logo": "media/teams/sentinels-champions-2025.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Sentinels_2025_allmode.png",
+      "file": "Sentinels 2025 allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "sentinels-lock-in-sao-paulo-2023": {
+      "logo": "media/teams/sentinels-lock-in-sao-paulo-2023.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Sentinels_2020_allmode.png",
+      "file": "Sentinels 2020 allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "sentinels-masters-bangkok-2025": {
+      "logo": "media/teams/sentinels-masters-bangkok-2025.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Sentinels_2025_allmode.png",
+      "file": "Sentinels 2025 allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "sentinels-masters-berlin-2021": {
+      "logo": "media/teams/sentinels-masters-berlin-2021.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Sentinels_2020_allmode.png",
+      "file": "Sentinels 2020 allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "sentinels-masters-madrid-2024": {
+      "logo": "media/teams/sentinels-masters-madrid-2024.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Sentinels_2020_allmode.png",
+      "file": "Sentinels 2020 allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "sentinels-masters-reykjavik-2021": {
+      "logo": "media/teams/sentinels-masters-reykjavik-2021.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Sentinels_2020_allmode.png",
+      "file": "Sentinels 2020 allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "sentinels-masters-toronto-2025": {
+      "logo": "media/teams/sentinels-masters-toronto-2025.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Sentinels_2025_allmode.png",
+      "file": "Sentinels 2025 allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "sharks-esports-masters-reykjavik-2021": {
+      "logo": "media/teams/sharks-esports-masters-reykjavik-2021.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Sharks_Esports.png",
+      "file": "Sharks Esports.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "t1-champions-2023": {
+      "logo": "media/teams/t1-champions-2023.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:T1_2019_allmode.png",
+      "file": "T1 2019 allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "t1-champions-2025": {
+      "logo": "media/teams/t1-champions-2025.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:T1_2019_allmode.png",
+      "file": "T1 2019 allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "t1-champions-2026": {
+      "logo": "media/teams/t1-champions-2026.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:T1_2019_allmode.png",
+      "file": "T1 2019 allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "t1-masters-bangkok-2025": {
+      "logo": "media/teams/t1-masters-bangkok-2025.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:T1_2019_allmode.png",
+      "file": "T1 2019 allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "t1-masters-santiago-2026": {
+      "logo": "media/teams/t1-masters-santiago-2026.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:T1_2019_allmode.png",
+      "file": "T1 2019 allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "t1-masters-shanghai-2024": {
+      "logo": "media/teams/t1-masters-shanghai-2024.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:T1_2019_allmode.png",
+      "file": "T1 2019 allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "t1-masters-tokyo-2023": {
+      "logo": "media/teams/t1-masters-tokyo-2023.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:T1_2019_allmode.png",
+      "file": "T1 2019 allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "talon-champions-2024": {
+      "logo": "media/teams/talon-champions-2024.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Talon_Esports_2019_allmode.png",
+      "file": "Talon Esports 2019 allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "talon-lock-in-sao-paulo-2023": {
+      "logo": "media/teams/talon-lock-in-sao-paulo-2023.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Talon_Esports_2019_allmode.png",
+      "file": "Talon Esports 2019 allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "team-heretics-champions-2024": {
+      "logo": "media/teams/team-heretics-champions-2024.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Team_Heretics_2022_allmode.png",
+      "file": "Team Heretics 2022 allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "team-heretics-champions-2025": {
+      "logo": "media/teams/team-heretics-champions-2025.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Team_Heretics_2024_allmode.png",
+      "file": "Team Heretics 2024 allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "team-heretics-lock-in-sao-paulo-2023": {
+      "logo": "media/teams/team-heretics-lock-in-sao-paulo-2023.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Team_Heretics_2022_allmode.png",
+      "file": "Team Heretics 2022 allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "team-heretics-masters-london-2026": {
+      "logo": "media/teams/team-heretics-masters-london-2026.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Team_Heretics_2024_allmode.png",
+      "file": "Team Heretics 2024 allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "team-heretics-masters-madrid-2024": {
+      "logo": "media/teams/team-heretics-masters-madrid-2024.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Team_Heretics_2022_allmode.png",
+      "file": "Team Heretics 2022 allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "team-heretics-masters-shanghai-2024": {
+      "logo": "media/teams/team-heretics-masters-shanghai-2024.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Team_Heretics_2022_allmode.png",
+      "file": "Team Heretics 2022 allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "team-heretics-masters-toronto-2025": {
+      "logo": "media/teams/team-heretics-masters-toronto-2025.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Team_Heretics_2024_allmode.png",
+      "file": "Team Heretics 2024 allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "team-liquid-champions-2021": {
+      "logo": "media/teams/team-liquid-champions-2021.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Team_Liquid_2020_darkmode.png",
+      "file": "Team Liquid 2020 darkmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "team-liquid-champions-2022": {
+      "logo": "media/teams/team-liquid-champions-2022.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Team_Liquid_2020_darkmode.png",
+      "file": "Team Liquid 2020 darkmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "team-liquid-champions-2023": {
+      "logo": "media/teams/team-liquid-champions-2023.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Team_Liquid_2023_darkmode.png",
+      "file": "Team Liquid 2023 darkmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "team-liquid-champions-2025": {
+      "logo": "media/teams/team-liquid-champions-2025.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Team_Liquid_2024_darkmode.png",
+      "file": "Team Liquid 2024 darkmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "team-liquid-champions-2026": {
+      "logo": "media/teams/team-liquid-champions-2026.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Team_Liquid_2024_darkmode.png",
+      "file": "Team Liquid 2024 darkmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "team-liquid-lock-in-sao-paulo-2023": {
+      "logo": "media/teams/team-liquid-lock-in-sao-paulo-2023.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Team_Liquid_2023_darkmode.png",
+      "file": "Team Liquid 2023 darkmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "team-liquid-masters-bangkok-2025": {
+      "logo": "media/teams/team-liquid-masters-bangkok-2025.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Team_Liquid_2024_darkmode.png",
+      "file": "Team Liquid 2024 darkmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "team-liquid-masters-reykjavik-2021": {
+      "logo": "media/teams/team-liquid-masters-reykjavik-2021.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Team_Liquid_2020_darkmode.png",
+      "file": "Team Liquid 2020 darkmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "team-liquid-masters-reykjavik-2022": {
+      "logo": "media/teams/team-liquid-masters-reykjavik-2022.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Team_Liquid_2020_darkmode.png",
+      "file": "Team Liquid 2020 darkmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "team-liquid-masters-santiago-2026": {
+      "logo": "media/teams/team-liquid-masters-santiago-2026.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Team_Liquid_2024_darkmode.png",
+      "file": "Team Liquid 2024 darkmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "team-liquid-masters-tokyo-2023": {
+      "logo": "media/teams/team-liquid-masters-tokyo-2023.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Team_Liquid_2023_darkmode.png",
+      "file": "Team Liquid 2023 darkmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "team-liquid-masters-toronto-2025": {
+      "logo": "media/teams/team-liquid-masters-toronto-2025.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Team_Liquid_2024_darkmode.png",
+      "file": "Team Liquid 2024 darkmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "team-secret-champions-2021": {
+      "logo": "media/teams/team-secret-champions-2021.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Team_Secret_darkmode.png",
+      "file": "Team Secret darkmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "team-secret-lock-in-sao-paulo-2023": {
+      "logo": "media/teams/team-secret-lock-in-sao-paulo-2023.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Team_Secret_darkmode.png",
+      "file": "Team Secret darkmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "team-vikings-champions-2021": {
+      "logo": "media/teams/team-vikings-champions-2021.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Team_Vikings_allmode.png",
+      "file": "Team Vikings allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "team-vikings-masters-reykjavik-2021": {
+      "logo": "media/teams/team-vikings-masters-reykjavik-2021.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Team_Vikings_allmode.png",
+      "file": "Team Vikings allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "team-vitality-champions-2024": {
+      "logo": "media/teams/team-vitality-champions-2024.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Team_Vitality_2023_darkmode.png",
+      "file": "Team Vitality 2023 darkmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "team-vitality-champions-2026": {
+      "logo": "media/teams/team-vitality-champions-2026.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Team_Vitality_2023_darkmode.png",
+      "file": "Team Vitality 2023 darkmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "team-vitality-lock-in-sao-paulo-2023": {
+      "logo": "media/teams/team-vitality-lock-in-sao-paulo-2023.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Team_Vitality_2023_darkmode.png",
+      "file": "Team Vitality 2023 darkmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "team-vitality-masters-bangkok-2025": {
+      "logo": "media/teams/team-vitality-masters-bangkok-2025.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Team_Vitality_2023_darkmode.png",
+      "file": "Team Vitality 2023 darkmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "team-vitality-masters-london-2026": {
+      "logo": "media/teams/team-vitality-masters-london-2026.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Team_Vitality_2023_darkmode.png",
+      "file": "Team Vitality 2023 darkmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "the-guard-masters-reykjavik-2022": {
+      "logo": "media/teams/the-guard-masters-reykjavik-2022.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:The_Guard_allmode.png",
+      "file": "The Guard allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "trace-esports-champions-2024": {
+      "logo": "media/teams/trace-esports-champions-2024.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Trace_Esports_2023_allmode.png",
+      "file": "Trace Esports 2023 allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "trace-esports-masters-bangkok-2025": {
+      "logo": "media/teams/trace-esports-masters-bangkok-2025.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Trace_Esports_2025_allmode.png",
+      "file": "Trace Esports 2025 allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "tyloo-champions-2026": {
+      "logo": "media/teams/tyloo-champions-2026.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:TyLoo_2016_allmode.png",
+      "file": "TyLoo 2016 allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "version1-masters-reykjavik-2021": {
+      "logo": "media/teams/version1-masters-reykjavik-2021.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Version1_2021_allmode.png",
+      "file": "Version1 2021 allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "vision-strikers-champions-2021": {
+      "logo": "media/teams/vision-strikers-champions-2021.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Vision_Strikers_allmode.png",
+      "file": "Vision Strikers allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "vision-strikers-masters-berlin-2021": {
+      "logo": "media/teams/vision-strikers-masters-berlin-2021.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Vision_Strikers_allmode.png",
+      "file": "Vision Strikers allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "wolves-esports-masters-toronto-2025": {
+      "logo": "media/teams/wolves-esports-masters-toronto-2025.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Wolves_Esports_allmode.png",
+      "file": "Wolves Esports allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "x10-esports": {
+      "logo": "media/teams/x10-esports.webp",
+      "eraSpecific": false,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:X10_Esports_2020_allmode.png",
+      "file": "X10 Esports 2020 allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "x10-esports-masters-reykjavik-2021": {
+      "logo": "media/teams/x10-esports-masters-reykjavik-2021.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:X10_Esports_2020_allmode.png",
+      "file": "X10 Esports 2020 allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "xerxia-esports-champions-2022": {
+      "logo": "media/teams/xerxia-esports-champions-2022.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Xerxia_Esports_allmode.png",
+      "file": "Xerxia Esports allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "xerxia-esports-masters-copenhagen-2022": {
+      "logo": "media/teams/xerxia-esports-masters-copenhagen-2022.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Xerxia_Esports_allmode.png",
+      "file": "Xerxia Esports allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "xerxia-esports-masters-reykjavik-2022": {
+      "logo": "media/teams/xerxia-esports-masters-reykjavik-2022.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Xerxia_Esports_allmode.png",
+      "file": "Xerxia Esports allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "xi-lai-gaming-champions-2025": {
+      "logo": "media/teams/xi-lai-gaming-champions-2025.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:XLG_China_2024_allmode.png",
+      "file": "XLG China 2024 allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "xi-lai-gaming-champions-2026": {
+      "logo": "media/teams/xi-lai-gaming-champions-2026.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:XLG_China_2024_allmode.png",
+      "file": "XLG China 2024 allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "xi-lai-gaming-masters-london-2026": {
+      "logo": "media/teams/xi-lai-gaming-masters-london-2026.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:XLG_China_2024_allmode.png",
+      "file": "XLG China 2024 allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "xi-lai-gaming-masters-santiago-2026": {
+      "logo": "media/teams/xi-lai-gaming-masters-santiago-2026.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:XLG_China_2024_allmode.png",
+      "file": "XLG China 2024 allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "xi-lai-gaming-masters-toronto-2025": {
+      "logo": "media/teams/xi-lai-gaming-masters-toronto-2025.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:XLG_China_2024_allmode.png",
+      "file": "XLG China 2024 allmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "xset-champions-2022": {
+      "logo": "media/teams/xset-champions-2022.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:XSET_darkmode.png",
+      "file": "XSET darkmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "xset-masters-copenhagen-2022": {
+      "logo": "media/teams/xset-masters-copenhagen-2022.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:XSET_darkmode.png",
+      "file": "XSET darkmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "zeta-division-champions-2022": {
+      "logo": "media/teams/zeta-division-champions-2022.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:ZETA_DIVISION_darkmode.png",
+      "file": "ZETA DIVISION darkmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "zeta-division-champions-2023": {
+      "logo": "media/teams/zeta-division-champions-2023.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:ZETA_DIVISION_darkmode.png",
+      "file": "ZETA DIVISION darkmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "zeta-division-lock-in-sao-paulo-2023": {
+      "logo": "media/teams/zeta-division-lock-in-sao-paulo-2023.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:ZETA_DIVISION_darkmode.png",
+      "file": "ZETA DIVISION darkmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "zeta-division-masters-berlin-2021": {
+      "logo": "media/teams/zeta-division-masters-berlin-2021.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:ZETA_DIVISION_darkmode.png",
+      "file": "ZETA DIVISION darkmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "zeta-division-masters-reykjavik-2022": {
+      "logo": "media/teams/zeta-division-masters-reykjavik-2022.webp",
+      "eraSpecific": true,
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:ZETA_DIVISION_darkmode.png",
+      "file": "ZETA DIVISION darkmode.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    }
+  },
+  "players": {}
+}

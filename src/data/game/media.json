@@ -1,0 +1,307 @@
+{
+  "source": {
+    "site": "Liquipedia",
+    "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0",
+    "license": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "note": "Imagens baixadas pela API da Liquipedia (imageinfo) e redimensionadas; cada entrada guarda a página do arquivo. Retiramos qualquer imagem a pedido do titular.",
+    "generator": "scripts/media/run.mjs"
+  },
+  "maps": {
+    "Abyss": {
+      "image": "media/maps/abyss.webp",
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Abyss_Map.png",
+      "file": "Abyss Map.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "Ascent": {
+      "image": "media/maps/ascent.webp",
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Ascent_Map.png",
+      "file": "Ascent Map.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "Bind": {
+      "image": "media/maps/bind.webp",
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Bind_Map.png",
+      "file": "Bind Map.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "Breeze": {
+      "image": "media/maps/breeze.webp",
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Breeze_Map.png",
+      "file": "Breeze Map.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "Corrode": {
+      "image": "media/maps/corrode.webp",
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Corrode_Map.png",
+      "file": "Corrode Map.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "Fracture": {
+      "image": "media/maps/fracture.webp",
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Fracture_Map.png",
+      "file": "Fracture Map.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "Haven": {
+      "image": "media/maps/haven.webp",
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Haven_Map.png",
+      "file": "Haven Map.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "Icebox": {
+      "image": "media/maps/icebox.webp",
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Icebox_Map.png",
+      "file": "Icebox Map.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "Lotus": {
+      "image": "media/maps/lotus.webp",
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Lotus_Map_VALORANT.png",
+      "file": "Lotus Map VALORANT.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "Pearl": {
+      "image": "media/maps/pearl.webp",
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Pearl_Map.png",
+      "file": "Pearl Map.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "Split": {
+      "image": "media/maps/split.webp",
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Split_Map.png",
+      "file": "Split Map.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "Summit": {
+      "image": "media/maps/summit.webp",
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Summit_Map_Valorant.jpg",
+      "file": "Summit Map Valorant.jpg",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "Sunset": {
+      "image": "media/maps/sunset.webp",
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Sunset_Map.png",
+      "file": "Sunset Map.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    }
+  },
+  "agents": {
+    "Astra": {
+      "icon": "media/agents/astra.webp",
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Astra_VALORANT_Icon.png",
+      "file": "Astra VALORANT Icon.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "Breach": {
+      "icon": "media/agents/breach.webp",
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Breach_0.50_VALORANT_Icon.png",
+      "file": "Breach 0.50 VALORANT Icon.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "Brimstone": {
+      "icon": "media/agents/brimstone.webp",
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Brimstone_0.50_VALORANT_Icon.png",
+      "file": "Brimstone 0.50 VALORANT Icon.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "Chamber": {
+      "icon": "media/agents/chamber.webp",
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Chamber_6.10_VALORANT_Icon.png",
+      "file": "Chamber 6.10 VALORANT Icon.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "Clove": {
+      "icon": "media/agents/clove.webp",
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Clove_VALORANT_Icon.png",
+      "file": "Clove VALORANT Icon.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "Cypher": {
+      "icon": "media/agents/cypher.webp",
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Cypher_0.50_VALORANT_Icon.png",
+      "file": "Cypher 0.50 VALORANT Icon.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "Deadlock": {
+      "icon": "media/agents/deadlock.webp",
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Deadlock_VALORANT_Icon.png",
+      "file": "Deadlock VALORANT Icon.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "Fade": {
+      "icon": "media/agents/fade.webp",
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Fade_6.10_VALORANT_Icon.png",
+      "file": "Fade 6.10 VALORANT Icon.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "Gekko": {
+      "icon": "media/agents/gekko.webp",
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Gekko_6.08_VALORANT_Icon.png",
+      "file": "Gekko 6.08 VALORANT Icon.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "Harbor": {
+      "icon": "media/agents/harbor.webp",
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Harbor_6.10_VALORANT_Icon.png",
+      "file": "Harbor 6.10 VALORANT Icon.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "Iso": {
+      "icon": "media/agents/iso.webp",
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Iso_VALORANT_Icon.png",
+      "file": "Iso VALORANT Icon.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "Jett": {
+      "icon": "media/agents/jett.webp",
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Jett_0.50_VALORANT_Icon.png",
+      "file": "Jett 0.50 VALORANT Icon.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "KAY/O": {
+      "icon": "media/agents/kay-o.webp",
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:KAY-O_VALORANT_Icon.png",
+      "file": "KAY-O VALORANT Icon.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "Killjoy": {
+      "icon": "media/agents/killjoy.webp",
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Killjoy_VALORANT_Icon.png",
+      "file": "Killjoy VALORANT Icon.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "Miks": {
+      "icon": "media/agents/miks.webp",
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Miks_VALORANT_Icon.png",
+      "file": "Miks VALORANT Icon.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "Neon": {
+      "icon": "media/agents/neon.webp",
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Neon_VALORANT_Icon.png",
+      "file": "Neon VALORANT Icon.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "Omen": {
+      "icon": "media/agents/omen.webp",
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Omen_0.50_VALORANT_Icon.png",
+      "file": "Omen 0.50 VALORANT Icon.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "Phoenix": {
+      "icon": "media/agents/phoenix.webp",
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Phoenix_0.50_VALORANT_Icon.png",
+      "file": "Phoenix 0.50 VALORANT Icon.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "Raze": {
+      "icon": "media/agents/raze.webp",
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Raze_0.50_VALORANT_Icon.png",
+      "file": "Raze 0.50 VALORANT Icon.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "Reyna": {
+      "icon": "media/agents/reyna.webp",
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Reyna_VALORANT_Icon.png",
+      "file": "Reyna VALORANT Icon.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "Sage": {
+      "icon": "media/agents/sage.webp",
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Sage_0.50_VALORANT_Icon.png",
+      "file": "Sage 0.50 VALORANT Icon.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "Skye": {
+      "icon": "media/agents/skye.webp",
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Skye_VALORANT_Icon.png",
+      "file": "Skye VALORANT Icon.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "Sova": {
+      "icon": "media/agents/sova.webp",
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Sova_0.50_VALORANT_Icon.png",
+      "file": "Sova 0.50 VALORANT Icon.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "Tejo": {
+      "icon": "media/agents/tejo.webp",
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Tejo_VALORANT_Icon.png",
+      "file": "Tejo VALORANT Icon.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "Veto": {
+      "icon": "media/agents/veto.webp",
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Veto_VALORANT_Icon.png",
+      "file": "Veto VALORANT Icon.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "Viper": {
+      "icon": "media/agents/viper.webp",
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Viper_0.50_VALORANT_Icon.png",
+      "file": "Viper 0.50 VALORANT Icon.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "Vyse": {
+      "icon": "media/agents/vyse.webp",
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Vyse_VALORANT_Icon.png",
+      "file": "Vyse VALORANT Icon.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "Waylay": {
+      "icon": "media/agents/waylay.webp",
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Waylay_VALORANT_Icon.png",
+      "file": "Waylay VALORANT Icon.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    },
+    "Yoru": {
+      "icon": "media/agents/yoru.webp",
+      "source": "liquipedia",
+      "sourceUrl": "https://liquipedia.net/commons/File:Yoru_VALORANT_Icon.png",
+      "file": "Yoru VALORANT Icon.png",
+      "credit": "Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0"
+    }
+  }
+}
