@@ -7,6 +7,13 @@ export type TeamIndex = 0 | 1;
 export type BestOf = 1 | 3 | 5;
 export type MapName = string;
 
+/** Competitive region ("server"). Pre-franchising teams (2021–22) are mapped by country/sub-region. */
+export type Region = 'americas' | 'emea' | 'pacific' | 'china';
+export const REGIONS: readonly Region[] = ['americas', 'emea', 'pacific', 'china'];
+
+/** International = Masters/LOCK//IN/Champions; regional = a VCT regional league stage. */
+export type EventTier = 'international' | 'regional';
+
 /** Card attributes, 0–100. */
 export interface Attributes {
   aim: number;
@@ -73,6 +80,10 @@ export interface RosterEntry {
   iglKnown?: boolean;
   /** Final placement at the event as published ("1st", "3rd–4th"…). */
   placement?: string;
+  /** Region the team competed in at that event. */
+  region?: Region;
+  /** Defaults to 'international' (the original pool). */
+  tier?: EventTier;
 }
 
 export interface LineupPlayer {
