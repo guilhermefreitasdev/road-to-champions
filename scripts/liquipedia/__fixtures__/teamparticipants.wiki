@@ -1,0 +1,58 @@
+<!-- Trimmed from Liquipedia "VCT/2026/Champions" and "VCT/2026/Stage 1/Masters" (FURIA, import=true), CC-BY-SA 3.0. -->
+{{Infobox league
+|name=VALORANT Champions 2026
+|sdate=2026-09-24
+|edate=2026-10-18
+|vlr=2766
+|team_number=16
+}}
+==Participants==
+{{TeamParticipantsControls|showplayerinfo=true}}
+{{TeamParticipants
+|{{Opponent|100 Thieves
+  |players={{Persons
+    |{{Person|Asuna}}
+    |{{Person|Cryocells}}
+    |{{Person|Timotino}}
+    |{{Person|vora|role=Captain}}
+    |{{Person|bang}}
+	
+    |{{Person|Nbs|role=head coach|type=staff|trophies=1}}
+    |{{Person|d00mbr0s|role=assistant coach|type=staff}}
+	|{{Person|Kaimera|role=Analyst|type=staff}}
+  }}
+}}
+|{{Opponent|TYLOO
+  |players={{Persons
+    |{{Person|slowly}}
+    |{{Person|Scales}}
+    |{{Person|Splash}}
+    |{{Person|Erv}}
+    |{{Person|SiuFatBB|role=Captain}}
+	|{{Person|xihe|flag=cn|status=sub|played=false}}
+	
+    |{{Person|hypnotizing|role=head coach|type=staff}}
+    |{{Person|Billyo|role=assistant coach|type=staff}}
+  }}
+}}
+|{{Opponent|Global Esports
+  |players={{Persons
+    |{{Person|Kr1stal}}
+    |{{Person|UdoTan}}
+    |{{Person|autumn|link=autumn (Australian player)}}
+    |{{Person|xavi8k|role=Captain}}
+    |{{Person|PatMen}}
+	
+    |{{Person|Platoon|link=Platoon (Canadian coach)|role=head coach|type=staff}}
+    |{{Person|Aimix|role=assistant coach|type=staff}}
+	|{{Person|Fields|role=Analyst|type=staff}}
+  }}
+}}
+|{{Opponent|FURIA|import=true
+  |players={{Persons
+    |{{Person|basic|played=false|status=sub}}
+    |{{Person|shaW|role=Head Coach|type=staff}}
+    |{{Person|Kamino|role=Assistant Coach|type=staff}}
+  }}
+}}
+}}

@@ -70,3 +70,55 @@ Validação: `npx vitest run src/data/real/vlr` testa os parsers com trechos de 
 - Fonte: [VLR.gg](https://www.vlr.gg). Não existe API oficial; usamos só o que está visível nas páginas públicas e mostramos os dados **com atribuição ao VLR.gg**.
 - Nunca completamos lacunas com chute: campo ausente na página vira `null`.
 - Os nomes de times mostrados são os atuais no VLR (ex.: "KIWOOM DRX" no Champions 2022); a tag (`teamTag`) é a da tabela de stats do evento.
+
+# Elencos, técnicos e IGLs (Liquipedia)
+
+O VLR não diz quem é o IGL nem, de forma confiável, quem era o técnico em cada evento. Isso vem da [Liquipedia](https://liquipedia.net/valorant/), só pela API MediaWiki e dentro dos [termos de uso da API](https://liquipedia.net/api-terms-of-use).
+
+## O que tem
+
+`src/data/real/liquipedia/events.json` (gerado, não editar à mão). Para cada evento internacional concluído (Masters, LOCK//IN e Champions de 2021 a 2026, mesmos `id` dos arquivos do VLR, ex.: `champions-2022`):
+
+- `liquipedia`: título da página, `revid` (revisão usada), URL, formato da página (`TeamCard` ou `TeamParticipants`) e de onde veio o elenco (`wikitext` ou `expandtemplates`); `vlrEventId` quando a página traz; datas; `withdrawn` (times que desistiram antes do evento e ficaram de fora).
+- `teams[]`: `name` (como aparece na página do evento), `liquipediaPage` e `vlrTeamId` (do infobox do time, quando existe), `players[]` com `liquipediaId` (título canônico da página do jogador), `handle` (como aparece no evento), `flag` (ISO 3166-1 alfa-2, igual a `Card.country`), `isSub`, `dnp` (reserva que não jogou) e `vlrPlayerId` (do infobox do jogador); `coach` `{ name, liquipediaId }` ou `null` (o head coach; se ninguém estiver marcado assim, o primeiro "coach"); `staff[]` com todos os membros da comissão e a função; `igl` (handle) ou `null`; `iglSource`; `iglCandidates` quando é ambíguo.
+- `sources[]`: todas as páginas lidas (evento, jogadores, técnicos, times) com `revid`, para a atribuição exigida pela licença.
+
+### Como o IGL é decidido (nunca chutamos)
+
+A Liquipedia marca o IGL como "Captain" no elenco. Em ordem de confiança:
+
+1. `event-captain`: um único jogador marcado como Captain na própria página do evento (só existe nas páginas novas, 2026).
+2. `squad-captain`: um único titular marcado como Captain no elenco do time na Liquipedia na data do evento (vem do banco de elencos/transferências, pedido via importação; é escasso nos eventos antigos).
+3. `infobox-unique`: um único titular com a função `igl` no infobox do jogador. **É a função de carreira, não por evento**: um jogador que virou IGL depois pode aparecer como IGL num evento antigo. Use como dica, não como verdade.
+4. `infobox-ambiguous` / `event-ambiguous`: dois ou mais candidatos → `igl: null`, com `iglCandidates`. `conflict`: o Captain do elenco (2) é um jogador e o único IGL de infobox (3) é outro → `igl: null`, os dois em `iglCandidates` (Captain nem sempre é quem faz as calls; ex.: EDward Gaming 2022–2024).
+5. `none`: sem informação → `igl: null`.
+
+Correções manuais, quando vierem, devem ficar num arquivo separado (não no JSON gerado).
+
+## Como regenerar
+
+```bash
+NODE_USE_ENV_PROXY=1 node scripts/liquipedia/run.mjs              # baixa o que não está em cache
+node scripts/liquipedia/run.mjs --offline                         # só cache, sem rede
+node scripts/liquipedia/run.mjs --event champions-2022,masters-tokyo-2023   # só esses eventos
+node scripts/liquipedia/run.mjs --refresh                         # baixa de novo tudo que usa
+```
+
+Arquivos: `scripts/liquipedia/api.mjs` (cliente com limite de taxa e cache), `parse.mjs` (parsers puros de wikitext, testados em `src/data/real/liquipedia/parse.test.ts` com fixtures em `scripts/liquipedia/__fixtures__/`) e `run.mjs`. O teste `events.test.ts` valida o JSON gerado (≥ 8 times por evento, técnico na maioria dos times, nenhum time com dois IGLs).
+
+## Regras da API que seguimos
+
+- Só `api.php` (API MediaWiki). Nunca baixamos páginas HTML renderizadas e nunca usamos `action=parse`.
+- Wikitext via `action=query&prop=revisions&rvprop=content&rvslots=main`, com até 50 títulos por requisição (`titles=A|B|C`) e redirecionamentos resolvidos.
+- No máximo 1 requisição a cada 2 s (usamos 2,1 s, com a marca de tempo gravada em disco para valer entre execuções). Em 429/5xx, espera (`Retry-After` ou 60 s, 120 s…) e tenta de novo.
+- `action=expandtemplates` (roda os módulos Lua da Liquipedia, custo parecido com `parse`) é tratado como `parse`: no mínimo 30 s entre chamadas; usamos 65 s porque o servidor respondeu 429 com 30 s. Serve para dois casos: elencos com `import=true` (os jogadores não estão no wikitext, vêm do banco da Liquipedia) e as marcas de Captain do elenco na data do evento. É uma chamada de cada tipo por evento, no máximo.
+- User-Agent `RoadToChampions/0.1 (fan project; github.com/guilhermefreitasdev/road-to-champions)`, `Accept-Encoding: gzip` e conexão reaproveitada (o `fetch` do Node mantém keep-alive).
+- Cache de toda resposta em `.cache/liquipedia/` (fora do git). Um título em cache nunca é pedido de novo, a não ser com `--refresh`. Uma execução do zero faz cerca de 35 requisições e leva uns 20 min, quase tudo pela espera entre chamadas de `expandtemplates`. Com o cache, leva menos de 1 s.
+
+## Licença e crédito
+
+O conteúdo da Liquipedia é [CC-BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/). Por isso:
+
+- O JSON guarda o título e a revisão de cada página usada (`sources`), e `source.credit` traz o texto de crédito.
+- O jogo vai mostrar, na tela "Sobre/Créditos" e no rodapé das telas que usam elencos, técnicos ou IGLs: "Elencos, técnicos e IGLs: Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0", com link para a Liquipedia e para a licença. Os dados derivados (o `events.json`) seguem sob a mesma licença CC-BY-SA 3.0.
+- Não usamos fotos de jogadores nem logos de times da Liquipedia (só texto).

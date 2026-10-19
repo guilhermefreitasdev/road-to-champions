@@ -1,0 +1,82 @@
+<!-- Trimmed from Liquipedia "VCT/2022/Stage 1/Masters" (CC-BY-SA 3.0), for parser tests. -->
+{{Infobox league
+|name=VALORANT Masters Reykjavík&nbsp;2022
+|sdate=2022-04-10
+|edate=2022-04-24
+|team_number=12
+}}
+==Participants==
+{{TeamCard columns start|height=210|cols=4}}
+{{TeamCard
+|team=Fnatic|flag=uk
+|p1=Boaster
+|p2=Magnum
+|p3=Mistic
+|p4=H1ber|p4team=koi
+|p5=Fearoth|p5team=alliance
+|s1=otom|s1result=true|s1dnp=true
+|c=mini|clink=Mini (British coach)
+|inotes={{NoteBig
+|n1=April 1st - {{player|H1ber|flag=fi}} joins on loan from '''[[KOI]]''' to replace {{player|Derke|flag=fi}}. <ref name="H1ber joins">{{cite web|url=https://twitter.com/FNATIC/status/1509849020759527427|title=VCT Update|date=2022-04-01|author='''[[Fnatic]]'''}}</ref>
+}}
+}}
+{{TeamCard
+|team=Team Liquid|flag=nl
+|p1=soulcas
+|p2=L1NK
+|p3=ScreaM
+|p4=Jamppi
+|p5=Nivera
+|t2title=Staff
+|t2c1=Sliggy
+|t2c2=Bacon9|t2c2pos=analyst
+}}
+{{TeamCard
+|team=DRX|flag=kr
+|p1=stax
+|p2=Rb
+|p3=Zest
+|p4=BuZz
+|p5=MaKo
+|c=termi
+|c2=Argency
+|c3=glow
+}}
+{{TeamCard
+|team=Paper Rex|flag=sg
+|p1=mindfreak |p1link=mindfreak (Indonesian player)
+|p2=f0rsakeN
+|p3=Benkai
+|p4=d4v41
+|p5=Jinggg
+|c=alecks
+}}
+{{TeamCard
+|team=OpTic Gaming|flag=usca
+|p1=FNS
+|p2=Victor
+|p3=crashies
+|p4=yay
+|p5=Marved
+|c=Chet|clink=Chet (American coach)
+|c2=Jovi
+}}
+{{TeamCard columns end}}
+{|class="wikitable collapsible collapsed"
+!Former Participants&nbsp;
+|-
+|{{TeamCard columns start|height=210|cols=4}}
+{{TeamCard|TCheight=210
+|team=FunPlus Phoenix|flag=cn
+|p1=ANGE1
+|p2=ardiis
+|p3=Shao
+|p4=SUYGETSU
+|p5=Zyppan
+|t2p1=baddyG
+|t3title=Staff
+|t3c=d00mbr0s
+|t3c2=Gorilla|t3c2pos=analyst
+}}
+{{TeamCard columns end}}
+|}

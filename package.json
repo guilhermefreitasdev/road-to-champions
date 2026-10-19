@@ -12,7 +12,8 @@
     "test:watch": "vitest",
     "typecheck": "tsc --noEmit",
     "data:game": "node scripts/fetch-game-data.mjs",
-    "data:vlr": "NODE_USE_ENV_PROXY=1 node scripts/vlr/run.mjs"
+    "data:vlr": "NODE_USE_ENV_PROXY=1 node scripts/vlr/run.mjs",
+    "data:liquipedia": "NODE_USE_ENV_PROXY=1 node scripts/liquipedia/run.mjs"
   },
   "dependencies": {
     "react": "^19.3.1",
