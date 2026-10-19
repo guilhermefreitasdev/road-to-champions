@@ -1,0 +1,144 @@
+:root {
+  --bg: #0f1923;
+  --surface: #1a2632;
+  --text: #ece8e1;
+  --muted: #8b978f;
+  --accent: #ff4655;
+  --team-a: #3ec9a7;
+  --team-b: #ff4655;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+}
+
+.app {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
+h1 {
+  margin: 0;
+  color: var(--accent);
+  letter-spacing: 0.02em;
+}
+
+.muted {
+  color: var(--muted);
+  font-weight: normal;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: end;
+  margin: 24px 0;
+}
+
+.controls label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+input,
+button {
+  font: inherit;
+  padding: 8px 12px;
+  border-radius: 4px;
+  border: 1px solid #2c3a47;
+  background: var(--surface);
+  color: var(--text);
+}
+
+button {
+  background: var(--accent);
+  border-color: var(--accent);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button.secondary {
+  background: transparent;
+  border-color: #2c3a47;
+}
+
+.rounds {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px;
+  padding: 0;
+  list-style: none;
+}
+
+.rounds li {
+  width: 14px;
+  height: 14px;
+  border-radius: 2px;
+}
+
+.rounds li.a {
+  background: var(--team-a);
+}
+
+.rounds li.b {
+  background: var(--team-b);
+}
+
+.team h3.won::after {
+  content: ' ✓';
+  color: var(--team-a);
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--surface);
+  font-variant-numeric: tabular-nums;
+}
+
+th,
+td {
+  padding: 6px 10px;
+  text-align: right;
+  white-space: nowrap;
+}
+
+th:first-child,
+td:first-child {
+  text-align: left;
+}
+
+th {
+  color: var(--muted);
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+
+tbody tr:nth-child(odd) {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.pos {
+  color: var(--team-a);
+}
+
+.neg {
+  color: var(--team-b);
+}
