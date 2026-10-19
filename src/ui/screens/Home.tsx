@@ -20,7 +20,7 @@ export function Home({ saved, onNew, onContinue }: Props) {
         <p className="context">Valorant · simulador de fã</p>
         <p className="pitch">
           Monte um dream team com cards de pros (jogador + evento), escolha o coach, faça o veto de mapas e tente
-          levantar a taça num Champions de 16 times: fase suíça e playoffs em dupla eliminação.
+          levantar a taça num Champions de 16 times: quatro grupos (A a D) em dupla eliminação e playoffs com chave superior e inferior.
         </p>
       </section>
 

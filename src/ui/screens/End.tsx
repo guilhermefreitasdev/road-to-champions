@@ -11,7 +11,7 @@ interface Props {
 }
 
 const STAGE_LABELS: Record<FinishStage, string> = {
-  swiss: 'Suíça',
+  groups: 'Grupos',
   playoffs: 'Playoffs',
   top4: 'Top 4',
   final: 'Final',
@@ -78,9 +78,15 @@ export function End({ run, onNewRun, onViewSeries }: Props) {
               <dd>{formatDecimal(s.strength)}</dd>
             </div>
             <div>
-              <dt>Suíça</dt>
+              <dt>Grupos</dt>
               <dd>
-                {s.record.swiss.wins}-{s.record.swiss.losses}
+                {s.record.groups.wins}-{s.record.groups.losses}
+                {s.record.groups.place && s.record.groups.group && (
+                  <span className="muted">
+                    {' '}
+                    · {s.record.groups.place}º no Grupo {s.record.groups.group}
+                  </span>
+                )}
               </dd>
             </div>
             <div>
@@ -130,7 +136,7 @@ export function End({ run, onNewRun, onViewSeries }: Props) {
   );
 }
 
-/** Swiss → playoffs → top 4 → final → title, with how far this run went (icon + text, not color alone). */
+/** Groups → playoffs → top 4 → final → title, with how far this run went (icon + text, not color alone). */
 function StagePath({ reached }: { reached: FinishStage }) {
   const at = FINISH_STAGES.indexOf(reached);
   return (

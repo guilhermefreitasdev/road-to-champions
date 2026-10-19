@@ -25,15 +25,21 @@ import { findCoach, pickOpponents, rosterKey } from '../engine/roster';
 import { simulateSeries, type SeriesResult } from '../engine/series';
 import { teamStrength } from '../engine/team';
 import {
+  GROUP_KEYS,
   PLAYOFF_BRACKET,
   TEAM_COUNT,
   createTournament,
+  groupBracket,
+  groupOf,
+  groupStandings,
   pendingMatches,
   reportResult,
-  swissStandings,
   type BracketSlot,
-  type SwissStanding,
-  type SwissStatus,
+  type GroupKey,
+  type GroupPlace,
+  type GroupSlot,
+  type GroupStanding,
+  type GroupStatus,
   type TMatch,
   type TournamentState,
 } from '../engine/tournament';
@@ -46,8 +52,11 @@ export type { DraftMode } from '../engine/draft';
 export const RUN_POOL: readonly RosterEntry[] = REAL_ROSTERS;
 /** Veto pool of every match: the map pool of the most recent event with exactly 7 maps. */
 export const RUN_MAP_POOL: readonly MapName[] = REAL_MAP_POOL;
-/** Save format version: bumped when saved runs stop making sense (v2 = real pool; v1 saves used fictional cards). */
-export const RUN_VERSION = 2;
+/**
+ * Save format version: bumped when saved runs stop making sense (v3 = GSL groups instead of the Swiss stage;
+ * v2 = real pool; v1 saves used fictional cards).
+ */
+export const RUN_VERSION = 3;
 
 /** Entrant id of the user's team. Opponents use their roster key (`${teamId}-${eventId}`). */
 export const USER_ID = 'user';
@@ -281,16 +290,25 @@ export function teamInfo(run: RunState, id: string): TeamInfo {
   };
 }
 
-export interface StandingRow extends SwissStanding {
+export interface StandingRow extends GroupStanding {
   name: string;
   isUser: boolean;
 }
 
+/** Group tables (A–D, each best first), with names. */
 export function standings(run: RunState): StandingRow[] {
   const t = run.tournament;
   if (!t) return [];
   const names = new Map(t.entrants.map((e) => [e.id, e.name]));
-  return swissStandings(t).map((s) => ({ ...s, name: names.get(s.id) ?? s.id, isUser: s.id === USER_ID }));
+  return groupStandings(t).map((s) => ({ ...s, name: names.get(s.id) ?? s.id, isUser: s.id === USER_ID }));
+}
+
+/** Team and event of an entrant, for its logo (the user's team has no real team id). */
+export function entrantTeam(run: RunState, id: string): { teamId: string; eventId?: string; name: string } {
+  const name = run.tournament?.entrants.find((e) => e.id === id)?.name ?? id;
+  if (id === USER_ID) return { teamId: USER_ID, name };
+  const entry = RUN_POOL.find((e) => rosterKey(e) === id);
+  return entry ? { teamId: entry.teamId, eventId: entry.eventId, name } : { teamId: id, name };
 }
 
 export interface BracketCell {
@@ -306,6 +324,47 @@ export function bracket(run: RunState): BracketCell[] {
     const match = byId.get(slot.id);
     return match ? { slot, match } : { slot };
   });
+}
+
+export interface GroupCell {
+  slot: GroupSlot;
+  /** Created once both teams are known. */
+  match?: TMatch;
+}
+
+export interface GroupView {
+  group: GroupKey;
+  /** The 5 GSL slots (opening 1, opening 2, winners, elimination, decider) with their matches so far. */
+  cells: GroupCell[];
+  /** The group's table, best first. */
+  rows: StandingRow[];
+  hasUser: boolean;
+}
+
+/** Every group's bracket and table: the user's group first, then the others in A–D order. */
+export function groupViews(run: RunState): GroupView[] {
+  const t = run.tournament;
+  if (!t) return [];
+  const byId = new Map(t.matches.map((m) => [m.id, m]));
+  const table = standings(run);
+  const views = GROUP_KEYS.map((group): GroupView => {
+    const rows = table.filter((r) => r.group === group);
+    return {
+      group,
+      cells: groupBracket(group).map((slot) => {
+        const match = byId.get(slot.id);
+        return match ? { slot, match } : { slot };
+      }),
+      rows,
+      hasUser: rows.some((r) => r.isUser),
+    };
+  });
+  return [...views.filter((v) => v.hasUser), ...views.filter((v) => !v.hasUser)];
+}
+
+/** The user's group, once the tournament has started. */
+export function userGroup(run: RunState): GroupKey | undefined {
+  return run.tournament && groupOf(run.tournament, USER_ID);
 }
 
 export function involvesUser(m: TMatch): boolean {
@@ -327,7 +386,8 @@ export function userOpponent(m: TMatch): string {
 }
 
 export interface UserRecord {
-  swiss: { wins: number; losses: number; status: SwissStatus };
+  /** Group-stage record ("Grupos 2-1"), the user's group and final place in it (once decided). */
+  groups: { group?: GroupKey; wins: number; losses: number; place?: GroupPlace; status: GroupStatus };
   playoffs: { wins: number; losses: number };
   mapsWon: number;
   mapsLost: number;
@@ -336,9 +396,12 @@ export interface UserRecord {
 }
 
 export function userRecord(run: RunState): UserRecord {
-  const swissRow = standings(run).find((s) => s.isUser);
+  const row = standings(run).find((s) => s.isUser);
+  const groups: UserRecord['groups'] = { wins: row?.wins ?? 0, losses: row?.losses ?? 0, status: row?.status ?? 'alive' };
+  if (row) groups.group = row.group;
+  if (row?.place !== undefined) groups.place = row.place;
   const record: UserRecord = {
-    swiss: { wins: swissRow?.wins ?? 0, losses: swissRow?.losses ?? 0, status: swissRow?.status ?? 'alive' },
+    groups,
     playoffs: { wins: 0, losses: 0 },
     mapsWon: 0,
     mapsLost: 0,
@@ -359,17 +422,17 @@ export function userRecord(run: RunState): UserRecord {
 export interface UserFinish {
   /** "1º", "2º", "5º–6º"… */
   place: string;
-  /** "Campeão", "Vice-campeão", "Eliminado na Suíça (1-3)"… */
+  /** "Campeão", "Vice-campeão", "Eliminado no Grupo A (1-2)"… */
   label: string;
   champion: boolean;
-  /** Furthest stage reached, for the end screen's path: Swiss → playoffs → top 4 → final → title. */
+  /** Furthest stage reached, for the end screen's path: groups → playoffs → top 4 → final → title. */
   stage: FinishStage;
 }
 
-export type FinishStage = 'swiss' | 'playoffs' | 'top4' | 'final' | 'champion';
+export type FinishStage = 'groups' | 'playoffs' | 'top4' | 'final' | 'champion';
 
 /** Stages of the run's path, in order. */
-export const FINISH_STAGES: readonly FinishStage[] = ['swiss', 'playoffs', 'top4', 'final', 'champion'];
+export const FINISH_STAGES: readonly FinishStage[] = ['groups', 'playoffs', 'top4', 'final', 'champion'];
 
 /** Where the user's run ended; null while the user is still alive. */
 export function userFinish(run: RunState): UserFinish | null {
@@ -377,11 +440,12 @@ export function userFinish(run: RunState): UserFinish | null {
   if (!t) return null;
   if (t.champion === USER_ID) return { place: '1º', label: 'Campeão', champion: true, stage: 'champion' };
   const rec = userRecord(run);
-  if (rec.swiss.status === 'eliminated') {
-    // 8 teams go out of the Swiss: three at 2-3, three at 1-3 and two at 0-3.
-    const place = rec.swiss.wins === 2 ? '9º–11º' : rec.swiss.wins === 1 ? '12º–14º' : '15º–16º';
-    const label = `Eliminado na Suíça (${rec.swiss.wins}-${rec.swiss.losses})`;
-    return { place, label, champion: false, stage: 'swiss' };
+  const g = rec.groups;
+  if (g.status === 'eliminated') {
+    // 8 teams go out of the groups: the four 3rd places (decider losers) and the four 4th places.
+    const place = g.place === 3 ? '9º–12º' : '13º–16º';
+    const label = `Eliminado no Grupo ${g.group ?? '?'} (${g.wins}-${g.losses})`;
+    return { place, label, champion: false, stage: 'groups' };
   }
   const fatal = rec.results.find((r) => !r.won && (r.match.round.startsWith('lb-') || r.match.round === 'gf'));
   if (!fatal) return null;
@@ -461,7 +525,7 @@ export function shareText(run: RunState): string {
   const s = runSummary(run);
   const finish = s.finish;
   const head = finish?.champion ? '🏆 Campeão' : finish ? `${finish.place} · ${finish.label}` : 'Em andamento';
-  const dots = (stage: 'swiss' | 'playoffs') =>
+  const dots = (stage: 'groups' | 'playoffs') =>
     s.record.results
       .filter((r) => r.match.stage === stage)
       .map((r) => (r.won ? '🟩' : '🟥'))
@@ -469,7 +533,7 @@ export function shareText(run: RunState): string {
   const lines = [
     `Road to Champions ${head}`,
     `${MODE_LABELS[s.mode]} · Força ${formatDecimal(s.strength)}`,
-    `Suíça ${s.record.swiss.wins}-${s.record.swiss.losses} ${dots('swiss')}`,
+    `Grupos ${s.record.groups.wins}-${s.record.groups.losses} ${dots('groups')}`,
   ];
   if (s.record.playoffs.wins + s.record.playoffs.losses > 0) {
     lines.push(`Playoffs ${s.record.playoffs.wins}-${s.record.playoffs.losses} ${dots('playoffs')}`);
@@ -519,6 +583,7 @@ export function parseRun(data: unknown): RunState | null {
     if (run.phase === 'tournament' || run.phase === 'done') {
       const t = run.tournament;
       if (!t || !Array.isArray(run.opponents) || !Array.isArray(t.matches)) return null;
+      if (t.version !== 2 || !t.groups || typeof t.groups !== 'object') return null;
       if (!Array.isArray(t.entrants) || t.entrants.length !== TEAM_COUNT) return null;
       for (const e of t.entrants) teamInfo(run, e.id);
       // Smoke-test the selectors the screens rely on: they throw on a broken tournament.

@@ -1,8 +1,8 @@
 import { parseRun, type RunState } from '../game/run';
 
-const KEY = 'rtc:run:v2';
-/** Keys of older save formats, removed on load (v1 = fictional sample cards). */
-const OLD_KEYS = ['rtc:run:v1'];
+const KEY = 'rtc:run:v3';
+/** Keys of older save formats, removed on load (v1 = fictional sample cards, v2 = Swiss stage). */
+const OLD_KEYS = ['rtc:run:v1', 'rtc:run:v2'];
 
 /** Saved run, or null when there is none, storage is unavailable, or the save is corrupted/outdated. */
 export function loadRun(): RunState | null {

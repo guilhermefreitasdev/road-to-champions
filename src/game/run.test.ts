@@ -15,6 +15,8 @@ import {
   beginUserVeto,
   bracket,
   cleanTeamName,
+  entrantTeam,
+  groupViews,
   coachOptions,
   createRun,
   draftOptions,
@@ -37,6 +39,7 @@ import {
   teamInfo,
   userFinish,
   userPendingMatch,
+  userGroup,
   userRecord,
   vetoScouting,
   type DraftMode,
@@ -228,28 +231,48 @@ describe('user veto', () => {
 });
 
 describe('selectors', () => {
-  it('standings, bracket and share text', () => {
+  it('standings, groups, bracket and share text', () => {
     const r = fullRun('classic', 'sel');
     const table = standings(r);
     expect(table).toHaveLength(16);
     expect(table.filter((s) => s.isUser)).toHaveLength(1);
+    const views = groupViews(r);
+    expect(views.map((v) => v.group).sort()).toEqual(['A', 'B', 'C', 'D']);
+    // The user's group comes first.
+    expect(views[0]!.hasUser).toBe(true);
+    expect(views[0]!.group).toBe(userGroup(r));
+    for (const v of views) {
+      expect(v.cells).toHaveLength(5);
+      expect(v.cells.every((c) => c.match?.result)).toBe(true);
+      expect(v.rows.map((row) => row.place)).toEqual([1, 2, 3, 4]);
+    }
     const cells = bracket(r);
     expect(cells).toHaveLength(PLAYOFF_BRACKET.length);
     expect(cells.every((c) => c.match?.result)).toBe(true);
     const text = shareText(r);
     expect(text).toMatch(/^Road to Champions /);
+    expect(text).toMatch(/\nGrupos \d-\d /);
     for (const e of r.tournament!.entrants) expect(text).not.toContain(e.name);
+    const opp = r.opponents![0]!;
+    const team = entrantTeam(r, opp);
+    expect(`${team.teamId}-${team.eventId}`).toBe(opp);
+    expect(entrantTeam(r, USER_ID).teamId).toBe(USER_ID);
   });
 
   it('parseRun discards corrupted saves', () => {
     expect(parseRun(null)).toBeNull();
     expect(parseRun({})).toBeNull();
     expect(parseRun({ version: RUN_VERSION })).toBeNull();
-    // A save from the fictional pool (v1) is discarded.
+    // Saves from the fictional pool (v1) and from the Swiss format (v2) are discarded.
     const v1 = autoDraft(createRun('classic', 'old'));
     expect(parseRun(v1)).not.toBeNull();
     expect(parseRun({ ...v1, version: 1 })).toBeNull();
+    expect(parseRun({ ...v1, version: 2 })).toBeNull();
     const r = startTournament(autoDraft(createRun('classic', 'p')), 'P');
+    // A Swiss-era tournament (no groups) is discarded even under the current run version.
+    const swissEra: Record<string, unknown> = { ...r.tournament!, version: 1 };
+    delete swissEra.groups;
+    expect(parseRun({ ...r, tournament: swissEra })).toBeNull();
     expect(parseRun({ ...r, opponents: ['nope-nope'], tournament: { ...r.tournament!, entrants: [{ id: 'nope-nope', name: 'x', seed: 1 }] } })).toBeNull();
     expect(parseRun({ ...r, draft: { ...r.draft, picks: [...r.draft.picks.slice(0, 4), { cardId: 'gone', slot: 'flex' }] } })).toBeNull();
     // A tournament without its match list would crash the hub.
@@ -263,16 +286,23 @@ describe('selectors', () => {
     expect(parseRun({ ...team, draft: { ...team.draft, phase: 'coach' } })).toBeNull();
   });
 
-  it('places Swiss eliminations by record', () => {
+  it('places group eliminations by group place', () => {
     const seen = new Map<number, string>();
-    for (let i = 0; i < 80 && seen.size < 3; i++) {
-      const r = fullRun(i % 2 ? 'classic' : 'ultimate', `swiss-out-${i}`);
+    for (let i = 0; i < 80 && seen.size < 2; i++) {
+      const r = fullRun(i % 2 ? 'classic' : 'ultimate', `groups-out-${i}`);
       const rec = userRecord(r);
-      if (rec.swiss.status === 'eliminated') seen.set(rec.swiss.wins, userFinish(r)!.place);
+      if (rec.groups.status !== 'eliminated') continue;
+      const finish = userFinish(r)!;
+      seen.set(rec.groups.place!, finish.place);
+      expect(rec.groups.losses).toBe(2);
+      expect(rec.groups.wins).toBe(rec.groups.place === 3 ? 1 : 0);
+      expect(finish.label).toBe(`Eliminado no Grupo ${rec.groups.group} (${rec.groups.wins}-2)`);
+      // Eliminated in the groups: no playoff match.
+      expect(rec.results.every((x) => x.match.stage === 'groups')).toBe(true);
     }
     expect(seen.size).toBeGreaterThan(0);
-    const expected: Record<number, string> = { 2: '9º–11º', 1: '12º–14º', 0: '15º–16º' };
-    for (const [wins, place] of seen) expect(place).toBe(expected[wins]);
+    const expected: Record<number, string> = { 3: '9º–12º', 4: '13º–16º' };
+    for (const [place, label] of seen) expect(label).toBe(expected[place]);
   });
 
   it('maps every finish to the furthest stage reached', () => {
@@ -283,9 +313,8 @@ describe('selectors', () => {
       '4º': 'top4',
       '5º–6º': 'playoffs',
       '7º–8º': 'playoffs',
-      '9º–11º': 'swiss',
-      '12º–14º': 'swiss',
-      '15º–16º': 'swiss',
+      '9º–12º': 'groups',
+      '13º–16º': 'groups',
     };
     const stages = new Set<string>();
     for (let i = 0; i < 40; i++) {

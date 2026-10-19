@@ -3,7 +3,8 @@ import { formatDecimal } from '../../game/explain';
 import {
   USER_ID,
   bracket,
-  standings,
+  entrantTeam,
+  groupViews,
   teamInfo,
   userMatches,
   userOpponent,
@@ -12,9 +13,9 @@ import {
   type RunState,
 } from '../../game/run';
 import { Bracket } from '../components/Bracket';
+import { GroupStage } from '../components/GroupStage';
 import { YouTag } from '../components/Icon';
 import { Results } from '../components/Results';
-import { Standings } from '../components/Standings';
 
 interface Props {
   run: RunState;
@@ -24,20 +25,21 @@ interface Props {
 
 export function Hub({ run, onVeto, onViewSeries }: Props) {
   const t = run.tournament!;
-  const inPlayoffs = t.phase !== 'swiss';
-  const [tab, setTab] = useState<TabKey>(inPlayoffs ? 'playoffs' : 'swiss');
+  const inPlayoffs = t.phase !== 'groups';
+  const [tab, setTab] = useState<TabKey>(inPlayoffs ? 'playoffs' : 'groups');
   const pending = userPendingMatch(run);
   const record = userRecord(run);
   const me = teamInfo(run, USER_ID);
   const nameOf = (id: string) => t.entrants.find((e) => e.id === id)?.name ?? id;
   const played = userMatches(run).filter((m) => m.result);
+  const team = (id: string) => entrantTeam(run, id);
 
   return (
     <div className="screen hub">
       <header className="screen-head">
         <h1>{me.name}</h1>
-        <p className="context" data-stage={inPlayoffs ? 'playoffs' : 'swiss'}>
-          Champions · {inPlayoffs ? 'Playoffs' : 'Fase suíça'}
+        <p className="context" data-stage={inPlayoffs ? 'playoffs' : 'groups'}>
+          Champions · {inPlayoffs ? 'Playoffs' : 'Fase de grupos'}
         </p>
         <dl className="hub-stats">
           <div>
@@ -48,10 +50,16 @@ export function Hub({ run, onVeto, onViewSeries }: Props) {
             <dt>Força</dt>
             <dd>{formatDecimal(me.strength)}</dd>
           </div>
+          {record.groups.group && (
+            <div>
+              <dt>Grupo</dt>
+              <dd>{record.groups.group}</dd>
+            </div>
+          )}
           <div>
-            <dt>Suíça</dt>
+            <dt>Grupos</dt>
             <dd>
-              {record.swiss.wins}-{record.swiss.losses}
+              {record.groups.wins}-{record.groups.losses}
             </dd>
           </div>
           {inPlayoffs && (
@@ -71,15 +79,18 @@ export function Hub({ run, onVeto, onViewSeries }: Props) {
         <section className="hub-table" aria-label="Tabela do torneio">
           <Tabs tab={tab} onChange={setTab} />
           <div role="tabpanel" id={`hub-panel-${tab}`} aria-labelledby={`hub-tab-${tab}`}>
-            {tab === 'swiss' ? (
-              <Standings rows={standings(run)} />
-            ) : inPlayoffs ? (
-              <Bracket cells={bracket(run)} nameOf={nameOf} />
+            {tab === 'groups' ? (
+              <GroupStage views={groupViews(run)} team={team} onView={onViewSeries} />
             ) : (
-              <p className="empty-state">
-                Os 8 classificados da Suíça (3 vitórias) vão para a chave de dupla eliminação. A chave aparece aqui
-                quando a Suíça terminar.
-              </p>
+              <>
+                {!inPlayoffs && (
+                  <p className="small muted bk-note">
+                    Os 2 primeiros de cada grupo vão para a chave de dupla eliminação: cada 1º enfrenta o 2º de outro
+                    grupo nas quartas. Os times aparecem aqui quando os grupos terminarem.
+                  </p>
+                )}
+                <Bracket cells={bracket(run)} team={team} onView={onViewSeries} />
+              </>
             )}
           </div>
         </section>
@@ -131,9 +142,9 @@ function NextMatch({ run, matchId, onVeto }: { run: RunState; matchId: string; o
   );
 }
 
-type TabKey = 'swiss' | 'playoffs';
+type TabKey = 'groups' | 'playoffs';
 const TABS: { key: TabKey; label: string }[] = [
-  { key: 'swiss', label: 'Suíça' },
+  { key: 'groups', label: 'Grupos' },
   { key: 'playoffs', label: 'Playoffs' },
 ];
 

@@ -1465,13 +1465,14 @@ button.big {
 }
 
 @media (min-width: 1024px) {
+  /* Next match and results side by side; the group/playoff drawings get the full width below. */
   .hub-grid {
     display: grid;
     grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
-    grid-template-rows: auto 1fr;
+    grid-template-rows: auto auto;
     grid-template-areas:
-      'next table'
-      'results table';
+      'next results'
+      'table table';
     gap: var(--sp-5);
     align-items: start;
   }
@@ -1647,104 +1648,425 @@ button.big {
   flex-wrap: nowrap;
 }
 
-.standings .user-row {
-  background: var(--accent-tint) !important;
-  font-weight: 700;
-}
-
-.standings .user-row td {
-  border-block: 1px solid rgba(255, 70, 85, 0.5);
-}
-
-.status-advanced {
-  color: var(--win);
-}
-
 .status-eliminated {
   color: var(--loss-text);
 }
 
-/* --- Bracket --- */
+/* --- Brackets --- */
+/*
+ * Group stage (GSL groups A–D) and playoff bracket, drawn like Liquipedia (see BracketCanvas.tsx): boxes are
+ * absolutely placed on a px grid and joined by an SVG of connector lines. On narrow screens the drawing
+ * scrolls sideways inside .bk-scroll, never the page.
+ */
 
-.bracket {
-  display: flex;
-  flex-direction: column;
-  gap: var(--sp-4);
-  padding-top: var(--sp-3);
-}
-
-.bracket-group h3 {
-  font-family: var(--font-display);
-  font-size: var(--fs-md);
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  color: var(--muted);
-}
-
-.bracket-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-  gap: var(--sp-2);
-}
-
-.bracket-match {
-  background: var(--surface);
-  border: 1px solid var(--line);
+.bk-scroll {
+  overflow-x: auto;
+  overflow-y: hidden;
+  max-width: 100%;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-x: contain;
+  /* Room for the 1px highlight ring of boxes on the edges. */
+  padding: 2px 2px var(--sp-2);
+  scrollbar-width: thin;
   border-radius: var(--radius);
-  padding: var(--sp-2) 10px;
+}
+
+.bk-scroll:focus-visible {
+  outline-offset: 0;
+}
+
+.bk-canvas {
+  position: relative;
+}
+
+.bk-lines {
+  position: absolute;
+  inset: 0;
+  overflow: visible;
+  fill: none;
+  stroke: var(--line-strong);
+  stroke-width: 2;
+  stroke-linejoin: round;
+  shape-rendering: crispEdges;
+}
+
+.bk-lines .is-user {
+  stroke: var(--accent);
+}
+
+.bk-head {
+  position: absolute;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 3px;
+  border-bottom: 1px solid var(--line);
+  color: var(--muted);
+  font-family: var(--font-display);
+  font-size: var(--fs-sm);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.bk-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.bk-node {
+  position: absolute;
   display: flex;
   flex-direction: column;
-  gap: var(--sp-1);
-}
-
-.bracket-match.has-user {
-  border-color: var(--accent);
-  box-shadow: 0 0 0 1px var(--accent) inset;
-}
-
-.bracket-head {
-  display: flex;
-  justify-content: space-between;
-  gap: var(--sp-2);
-}
-
-.your-match {
-  color: var(--accent);
-  font-weight: 700;
-}
-
-.bracket-team {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: var(--sp-2);
-  color: var(--muted);
-}
-
-.bracket-name {
-  display: inline-flex;
-  align-items: center;
   min-width: 0;
 }
 
-.bracket-team.win {
-  color: var(--text);
+.bk-cap {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  height: 24px;
+  color: var(--muted);
+  font-family: var(--font-display);
+  font-size: 0.8rem;
   font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  white-space: nowrap;
 }
 
-.bracket-team.user {
+.bk-yours {
+  color: var(--accent);
+}
+
+button.bk-view {
+  margin-left: auto;
+  min-height: 24px;
+  padding: 0 8px;
+  border-radius: 3px;
+  border-color: var(--line-strong);
+  background: var(--surface-2);
   color: var(--text);
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  line-height: 1;
+  text-transform: uppercase;
 }
 
-.bracket-score {
+button.bk-view:hover:not(:disabled) {
+  border-color: var(--accent);
+}
+
+.bk-box,
+.bk-slot > .bk-row {
+  background: var(--surface);
+  border: 1px solid var(--line-strong);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.bk-box {
+  height: 64px;
+}
+
+.bk-match.has-user .bk-box,
+.bk-slot.has-user > .bk-row {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 1px var(--accent);
+}
+
+.bk-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  height: 31px;
+  padding-left: 6px;
+  color: var(--text);
+  font-size: var(--fs-sm);
+  min-width: 0;
+}
+
+.bk-row + .bk-row {
+  border-top: 1px solid var(--line);
+}
+
+.bk-slot > .bk-row {
+  height: 34px;
+  padding-right: 6px;
+}
+
+.bk-row .team-logo,
+/* Initials fallback of TeamLogo (no logo image yet): a small neutral badge. */
+.bk-row .team-logo-initials,
+.group-table .team-logo-initials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 3px;
+  background: var(--surface-3);
+  color: var(--muted);
+  font-family: var(--font-display);
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 1;
+}
+
+.bk-name {
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.bk-row .you-tag {
+  flex: none;
+  margin-left: 0;
+  padding: 0 4px 0 3px;
+  font-size: 0.7rem;
+}
+
+.bk-score {
+  flex: none;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  border-left: 1px solid var(--line);
+  background: var(--surface-2);
   font-family: var(--font-display);
   font-size: var(--fs-md);
   font-weight: 800;
   font-variant-numeric: tabular-nums;
+}
+
+/* Played: the winner's row is bold with a tinted score; the loser's row dims. Weight carries it, not color alone. */
+.bk-row.is-win {
+  font-weight: 700;
+}
+
+.bk-row.is-win .bk-score {
+  background: var(--win-tint);
+  color: var(--win);
+}
+
+.bk-row.is-loss {
+  color: var(--muted);
+}
+
+.bk-row.is-loss .team-logo {
+  opacity: 0.7;
+}
+
+.bk-row.is-tbd {
+  color: var(--muted);
+  font-style: italic;
+  padding-right: 6px;
+}
+
+.bk-row.is-user {
+  background: var(--accent-tint);
+}
+
+.bk-check {
+  flex: none;
+  display: inline-flex;
+  color: var(--win);
+}
+
+.bk-hint {
+  margin: var(--sp-2) 0 var(--sp-1);
+}
+
+.group-stage .bk-hint {
+  margin: 0;
+}
+
+.bk-note {
+  margin: var(--sp-3) 0 0;
+}
+
+.playoff-bracket {
+  padding-top: var(--sp-3);
+}
+
+/* Group stage: a switcher + one group on phones; every group in a 2×2 grid on desktop. */
+.group-stage {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+  padding-top: var(--sp-3);
+}
+
+.group-switch {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--sp-1);
+}
+
+button.group-switch-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 6px 2px;
+  white-space: nowrap;
+  font-family: var(--font-display);
+  font-size: var(--fs-base);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--muted);
+  background: var(--surface);
+}
+
+button.group-switch-btn[aria-pressed='true'] {
+  color: var(--text);
+  border-color: var(--accent);
+  box-shadow: inset 0 -3px 0 var(--accent);
+}
+
+button.group-switch-btn .icon {
+  color: var(--accent);
+}
+
+.groups-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--sp-4);
+}
+
+.group-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+  min-width: 0;
+  padding: var(--sp-3);
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+}
+
+.group-card.has-user {
+  border-color: rgba(255, 70, 85, 0.5);
+}
+
+.group-card:not(.is-selected) {
+  display: none;
+}
+
+.group-title {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: var(--fs-lg);
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+/* Fixed layout: a long name (up to 24 chars + "você") ellipsizes instead of widening the page. */
+.group-table {
+  table-layout: fixed;
+}
+
+.group-table th,
+.group-table td {
+  padding: 5px 6px;
+}
+
+.group-table th:first-child {
+  width: 34px;
+}
+
+.group-table th:nth-child(3) {
+  width: 46px;
+}
+
+.group-table th:nth-child(4) {
+  width: 120px;
+}
+
+.group-table th:nth-child(2),
+.group-table td:nth-child(2) {
+  text-align: left;
+  overflow: hidden;
+}
+
+.group-table td:first-child {
+  font-family: var(--font-display);
+  font-weight: 800;
+}
+
+.group-table .team-cell {
+  display: flex;
+  gap: 6px;
+  max-width: 100%;
+}
+
+.group-table .team-cell-name {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.group-table .you-tag {
+  margin-left: 0;
+}
+
+.group-table .user-row {
+  background: var(--accent-tint) !important;
+  font-weight: 700;
+}
+
+.group-table .user-row td {
+  border-block: 1px solid rgba(255, 70, 85, 0.5);
+}
+
+.status-qualified {
+  color: var(--win);
+}
+
+@media (max-width: 479px) {
+  .group-table th:nth-child(4) {
+    width: 34px;
+  }
+
+  .group-table .status-text {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+  }
+}
+
+@media (min-width: 1024px) {
+  .group-switch,
+  .bk-hint {
+    display: none;
+  }
+
+  .group-card:not(.is-selected) {
+    display: flex;
+  }
+
+  .groups-grid {
+    grid-template-columns: repeat(auto-fit, minmax(560px, 1fr));
+  }
 }
 
 /* --- Veto --- */
@@ -2354,11 +2676,6 @@ td:first-child {
   text-align: left;
 }
 
-.standings th:nth-child(2),
-.standings td:nth-child(2) {
-  text-align: left;
-}
-
 th {
   color: var(--muted);
   font-weight: 600;
@@ -2369,11 +2686,6 @@ th {
 
 tbody tr:nth-child(odd) {
   background: rgba(255, 255, 255, 0.03);
-}
-
-.standings th,
-.standings td {
-  padding: 7px 6px;
 }
 
 abbr[title] {

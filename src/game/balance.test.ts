@@ -10,7 +10,9 @@
  * - top-decile drafted team: title 25–45%;
  * - bottom-decile drafted team: playoffs ≤ 35%.
  * Real pool (VLR + Liquipedia), with CHEMISTRY_CAP 2, FORM_SWING 10 and at most 2 elite rosters per field
- * (run.ts), BT=12: bottom 30% playoffs; median 65% playoffs, 7% title; top decile 42% title. The median title
+ * (run.ts), GSL groups + double-elimination playoffs, BT=30: bottom 31% playoffs; median 75% playoffs, 6% title;
+ * top decile 43% title (the Swiss format gave 30% / 65% / 7% / 42%; likely because Bo3 group games favour the stronger side
+ * more than the Swiss Bo1 rounds did). "Playoffs" = qualified from the group (top 2). The median title
  * sits just under 8%: the drafted spread is narrow (p10 79 → p90 88), so more upsets would push the bottom
  * decile past 35% before the median gets more titles. Closing it needs a draft change, not an engine lever.
  */
@@ -95,7 +97,7 @@ function playChampions(drafted: RunState, seed: string): { playoffs: boolean; ti
     }
     r = playUserMatch(r);
   }
-  return { playoffs: userRecord(r).swiss.status === 'advanced', title: r.tournament!.champion === USER_ID };
+  return { playoffs: userRecord(r).groups.status === 'qualified', title: r.tournament!.champion === USER_ID };
 }
 
 interface Group {

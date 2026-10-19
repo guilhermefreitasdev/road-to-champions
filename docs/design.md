@@ -6,7 +6,7 @@ jogadores históricos (card = jogador + evento, ex.: "aspas @ LOUD, Champions 20
 ## Modos
 | Modo | Resumo |
 |---|---|
-| Draft (MVP) | Roleta time+evento → escolhe 1 jogador → slot de função (DUE/INI/CON/SEN/FLEX). 5 picks + coach, 3 rerolls. Pick'Em → Suíça (16 times) → playoffs dupla eliminação, final MD5 |
+| Draft (MVP) | Roleta time+evento → escolhe 1 jogador → slot de função (DUE/INI/CON/SEN/FLEX). 5 picks + coach, 3 rerolls. Champions de 16 times: 4 grupos GSL (A–D) → playoffs dupla eliminação, final MD5 (ver "Formato do Champions") |
 | Ultimate Draft | 5 opções fixas por pick (seed por run), sem reroll |
 | Diário / Valdle | Hub de minijogos diários: Cena Pro + Jogo (detalhado abaixo) |
 | Carreira | Org em liga regional (Americas/EMEA/Pacific/China): Kickoff → Stage 1 → Masters → Stage 2 → Champions. Transferências, patrocínio, base (Challengers), aura Rising→Star→Legend→GOAT |
@@ -36,6 +36,17 @@ Um card por linha jogador-evento do VLR, só para os 5 titulares (os 5 com mais 
 - **Conforto de mapa da IA**: só dos vetos guardados daquele evento: +1 por mapa escolhido, −1 por mapa banido, limitado a ±2. Elenco sem veto guardado não tem conforto.
 - **Pool do veto**: o pool do evento mais recente (pela data de início) com exatamente 7 mapas; hoje é o do Champions 2026 (Abyss, Ascent, Haven, Lotus, Split, Summit, Sunset). Atualiza sozinho quando um evento novo entra.
 - **Campo do Champions**: 15 adversários de times diferentes (um elenco por time, sorteado), sem nenhum jogador do usuário, e no máximo 2 elencos "de elite" (os 20% mais fortes do pool) por campo: um Champions tem poucos favoritos.
+
+## Formato do Champions (`src/engine/tournament.ts`)
+Igual ao VCT Champions real: 16 times, fase de grupos e playoffs. Tudo MD3, menos final da chave inferior e grande final (MD5). 34 partidas no total (20 nos grupos + 14 nos playoffs).
+- **Seeds**: os 16 times são ordenados pela força (o seu time incluso); seed 1 = mais forte.
+- **Sorteio dos grupos (cobra por pote)**: pote 1 (seeds 1–4) vai para A, B, C, D; pote 2 (5–8) para D, C, B, A; pote 3 (9–12) para A, B, C, D; pote 4 (13–16) para D, C, B, A. Resultado: A = 1, 8, 9, 16 · B = 2, 7, 10, 15 · C = 3, 6, 11, 14 · D = 4, 5, 12, 13 (todo grupo soma 34). Determinístico, sem sorteio aleatório.
+- **Grupo GSL (dupla eliminação, 5 partidas)**: Abertura 1 (seed 1 × 4 do grupo) e Abertura 2 (2 × 3) → os vencedores jogam a partida dos Vencedores (quem ganha é o 1º, classificado) e os perdedores a de Eliminação (quem perde é o 4º, eliminado) → a Decisiva junta o perdedor dos Vencedores e o vencedor da Eliminação (quem ganha é o 2º, classificado; quem perde, o 3º). Ninguém cai antes de 2 derrotas. Rótulos: "Grupo A · Abertura", "· Vencedores", "· Eliminação", "· Decisiva".
+- **Ordem dos jogos**: todas as aberturas (A, B, C, D), depois Vencedores e Eliminação, depois as decisivas; os playoffs só começam quando os 4 grupos terminam.
+- **Playoffs (8 times, dupla eliminação sem reset)**: cada 1º enfrenta o 2º de outro grupo nas quartas, e cada metade da chave tem um time de cada grupo: metade 1 = A1 × B2 e C1 × D2; metade 2 = B1 × A2 e D1 × C2. Times do mesmo grupo só se reencontram na final superior, na chave inferior a partir da rodada 2 ou na grande final. A rodada 2 da inferior cruza as metades para não repetir as quartas.
+- **Colocação de quem cai nos grupos**: 3º do grupo = 9º–12º; 4º = 13º–16º. Nos playoffs: 7º–8º (inferior R1), 5º–6º (R2), 4º (R3), 3º (final inferior), 2º (grande final).
+- **Na tela**: aba "Grupos" com cada grupo desenhado como chave GSL (Abertura → Vencedores → Classificado ✔ em cima, Eliminação → Decisiva → Classificado ✔ embaixo) e a tabela 1º–4º; no celular um grupo por vez (começa no seu), no desktop os quatro em 2×2 com o seu primeiro. Aba "Playoffs" com a chave completa (superior em cima, inferior embaixo, grande final à direita), linhas de ligação, placares e MD3/MD5; vagas vazias dizem de onde vem o time ("1º Grupo A", "Vencedor Quartas 1"). No celular a chave rola para o lado dentro da caixa, nunca a página. Para leitor de tela cada partida tem um resumo falado e "Ver série" é alcançável pelo teclado.
+- Saves do formato antigo (Suíça) são descartados (RunState v3, chave `rtc:run:v3`).
 
 ## Modo Diário (inspirado em valdle.gg / Loldle)
 
@@ -100,7 +111,8 @@ Tempo real: ver docs/ideias-futuras.md (em espera).
 ## Balanceamento (estado atual, com dados reais)
 Medido em `src/game/balance.test.ts` (`BALANCE_REPORT=1 BT=12 npx vitest run src/game/balance --silent=false` imprime os números com 12 Champions por time).
 - Mapa: favorito com +10 de força vence ~75%; com +20, ~94%.
-- Draft clássico (drafter automático que só olha OVR): p10/p50/p90 da força 79,3 / 83,2 / 88,4. Mediano: ~65% playoffs, ~7% título; top 10%: ~42% título; 10% piores: ~30% playoffs.
-- Ultimate: mediano ~70% playoffs / ~3% título; top 10% ~40% título.
+- Draft clássico (drafter automático que só olha OVR): p10/p50/p90 da força 79,3 / 83,2 / 88,4. Mediano: ~75% playoffs, ~6% título; top 10%: ~43% título; 10% piores: ~31% playoffs (BT=30).
+- Ultimate (BT=12): mediano ~67% playoffs / ~1% título; top 10% ~25% título.
+- Troca da Suíça pelos grupos GSL (sem mexer no motor): o mediano clássico subiu de ~65% para ~75% de playoffs (provavelmente porque todo jogo de grupo é MD3, enquanto a Suíça tinha MD1 nas primeiras rodadas, com mais zebra); título 7% → 6%, top 10% 42% → 43%, 10% piores 30% → 31%. Como o mediano ficou no limite da meta (55–75%), as constantes do motor não mudaram.
 - Alavancas usadas na troca para os dados reais: teto de química 3 → 2, forma por mapa 8 → 10 e no máximo 2 elencos de elite por campo. Antes do ajuste (dados reais, alavancas antigas): mediano 53% playoffs / 0% título, top 23% título, 10% piores 17% playoffs.
 - Pendente: título do mediano um pouco abaixo da meta (8–20%). A força draftada varia pouco (p10→p90 = 9 pontos), então mais zebra levaria os 10% piores acima de 35% de playoffs antes de dar mais títulos ao mediano. Fechar isso pede mexer no draft (ex.: mais rerolls ou roleta ponderada), não no motor.

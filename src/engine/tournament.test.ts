@@ -1,17 +1,23 @@
 import { describe, expect, it } from 'vitest';
 import { createRng } from './rng';
 import {
+  GROUP_KEYS,
+  GROUP_STAGE,
   PLAYOFF_BRACKET,
   createTournament,
+  drawGroupIndex,
+  groupMatches,
+  groupOf,
+  groupStandings,
   matchLoser,
   matchWinner,
-  pairSwissGroup,
   pendingMatches,
   playoffMatches,
   reportResult,
+  resolveSource,
   runTournament,
-  swissStandings,
   type Entrant,
+  type GroupKey,
   type MatchResult,
   type TMatch,
   type TournamentState,
@@ -49,20 +55,51 @@ function deepFreeze<T>(value: T): T {
   return value;
 }
 
-const swissOf = (s: TournamentState) => s.matches.filter((m) => m.stage === 'swiss');
+function runUntil(
+  state: TournamentState,
+  play: (m: TMatch) => MatchResult,
+  stop: (s: TournamentState) => boolean,
+): TournamentState {
+  let s = state;
+  while (!stop(s)) {
+    const m = pendingMatches(s)[0];
+    if (!m) throw new Error('stuck');
+    s = reportResult(s, m.id, play(m));
+  }
+  return s;
+}
+
+const pair = (m: TMatch) => [m.a, m.b].sort().join();
 
 describe('createTournament', () => {
-  it('pairs round 1 as 1v16, 2v15 … 8v9, all Bo1', () => {
+  it('draws the groups as a snake by seed: A 1-8-9-16, B 2-7-10-15, C 3-6-11-14, D 4-5-12-13', () => {
     const state = createTournament([...ENTRANTS].reverse());
+    expect(state.phase).toBe('groups');
+    expect(state.groups).toEqual({
+      A: ['t1', 't8', 't9', 't16'],
+      B: ['t2', 't7', 't10', 't15'],
+      C: ['t3', 't6', 't11', 't14'],
+      D: ['t4', 't5', 't12', 't13'],
+    });
+    expect(Array.from({ length: 16 }, (_, i) => drawGroupIndex(i + 1))).toEqual([
+      0, 1, 2, 3, 3, 2, 1, 0, 0, 1, 2, 3, 3, 2, 1, 0,
+    ]);
+    for (const g of GROUP_KEYS) expect(state.groups[g].reduce((s, id) => s + seedOf(id), 0)).toBe(34);
+  });
+
+  it('opens every group with seed 1 v 4 and 2 v 3, all Bo3, labelled in pt-BR', () => {
+    const state = createTournament(ENTRANTS);
     const pending = pendingMatches(state);
-    expect(state.phase).toBe('swiss');
-    expect(pending.map((m) => [m.a, m.b])).toEqual(
-      Array.from({ length: 8 }, (_, i) => [`t${i + 1}`, `t${16 - i}`]),
-    );
+    expect(pending.map((m) => m.id)).toEqual(GROUP_KEYS.flatMap((g) => [`${g}-opening-1`, `${g}-opening-2`]));
+    expect(pending.slice(0, 2).map((m) => [m.a, m.b])).toEqual([
+      ['t1', 't16'],
+      ['t8', 't9'],
+    ]);
     for (const m of pending) {
-      expect(m.bestOf).toBe(1);
-      expect(m.round).toBe('swiss-r1');
-      expect(m.label).toBe('Suíça · Rodada 1 (0-0)');
+      expect(m.stage).toBe('groups');
+      expect(m.round).toBe('opening');
+      expect(m.bestOf).toBe(3);
+      expect(m.label).toBe(`Grupo ${m.group} · Abertura`);
     }
   });
 
@@ -78,23 +115,24 @@ describe('reportResult', () => {
   const first = pendingMatches(state)[0]!;
 
   it('rejects unknown and finished matches', () => {
-    expect(() => reportResult(state, 'nope', { winner: 0, score: [1, 0] })).toThrow(/Unknown match/);
-    const done = reportResult(state, first.id, { winner: 0, score: [1, 0] });
-    expect(() => reportResult(done, first.id, { winner: 0, score: [1, 0] })).toThrow(/already finished/);
+    expect(() => reportResult(state, 'nope', { winner: 0, score: [2, 0] })).toThrow(/Unknown match/);
+    const done = reportResult(state, first.id, { winner: 0, score: [2, 0] });
+    expect(() => reportResult(done, first.id, { winner: 0, score: [2, 0] })).toThrow(/already finished/);
   });
 
   it('rejects scores that do not fit the best-of and winner', () => {
     for (const score of [
-      [2, 0],
-      [0, 1],
-      [1, 1],
-      [0, 0],
+      [1, 0],
+      [0, 2],
+      [2, 2],
+      [3, 0],
       [-1, 0],
       [1.5, 0],
     ] as [number, number][]) {
       expect(() => reportResult(state, first.id, { winner: 0, score })).toThrow();
     }
-    expect(() => reportResult(state, first.id, { winner: 2 as 0, score: [1, 0] })).toThrow();
+    expect(() => reportResult(state, first.id, { winner: 2 as 0, score: [2, 0] })).toThrow();
+    expect(() => reportResult(state, first.id, { winner: 1, score: [1, 2] })).not.toThrow();
   });
 
   it('does not mutate the input state', () => {
@@ -103,78 +141,60 @@ describe('reportResult', () => {
     let s: TournamentState = frozen;
     for (const m of pendingMatches(frozen)) s = reportResult(s, m.id, favouriteWins(m));
     expect(JSON.stringify(frozen)).toBe(before);
-    expect(pendingMatches(s)).toHaveLength(8);
+    // Every group now has its winners' and elimination match.
+    expect(pendingMatches(s).map((m) => m.round)).toEqual(GROUP_KEYS.flatMap(() => ['winners', 'elimination']));
   });
 
-  it('validates Bo3 and Bo5 scores', () => {
-    const s = runUntil(createTournament(ENTRANTS), favouriteWins, (st) => st.phase === 'playoffs');
-    const qf = pendingMatches(s)[0]!;
-    expect(qf.bestOf).toBe(3);
-    expect(() => reportResult(s, qf.id, { winner: 0, score: [1, 0] })).toThrow();
-    expect(() => reportResult(s, qf.id, { winner: 0, score: [2, 2] })).toThrow();
-    expect(() => reportResult(s, qf.id, { winner: 1, score: [2, 1] })).toThrow();
-    expect(() => reportResult(s, qf.id, { winner: 1, score: [1, 2] })).not.toThrow();
-  });
-});
-
-function runUntil(
-  state: TournamentState,
-  play: (m: TMatch) => MatchResult,
-  stop: (s: TournamentState) => boolean,
-): TournamentState {
-  let s = state;
-  while (!stop(s)) {
-    const m = pendingMatches(s)[0];
-    if (!m) throw new Error('stuck');
-    s = reportResult(s, m.id, play(m));
-  }
-  return s;
-}
-
-describe('swissStandings', () => {
-  it('computes Buchholz from played opponents', () => {
-    const after1 = runUntil(createTournament(ENTRANTS), favouriteWins, (s) => swissOf(s).length > 8);
-    const table = swissStandings(after1);
-    expect(table.slice(0, 8).map((r) => r.id)).toEqual(ENTRANTS.slice(0, 8).map((e) => e.id));
-    for (const row of table) expect(row.buchholz).toBe(row.wins === 1 ? -1 : 1);
-  });
-
-  it('pairs later rounds within the same record, higher Buchholz/seed vs lower', () => {
-    const s = runUntil(createTournament(ENTRANTS), favouriteWins, (st) => swissOf(st).length > 8);
-    const r2 = pendingMatches(s);
-    // All 1-0 teams have Buchholz −1, so they rank by seed: 1v8, 2v7, 3v6, 4v5.
-    expect(r2.slice(0, 4).map((m) => [m.a, m.b])).toEqual([
-      ['t1', 't8'],
-      ['t2', 't7'],
-      ['t3', 't6'],
-      ['t4', 't5'],
-    ]);
-    expect(r2[0]!.label).toBe('Suíça · Rodada 2 (1-0)');
-    expect(r2[4]!.label).toBe('Suíça · Rodada 2 (0-1)');
+  it('validates Bo5 scores in the lower final and grand final', () => {
+    const s = runUntil(createTournament(ENTRANTS), favouriteWins, (st) => pendingMatches(st)[0]?.round === 'lb-final');
+    const lbf = pendingMatches(s)[0]!;
+    expect(lbf.bestOf).toBe(5);
+    expect(() => reportResult(s, lbf.id, { winner: 0, score: [2, 0] })).toThrow();
+    expect(() => reportResult(s, lbf.id, { winner: 0, score: [3, 3] })).toThrow();
+    expect(() => reportResult(s, lbf.id, { winner: 1, score: [2, 3] })).not.toThrow();
   });
 });
 
-describe('pairSwissGroup', () => {
-  it('pairs top vs bottom when there are no rematches', () => {
-    expect(pairSwissGroup(['a', 'b', 'c', 'd'], () => false)).toEqual([
-      ['a', 'd'],
-      ['b', 'c'],
+describe('group stage', () => {
+  it('builds the GSL bracket: winners from the openers, decider from the winners loser and elimination winner', () => {
+    // Upsets in group A: t16 beats t1, t9 beats t8; then t9 wins the winners' match and t1 the elimination.
+    const winners: Record<string, string> = {
+      'A-opening-1': 't16',
+      'A-opening-2': 't9',
+      'A-winners': 't9',
+      'A-elimination': 't1',
+      'A-decider': 't1',
+    };
+    const play = (m: TMatch) => {
+      const w = winners[m.id];
+      return w ? resultFor(m, m.a === w ? 0 : 1, 1) : favouriteWins(m);
+    };
+    const played = (st: TournamentState, id: string) => !!st.matches.find((m) => m.id === id)?.result;
+    let s = runUntil(createTournament(ENTRANTS), play, (st) => played(st, 'A-winners') && played(st, 'A-elimination'));
+    const byId = (id: string) => s.matches.find((m) => m.id === id)!;
+    expect([byId('A-winners').a, byId('A-winners').b]).toEqual(['t16', 't9']);
+    expect([byId('A-elimination').a, byId('A-elimination').b]).toEqual(['t1', 't8']);
+    expect(byId('A-winners').label).toBe('Grupo A · Vencedores');
+    expect(byId('A-elimination').label).toBe('Grupo A · Eliminação');
+    const decider = byId('A-decider');
+    expect(decider.label).toBe('Grupo A · Decisiva');
+    expect([decider.a, decider.b]).toEqual(['t16', 't1']);
+    s = runUntil(s, play, (st) => played(st, 'A-decider'));
+    const table = groupStandings(s).filter((r) => r.group === 'A');
+    expect(table.map((r) => [r.id, r.place, r.status, `${r.wins}-${r.losses}`])).toEqual([
+      ['t9', 1, 'qualified', '2-0'],
+      ['t1', 2, 'qualified', '2-1'],
+      ['t16', 3, 'eliminated', '1-2'],
+      ['t8', 4, 'eliminated', '0-2'],
     ]);
   });
 
-  it('avoids rematches when possible', () => {
-    const played = (x: string, y: string) => [x, y].sort().join() === 'a,d';
-    expect(pairSwissGroup(['a', 'b', 'c', 'd'], played)).toEqual([
-      ['a', 'c'],
-      ['b', 'd'],
-    ]);
-  });
-
-  it('accepts the fewest rematches when they are unavoidable', () => {
-    // a has played everyone.
-    const played = (x: string, y: string) => x === 'a' || y === 'a';
-    const pairs = pairSwissGroup(['a', 'b', 'c', 'd'], played);
-    expect(pairs.filter(([x, y]) => played(x, y))).toHaveLength(1);
+  it('keeps alive teams without a place, ordered by record then group seed', () => {
+    const s = runUntil(createTournament(ENTRANTS), favouriteWins, (st) => groupMatches(st).length > 8);
+    const a = groupStandings(s).filter((r) => r.group === 'A');
+    expect(a.map((r) => r.id)).toEqual(['t1', 't8', 't9', 't16']);
+    expect(a.every((r) => r.status === 'alive' && r.place === undefined)).toBe(true);
+    expect(groupOf(s, 't13')).toBe('D');
   });
 });
 
@@ -182,110 +202,113 @@ describe('pairSwissGroup', () => {
 function checkTournament(state: TournamentState) {
   expect(state.phase).toBe('done');
   expect(pendingMatches(state)).toHaveLength(0);
+  expect(state.matches).toHaveLength(34);
 
-  // Swiss: records, match counts, rematches, Bo3 placement.
-  const swiss = swissOf(state);
-  const record = new Map(ENTRANTS.map((e) => [e.id, { w: 0, l: 0 }]));
-  const met = new Set<string>();
-  let rematches = 0;
-  for (const m of swiss) {
-    const ra = record.get(m.a)!;
-    const rb = record.get(m.b)!;
-    expect([ra.w, ra.l]).toEqual([rb.w, rb.l]);
-    const decisive = ra.w === 2 || ra.l === 2;
-    expect(m.bestOf).toBe(decisive ? 3 : 1);
-    expect(Number(m.round.slice('swiss-r'.length))).toBe(ra.w + ra.l + 1);
-    const key = [m.a, m.b].sort().join();
-    if (met.has(key)) rematches++;
-    met.add(key);
-    const winner = matchWinner(m)!;
-    for (const id of [m.a, m.b]) {
-      const r = record.get(id)!;
-      if (id === winner) r.w++;
-      else r.l++;
+  // Groups: 5 Bo3 matches each, only inside the group, no rematch before the decider, 2 losses to go out.
+  const losses = new Map<string, number>();
+  for (const g of GROUP_KEYS) {
+    const ms = groupMatches(state, g);
+    expect(ms).toHaveLength(5);
+    expect(ms.map((m) => m.round).sort()).toEqual(['decider', 'elimination', 'opening', 'opening', 'winners']);
+    for (const m of ms) {
+      expect(m.bestOf).toBe(3);
+      expect(state.groups[g]).toContain(m.a);
+      expect(state.groups[g]).toContain(m.b);
+      for (const id of [m.a, m.b]) expect(losses.get(id) ?? 0, `${id} played after 2 losses`).toBeLessThan(2);
+      const loser = matchLoser(m)!;
+      losses.set(loser, (losses.get(loser) ?? 0) + 1);
+    }
+    // Every team plays 2 or 3 group matches.
+    for (const id of state.groups[g]) {
+      const n = ms.filter((m) => m.a === id || m.b === id).length;
+      expect(n === 2 || n === 3).toBe(true);
     }
   }
-  const finals = [...record.values()];
-  for (const r of finals) {
-    expect(r.w === 3 || r.l === 3).toBe(true);
-    expect(r.w + r.l).toBeLessThanOrEqual(5);
+  const table = groupStandings(state);
+  expect(table).toHaveLength(16);
+  for (const g of GROUP_KEYS) {
+    const rows = table.filter((r) => r.group === g);
+    expect(rows.map((r) => r.place)).toEqual([1, 2, 3, 4]);
+    expect(rows.map((r) => r.status)).toEqual(['qualified', 'qualified', 'eliminated', 'eliminated']);
+    expect([rows[0]!.wins, rows[0]!.losses]).toEqual([2, 0]);
+    expect(rows[1]!.wins).toBe(2);
+    expect(rows[3]!.losses).toBe(2);
+    // Eliminated teams have exactly 2 losses; qualified teams at most 1.
+    for (const r of rows) expect(r.losses).toBe(r.status === 'eliminated' ? 2 : r.place === 1 ? 0 : 1);
   }
-  expect(finals.filter((r) => r.w === 3)).toHaveLength(8);
-  expect(finals.filter((r) => r.l === 3)).toHaveLength(8);
-  expect(swiss.length).toBe(33); // 8 + 8 + 8 + 6 + 3
 
-  const table = swissStandings(state);
-  expect(table.filter((r) => r.status === 'advanced')).toHaveLength(8);
-  expect(table.filter((r) => r.status === 'eliminated')).toHaveLength(8);
-
-  // Playoff seeding: 3-0, 3-1, 3-2; then Buchholz; then seed.
-  const expectedSeeds = table
-    .filter((r) => r.wins === 3)
-    .sort((x, y) => x.losses - y.losses || y.buchholz - x.buchholz || seedOf(x.id) - seedOf(y.id))
-    .map((r) => r.id);
-  expect(state.playoffSeeds).toEqual(expectedSeeds);
-  const seeds = state.playoffSeeds!;
+  // Playoffs: group winners face another group's runner-up; each half holds one team of every group.
   const po = playoffMatches(state);
   expect(po).toHaveLength(14);
-  expect(po.filter((m) => m.round === 'ub-qf').map((m) => [m.a, m.b])).toEqual(
-    [
-      [1, 8],
-      [4, 5],
-      [2, 7],
-      [3, 6],
-    ].map(([a, b]) => [seeds[a! - 1], seeds[b! - 1]]),
-  );
+  const place = (g: GroupKey, p: number) => table.find((r) => r.group === g && r.place === p)!.id;
+  expect(po.filter((m) => m.round === 'ub-qf').map((m) => [m.a, m.b])).toEqual([
+    [place('A', 1), place('B', 2)],
+    [place('C', 1), place('D', 2)],
+    [place('B', 1), place('A', 2)],
+    [place('D', 1), place('C', 2)],
+  ]);
+  const halves = [
+    ['ub-qf-1', 'ub-qf-2'],
+    ['ub-qf-3', 'ub-qf-4'],
+  ].map((ids) => po.filter((m) => ids.includes(m.id)).flatMap((m) => [m.a, m.b]));
+  for (const half of halves) expect(half.map((id) => groupOf(state, id)).sort()).toEqual(['A', 'B', 'C', 'D']);
+  for (const m of po.filter((x) => x.round === 'ub-qf' || x.round === 'ub-sf' || x.round === 'lb-r1')) {
+    expect(groupOf(state, m.a), m.id).not.toBe(groupOf(state, m.b));
+  }
   for (const m of po) expect(m.bestOf).toBe(m.round === 'gf' || m.round === 'lb-final' ? 5 : 3);
 
   // Double elimination: losses only end a run on the 2nd loss (or the grand final).
-  const losses = new Map<string, number>();
-  const lastMatch = new Map<string, TMatch>();
+  const poLosses = new Map<string, number>();
   for (const m of po) {
-    expect(losses.get(m.a) ?? 0).toBeLessThan(2);
-    expect(losses.get(m.b) ?? 0).toBeLessThan(2);
+    expect(poLosses.get(m.a) ?? 0).toBeLessThan(2);
+    expect(poLosses.get(m.b) ?? 0).toBeLessThan(2);
     const loser = matchLoser(m)!;
-    losses.set(loser, (losses.get(loser) ?? 0) + 1);
-    lastMatch.set(m.a, m);
-    lastMatch.set(m.b, m);
+    poLosses.set(loser, (poLosses.get(loser) ?? 0) + 1);
   }
   const gf = po.find((m) => m.id === 'gf')!;
   expect(state.champion).toBe(matchWinner(gf));
-  for (const id of seeds) {
-    if (id === state.champion) {
-      expect(losses.get(id) ?? 0).toBeLessThanOrEqual(1);
-    } else if (id === matchLoser(gf)) {
-      expect(losses.get(id) ?? 0).toBeGreaterThanOrEqual(1);
-    } else {
-      expect(losses.get(id)).toBe(2);
-    }
+  const qualified = table.filter((r) => r.status === 'qualified').map((r) => r.id);
+  expect(new Set(po.flatMap((m) => [m.a, m.b]))).toEqual(new Set(qualified));
+  for (const id of qualified) {
+    if (id === state.champion) expect(poLosses.get(id) ?? 0).toBeLessThanOrEqual(1);
+    else if (id === matchLoser(gf)) expect(poLosses.get(id) ?? 0).toBeGreaterThanOrEqual(1);
+    else expect(poLosses.get(id)).toBe(2);
   }
   // Lower round 2 never repeats a quarter-final.
-  for (const m of po.filter((x) => x.round === 'lb-r2')) {
-    const qf = po.filter((x) => x.round === 'ub-qf');
-    expect(qf.some((q) => [q.a, q.b].sort().join() === [m.a, m.b].sort().join())).toBe(false);
-  }
-  return { rematches };
+  const qf = po.filter((x) => x.round === 'ub-qf');
+  for (const m of po.filter((x) => x.round === 'lb-r2')) expect(qf.some((q) => pair(q) === pair(m))).toBe(false);
 }
 
 describe('runTournament', () => {
   it('runs a full tournament where favourites always win', () => {
     const state = runTournament(createTournament(ENTRANTS), favouriteWins);
-    const { rematches } = checkTournament(state);
-    expect(rematches).toBe(0);
+    checkTournament(state);
     expect(state.champion).toBe('t1');
-    // Both 3-0 teams take the top two seeds (order by Buchholz), so they can only meet late.
-    expect(state.playoffSeeds!.slice(0, 2).sort()).toEqual(['t1', 't2']);
+    const winners = groupStandings(state).filter((r) => r.place === 1).map((r) => r.id);
+    expect(winners).toEqual(['t1', 't2', 't3', 't4']);
+    // t1 (A) and t2 (B) start in opposite halves, so they meet in the upper final and the grand final.
     const gf = playoffMatches(state).find((m) => m.round === 'gf')!;
     expect([gf.a, gf.b]).toEqual(['t1', 't2']);
     expect(gf.label).toBe('Grande final');
   });
 
-  it('holds every invariant across many random tournaments, with no Swiss rematches', () => {
-    for (let seed = 0; seed < 300; seed++) {
-      const state = runTournament(createTournament(ENTRANTS), randomPlay(seed));
-      const { rematches } = checkTournament(state);
-      expect(rematches, `seed ${seed}`).toBe(0);
-    }
+  it('schedules all openers first, then winners/elimination, then deciders, then the playoffs', () => {
+    const state = runTournament(createTournament(ENTRANTS), randomPlay(7));
+    const order = state.matches.map((m) => m.round);
+    const rank = (r: string) =>
+      r === 'opening' ? 0 : r === 'winners' || r === 'elimination' ? 1 : r === 'decider' ? 2 : 3;
+    expect(order.map(rank)).toEqual([...order.map(rank)].sort((a, b) => a - b));
+    expect(GROUP_STAGE).toHaveLength(20);
+  });
+
+  it('holds every invariant across many random tournaments', () => {
+    for (let seed = 0; seed < 300; seed++) checkTournament(runTournament(createTournament(ENTRANTS), randomPlay(seed)));
+  });
+
+  it('is deterministic', () => {
+    const a = runTournament(createTournament(ENTRANTS), randomPlay(3));
+    const b = runTournament(createTournament(ENTRANTS), randomPlay(3));
+    expect(JSON.stringify(a)).toBe(JSON.stringify(b));
   });
 
   it('survives a JSON round-trip after every result', () => {
@@ -302,7 +325,9 @@ describe('runTournament', () => {
 
   it('only exposes playoff matches whose teams are known, following the bracket skeleton', () => {
     const s = runUntil(createTournament(ENTRANTS), favouriteWins, (st) => st.phase === 'playoffs');
+    expect(groupMatches(s).every((m) => m.result)).toBe(true);
     expect(pendingMatches(s).map((m) => m.id)).toEqual(['ub-qf-1', 'ub-qf-2', 'ub-qf-3', 'ub-qf-4']);
+    expect(resolveSource(s, { group: 'C', place: 2 })).toBe('t6');
     expect(PLAYOFF_BRACKET).toHaveLength(14);
     const done = runTournament(s, favouriteWins);
     expect(
@@ -311,5 +336,11 @@ describe('runTournament', () => {
         .sort(),
     ).toEqual(PLAYOFF_BRACKET.map((b) => b.id).sort());
     expect(() => reportResult(done, 'gf', { winner: 0, score: [3, 0] })).toThrow(/already finished/);
+  });
+
+  it('creates the quarter-finals only when every group is finished', () => {
+    const s = runUntil(createTournament(ENTRANTS), favouriteWins, (st) => groupMatches(st).filter((m) => m.result).length === 19);
+    expect(s.phase).toBe('groups');
+    expect(playoffMatches(s)).toHaveLength(0);
   });
 });
