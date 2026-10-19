@@ -66,3 +66,19 @@ describe('simulateMap', () => {
     expect(wins / n).toBeLessThan(1);
   });
 });
+
+describe('simulateMap adjustments', () => {
+  it('favours the team with map affinity or an adjust bonus', () => {
+    const winRate = (opts: Parameters<typeof simulateMap>[3], b = SAMPLE_TEMPESTADE) => {
+      let wins = 0;
+      for (let seed = 0; seed < 300; seed++) {
+        if (simulateMap(SAMPLE_AURORA, b, createRng(seed), opts).winner === 0) wins++;
+      }
+      return wins / 300;
+    };
+    const base = winRate({ map: 'Bind' });
+    expect(winRate({ map: 'Bind', adjust: [0, 15] })).toBeLessThan(base);
+    expect(winRate({ map: 'Bind' }, { ...SAMPLE_TEMPESTADE, mapAffinity: { Bind: 15 } })).toBeLessThan(base);
+    expect(winRate({ map: 'Haven' }, { ...SAMPLE_TEMPESTADE, mapAffinity: { Bind: 15 } })).toBe(winRate({ map: 'Haven' }));
+  });
+});

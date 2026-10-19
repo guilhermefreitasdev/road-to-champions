@@ -33,7 +33,14 @@ describe('teamStrength', () => {
 
   it('sums the parts into the total', () => {
     const s = teamStrength(SAMPLE_AURORA);
-    expect(s.total).toBeCloseTo(s.base + s.composition + s.igl + s.chemistry);
+    expect(s.total).toBeCloseTo(s.base + s.composition + s.igl + s.chemistry + s.coach);
+  });
+
+  it("adds the coach's tactic bonus", () => {
+    const coach = { id: 'c', name: 'c', teamId: 'aurora', eventId: 'sample', vetoBonus: 1, tacticBonus: 2 };
+    const withCoach = teamStrength({ ...SAMPLE_AURORA, coach });
+    expect(withCoach.coach).toBe(2);
+    expect(withCoach.total).toBeCloseTo(teamStrength(SAMPLE_AURORA).total + 2);
   });
 
   it('rejects lineups that do not have 5 players', () => {

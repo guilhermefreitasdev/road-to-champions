@@ -1,16 +1,18 @@
 import type { Rng } from './rng';
 import { roleFit, teamStrength, type StrengthBreakdown } from './team';
-import type { Lineup, LineupPlayer } from './types';
+import type { Lineup, LineupPlayer, MapName, TeamIndex } from './types';
 
+export type { TeamIndex } from './types';
 export type Side = 'attack' | 'defense';
-export type TeamIndex = 0 | 1;
 
 export interface MapOptions {
-  map: string;
+  map: MapName;
   /** Side team A starts on. Defaults to attack. */
   teamAStartsOn?: Side;
   /** Strength points added to whoever is defending; negative favours attackers. */
   defenderBias?: number;
+  /** Extra strength points per team for this map (e.g. veto/comp bonuses), on top of lineup.mapAffinity. */
+  adjust?: [number, number];
 }
 
 export interface KillEvent {
@@ -41,7 +43,7 @@ export interface PlayerLine {
 }
 
 export interface MapResult {
-  map: string;
+  map: MapName;
   score: [number, number];
   winner: TeamIndex;
   rounds: RoundResult[];
@@ -178,6 +180,8 @@ export function simulateMap(a: Lineup, b: Lineup, rng: Rng, opts: MapOptions): M
   const start = opts.teamAStartsOn ?? 'attack';
   const defenderBias = opts.defenderBias ?? 0;
   const form = formSwing(rng) - formSwing(rng);
+  const affinity = (l: Lineup) => l.mapAffinity?.[opts.map] ?? 0;
+  const adjust = (opts.adjust?.[0] ?? 0) + affinity(a) - (opts.adjust?.[1] ?? 0) - affinity(b);
 
   const score: [number, number] = [0, 0];
   const rounds: RoundResult[] = [];
@@ -185,7 +189,7 @@ export function simulateMap(a: Lineup, b: Lineup, rng: Rng, opts: MapOptions): M
   for (let n = 1; ; n++) {
     if (n > MAX_ROUNDS) throw new Error('Map did not finish');
     const teamASide = sideOf(n, start);
-    let diff = strength[0].total - strength[1].total + form;
+    let diff = strength[0].total - strength[1].total + form + adjust;
     diff += teamASide === 'defense' ? defenderBias : -defenderBias;
 
     const prev = rounds[rounds.length - 1];

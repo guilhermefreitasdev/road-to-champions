@@ -24,6 +24,7 @@ export interface StrengthBreakdown {
   composition: number;
   igl: number;
   chemistry: number;
+  coach: number;
   total: number;
 }
 
@@ -55,6 +56,7 @@ export function teamStrength(lineup: Lineup): StrengthBreakdown {
     }
   }
   const chemistry = Math.min(CHEMISTRY_CAP, pairs * CHEMISTRY_PER_PAIR);
+  const coach = lineup.coach?.tacticBonus ?? 0;
 
-  return { base, composition, igl, chemistry, total: base + composition + igl + chemistry };
+  return { base, composition, igl, chemistry, coach, total: base + composition + igl + chemistry + coach };
 }
