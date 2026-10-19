@@ -86,7 +86,15 @@ export function explainStrength(lineup: Lineup): { breakdown: StrengthBreakdown;
   if (composition.length === 0) composition.push('todas as funções cobertas');
 
   const igls = players.filter((p) => p.card.isIGL).length;
-  const igl = [igls === 0 ? 'sem IGL: −4' : igls === 1 ? '1 IGL: +2' : `${igls} IGLs disputando a call: +0`];
+  const igl = [
+    igls === 0
+      ? lineup.iglKnown === false
+        ? 'IGL desconhecido nos dados: +0'
+        : 'sem IGL: −4'
+      : igls === 1
+        ? '1 IGL: +2'
+        : `${igls} IGLs disputando a call: +0`,
+  ];
 
   const { teammates, compatriots } = chemistryPairs(lineup);
   const duplas = (n: number) => `${n} dupla${n === 1 ? '' : 's'}`;
@@ -113,6 +121,23 @@ export function explainStrength(lineup: Lineup): { breakdown: StrengthBreakdown;
       { key: 'coach', label: 'Coach', value: breakdown.coach, notes: coach },
     ],
   };
+}
+
+/** Where an IGL flag came from (Liquipedia), in plain pt-BR. */
+export const IGL_SOURCE_LABELS: Record<string, string> = {
+  'event-captain': 'capitão do time neste evento (Liquipedia)',
+  'squad-captain': 'capitão do elenco na data do evento (Liquipedia)',
+  'infobox-unique': 'IGL na carreira, segundo o perfil (Liquipedia)',
+};
+
+/** Placement as published ("1st", "3rd–4th", "17th–32nd") in pt-BR ("1º", "3º–4º", "17º–32º"). */
+export function placementLabel(text: string): string {
+  return text.replace(/(\d+)(st|nd|rd|th)/g, '$1º');
+}
+
+/** pt-BR rating with 2 decimals ("1,21"), or "—" when the source has none. */
+export function formatStat(n: number | null | undefined, digits = 0): string {
+  return n === null || n === undefined ? '—' : n.toFixed(digits).replace('.', ',');
 }
 
 /** Flag emoji from an ISO 3166-1 alpha-2 code ("BR" → 🇧🇷). */

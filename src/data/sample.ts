@@ -1,5 +1,5 @@
 /**
- * FICTIONAL example data, used only until the real pipeline (VLR + Liquipedia) exists.
+ * FICTIONAL example data, used only by the engine's unit tests (the game plays on src/data/real).
  * Do not put real players here with invented numbers.
  */
 import { createRng, hashSeed } from '../engine/rng';

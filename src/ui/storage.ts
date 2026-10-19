@@ -1,10 +1,13 @@
 import { parseRun, type RunState } from '../game/run';
 
-const KEY = 'rtc:run:v1';
+const KEY = 'rtc:run:v2';
+/** Keys of older save formats, removed on load (v1 = fictional sample cards). */
+const OLD_KEYS = ['rtc:run:v1'];
 
 /** Saved run, or null when there is none, storage is unavailable, or the save is corrupted/outdated. */
 export function loadRun(): RunState | null {
   try {
+    for (const key of OLD_KEYS) window.localStorage.removeItem(key);
     const raw = window.localStorage.getItem(KEY);
     if (!raw) return null;
     const run = parseRun(JSON.parse(raw));

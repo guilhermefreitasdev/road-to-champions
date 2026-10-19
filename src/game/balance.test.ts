@@ -1,16 +1,18 @@
 /**
  * Balance measurement: how far does a sensibly drafted team go? Deterministic (fixed seeds), so the bands only
  * move when the engine, the draft or the data change. Bands are a bit wider than the design targets so small
- * data changes do not break the suite; run with BALANCE_REPORT=1 to print the numbers.
+ * data changes do not break the suite; run with BALANCE_REPORT=1 to print the numbers, and BT=12 to play 12
+ * Champions per team instead of 4 (3 in ultimate) for less noisy numbers (~3× slower).
  *
  * Design targets (classic mode, automated drafter below):
  * - one map: +10 strength wins ~75–85%, +20 ~90–95%;
  * - median drafted team: playoffs 55–75%, title 8–20%;
  * - top-decile drafted team: title 25–45%;
  * - bottom-decile drafted team: playoffs ≤ 35%.
- * Known gap: the classic title targets are not reached yet (median ~1%, top decile ~15–20%). A classic draft
- * averages ~84 OVR (base ~82 after role fit) while every field has an elite AI roster at ~95–97, so only a
- * stronger draft (more rerolls, a better roulette) or a different pool can close it, not the match engine.
+ * Real pool (VLR + Liquipedia), with CHEMISTRY_CAP 2, FORM_SWING 10 and at most 2 elite rosters per field
+ * (run.ts), BT=12: bottom 30% playoffs; median 65% playoffs, 7% title; top decile 42% title. The median title
+ * sits just under 8%: the drafted spread is narrow (p10 79 → p90 88), so more upsets would push the bottom
+ * decile past 35% before the median gets more titles. Closing it needs a draft change, not an engine lever.
  */
 import { describe, expect, it } from 'vitest';
 import { SAMPLE_AURORA } from '../data/sample';
@@ -42,7 +44,8 @@ import {
 } from './run';
 
 /** Print the measured numbers (BALANCE_REPORT=1 npm test). The project has no Node types, hence the cast. */
-const REPORT = !!(globalThis as { process?: { env: Record<string, string | undefined> } }).process?.env.BALANCE_REPORT;
+const env = (globalThis as { process?: { env: Record<string, string | undefined> } }).process?.env ?? {};
+const REPORT = !!env.BALANCE_REPORT;
 
 /** Reroll the classic roulette while the best option is worth less than this (OVR × role fit). */
 const REROLL_BELOW = 85;
@@ -189,23 +192,23 @@ describe('balance: single map', () => {
 
 describe('balance: Champions runs', () => {
   it('classic: drafting well makes you a contender, drafting badly gets you knocked out', () => {
-    const { bottom, median, top } = measure('classic', 200, 16, 4);
-    // Target 55–75%; currently ~75–80% (the fictional pool has many weak rosters that a decent draft beats).
+    const { bottom, median, top } = measure('classic', 200, 16, Number(env.BT ?? 4));
+    // Targets: median playoffs 55–75%, bottom decile ≤ 35%.
     expect(median.playoffs).toBeGreaterThan(0.5);
-    expect(median.playoffs).toBeLessThan(0.88);
+    expect(median.playoffs).toBeLessThan(0.82);
     expect(bottom.playoffs).toBeLessThan(0.4);
     expect(top.playoffs).toBeGreaterThan(median.playoffs);
     expect(median.playoffs).toBeGreaterThan(bottom.playoffs);
-    // Titles: the upper bounds are the design targets (median 8–20%, top decile 25–45%); the lower bounds are
-    // only what the current draft reaches. See the note at the top of the file.
-    expect(top.title).toBeGreaterThan(0.05);
-    expect(top.title).toBeLessThan(0.5);
+    // Titles: top decile 25–45%, median 8–20% (currently ~5–7%, see the note at the top of the file).
+    expect(top.title).toBeGreaterThan(0.2);
+    expect(top.title).toBeLessThan(0.55);
+    expect(median.title).toBeGreaterThan(0.02);
     expect(median.title).toBeLessThan(0.22);
     expect(top.title).toBeGreaterThan(median.title);
   }, 60_000);
 
-  it('ultimate: same shape, a bit stronger drafts', () => {
-    const { bottom, median, top } = measure('ultimate', 100, 8, 3);
+  it('ultimate: same shape', () => {
+    const { bottom, median, top } = measure('ultimate', 100, 8, Number(env.BT ?? 3));
     expect(median.playoffs).toBeGreaterThan(0.55);
     expect(bottom.playoffs).toBeLessThan(median.playoffs);
     expect(top.title).toBeGreaterThan(median.title);

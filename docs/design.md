@@ -13,13 +13,29 @@ jogadores históricos (card = jogador + evento, ex.: "aspas @ LOUD, Champions 20
 | Online | Ranked 1v1, lobby de 8 managers (fase final, precisa backend) |
 
 ## Núcleo de simulação
-- Card: atributos MIRA, ENTRADA, UTILIDADE, CLUTCH, CONSISTÊNCIA, LIDERANÇA; OVR = z-score por função/ano, ajustado por amostra e peso do evento.
+- Card: atributos MIRA, ENTRADA, UTILIDADE, CLUTCH, CONSISTÊNCIA, LIDERANÇA e um OVR, todos calculados a partir dos dados reais (ver "Cards reais" abaixo).
 - Força do time = média(OVR × encaixe de função) + composição (≥1 controlador) + química + IGL + coach + meta do mapa.
-- Química: +0,5 por dupla que jogou no mesmo time e evento; +0,25 por dupla do mesmo país que não foi companheira nesse evento (cada dupla conta uma vez); máximo +3 no total. O teto é 3 (era 4) porque o OVR de um elenco real já vem de stats que ele fez junto: a química é um desempate, e um time draftado com compatriotas e algumas duplas reais chega perto do mesmo teto.
-- Round a round: logística da diferença de força (escala 30 pontos) + forma do dia por mapa (até ±12 por time, σ ≈ 4) + lado + economia + ults. 13 rounds, troca no 12, OT vence por 2.
-- Calibragem (medida em `src/game/balance.test.ts`): num mapa, +10 de força vence ~78% e +20 ~94%. Zebras acontecem; série e torneio ainda premiam o time mais forte.
+- IGL: +2 com exatamente um IGL, 0 com dois ou mais, −4 sem nenhum. Elenco da IA cujo IGL não está nos dados (`iglKnown: false`) fica com 0 em vez de −4; o time draftado segue a regra normal.
+- Química: +0,5 por dupla que jogou no mesmo time e evento; +0,25 por dupla do mesmo país que não foi companheira nesse evento (cada dupla conta uma vez; país desconhecido não conta); máximo +2 no total. O teto caiu de 4 para 3 e depois para 2 porque o OVR de um elenco real já vem de stats que ele fez junto: a química é um desempate, e com teto 3 todo elenco da IA ganhava +3 de graça.
+- Round a round: logística da diferença de força (escala 30 pontos) + forma do dia por mapa (até ±15 por time, σ ≈ 5) + lado + economia + ults. 13 rounds, troca no 12, OT vence por 2.
+- Calibragem (medida em `src/game/balance.test.ts`): num mapa, +10 de força vence ~75% e +20 ~94%. Zebras acontecem; série e torneio ainda premiam o time mais forte.
 - Veto MD3 em pool de 7 + escolha de comp por mapa. Placar estilo VLR.
 - Tudo com RNG de seed (mulberry32).
+
+### Cards reais (`src/data/real/cards.ts`)
+Um card por linha jogador-evento do VLR, só para os 5 titulares (os 5 com mais rounds) de cada time que jogou. Nenhum número é digitado à mão: tudo sai dos JSON versionados por fórmulas fixas e determinísticas.
+- **Amostra mínima**: o elenco só entra se os 5 titulares têm pelo menos 30 rounds (≈ 1,5 mapa). Isso tira 3 elencos da LOCK//IN 2023 que jogaram um mapa só (T1, DFM e RRQ); ficam 250 elencos e 1250 cards.
+- **Função**: soma do % de uso de cada agente no evento por função (agentes de `src/data/game`). Empate → função dos agentes do jogador em todos os eventos (peso por rounds) → ordem fixa iniciador, controlador, sentinela, duelista. Depois, se o elenco ficou sem uma função, quem está numa função repetida e usou agentes da função que falta em pelo menos 20% dos picks no evento muda para ela (ex.: Viper/Killjoy num time com dois controladores vira sentinela). Nunca inventa uma função que ninguém jogou; 246 de 250 elencos cobrem as 4 funções.
+- **Percentil no ano**: cada stat vira percentil (posição média) entre todos os titulares do mesmo ano, porque os números sobem e descem com a época. Stat ausente no VLR (ex.: Masters Shanghai 2024 não tem Rating, KAST, HS% nem clutch) conta como percentil neutro 50; o card guarda `null` e mostra "—".
+- **Encolhimento por amostra**: percentil final = 50 + (p − 50) × rounds / (rounds + 60). Com 60 rounds, metade do desvio; com 400, 87%.
+- **Atributos** (escala 40–99: 40 + 0,59 × percentil encolhido): Mira = HS%, KPR e ADR; Entrada = FK% − FD% (peso 0,7 para duelistas, 0,4 para os demais) e FK% (o resto); Utilidade = APR e KAST; Clutch = taxa de clutch encolhida para a média do ano como se tivesse mais 10 tentativas; Consistência = KAST e Rating.
+- **Liderança** (regra, não stat): IGL marcado como capitão na Liquipedia 90; IGL só pelo perfil de carreira (infobox) 80; foi IGL de algum time em outro evento 60; os demais 45.
+- **OVR** = 63 + 0,29 × percentil encolhido de desempenho + bônus. Desempenho = média de (Rating 50%, ACS 30%, KAST 20%) em percentil no ano e em percentil no ano dentro da função (um controlador não perde por ter ACS baixo). Bônus: campeão +3, vice +2, 3º–4º +1; Champions +2 (Masters e LOCK//IN 0). Resultado: mín. 68, p10 72, mediana 79, p90 87, máx. 94; os melhores jogadores dos campeões do Champions ficam no topo.
+- **IGL**: `isIGL` só quando a Liquipedia dá um IGL para aquele time e evento e ele é um dos 5 titulares (casado pelo id do VLR no perfil ou pelo handle normalizado); o card guarda `iglSource`. Sem isso, o elenco fica com `iglKnown: false`.
+- **Coach**: o técnico da Liquipedia. Tática = colocação do time no evento (1º 3, 2º–4º 2, 5º–8º 1, resto 0). Veto = experiência: eventos internacionais com esse técnico nos dados até aquele evento, inclusive (1 → 0, 2–3 → 1, 4–5 → 2, 6+ → 3). Elenco sem técnico não oferece coach.
+- **Conforto de mapa da IA**: só dos vetos guardados daquele evento: +1 por mapa escolhido, −1 por mapa banido, limitado a ±2. Elenco sem veto guardado não tem conforto.
+- **Pool do veto**: o pool do evento mais recente (pela data de início) com exatamente 7 mapas; hoje é o do Champions 2026 (Abyss, Ascent, Haven, Lotus, Split, Summit, Sunset). Atualiza sozinho quando um evento novo entra.
+- **Campo do Champions**: 15 adversários de times diferentes (um elenco por time, sorteado), sem nenhum jogador do usuário, e no máximo 2 elencos "de elite" (os 20% mais fortes do pool) por campo: um Champions tem poucos favoritos.
 
 ## Modo Diário (inspirado em valdle.gg / Loldle)
 
@@ -81,10 +97,10 @@ Tempo real: ver docs/ideias-futuras.md (em espera).
 3. Carreira.
 4. Contas + Online.
 
-## Balanceamento (estado atual, com dados fictícios)
-Medido em `src/game/balance.test.ts` (`BALANCE_REPORT=1 npx vitest run src/game/balance` imprime os números).
-- Mapa: favorito com +10 de força vence ~76%; com +20, ~95%.
-- Draft clássico: time mediano chega aos playoffs em ~75–80% das runs; títulos ainda raros (~1% no mediano, ~13% no top 10%).
-- Ultimate: mediano ~88% playoffs / ~13% título.
-- Pendente: título no clássico abaixo da meta (8–20% no mediano). O limite está nas regras do draft + campo com superelencos fictícios (~96).
-  Revisitar quando os dados reais entrarem (mais rerolls, roleta ponderada por tier ou campo com menos superelencos).
+## Balanceamento (estado atual, com dados reais)
+Medido em `src/game/balance.test.ts` (`BALANCE_REPORT=1 BT=12 npx vitest run src/game/balance --silent=false` imprime os números com 12 Champions por time).
+- Mapa: favorito com +10 de força vence ~75%; com +20, ~94%.
+- Draft clássico (drafter automático que só olha OVR): p10/p50/p90 da força 79,3 / 83,2 / 88,4. Mediano: ~65% playoffs, ~7% título; top 10%: ~42% título; 10% piores: ~30% playoffs.
+- Ultimate: mediano ~70% playoffs / ~3% título; top 10% ~40% título.
+- Alavancas usadas na troca para os dados reais: teto de química 3 → 2, forma por mapa 8 → 10 e no máximo 2 elencos de elite por campo. Antes do ajuste (dados reais, alavancas antigas): mediano 53% playoffs / 0% título, top 23% título, 10% piores 17% playoffs.
+- Pendente: título do mediano um pouco abaixo da meta (8–20%). A força draftada varia pouco (p10→p90 = 9 pontos), então mais zebra levaria os 10% piores acima de 35% de playoffs antes de dar mais títulos ao mediano. Fechar isso pede mexer no draft (ex.: mais rerolls ou roleta ponderada), não no motor.

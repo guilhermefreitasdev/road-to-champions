@@ -1,0 +1,163 @@
+/**
+ * Checks the real card pool built from the committed data. REAL_REPORT=1 prints the OVR distribution, the top
+ * cards (overall and per year) with their source stats, and the IGL/coach coverage:
+ *   REAL_REPORT=1 npx vitest run src/data/real/real --silent=false
+ */
+import { describe, expect, it } from 'vitest';
+import { rosterKey } from '../../engine/roster';
+import { teamStrength } from '../../engine/team';
+import { MAPS } from '../game';
+import { normHandle, type VlrEventData } from './cards';
+import { REAL_MAP_POOL, REAL_POOL, REAL_ROSTERS, realLineup } from './index';
+import { LIQUIPEDIA_EVENTS } from './liquipedia';
+
+const env = (globalThis as { process?: { env: Record<string, string | undefined> } }).process?.env ?? {};
+const REPORT = env.REAL_REPORT === '1';
+
+const files = import.meta.glob<VlrEventData>('./vlr/events/*.json', { eager: true, import: 'default' });
+const VLR = new Map(Object.values(files).map((e) => [e.slug, e]));
+const cards = REAL_ROSTERS.flatMap((r) => r.cards.map((card) => ({ card, roster: r })));
+const ovrs = cards.map((c) => c.card.ovr).sort((a, b) => a - b);
+const quantile = (q: number) => ovrs[Math.round(q * (ovrs.length - 1))]!;
+
+/** The Liquipedia team of a roster, matched independently of the builder (≥ 3 players in common). */
+function liquipediaTeam(r: (typeof REAL_ROSTERS)[number]) {
+  const handles = new Set(r.cards.map((c) => normHandle(c.handle)));
+  const ids = new Set(r.cards.map((c) => c.playerId));
+  const ev = LIQUIPEDIA_EVENTS.find((e) => e.id === r.eventId);
+  const scored = (ev?.teams ?? []).map((t) => ({
+    t,
+    n: t.players.filter((p) => handles.has(normHandle(p.handle)) || (p.vlrPlayerId && ids.has(p.vlrPlayerId))).length,
+  }));
+  const best = scored.sort((a, b) => b.n - a.n)[0];
+  return best && best.n >= 3 ? best.t : undefined;
+}
+
+describe('REAL_ROSTERS', () => {
+  it('has most of the 253 rosters that played, 5 cards each, from ≥ 18 events and ≥ 60 teams', () => {
+    expect(REAL_ROSTERS.length).toBeGreaterThanOrEqual(240);
+    expect(new Set(REAL_ROSTERS.map((r) => r.eventId)).size).toBeGreaterThanOrEqual(18);
+    expect(new Set(REAL_ROSTERS.map((r) => r.teamId)).size).toBeGreaterThanOrEqual(60);
+    for (const r of REAL_ROSTERS) {
+      expect(r.cards, rosterKey(r)).toHaveLength(5);
+      expect(new Set(r.cards.map((c) => c.playerId)).size).toBe(5);
+    }
+    expect(REAL_POOL.skipped.length).toBeLessThanOrEqual(5);
+  });
+
+  it('has unique card ids, roster keys and coach ids in the expected format', () => {
+    const ids = cards.map((c) => c.card.id);
+    expect(new Set(ids).size).toBe(ids.length);
+    const keys = REAL_ROSTERS.map(rosterKey);
+    expect(new Set(keys).size).toBe(keys.length);
+    const coachIds = REAL_ROSTERS.flatMap((r) => (r.coach ? [r.coach.id] : []));
+    expect(new Set(coachIds).size).toBe(coachIds.length);
+    for (const { card, roster } of cards) {
+      expect(card.id).toMatch(new RegExp(`^[a-z0-9-]+@${roster.teamId}-${roster.eventId}$`));
+      expect(card.teamId).toBe(roster.teamId);
+      expect(card.eventId).toBe(roster.eventId);
+    }
+  });
+
+  it('copies the source stats verbatim (no invented numbers)', () => {
+    for (const { card, roster } of cards) {
+      const row = VLR.get(roster.eventId)!.players.find((p) => String(p.playerId) === card.playerId)!;
+      expect(row.handle).toBe(card.handle);
+      expect(card.stats).toEqual({ rounds: row.rounds, rating: row.rating, acs: row.acs, kast: row.kast });
+      expect(card.agents).toEqual(row.agents.map((a) => a.agent).filter((a) => card.agents.includes(a)));
+    }
+  });
+
+  it('spreads OVR from the mid-60s to the mid-90s, attributes in 40–99', () => {
+    expect(quantile(0)).toBeGreaterThanOrEqual(60);
+    expect(quantile(0.1)).toBeGreaterThanOrEqual(68);
+    expect(quantile(0.5)).toBeGreaterThanOrEqual(76);
+    expect(quantile(0.5)).toBeLessThanOrEqual(82);
+    expect(quantile(1)).toBeGreaterThanOrEqual(92);
+    expect(quantile(1)).toBeLessThanOrEqual(97);
+    for (const { card } of cards) {
+      for (const v of Object.values(card.attrs)) {
+        expect(v).toBeGreaterThanOrEqual(40);
+        expect(v).toBeLessThanOrEqual(99);
+      }
+    }
+  });
+
+  it('puts the champions’ best players near the top', () => {
+    const p90 = quantile(0.9);
+    for (const r of REAL_ROSTERS.filter((x) => x.placement === '1st')) {
+      expect(Math.max(...r.cards.map((c) => c.ovr)), rosterKey(r)).toBeGreaterThanOrEqual(p90);
+    }
+  });
+
+  it('covers the four roles in almost every roster', () => {
+    const full = REAL_ROSTERS.filter((r) => new Set(r.cards.map((c) => c.role)).size === 4).length;
+    expect(full / REAL_ROSTERS.length).toBeGreaterThan(0.95);
+    expect(REAL_ROSTERS.every((r) => r.cards.some((c) => c.role === 'controller'))).toBe(true);
+  });
+
+  it('marks the IGL only when Liquipedia names one of the 5, and has the coach whenever Liquipedia has one', () => {
+    for (const r of REAL_ROSTERS) {
+      const lp = liquipediaTeam(r);
+      expect(lp, rosterKey(r)).toBeDefined();
+      const igls = r.cards.filter((c) => c.isIGL);
+      if (r.iglKnown) {
+        expect(igls).toHaveLength(1);
+        // Same person: VLR id from the Liquipedia infobox (e.g. "FNS" is "FiNESSE" on VLR), or same handle.
+        const igl = lp!.players.find((p) => p.handle === lp!.igl)!;
+        expect(igl.vlrPlayerId === igls[0]!.playerId || normHandle(igl.handle) === normHandle(igls[0]!.handle)).toBe(true);
+        expect(['event-captain', 'squad-captain', 'infobox-unique']).toContain(igls[0]!.iglSource);
+      } else {
+        expect(igls).toHaveLength(0);
+        expect(r.iglKnown).toBe(false);
+      }
+      if (lp!.coach) expect(r.coach?.name, rosterKey(r)).toBe(lp!.coach.name);
+      else expect(r.coach).toBeUndefined();
+      if (r.coach) {
+        expect(r.coach.vetoBonus).toBeGreaterThanOrEqual(0);
+        expect(r.coach.vetoBonus).toBeLessThanOrEqual(3);
+        expect(r.coach.tacticBonus).toBeGreaterThanOrEqual(0);
+        expect(r.coach.tacticBonus).toBeLessThanOrEqual(3);
+      }
+    }
+    expect(REAL_ROSTERS.filter((r) => r.iglKnown).length / REAL_ROSTERS.length).toBeGreaterThan(0.7);
+    expect(REAL_ROSTERS.filter((r) => r.coach).length / REAL_ROSTERS.length).toBeGreaterThan(0.95);
+  });
+
+  it('builds AI lineups with small map affinities from the stored vetoes', () => {
+    for (const r of REAL_ROSTERS) {
+      const lineup = realLineup(r);
+      expect(lineup.iglKnown).toBe(r.iglKnown ? undefined : false);
+      expect(() => teamStrength(lineup)).not.toThrow();
+      for (const v of Object.values(lineup.mapAffinity ?? {})) expect(Math.abs(v!)).toBeLessThanOrEqual(2);
+    }
+    expect(Object.keys(REAL_POOL.affinity).length).toBeGreaterThan(40);
+  });
+
+  it('vetoes on the 7 maps of the most recent full pool', () => {
+    expect(REAL_MAP_POOL).toHaveLength(7);
+    expect(new Set(REAL_MAP_POOL).size).toBe(7);
+    const known = new Set(MAPS.map((m) => m.name));
+    for (const m of REAL_MAP_POOL) expect(known.has(m)).toBe(true);
+    expect(REAL_POOL.mapPoolEventId).toBe('champions-2026');
+  });
+
+  it('prints a report with REAL_REPORT=1', () => {
+    if (!REPORT) return;
+    const fmt = ({ card: c, roster: r }: (typeof cards)[number]) =>
+      `${String(c.ovr).padStart(3)} ${c.handle.padEnd(11)} ${`${r.teamName} · ${r.eventName}`.padEnd(42)} ${c.role.padEnd(10)} ${String(r.placement ?? '').padEnd(8)} rounds ${c.stats!.rounds} rating ${c.stats!.rating ?? '—'} ACS ${c.stats!.acs ?? '—'} KAST ${c.stats!.kast ?? '—'}${c.isIGL ? ` IGL(${c.iglSource})` : ''}`;
+    const top = [...cards].sort((a, b) => b.card.ovr - a.card.ovr || a.card.id.localeCompare(b.card.id));
+    const lines = [
+      `${REAL_ROSTERS.length} rosters, ${cards.length} cards; OVR min/p10/p50/p90/max ${quantile(0)}/${quantile(0.1)}/${quantile(0.5)}/${quantile(0.9)}/${quantile(1)}`,
+      `IGL known ${REAL_ROSTERS.filter((r) => r.iglKnown).length}, coach ${REAL_ROSTERS.filter((r) => r.coach).length}, affinity ${Object.keys(REAL_POOL.affinity).length}`,
+      `skipped: ${REAL_POOL.skipped.join(' | ')}`,
+      `notes: ${REAL_POOL.notes.join(' | ')}`,
+      'TOP 15',
+      ...top.slice(0, 15).map(fmt),
+    ];
+    for (const year of [...new Set(REAL_ROSTERS.map((r) => r.year))].sort()) {
+      lines.push(`TOP ${year}`, ...top.filter((c) => c.roster.year === year).slice(0, 3).map(fmt));
+    }
+    console.log(lines.join('\n'));
+  });
+});

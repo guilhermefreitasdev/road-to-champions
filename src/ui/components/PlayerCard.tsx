@@ -1,5 +1,12 @@
 import type { CSSProperties } from 'react';
-import { ATTRIBUTE_KEYS, ATTRIBUTE_LABELS, ROLE_LABELS, flagEmoji } from '../../game/explain';
+import {
+  ATTRIBUTE_KEYS,
+  ATTRIBUTE_LABELS,
+  IGL_SOURCE_LABELS,
+  ROLE_LABELS,
+  flagEmoji,
+  formatStat,
+} from '../../game/explain';
 import { rosterOf } from '../../game/run';
 import type { Card } from '../../engine/types';
 import { AgentIcon } from './GameImage';
@@ -13,18 +20,24 @@ interface Props {
   index?: number;
 }
 
-/** A player card: handle, origin, roster, role, OVR, attributes and agents. Clickable when onSelect is set. */
+/**
+ * A player card: handle, origin, roster, role (from the agents played at that event), IGL, OVR, the real event
+ * stats it came from, attributes and agents. Clickable when onSelect is set.
+ */
 export function PlayerCard({ card, selected = false, onSelect, index = 0 }: Props) {
   const roster = rosterOf(card.teamId, card.eventId);
+  const stats = card.stats;
   const body = (
     <>
       <span className="card-head">
         <span className="card-name">
           <strong>{card.handle}</strong>
-          <span className="muted">
-            {' '}
-            {flagEmoji(card.country)} {card.country}
-          </span>
+          {card.country && (
+            <span className="muted">
+              {' '}
+              {flagEmoji(card.country)} {card.country}
+            </span>
+          )}
         </span>
         <span className="ovr" aria-label={`OVR ${card.ovr}`}>
           {card.ovr}
@@ -34,9 +47,29 @@ export function PlayerCard({ card, selected = false, onSelect, index = 0 }: Prop
         {roster ? `${roster.teamName} · ${roster.eventName}` : `${card.teamId} · ${card.eventId}`}
       </span>
       <span className="badges">
-        <span className={`badge role-${card.role}`}>{ROLE_LABELS[card.role]}</span>
-        {card.isIGL && <span className="badge igl">IGL</span>}
+        <span className={`badge role-${card.role}`} title="Função pelos agentes que jogou neste evento">
+          {ROLE_LABELS[card.role]}
+        </span>
+        {card.isIGL && (
+          <span className="badge igl" title={`IGL: ${IGL_SOURCE_LABELS[card.iglSource ?? ''] ?? 'Liquipedia'}`}>
+            IGL
+          </span>
+        )}
       </span>
+      {stats && (
+        <span className="card-stats" title="Stats reais do jogador neste evento (VLR.gg)">
+          <span>
+            Rating <strong>{formatStat(stats.rating, 2)}</strong>
+          </span>
+          <span>
+            ACS <strong>{formatStat(stats.acs)}</strong>
+          </span>
+          <span>
+            KAST <strong>{stats.kast === null ? '—' : `${stats.kast}%`}</strong>
+          </span>
+          <span>{stats.rounds} rounds</span>
+        </span>
+      )}
       <span className="attrs">
         {ATTRIBUTE_KEYS.map((k) => (
           <span key={k} className="attr">

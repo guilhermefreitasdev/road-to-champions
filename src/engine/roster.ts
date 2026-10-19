@@ -13,7 +13,7 @@ export function shuffled<T>(items: readonly T[], rng: Rng): T[] {
   return out;
 }
 
-/** Key of a roster at one event, e.g. "aurora-champions-exemplo-2022". */
+/** Key of a roster at one event, e.g. "loud-champions-2022". */
 export function rosterKey(entry: Pick<RosterEntry, 'teamId' | 'eventId'>): string {
   return `${entry.teamId}-${entry.eventId}`;
 }
@@ -45,6 +45,7 @@ export function rosterToLineup(entry: RosterEntry, affinity?: Partial<Record<Map
 
   const lineup: Lineup = { name: entry.teamName, players };
   if (entry.coach) lineup.coach = entry.coach;
+  if (entry.iglKnown === false) lineup.iglKnown = false;
   if (affinity) lineup.mapAffinity = { ...affinity };
   return lineup;
 }

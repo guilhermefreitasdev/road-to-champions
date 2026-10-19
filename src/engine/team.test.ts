@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { SAMPLE_AURORA, SAMPLE_TEMPESTADE } from '../data/sample';
-import { chemistryPairs, roleFit, teamStrength } from './team';
+import { CHEMISTRY_CAP, chemistryPairs, roleFit, teamStrength } from './team';
 import type { Lineup } from './types';
 
 describe('roleFit', () => {
@@ -26,10 +26,21 @@ describe('teamStrength', () => {
     expect(teamStrength(noIgl).igl).toBe(-4);
   });
 
+  it('does not penalise a lineup whose IGL is unknown, but still rewards a known one', () => {
+    const noIgl: Lineup = {
+      ...SAMPLE_AURORA,
+      players: SAMPLE_AURORA.players.map((p) => ({ ...p, card: { ...p.card, isIGL: false } })),
+    };
+    expect(teamStrength({ ...noIgl, iglKnown: false }).igl).toBe(0);
+    expect(teamStrength({ ...noIgl, iglKnown: true }).igl).toBe(-4);
+    expect(teamStrength({ ...SAMPLE_AURORA, iglKnown: false }).igl).toBe(2);
+  });
+
   it('caps chemistry for a full roster from the same team and event', () => {
-    // 5 teammates = 10 pairs × 0.5 = 5, capped at 3.
+    // 5 teammates = 10 pairs × 0.5 = 5, capped at CHEMISTRY_CAP (2).
     expect(chemistryPairs(SAMPLE_AURORA)).toEqual({ teammates: 10, compatriots: 0 });
-    expect(teamStrength(SAMPLE_AURORA).chemistry).toBe(3);
+    expect(teamStrength(SAMPLE_AURORA).chemistry).toBe(CHEMISTRY_CAP);
+    expect(CHEMISTRY_CAP).toBe(2);
   });
 
   it('gives a smaller bonus to compatriots who were not teammates', () => {
@@ -40,21 +51,24 @@ describe('teamStrength', () => {
         card: { ...p.card, teamId: `team-${i}`, country: countries[i]! },
       })),
     });
-    // All BR, all from different teams: 10 pairs × 0.25.
-    expect(teamStrength(withCountries(['BR', 'BR', 'BR', 'BR', 'BR'])).chemistry).toBe(2.5);
+    // All BR, all from different teams: 10 pairs × 0.25 = 2.5, capped at 2; 4 BR = 6 pairs × 0.25.
+    expect(teamStrength(withCountries(['BR', 'BR', 'BR', 'BR', 'BR'])).chemistry).toBe(2);
+    expect(teamStrength(withCountries(['BR', 'BR', 'BR', 'BR', 'AR'])).chemistry).toBe(1.5);
     // BR-BR-BR = 3 pairs, AR-AR = 1 pair.
     expect(chemistryPairs(withCountries(['BR', 'BR', 'BR', 'AR', 'AR']))).toEqual({ teammates: 0, compatriots: 4 });
     expect(teamStrength(withCountries(['BR', 'PT', 'AR', 'CL', 'UY'])).chemistry).toBe(0);
+    // Unknown countries ('') are not compatriots.
+    expect(chemistryPairs(withCountries(['', '', 'BR', 'BR', 'AR']))).toEqual({ teammates: 0, compatriots: 1 });
   });
 
   it('counts a pair of teammates once, not also as compatriots', () => {
-    // 2 teammates (1 pair × 0.5) + 3 compatriots from other teams (the other 9 pairs × 0.25), capped at 3.
+    // 2 teammates (1 pair × 0.5) + 3 compatriots from other teams (the other 9 pairs × 0.25) = 2.75, capped at 2.
     const lineup: Lineup = {
       ...SAMPLE_AURORA,
       players: SAMPLE_AURORA.players.map((p, i) => (i < 2 ? p : { ...p, card: { ...p.card, teamId: `team-${i}` } })),
     };
     expect(chemistryPairs(lineup)).toEqual({ teammates: 1, compatriots: 9 });
-    expect(teamStrength(lineup).chemistry).toBe(2.75);
+    expect(teamStrength(lineup).chemistry).toBe(2);
   });
 
   it('sums the parts into the total', () => {

@@ -7,8 +7,7 @@
  * the next match in the schedule is the user's, which waits for the user's veto. Once the user is eliminated
  * the rest of the tournament plays out on its own, so the champion is always known at the end.
  */
-import { SAMPLE_MAP_POOL } from '../data/mapPools';
-import { SAMPLE_ROSTERS, sampleLineup } from '../data/sample';
+import { REAL_MAP_POOL, REAL_ROSTERS, realLineup } from '../data/real';
 import {
   availableCards,
   createDraft,
@@ -43,9 +42,12 @@ import { aiChooseMap, applyVeto, createVeto, isVetoComplete, nextTurn, type Veto
 
 export type { DraftMode } from '../engine/draft';
 
-/** The roster pool used for the draft and the opponents. Fictional until the real data pipeline exists. */
-export const RUN_POOL: readonly RosterEntry[] = SAMPLE_ROSTERS;
-export const RUN_MAP_POOL: readonly MapName[] = SAMPLE_MAP_POOL;
+/** The roster pool used for the draft and the opponents: real rosters (VLR.gg + Liquipedia), see src/data/real. */
+export const RUN_POOL: readonly RosterEntry[] = REAL_ROSTERS;
+/** Veto pool of every match: the map pool of the most recent event with exactly 7 maps. */
+export const RUN_MAP_POOL: readonly MapName[] = REAL_MAP_POOL;
+/** Save format version: bumped when saved runs stop making sense (v2 = real pool; v1 saves used fictional cards). */
+export const RUN_VERSION = 2;
 
 /** Entrant id of the user's team. Opponents use their roster key (`${teamId}-${eventId}`). */
 export const USER_ID = 'user';
@@ -61,7 +63,7 @@ export interface UserVeto {
 }
 
 export interface RunState {
-  version: 1;
+  version: typeof RUN_VERSION;
   seed: string;
   mode: DraftMode;
   /** 'draft' covers the picks and the coach; 'team' is naming the team before the Champions. */
@@ -82,7 +84,7 @@ export interface RunState {
 // ---------------------------------------------------------------------------
 
 export function createRun(mode: DraftMode, seed: string): RunState {
-  return { version: 1, seed, mode, phase: 'draft', draft: createDraft(RUN_POOL, mode, seed), userSeries: {} };
+  return { version: RUN_VERSION, seed, mode, phase: 'draft', draft: createDraft(RUN_POOL, mode, seed), userSeries: {} };
 }
 
 export function rollDraft(run: RunState): RunState {
@@ -146,18 +148,55 @@ export function startTournament(run: RunState, teamName: string): RunState {
   const name = cleanTeamName(teamName);
   const user = draftLineup(run.draft, RUN_POOL, name);
   const userPlayers = user.players.map((p) => p.card.playerId);
-  const opponents = pickOpponents(RUN_POOL, OPPONENT_COUNT, run.seed, userPlayers).map(rosterKey);
+  const opponents = pickField(run.seed, userPlayers);
 
   const field = [
     { id: USER_ID, name, strength: teamStrength(user).total },
     ...opponents.map((id) => {
       const entry = rosterByKey(id);
-      return { id, name: entry.teamName, strength: teamStrength(sampleLineup(entry)).total };
+      return { id, name: entry.teamName, strength: aiStrength(entry) };
     }),
   ].sort((x, y) => y.strength - x.strength || (x.id < y.id ? -1 : 1));
 
   const tournament = createTournament(field.map((t, i) => ({ id: t.id, name: t.name, seed: i + 1 })));
   return advance({ ...run, phase: 'tournament', teamName: name, opponents, tournament });
+}
+
+/**
+ * Field composition (balance lever): a real Champions has few favourites, so at most FIELD_ELITE_CAP opponents
+ * may be "elite" rosters, i.e. in the top FIELD_ELITE_SHARE of the pool by AI strength. Teams are drawn in the
+ * seeded order of pickOpponents (one roster per team, avoiding the user's players); an elite roster past the cap
+ * is skipped and the next team takes its place.
+ */
+export const FIELD_ELITE_SHARE = 0.2;
+export const FIELD_ELITE_CAP = 2;
+
+const aiStrength = (entry: RosterEntry): number => teamStrength(realLineup(entry)).total;
+const ELITE_FLOOR = (() => {
+  const all = RUN_POOL.map(aiStrength).sort((a, b) => b - a);
+  return all[Math.floor(all.length * FIELD_ELITE_SHARE)]!;
+})();
+const TEAM_TOTAL = new Set(RUN_POOL.map((e) => e.teamId)).size;
+
+/** Roster keys of the 15 opponents for a run (deterministic from the seed). */
+export function pickField(seed: string, exclude: readonly string[]): string[] {
+  const out: string[] = [];
+  let elite = 0;
+  for (const entry of pickOpponents(RUN_POOL, TEAM_TOTAL, seed, exclude)) {
+    if (out.length === OPPONENT_COUNT) break;
+    if (aiStrength(entry) >= ELITE_FLOOR) {
+      if (elite >= FIELD_ELITE_CAP) continue;
+      elite++;
+    }
+    out.push(rosterKey(entry));
+  }
+  if (out.length < OPPONENT_COUNT) throw new Error(`Field has ${out.length} opponents, needs ${OPPONENT_COUNT}`);
+  return out;
+}
+
+/** True when a roster counts as elite for the field cap. */
+export function isEliteRoster(entry: RosterEntry): boolean {
+  return aiStrength(entry) >= ELITE_FLOOR;
 }
 
 /** The user's next match and which side (0 = a, 1 = b) the user is on; null when there is none. */
@@ -212,7 +251,7 @@ export function lineupOf(run: RunState, id: string): Lineup {
     const lineup = draftLineup(run.draft, RUN_POOL, run.teamName ?? DEFAULT_TEAM_NAME);
     return { ...lineup, players: lineup.players.map((p) => ({ ...p, card: { ...p.card, id: `${p.card.id}#user` } })) };
   }
-  return sampleLineup(rosterByKey(id));
+  return realLineup(rosterByKey(id));
 }
 
 // ---------------------------------------------------------------------------
@@ -222,7 +261,7 @@ export function lineupOf(run: RunState, id: string): Lineup {
 export interface TeamInfo {
   id: string;
   name: string;
-  /** Event of the roster ("Champions Exemplo 2024"), or "Seu time". */
+  /** Event of the roster ("Champions 2022"), or "Seu time". */
   subtitle: string;
   isUser: boolean;
   seed: number;
@@ -468,7 +507,7 @@ export function parseRun(data: unknown): RunState | null {
   try {
     if (!data || typeof data !== 'object') return null;
     const run = data as RunState;
-    if (run.version !== 1 || typeof run.seed !== 'string') return null;
+    if (run.version !== RUN_VERSION || typeof run.seed !== 'string') return null;
     if (run.mode !== 'classic' && run.mode !== 'ultimate') return null;
     if (!['draft', 'team', 'tournament', 'done'].includes(run.phase)) return null;
     if (!run.draft || typeof run.draft !== 'object' || !Array.isArray(run.draft.picks)) return null;

@@ -122,3 +122,12 @@ O conteúdo da Liquipedia é [CC-BY-SA 3.0](https://creativecommons.org/licenses
 - O JSON guarda o título e a revisão de cada página usada (`sources`), e `source.credit` traz o texto de crédito.
 - O jogo vai mostrar, na tela "Sobre/Créditos" e no rodapé das telas que usam elencos, técnicos ou IGLs: "Elencos, técnicos e IGLs: Liquipedia (liquipedia.net/valorant), CC-BY-SA 3.0", com link para a Liquipedia e para a licença. Os dados derivados (o `events.json`) seguem sob a mesma licença CC-BY-SA 3.0.
 - Não usamos fotos de jogadores nem logos de times da Liquipedia (só texto).
+
+# Cards do jogo (VLR + Liquipedia → cards)
+
+`src/data/real/cards.ts` transforma os dois snapshots acima nos elencos que o jogo usa (`REAL_ROSTERS`, exportado por `src/data/real/index.ts` junto com `realLineup` e `REAL_MAP_POOL`). É código puro e determinístico, rodado no carregamento da página; não há JSON de cards gerado. As fórmulas (função pelos agentes, percentis no ano, encolhimento por amostra, OVR, liderança, coach, conforto de mapa e pool do veto) estão em `docs/design.md`, seção "Cards reais".
+
+- Casamento VLR ↔ Liquipedia: um time da Liquipedia é o do VLR quando tem pelo menos 3 dos 5 titulares em comum (pelo `vlrPlayerId` do perfil ou pelo handle normalizado, ex.: "FNS" na Liquipedia é o "FiNESSE" do VLR pelo id 817). Os 250 elencos casam.
+- Cobertura: IGL conhecido em 187 de 250 elencos, técnico em 249.
+- Testes: `cards.test.ts` (fórmulas com dados sintéticos) e `real.test.ts` (o pool real: 5 cards por elenco, ids únicos, stats copiados sem alteração, faixa de OVR, funções, IGL e coach batendo com a Liquipedia). `REAL_REPORT=1 npx vitest run src/data/real/real --silent=false` imprime a distribuição de OVR e os melhores cards com os stats de origem.
+- O jogo mostra os créditos no rodapé: VLR.gg e Liquipedia (CC-BY-SA 3.0), com links.

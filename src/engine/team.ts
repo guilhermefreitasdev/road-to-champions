@@ -24,10 +24,11 @@ export const CHEMISTRY_PER_PAIR = 0.5;
 export const COUNTRY_CHEMISTRY_PER_PAIR = 0.25;
 /**
  * Overall chemistry cap. A real roster's OVRs already come from stats it put up together, so its synergy is
- * partly counted twice; capping at 3 (was 4) keeps chemistry a tiebreaker-sized edge that a drafted squad of
- * compatriots plus a couple of real teammate pairs can also reach, instead of a free tier for every AI roster.
+ * partly counted twice; capping at 2 (was 4, then 3) keeps chemistry a tiebreaker-sized edge that a drafted squad
+ * of compatriots plus a couple of real teammate pairs can also reach. With the real pool, 3 gave every AI roster
+ * a free +3 the drafted median could not match (see src/game/balance.test.ts).
  */
-export const CHEMISTRY_CAP = 3;
+export const CHEMISTRY_CAP = 2;
 
 export interface StrengthBreakdown {
   /** Average of OVR × role fit. */
@@ -54,8 +55,7 @@ export function teamStrength(lineup: Lineup): StrengthBreakdown {
     if (!slots.has(role)) composition -= MISSING_ROLE_PENALTY[role];
   }
 
-  const iglCount = players.filter((p) => p.card.isIGL).length;
-  const igl = iglCount === 0 ? -4 : iglCount === 1 ? 2 : 0;
+  const igl = iglTerm(lineup);
 
   const { teammates, compatriots } = chemistryPairs(lineup);
   const chemistry = Math.min(CHEMISTRY_CAP, teammates * CHEMISTRY_PER_PAIR + compatriots * COUNTRY_CHEMISTRY_PER_PAIR);
@@ -64,7 +64,17 @@ export function teamStrength(lineup: Lineup): StrengthBreakdown {
   return { base, composition, igl, chemistry, coach, total: base + composition + igl + chemistry + coach };
 }
 
-/** Pairs that give chemistry. Each pair counts once: as teammates when they were, otherwise as compatriots. */
+/** IGL bonus: +2 with exactly one, 0 with several; −4 with none, unless the lineup says its IGL is unknown (0). */
+export function iglTerm(lineup: Lineup): number {
+  const count = lineup.players.filter((p) => p.card.isIGL).length;
+  if (count === 0) return lineup.iglKnown === false ? 0 : -4;
+  return count === 1 ? 2 : 0;
+}
+
+/**
+ * Pairs that give chemistry. Each pair counts once: as teammates when they were, otherwise as compatriots
+ * (an unknown country, '', never matches).
+ */
 export function chemistryPairs(lineup: Lineup): { teammates: number; compatriots: number } {
   const { players } = lineup;
   let teammates = 0;
@@ -74,7 +84,7 @@ export function chemistryPairs(lineup: Lineup): { teammates: number; compatriots
       const a = players[i]!.card;
       const b = players[j]!.card;
       if (a.teamId === b.teamId && a.eventId === b.eventId) teammates++;
-      else if (a.country === b.country) compatriots++;
+      else if (a.country !== '' && a.country === b.country) compatriots++;
     }
   }
   return { teammates, compatriots };

@@ -2,7 +2,7 @@ import { useEffect, useRef, useState, type Ref } from 'react';
 import { SLOTS, openSlots } from '../../engine/draft';
 import { roleFit } from '../../engine/team';
 import type { Card, Slot } from '../../engine/types';
-import { SLOT_LABELS, SLOT_SHORT, fitLabel } from '../../game/explain';
+import { SLOT_LABELS, SLOT_SHORT, fitLabel, placementLabel } from '../../game/explain';
 import { MODE_LABELS, RUN_POOL, draftOptions, rolledRoster, type RunState } from '../../game/run';
 import { findCard } from '../../engine/roster';
 import { Icon } from '../components/Icon';
@@ -113,7 +113,8 @@ export function Draft({ run, onRoll, onReroll, onPick }: Props) {
                     <RouletteTitle final={`${roster.teamName} · ${roster.eventName}`} onDone={endReveal} />
                   ) : (
                     <h2 className="roll-title landed" ref={titleRef} tabIndex={-1}>
-                      {roster.teamName} · {roster.eventName} <span className="muted">({roster.year})</span>
+                      {roster.teamName} · {roster.eventName}
+                      {roster.placement && <span className="muted"> ({placementLabel(roster.placement)})</span>}
                     </h2>
                   )
                 ) : (

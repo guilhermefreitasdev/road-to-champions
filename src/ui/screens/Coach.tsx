@@ -1,3 +1,4 @@
+import { placementLabel } from '../../game/explain';
 import { coachOptions, rosterOf, type RunState } from '../../game/run';
 
 const SCOUT_TEXT = [
@@ -13,7 +14,10 @@ export function Coach({ run, onPick }: { run: RunState; onPick: (coachId: string
       <header className="screen-head">
         <h1>Escolha o coach</h1>
         <p className="context">Último pick</p>
-        <p className="muted measure">O coach não joga, mas soma força em todo mapa e ajuda você a ler o veto.</p>
+        <p className="muted measure">
+          O coach não joga, mas soma força em todo mapa e ajuda você a ler o veto. A tática vem da colocação do time
+          dele naquele evento; o veto, da experiência em eventos internacionais.
+        </p>
       </header>
       <div className="coach-list">
         {coachOptions(run).map((c) => {
@@ -21,7 +25,10 @@ export function Coach({ run, onPick }: { run: RunState; onPick: (coachId: string
           return (
             <button key={c.id} type="button" className="coach-card" onClick={() => onPick(c.id)}>
               <strong className="coach-name">{c.name}</strong>
-              <span className="small muted">{roster ? `${roster.teamName} · ${roster.eventName}` : c.eventId}</span>
+              <span className="small muted">
+                {roster ? `${roster.teamName} · ${roster.eventName}` : c.eventId}
+                {roster?.placement && ` (${placementLabel(roster.placement)})`}
+              </span>
               <span className="coach-stat">
                 <span className="badge">Tática +{c.tacticBonus}</span>
                 <span className="small">

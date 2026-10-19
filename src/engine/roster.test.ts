@@ -120,6 +120,12 @@ describe('rosterToLineup', () => {
     expect(new Set(slots)).toEqual(new Set(['duelist', 'initiator', 'controller', 'sentinel', 'flex']));
   });
 
+  it('carries an unknown IGL to the lineup', () => {
+    const r = SAMPLE_ROSTERS[0]!;
+    expect(rosterToLineup({ ...r, iglKnown: false }).iglKnown).toBe(false);
+    expect(rosterToLineup(r).iglKnown).toBeUndefined();
+  });
+
   it('rejects rosters without 5 cards', () => {
     const r = SAMPLE_ROSTERS[0]!;
     expect(() => rosterToLineup({ ...r, cards: r.cards.slice(0, 4) })).toThrow(/5 cards/);

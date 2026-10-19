@@ -3,8 +3,13 @@ import { SLOTS, openSlots } from '../engine/draft';
 import { roleFit, teamStrength } from '../engine/team';
 import { PLAYOFF_BRACKET } from '../engine/tournament';
 import { isVetoComplete, nextTurn, remainingMaps } from '../engine/veto';
-import { MISSING_ROLE_PENALTY, explainStrength, fitLabel } from './explain';
+import { MISSING_ROLE_PENALTY, explainStrength, fitLabel, formatStat, placementLabel } from './explain';
 import {
+  FIELD_ELITE_CAP,
+  OPPONENT_COUNT,
+  RUN_MAP_POOL,
+  RUN_POOL,
+  RUN_VERSION,
   USER_ID,
   applyUserVeto,
   beginUserVeto,
@@ -15,11 +20,16 @@ import {
   draftOptions,
   draftedLineup,
   involvesUser,
+  lineupOf,
+  isEliteRoster,
   parseRun,
+  pickField,
   pickDraftCoach,
   pickDraftPlayer,
   playUserMatch,
   rollDraft,
+  rolledRoster,
+  rosterOf,
   runSummary,
   shareText,
   standings,
@@ -63,6 +73,36 @@ function fullRun(mode: DraftMode, seed: string, onStop?: (r: RunState) => void):
   }
   return r;
 }
+
+describe('real pool', () => {
+  it('plays on the real rosters and the 7-map pool', () => {
+    expect(RUN_POOL.length).toBeGreaterThanOrEqual(240);
+    expect(RUN_MAP_POOL).toHaveLength(7);
+    const r = rollDraft(createRun('classic', 'real'));
+    const roster = rolledRoster(r)!;
+    expect(roster.cards).toHaveLength(5);
+    expect(roster.cards.every((c) => c.stats && c.stats.rounds >= 30)).toBe(true);
+    expect(rosterOf(roster.teamId, roster.eventId)).toBe(roster);
+  });
+
+  it('builds a field of 15 distinct teams with at most FIELD_ELITE_CAP elite rosters, avoiding the user', () => {
+    const userPlayers = RUN_POOL[0]!.cards.map((c) => c.playerId);
+    let elites = 0;
+    for (let i = 0; i < 40; i++) {
+      const keys = pickField(`field-${i}`, userPlayers);
+      expect(keys).toHaveLength(OPPONENT_COUNT);
+      const entries = keys.map((k) => RUN_POOL.find((e) => `${e.teamId}-${e.eventId}` === k)!);
+      expect(new Set(entries.map((e) => e.teamId)).size).toBe(OPPONENT_COUNT);
+      const n = entries.filter(isEliteRoster).length;
+      expect(n).toBeLessThanOrEqual(FIELD_ELITE_CAP);
+      elites += n;
+      for (const e of entries) expect(e.cards.some((c) => userPlayers.includes(c.playerId))).toBe(false);
+      expect(pickField(`field-${i}`, userPlayers)).toEqual(keys);
+    }
+    // The cap trims the field, it does not empty it of favourites.
+    expect(elites / 40).toBeGreaterThan(1);
+  });
+});
 
 describe('draft glue', () => {
   it('goes draft → team → tournament', () => {
@@ -204,7 +244,11 @@ describe('selectors', () => {
   it('parseRun discards corrupted saves', () => {
     expect(parseRun(null)).toBeNull();
     expect(parseRun({})).toBeNull();
-    expect(parseRun({ version: 2 })).toBeNull();
+    expect(parseRun({ version: RUN_VERSION })).toBeNull();
+    // A save from the fictional pool (v1) is discarded.
+    const v1 = autoDraft(createRun('classic', 'old'));
+    expect(parseRun(v1)).not.toBeNull();
+    expect(parseRun({ ...v1, version: 1 })).toBeNull();
     const r = startTournament(autoDraft(createRun('classic', 'p')), 'P');
     expect(parseRun({ ...r, opponents: ['nope-nope'], tournament: { ...r.tournament!, entrants: [{ id: 'nope-nope', name: 'x', seed: 1 }] } })).toBeNull();
     expect(parseRun({ ...r, draft: { ...r.draft, picks: [...r.draft.picks.slice(0, 4), { cardId: 'gone', slot: 'flex' }] } })).toBeNull();
@@ -268,6 +312,23 @@ describe('explainStrength', () => {
         expect(0 - missing.reduce((s, role) => s + MISSING_ROLE_PENALTY[role], 0)).toBe(breakdown.composition + 0);
         expect(parts.reduce((s, p) => s + p.value, 0)).toBeCloseTo(teamStrength(l).total);
       }
+    }
+  });
+
+  it('formats placements and stats in pt-BR', () => {
+    expect(placementLabel('1st')).toBe('1º');
+    expect(placementLabel('3rd–4th')).toBe('3º–4º');
+    expect(placementLabel('17th–32nd')).toBe('17º–32º');
+    expect(formatStat(1.2, 2)).toBe('1,20');
+    expect(formatStat(null)).toBe('—');
+  });
+
+  it('does not penalise an opponent whose IGL is unknown', () => {
+    const r = startTournament(autoDraft(createRun('classic', 'igl')), 'I');
+    const unknown = r.opponents!.map((id) => lineupOf(r, id)).find((l) => l.iglKnown === false);
+    if (unknown) {
+      expect(teamStrength(unknown).igl).toBe(0);
+      expect(explainStrength(unknown).parts.find((p) => p.key === 'igl')!.notes[0]).toMatch(/desconhecido/);
     }
   });
 
