@@ -25,30 +25,6 @@ async function copyText(text: string): Promise<boolean> {
   }
 }
 
-const TOKENS = /(\u{1F7E9}|\u{1F7E5}|\u{1F3C6})/u;
-
-/**
- * The share text as shown on the page: the result squares and the trophy are drawn (SVG/CSS), not emoji; the copied
- * text keeps them, since that is what chat apps render.
- */
-function SharePreview({ text }: { text: string }) {
-  return (
-    <>
-      {text.split(TOKENS).map((part, i) =>
-        part === '\u{1F7E9}' ? (
-          <span key={i} className="share-sq w" role="img" aria-label="vitória" />
-        ) : part === '\u{1F7E5}' ? (
-          <span key={i} className="share-sq l" role="img" aria-label="derrota" />
-        ) : part === '\u{1F3C6}' ? (
-          <Icon key={i} name="trophy" label="título" className="share-trophy" />
-        ) : (
-          part
-        ),
-      )}
-    </>
-  );
-}
-
 /** The share text with the difficulty as its second line (unless the text already names it). */
 export function withDifficulty(text: string, difficulty?: Difficulty): string {
   if (!difficulty) return text;
@@ -70,9 +46,8 @@ export function SharePanel({ text: base, difficulty }: { text: string; difficult
         {difficulty && <DifficultyBadge difficulty={difficulty} />}
       </h2>
       <p className="small muted">Sem spoiler: só o caminho, sem nomes de time ou jogador.</p>
-      <pre className="share">
-        <SharePreview text={text} />
-      </pre>
+      {/* Exactly what gets copied: plain text, no emoji, so it reads the same in any chat app. */}
+      <pre className="share">{text}</pre>
       <div className="share-actions">
         <button
           type="button"

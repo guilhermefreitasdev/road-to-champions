@@ -85,6 +85,7 @@ import {
   USER_ID,
   cleanTeamName,
   involvesUser,
+  resultLetters,
   userOpponent,
   userWon,
   withFamiliarity,
@@ -1077,7 +1078,7 @@ export interface SeasonSummary {
   mapsLost: number;
   championName?: string;
   mvp?: PlayerStat;
-  /** "Americas → Liga 2º → Masters 3º → Champions 🏆". */
+  /** "Americas → Liga 2º → Masters 3º–4º → Campeão do Champions" (plain text, no emoji). */
   path: string;
 }
 
@@ -1093,7 +1094,11 @@ export function seasonPath(s: SeasonState): string {
   for (const stage of COMP_STAGES) {
     const o = stageOutcome(s, stage);
     if (o.status === 'pending') break;
-    const tail = o.rank === 1 ? '🏆' : o.place ?? (o.status === 'playing' ? '…' : '');
+    if (o.rank === 1) {
+      parts.push(`Campeão ${stage === 'league' ? 'da' : 'do'} ${STAGE_LABELS[stage]}`);
+      continue;
+    }
+    const tail = o.place ?? (o.status === 'playing' ? '…' : '');
     parts.push(`${STAGE_LABELS[stage]} ${tail}`.trim());
   }
   return parts.join(' → ');
@@ -1152,16 +1157,13 @@ export function userSeasonPlayerStats(s: SeasonState): PlayerStat[] {
     .sort((x, y) => y.acs - x.acs || (x.handle < y.handle ? -1 : 1));
 }
 
-/** Spoiler-free result to share: the path through the season, no team or player names. */
+/** Spoiler-free result to share: the path through the season, no team or player names. Plain text, no emoji. */
 export function seasonShareText(s: SeasonState): string {
   const sum = seasonSummary(s);
-  const lines = [`Road to Champions · Complete Trials`, sum.path, `Força ${formatDecimal(sum.strength)} · campo ${FIELD_MODE_LABELS[sum.field]}`];
+  const lines = [`Road to Champions | Complete Trials`, sum.path, `Força ${formatDecimal(sum.strength)} · campo ${FIELD_MODE_LABELS[sum.field]}`];
   for (const o of sum.outcomes) {
-    const dots = userSeasonResults(s)
-      .filter((r) => r.stage === o.stage)
-      .map((r) => (r.won ? '🟩' : '🟥'))
-      .join('');
-    lines.push(`${STAGE_LABELS[o.stage]} ${o.wins}-${o.losses} ${dots}`.trim());
+    const letters = resultLetters(userSeasonResults(s).filter((r) => r.stage === o.stage).map((r) => r.won));
+    lines.push(`${STAGE_LABELS[o.stage]} ${o.wins}-${o.losses}${letters ? ` · ${letters}` : ''}`);
   }
   lines.push(`Mapas ${sum.mapsWon}-${sum.mapsLost}`);
   return lines.join('\n');

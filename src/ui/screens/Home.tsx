@@ -1,25 +1,31 @@
-import { useMemo, type ReactNode } from 'react';
-import { playerMedia } from '../../data/media';
-import type { Card } from '../../engine/types';
-import type { DraftMode, RunState } from '../../game/run';
-import { MODE_LABELS, RUN_POOL } from '../../game/run';
-import { REGION_LABELS, STAGE_LABELS, isCompStage, type SeasonState } from '../../game/season';
+import type { ReactNode } from 'react';
+import type { DraftMode } from '../../engine/draft';
+import { MODE_LABELS } from '../../game/labels';
 import type { Difficulty } from '../../game/difficulty';
-import { difficultyOf } from '../difficulty';
-import { DifficultyBadge, DifficultyPicker } from '../components/Difficulty';
+import { DifficultyPicker } from '../components/Difficulty';
 import { Emblem } from '../components/Emblem';
 import { Icon } from '../components/Icon';
-import { PlayerPhoto } from '../components/PlayerPhoto';
 
+/**
+ * The home page. Free of game code: the shell (src/ui/App.tsx) shows it while the card pool loads, with `ready` false
+ * (mode buttons waiting, placeholders for the art, the counts and the "Continuar" cards), then the game shows it ready.
+ */
 interface Props {
-  saved: RunState | null;
-  savedSeason: SeasonState | null;
+  /** False while the card pool loads. */
+  ready: boolean;
+  /** "Continuar" cards, built by the game (it reads the saves); null while loading or with nothing saved. */
+  continueCards: ReactNode | null;
+  /** Saved games found before loading: placeholders keep the space of their "Continuar" cards. */
+  pendingSaves: number;
+  /** A saved run / season that a new game would replace. */
+  hasRun: boolean;
+  hasSeason: boolean;
+  /** Real player photos fanned on the Draft clássico card (./HomeExtras.tsx); null while loading. */
+  fanArt: ReactNode | null;
   onNew: (mode: DraftMode) => void;
-  onContinue: () => void;
   onNewSeason: () => void;
-  onContinueSeason: () => void;
-  /** Finished runs in the history. */
-  historyCount: number;
+  /** Finished runs in the history; null while loading. */
+  historyCount: number | null;
   onHistory: () => void;
   onHowTo: () => void;
   onRanking: () => void;
@@ -28,31 +34,15 @@ interface Props {
   onDifficulty: (d: Difficulty) => void;
 }
 
-/** Players fanned on the Draft clássico card (first card of each with a photo; any missing one is skipped). */
-const FEATURED = ['aspas', 'Derke', 'TenZ', 'Demon1', 'yay', 'Less'];
-
-function featuredCards(): Card[] {
-  const out: Card[] = [];
-  for (const handle of FEATURED) {
-    if (out.length === 3) break;
-    for (const entry of RUN_POOL) {
-      const card = entry.cards.find((c) => c.handle === handle && playerMedia(c.playerId, c.eventId));
-      if (card) {
-        out.push(card);
-        break;
-      }
-    }
-  }
-  return out;
-}
-
 export function Home({
-  saved,
-  savedSeason,
+  ready,
+  continueCards,
+  pendingSaves,
+  hasRun,
+  hasSeason,
+  fanArt,
   onNew,
-  onContinue,
   onNewSeason,
-  onContinueSeason,
   historyCount,
   onHistory,
   onHowTo,
@@ -60,9 +50,8 @@ export function Home({
   difficulty,
   onDifficulty,
 }: Props) {
-  const featured = useMemo(featuredCards, []);
   return (
-    <div className="screen home">
+    <div className="screen home" aria-busy={!ready}>
       <section className="hero">
         <Emblem size={84} className="hero-emblem" />
         <h1 className="title">
@@ -71,42 +60,31 @@ export function Home({
         <p className="pitch">Monte o dream team de todas as eras do VCT.</p>
       </section>
 
-      {(saved || savedSeason) && (
+      {continueCards ? (
         <section className="continue" aria-labelledby="continue-title">
           <h2 id="continue-title" className="section-label">
             Continuar
           </h2>
-          <div className="continue-list">
-            {saved && (
-              <button type="button" className="continue-card" onClick={onContinue}>
-                <Icon name="play" className="continue-icon" />
-                <span className="continue-text">
-                  <strong>{MODE_LABELS[saved.mode]}</strong>
-                  <span className="small muted">
-                    {saved.teamName ? `${saved.teamName} · ` : ''}
-                    {phaseText(saved)}
-                  </span>
-                  <DifficultyBadge difficulty={difficultyOf(saved)} />
-                </span>
-                <span className="continue-go">Continuar run</span>
-              </button>
-            )}
-            {savedSeason && (
-              <button type="button" className="continue-card" onClick={onContinueSeason}>
-                <Icon name="play" className="continue-icon" />
-                <span className="continue-text">
-                  <strong>Complete Trials{savedSeason.region ? ` · ${REGION_LABELS[savedSeason.region]}` : ''}</strong>
-                  <span className="small muted">
-                    {savedSeason.teamName ? `${savedSeason.teamName} · ` : ''}
-                    {seasonText(savedSeason)}
-                  </span>
-                  <DifficultyBadge difficulty={difficultyOf(savedSeason)} />
-                </span>
-                <span className="continue-go">Continuar temporada</span>
-              </button>
-            )}
-          </div>
+          <div className="continue-list">{continueCards}</div>
         </section>
+      ) : (
+        !ready &&
+        pendingSaves > 0 && (
+          <section className="continue" aria-label="Continuar (carregando)">
+            <h2 className="section-label">Continuar</h2>
+            <div className="continue-list">
+              {Array.from({ length: pendingSaves }, (_, i) => (
+                <span key={i} className="continue-card skeleton" aria-hidden="true">
+                  <Icon name="play" className="continue-icon" />
+                  <span className="continue-text">
+                    <span className="skeleton-line" />
+                    <span className="skeleton-line short" />
+                  </span>
+                </span>
+              ))}
+            </div>
+          </section>
+        )
       )}
 
       <section className="modes" aria-labelledby="modes-title">
@@ -114,13 +92,19 @@ export function Home({
           Escolha o seu modo
         </h2>
         <DifficultyPicker value={difficulty} onChange={onDifficulty} />
+        {!ready && (
+          <p className="sr-only" role="status">
+            Carregando os cards dos jogadores…
+          </p>
+        )}
         <ul className="mode-list">
           <ModeCard
             id="classic"
             name={MODE_LABELS.classic}
             text={`Roleta de time + evento: escolha 1 jogador por giro. 3 rerolls.`}
-            art={<FanArt cards={featured} />}
-            replaces={!!saved}
+            art={fanArt ?? <BlankFan />}
+            replaces={hasRun}
+            ready={ready}
             onPlay={() => onNew('classic')}
           />
           <ModeCard
@@ -128,7 +112,8 @@ export function Home({
             name={MODE_LABELS.ultimate}
             text="5 opções fixas por pick, sem reroll. Pura leitura de draft."
             art={<BlindCardArt />}
-            replaces={!!saved}
+            replaces={hasRun}
+            ready={ready}
             onPlay={() => onNew('ultimate')}
           />
           <ModeCard
@@ -136,7 +121,8 @@ export function Home({
             name="Complete Trials"
             text="Escolha o servidor, vença a liga regional, o Masters e o Champions."
             art={<GlobeArt />}
-            replaces={!!savedSeason}
+            replaces={hasSeason}
+            ready={ready}
             onPlay={onNewSeason}
           />
         </ul>
@@ -148,7 +134,7 @@ export function Home({
           <span className="pill-text">
             <strong>Histórico</strong>
             <span className="small muted">
-              {historyCount === 0
+              {!historyCount
                 ? 'Suas runs terminadas, com as estatísticas dos jogadores.'
                 : `${historyCount} run${historyCount === 1 ? '' : 's'} terminada${historyCount === 1 ? '' : 's'}`}
             </span>
@@ -182,6 +168,7 @@ function ModeCard({
   text,
   art,
   replaces,
+  ready,
   onPlay,
 }: {
   id: string;
@@ -189,6 +176,7 @@ function ModeCard({
   text: string;
   art: ReactNode;
   replaces: boolean;
+  ready: boolean;
   onPlay: () => void;
 }) {
   return (
@@ -203,22 +191,32 @@ function ModeCard({
         {text}
       </p>
       {replaces && <p className="mode-warn small">Substitui a {id === 'trials' ? 'temporada' : 'run'} salva.</p>}
-      <button type="button" className="primary play" aria-describedby={`mode-${id}-text`} aria-label={`Jogar ${name}`} onClick={onPlay}>
-        Jogar
+      <button
+        type="button"
+        className="primary play"
+        aria-describedby={`mode-${id}-text`}
+        aria-label={ready ? `Jogar ${name}` : `Jogar ${name} (carregando)`}
+        disabled={!ready}
+        onClick={onPlay}
+      >
+        {ready ? (
+          'Jogar'
+        ) : (
+          <>
+            <span className="spinner" aria-hidden="true" /> Carregando
+          </>
+        )}
       </button>
     </li>
   );
 }
 
-/** Three real player photos fanned like a drafted hand. */
-function FanArt({ cards }: { cards: Card[] }) {
+/** Blank cards in the place of the fanned photos while the pool loads. */
+function BlankFan() {
   return (
     <span className="fan">
-      {cards.map((c, i) => (
-        <span key={c.id} className={`fan-card fan-${i}`}>
-          <PlayerPhoto playerId={c.playerId} eventId={c.eventId} handle={c.handle} country={c.country} size={72} />
-          <span className="fan-ovr">{c.ovr}</span>
-        </span>
+      {[0, 1, 2].map((i) => (
+        <span key={i} className={`fan-card fan-${i} fan-blank`} />
       ))}
     </span>
   );
@@ -271,26 +269,4 @@ function GlobeArt() {
       ))}
     </svg>
   );
-}
-
-function phaseText(run: RunState): string {
-  switch (run.phase) {
-    case 'draft':
-      return `draft, pick ${Math.min(run.draft.picks.length + 1, 5)}/5`;
-    case 'team':
-      return 'time pronto';
-    case 'tournament':
-      return 'Champions em andamento';
-    case 'done':
-      return 'Champions encerrado';
-  }
-}
-
-function seasonText(s: SeasonState): string {
-  if (s.stage === 'region') return 'escolha do servidor';
-  if (s.stage === 'draft') return `draft, pick ${Math.min((s.draft?.picks.length ?? 0) + 1, 5)}/5`;
-  if (s.stage === 'team') return 'time pronto';
-  if (s.stage === 'market') return 'janela de transferências';
-  if (isCompStage(s.stage)) return `${STAGE_LABELS[s.stage]} em andamento`;
-  return 'temporada encerrada';
 }

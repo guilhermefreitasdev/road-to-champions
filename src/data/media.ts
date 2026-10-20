@@ -4,6 +4,7 @@
  */
 import gameMediaJson from './game/media.json';
 import realMediaJson from './real/media.json';
+import { publicUrl } from './publicUrl';
 
 export interface MediaSource {
   /** Where the file came from (today always 'liquipedia'). */
@@ -59,9 +60,7 @@ const INLINE_PLAYER_PHOTOS: Record<string, string> =
 /** Public URL of a path under public/ (honours Vite's base), or the inlined data URL of a player photo. */
 export function mediaUrl(path: string): string {
   const inlined = INLINE_PLAYER_PHOTOS[`../../public/${path}`];
-  if (inlined) return inlined;
-  const base = import.meta.env?.BASE_URL ?? '/';
-  return `${base.endsWith('/') ? base : `${base}/`}${path}`;
+  return inlined ?? publicUrl(path);
 }
 
 export const mapMedia = (name: string): MapMedia | undefined => GAME_MEDIA.maps[name];

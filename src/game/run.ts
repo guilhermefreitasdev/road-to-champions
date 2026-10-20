@@ -25,6 +25,7 @@ import {
 } from '../engine/draft';
 import { createRng } from '../engine/rng';
 import { formatDecimal } from './explain';
+import { MODE_LABELS } from './labels';
 import { findCoach, pickOpponents, rosterKey } from '../engine/roster';
 import { simulateSeries, type SeriesOptions, type SeriesResult } from '../engine/series';
 import { teamStrength } from '../engine/team';
@@ -651,26 +652,31 @@ export function runSummary(run: RunState): RunSummary {
   return summary;
 }
 
-export const MODE_LABELS: Record<DraftMode, string> = { classic: 'Draft clássico', ultimate: 'Ultimate Draft' };
+export { MODE_LABELS };
 
-/** Spoiler-free result to share: no team or player names, only how far the run went. */
+/**
+ * Series results as plain letters, V (vitória) and D (derrota), in play order: share texts carry no emoji, so they
+ * read the same in WhatsApp, X and anywhere else.
+ */
+export function resultLetters(wins: readonly boolean[]): string {
+  return wins.map((won) => (won ? 'V' : 'D')).join(' ');
+}
+
+/** Spoiler-free result to share: no team or player names, only how far the run went. Plain text, no emoji. */
 export function shareText(run: RunState): string {
   const s = runSummary(run);
   const finish = s.finish;
-  const head = finish?.champion ? '🏆 Campeão' : finish ? `${finish.place} · ${finish.label}` : 'Em andamento';
-  const dots = (stage: 'groups' | 'playoffs') =>
-    s.record.results
-      .filter((r) => r.match.stage === stage)
-      .map((r) => (r.won ? '🟩' : '🟥'))
-      .join('');
+  const head = finish?.champion ? 'Campeão' : finish ? `${finish.place} · ${finish.label}` : 'Em andamento';
+  const record = (label: string, rec: { wins: number; losses: number }, stage: 'groups' | 'playoffs') => {
+    const letters = resultLetters(s.record.results.filter((r) => r.match.stage === stage).map((r) => r.won));
+    return `${label} ${rec.wins}-${rec.losses}${letters ? ` · ${letters}` : ''}`;
+  };
   const lines = [
-    `Road to Champions ${head}`,
+    `Road to Champions | ${head}`,
     `${MODE_LABELS[s.mode]} · Força ${formatDecimal(s.strength)}`,
-    `Grupos ${s.record.groups.wins}-${s.record.groups.losses} ${dots('groups')}`,
+    record('Grupos', s.record.groups, 'groups'),
   ];
-  if (s.record.playoffs.wins + s.record.playoffs.losses > 0) {
-    lines.push(`Playoffs ${s.record.playoffs.wins}-${s.record.playoffs.losses} ${dots('playoffs')}`);
-  }
+  if (s.record.playoffs.wins + s.record.playoffs.losses > 0) lines.push(record('Playoffs', s.record.playoffs, 'playoffs'));
   lines.push(`Mapas ${s.record.mapsWon}-${s.record.mapsLost}`);
   return lines.join('\n');
 }

@@ -1,17 +1,9 @@
 import { deserializeRun, deserializeSeason, serializeRun, serializeSeason } from '../game/persist';
 import type { RunState } from '../game/run';
 import type { SeasonState } from '../game/season';
+import { OLD_KEYS, RUN_KEY as KEY, SEASON_KEY, clearRun, clearSeason } from './saveSlots';
 
-const KEY = 'rtc:run:v7';
-/** Complete Trials season (its own slot: a season and a run can be saved at the same time). */
-const SEASON_KEY = 'rtc:season:v4';
-/**
- * Keys of older save formats, removed on load (v1 = fictional sample cards, v2 = Swiss stage, v3 = strength v1,
- * v4 = before Modelo v3, v5 = before agent pools / flex roles / per-map agents, v6 = before difficulty and box scores;
- * season v3 = before difficulty and the transfer market). The history (rtc:history:v1) is
- * a snapshot and survives these bumps.
- */
-const OLD_KEYS = ['rtc:run:v1', 'rtc:run:v2', 'rtc:run:v3', 'rtc:run:v4', 'rtc:run:v5', 'rtc:run:v6', 'rtc:season:v1', 'rtc:season:v2', 'rtc:season:v3'];
+export { clearRun, clearSeason };
 
 /** Saved run, or null when there is none, storage is unavailable, or the save is corrupted/outdated. */
 export function loadRun(): RunState | null {
@@ -36,14 +28,6 @@ export function saveRun(run: RunState): void {
   }
 }
 
-export function clearRun(): void {
-  try {
-    window.localStorage.removeItem(KEY);
-  } catch {
-    // Ignore: nothing to clear.
-  }
-}
-
 /** Saved Complete Trials season, or null (none, unavailable storage, corrupted or outdated save). */
 export function loadSeason(): SeasonState | null {
   try {
@@ -62,14 +46,6 @@ export function saveSeason(season: SeasonState): void {
     window.localStorage.setItem(SEASON_KEY, serializeSeason(season));
   } catch {
     // Same as saveRun.
-  }
-}
-
-export function clearSeason(): void {
-  try {
-    window.localStorage.removeItem(SEASON_KEY);
-  } catch {
-    // Ignore.
   }
 }
 

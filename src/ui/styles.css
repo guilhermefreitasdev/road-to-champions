@@ -7214,7 +7214,7 @@ button.rank-card-btn.is-on {
   font-size: 0.72rem;
 }
 
-/* --- Country chip, share preview --- */
+/* --- Country chip --- */
 
 .country-chip {
   display: inline-flex;
@@ -7233,23 +7233,129 @@ button.rank-card-btn.is-on {
   vertical-align: middle;
 }
 
-.share-sq {
+/* --- Loading & install (app shell) --- */
+
+/* Shown while the card pool or a screen's code loads (src/ui/Frame.tsx, Home with ready=false). */
+.spinner {
   display: inline-block;
-  width: 0.9em;
-  height: 0.9em;
-  margin-right: 2px;
-  border-radius: 2px;
-  vertical-align: -0.1em;
+  width: 1em;
+  height: 1em;
+  flex: none;
+  border: 2px solid var(--line-strong);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  vertical-align: -0.15em;
+  animation: spin 800ms linear infinite;
 }
 
-.share-sq.w {
-  background: var(--win);
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
 
-.share-sq.l {
-  background: var(--accent);
+.screen-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sp-2);
+  min-height: 40vh;
+  color: var(--muted);
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
 }
 
-.share-trophy {
-  color: var(--gold);
+.screen-loading .spinner {
+  font-size: 1.4rem;
+}
+
+button.play .spinner {
+  margin-right: var(--sp-2);
+  border-color: rgba(255, 255, 255, 0.25);
+  border-top-color: var(--text);
+}
+
+.continue-card.skeleton {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: center;
+  gap: var(--sp-3);
+  width: 100%;
+  min-height: 84px;
+  padding: var(--sp-3) var(--sp-4);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--glass-line);
+  background: var(--glass);
+}
+
+.continue-card.skeleton .continue-icon {
+  color: var(--line-strong);
+}
+
+.continue-card.skeleton .continue-text {
+  gap: var(--sp-2);
+}
+
+.skeleton-line {
+  display: block;
+  height: 14px;
+  width: 60%;
+  border-radius: 4px;
+  background: linear-gradient(100deg, var(--surface-2) 30%, var(--surface-3) 50%, var(--surface-2) 70%) 0 0 / 200% 100%;
+  animation: shimmer 900ms linear infinite;
+}
+
+.skeleton-line.short {
+  width: 35%;
+}
+
+.fan-card.fan-blank {
+  width: 82px;
+  height: 100px;
+  background: linear-gradient(100deg, #223140 30%, #2a3b4c 50%, #223140 70%) 0 0 / 200% 100%;
+  animation: shimmer 900ms linear infinite;
+}
+
+.fan-1.fan-blank {
+  border-color: rgba(255, 70, 85, 0.5);
+}
+
+button.nav-link:disabled {
+  opacity: 0.55;
+  background: transparent;
+}
+
+button.nav-link.install {
+  color: var(--text);
+}
+
+@media (min-width: 900px) {
+  /* Desktop: icon only (the label stays for screen readers), so the nav never overflows. */
+  .nav-install-item .nav-install-label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+
+  button.nav-link.install {
+    padding: 6px 10px;
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 899px) {
+  .nav-install-item {
+    margin-top: var(--sp-1);
+    border-top: 1px solid var(--line);
+  }
+
+  .nav-reset-item + .nav-install-item {
+    margin-top: 0;
+    border-top: 0;
+  }
 }

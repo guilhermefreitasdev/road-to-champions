@@ -48,6 +48,7 @@ import {
   rolledRoster,
   rosterOf,
   runSummary,
+  resultLetters,
   shareText,
   standings,
   startTournament,
@@ -266,8 +267,11 @@ describe('selectors', () => {
     expect(cells).toHaveLength(PLAYOFF_BRACKET.length);
     expect(cells.every((c) => c.match?.result)).toBe(true);
     const text = shareText(r);
-    expect(text).toMatch(/^Road to Champions /);
-    expect(text).toMatch(/\nGrupos \d-\d /);
+    expect(text).toMatch(/^Road to Champions \| /);
+    expect(text).toMatch(/\nGrupos \d-\d · [VD]( [VD]){2}\n/);
+    // Plain text only: no emoji (they render differently, or not at all, across chat apps).
+    expect(text).not.toMatch(/\p{Extended_Pictographic}/u);
+    if (r.tournament!.champion === USER_ID) expect(text.split('\n')[0]).toBe('Road to Champions | Campeão');
     for (const e of r.tournament!.entrants) expect(text).not.toContain(e.name);
     const opp = r.opponents![0]!;
     const team = entrantTeam(r, opp);
@@ -478,5 +482,12 @@ describe('explain: flex natos, agents and familiarity', () => {
     expect(familiarityLabel(5, 2)).toBe('Familiaridade: +2 (5 mapas)');
     expect(AGENT_HELP).toContain('±2');
     expect(FAMILIARITY_HELP).toContain('+0,5');
+  });
+});
+
+describe('share text', () => {
+  it('writes series results as plain letters, no emoji', () => {
+    expect(resultLetters([true, false, true])).toBe('V D V');
+    expect(resultLetters([])).toBe('');
   });
 });

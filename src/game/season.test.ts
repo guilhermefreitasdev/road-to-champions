@@ -237,8 +237,11 @@ describe('a whole season', () => {
       const sum = seasonSummary(s);
       expect(sum.region).toBe(region);
       expect(sum.path.startsWith(seasonPath(s).split(' → ')[0]!)).toBe(true);
-      expect(seasonShareText(s)).toContain('Complete Trials');
-      expect(seasonShareText(s)).not.toContain('Time Teste');
+      const share = seasonShareText(s);
+      expect(share.split('\n')[0]).toBe('Road to Champions | Complete Trials');
+      expect(share).not.toContain('Time Teste');
+      expect(share).not.toMatch(/\p{Extended_Pictographic}/u);
+      expect(share).toMatch(/\nLiga \d+-\d+ · [VD]( [VD])*\n/);
       expect(userSeasonResults(s).length).toBeGreaterThanOrEqual(5);
       for (const r of userSeasonResults(s)) expect(s.userSeries[r.key]).toBeDefined();
       // Deterministic: same seed and choices, same JSON.
@@ -285,7 +288,7 @@ describe('a whole season', () => {
       expect(sum.championName).toBeDefined();
       expect(sum.path).toContain('Masters');
       expect(sum.path).toContain('Champions');
-      if (sum.champion) expect(sum.path).toContain('🏆');
+      if (sum.champion) expect(sum.path.endsWith('Campeão do Champions')).toBe(true);
       const first = userSeasonResults(s)[0]!;
       expect(findSeasonMatch(s, first.key)!.match.id).toBe(first.match.id);
     }

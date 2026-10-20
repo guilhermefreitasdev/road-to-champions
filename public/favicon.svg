@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 72"><g transform="translate(0 0) scale(1)">
+    <path d="M32 3l26 9v22c0 18-12 29-26 35C18 63 6 52 6 34V12z" fill="rgba(15,25,35,0.85)" stroke="#ff4655" stroke-width="3"/>
+    <path d="M32 10l19 6.6V34c0 13.6-8.6 22.4-19 27.4C21.6 56.4 13 47.6 13 34V16.6z" fill="none" stroke="#ece8e1" stroke-opacity="0.35" stroke-width="1.5"/>
+    <path d="M20 52l12-8 12 8" fill="none" stroke="#ff4655" stroke-width="3" stroke-linejoin="round"/>
+    <text x="32" y="38" text-anchor="middle" fill="#ece8e1" font-family="'Barlow Condensed', 'Arial Narrow', sans-serif" font-style="italic" font-weight="900" font-size="19" letter-spacing="0.5">RTC</text>
+  </g></svg>
