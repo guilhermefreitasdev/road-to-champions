@@ -5,6 +5,8 @@
  */
 import { DEFAULT_TEAM_NAME, MODE_LABELS, runSummary, type RunState } from '../game/run';
 import { FIELD_MODE_LABELS, REGION_LABELS, STAGE_LABELS, seasonSummary, type SeasonState } from '../game/season';
+import type { Difficulty } from '../game/difficulty';
+import { difficultyOf, isDifficulty } from './difficulty';
 import { runStats, seasonStats, type PlayerStatsRow } from './playerStats';
 
 export const HISTORY_KEY = 'rtc:history:v1';
@@ -31,6 +33,8 @@ export interface HistoryEntry {
   mapsWon: number;
   mapsLost: number;
   strength: number;
+  /** Absent in entries recorded before difficulties existed (those played as Normal). */
+  difficulty?: Difficulty;
   players: PlayerStatsRow[];
 }
 
@@ -52,6 +56,7 @@ export function runEntry(run: RunState, date: Date): HistoryEntry {
     mapsWon: s.record.mapsWon,
     mapsLost: s.record.mapsLost,
     strength: s.strength,
+    difficulty: difficultyOf(run),
     players: runStats(run),
   };
 }
@@ -80,6 +85,7 @@ export function seasonEntry(season: SeasonState, date: Date): HistoryEntry {
     mapsWon: s.mapsWon,
     mapsLost: s.mapsLost,
     strength: s.strength,
+    difficulty: difficultyOf(season),
     players: seasonStats(season),
   };
 }
@@ -101,7 +107,7 @@ function isAgent(a: unknown): boolean {
 const PLAYER_NUMS = ['maps', 'rounds', 'kills', 'deaths', 'assists', 'kd', 'acs', 'rating', 'kast', 'fk', 'fd', 'k3', 'k4', 'aces', 'mvps'] as const;
 
 function isPlayer(p: unknown): p is PlayerStatsRow {
-  return isObj(p) && isStr(p.cardId) && isStr(p.handle) && PLAYER_NUMS.every((k) => isNum(p[k])) && Array.isArray(p.agents) && p.agents.every(isAgent);
+  return isObj(p) && isStr(p.cardId) && isStr(p.handle) && PLAYER_NUMS.every((k) => isNum(p[k])) && (p.ovr === undefined || isNum(p.ovr)) && Array.isArray(p.agents) && p.agents.every(isAgent);
 }
 
 function isEntry(e: unknown): e is HistoryEntry {
@@ -124,10 +130,17 @@ function isEntry(e: unknown): e is HistoryEntry {
   );
 }
 
+/** An unknown difficulty (a newer or corrupted entry) is dropped from the entry, not the entry itself. */
+function cleanEntry(e: HistoryEntry): HistoryEntry {
+  if (e.difficulty === undefined || isDifficulty(e.difficulty)) return e;
+  const { difficulty: _drop, ...rest } = e;
+  return rest;
+}
+
 /** Valid entries of a stored value (anything malformed is dropped, never thrown). */
 export function parseHistory(data: unknown): HistoryEntry[] {
   if (!Array.isArray(data)) return [];
-  return data.filter(isEntry).slice(0, HISTORY_MAX);
+  return data.filter(isEntry).map(cleanEntry).slice(0, HISTORY_MAX);
 }
 
 export function loadHistory(): HistoryEntry[] {

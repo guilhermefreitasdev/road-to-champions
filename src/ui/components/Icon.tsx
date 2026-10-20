@@ -30,6 +30,8 @@ export type IconName =
   | 'help'
   | 'cards'
   | 'search'
+  | 'medal'
+  | 'podium'
   | 'role-duelist'
   | 'role-initiator'
   | 'role-controller'
@@ -68,6 +70,8 @@ const PATHS: Record<IconName, string> = {
   help: 'M12 21a9 9 0 100-18 9 9 0 000 18zM9.5 9.3a2.6 2.6 0 015 .9c0 1.7-2.5 2.3-2.5 3.8M12 17h.01',
   cards: 'M4 6.5l9-2.4 3.4 12.6-9 2.4zM14.5 5.2l4.6 1.3-3.3 12.3',
   search: 'M11 4a7 7 0 100 14 7 7 0 000-14zM20 20l-4-4',
+  medal: 'M8 3l3 6.5M16 3l-3 6.5M12 21a5.5 5.5 0 100-11 5.5 5.5 0 000 11zM12 13.2v4.6',
+  podium: 'M9 8h6v12H9zM3 13h6v7H3zM15 11h6v9h-6zM12 3l.9 1.9 2 .3-1.5 1.4.4 2-1.8-1-1.8 1 .4-2-1.5-1.4 2-.3z',
   'role-duelist': 'M13 2L5 14h6l-1 8 8-12h-6z',
   'role-initiator': 'M2 12s3.6-6 10-6 10 6 10 6-3.6 6-10 6S2 12 2 12zM12 9.5a2.5 2.5 0 100 5 2.5 2.5 0 000-5z',
   'role-controller': 'M7 18h10a4 4 0 00.6-8A6 6 0 006.3 9 4.5 4.5 0 007 18z',

@@ -13,6 +13,8 @@ import {
   type RunState,
 } from '../../game/run';
 import { Bracket } from '../components/Bracket';
+import { DifficultyBadge } from '../components/Difficulty';
+import { difficultyOf } from '../difficulty';
 import { GroupStage } from '../components/GroupStage';
 import { Icon, YouTag } from '../components/Icon';
 import { Results } from '../components/Results';
@@ -71,6 +73,12 @@ export function Hub({ run, onVeto, onViewSeries, onStats }: Props) {
               </dd>
             </div>
           )}
+          <div>
+            <dt>Dificuldade</dt>
+            <dd>
+              <DifficultyBadge difficulty={difficultyOf(run)} />
+            </dd>
+          </div>
         </dl>
         <div className="hub-actions">
           <button type="button" className="secondary" onClick={onStats} disabled={played.length === 0} aria-describedby={played.length === 0 ? 'stats-hint' : undefined}>

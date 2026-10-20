@@ -4,6 +4,9 @@ import type { Card } from '../../engine/types';
 import type { DraftMode, RunState } from '../../game/run';
 import { MODE_LABELS, RUN_POOL } from '../../game/run';
 import { REGION_LABELS, STAGE_LABELS, isCompStage, type SeasonState } from '../../game/season';
+import type { Difficulty } from '../../game/difficulty';
+import { difficultyOf } from '../difficulty';
+import { DifficultyBadge, DifficultyPicker } from '../components/Difficulty';
 import { Emblem } from '../components/Emblem';
 import { Icon } from '../components/Icon';
 import { PlayerPhoto } from '../components/PlayerPhoto';
@@ -19,6 +22,10 @@ interface Props {
   historyCount: number;
   onHistory: () => void;
   onHowTo: () => void;
+  onRanking: () => void;
+  /** Difficulty of the next game started here (remembered between visits). */
+  difficulty: Difficulty;
+  onDifficulty: (d: Difficulty) => void;
 }
 
 /** Players fanned on the Draft clássico card (first card of each with a photo; any missing one is skipped). */
@@ -39,7 +46,20 @@ function featuredCards(): Card[] {
   return out;
 }
 
-export function Home({ saved, savedSeason, onNew, onContinue, onNewSeason, onContinueSeason, historyCount, onHistory, onHowTo }: Props) {
+export function Home({
+  saved,
+  savedSeason,
+  onNew,
+  onContinue,
+  onNewSeason,
+  onContinueSeason,
+  historyCount,
+  onHistory,
+  onHowTo,
+  onRanking,
+  difficulty,
+  onDifficulty,
+}: Props) {
   const featured = useMemo(featuredCards, []);
   return (
     <div className="screen home">
@@ -66,6 +86,7 @@ export function Home({ saved, savedSeason, onNew, onContinue, onNewSeason, onCon
                     {saved.teamName ? `${saved.teamName} · ` : ''}
                     {phaseText(saved)}
                   </span>
+                  <DifficultyBadge difficulty={difficultyOf(saved)} />
                 </span>
                 <span className="continue-go">Continuar run</span>
               </button>
@@ -79,6 +100,7 @@ export function Home({ saved, savedSeason, onNew, onContinue, onNewSeason, onCon
                     {savedSeason.teamName ? `${savedSeason.teamName} · ` : ''}
                     {seasonText(savedSeason)}
                   </span>
+                  <DifficultyBadge difficulty={difficultyOf(savedSeason)} />
                 </span>
                 <span className="continue-go">Continuar temporada</span>
               </button>
@@ -91,6 +113,7 @@ export function Home({ saved, savedSeason, onNew, onContinue, onNewSeason, onCon
         <h2 id="modes-title" className="section-label">
           Escolha o seu modo
         </h2>
+        <DifficultyPicker value={difficulty} onChange={onDifficulty} />
         <ul className="mode-list">
           <ModeCard
             id="classic"
@@ -129,6 +152,14 @@ export function Home({ saved, savedSeason, onNew, onContinue, onNewSeason, onCon
                 ? 'Suas runs terminadas, com as estatísticas dos jogadores.'
                 : `${historyCount} run${historyCount === 1 ? '' : 's'} terminada${historyCount === 1 ? '' : 's'}`}
             </span>
+          </span>
+          <span className="pill-go">Ver</span>
+        </button>
+        <button type="button" className="pill-card" onClick={onRanking}>
+          <Icon name="podium" className="pill-icon" />
+          <span className="pill-text">
+            <strong>Ranking</strong>
+            <span className="small muted">Os maiores OVRs de todos os tempos e de cada ano.</span>
           </span>
           <span className="pill-go">Ver</span>
         </button>
@@ -259,6 +290,7 @@ function seasonText(s: SeasonState): string {
   if (s.stage === 'region') return 'escolha do servidor';
   if (s.stage === 'draft') return `draft, pick ${Math.min((s.draft?.picks.length ?? 0) + 1, 5)}/5`;
   if (s.stage === 'team') return 'time pronto';
+  if (s.stage === 'market') return 'janela de transferências';
   if (isCompStage(s.stage)) return `${STAGE_LABELS[s.stage]} em andamento`;
   return 'temporada encerrada';
 }

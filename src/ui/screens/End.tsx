@@ -1,6 +1,8 @@
 import { formatDecimal } from '../../game/explain';
 import { FINISH_STAGES, MODE_LABELS, runSummary, shareText, type FinishStage, type RunState } from '../../game/run';
+import { DifficultyBadge } from '../components/Difficulty';
 import { Icon } from '../components/Icon';
+import { difficultyOf } from '../difficulty';
 import { Results } from '../components/Results';
 import { SharePanel } from '../components/SharePanel';
 
@@ -42,11 +44,12 @@ export function End({ run, onNewRun, onViewSeries, onStats }: Props) {
         <p className="end-team">
           {champion ? `${s.teamName} venceu o Champions` : s.teamName}
           <span className="muted"> · {MODE_LABELS[s.mode]}</span>
+          <DifficultyBadge difficulty={difficultyOf(run)} />
         </p>
         {s.finish && <StagePath reached={s.finish.stage} />}
       </header>
 
-      <SharePanel text={text} />
+      <SharePanel text={text} difficulty={difficultyOf(run)} />
 
       <div className="end-grid">
         <section className="panel">

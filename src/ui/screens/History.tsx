@@ -2,6 +2,7 @@ import { useState } from 'react';
 import type { Card } from '../../engine/types';
 import { formatDecimal } from '../../game/explain';
 import { ConfirmBar } from '../components/ConfirmBar';
+import { DifficultyBadge } from '../components/Difficulty';
 import { Icon } from '../components/Icon';
 import { PlayerStatsTable } from '../components/PlayerStatsTable';
 import type { HistoryEntry } from '../history';
@@ -55,8 +56,9 @@ export function History({ entries, cardOf, onClear, onBack }: Props) {
                     <span className="history-main">
                       <strong>{e.teamName}</strong>
                       <span className="history-result">{e.result}</span>
-                      <span className="small muted">
+                      <span className="small muted history-meta">
                         {e.modeLabel} · {formatDate(e.date)}
+                        {e.difficulty && <DifficultyBadge difficulty={e.difficulty} />}
                       </span>
                     </span>
                     <span className="history-record small">

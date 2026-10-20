@@ -13,6 +13,11 @@ export type AgentLine = AgentStatLine;
 export interface PlayerStatsRow {
   cardId: string;
   handle: string;
+  /**
+   * OVR the player played at (card OVR + tournament form + prodigy growth), from the sim. Absent in history entries
+   * recorded before it existed.
+   */
+  ovr?: number;
   maps: number;
   rounds: number;
   kills: number;
@@ -34,10 +39,11 @@ export interface PlayerStatsRow {
   agents: AgentLine[];
 }
 
-export function toRow(p: PlayerStatsLine): PlayerStatsRow {
+export function toRow(p: PlayerStatsLine & { ovr?: number }): PlayerStatsRow {
   return {
     cardId: p.cardId,
     handle: p.handle,
+    ...(typeof p.ovr === 'number' ? { ovr: p.ovr } : {}),
     maps: p.maps,
     rounds: p.rounds,
     kills: p.kills,

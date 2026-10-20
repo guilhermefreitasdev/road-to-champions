@@ -1,6 +1,6 @@
-import { Component, useEffect, useRef, useState, type ReactNode } from 'react';
+import { Component, useCallback, useEffect, useRef, useState, type ReactNode } from 'react';
 import { findCard } from '../engine/roster';
-import type { Card, Lineup, Slot } from '../engine/types';
+import type { Card, Slot } from '../engine/types';
 import { ALL_ROSTERS } from '../data/real';
 import { mapMedia, mediaUrl } from '../data/media';
 import {
@@ -37,14 +37,19 @@ import { History } from './screens/History';
 import { HowTo } from './screens/HowTo';
 import { Hub } from './screens/Hub';
 import { Playback } from './screens/Playback';
+import { Ranking } from './screens/Ranking';
 import { Region } from './screens/Region';
 import { SeasonEnd } from './screens/SeasonEnd';
 import { SeasonHub } from './screens/SeasonHub';
 import { Series } from './screens/Series';
-import { Stats } from './screens/Stats';
+import { Market } from './screens/Market';
+import { Stats, type BoardStage } from './screens/Stats';
 import { Team } from './screens/Team';
 import { Veto } from './screens/Veto';
 import { clearHistory, loadHistory, recordEntry, runEntry, seasonEntry, type HistoryEntry } from './history';
+import type { Difficulty } from '../game/difficulty';
+import { runAllPlayerStats, seasonAllPlayerStats } from '../game/stats';
+import { difficultyOf, loadDifficulty, saveDifficulty } from './difficulty';
 import { usePrefersReducedMotion } from './motion';
 import { runStats, seasonStats } from './playerStats';
 import { clearRun, clearSeason, loadRun, loadSeason, newSeed, saveRun, saveSeason } from './storage';
@@ -59,6 +64,7 @@ type View =
   | { kind: 'home' }
   | { kind: 'history' }
   | { kind: 'howto' }
+  | { kind: 'ranking' }
   | { kind: 'run' }
   | { kind: 'hub' }
   | { kind: 'stats' }
@@ -70,19 +76,21 @@ type View =
   | { kind: 'season-series'; key: string }
   | { kind: 'season-playback'; key: string };
 
-type ScreenKey = 'home' | 'history' | 'howto' | 'region' | 'draft' | 'coach' | 'team' | 'hub' | 'stats' | 'veto' | 'playback' | 'series' | 'end';
+type ScreenKey = 'home' | 'history' | 'howto' | 'ranking' | 'region' | 'market' | 'draft' | 'coach' | 'team' | 'hub' | 'stats' | 'veto' | 'playback' | 'series' | 'end';
 type Game = 'run' | 'season' | null;
 
 function screenOf(run: RunState | null, s: SeasonState | null, view: View): { screen: ScreenKey; game: Game } {
   if (view.kind === 'home') return { screen: 'home', game: null };
   if (view.kind === 'history') return { screen: 'history', game: null };
   if (view.kind === 'howto') return { screen: 'howto', game: null };
+  if (view.kind === 'ranking') return { screen: 'ranking', game: null };
   if (view.kind.startsWith('season')) {
     if (!s) return { screen: 'home', game: null };
     const game: Game = 'season';
     if (view.kind === 'season-series' && s.userSeries[view.key]) return { screen: 'series', game };
     if (view.kind === 'season-playback' && s.userSeries[view.key]) return { screen: 'playback', game };
-    if (view.kind === 'season-stats' && (season.isCompStage(s.stage) || s.stage === 'done')) return { screen: 'stats', game };
+    if (view.kind === 'season-stats' && seasonHasStats(s)) return { screen: 'stats', game };
+    if (s.stage === 'market') return { screen: 'market', game };
     switch (s.stage) {
       case 'region':
         return { screen: 'region', game };
@@ -118,6 +126,11 @@ function screenOf(run: RunState | null, s: SeasonState | null, view: View): { sc
   }
 }
 
+/** The season's stats exist once its first competition started (also during a transfer window). */
+function seasonHasStats(s: SeasonState): boolean {
+  return season.isCompStage(s.stage) || s.stage === 'done' || s.stage === 'market';
+}
+
 /** The game behind an error boundary: a crash offers a new run (clearing the saves) instead of a blank page. */
 export function App() {
   const [generation, setGeneration] = useState(0);
@@ -140,14 +153,21 @@ function cardById(id: string): Card | undefined {
   return findCard(ALL_ROSTERS, id.replace(/#.*$/, ''));
 }
 
-function cardsOf(lineup: Lineup): Map<string, Card> {
-  return new Map(lineup.players.map((p) => [p.card.id, p.card]));
+/** Base cards behind stats rows (the user's ids carry a "#user" suffix in the sim). */
+function cardsOfRows(rows: readonly { cardId: string }[]): Map<string, Card> {
+  const out = new Map<string, Card>();
+  for (const r of rows) {
+    const card = cardById(r.cardId);
+    if (card) out.set(r.cardId, card);
+  }
+  return out;
 }
 
 function Game() {
   const [run, setRun] = useState<RunState | null>(() => loadRun());
   const [s, setSeason] = useState<SeasonState | null>(() => loadSeason());
   const [history, setHistory] = useState<HistoryEntry[]>(() => loadHistory());
+  const [difficulty, setDifficultyState] = useState<Difficulty>(() => loadDifficulty());
   const [view, setViewState] = useState<View>({ kind: 'home' });
   const [error, setError] = useState<string | null>(null);
   const [confirmReset, setConfirmReset] = useState(false);
@@ -217,15 +237,20 @@ function Game() {
     }
   };
 
-  const startNew = (mode: DraftMode) => {
-    const next = createRun(mode, newSeed());
+  const setDifficulty = (d: Difficulty) => {
+    setDifficultyState(d);
+    saveDifficulty(d);
+  };
+
+  const startNew = (mode: DraftMode, d: Difficulty = difficulty) => {
+    const next = createRun(mode, newSeed(), d);
     setRun(next);
     saveRun(next);
     setView({ kind: 'run' });
   };
 
-  const startNewSeason = (field?: season.FieldMode) => {
-    const next = season.createSeason(newSeed(), field);
+  const startNewSeason = (d: Difficulty = difficulty, field?: season.FieldMode) => {
+    const next = season.createSeason(newSeed(), d, field);
     setSeason(next);
     saveSeason(next);
     setView({ kind: 'season' });
@@ -233,8 +258,8 @@ function Game() {
 
   /** "Recomeçar": a fresh game of the same mode, from its first screen (the old save is replaced). */
   const restart = () => {
-    if (game === 'run' && run) startNew(run.mode);
-    else if (game === 'season' && s) startNewSeason(s.field);
+    if (game === 'run' && run) startNew(run.mode, difficultyOf(run));
+    else if (game === 'season' && s) startNewSeason(difficultyOf(s), s.field);
   };
 
   const viewSeries = (matchId: string) => setView({ kind: 'series', matchId });
@@ -246,11 +271,12 @@ function Game() {
   // Stats of the game in progress (main nav): only once its competition has started.
   const statsTarget: View | null =
     game === 'run' && run?.tournament ? { kind: 'stats' }
-    : game === 'season' && s && (season.isCompStage(s.stage) || s.stage === 'done') ? { kind: 'season-stats' }
+    : game === 'season' && s && seasonHasStats(s) ? { kind: 'season-stats' }
     : null;
   const nav: { key: string; label: string; to: View | null; active: boolean }[] = [
     { key: 'home', label: 'Início', to: { kind: 'home' }, active: screen === 'home' },
     { key: 'stats', label: 'Estatísticas', to: statsTarget, active: screen === 'stats' },
+    { key: 'ranking', label: 'Ranking', to: { kind: 'ranking' }, active: screen === 'ranking' },
     { key: 'history', label: 'Histórico', to: { kind: 'history' }, active: screen === 'history' },
     { key: 'howto', label: 'Como jogar', to: { kind: 'howto' }, active: screen === 'howto' },
   ];
@@ -341,12 +367,16 @@ function Game() {
             onNew={startNew}
             onContinue={() => setView({ kind: 'run' })}
             onNewSeason={() => startNewSeason()}
+            difficulty={difficulty}
+            onDifficulty={setDifficulty}
             onContinueSeason={() => setView({ kind: 'season' })}
             onHistory={() => setView({ kind: 'history' })}
             onHowTo={() => setView({ kind: 'howto' })}
+            onRanking={() => setView({ kind: 'ranking' })}
           />
         )}
         {screen === 'howto' && <HowTo onBack={() => setView({ kind: 'home' })} />}
+        {screen === 'ranking' && <Ranking onBack={() => setView({ kind: 'home' })} />}
         {screen === 'history' && (
           <History
             entries={history}
@@ -408,6 +438,7 @@ interface RunScreensProps {
 
 /** The main mode: draft → coach → team → Champions. */
 function RunScreens({ run, screen, view, act, setView, viewSeries, watchSeries }: RunScreensProps) {
+  const boardRows = useCallback(() => runAllPlayerStats(run), [run]);
   if (screen === 'draft') {
     return (
       <Draft
@@ -439,12 +470,16 @@ function RunScreens({ run, screen, view, act, setView, viewSeries, watchSeries }
     );
   }
   if (screen === 'stats') {
+    const rows = runStats(run);
     return (
       <Stats
         teamName={teamInfo(run, USER_ID).name}
         context={`Champions · ${MODE_LABELS[run.mode]}`}
-        rows={runStats(run)}
-        cards={cardsOf(userLineup(run))}
+        difficulty={difficultyOf(run)}
+        rows={rows}
+        cards={cardsOfRows(rows)}
+        boardRows={boardRows}
+        cardOf={cardById}
         onBack={() => setView(run.phase === 'done' ? { kind: 'run' } : { kind: 'hub' })}
         backLabel={run.phase === 'done' ? 'Voltar ao resultado' : 'Voltar ao torneio'}
       />
@@ -506,6 +541,7 @@ interface SeasonScreensProps {
 
 /** Complete Trials: region → draft → coach → team → league → Masters → Champions. */
 function SeasonScreens({ s, screen, view, act, setView, viewSeries, watchSeries }: SeasonScreensProps) {
+  const boardRows = useCallback((stage?: string) => seasonAllPlayerStats(s, stage as season.CompStage | undefined), [s]);
   const context = `Complete Trials · ${season.REGION_LABELS[s.region ?? 'americas']}`;
   if (screen === 'region') return <Region field={s.field} onChoose={(region, field) => act((x) => season.chooseRegion(x, region, field))} />;
   const pool = s.region ? season.seasonPool(s) : [];
@@ -549,14 +585,39 @@ function SeasonScreens({ s, screen, view, act, setView, viewSeries, watchSeries 
     );
   }
   if (screen === 'stats') {
+    const rows = seasonStats(s);
+    const stages: BoardStage[] = season.COMP_STAGES.map((st) => ({
+      key: st,
+      label: season.STAGE_LABELS[st],
+      locked: season.stageOutcome(s, st).status === 'pending',
+    }));
+    const lastReached = [...stages].reverse().find((st) => !st.locked)?.key ?? 'league';
     return (
       <Stats
         teamName={season.seasonTeamInfo(s, season.USER_ID).name}
         context={context}
-        rows={seasonStats(s)}
-        cards={cardsOf(season.userLineup(s))}
-        onBack={() => setView(s.stage === 'done' ? { kind: 'season' } : { kind: 'season-hub' })}
-        backLabel={s.stage === 'done' ? 'Voltar ao resultado' : 'Voltar à temporada'}
+        difficulty={difficultyOf(s)}
+        rows={rows}
+        cards={cardsOfRows(rows)}
+        boardRows={boardRows}
+        stages={stages}
+        defaultStage={lastReached}
+        cardOf={cardById}
+        onBack={() => setView(s.stage === 'done' || s.stage === 'market' ? { kind: 'season' } : { kind: 'season-hub' })}
+        backLabel={s.stage === 'done' ? 'Voltar ao resultado' : s.stage === 'market' ? 'Voltar à janela de transferências' : 'Voltar à temporada'}
+      />
+    );
+  }
+  if (screen === 'market') {
+    return (
+      <Market
+        season={s}
+        cardOf={cardById}
+        onSign={(cardId, outId) => act((x) => season.signFreeAgent(x, cardId, outId))}
+        onClose={() => {
+          if (act(season.closeMarket)) setView({ kind: 'season-hub' });
+        }}
+        onStats={() => setView({ kind: 'season-stats' })}
       />
     );
   }

@@ -24,7 +24,9 @@ import {
   type SeasonState,
 } from '../../game/season';
 import { Bracket } from '../components/Bracket';
+import { DifficultyBadge } from '../components/Difficulty';
 import { GroupStage } from '../components/GroupStage';
+import { difficultyOf } from '../difficulty';
 import { Icon, YouTag } from '../components/Icon';
 import { LeagueBracket } from '../components/LeagueBracket';
 import { LeagueTable } from '../components/LeagueTable';
@@ -82,6 +84,12 @@ export function SeasonHub({ season, onVeto, onViewSeries, onStats }: Props) {
           <div>
             <dt>Campo</dt>
             <dd>{FIELD_MODE_LABELS[season.field]}</dd>
+          </div>
+          <div>
+            <dt>Dificuldade</dt>
+            <dd>
+              <DifficultyBadge difficulty={difficultyOf(season)} />
+            </dd>
           </div>
         </dl>
         <div className="hub-actions">

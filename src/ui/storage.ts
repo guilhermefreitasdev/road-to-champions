@@ -1,15 +1,17 @@
-import { parseRun, type RunState } from '../game/run';
-import { parseSeason, type SeasonState } from '../game/season';
+import { deserializeRun, deserializeSeason, serializeRun, serializeSeason } from '../game/persist';
+import type { RunState } from '../game/run';
+import type { SeasonState } from '../game/season';
 
-const KEY = 'rtc:run:v6';
+const KEY = 'rtc:run:v7';
 /** Complete Trials season (its own slot: a season and a run can be saved at the same time). */
-const SEASON_KEY = 'rtc:season:v3';
+const SEASON_KEY = 'rtc:season:v4';
 /**
  * Keys of older save formats, removed on load (v1 = fictional sample cards, v2 = Swiss stage, v3 = strength v1,
- * v4 = before Modelo v3, v5 = before agent pools / flex roles / per-map agents). The history (rtc:history:v1) is
+ * v4 = before Modelo v3, v5 = before agent pools / flex roles / per-map agents, v6 = before difficulty and box scores;
+ * season v3 = before difficulty and the transfer market). The history (rtc:history:v1) is
  * a snapshot and survives these bumps.
  */
-const OLD_KEYS = ['rtc:run:v1', 'rtc:run:v2', 'rtc:run:v3', 'rtc:run:v4', 'rtc:run:v5', 'rtc:season:v1', 'rtc:season:v2'];
+const OLD_KEYS = ['rtc:run:v1', 'rtc:run:v2', 'rtc:run:v3', 'rtc:run:v4', 'rtc:run:v5', 'rtc:run:v6', 'rtc:season:v1', 'rtc:season:v2', 'rtc:season:v3'];
 
 /** Saved run, or null when there is none, storage is unavailable, or the save is corrupted/outdated. */
 export function loadRun(): RunState | null {
@@ -17,7 +19,8 @@ export function loadRun(): RunState | null {
     for (const key of OLD_KEYS) window.localStorage.removeItem(key);
     const raw = window.localStorage.getItem(KEY);
     if (!raw) return null;
-    const run = parseRun(JSON.parse(raw));
+    // Packed (lossless) save; the deserializer also reads plain JSON saves of the same version.
+    const run = deserializeRun(raw);
     if (!run) clearRun();
     return run;
   } catch {
@@ -27,7 +30,7 @@ export function loadRun(): RunState | null {
 
 export function saveRun(run: RunState): void {
   try {
-    window.localStorage.setItem(KEY, JSON.stringify(run));
+    window.localStorage.setItem(KEY, serializeRun(run));
   } catch {
     // Storage full or blocked: the game keeps working, the run just won't survive a reload.
   }
@@ -46,7 +49,7 @@ export function loadSeason(): SeasonState | null {
   try {
     const raw = window.localStorage.getItem(SEASON_KEY);
     if (!raw) return null;
-    const season = parseSeason(JSON.parse(raw));
+    const season = deserializeSeason(raw);
     if (!season) clearSeason();
     return season;
   } catch {
@@ -56,7 +59,7 @@ export function loadSeason(): SeasonState | null {
 
 export function saveSeason(season: SeasonState): void {
   try {
-    window.localStorage.setItem(SEASON_KEY, JSON.stringify(season));
+    window.localStorage.setItem(SEASON_KEY, serializeSeason(season));
   } catch {
     // Same as saveRun.
   }

@@ -10,7 +10,9 @@ import {
   userSeasonResults,
   type SeasonState,
 } from '../../game/season';
+import { DifficultyBadge } from '../components/Difficulty';
 import { Icon } from '../components/Icon';
+import { difficultyOf } from '../difficulty';
 import { Results } from '../components/Results';
 import { SharePanel } from '../components/SharePanel';
 import { TrialsPath } from '../components/TrialsPath';
@@ -50,11 +52,12 @@ export function SeasonEnd({ season, onNewRun, onViewSeries, onStats }: Props) {
         <p className="end-team">
           {champion ? `${s.teamName} venceu o Champions` : s.teamName}
           <span className="muted"> · Complete Trials · campo {FIELD_MODE_LABELS[s.field]}</span>
+          <DifficultyBadge difficulty={difficultyOf(season)} />
         </p>
         <TrialsPath season={season} />
       </header>
 
-      <SharePanel text={text} />
+      <SharePanel text={text} difficulty={difficultyOf(season)} />
 
       <div className="end-grid">
         <section className="panel">

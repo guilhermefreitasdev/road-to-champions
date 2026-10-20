@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import { DIFFICULTY_LABELS, type Difficulty } from '../../game/difficulty';
+import { DifficultyBadge } from './Difficulty';
 import { Icon } from './Icon';
 
 async function copyText(text: string): Promise<boolean> {
@@ -47,13 +49,26 @@ function SharePreview({ text }: { text: string }) {
   );
 }
 
+/** The share text with the difficulty as its second line (unless the text already names it). */
+export function withDifficulty(text: string, difficulty?: Difficulty): string {
+  if (!difficulty) return text;
+  const name = DIFFICULTY_LABELS[difficulty].name;
+  if (text.includes(name)) return text;
+  const [head, ...rest] = text.split('\n');
+  return [head, `Dificuldade ${name}`, ...rest].join('\n');
+}
+
 /** Spoiler-free share box: the text, copy and (when available) the native share sheet. */
-export function SharePanel({ text }: { text: string }) {
+export function SharePanel({ text: base, difficulty }: { text: string; difficulty?: Difficulty }) {
+  const text = withDifficulty(base, difficulty);
   const [copied, setCopied] = useState<'idle' | 'ok' | 'fail'>('idle');
   const canShare = typeof navigator !== 'undefined' && typeof navigator.share === 'function';
   return (
     <section className="panel share-panel" aria-labelledby="share-title">
-      <h2 id="share-title">Compartilhe sua run</h2>
+      <h2 id="share-title">
+        Compartilhe sua run
+        {difficulty && <DifficultyBadge difficulty={difficulty} />}
+      </h2>
       <p className="small muted">Sem spoiler: só o caminho, sem nomes de time ou jogador.</p>
       <pre className="share">
         <SharePreview text={text} />

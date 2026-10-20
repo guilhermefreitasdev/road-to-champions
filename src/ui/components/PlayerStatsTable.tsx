@@ -6,9 +6,10 @@ import { AgentPoolTable, agentName } from './AgentPool';
 import { AgentIcon } from './GameImage';
 import { Icon } from './Icon';
 
-type SortKey = 'maps' | 'kills' | 'kd' | 'acs' | 'rating' | 'kast' | 'fk' | 'k3' | 'k4' | 'aces' | 'mvps';
+type SortKey = 'ovr' | 'maps' | 'kills' | 'kd' | 'acs' | 'rating' | 'kast' | 'fk' | 'k3' | 'k4' | 'aces' | 'mvps';
 
 const COLUMNS: { key: SortKey; label: string; title: string }[] = [
+  { key: 'ovr', label: 'OVR', title: 'OVR com que jogou: o do card, mais a fase do torneio e o crescimento de prodígio (seta)' },
   { key: 'maps', label: 'Mapas', title: 'Mapas jogados' },
   { key: 'kills', label: 'K/D/A', title: 'Kills / mortes / assistências (ordena por kills)' },
   { key: 'kd', label: 'KD', title: 'Kills por morte' },
@@ -35,7 +36,7 @@ interface Props {
 export function PlayerStatsTable({ rows, cards, caption, idPrefix }: Props) {
   const [sort, setSort] = useState<{ key: SortKey; dir: 1 | -1 }>({ key: 'rating', dir: -1 });
   const [open, setOpen] = useState<string | null>(null);
-  const sorted = [...rows].sort((a, b) => sort.dir * (a[sort.key] - b[sort.key]) || b.acs - a.acs || (a.handle < b.handle ? -1 : 1));
+  const sorted = [...rows].sort((a, b) => sort.dir * ((a[sort.key] ?? 0) - (b[sort.key] ?? 0)) || b.acs - a.acs || (a.handle < b.handle ? -1 : 1));
   const best = Math.max(...rows.map((r) => r.rating));
 
   const toggleSort = (key: SortKey) => setSort((s) => (s.key === key ? { key, dir: s.dir === 1 ? -1 : 1 } : { key, dir: -1 }));
@@ -82,6 +83,9 @@ export function PlayerStatsTable({ rows, cards, caption, idPrefix }: Props) {
                       {p.rating === best && rows.length > 1 && <span className="tag mvp">Top</span>}
                     </button>
                   </th>
+                  <td>
+                    <OvrCell ovr={p.ovr} base={card?.ovr} />
+                  </td>
                   <td>{p.maps}</td>
                   <td className="kda">
                     {p.kills}/{p.deaths}/{p.assists}
@@ -118,6 +122,31 @@ export function PlayerStatsTable({ rows, cards, caption, idPrefix }: Props) {
         </tbody>
       </table>
     </div>
+  );
+}
+
+/**
+ * The OVR the player played at, with an arrow (shape + sign + text, not color alone) when it differs from the card's:
+ * tournament form and prodigy growth.
+ */
+export function OvrCell({ ovr, base }: { ovr?: number | undefined; base?: number | undefined }) {
+  if (ovr === undefined) return <span className="muted">{base ?? '—'}</span>;
+  const delta = base === undefined ? 0 : Math.round(ovr - base);
+  if (delta === 0) return <span className="ovr-cell">{ovr}</span>;
+  const up = delta > 0;
+  return (
+    <span className={`ovr-cell ${up ? 'ovr-up' : 'ovr-down'}`} title={`Card ${base}, jogou com ${ovr} (fase do torneio${up ? ' e crescimento' : ''})`}>
+      {ovr}
+      <span className="ovr-delta">
+        <Icon name="chevron" className="ovr-arrow" />
+        {up ? '+' : '−'}
+        {Math.abs(delta)}
+      </span>
+      <span className="sr-only">
+        {' '}
+        ({up ? 'acima' : 'abaixo'} do card, {base})
+      </span>
+    </span>
   );
 }
 

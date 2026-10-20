@@ -10,7 +10,7 @@ import {
   auraTitle,
   formatStat,
 } from '../../game/explain';
-import { rosterOf } from '../../game/run';
+import { ALL_ROSTERS } from '../../data/real';
 import type { Card } from '../../engine/types';
 import { flexRolesText, isNaturalFlex } from '../fit';
 import { AgentPoolChips } from './AgentPool';
@@ -33,7 +33,7 @@ interface Props {
  * stats it came from, attributes and agents. Clickable when onSelect is set.
  */
 export function PlayerCard({ card, selected = false, onSelect, index = 0 }: Props) {
-  const roster = rosterOf(card.teamId, card.eventId);
+  const roster = ALL_ROSTERS.find((e) => e.teamId === card.teamId && e.eventId === card.eventId);
   const stats = card.stats;
   const body = (
     <>

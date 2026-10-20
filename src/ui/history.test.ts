@@ -16,6 +16,8 @@ import {
 } from '../game/run';
 import * as season from '../game/season';
 import { HISTORY_MAX, addEntry, parseHistory, runEntry, seasonEntry, type HistoryEntry } from './history';
+import { withDifficulty } from './components/SharePanel';
+import { difficultyOf } from './difficulty';
 import { buildEvents, viewAt } from './playback';
 import { runStats, runUserSeries } from './playerStats';
 
@@ -52,6 +54,10 @@ function fullSeason(seed: string): season.SeasonState {
   }
   s = season.startLeague(season.pickSeasonCoach(s, season.seasonCoachOptions(s)[0]!.id), 'Liga Teste');
   while (s.stage !== 'done') {
+    if (s.stage === 'market') {
+      s = season.closeMarket(s);
+      continue;
+    }
     s = season.beginUserVeto(s);
     while (!isVetoComplete(s.veto!.state)) s = season.applyUserVeto(s, remainingMaps(s.veto!.state)[0]!);
     s = season.playUserMatch(s);
@@ -108,6 +114,27 @@ describe('history', () => {
     list = addEntry(list, { ...base, id: 'run:10', teamName: 'De novo' });
     expect(list.filter((e) => e.id === 'run:10')).toHaveLength(1);
     expect(list[0]!.teamName).toBe('De novo');
+  });
+
+  it('records the difficulty and keeps entries from before difficulties readable', () => {
+    const hard = runEntry({ ...run, difficulty: 'hard' }, date);
+    expect(hard.difficulty).toBe('hard');
+    const { difficulty: _old, ...legacy } = hard;
+    expect(parseHistory(JSON.parse(JSON.stringify([legacy])))).toEqual([legacy]);
+    // An unknown difficulty is dropped from the entry, not the entry itself.
+    const [odd] = parseHistory([{ ...hard, difficulty: 'nightmare' }]);
+    expect(odd?.difficulty).toBeUndefined();
+    expect(odd?.teamName).toBe(hard.teamName);
+    expect(difficultyOf(null)).toBe('normal');
+    expect(difficultyOf({ difficulty: 'legend' })).toBe('legend');
+    expect(difficultyOf({ difficulty: 'x' })).toBe('normal');
+  });
+
+  it('adds the difficulty to the share text once', () => {
+    const text = 'Road to Champions X\nDraft clássico · Força 70\nMapas 4-2';
+    expect(withDifficulty(text, 'hard').split('\n')).toEqual(['Road to Champions X', 'Dificuldade Difícil', 'Draft clássico · Força 70', 'Mapas 4-2']);
+    expect(withDifficulty(withDifficulty(text, 'hard'), 'hard')).toBe(withDifficulty(text, 'hard'));
+    expect(withDifficulty(text)).toBe(text);
   });
 
   it('round-trips through JSON and drops malformed entries', () => {
