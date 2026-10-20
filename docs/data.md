@@ -244,3 +244,18 @@ npm run data:media -- --refresh                  # baixa de novo
 ```
 
 Depende de `sharp` (devDependency) para redimensionar e converter. Rodar de novo sem mudanças na wiki gera arquivos idênticos. Para remover uma imagem a pedido do titular: apague o arquivo e a entrada no JSON (o fallback de iniciais assume), e anote o pedido para a próxima regeneração.
+
+# VALORANT Wiki (lugares dos mapas e sons das armas, para o Valdle)
+
+Fonte: a wiki oficial da comunidade, [wiki.playvalorant.com](https://wiki.playvalorant.com) (saiu do Fandom em 2026; hospedada pela Weird Gloop, paga pela Riot, editada por fãs). Os arquivos são da Riot Games, usados pela política "Legal Jibber Jabber", com crédito à wiki e retirada imediata a pedido. O ambiente em que o jogo é construído não alcança a wiki, então o script roda numa máquina comum.
+
+`scripts/wiki/run.mjs` (`npm run data:wiki`) usa só a API MediaWiki (sem raspar HTML): uma requisição a cada 2 s, User-Agent do projeto, nova tentativa com espera em 429/5xx e cache de cada resposta em `.cache/wiki/`. Acha o `api.php` sozinho (ou use `WIKI_API=https://.../api.php`).
+
+- **Lugares** (`--only=places`): os arquivos de `Category:Map Images` cujo nome é exatamente "<Mapa> <Callout>" de um callout de `src/data/game/maps.json` (ex.: "Ascent B Main.png" = região "B", callout "Main"). Cada um vira WebP 960×540 em `public/media/places/<mapa>/` e entra em `src/data/game/places.json` com a página do arquivo. Nome sem correspondência exata e única fica de fora e vai para `scripts/wiki/out/places-unmatched.json`; nunca adivinhamos o lugar de uma imagem.
+- **Sons** (`--only=sounds`): lista em `scripts/wiki/out/weapon-audio-candidates.json` os áudios de `Category:Audio Files` cujo nome ou categoria cita uma arma (URL, tipo, tamanho, página). Não baixa nada: os tiros únicos das armas padrão são escolhidos por uma pessoa nessa lista antes de entrar no jogo, porque a maioria dos áudios da wiki é de skins.
+
+```bash
+npm run data:wiki                      # lugares + lista de sons
+npm run data:wiki -- --only=places     # só os lugares
+npm run data:wiki -- --refresh         # ignora o cache
+```

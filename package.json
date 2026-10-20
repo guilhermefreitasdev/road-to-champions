@@ -18,6 +18,7 @@
     "data:vlr-series": "NODE_USE_ENV_PROXY=1 node scripts/vlr/series.mjs",
     "data:liquipedia": "NODE_USE_ENV_PROXY=1 node scripts/liquipedia/run.mjs",
     "data:media": "NODE_USE_ENV_PROXY=1 node scripts/media/run.mjs",
+    "data:wiki": "NODE_USE_ENV_PROXY=1 node scripts/wiki/run.mjs",
     "icons": "NODE_USE_ENV_PROXY=1 node scripts/pwa-icons.mjs"
   },
   "dependencies": {
