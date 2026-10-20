@@ -1,0 +1,963 @@
+{{TOCright}}
+This is a '''list of quotes by {{ai|Gekko}}'''. Gekko is voiced by 
+Alejandro Antonio Ruiz in English, with his other creatures: [[Mosh Pit|Mosh]] voiced by Paul Guyet, [[Wingman]] voiced by Kellen Goff, and both [[Dizzy]] and [[Thrash]] voiced by Jan Johns. Necessary quotes translated are from Spanish to English. Gekko himself has a total of {{#expr:{{PAGESINCATEGORY:Gekko Quotes}} - {{PAGESINCATEGORY:Gekko Creature Quotes}}}} files of quotes, and his creatures have a total of {{PAGESINCATEGORY:Gekko Creature Quotes}} files of quotes, giving Gekko and his creatures a grand total of {{PAGESINCATEGORY:Gekko Quotes}} files of quotes including unused and removed lines, and excluding [[#The Range's lore assets|The Range's lore assets]]. Each of the creatures has a distinct voice, and using that alongside context clues (like a gendered pronoun) allows for the assumption of which one is "speaking".
+
+A downloadable folder containing all the audio files on this page can be found [https://drive.google.com/drive/folders/1n974CSviKimMeLvCBMGT7WVO48dFs0n9?usp=sharing here].
+
+==Agent Selected/Unlocked==
+*{{AC|GekkoPick.mp3}} "Wáchale güey, my crew is coming through."
+**(''Wáchale güey'': Watch out dude)
+
+==Abilities==
+==={{abi text|Mosh Pit}}===
+====Cast====
+*{{AC|GekkoMoshPitCast1.mp3}} "Mosh pit!"
+*{{AC|GekkoMoshPitCast2.mp3}} "Blow 'em up, Mosh!"
+*{{AC|GekkoMoshPitCast3.mp3}} "It's all you, Mosh!"
+
+====Kill====
+*{{AC|GekkoMoshPitKill1.mp3}} "That's my guy!"
+*{{AC|GekkoMoshPitKill2.mp3}} "Nice, lil' homie!"
+*{{AC|GekkoMoshPitKill3.mp3}} "Mosh got 'em!"
+
+==={{abi text|Wingman}}===
+====Cast====
+*{{AC|GekkoWingmanCast1.mp3}} "Get 'em, Wingman!"
+*{{AC|GekkoWingmanCast2.mp3}} "Go get 'em, buddy!"
+*{{AC|GekkoWingmanCast3.mp3}} "Run, little man!"
+
+====Destroyed====
+*{{AC|GekkoWingmanDestroyed1.mp3}} "My Wingman's down."
+*{{AC|GekkoWingmanDestroyed2.mp3}} "They shot my Wingman."
+
+====Cast for spike defuse====
+*{{AC|GekkoWingmanCastDefuse1.mp3}} "Wingman's defusing."
+*{{AC|GekkoWingmanCastDefuse2.mp3}} "My buddy's defusing."
+*{{AC|GekkoWingmanCastDefuse3.mp3}} "Wingman's on defuse."
+
+====Spike defuse successful====
+*{{AC|GekkoWingmanDefuseComplete1.mp3}} "Wingman for the win!"
+*{{AC|GekkoWingmanDefuseComplete2.mp3}} "Everybody thank Wingman! Come on, let's hear it!"
+*{{AC|GekkoWingmanDefuseComplete3.mp3}} "Qué padre! My little guy did it!"
+**(''Qué padre'': How cool)
+
+====Cast for spike plant====
+*{{AC|GekkoWingmanCastPlant1.mp3}} "Wingman's planting."
+*{{AC|GekkoWingmanCastPlant2.mp3}} "Wingman's gonna plant spike."
+*{{AC|GekkoWingmanCastPlant3.mp3}} "Plant the spike, Wings."
+
+====Spike plant successful====
+*{{AC|GekkoWingmanSpikePlanted1.mp3}} "Spike planted, thanks Wings!"
+*{{AC|GekkoWingmanSpikePlanted2.mp3}} "Spike's ticking, thanks little man!"
+
+==={{abi text|Dizzy}}===
+====Cast====
+*{{AC|GekkoDizzyCast1.mp3}} "Up you go!"
+*{{AC|GekkoDizzyCast2.mp3}} "Dizzy's up!"
+*{{AC|GekkoDizzyCast3.mp3}} "Dizzy's up top!"
+*{{AC|GekkoDizzyCast4.mp3}} "Up and away!"
+
+====Afflicted enemy====
+*{{AC|GekkoDizzyHit1.mp3}}{{AC|GekkoDizzyHit2.mp3}} "Someone's there."
+*{{AC|GekkoDizzyHit3.mp3}}{{AC|GekkoDizzyHit5.mp3}} "Somebody's there."
+*{{AC|GekkoDizzyHit4.mp3}}{{AC|GekkoDizzyHit6.mp3}} "Dizzy has targets."
+
+====Kill afflicted enemy====
+*{{AC|GekkoDizzyAssist1.mp3}} "Nice one, Dizzy!"
+*{{AC|GekkoDizzyAssist2.mp3}} "Thanks Dizz!"
+*{{AC|GekkoDizzyAssist3.mp3}} "Alley-oop!"
+
+====Destroyed====
+*{{AC|GekkoDizzyDestroyed1.mp3}}{{AC|GekkoDizzyDestroyed4.mp3}} "Argh, they shot her."
+*{{AC|GekkoDizzyDestroyed2.mp3}}{{AC|GekkoDizzyDestroyed3.mp3}} "Dizzy's down."
+
+==={{abi text|Thrash}}===
+====Ally Cast====
+*{{AC|GekkoUltAllyCast.mp3}} "It's all you, lil' homie!"
+
+====Ally Recast==== 
+*{{AC|GekkoUltAllyRecast1.mp3}} "Thrash is going again!"
+*{{AC|GekkoUltAllyRecast2.mp3}} "We're going again!"
+*{{AC|GekkoUltAllyRecast3.mp3}} "She's going again!"
+
+====Enemy Cast====
+*{{AC|GekkoUltEnemyCast.mp3}} "Oye! Monster on the loose!"
+**(''Oye'': Hey)
+
+====Enemy Recast====
+*{{AC|GekkoUltEnemyRecast1.mp3}} "Thrash isn't done with you!"
+*{{AC|GekkoUltEnemyRecast2.mp3}} "She's still gunning for ya!"
+*{{AC|GekkoUltEnemyRecast3.mp3}} "You want more? Here's more!"
+
+====Destroyed====
+*{{AC|GekkoUltDestroyed1.mp3}} "Man, they stopped her."
+*{{AC|GekkoUltDestroyed2.mp3}} "They shot Thrash."
+*{{AC|GekkoUltDestroyed3.mp3}} "They stopped her."
+
+====Timed out====
+*{{AC|GekkoUltExpire1.mp3}} "That's as far as she goes."
+*{{AC|GekkoUltExpire2.mp3}} "She's all done running."
+
+====Afflicted enemy====
+*{{AC|GekkoUltHit1.mp3}} "Thrash hit 'em!"
+*{{AC|GekkoUltHit2.mp3}} "Thrash got a hit!"
+*{{AC|GekkoUltHit3.mp3}} "Thrash got 'em!"
+
+===[[Abilities/Passive#Globules|Globules]] ([[Wingman]], [[Dizzy]], [[Thrash]])===
+====Picking up Wingman and Dizzy====
+*{{AC|GekkoGlobulesReclaim1.mp3}} "You did good."
+*{{AC|GekkoGlobulesReclaim2.mp3}} "Sana, sana."
+**(Heal, heal.)
+*{{AC|GekkoGlobulesReclaim3.mp3}} "I gotchu, I gotchu."
+*{{AC|GekkoGlobulesReclaim4.mp3}} "There's my buddy."
+*{{AC|GekkoGlobulesReclaim5.mp3}} "Back to me!"
+
+====Picking up Thrash====
+*{{AC|GekkoUltReclaim1.mp3}} "You want more?"
+*{{AC|GekkoUltReclaim2.mp3}} "Wanna go again?"
+*{{AC|GekkoUltReclaim3.mp3}} "Up for more?"
+*{{AC|GekkoUltReclaim4.mp3}} "Another? Órale."
+**(''Órale'': Alright)
+
+==Buy Phase==
+===Match Start===
+*{{AC|GekkoMatchStart1.mp3}} "So, game plan. What y'all feeling? I'm down for whatever."
+*{{AC|GekkoMatchStart2.mp3}} "We got my four friends, then five of us, that's nine! Man, we're stacked!"
+*{{AC|GekkoMatchStart3.mp3}} "Man, my critters have the zoomies right now. Everyone watch your step!"
+*{{AC|GekkoMatchStart4.mp3}} "Okay lil' homies, teamwork on three. One, two, three!"
+**{{AC|GekkoCreatureMatchStart4.mp3}} {{abi|Mosh Pit}} {{abi|Wingman}} {{abi|Dizzy}} {{abi|Thrash}} ''*Creature noises*''
+*{{AC|GekkoMatchStart5.mp3}} "Ayy, how are my buddies? No, not y'all, I'm talking about these little guys, but... yeah, what's up?"
+
+====Attacking====
+*{{AC|GekkoCreatureMatchStartAttack1.mp3}} {{abi|Mosh Pit}} ''*Creature noises*''
+**{{AC|GekkoMatchStartAttack1.mp3}} "No, you cannot eat the radianite. Okay maybe just a little."
+*{{AC|GekkoMatchStartAttack2.mp3}} "Let's get this radianite, head home then go mimis." 
+**(''Mimis'': Sleep)
+
+====Defending====
+*{{AC|GekkoMatchStartDefense1.mp3}} "No manches, do they ever quit? Como friegan."
+**(''No manches'': Oh wow)
+**(''Como friegan'': They are annoying)
+*{{AC|GekkoMatchStartDefense2.mp3}} "Guess they're gunning for us, huh? Ni modo, it is what it is."
+**(''Ni modo'': Either way)
+
+====[[Ascent]]====
+*{{AC|GekkoMatchStartAscent.mp3}} "Uh... How far up are we right now? To be honest with you, heights? Not for me."
+
+====[[Fracture]]====
+*{{AC|GekkoMatchStartFracture.mp3}} "There's no like... K/SEC assholes here, are there? Hope not."
+
+====[[Lotus]]====
+*{{AC|GekkoMatchStartLotus.mp3}} "Qué lindo! Can I take a picture? My mom loves flowers."
+**(''Qué lindo'': How beautiful)
+
+====[[Sunset]]====
+*{{AC|file=GekkoMatchStartSunset.mp3}} "Ay, while we're here let's see my folks. My mom will feed all y'all for real!"
+
+===Round Start===
+*{{AC|GekkoCreatureRoundStart1.mp3}} {{abi|Dizzy}} ''*Creature noises*''
+**{{AC|GekkoRoundStart1.mp3}} ''*Gekko laughs*'' "Sorry, inside joke."
+*{{AC|GekkoRoundStart2.mp3}} "Alright homies, chill! We'll go again. Damn, you love being here, like way too much."
+*{{AC|GekkoRoundStart3.mp3}} "If they mess with one of us, they mess with all of us."
+*{{AC|GekkoRoundStart4.mp3}} "Let's reset. Deep breaths and all that."
+*{{AC|GekkoRoundStart5.mp3}} "We do what we do, get back to chilling."
+*{{AC|GekkoCreatureRoundStart6.mp3}} {{abi|Mosh Pit}} ''*Creature noises*''
+**{{AC|GekkoRoundStart6.mp3}} "That's true, good advice."
+*{{AC|GekkoRoundStart7.mp3}} "Pero like, why can't we just hug it out? Pinche radianite."
+**(''Pero'': But)
+**(''Pinche'': Fucking)
+*{{AC|GekkoRoundStart8.mp3}} "So... do we mix it up? Double down? Let's talk."
+*{{AC|GekkoRoundStart9.mp3}} "Vibe check, we feeling good? Hope so, hope so."
+*{{AC|GekkoCreatureRoundStart10.mp3}} {{abi|Wingman}} ''*Creature noises*''
+**{{AC|GekkoRoundStart10.mp3}} "Heh, he says their bullets tickle."
+*{{AC|GekkoRoundStart11.mp3}} "Hey little man, pump us up, let's hear it!"
+**{{AC|GekkoCreatureRoundStart11.mp3}} {{abi|Wingman}} ''*Creature noises*''
+
+====Last round won====
+*{{AC|GekkoRoundWon1.mp3}} "Hey! That was cool."
+*{{AC|GekkoRoundWon2.mp3}} "That's a win in the bag, let's grab some more."
+*{{AC|GekkoRoundWon3.mp3}} "Good work, team! I appreciate y'all for real!"
+*{{AC|GekkoRoundWon4.mp3}} "Let's keep a good thing going."
+*{{AC|GekkoRoundWon5.mp3}} "Hey, if we can do it once, we can do it again."
+
+=====While in the lead=====
+*{{AC|GekkoLead1.mp3}} "Is this, too easy? It feels easy."
+*{{AC|GekkoLead2.mp3}} "We are too damn good at this."
+*{{AC|GekkoLead3.mp3}} "Nah, this is light work, we chilling."
+
+=====Making a comeback=====
+*{{AC|GekkoComeback1.mp3}} "Now we're talking. Don't jinx it though, stay humble."
+*{{AC|GekkoComeback2.mp3}} "Okay, okay!"
+
+===Last round in the half===
+====Attacking====
+*{{AC|GekkoLastRound1.mp3}} "Time to spend this cash."
+
+====Defending====
+*{{AC|GekkoLastRound2.mp3}} "This is it, get those guns!"
+
+===Match Point===
+*{{AC|GekkoMatchPoint1.mp3}} "Keep doing what we're doing, and we got it."
+*{{AC|GekkoMatchPoint2.mp3}} "Yo, we are so close."
+
+===Shop===
+====Let's Buy====
+*{{AC|GekkoBuying1.mp3}}{{AC|GekkoBuying2.mp3}} "I'm gonna buy."
+
+====Let's Save====
+*{{AC|GekkoSaving1.mp3}}{{AC|GekkoSaving2.mp3}} "I'm gonna save."
+
+====I Have Extra Creds====
+*{{AC|GekkoOffer1.mp3}}{{AC|GekkoOffer2.mp3}} "Y'all need a gun? I'll spot you."
+
+====Requested====
+*{{AC|GekkoRequest1.mp3}}{{AC|GekkoRequest2.mp3}} "Can someone buy me, please?"
+
+===Barrier Down===
+*{{AC|GekkoBarrierDown1.mp3}} "Let's mess 'em up."
+*{{AC|GekkoBarrierDown2.mp3}} "Échele ganas!"
+**(Give it all you got!)
+*{{AC|GekkoBarrierDown3.mp3}} "Chill, chill, we got this."
+*{{AC|GekkoBarrierDown4.mp3}} "Hold it down."
+*{{AC|GekkoBarrierDown5.mp3}} "Ponte las pilas."
+**("Get your batteries", meaning "get it together")
+*{{AC|GekkoBarrierDown6.mp3}} "Vámonos, run it back!"
+**(''Vámonos'': Let's go)
+*{{AC|GekkoBarrierDown7.mp3}} "Take 'em down."
+*{{AC|GekkoBarrierDown8.mp3}} "Okay buddies, focus up."
+*{{AC|GekkoBarrierDown9.mp3}} "They better try something else."
+*{{AC|GekkoBarrierDown10.mp3}} "Hold your head."
+*{{AC|GekkoBarrierDown11.mp3}} "Time to show up."
+*{{AC|GekkoBarrierDown12.mp3}} "Let's keep on vibin'!"
+*{{AC|GekkoBarrierDown13.mp3}} "Ándale."
+**(Come on.)
+*{{AC|GekkoBarrierDown14.mp3}} "See you on the other side."
+*{{AC|GekkoBarrierDown15.mp3}} "Let's see how it goes."
+*{{AC|GekkoBarrierDown16.mp3}} "Aguas, keep your guard up."
+**(''Aguas'': Watch out)
+*{{AC|GekkoBarrierDown17.mp3}} "Come on little homies, let's get it."
+*{{AC|GekkoBarrierDown18.mp3}} "Let's do what we do."
+*{{AC|GekkoBarrierDown19.mp3}} "Dream big, make it happen."
+
+==Spike==
+===Forgotten in spawn===
+*{{AC|GekkoForgotSpike1.mp3}} "Yo time out, who's got spike?"
+*{{AC|GekkoForgotSpike2.mp3}} "I got an idea. What if we, I don't know, grabbed the spike?"
+
+===Ally carrier down===
+*{{AC|GekkoSpikeDown1.mp3}}{{AC|GekkoSpikeDown2.mp3}} "Our spike carrier's down."
+
+===Dropped===
+*{{AC|GekkoSpikeDropped1.mp3}}{{AC|GekkoSpikeDropped2.mp3}} "Spike dropped."
+
+===Retrieved===
+*{{AC|GekkoSpikePickedUp1.mp3}}{{AC|GekkoSpikePickedUp2.mp3}} "I got the spike."
+
+===Planted===
+*{{AC|GekkoSpikePlanted1.mp3}}{{AC|GekkoSpikePlanted2.mp3}} "Spike planted."
+
+===Spotted===
+*{{AC|GekkoSpikeSpottedA1.mp3}}{{AC|GekkoSpikeSpottedA2.mp3}} "Spike's A."
+*{{AC|GekkoSpikeSpottedB1.mp3}}{{AC|GekkoSpikeSpottedB2.mp3}} "Spike's B."
+*{{AC|GekkoSpikeSpottedC1.mp3}}{{AC|GekkoSpikeSpottedC2.mp3}} "Spike's C."
+*{{AC|GekkoSpikeSpottedASpawn1.mp3}}{{AC|GekkoSpikeSpottedASpawn2.mp3}} "Spike's in Attacker Spawn."
+*{{AC|GekkoSpikeSpottedDSpawn1.mp3}}{{AC|GekkoSpikeSpottedDSpawn2.mp3}} "Spike's in Defender Spawn."
+*{{AC|GekkoSpikeSpottedMid1.mp3}}{{AC|GekkoSpikeSpottedMid2.mp3}} "Spike's Mid."
+
+===Defuse resumed===
+*{{AC|GekkoDefuseResumed1.mp3}} ''*Gekko laughs*''
+*{{AC|GekkoDefuseResumed2.mp3}} "And we're back."
+
+===Defuse time running out===
+*{{AC|GekkoDefuseLate1.mp3}} "Please please please please please."
+*{{AC|GekkoDefuseLate2.mp3}} "I guess we're doing this."
+*{{AC|GekkoDefuseLate3.mp3}} "Hey, tell mi ama I love her."
+**(''Mi ama'': My mom)
+
+===Defuse successful===
+*{{AC|GekkoDefuseComplete1.mp3}} "Beep beep beep, enough of that."
+*{{AC|GekkoDefuseComplete2.mp3}} "Is it off? It's off." ''*Gekko sighs*''
+
+==Kill==
+*{{AC|GekkoKill1.mp3}} "Folded."
+*{{AC|GekkoKill2.mp3}} "Sit down."
+*{{AC|GekkoKill3.mp3}} "I'll take it!"
+*{{AC|GekkoKill4.mp3}} "Gotcha!"
+*{{AC|GekkoKill5.mp3}} "And you're done."
+*{{AC|GekkoKill6.mp3}} "Cállate."
+**(Shut up.)
+*{{AC|GekkoKill7.mp3}} "Peace!"
+*{{AC|GekkoKill8.mp3}} "See ya!"
+*{{AC|GekkoKill9.mp3}} "Scoot, cuate."
+**(''Cuate'': Buddy.)
+*{{AC|GekkoKill10.mp3}} "Got 'em!"
+
+===Headshot===
+*{{AC|GekkoHeadshot1.mp3}} "Nice!"
+*{{AC|GekkoHeadshot2.mp3}} ''*Gekko laughs*''
+*{{AC|GekkoHeadshot3.mp3}} "Damn!"
+*{{AC|GekkoHeadshot4.mp3}} "Yeah, it's like that!"
+*{{AC|GekkoHeadshot5.mp3}} "No sweat."
+*{{AC|GekkoHeadshot6.mp3}} "Bop!"
+
+===[[Melee]]===
+*{{AC|GekkoMeleeKill1.mp3}} ''*Gekko laughs*''
+*{{AC|GekkoMeleeKill2.mp3}} "Tag, you're out."
+
+===Triple===
+*{{AC|GekkoTriple1.mp3}} "I'm good for three!"
+
+===Quadra===
+*{{AC|GekkoQuadra1.mp3}} "Got four!"
+
+===One kill remaining (game-mode specific)===
+*{{AC|GekkoOneKillLeft1.mp3}}{{AC|GekkoOneKillLeft2.mp3}} "One more."
+
+==Round End==
+===Ace===
+*{{AC|GekkoAce1.mp3}} "Y'all should have stayed home!"
+*{{AC|GekkoAce2.mp3}} "Yo! Did you see me? Y'all saw that, right?"
+*{{AC|GekkoAce3.mp3}} "Had to do it to 'em!"
+
+===Clutch===
+*{{AC|GekkoClutch1.mp3}} "Let's go!"
+*{{AC|GekkoClutch2.mp3}} "Your first mistake was assuming I couldn't."
+*{{AC|GekkoClutch3.mp3}} "Respectfully, you couldn't stop one guy, for real?"
+
+===Flawless or Team Ace===
+*{{AC|GekkoFlawless1.mp3}} "This is what we do!"
+*{{AC|GekkoFlawless2.mp3}} "We're still breathing! Cool, very cool."
+
+===Thrifty===
+*{{AC|GekkoThrifty1.mp3}} "Sometimes less is more, you feel me?"
+
+===Last Kill===
+*{{AC|GekkoLastKill1.mp3}} "Couldn't just be friends, huh."
+*{{AC|GekkoLastKill2.mp3}} "You don't mess with my crew."
+*{{AC|GekkoLastKill3.mp3}} "Call out sick next time, yeah?"
+*{{AC|GekkoCreatureLastKill4.mp3}} {{abi|Wingman}} ''*Creature noises*''
+**{{AC|GekkoLastKill4.mp3}} "That's right, you tell 'em."
+*{{AC|GekkoCreatureLastKill5.mp3}} {{abi|Dizzy}} ''*Creature noises*''
+**{{AC|GekkoLastKill5.mp3}} "You want more? Sorry buddy, it's over."
+*{{AC|GekkoLastKill6.mp3}} "Cálmate, hot shot."{{#tag:sup|{{patchv|13.00}}^}}
+**(''Cálmate'': Calm down)
+
+====Using [[Melee]]====
+*{{AC|GekkoLastKillMelee1.mp3}} "No chilles."
+**(Don't cry.)
+
+===Low HP===
+*{{AC|GekkoLowHP1.mp3}} "Don't worry friends, it hurts but, I'm good."
+
+==Match End==
+===Match Win===
+*{{AC|GekkoMatchWin1.mp3}} "Hey, GG y'all!"
+*{{AC|GekkoMatchWin2.mp3}} "Alright! Much love, team!"
+*{{AC|GekkoMatchWin3.mp3}} "Hell yeah! My crew delivers!"
+
+====[[Sunset]]====
+*{{AC|GekkoMatchWinSunset.mp3}} "This is my house, baby! My house!"
+
+===Runner Up (game-mode specific)===
+*{{AC|GekkoRunnerUp1.mp3}} "Next time we're taking it."
+*{{AC|GekkoRunnerUp2.mp3}} "Heh, not bad."
+
+==Agent-specific interactions==
+{| class="wikitable sortable"
+!To Agent
+!Scenario
+!width=40%; class=unsortable|Ally
+!width=40%; class=unsortable|Enemy
+|-
+|rowspan=2|{{ai|Astra}}
+|Match Start
+|{{AC|GekkoCreatureAllyAstraMatchStart.mp3}} {{abi|Mosh Pit}} ''*Creature noises*''
+*{{AC|GekkoAllyAstraMatchStart.mp3}} "What do you mean Astra is glowing? She's just standing here, come on, focus up!"
+|
+|-
+|Barrier Down
+|
+|{{AC|GekkoEnemyAstraBarrierDown.mp3}} "Their star girl is scheming, eyes up."
+|-
+|{{ai|Breach}}
+|Chat
+|
+:[[File:Gekko icon.png|20px|link=Gekko]] {{AC|GekkoAllyBreachChat.mp3}} "Ayy, B-man! What you doing after this? Put me and the crew on to some Swedish eats, yeah?"
+:[[File:Breach icon.png|20px|link=Breach]] {{AC|BreachAllyGekkoChat.mp3}} "Is that- Am I B-ma-? Okay, uh, yeah Gekko, yeah yeah yeah sure, yeah. Eats. Cool."
+|
+|-
+|rowspan=2|{{ai|Chamber}}
+|Round Start
+|{{AC|GekkoCreatureAllyChamberRoundStart.mp3}} {{abi|Dizzy}} ''*Creature noises*''
+*{{AC|GekkoAllyChamberRoundStart.mp3}} "Chamber, don't listen to her, you look great."
+|
+|-
+|Kill
+|
+|{{AC|GekkoEnemyChamberKill.mp3}} "Cornball!"
+|-
+|{{ai|Clove}}
+|Chat
+|
+:[[File:Clove icon.png|20px|link=Clove]] {{AC|CloveAllyGekkoChat.mp3}} ''*Clove gasps*'' "[[Wingman|Wings]]! How are you wee fella!" ''*Clove speaks gibberish*''
+:[[File:Gekko icon.png|20px|link=Gekko]] {{AC|GekkoAllyCloveChat.mp3}} "Uh, he has no idea what you just said."
+|
+|-
+|rowspan=4|{{ai|Deadlock}}
+|Match Start
+|{{AC|GekkoAllyDeadlockMatchStart.mp3}} "Hey Deadlock, the enemies are over there. Eyes off my sling."
+|{{AC|GekkoEnemyDeadlockMatchStart.mp3}} "Man, they brought Deadlock? Qué poca madre!"
+*(''Qué poca madre'': That's outrageous)
+|-
+|Barrier Down
+|
+|{{AC|GekkoEnemyDeadlockBarrierDown.mp3}} "No mercy for the creature killer."
+|-
+|Kill
+|
+|{{AC|GekkoEnemyDeadlockKill.mp3}} "Creature killer's dead!"
+|-
+|Last Kill
+|
+|{{AC|GekkoEnemyDeadlockLastKill.mp3}} "Serves you right."
+|-
+|{{ai|Fade}}
+|Kill
+|
+|{{AC|GekkoEnemyFadeKill.mp3}} "Not today, Fade!"
+|-
+|rowspan=5|{{ai|Gekko}}
+|Match Start
+|
+|{{AC|GekkoCreatureEnemyGekkoMatchStart.mp3}} {{abi|Dizzy}} ''*Creature noises*''
+*{{AC|GekkoEnemyGekkoMatchStart.mp3}} "Yeah girl, that's us over there. Try not to think about it."
+|-
+|Round Start
+|
+|{{AC|GekkoEnemyGekkoRoundStart.mp3}} "Damn, I never thought I'd have beef with myself, you know?"
+|-
+|Barrier Down
+|
+|{{AC|GekkoEnemyGekkoBarrierDown.mp3}} "Hey other me, sorry in advance!"
+|-
+|Kill
+|
+|{{AC|GekkoEnemyGekkoKill.mp3}} "Goodbye, me!"
+|-
+|Last Kill
+|
+|{{AC|GekkoEnemyGekkoLastKill.mp3}} "Sorry little guys, and uh, me."
+|-
+|rowspan=4|{{ai|Harbor}}
+|Match Start
+|{{AC|GekkoAllyHarborMatchStart.mp3}} "Hey coach, this counts as training for today, right? Right?"
+|
+|-
+|Commend
+|{{AC|GekkoAllyHarborCommend.mp3}} "Those are some crazy ass moves, coach! Shit!"
+|
+|-
+|Barrier Down
+|{{AC|GekkoAllyHarborBarrierDown.mp3}} "Look out for us, coach."
+|
+|-
+|Kill
+|
+|{{AC|GekkoEnemyHarborKill.mp3}} "Sorry, coach!"
+|-
+|rowspan=3|{{ai|Jett}}
+|Chat
+|
+:[[File:Jett icon.png|20px|link=Jett]] {{AC|JettAllyGekkoChat.mp3}} "Hey Gekko, still good to get food later, that new place?"
+:[[File:Gekko icon.png|20px|link=Gekko]] {{AC|GekkoAllyJettChat.mp3}} "Chica, you know I am! Let the foodies unite!"
+:*(''Chica'': Girl)
+|
+|-
+|Commend
+|{{AC|GekkoAllyJettCommend.mp3}} "Jett does not miss!"
+|
+|-
+|Barrier Down
+|{{AC|GekkoAllyJettBarrierDown.mp3}} "Jett, together!"
+|
+|-
+|rowspan=2|{{ai|Killjoy}}
+|Round Start
+|{{AC|GekkoCreatureAllyKilljoyRoundStart.mp3}} {{abi|Wingman}} ''*Creature noises*''
+*{{AC|GekkoAllyKilljoyRoundStart.mp3}} "You want KJ's shoes? Chale dude, you can't even wear shoes."
+**(''Chale'': No way)
+|
+|-
+|Barrier Down
+|{{AC|GekkoAllyKilljoyBarrierDown.mp3}} "KJ, work your magic."
+|
+|-
+|{{ai|Miks}}
+|Chat
+|
+:[[File:Gekko icon.png|20px|link=Gekko]] {{AC|GekkoAllyMiksChat.mp3}} "M-Miks, you didn't have to finish my mom's {{w|pozole}}. Ugh, I told her not to send you so much!"{{#tag:sup|{{patchv|13.00}}+}}
+:[[File:Miks icon.png|20px|link=Miks]] {{AC|MiksAllyGekkoChat.mp3}} "You what- oh don't ever do that again."
+|
+|-
+|rowspan=4|{{ai|Neon}}
+|Chat
+|
+:[[File:Neon icon.png|20px|link=Neon]] {{AC|NeonAllyGekkoChat.mp3}} "Gekko, you told me you'd buy me boba later, I'll hold you to it."
+:[[File:Gekko icon.png|20px|link=Gekko]] {{AC|GekkoAllyNeonChat.mp3}} "I did? I did. Wingman... stole my wallet?"
+|
+|-
+|Round Start
+|{{AC|GekkoCreatureAllyNeonRoundStart.mp3}} {{abi|Mosh Pit}} ''*Creature noises*''
+*{{AC|GekkoAllyNeonRoundStart.mp3}} ''*Gekko laughs*'' "Hey Neon! Mosh kinda likes you."
+|
+|-
+|Commend
+|{{AC|GekkoCreatureAllyNeonCommend.mp3}} {{abi|Wingman}} ''*Creature noises*''
+*{{AC|GekkoAllyNeonCommend.mp3}} "Yeah, I know she popped off, I was there!"
+|
+|-
+|Barrier Down
+|{{AC|GekkoAllyNeonBarrierDown.mp3}} "Got your back, Neon!"
+|
+|-
+|{{ai|Omen}}
+|Commend
+|{{AC|GekkoAllyOmenCommend.mp3}} "Omen, that was weird, but like, cool weird."
+|
+|-
+|rowspan=2|{{ai|Phoenix}}
+|Commend
+|{{AC|GekkoAllyPhoenixCommend.mp3}} "Damn, Phoenix is the goat."
+|
+|-
+|Barrier Down
+|{{AC|GekkoAllyPhoenixBarrierDown.mp3}} "Okay, Phoenix, let's work!"
+|
+|-
+|rowspan=5|{{ai|Reyna}}
+|Chat
+|
+:[[File:Gekko icon.png|20px|link=Gekko]] {{AC|GekkoAllyReynaChat.mp3}} "Reyna, you keep like glancing at me. Why you smiling?"
+:[[File:Reyna icon.png|20px|link=Reyna]] {{AC|ReynaAllyGekkoChat.mp3}} "Sorry cariño, you remind me of someone."
+:*(''Cariño'': Darling)
+|
+|-
+|Match Start
+|{{AC|GekkoAllyReynaMatchStart.mp3}} "Hola mi reina! Make way for the queen."
+*(''Hola mi reina'': Hello my queen)
+|
+|-
+|Commend
+|{{AC|GekkoAllyReynaCommend.mp3}} "Yo, did you see Reyna? Jefa's unstoppable."
+*(''Jefa'': Boss)
+|
+|-
+|Barrier Down
+|{{AC|GekkoAllyReynaBarrierDown.mp3}} "Show us how it's done, Reyna."
+|
+|-
+|Last Kill
+|
+|{{AC|GekkoEnemyReynaLastKill.mp3}} "Perdóname mi reina."
+*(Forgive me my queen.)
+|-
+|{{ai|Sage}}
+|Round Start
+|{{AC|GekkoCreatureAllySageRoundStart.mp3}} {{abi|Thrash}} ''*Creature noises*''
+*{{AC|GekkoAllySageRoundStart.mp3}} "Hey, manners! I'm sorry Sage, she didn't mean it."
+|
+|-
+|rowspan=2|{{ai|Viper}}
+|Round Start
+|{{AC|GekkoAllyViperRoundStart.mp3}} "Yo Viper, are we really safe breathing that in? I lowkey have asthma."
+|
+|-
+|Commend
+|{{AC|GekkoAllyViperCommend.mp3}} "Viper, to be honest, that was kinda dark."
+|
+|-
+|rowspan=3|{{ai|Yoru}}
+|Match Start
+|{{AC|GekkoCreatureAllyYoruMatchStart.mp3}} {{abi|Thrash}} ''*Creature noises*''
+*{{AC|GekkoAllyYoruMatchStart.mp3}} "Of course you've seen Yoru before. We live with him, what are you talking about?"
+|
+|-
+|Commend
+|{{AC|GekkoAllyYoruCommend.mp3}} "Ain't no way! Yoru, you are cracked!"
+|
+|-
+|Barrier Down
+|{{AC|GekkoAllyYoruBarrierDown.mp3}} "Yoru, good luck!"
+|
+|}
+
+==Radio Commands==
+===Menu Index only===
+====Caution here====
+*{{AC|GekkoCaution1.mp3}}{{AC|GekkoCaution2.mp3}} "Enemy close."
+
+====Going Area====
+*{{AC|GekkoGoingA1.mp3}}{{AC|GekkoGoingA2.mp3}} "Going A."
+*{{AC|GekkoGoingB1.mp3}}{{AC|GekkoGoingB2.mp3}} "Going B."
+*{{AC|GekkoGoingC1.mp3}}{{AC|GekkoGoingC2.mp3}} "Going C."
+*{{AC|GekkoGoingMid1.mp3}}{{AC|GekkoGoingMid2.mp3}} "Going Mid."
+
+====Need Support====
+*{{AC|GekkoHelp1.mp3}}{{AC|GekkoHelp2.mp3}} "Need some help."
+
+====On my way====
+*{{AC|GekkoOnMyWay1.mp3}}{{AC|GekkoOnMyWay2.mp3}} "On my way."
+
+====Play for picks====
+*{{AC|GekkoPlayForPicks1.mp3}}{{AC|GekkoPlayForPicks2.mp3}} "Play for picks."
+
+===Wheel Index only===
+====Encourage====
+*{{AC|GekkoEncouraging1.mp3}}{{AC|GekkoEncouraging2.mp3}} "We got this."
+*{{AC|GekkoEncouraging3.mp3}} "We got this, we got this."
+
+====I'll lurk====
+Only as Attackers during Buy Phase.
+*{{AC|GekkoLurking1.mp3}}{{AC|GekkoLurking2.mp3}} "I'm lurking."
+
+====I'll push out====
+Only as Defenders during Buy Phase.
+*{{AC|GekkoPushingOut1.mp3}}{{AC|GekkoPushingOut2.mp3}} "I'm pushing out."
+
+====I'm holding position====
+Only as Defenders during Buy Phase.
+*{{AC|GekkoHoldingPosition1.mp3}}{{AC|GekkoHoldingPosition2.mp3}} "Holding position."
+
+====Let's Attack====
+Only during Round Phase.
+*{{AC|GekkoLetsAttack1.mp3}}{{AC|GekkoLetsAttack2.mp3}} "Let's attack."
+
+====Let's hold positions====
+Only as Defenders during Buy Phase.
+*{{AC|GekkoHoldPositions1.mp3}}{{AC|GekkoHoldPositions2.mp3}} "Let's hold positions."
+
+====Let's play slow====
+Only as Attackers at anytime.
+*{{AC|GekkoPlaySlow1.mp3}}{{AC|GekkoPlaySlow2.mp3}} "Let's play slow."
+
+====Let's push out====
+Only as Defenders during Buy Phase.
+*{{AC|GekkoPushOut1.mp3}}{{AC|GekkoPushOut2.mp3}} "Let's push out."
+
+====Let's spread out====
+*{{AC|GekkoSpreadOut1.mp3}}{{AC|GekkoSpreadOut2.mp3}} "Let's spread out."
+
+====Nice Try====
+*{{AC|GekkoNiceTry1.mp3}}{{AC|GekkoNiceTry2.mp3}}{{AC|GekkoNiceTry3.mp3}} "Nice try."
+
+====Stick together====
+*{{AC|GekkoStickTogether1.mp3}}{{AC|GekkoStickTogether2.mp3}} "Stick together."
+
+===Menu and Wheel Index===
+====Commend====
+*{{AC|GekkoCommend1.mp3}}{{AC|GekkoCommend2.mp3}}{{AC|GekkoCommend3.mp3}} "A huevo, nice!"
+**(''A huevo'': Hell yeah)
+
+====Fall Back====
+Menu Index at anytime, or Wheel Index only during Round Phase.
+*{{AC|GekkoFallBack1.mp3}}{{AC|GekkoFallBack2.mp3}} "Fall back."
+
+====Hello====
+*{{AC|GekkoHello1.mp3}} "¿Que onda?"
+**(What's up?)
+*{{AC|GekkoHello2.mp3}} "Hey, what's good?"
+*{{AC|GekkoHello3.mp3}} "What's up, fam?"
+
+====I'll take point====
+Wheel Index only as Attackers during Buy Phase, or Menu Index at anytime regardless of Attackers or Defenders.
+*{{AC|GekkoTakePoint1.mp3}}{{AC|GekkoTakePoint2.mp3}} "Taking point."
+
+====Let's rush them (Radio Command)====
+*{{AC|GekkoRush1.mp3}}{{AC|GekkoRush2.mp3}} "Rush them."
+
+====Need healing====
+*{{AC|GekkoHealing1.mp3}}{{AC|GekkoHealing2.mp3}} "Need healing."
+
+====No====
+*{{AC|GekkoNo1.mp3}}{{AC|GekkoNo2.mp3}}{{AC|GekkoNo3.mp3}} "Nah."
+
+====Sorry====
+*{{AC|GekkoSorry1.mp3}}{{AC|GekkoSorry2.mp3}}{{AC|GekkoSorry3.mp3}} "My bad."
+
+====Thanks====
+*{{AC|GekkoThanks1.mp3}}{{AC|GekkoThanks2.mp3}}{{AC|GekkoThanks3.mp3}} "Appreciate it."
+
+====Ultimate Status====
+*{{AC|GekkoUltDown1.mp3}}{{AC|GekkoUltDown2.mp3}} "She's not ready."
+*{{AC|GekkoUltAlmost1.mp3}}{{AC|GekkoUltAlmost2.mp3}} "[[Thrash]] is almost ready."
+*{{AC|GekkoUltReady1.mp3}}{{AC|GekkoUltReady2.mp3}} "Thrash is ready."
+
+====Yes====
+*{{AC|GekkoYes1.mp3}}{{AC|GekkoYes2.mp3}}{{AC|GekkoYes3.mp3}} "Yeah."
+
+===Wheel Index requiring Minimap===
+For the following voicelines, the minimap must be open and then open ping wheel and activate strategy.
+====Faking====
+Only as Attackers during Buy Phase.
+*{{AC|GekkoFaking1.mp3}}{{AC|GekkoFaking2.mp3}} "I'm faking."
+*{{AC|GekkoFakingA1.mp3}}{{AC|GekkoFakingA2.mp3}} "I'm faking A."
+*{{AC|GekkoFakingB1.mp3}}{{AC|GekkoFakingB2.mp3}} "I'm faking B."
+*{{AC|GekkoFakingC1.mp3}}{{AC|GekkoFakingC2.mp3}} "I'm faking C."
+
+====I'm Going Here====
+As Defenders during Buy Phase, or as Attackers at anytime.
+*{{AC|GekkoGoingA1.mp3}}{{AC|GekkoGoingA2.mp3}} "Going A."
+*{{AC|GekkoGoingB1.mp3}}{{AC|GekkoGoingB2.mp3}} "Going B."
+*{{AC|GekkoGoingC1.mp3}}{{AC|GekkoGoingC2.mp3}} "Going C."
+*{{AC|GekkoGoingMid1.mp3}}{{AC|GekkoGoingMid2.mp3}} "Going Mid."
+
+====Let's Go Here====
+Only as Attackers during Buy Phase.
+*{{AC|GekkoLetsGoA1.mp3}}{{AC|GekkoLetsGoA2.mp3}} "Let's go A."
+*{{AC|GekkoLetsGoB1.mp3}}{{AC|GekkoLetsGoB2.mp3}} "Let's go B."
+*{{AC|GekkoLetsGoC1.mp3}}{{AC|GekkoLetsGoC2.mp3}} "Let's go C."
+*{{AC|GekkoLetsGoHere1.mp3}}{{AC|GekkoLetsGoHere2.mp3}} "Let's go here."
+
+====Let's rush them (Minimap)====
+Only as Attackers during Buy Phase.
+*{{AC|GekkoLetsRush1.mp3}}{{AC|GekkoLetsRush2.mp3}} "Let's rush them."
+*{{AC|GekkoLetsRushA1.mp3}}{{AC|GekkoLetsRushA2.mp3}} "Let's rush A."
+*{{AC|GekkoLetsRushB1.mp3}}{{AC|GekkoLetsRushB2.mp3}} "Let's rush B."
+*{{AC|GekkoLetsRushC1.mp3}}{{AC|GekkoLetsRushC2.mp3}} "Let's rush C."
+
+====Let's Sneak Here====
+Only as Attackers during Buy Phase.
+*{{AC|GekkoSneakA1.mp3}}{{AC|GekkoSneakA2.mp3}} "Let's sneak A."
+*{{AC|GekkoSneakB1.mp3}}{{AC|GekkoSneakB2.mp3}} "Let's sneak B."
+*{{AC|GekkoSneakC1.mp3}}{{AC|GekkoSneakC2.mp3}} "Let's sneak C."
+*{{AC|GekkoSneakMid1.mp3}}{{AC|GekkoSneakMid2.mp3}} "Let's sneak Mid."
+
+====Let's Stack Here====
+Only as Defenders during Buy Phase.
+*{{AC|GekkoStack1.mp3}}{{AC|GekkoStack2.mp3}} "Let's stack up."
+*{{AC|GekkoStackA1.mp3}}{{AC|GekkoStackA2.mp3}} "Let's stack A."
+*{{AC|GekkoStackB1.mp3}}{{AC|GekkoStackB2.mp3}} "Let's stack B."
+*{{AC|GekkoStackC1.mp3}}{{AC|GekkoStackC2.mp3}} "Let's stack C."
+*{{AC|GekkoStackMid1.mp3}}{{AC|GekkoStackMid2.mp3}} "Let's stack Mid."
+
+====Someone Go Here====
+As Attackers during Round Phase, or as Defenders at anytime.
+*{{AC|GekkoNeedSomeoneA1.mp3}}{{AC|GekkoNeedSomeoneA2.mp3}} "Someone go A."
+*{{AC|GekkoNeedSomeoneB1.mp3}}{{AC|GekkoNeedSomeoneB2.mp3}} "Someone go B."
+*{{AC|GekkoNeedSomeoneC1.mp3}}{{AC|GekkoNeedSomeoneC2.mp3}} "Someone go C."
+*{{AC|GekkoNeedSomeoneMid1.mp3}}{{AC|GekkoNeedSomeoneMid2.mp3}} "Someone go Mid."
+
+====Spike's here====
+Only as Defenders during Round Phase.
+*{{AC|GekkoSpikeA1.mp3}}{{AC|GekkoSpikeA2.mp3}} "Spike's A."
+*{{AC|GekkoSpikeB1.mp3}}{{AC|GekkoSpikeB2.mp3}} "Spike's B."
+*{{AC|GekkoSpikeC1.mp3}}{{AC|GekkoSpikeC2.mp3}} "Spike's C."
+*{{AC|GekkoSpikeMid1.mp3}}{{AC|GekkoSpikeMid2.mp3}} "Spike's Mid."
+*{{AC|GekkoSpikeSpottedASpawn1.mp3}}{{AC|GekkoSpikeSpottedASpawn2.mp3}} "Spike's in Attacker Spawn."
+*{{AC|GekkoSpikeSpottedDSpawn1.mp3}}{{AC|GekkoSpikeSpottedDSpawn2.mp3}} "Spike's in Defender Spawn."
+
+==Pings==
+===General===
+*{{AC|GekkoPing1.mp3}}{{AC|GekkoPing2.mp3}} "Right there."
+
+===Caution===
+*{{AC|GekkoPingCaution1.mp3}}{{AC|GekkoPingCaution2.mp3}} "Careful here."
+
+===Need support===
+*{{AC|GekkoHelp1.mp3}}{{AC|GekkoHelp2.mp3}} "Need some help!"
+
+===On my mark===
+*{{AC|GekkoOnMyMark1.mp3}}{{AC|GekkoOnMyMark2.mp3}} "On my mark."
+
+===Ping gun===
+*{{AC|GekkoPingGun1.mp3}}{{AC|GekkoPingGun2.mp3}} "Gun here."
+
+===Ping spike===
+*{{AC|GekkoPingSpike1.mp3}}{{AC|GekkoPingSpike2.mp3}} "Spike's here."
+
+===Ping for spike defuse===
+*{{AC|GekkoDefuseSpike1.mp3}}{{AC|GekkoDefuseSpike2.mp3}} "Defuse the spike!"
+
+===Ping for spike plant===
+*{{AC|GekkoPlantSpike1.mp3}}{{AC|GekkoPlantSpike2.mp3}} "Plant the spike!"
+
+===Watching===
+*{{AC|GekkoWatching1.mp3}}{{AC|GekkoWatching2.mp3}} "I got eyes here."
+
+==Other lines==
+===Ability unusable===
+====[[Status Effect#Suppress|Suppressed]]====
+*{{AC|GekkoCantUse1.mp3}}{{AC|GekkoCantUse2.mp3}} "Can't do it."
+
+====On cooldown====
+*{{AC|GekkoOnCooldown1.mp3}}{{AC|GekkoOnCooldown2.mp3}} "They're not ready."
+
+====No charges====
+*{{AC|GekkoNoCharges1.mp3}}{{AC|GekkoNoCharges2.mp3}} "I'm out."
+
+===Enemy spotted===
+*{{AC|GekkoEnemyA1.mp3}}{{AC|GekkoEnemyA2.mp3}} "Enemy A."
+*{{AC|GekkoEnemyB1.mp3}}{{AC|GekkoEnemyB2.mp3}} "Enemy B."
+*{{AC|GekkoEnemyC1.mp3}}{{AC|GekkoEnemyC2.mp3}} "Enemy C."
+*{{AC|GekkoEnemyASpawn1.mp3}}{{AC|GekkoEnemyASpawn2.mp3}} "Enemy Attacker Spawn."
+*{{AC|GekkoEnemyDSpawn1.mp3}}{{AC|GekkoEnemyDSpawn2.mp3}}  "Enemy Defender Spawn."
+*{{AC|GekkoEnemyMid1.mp3}}{{AC|GekkoEnemyMid2.mp3}} "Enemy Mid."
+
+====Multiple====
+*{{AC|GekkoEnemiesA1.mp3}}{{AC|GekkoEnemiesA2.mp3}} "Enemies are A!"
+*{{AC|GekkoEnemiesB1.mp3}}{{AC|GekkoEnemiesB2.mp3}} "Enemies are B!"
+*{{AC|GekkoEnemiesC1.mp3}}{{AC|GekkoEnemiesC2.mp3}} "Enemies are C!"
+*{{AC|GekkoEnemiesASpawn1.mp3}}{{AC|GekkoEnemiesASpawn2.mp3}} "Enemies Attacker Spawn!"
+*{{AC|GekkoEnemiesDSpawn1.mp3}}{{AC|GekkoEnemiesDSpawn2.mp3}} "Enemies Defender Spawn!"
+*{{AC|GekkoEnemiesMid1.mp3}}{{AC|GekkoEnemiesMid2.mp3}} "Enemies are Mid!"
+
+===Reloading===
+*{{AC|GekkoReloading1.mp3}}{{AC|GekkoReloading2.mp3}} "Reloading."
+
+===Healed===
+*{{AC|GekkoRelief1.mp3}}{{AC|GekkoRelief2.mp3}}{{AC|GekkoRelief3.mp3}} ''*Gekko sighs*''
+
+===Killed===
+*{{AC|GekkoDeath1.mp3}}{{AC|GekkoDeath2.mp3}}{{AC|GekkoDeath3.mp3}} ''*Gekko groans*''
+
+===Resurrected via {{abi text|Resurrection}}===
+*{{AC|GekkoResurrect.mp3}} "Thank you, [[Sage]]!"
+
+===Wounded===
+====Light damage====
+*{{AC|GekkoPainLight1.mp3}}{{AC|GekkoPainLight2.mp3}}{{AC|GekkoPainLight3.mp3}} ''*Gekko groans*''
+
+====Medium damage====
+*{{AC|GekkoPainMedium1.mp3}}{{AC|GekkoPainMedium2.mp3}}{{AC|GekkoPainMedium3.mp3}} ''*Gekko groans*''
+
+====Heavy damage====
+*{{AC|GekkoPainHeavy1.mp3}}{{AC|GekkoPainHeavy2.mp3}}{{AC|GekkoPainHeavy3.mp3}} ''*Gekko groans*''
+
+====Fall damage====
+*{{AC|GekkoPainFall1.mp3}}{{AC|GekkoPainFall2.mp3}}{{AC|GekkoPainFall3.mp3}} ''*Gekko groans*''
+
+==Unused lines==
+===Ping Go here===
+*{{AC|GekkoGoHere1.mp3}}{{AC|GekkoGoHere2.mp3}} "Go here."
+
+==Removed lines==
+===Spike Spotted General===
+*{{AC|GekkoSpikeSpotted1.mp3}}{{AC|GekkoSpikeSpotted2.mp3}} "I see the spike."
+
+===Enemy spotted General===
+*{{AC|GekkoEnemy1.mp3}}{{AC|GekkoEnemy2.mp3}} "I see one."
+
+===Multiple Enemies spotted General===
+*{{AC|GekkoEnemies1.mp3}}{{AC|GekkoEnemies2.mp3}} "I see enemies!"
+
+===Be Quiet===
+*{{AC|GekkoBeQuiet1.mp3}}{{AC|GekkoBeQuiet2.mp3}} "Yo, quiet."
+
+===Rotate===
+*{{AC|GekkoRotating1.mp3}}{{AC|GekkoRotating2.mp3}} "Rotating."
+
+===Let's Rotate===
+*{{AC|GekkoLetsRotate1.mp3}}{{AC|GekkoLetsRotate2.mp3}} "Let's rotate."
+
+===Need utility here===
+*{{AC|GekkoNeedUtilityHere1.mp3}}{{AC|GekkoNeedUtilityHere2.mp3}} "Need util here."
+
+===Blocking Vision===
+*{{AC|GekkoBlockingVisionHere1.mp3}}{{AC|GekkoBlockingVisionHere2.mp3}} "Blocking vision here."
+*{{AC|GekkoBlockingVisionA1.mp3}}{{AC|GekkoBlockingVisionA2.mp3}} "Blocking vision A."
+*{{AC|GekkoBlockingVisionB1.mp3}}{{AC|GekkoBlockingVisionB2.mp3}} "Blocking vision B."
+*{{AC|GekkoBlockingVisionC1.mp3}}{{AC|GekkoBlockingVisionC2.mp3}} "Blocking vision C."
+*{{AC|GekkoBlockingVisionMid1.mp3}}{{AC|GekkoBlockingVisionMid2.mp3}} "Blocking vision Mid."
+
+===Clear Area===
+*{{AC|GekkoClearArea1.mp3}}{{AC|GekkoClearArea2.mp3}} "Clear this area."
+
+===Hold===
+*{{AC|GekkoHold1.mp3}}{{AC|GekkoHold2.mp3}} "Hold."
+
+===Push===
+*{{AC|GekkoPush1.mp3}}{{AC|GekkoPush2.mp3}} "Let's push."
+
+===Regroup===
+*{{AC|GekkoRegroup1.mp3}}{{AC|GekkoRegroup2.mp3}} "Regroup."
+
+===Clear Area===
+*{{AC|GekkoClearThisArea1.mp3}}{{AC|GekkoClearThisArea2.mp3}} "Clear here."
+
+===Clearing Area===
+*{{AC|GekkoClearingArea1.mp3}}{{AC|GekkoClearingArea2.mp3}} "Clearing this area."
+
+===Moving Quietly===
+*{{AC|GekkoMovingQuietly1.mp3}}{{AC|GekkoMovingQuietly2.mp3}} "Moving quietly."
+
+===Need Block Vision Here===
+*{{AC|GekkoNeedBlockVisionHere1.mp3}}{{AC|GekkoNeedBlockVisionHere2.mp3}} "Block vision here."
+*{{AC|GekkoNeedBlockVisionA1.mp3}}{{AC|GekkoNeedBlockVisionA2.mp3}} "Block vision A."
+*{{AC|GekkoNeedBlockVisionB1.mp3}}{{AC|GekkoNeedBlockVisionB2.mp3}} "Block vision B."
+*{{AC|GekkoNeedBlockVisionC1.mp3}}{{AC|GekkoNeedBlockVisionC2.mp3}} "Block vision C."
+*{{AC|GekkoNeedBlockVisionMid1.mp3}}{{AC|GekkoNeedBlockVisionMid2.mp3}} "Block vision Mid."
+
+===Need Help Here===
+*{{AC|GekkoNeedHelpHere1.mp3}}{{AC|GekkoNeedHelpHere2.mp3}} "Need help here."
+*{{AC|GekkoNeedHelpA1.mp3}}{{AC|GekkoNeedHelpA2.mp3}} "Need help A."
+*{{AC|GekkoNeedHelpB1.mp3}}{{AC|GekkoNeedHelpB2.mp3}} "Need help B."
+*{{AC|GekkoNeedHelpC1.mp3}}{{AC|GekkoNeedHelpC2.mp3}} "Need help C."
+*{{AC|GekkoNeedHelpMid1.mp3}}{{AC|GekkoNeedHelpMid2.mp3}} "Need help Mid."
+
+===Need Recon Here===
+*{{AC|GekkoNeedReconHere1.mp3}}{{AC|GekkoNeedReconHere2.mp3}} "Need recon here."
+*{{AC|GekkoNeedReconA1.mp3}}{{AC|GekkoNeedReconA2.mp3}} "Need recon A."
+*{{AC|GekkoNeedReconB1.mp3}}{{AC|GekkoNeedReconB2.mp3}} "Need recon B."
+*{{AC|GekkoNeedReconC1.mp3}}{{AC|GekkoNeedReconC2.mp3}} "Need recon C."
+*{{AC|GekkoNeedReconMid1.mp3}}{{AC|GekkoNeedReconMid2.mp3}} "Need recon Mid."
+
+===Recon===
+*{{AC|GekkoReconHere1.mp3}}{{AC|GekkoReconHere2.mp3}} "Sending recon here."
+*{{AC|GekkoReconA1.mp3}}{{AC|GekkoReconA2.mp3}} "Sending recon A."
+*{{AC|GekkoReconB1.mp3}}{{AC|GekkoReconB2.mp3}} "Sending recon B."
+*{{AC|GekkoReconC1.mp3}}{{AC|GekkoReconC2.mp3}} "Sending recon C."
+*{{AC|GekkoReconMid1.mp3}}{{AC|GekkoReconMid2.mp3}} "Sending recon Mid."
+
+===Rushing===
+*{{AC|GekkoRushingIn1.mp3}}{{AC|GekkoRushingIn2.mp3}} "I'm rushing in."
+*{{AC|GekkoRushingA1.mp3}}{{AC|GekkoRushingA2.mp3}} "I'm rushing A."
+*{{AC|GekkoRushingB1.mp3}}{{AC|GekkoRushingB2.mp3}} "I'm rushing B."
+*{{AC|GekkoRushingC1.mp3}}{{AC|GekkoRushingC2.mp3}} "I'm rushing C."
+
+===Sneaking===
+*{{AC|GekkoSneakingIn1.mp3}}{{AC|GekkoSneakingIn2.mp3}} "I'm sneaking in."
+*{{AC|GekkoSneakingA1.mp3}}{{AC|GekkoSneakingA2.mp3}} "I'm sneaking A."
+*{{AC|GekkoSneakingB1.mp3}}{{AC|GekkoSneakingB2.mp3}} "I'm sneaking B."
+*{{AC|GekkoSneakingC1.mp3}}{{AC|GekkoSneakingC2.mp3}} "I'm sneaking C."
+*{{AC|GekkoSneakingMid1.mp3}}{{AC|GekkoSneakingMid2.mp3}} "I'm sneaking Mid."
+
+===Using Utility===
+*{{AC|GekkoUsingUtility1.mp3}}{{AC|GekkoUsingUtility2.mp3}} "Using util here."
+
+===Watch Flank===
+*{{AC|GekkoWatchFlank1.mp3}}{{AC|GekkoWatchFlank2.mp3}} "Watch flank."
+
+==[[Range/Lore|The Range's lore assets]]==
+===[[Range/Lore/EP6|Episode 6]]===
+*{{AC|file=VoicemailBrimstone49.mp3}} "Ayo [[Brimstone|Brimmy Brim]]! Hear me out! I love the room for real but, like, my crew needs their own space sometimes and it's a little crowded right now so, check this: what if we knock down some of the walls, combine my room with the one next door, double it up! Eh? Eh?? Let me know what you think!"
+*{{AC|file=VoicemailBrimstone52.mp3}} "Hey Sarge, qué onda? Look, I uh, I know there's some concern about my crew dipping into our [[radianite]] reserves, especially with what's going on, but, listen - they eat what they eat. [[Killjoy|KJ]] and I are watching their intake, there's no change in their behavior and nothing different. I- I get that people are jumpy, but to be honest, like, no one really knows anything about my critters, they're just guessing, and I really think it's fine. So, could you run some interference, give the official okay. I don't know? Something? Would go a long way. Thanks."
+
+===[[Range/Lore/EP7|Episode 7]]===
+*{{AC|file=VoicemailBrimstone58.mp3}} "Brimstone. I've overheard some stuff and I wanna clear some things up with you. My crew are not monsters. They will never be monsters, period. If anything were to happen, which it won't, that's on me. I'll take that responsibility. But until then, tell [[Deadlock]] she's gotta chill. Her cold stares are killing our vibe. Appreciate it."
+
+===[[Range/Lore/EP9|Episode 9]]===
+*{{AC|file=VoicemailBrimstone94.mp3}} "Brimstone, I am sorry to call you but someone... [[Wingman]]... snuck into your office and took a music record without asking. He knows it was wrong and would like to apologize. Ven aquí, apologize!... Apologize!... He says he's sorry. Alright, get out of here. Yeah real sorry about that Brim, won't happen again. I checked the record, no scratches, it's on your desk."
+**(''Ven aquí'': Come here)
+
+===[[Range/Lore/V25|Season 2025]]===
+*{{AC|file=VoicemailBrimstone108.mp3}} "Yo, jefe. I've been talking to [[Harbor|Coach]] and I wanted to check with you. I've been training for a hot minute so I feel like it's time for me to start learning some new new shit, ya know? Like... the VLT/R? Like... flying the VLT/R, alright? C-Cause think about how useful it would be to have another pilot on the team, ya know? Someone else... like me! Just saying! That's all I got, think about it!"
+
+==Notes==
+:''To easily see which quotes were added corresponding to the patch, use your browser's Find function and type the patch number (e.g. v2.05).
+*{{ui|Added}} 1 voice lines added from patch {{patchv|13.00}}, documented in the patch notes.
+*Additional radio commands added in patch {{patchv|8.11}} are not mentioned in this page.
+*Other voice lines removed were at an unknown timeframe.
+
+==Navigation==
+{{navbox agents}}
+[[Category:Quotes]]

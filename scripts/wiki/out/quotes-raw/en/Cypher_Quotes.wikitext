@@ -1,0 +1,885 @@
+{{TOCright}}
+This is a '''list of quotes by {{ai|Cypher}}'''. Cypher is voiced by Nabil Elouahabi in English. Necessary quotes translated are from Arabic to English. Cypher has a total of {{PAGESINCATEGORY:Cypher Quotes}} files of quotes including unused and removed lines, and excluding [[#The Range's lore assets|The Range's lore assets]]. 
+
+A downloadable folder containing all the audio files on this page can be found [https://drive.google.com/drive/folders/1VoXBMJhNNAIipE-ZD-C-mlmjg_rDbpOi?usp=sharing here].
+
+==Agent Selected/Unlocked==
+*{{AC|CypherPick.mp3}} "Nothing stays hidden from me. Nothing."
+
+==Abilities==
+==={{abi text|Trapwire}}===
+====Destroyed====
+*{{AC|CypherTrapwireDestroyed1.mp3}} "They found my wire."
+*{{AC|CypherTrapwireDestroyed2.mp3}} "Tripwire destroyed."
+
+====Triggered====
+*{{AC|CypherTrapwireTriggered1.mp3}} "Caught one!"
+*{{AC|CypherTrapwireTriggered2.mp3}} "Found you."
+*{{AC|CypherTrapwireTriggered3.mp3}} "Careful now."
+
+==={{abi text|Cyber Cage}}===
+====Activate====
+*{{AC|CypherCyberCageActivate.mp3}} "Cage triggered."
+
+==={{abi text|Spycam}}===
+====Tagged====
+*{{AC|CypherSpycamMark1.mp3}} "Got you."
+*{{AC|CypherSpycamMark2.mp3}} "Tagged."
+
+====Destroyed====
+*{{AC|CypherSpycamDestroyed1.mp3}}{{AC|CypherSpycamDestroyed2.mp3}} "Camera taken out."
+*{{AC|CypherSpycamDestroyed3.mp3}} "My camera is destroyed."
+*{{AC|CypherSpycamDestroyed4.mp3}} "My eyes are down."
+
+===Utility ([[Trapwire]], [[Spycam]] and [[Cyber Cage]])===
+====Cast during buy phase====
+*{{AC|CypherPlaceUtility1.mp3}} "Oh, this is a nice spot!"
+*{{AC|CypherPlaceUtility2.mp3}} "Yes, this should do."
+*{{AC|CypherPlaceUtility3.mp3}} "This goes here."
+*{{AC|CypherPlaceUtility4.mp3}} "That goes there."
+
+====Kill afficted enemy====
+*{{AC|CypherKillRevealed1.mp3}} "Only I could see you hide. Don't worry."
+*{{AC|CypherKillRevealed2.mp3}} "I saw you scurry."
+*{{AC|CypherKillRevealed3.mp3}} "You were probably afraid."
+
+==={{abi text|Neural Theft}}===
+====Ally Cast====
+*{{AC|CypherUltAllyCast.mp3}} "Where is everyone hiding?"
+
+====Enemy Cast====
+*{{AC|CypherUltEnemyCast.mp3}} "I know exactly where you are!"
+
+====Unviable target====
+*{{AC|CypherUltUnviable.mp3}} "Give me a corpse!"
+
+==Buy Phase==
+===Match Start===
+*{{AC|CypherMatchStart1.mp3}} "They're scared. I don't need cameras to see that."
+*{{AC|CypherMatchStart2.mp3}} "Nobody escapes me. But they'll try."
+*{{AC|CypherMatchStart3.mp3}} "I wonder if they have any parts I can salvage. Hmm, implants? I need those!"
+*{{AC|CypherMatchStart4.mp3}} "Ah, okay, this is good! I've got new gadgets to try out."
+*{{AC|CypherMatchStart5.mp3}} "I must survive to protect my family. I can't lose them. I can't feel that pain again."
+*{{AC|CypherMatchStart6.mp3}} "Let's see what I have to use. Pictures of their children? Wow, way too dark."
+*{{AC|CypherMatchStart7.mp3}} "I will stop anyone who tries to come through. I must keep my secrets with me."
+*{{AC|CypherMatchStart8.mp3}} "The back alleys, or the streets of war. There is no difference. Just nicer toys."
+*{{AC|CypherMatchStart9.mp3}} "I'm prepared to die for this mission, though I'd really rather not."
+
+====Attacking====
+*{{AC|CypherMatchStartAttack1.mp3}} "It's decided. Their radianite belongs to us, you see? No ethical dilemma. مش مُشكِل."
+**(''مش مُشكِل'': No problem)
+*{{AC|CypherMatchStartAttack2.mp3}} "Think of it this way. The more radianite we take from them, the less I borrow from all of you. Extra incentive."
+
+====Defending====
+*{{AC|CypherMatchStartDefense1.mp3}} "These impostors threaten everything! Nora, نقدرش نخليهم يخسروا الغزال ديالي."
+**(''نقدرش نخليهم يخسروا الغزال ديالي'': I can't let them destroy my beloved)
+*{{AC|CypherMatchStartDefense2.mp3}} "I detect an incursion into our world? Hah, no, the other team is just very noisy!"
+
+====[[Bind]]====
+*{{AC|CypherMatchStartBind.mp3}} "What has Kingdom done to this town?! However pretty their lies are, they're just sucking my city dry!"
+
+====[[Fracture]]====
+*{{AC|CypherMatchStartFracture.mp3}} "Imagine all the information once kept here, lost in seconds! Ah, خسارة!"
+**(''خسارة'': What a loss!)
+
+====[[Split]]====
+*{{AC|CypherMatchStartSplit.mp3}} "Ah, I've always wanted to pry my way in here. Don't mind if I just leave some... gifts behind."
+
+===Round Start===
+*{{AC|CypherRoundStart1.mp3}} "They're usually distracted once I reveal them. Make sure you take advantage."
+*{{AC|CypherRoundStart2.mp3}} "Where will they go this time?"
+*{{AC|CypherRoundStart3.mp3}} "One of my cameras is broken!- Oh, wait, okay. It's fine."
+*{{AC|CypherRoundStart4.mp3}} "They will scurry, and then they will die."
+*{{AC|CypherRoundStart5.mp3}} "I can't see them yet. But I can feel them getting ready."
+*{{AC|CypherRoundStart6.mp3}} "Give me a moment. I need to set back up."
+*{{AC|CypherRoundStart7.mp3}} "If they try something, I'll see it."
+*{{AC|CypherRoundStart8.mp3}} "Will they try the same old tricks?"
+*{{AC|CypherRoundStart9.mp3}} "We know more than we did before. Let's use that."
+*{{AC|CypherRoundStart10.mp3}} "I find them, I kill them. Simple as that."
+*{{AC|CypherRoundStart11.mp3}} "Now remember, wipe the prints from your guns. It's just good crime scene etiquette."
+
+====Last round won====
+*{{AC|CypherRoundWon1.mp3}} "They're on the back foot, let's deliver another blow!"
+*{{AC|CypherRoundWon2.mp3}} "An injured dog bites hard. Careful."
+*{{AC|CypherRoundWon3.mp3}} "Good work, friends! Keep using my vision to your advantage."
+*{{AC|CypherRoundWon4.mp3}} "Find them again. Kill them again."
+
+=====While in the lead=====
+*{{AC|CypherLead1.mp3}} "We're doing good. Let's do better. Just for fun."
+*{{AC|CypherLead2.mp3}} "Blink, and they'll catch up. Stay alert."
+*{{AC|CypherLead3.mp3}} "Wonderful! It's great to see how frightened they are."
+
+=====Making a comeback=====
+*{{AC|CypherComeback1.mp3}} "Let us use our sight to our advantage."
+*{{AC|CypherComeback2.mp3}} "Don't worry. The house always wins."
+*{{AC|CypherComeback3.mp3}} "Their confidence begins to crack. أنا شفته, ah, I can see it."
+**(''أنا شفته'': I saw it)
+
+===Last round in the half===
+====Attacking====
+*{{AC|CypherLastRound1.mp3}} "We lose all our money after this. Might as well use it."
+*{{AC|CypherLastRound2.mp3}} "Spend like there is no tomorrow! Because there just might not be."
+
+====Defending====
+*{{AC|CypherLastRound3.mp3}} "Nothing will be saved after this. Use it."
+
+===Match Point===
+*{{AC|CypherMatchPoint1.mp3}} "I saw their desperation. Let's use that."
+*{{AC|CypherMatchPoint2.mp3}} "Let's close up shop. I have things to do."
+
+===Shop===
+====Let's Buy====
+*{{AC|CypherBuying1.mp3}}{{AC|CypherBuying2.mp3}} "I'm buying."
+
+====Let's Save====
+*{{AC|CypherSaving1.mp3}}{{AC|CypherSaving2.mp3}} "I'm saving."
+
+====I Have Extra Creds====
+*{{AC|CypherOffer1.mp3}}{{AC|CypherOffer2.mp3}} "I have money if you need."
+
+====Requested====
+*{{AC|CypherRequest1.mp3}}{{AC|CypherRequest2.mp3}} "I need this."
+
+===Barrier Down===
+*{{AC|CypherBarrierDown1.mp3}} "They have nowhere to hide."
+*{{AC|CypherBarrierDown2.mp3}} "Let me find you again."
+*{{AC|CypherBarrierDown3.mp3}} "Don't get cozy."
+*{{AC|CypherBarrierDown4.mp3}} "That radianite must be ours!"
+*{{AC|CypherBarrierDown5.mp3}} "We must keep them out."
+*{{AC|CypherBarrierDown6.mp3}} "My eyes will tip the balance."
+*{{AC|CypherBarrierDown7.mp3}} "I will find them."
+*{{AC|CypherBarrierDown8.mp3}} "Let's knock them down!"
+*{{AC|CypherBarrierDown9.mp3}} "My intel is their obstacle."
+*{{AC|CypherBarrierDown10.mp3}} "They crash against our wall."
+*{{AC|CypherBarrierDown11.mp3}} "We must shore up our defenses!"
+*{{AC|CypherBarrierDown12.mp3}} "I must weave my web better."
+*{{AC|CypherBarrierDown13.mp3}}{{AC|CypherBarrierDown14.mp3}} "I will find you."
+*{{AC|CypherBarrierDown15.mp3}} "Okay. Let's get set up."
+*{{AC|CypherBarrierDown16.mp3}} "We, will reveal their secrets."
+*{{AC|CypherBarrierDown17.mp3}} "Where are you?"
+*{{AC|CypherBarrierDown18.mp3}} "Now, where to set up shop?"
+*{{AC|CypherBarrierDown19.mp3}} "يلا مشينا."
+**(Hurry, let's go.)
+
+==Spike==
+===Forgotten in spawn===
+*{{AC|CypherForgotSpike1.mp3}} "Are we going to get the spike?"
+*{{AC|CypherForgotSpike2.mp3}} "The spike is still in base."
+
+===Ally carrier down===
+*{{AC|CypherSpikeDown1.mp3}}{{AC|CypherSpikeDown2.mp3}} "Our spike carrier is killed."
+
+===Dropped===
+*{{AC|CypherSpikeDropped1.mp3}}{{AC|CypherSpikeDropped2.mp3}} "I have dropped the spike."
+
+===Retrieved===
+*{{AC|CypherSpikePickedUp1.mp3}}{{AC|CypherSpikePickedUp2.mp3}} "I have retrieved the spike."
+
+===Planted===
+*{{AC|CypherSpikePlanted1.mp3}}{{AC|CypherSpikePlanted2.mp3}} "I have planted the spike."
+
+===Spotted===
+*{{AC|CypherSpikeSpottedA1.mp3}}{{AC|CypherSpikeSpottedA2.mp3}} "Spike spotted A."
+*{{AC|CypherSpikeSpottedB1.mp3}}{{AC|CypherSpikeSpottedB2.mp3}} "Spike spotted B."
+*{{AC|CypherSpikeSpottedC1.mp3}}{{AC|CypherSpikeSpottedC2.mp3}} "Spike spotted C."
+*{{AC|CypherSpikeSpottedASpawn1.mp3}}{{AC|CypherSpikeSpottedASpawn2.mp3}} "Spike's in Attacker Spawn."
+*{{AC|CypherSpikeSpottedDSpawn1.mp3}}{{AC|CypherSpikeSpottedDSpawn2.mp3}} "Spike's in Defender Spawn."
+*{{AC|CypherSpikeSpottedMid1.mp3}}{{AC|CypherSpikeSpottedMid2.mp3}} "Spike spotted Mid."
+
+===Defuse resumed===
+*{{AC|CypherDefuseResumed1.mp3}}{{AC|CypherDefuseResumed2.mp3}} "Don't interrupt!"
+
+===Defuse time running out===
+*{{AC|CypherDefuseLate1.mp3}}{{AC|CypherDefuseLate2.mp3}} "This is no problem."
+
+===Defuse successful===
+*{{AC|CypherDefuseComplete1.mp3}} "Spike defused."
+
+==Kill==
+*{{AC|CypherKill1.mp3}} "No hard feelings."
+*{{AC|CypherKill2.mp3}} "Put down."
+*{{AC|CypherKill3.mp3}} "Ouch."
+*{{AC|CypherKill4.mp3}} "Enemy down."
+*{{AC|CypherKill5.mp3}} "Hostile removed."
+*{{AC|CypherKill6.mp3}} "Buried."
+*{{AC|CypherKill7.mp3}} "One down."
+*{{AC|CypherKill8.mp3}} "Foolish."
+*{{AC|CypherKill9.mp3}} "One dead."
+*{{AC|CypherKill10.mp3}} "Goodbye."
+*{{AC|CypherKill11.mp3}} "تهلّى."
+**(Take care.)
+*{{AC|CypherKill12.mp3}} "بالسلامة."
+**(Goodbye.)
+
+===Headshot===
+*{{AC|CypherHeadshot1.mp3}} "Headshot."
+*{{AC|CypherHeadshot2.mp3}} "My eyes are better than yours."
+*{{AC|CypherHeadshot3.mp3}} "Eagle-eyed."
+*{{AC|CypherHeadshot4.mp3}} "Deleted."
+*{{AC|CypherHeadshot5.mp3}} "Trick shot."
+*{{AC|CypherHeadshot6.mp3}} "Erased."
+
+===[[Melee]]===
+*{{AC|CypherMeleeKill1.mp3}} "Knock knock."
+*{{AC|CypherMeleeKill2.mp3}} "صاحبي اسكت."
+**(My friend, be quiet.)
+
+===Triple===
+*{{AC|CypherTriple1.mp3}}{{AC|CypherTriple2.mp3}} "Three out of five."
+
+===Quadra===
+*{{AC|CypherQuadra1.mp3}}{{AC|CypherQuadra2.mp3}} "Four out of five."
+
+===One kill remaining (game-mode specific)===
+*{{AC|CypherOneKillLeft1.mp3}}{{AC|CypherOneKillLeft2.mp3}} "One rat left."
+
+==Round End==
+===Ace===
+*{{AC|CypherAce1.mp3}} "You're dead, and I didn't feel anything. Not even a thrill."
+*{{AC|CypherAce2.mp3}} "Ah, you forget. I've always been a killer."
+*{{AC|CypherAce3.mp3}} "I am Prometheus! And you are just... a god."{{#tag:sup|{{patchv|13.00}}^}}
+
+===Clutch===
+*{{AC|CypherClutch1.mp3}} "You copies are nothing."
+*{{AC|CypherClutch2.mp3}} "You forget. I always play high stakes."
+*{{AC|CypherClutch3.mp3}} "I saw your secrets. They made you weak."{{#tag:sup|{{patchv|13.00}}^}}
+
+===Flawless or Team Ace===
+*{{AC|CypherFlawless1.mp3}} "You guys are so much better than my last team!"
+*{{AC|CypherFlawless2.mp3}} "They were blind."
+*{{AC|CypherFlawless3.mp3}} ''*Cypher laughs*'' "No one left to send a message? Oh well."
+
+===Thrifty===
+*{{AC|CypherThrifty1.mp3}} "I'll try to be even more poor next time. It'll be hard, hmm, but I'll try."
+*{{AC|CypherThrifty2.mp3}} "You think I don't know how to get by without money?"
+
+===Last Kill===
+*{{AC|CypherLastKill1.mp3}} "Oops, no one to interrogate!"
+*{{AC|CypherLastKill2.mp3}} "Squashed the last bug."
+*{{AC|CypherLastKill3.mp3}} "Wiped clean."
+*{{AC|CypherLastKill4.mp3}} "Okay, time for a break."
+*{{AC|CypherLastKill5.mp3}} "Okay, they're dead. Take what's useful."
+
+====Using [[Melee]]====
+*{{AC|CypherLastKillMelee1.mp3}} "You should have been looking more closely."
+
+===Low HP===
+*{{AC|CypherLowHP1.mp3}} "Nora, I will see you again."
+*{{AC|CypherLowHP2.mp3}} "Ugh, I hate visiting underground doctors."
+
+==Match End==
+===Match Win===
+*{{AC|CypherMatchWin1.mp3}} "Ah, so much learned this day. A victory, on many fronts."
+*{{AC|CypherMatchWin2.mp3}} "Never come back. I will take you apart!"
+*{{AC|CypherMatchWin3.mp3}} "My truths stay hidden for one day more."
+*{{AC|CypherMatchWin4.mp3}} "You're lucky I'm generous. Or else your families would be next."
+*{{AC|CypherMatchWin5.mp3}} "I knew your every move. It was sad watching you scamper."
+*{{AC|CypherMatchWin6.mp3}} "Back to my workshop. Still much to be done."
+
+====[[Bind]]====
+*{{AC|CypherMatchWinBind.mp3}} "Get out of my city!"
+
+===Runner-up (game-mode specific)===
+*{{AC|CypherRunnerUp1.mp3}} "I say that was a good job."
+*{{AC|CypherRunnerUp2.mp3}} "That was good. But next time, first place."
+*{{AC|CypherRunnerUp3.mp3}} "That was fun! Again?"
+
+==Agent-specific interactions==
+{| class="wikitable sortable"
+!To Agent
+!Scenario
+!width=40%; class=unsortable|Ally
+!width=40%; class=unsortable|Enemy
+|-
+|rowspan=2|{{ai|Breach}}
+|Round Start
+|{{AC|CypherAllyBreachRoundStart.mp3}} "Breach, Breach. I took a servo from your arms, for my tripwire, don't be angry. Breach."
+|
+|-
+|Kill
+|
+|{{AC|CypherEnemyBreachKill.mp3}} "Breach breached, hah."
+|-
+|rowspan=2|{{ai|Brimstone}}
+|Match Start
+|
+|{{AC|CypherEnemyBrimstoneMatchStart.mp3}} "Let me see if I can hack into that Brimstone's bracer. If he's anything like our Brimstone, he won't know how to fix it!" ''*Cypher laughs*''
+|-
+|Barrier Down
+|
+|{{AC|CypherEnemyBrimstoneBarrierDown.mp3}} "Retire their Brimstone."
+|-
+|rowspan=2|{{ai|Chamber}}
+|Round Start
+|{{AC|CypherAllyChamberRoundStart.mp3}} "With me, Chamber. Your eyes, my cameras. We make a good team."
+|{{AC|CypherEnemyChamberRoundStart.mp3}} "Be mindful of their Chamber. He does not miss much."
+|-
+|Barrier Down
+|
+|{{AC|CypherEnemyChamberBarrierDown.mp3}} "Now where did Chamber build his nest?"
+|-
+|rowspan=6|{{ai|Cypher}}
+|Match Start
+|
+|{{AC|CypherEnemyCypherMatchStart.mp3}} "I honestly don't know who the Cypher on their side is. ''*Cypher sighs*'' A real mystery."
+|-
+|Round Start
+|
+|{{AC|CypherEnemyCypherRoundStart.mp3}} "Who are you? Copy of me?" ''*Cypher laughs*'' "Where did you come from?"
+|-
+|rowspan=2|Barrier Down
+|
+|{{AC|CypherEnemyCypherBarrierDown.mp3}} "Who will see better, Amir?"
+|-
+|
+|{{AC|CypherEnemyCypherBarrierDown2.mp3}} "I'll crush your eyes, Amir."
+|-
+|Kill
+|
+|{{AC|CypherEnemyCypherKill.mp3}} "أيوه سلام عليك"
+*(Well then, goodbye!)
+|-
+|Last Kill
+|
+|{{AC|CypherEnemyCypherLastKill.mp3}} "There can only be one." ''*Cypher laughs*''
+|-
+|rowspan=6|{{ai|Fade}}
+|Chat
+|
+:[[File:Cypher icon.png|20px|link=Cypher]] {{AC|CypherAllyFadeChat.mp3}} "Fade, of all people, you've never asked to see my face."
+:[[File:Fade icon.png|20px|link=Fade]] {{AC|FadeAllyCypherChat.mp3}} "There are more valuable secrets than the look of someone. Will you share those?"
+|
+|-
+|Match Start
+|{{AC|CypherAllyFadeMatchStart.mp3}} "Ah, Fade, سلام. I would offer you a camera, but your methods for gathering intel are a little less traditional."
+*(''سلام: Greetings)
+|{{AC|CypherEnemyFadeMatchStart.mp3}} "Exercise caution around their Fade. Not the type you want to meet in a dark alley."
+|-
+|Round Start
+|{{AC|CypherAllyFadeRoundStart.mp3}} "Fade, keep those nightmares away from me. I already have bad dreams."
+|
+|-
+|Commend
+|{{AC|CypherAllyFadeCommend.mp3}} ''*Cypher laughs*'' "معلمه. Who would have thought the nightmare lady would be so scary."
+*(''معلمه'': A pro)
+|
+|-
+|Barrier Down
+|{{AC|CypherAllyFadeBarrierDown.mp3}} "Fade, leave their brains intact."
+|
+|-
+|Last Kill
+|
+|{{AC|CypherEnemyFadeLastKill.mp3}} "Now I can rest a little easier."
+|-
+|rowspan=3|{{ai|Jett}}
+|Match Start
+|
+|{{AC|CypherEnemyJettMatchStart.mp3}} "That wind girl is so jumpy! So annoying! My poor tripwires."
+|-
+|Barrier Down
+|{{AC|CypherAllyJettBarrierDown.mp3}} "Fly, my wind assassin. Do what you do best."
+|
+|-
+|Last Kill
+|
+|{{AC|CypherEnemyJettLastKill.mp3}} "No more running, girl."
+|-
+|rowspan=4|{{ai|Killjoy}}
+|Chat
+|
+:[[File:Killjoy icon.png|20px|link=Killjoy]] {{AC|KilljoyAllyCypherChat.mp3}} "Cypher, can you show me round the dark web one of these days?"
+:[[File:Cypher icon.png|20px|link=Cypher]] {{AC|CypherAllyKilljoyChat.mp3}} "Oh, oh dear no sweetheart! We must protect you."
+|
+|-
+|rowspan=2|Round Start
+|{{AC|CypherAllyKilljoyRoundStart.mp3}} "Little engineer! I borrowed one of your transmitters for my camera. I'll pay you back! Probably."
+|
+|-
+|{{AC|CypherAllyKilljoyRoundStart2.mp3}} "Killjoy, do you have your soldering iron on you? I want it- um, I me- I mean, I-I need it."
+|
+|-
+|Barrier Down
+|{{AC|CypherAllyKilljoyBarrierDown.mp3}} "Let's go, little engineer."
+|
+|-
+|rowspan=2|{{ai|Omen}}
+|Match Start
+|{{AC|CypherAllyOmenMatchStart.mp3}} "Omen! I have the information you asked for. But my price! My price hasn't been paid yet."
+|
+|-
+|Last Kill
+|
+|{{AC|CypherEnemyOmenLastKill.mp3}} "Goodbye to you, and your secrets."
+|-
+|rowspan=5|{{ai|Phoenix}}
+|Round Start
+|{{AC|CypherAllyPhoenixRoundStart.mp3}} "Phoenix! Our little star, keep that furnace burning, okay?"
+|
+|-
+|Commend
+|{{AC|CypherAllyPhoenixCommend.mp3}} "Phoenix, woah. You are really aggressive, I'm impressed! And a little scared."
+|
+|-
+|Barrier Down
+|{{AC|CypherAllyPhoenixBarrierDown.mp3}} "Go, Phoenix. Burn!"
+|
+|-
+|Kill
+|
+|{{AC|CypherEnemyPhoenixKill.mp3}} "Fire's out."
+|-
+|Last Kill
+|
+|{{AC|CypherEnemyPhoenixLastKill.mp3}} "No rebirth for you."
+|-
+|rowspan=3|{{ai|Raze}}
+|Match Start
+|{{AC|CypherAllyRazeMatchStart.mp3}} "Ah Raze, don't tinker with my gadgets! I don't need exploding cameras again!" ''*Cypher sighs*'' "The cleanup was so messy."
+|
+|-
+|Commend
+|{{AC|CypherAllyRazeCommend.mp3}} "Raze, you powder keg. Nice work!"
+|
+|-
+|Barrier Down
+|{{AC|CypherAllyRazeBarrierDown.mp3}} "Blow them away, Raze."
+|
+|-
+|rowspan=3|{{ai|Reyna}}
+|Match Start
+|
+|{{AC|CypherEnemyReynaMatchStart.mp3}} "Remember everyone, she can only suck our souls after we die. What a charming woman."
+|-
+|Commend
+|{{AC|CypherAllyReynaCommend.mp3}} "Reyna, jeez! Leave some for the rest of us! Or don't!" ''*Cypher laughs nervously*'' "I'm-I-I am sorry."
+|
+|-
+|Kill
+|
+|{{AC|CypherEnemyReynaKill.mp3}} "Reyna killed."
+|-
+|rowspan=3|{{ai|Sage}}
+|Match Start
+|{{AC|CypherAllySageMatchStart.mp3}} "So, Sage. You can bring people back from the dead? Anyone? No constraints? Interesting."
+|
+|-
+|Round Start
+|{{AC|CypherAllySageRoundStart.mp3}} "Sage. Keep me alive. I still have things to do."
+|{{AC|CypherEnemySageRoundStart.mp3}} "I will kill their healer. It's the only way to keep them all dead."
+|-
+|Kill
+|
+|{{AC|CypherEnemySageKill.mp3}} "Healer killed."
+|-
+|{{ai|Skye}}
+|Commend
+|{{AC|CypherAllySkyeCommend.mp3}} "Wait wait wait! Do I have the definition of hippie wrong? Because that certainly wasn't peaceful!"
+|
+|-
+|rowspan=5|{{ai|Sova}}
+|Chat
+|
+:[[File:Cypher icon.png|20px|link=Cypher]] {{AC|CypherAllySovaChat.mp3}} "Sova, I accessed your background file, a good story! But that's not really how you lost your eye."
+:[[File:Sova icon.png|20px|link=Sova]] {{AC|SovaAllyCypherChat.mp3}} "And your file is missing, Amir. Explain that."
+|
+|-
+|Match Start
+|{{AC|CypherAllySovaMatchStart.mp3}} "Between you and me, Sova? There's nowhere they can hide!" ''*chuckles*'' "How fun!"
+|
+|-
+|Round Start
+|
+|{{AC|CypherEnemySovaRoundStart.mp3}} "Their Sova will see what I want him to see."
+|-
+|Commend
+|{{AC|CypherAllySovaCommend.mp3}} "Ah, Sova. My measured friend, that was amazing!"
+|
+|-
+|Barrier Down
+|
+|{{AC|CypherEnemySovaBarrierDown.mp3}} "Let's blind their scout."
+|-
+|rowspan=5|{{ai|Viper}}
+|Chat
+|
+:[[File:Cypher icon.png|20px|link=Cypher]] {{AC|CypherAllyViperChat.mp3}} "You know, Viper, the name Sabine really fits you."
+:[[File:Viper icon.png|20px|link=Viper]] {{AC|ViperAllyCypherChat.mp3}} "Never call me that again! If you do though it's Doctor Sabine, get it right."
+|
+|-
+|Match Start
+|{{AC|CypherAllyViperMatchStart.mp3}} "Viper, who's birthday is March 20th? I found it when, uh-" ''*Cypher chuckles*'' "Okay, okay. I have everyone's passwords."
+|
+|-
+|Round Start
+|
+|{{AC|CypherEnemyViperRoundStart.mp3}} "Their Viper's poison is not just physical, it's psychological as well. Keep strong."
+|-
+|Commend
+|{{AC|CypherAllyViperCommend.mp3}} "Viper. You're channeling that fury into real power. Keep it up."
+|
+|-
+|Kill
+|
+|{{AC|CypherEnemyViperKill.mp3}} "Poison's gone."
+|-
+|rowspan=2|{{ai|Yoru}}
+|Round Start
+|
+|{{AC|CypherEnemyYoruRoundStart.mp3}} "Remember, the rift walker is over there. Never think you're safe."
+|-
+|Commend
+|{{AC|CypherAllyYoruCommend.mp3}} "Wow. You are cool! Like, really! Are you even sweating?"
+|
+|}
+
+==Radio Commands==
+===Menu Index only===
+====Caution here====
+*{{AC|CypherCaution1.mp3}}{{AC|CypherCaution2.mp3}} "They're close."
+
+====Going Area====
+*{{AC|CypherGoingA1.mp3}}{{AC|CypherGoingA2.mp3}} "Going A."
+*{{AC|CypherGoingB1.mp3}}{{AC|CypherGoingB2.mp3}} "Going B."
+*{{AC|CypherGoingC1.mp3}}{{AC|CypherGoingC2.mp3}} "Going C."
+*{{AC|CypherGoingMid1.mp3}}{{AC|CypherGoingMid2.mp3}} "Going Mid."
+
+====Need Support====
+*{{AC|CypherHelp1.mp3}}{{AC|CypherHelp2.mp3}}{{AC|CypherHelp3.mp3}} "Help."
+
+====On my way====
+*{{AC|CypherOnMyWay1.mp3}}{{AC|CypherOnMyWay2.mp3}} "On my way."
+
+====Play for picks====
+*{{AC|CypherPlayForPicks1.mp3}}{{AC|CypherPlayForPicks2.mp3}} "Pick 'em off."
+
+===Wheel Index only===
+====Encourage====
+*{{AC|CypherEncouraging1.mp3}}{{AC|CypherEncouraging2.mp3}}{{AC|CypherEncouraging3.mp3}} "We can do this."
+
+====I'll lurk====
+Only as Attackers during Buy Phase.
+*{{AC|CypherLurking1.mp3}}{{AC|CypherLurking2.mp3}} "I'm lurking."
+
+====I'll push out====
+Only as Defenders during Buy Phase.
+*{{AC|CypherPushingOut1.mp3}}{{AC|CypherPushingOut2.mp3}} "I'm pushing out."
+
+====I'm holding position====
+Only as Defenders during Buy Phase.
+*{{AC|CypherHoldingPosition1.mp3}}{{AC|CypherHoldingPosition2.mp3}} "Holding position."
+
+====Let's Attack====
+Only during Round Phase.
+*{{AC|CypherLetsAttack1.mp3}}{{AC|CypherLetsAttack2.mp3}} "Let's attack."
+
+====Let's hold positions====
+Only as Defenders during Buy Phase.
+*{{AC|CypherHoldPositions1.mp3}}{{AC|CypherHoldPositions2.mp3}} "Let's hold positions."
+
+====Let's play slow====
+Only as Attackers at anytime.
+*{{AC|CypherPlaySlow1.mp3}}{{AC|CypherPlaySlow2.mp3}} "Let's play slow."
+
+====Let's push out====
+Only as Defenders during Buy Phase.
+*{{AC|CypherPushOut1.mp3}}{{AC|CypherPushOut2.mp3}} "Let's push out."
+
+====Let's spread out====
+*{{AC|CypherSpreadOut1.mp3}}{{AC|CypherSpreadOut2.mp3}} "Let's spread out."
+
+====Nice Try====
+*{{AC|CypherNiceTry1.mp3}}{{AC|CypherNiceTry2.mp3}}{{AC|CypherNiceTry3.mp3}} "Good try."
+
+====Stick together====
+*{{AC|CypherStickTogether1.mp3}}{{AC|CypherStickTogether2.mp3}} "Stick together."
+
+===Menu and Wheel Index===
+====Commend====
+*{{AC|CypherCommend1.mp3}}{{AC|CypherCommend2.mp3}}{{AC|CypherCommend3.mp3}} "Well done."
+
+====Fall Back====
+Menu Index at anytime, or Wheel Index only during Round Phase.
+*{{AC|CypherFallBack1.mp3}}{{AC|CypherFallBack2.mp3}} "Fall back."
+
+====Hello====
+*{{AC|CypherHello1.mp3}}{{AC|CypherHello2.mp3}}{{AC|CypherHello3.mp3}} "Greetings."
+
+====I'll take point====
+Wheel Index only as Attackers during Buy Phase, or Menu Index at anytime regardless of Attackers or Defenders.
+*{{AC|CypherTakePoint1.mp3}}{{AC|CypherTakePoint2.mp3}} "I'll take point."
+
+====Let's rush them (Radio Command)====
+*{{AC|CypherRush1.mp3}}{{AC|CypherRush2.mp3}} "We must rush them."
+
+====Need healing====
+*{{AC|CypherHealing1.mp3}}{{AC|CypherHealing2.mp3}} "Healing please."
+
+====No====
+*{{AC|CypherNo1.mp3}}{{AC|CypherNo2.mp3}}{{AC|CypherNo3.mp3}} "No."
+
+====Sorry====
+*{{AC|CypherSorry1.mp3}}{{AC|CypherSorry2.mp3}}{{AC|CypherSorry3.mp3}} "Sorry."
+
+====Thanks====
+*{{AC|CypherThanks1.mp3}}{{AC|CypherThanks2.mp3}}{{AC|CypherThanks3.mp3}} "My thanks."
+
+====Ultimate Status====
+*{{AC|CypherUltDown1.mp3}}{{AC|CypherUltDown2.mp3}} "My ultimate isn't ready."
+*{{AC|CypherUltAlmost1.mp3}}{{AC|CypherUltAlmost2.mp3}} "My ultimate is almost ready."
+*{{AC|CypherUltReady1.mp3}}{{AC|CypherUltReady2.mp3}} "My ultimate is ready."
+
+====Yes====
+*{{AC|CypherYes1.mp3}}{{AC|CypherYes2.mp3}}{{AC|CypherYes3.mp3}} "Alright."
+
+===Wheel Index requiring Minimap===
+For the following voicelines, the minimap must be open and then open ping wheel and activate strategy.
+====Faking====
+Only as Attackers during Buy Phase.
+*{{AC|CypherFaking1.mp3}}{{AC|CypherFaking2.mp3}} "I'm faking."
+*{{AC|CypherFakingA1.mp3}}{{AC|CypherFakingA2.mp3}} "I'm faking A."
+*{{AC|CypherFakingB1.mp3}}{{AC|CypherFakingB2.mp3}} "I'm faking B."
+*{{AC|CypherFakingC1.mp3}}{{AC|CypherFakingC2.mp3}} "I'm faking C."
+
+====I'm Going Here====
+As Defenders during Buy Phase, or as Attackers at anytime.
+*{{AC|CypherGoingA1.mp3}}{{AC|CypherGoingA2.mp3}} "Going A."
+*{{AC|CypherGoingB1.mp3}}{{AC|CypherGoingB2.mp3}} "Going B."
+*{{AC|CypherGoingC1.mp3}}{{AC|CypherGoingC2.mp3}} "Going C."
+*{{AC|CypherGoingMid1.mp3}}{{AC|CypherGoingMid2.mp3}} "Going Mid."
+
+====Let's Go Here====
+Only as Attackers during Buy Phase.
+*{{AC|CypherLetsGoA1.mp3}}{{AC|CypherLetsGoA2.mp3}} "Let's go A."
+*{{AC|CypherLetsGoB1.mp3}}{{AC|CypherLetsGoB2.mp3}} "Let's go B."
+*{{AC|CypherLetsGoC1.mp3}}{{AC|CypherLetsGoC2.mp3}} "Let's go C."
+*{{AC|CypherLetsGoHere1.mp3}}{{AC|CypherLetsGoHere2.mp3}} "Let's go here."
+
+====Let's rush them (Minimap)====
+Only as Attackers during Buy Phase.
+*{{AC|CypherLetsRush1.mp3}}{{AC|CypherLetsRush2.mp3}} "Let's rush them."
+*{{AC|CypherLetsRushA1.mp3}}{{AC|CypherLetsRushA2.mp3}} "Let's rush A."
+*{{AC|CypherLetsRushB1.mp3}}{{AC|CypherLetsRushB2.mp3}} "Let's rush B."
+*{{AC|CypherLetsRushC1.mp3}}{{AC|CypherLetsRushC2.mp3}} "Let's rush C."
+
+====Let's Sneak Here====
+Only as Attackers during Buy Phase.
+*{{AC|CypherSneakA1.mp3}}{{AC|CypherSneakA2.mp3}} "Let's sneak A."
+*{{AC|CypherSneakB1.mp3}}{{AC|CypherSneakB2.mp3}} "Let's sneak B."
+*{{AC|CypherSneakC1.mp3}}{{AC|CypherSneakC2.mp3}} "Let's sneak C."
+*{{AC|CypherSneakMid1.mp3}}{{AC|CypherSneakMid2.mp3}} "Let's sneak Mid."
+
+====Let's Stack Here====
+Only as Defenders during Buy Phase.
+*{{AC|CypherStack1.mp3}}{{AC|CypherStack2.mp3}} "Let's stack up."
+*{{AC|CypherStackA1.mp3}}{{AC|CypherStackA2.mp3}} "Let's stack A."
+*{{AC|CypherStackB1.mp3}}{{AC|CypherStackB2.mp3}} "Let's stack B."
+*{{AC|CypherStackC1.mp3}}{{AC|CypherStackC2.mp3}} "Let's stack C."
+*{{AC|CypherStackMid1.mp3}}{{AC|CypherStackMid2.mp3}} "Let's stack Mid."
+
+====Someone Go Here====
+As Attackers during Round Phase, or as Defenders at anytime.
+*{{AC|CypherNeedSomeoneA1.mp3}}{{AC|CypherNeedSomeoneA2.mp3}} "Someone go A."
+*{{AC|CypherNeedSomeoneB1.mp3}}{{AC|CypherNeedSomeoneB2.mp3}} "Someone go B."
+*{{AC|CypherNeedSomeoneC1.mp3}}{{AC|CypherNeedSomeoneC2.mp3}} "Someone go C."
+*{{AC|CypherNeedSomeoneMid1.mp3}}{{AC|CypherNeedSomeoneMid2.mp3}} "Someone go Mid."
+
+====Spike's here====
+Only as Defenders during Round Phase.
+*{{AC|CypherSpikeA1.mp3}}{{AC|CypherSpikeA2.mp3}} "Spike's A."
+*{{AC|CypherSpikeB1.mp3}}{{AC|CypherSpikeB2.mp3}} "Spike's B."
+*{{AC|CypherSpikeC1.mp3}}{{AC|CypherSpikeC2.mp3}} "Spike's C."
+*{{AC|CypherSpikeMid1.mp3}}{{AC|CypherSpikeMid2.mp3}} "Spike's Mid."
+*{{AC|CypherSpikeSpottedASpawn1.mp3}}{{AC|CypherSpikeSpottedASpawn2.mp3}} "Spike's in Attacker Spawn."
+*{{AC|CypherSpikeSpottedDSpawn1.mp3}}{{AC|CypherSpikeSpottedDSpawn2.mp3}} "Spike's in Defender Spawn."
+
+==Pings==
+===General===
+*{{AC|CypherPing1.mp3}}{{AC|CypherPing2.mp3}} "Here."
+
+===Caution===
+*{{AC|CypherPingCaution1.mp3}}{{AC|CypherPingCaution2.mp3}} "Careful."
+
+===Need support===
+*{{AC|CypherHelp1.mp3}}{{AC|CypherHelp2.mp3}}{{AC|CypherHelp3.mp3}} "Help."
+
+===On my mark===
+*{{AC|CypherOnMyMark1.mp3}}{{AC|CypherOnMyMark2.mp3}} "We go on my mark."
+
+===Ping gun===
+*{{AC|CypherPingGun1.mp3}}{{AC|CypherPingGun2.mp3}} "Weapon here."
+
+===Ping spike===
+*{{AC|CypherPingSpike1.mp3}}{{AC|CypherPingSpike2.mp3}} "The spike is here."
+
+===Ping for spike defuse===
+*{{AC|CypherDefuseSpike1.mp3}}{{AC|CypherDefuseSpike2.mp3}} "Defuse the spike!"
+
+===Ping for spike plant===
+*{{AC|CypherPlantSpike1.mp3}}{{AC|CypherPlantSpike2.mp3}} "Plant the spike!"
+
+===Watching===
+*{{AC|CypherWatching1.mp3}}{{AC|CypherWatching2.mp3}} "Watching this spot."
+
+==Other lines==
+===Ability unusable===
+====[[Status Effect#Suppress|Suppressed]]====
+*{{AC|CypherCantUse1.mp3}} "I can't use that."
+
+====On cooldown====
+*{{AC|CypherOnCooldown1.mp3}} "I must wait a moment."
+
+====No charges====
+*{{AC|CypherNoCharges1.mp3}} "No more charges left."
+
+===Enemy spotted===
+*{{AC|CypherEnemyA1.mp3}}{{AC|CypherEnemyA2.mp3}} "Someone is A."
+*{{AC|CypherEnemyB1.mp3}}{{AC|CypherEnemyB2.mp3}} "Someone is B."
+*{{AC|CypherEnemyC1.mp3}}{{AC|CypherEnemyC2.mp3}} "Someone is C."
+*{{AC|CypherEnemyASpawn1.mp3}}{{AC|CypherEnemyASpawn2.mp3}} "Someone's at Attacker Spawn."
+*{{AC|CypherEnemyDSpawn1.mp3}}{{AC|CypherEnemyDSpawn2.mp3}} "Someone's at Defender Spawn."
+*{{AC|CypherEnemyMid1.mp3}}{{AC|CypherEnemyMid2.mp3}} "Someone is Mid."
+
+====Multiple====
+*{{AC|CypherEnemiesA1.mp3}}{{AC|CypherEnemiesA2.mp3}} "Many enemies A!"
+*{{AC|CypherEnemiesB1.mp3}}{{AC|CypherEnemiesB2.mp3}} "Many enemies B!"
+*{{AC|CypherEnemiesC1.mp3}}{{AC|CypherEnemiesC2.mp3}} "Many enemies C!"
+*{{AC|CypherEnemiesASpawn1.mp3}}{{AC|CypherEnemiesASpawn2.mp3}} "Many enemies in Attacker Spawn!"
+*{{AC|CypherEnemiesDSpawn1.mp3}}{{AC|CypherEnemiesDSpawn2.mp3}} "Many enemies in Defender Spawn!"
+*{{AC|CypherEnemiesMid1.mp3}}{{AC|CypherEnemiesMid2.mp3}} "Many enemies Mid!"
+
+===Reloading===
+*{{AC|CypherReloading1.mp3}}{{AC|CypherReloading2.mp3}} "Reloading."
+
+===Healed===
+*{{AC|CypherRelief1.mp3}}{{AC|CypherRelief2.mp3}}{{AC|CypherRelief3.mp3}} ''*Cypher sighs*''
+
+===Killed===
+*{{AC|CypherDeath1.mp3}}{{AC|CypherDeath2.mp3}}{{AC|CypherDeath3.mp3}} ''*Cypher groans*''
+
+===Resurrected via {{abi text|Resurrection}}===
+*{{AC|CypherResurrect.mp3}} "For a moment, I saw them!"
+
+===Wounded===
+====Light damage====
+*{{AC|CypherPainLight1.mp3}}{{AC|CypherPainLight2.mp3}}{{AC|CypherPainLight3.mp3}} ''*Cypher groans*''
+
+====Medium damage====
+*{{AC|CypherPainMedium1.mp3}}{{AC|CypherPainMedium2.mp3}}{{AC|CypherPainMedium3.mp3}} ''*Cypher groans*''
+
+====Heavy damage====
+*{{AC|CypherPainHeavy1.mp3}}{{AC|CypherPainHeavy2.mp3}}{{AC|CypherPainHeavy3.mp3}} ''*Cypher groans*''
+
+====Fall damage====
+*{{AC|CypherPainFall1.mp3}}{{AC|CypherPainFall2.mp3}}{{AC|CypherPainFall3.mp3}} ''*Cypher groans*''
+
+==Unused lines==
+====[[Spycam]] Cast====
+*{{AC|CypherSpycamCast1.mp3}} "Now, let's see."
+*{{AC|CypherSpycamCast2.mp3}} "What can we see?"
+*{{AC|CypherSpycamCast3.mp3}} "Here we go."
+*{{AC|CypherSpycamCast4.mp3}} ''*Cypher hums*''
+
+===Utility Destroyed===
+*{{AC|CypherUtilityDestroyed1.mp3}} "Took my gadget out!"
+*{{AC|CypherUtilityDestroyed2.mp3}} "Ugh, I worked hard on that."
+*{{AC|CypherUtilityDestroyed3.mp3}} "My gadget is destroyed."
+
+===Match MVP===
+*{{AC|CypherMatchMVP1.mp3}} "I knew your every move. It was sad watching you scamper."
+*{{AC|CypherMatchMVP2.mp3}} "I am Prometheus! And you are just... a god."
+*{{AC|CypherMatchMVP3.mp3}} "Never come back. I will take you apart!"
+
+==Removed lines==
+===Match Start===
+*{{AC|CypherMatchStart10.mp3}} "I keep picturing our newest little troublemaker giving [[Scions of Hourglass|Hourglass]] the slip, leaving behind an empty body bag!" ''*Cypher laughs*'' "Ah, priceless."
+
+===Wounded Annoyed===
+*{{AC|CypherPainAnnoyed1.mp3}}{{AC|CypherPainAnnoyed2.mp3}}{{AC|CypherPainAnnoyed3.mp3}} ''*Cypher groans*''
+
+===Spike Spotted General===
+*{{AC|CypherSpikeSpotted1.mp3}}{{AC|CypherSpikeSpotted2.mp3}} "I see the spike."
+
+===Enemy spotted General===
+*{{AC|CypherEnemy1.mp3}}{{AC|CypherEnemy2.mp3}} "I see someone."
+
+===Multiple Enemies spotted General===
+*{{AC|CypherEnemies1.mp3}}{{AC|CypherEnemies2.mp3}} "I see many people!"
+
+===Be Quiet===
+*{{AC|CypherBeQuiet1.mp3}}{{AC|CypherBeQuiet2.mp3}} "Quiet."
+
+===Rotate===
+*{{AC|CypherRotating1.mp3}}{{AC|CypherRotating2.mp3}} "I'm rotating."
+
+===Let's Rotate===
+*{{AC|CypherLetsRotate1.mp3}}{{AC|CypherLetsRotate2.mp3}} "Let us rotate."
+
+===Affirmation===
+*{{AC|CypherAffirmation1.mp3}}{{AC|CypherAffirmation2.mp3}} "Agreed."
+
+===Callouts===
+*{{AC|CypherCalloutA1.mp3}}{{AC|CypherCalloutA2.mp3}} "A Site."
+*{{AC|CypherCalloutB1.mp3}}{{AC|CypherCalloutB2.mp3}} "B Site."
+*{{AC|CypherCalloutC1.mp3}}{{AC|CypherCalloutC2.mp3}} "C Site."
+*{{AC|CypherCalloutMid1.mp3}}{{AC|CypherCalloutMid2.mp3}} "Middle."
+
+===Clear Area===
+*{{AC|CypherClearThisArea1.mp3}}{{AC|CypherClearThisArea2.mp3}} "Clear this area."
+
+===Hold===
+*{{AC|CypherHold1.mp3}}{{AC|CypherHold2.mp3}} "Hold, please."
+
+===Need disrupt===
+*{{AC|CypherDisrupt1.mp3}}{{AC|CypherDisrupt2.mp3}} "Disrupt here."
+
+===Need scouting===
+*{{AC|CypherScout1.mp3}}{{AC|CypherScout2.mp3}} "Scout here."
+
+===Need vision block===
+*{{AC|CypherBlockVision1.mp3}}{{AC|CypherBlockVision2.mp3}} "Block vision here."
+
+===Push===
+*{{AC|CypherPush1.mp3}}{{AC|CypherPush2.mp3}} "Push now."
+
+===Regroup===
+*{{AC|CypherRegroup1.mp3}}{{AC|CypherRegroup2.mp3}} "Regroup."
+
+===Ping enemy utility===
+*{{AC|CypherPingUtility1.mp3}}{{AC|CypherPingUtility2.mp3}} "Enemy utility here."
+
+===Ping Go here===
+*{{AC|CypherGoHere1.mp3}}{{AC|CypherGoHere2.mp3}} "Let's go here."
+
+==[[Range/Lore|The Range's lore assets]]==
+===[[Range/Lore/EP4|Episode 4]]===
+*{{AC|file=KAYO Audio Log Istanbul Mission Complete.mp3}} ''(For the entire transcription amongst the agents, see [[Range/Lore/EP4#Cypher's_Office|Range/Lore/EP4 → v4.07 → Cypher's Office]].)''
+*{{AC|file=VoicemailBrimstone17.mp3}} "[[Brimstone]]. I've completed my audio analysis of the interrogation. My conclusion is the same as yours; our [[Fade|house guest]] is not the enemy, if anything, she is an ally. An ally with enormous potential. Her suspicion of [[VALORANT Protocol|VALORANT]] is understandable given the state of our world, but if we can find a mutually beneficial agreement, I foresee great things for us all. I support her recruitment. Just keep her away from my servers."
+*{{AC|file=Cypher Interrogation Audio.mp3}} ''(For the entire transcription between Cypher and [[Fade]], see [[Range/Lore/EP4#Cypher's_Office_2|Range/Lore/EP4 → v4.08 → Cypher's Office]].)''
+*{{AC|file=VoicemailBrimstone22.mp3}} "Brimstone. We're out of those little coffee pod things in the common room. I don't use them, but when they're gone, everyone starts drinking my tea. And please understand, it's very expensive tea. Thank you."
+
+===[[Range/Lore/EP5|Episode 5]]===
+*{{AC|file=VoicemailBrimstone28.mp3}} "It's me. The soldiers we fought on Omega belong to an organization called [[Atlas]]. Details are hard to come by, Atlas operates far outside the public sphere. They have dealings with [[Kingdom Industries|Omega Kingdom]], but as far as I can tell they are a separate business. And no official connection with [[VALORANT Legion|Omega VALORANT]]. Bit of a shock, given how they teamed up with the [[Omega Viper|enemy Viper]] to push us back. If there's an arrangement, it's a whisper. In the end we know their name, but we do not know who they are. When I find out, I will call."
+
+===[[Range/Lore/EP6|Episode 6]]===
+*{{AC|file=VoicemailBrimstone44.mp3}} "Hello, Brimstone. I have 'concerns' about our dear [[Fade|dream seer]]. Er, not the usual ones- she's not sleeping well. I see her up and wandering at all hours, afflicted in her unique way, always troubled, I can tell. Her power is an asset but not at the cost of her life. Is there something we can do? She is not one to ask for help, so I will ask in her stead."
+*{{AC|file=VoicemailBrimstone54.mp3}} "Brimstone! I'm calling you, again, to request more servers. The surveillance library is near capacity. Compressing image and sound quality is out of the question. And no, I cannot free up space by purging the archives you claim are no longer valuable! It is all valuable! The only option is more servers! Don't make me delete anything, please Brimstone! I beg you, please!"
+
+===[[Range/Lore/EP7|Episode 7]]===
+*{{AC|file=VoicemailBrimstone66.mp3}} "Brim, card game tonight. So far it's the usual group, plus [[Astra]] and [[Sage]]. Oh and, uh, apparently [[Omen]] wants to watch... just go with it. If you're in, let me know."
+
+===[[Range/Lore/EP8|Episode 8]]===
+*{{AC|file=VoicemailBrimstone74.mp3}} "Brimstone, I found him! [[Omen]]'s in Edinburgh. Seems he was after a journal of some kind, one that belonged to our dear friends at [[Hourglass]]. I have confirmation that there was a disturbance near the library, but we know who won. Wait, wait! Hold on. Omen's checking in now... he's met [[Clove|someone]] he says you'll want to meet. Hmhm, I did always want to go to Scotland!"
+
+===[[Range/Lore/V25|Season 2025]]===
+*{{AC|file=VoicemailBrimstone104.mp3}} "Brimstone, don't ask me how I know, but an alarming number of agents still use "1234" as their password. This is not acceptable! I suggest we run my data security course again. I shortened it by twelve slides following your rather pointed feedback. Say the word, I'll see it done."
+
+==Notes==
+<!--:''To easily see which quotes were added corresponding to the patch, use your browser's Find function and type the patch number (e.g. v2.05).
+*{{ui|Added}} 10 voice lines added from patch {{patchv|5.06}}, undocumented in the patch notes.-->
+*Additional radio commands added in patch {{patchv|8.11}} are not mentioned in this page.
+*Other voice lines removed were at an unknown timeframe.
+
+==Navigation==
+{{Navbox agents}}
+[[Category:Quotes]]

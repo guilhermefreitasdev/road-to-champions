@@ -1,0 +1,826 @@
+{{TOCright}}
+This is a '''list of quotes by {{ai|Clove}}'''. Clove is voiced by Isla Campbell in English. Clove has a total of {{PAGESINCATEGORY:Clove Quotes}} files of quotes including unused and removed lines, and excluding [[#The Range's lore assets|The Range's lore assets]]. 
+
+A downloadable folder containing all the audio files on this page can be found [https://drive.google.com/drive/folders/1CVaeCy3zu3QR3plnFMUcW9NbmAmepzrO?usp=sharing here].
+
+==Agent Selected/Unlocked==
+*{{AC|ClovePick.mp3}} "I've got all the time in the world."
+
+==Abilities==
+==={{abi text|Pick-me-up}}===
+====Cast====
+*{{AC|ClovePick-me-upCast1.mp3}}{{AC|ClovePick-me-upCast2.mp3}} ''*Clove sighs*''
+*{{AC|ClovePick-me-upCast3.mp3}}{{AC|ClovePick-me-upCast4.mp3}} "Refreshing!"
+
+==={{abi text|Meddle}}===
+====Cast====
+*{{AC|CloveMeddleCast1.mp3}}{{AC|CloveMeddleCast2.mp3}} "Have one of these!"
+*{{AC|CloveMeddleCast3.mp3}}{{AC|CloveMeddleCast4.mp3}} "Here, catch!"
+
+====Kill afflicted enemy====
+*{{AC|CloveMeddleKill1.mp3}} "Feelin' iffy, aye?"
+*{{AC|CloveMeddleKill2.mp3}} "Ooh, gotcha!"
+*{{AC|CloveMeddleKill3.mp3}} "Saw that comin'!"
+*{{AC|CloveMeddleKill4.mp3}} "What a combo!"
+
+==={{abi text|Ruse}}===
+====Cast====
+*{{AC|CloveRuseCast1.mp3}}{{AC|CloveRuseCast2.mp3}} "Droppin' a smoke."
+*{{AC|CloveRuseCast3.mp3}} "No peeking."
+*{{AC|CloveRuseCast4.mp3}} "No peekin'."
+
+====Cast all charges====
+*{{AC|CloveRuseAllCharges1.mp3}}{{AC|CloveRuseAllCharges2.mp3}} "Dropping smokes."
+
+====Cast while dead====
+*{{AC|CloveRuseCastDead1.mp3}}{{AC|CloveRuseCastDead2.mp3}} "Droppin' a smoke."
+*{{AC|CloveRuseCastDead3.mp3}} "No peekin'."
+*{{AC|CloveRuseCastDead4.mp3}} "No peeking."
+
+==={{abi text|Not Dead Yet}}===
+====Ally Cast====
+*{{AC|CloveUltAllyCast.mp3}} "Back like I never left!"
+
+====Enemy Cast====
+*{{AC|CloveUltEnemyCast.mp3}} "Ya had your fun, my turn!"
+
+====Kill or the round ended before the timer expires====
+*{{AC|CloveUltKill1.mp3}} "I'm back for good!"
+*{{AC|CloveUltKill2.mp3}} "That was close!"
+*{{AC|CloveUltKill3.mp3}} "Think I'll stay!"
+
+==Buy Phase==
+===Match Start===
+*{{AC|CloveMatchStart1.mp3}} "Have I been aging, like, at all? Still not sure how this whole living forever thing works."
+*{{AC|CloveMatchStart2.mp3}} "I know I can come back to life and all, but bullets still hurt, so don't get any bright ideas."
+*{{AC|CloveMatchStart3.mp3}} "It's fun being a secret agent and all, but I really hope that there's an alternate universe out there where I'm just growing old with a bunch of cats."
+*{{AC|CloveMatchStart4.mp3}} "Let me get this right, we're Earth's only defense and we still pay for our own weapons? Ridiculous."
+*{{AC|CloveMatchStart5.mp3}} "Look at this team! We're gonna kill it! And by 'it' I mean those bams over there."
+**(''Bams'': Foolish people)
+*{{AC|CloveMatchStart6.mp3}} "So, are we gonna talk about the empty locker back at base? The one with the scratched out 8? Anyone? No one? Okay."
+*{{AC|CloveMatchStart7.mp3}} "Take 'em dead or alive. Probably dead, well, preferably dead."
+*{{AC|CloveMatchStart8.mp3}} "You know what? If one of those lookalikes came over here and pretended to be one of ya, I'm not sure I'd be able to tell the difference."
+*{{AC|CloveMatchStart9.mp3}} "Wait, wait, wait. I have a rock in my shoe. Nice, free rock."
+*{{AC|CloveMatchStart10.mp3}} "Who's ready to die for this mission? I am! But you know, I'm cheating.
+
+====Attacking====
+*{{AC|CloveMatchStartAttack1.mp3}} "Ah, radianite, we meet again."
+*{{AC|CloveMatchStartAttack2.mp3}} "You know what we should do? I'll tell ya, we should win."{{#tag:sup|{{patchv|13.00}}^}}
+
+====Defending====
+*{{AC|CloveMatchStartDefense1.mp3}} "Dinnae ken what they're on about? But I can promise them radianite will not solve their problems."
+**(''Dinnae ken'': I don't know)
+*{{AC|CloveMatchStartDefense2.mp3}} "What if we set up some fake radianite? Imagine their faces when they unload a buncha useless rocks."
+
+====[[Abyss]]====
+*{{AC|CloveMatchStartAbyss.mp3}} "Your party delves into the maw of the Earth. Jagged teeth of rock tower above you. A secret was stored here, but no secret is kept forever."
+
+====[[Breeze]]====
+*{{AC|CloveMatchStartBreeze.mp3}} "Your party washes up on the shore of a deserted island. Strange experiments and even stranger phoenomenon litter the sand."
+
+====[[Fracture]]====
+*{{AC|CloveMatchStartFracture.mp3}} "Your party stumbles upon the rubble of a science experiment gone wrong. The souls of the dead wander the halls, it reeks of Kingdom."
+
+====[[Icebox]]====
+*{{AC|CloveMatchStartIcebox.mp3}} "Your party sets foot across a frigid expanse. Secrets long lost resurface through the shattered ice. The cold is relentless. Roll to avoid frostbite."
+
+====[[Sunset]]====
+*{{AC|CloveMatchStartSunset.mp3}} "Your party arrives on a doorstep of a sun soaked concrete jungle, the Earth is brittle beneath your feet. You venture forth basked in gold."
+
+===Round Start===
+*{{AC|CloveRoundStart1.mp3}} "Aye, where to?"
+*{{AC|CloveRoundStart2.mp3}} "Alright lucky socks, don't fail me now."
+*{{AC|CloveRoundStart3.mp3}} "Don't be spending too many brain cells figuring them out! Overthinking is just as bad as underthinking."
+*{{AC|CloveRoundStart4.mp3}} "Find the weakest link and kick 'em in the shin!"
+*{{AC|CloveRoundStart5.mp3}} "I reckon I'll take a kip after this. I've earned it."
+*{{AC|CloveRoundStart7.mp3}} "Oh! This reminds me of this one time where I uh- hm, actually, never mind."
+*{{AC|CloveRoundStart8.mp3}} "One downside to being immortal, I can't play dead."
+*{{AC|CloveRoundStart9.mp3}} "Outside of this gig, immortality doesn't have as many day to day benefits as you think."
+*{{AC|CloveRoundStart10.mp3}} "You know, I could just outlive them. Nah, bullets are quicker."
+*{{AC|CloveRoundStart12.mp3}} "Youse don't get a reset button, so stay alive, please."
+
+====Last round won====
+*{{AC|CloveRoundWon1.mp3}} "Alright then, some more of that and they're in the shite."
+*{{AC|CloveRoundWon2.mp3}} "I can hear them hollering for their mummies from here!"
+*{{AC|CloveRoundWon3.mp3}} "Simple and clean! Well done!"
+*{{AC|CloveRoundWon4.mp3}} "The part where they lost was funny."
+*{{AC|CloveRoundWon5.mp3}} "Their tactics are unique. Uniquely not working for them."
+
+=====While in the lead=====
+*{{AC|CloveLead1.mp3}} "Get a look at that, they lost again!"
+*{{AC|CloveLead2.mp3}} "I feel bad for them, I really do. Just not enough to stop winning."
+*{{AC|CloveLead3.mp3}} "Reckon we're just better, aye?"
+
+=====Making a comeback=====
+*{{AC|CloveComeback1.mp3}} "Bet they're feeling frazzled!"
+*{{AC|CloveComeback2.mp3}} "Now we start our winning streak of our own, aye?"
+*{{AC|CloveComeback3.mp3}} "They messed up, now we keep them down."
+
+===Last round in the half===
+====Attacking====
+*{{AC|CloveLastRound2.mp3}} "Last call for all the things we need to kill them with. Buy up!"
+====Defending====
+*{{AC|CloveLastRound1.mp3}} "I dinnae care how you do it, just spend all your money! Maybe buy a [[Shorty]] or two!"
+**(''Dinnae'': Don't)
+
+===Match Point===
+*{{AC|CloveMatchPoint1.mp3}} "Come on friends, we're so close it's basically over!"
+*{{AC|CloveMatchPoint2.mp3}} "It's been grand, but I've got places to avoid and people to ignore, so let's finish this thing!"
+*{{AC|CloveMatchPoint3.mp3}} "They'll throw everything out at us ya ken? Be ready."
+**(''Ya ken'': You know)
+
+===Shop===
+====Let's Buy====
+*{{AC|CloveBuying1.mp3}}{{AC|CloveBuying2.mp3}} "I'm gonna buy."
+
+====Let's Save====
+*{{AC|CloveSaving1.mp3}}{{AC|CloveSaving2.mp3}} "I'm gonna save."
+
+====I Have Extra Creds====
+*{{AC|CloveOffer1.mp3}}{{AC|CloveOffer2.mp3}} "Who needs a buy?"
+
+====Requested====
+*{{AC|CloveRequest1.mp3}}{{AC|CloveRequest2.mp3}} "Could I have a drop?"
+
+===Barrier Down===
+*{{AC|CloveBarrierDown1.mp3}} "Ah shite, I lost my pet rock."
+*{{AC|CloveBarrierDown3.mp3}} "Chin up cuties, it's not over yet."
+*{{AC|CloveBarrierDown4.mp3}} "Come on then!"
+*{{AC|CloveBarrierDown5.mp3}} "Get on with it!"
+*{{AC|CloveBarrierDown6.mp3}} "Guess they're fond of losing!"
+*{{AC|CloveBarrierDown7.mp3}} "I don't quit."
+*{{AC|CloveBarrierDown8.mp3}} "I love this part!"
+*{{AC|CloveBarrierDown9.mp3}} "I won't settle for a draw!"
+*{{AC|CloveBarrierDown10.mp3}} "I'll no lose to these bairns."
+*{{AC|CloveBarrierDown11.mp3}} "I'm here to stay."
+*{{AC|CloveBarrierDown12.mp3}} "Look at 'em squirm!"
+*{{AC|CloveBarrierDown13.mp3}} "No more."
+*{{AC|CloveBarrierDown14.mp3}} "No stopping now."
+*{{AC|CloveBarrierDown15.mp3}} "No whinging, we've come back for worse."
+*{{AC|CloveBarrierDown16.mp3}} "Push 'em back, they're stepping on us."
+*{{AC|CloveBarrierDown17.mp3}} "Roll for initiative."
+*{{AC|CloveBarrierDown18.mp3}} "Serious face, on."
+*{{AC|CloveBarrierDown19.mp3}} "That's all they get."
+*{{AC|CloveBarrierDown20.mp3}} "More o' that winning stuff, aye?"
+
+==Spike==
+===Forgotten in spawn===
+*{{AC|CloveForgotSpike1.mp3}} "Dinnae we need the bomb? Oh shit, sorry, I-I meant the spike."
+**(''Dinnae'': Don't)
+*{{AC|CloveForgotSpike2.mp3}} "I like the confidence, but we should probably grab the spike."
+
+===Ally carrier down===
+*{{AC|CloveSpikeDown1.mp3}}{{AC|CloveSpikeDown2.mp3}} "Our spike carrier's down."
+
+===Dropped===
+*{{AC|CloveSpikeDropped1.mp3}}{{AC|CloveSpikeDropped2.mp3}} "Spike dropped."
+
+===Retrieved===
+*{{AC|CloveSpikePickedUp1.mp3}}{{AC|CloveSpikePickedUp2.mp3}} "I got the spike."
+
+===Planted===
+*{{AC|CloveSpikePlanted1.mp3}}{{AC|CloveSpikePlanted2.mp3}} "Spike planted."
+
+===Spotted===
+*{{AC|CloveSpikeSpottedA1.mp3}}{{AC|CloveSpikeSpottedA2.mp3}} "Spike spotted A."
+*{{AC|CloveSpikeSpottedB1.mp3}}{{AC|CloveSpikeSpottedB2.mp3}} "Spike spotted B."
+*{{AC|CloveSpikeSpottedC1.mp3}}{{AC|CloveSpikeSpottedC2.mp3}} "Spike spotted C."
+*{{AC|CloveSpikeSpottedASpawn1.mp3}}{{AC|CloveSpikeSpottedASpawn2.mp3}} "Spike spotted Attacker Spawn."
+*{{AC|CloveSpikeSpottedDSpawn1.mp3}}{{AC|CloveSpikeSpottedDSpawn2.mp3}} "Spike spotted Defender Spawn."
+*{{AC|CloveSpikeSpottedMid1.mp3}}{{AC|CloveSpikeSpottedMid2.mp3}} "Spike spotted Mid."
+
+===Defuse resumed===
+*{{AC|CloveDefuseResumed1.mp3}} "I-I can't look. Please don't blow up."
+*{{AC|CloveDefuseResumed2.mp3}} "I'm just trying to do my job here!"
+
+===Defuse time running out===
+*{{AC|CloveDefuseLate1.mp3}} "I'll see youse in a minute."
+*{{AC|CloveDefuseLate2.mp3}} "Well that's just grand."
+
+===Defuse successful===
+*{{AC|CloveDefuseComplete1.mp3}} "Fancy vacuum deactivated."
+*{{AC|CloveDefuseComplete2.mp3}} "No radianite for you, wee man."
+
+==Kill==
+*{{AC|CloveKill1.mp3}} "Hah!"
+*{{AC|CloveKill2.mp3}} "Have a kip!"
+*{{AC|CloveKill3.mp3}} "Hi! Bye."
+*{{AC|CloveKill4.mp3}} "I shot somebody!"
+*{{AC|CloveKill5.mp3}} "Pew-pew!"
+*{{AC|CloveKill6.mp3}} "Tidy!"
+*{{AC|CloveKill7.mp3}} "That's a kill."
+*{{AC|CloveKill8.mp3}} "Target down."
+*{{AC|CloveKill9.mp3}}{{AC|CloveKill10.mp3}} "Woo!"
+*{{AC|CloveKill11.mp3}} "You alright?"
+
+===Headshot===
+*{{AC|CloveHeadshot1.mp3}} "Critical hit!"
+*{{AC|CloveHeadshot2.mp3}} "Down you go."
+*{{AC|CloveHeadshot3.mp3}} "Haud yer wheesht."
+**(''Shut up.'')
+*{{AC|CloveHeadshot4.mp3}} "No bother."
+*{{AC|CloveHeadshot5.mp3}} "Nae danger."
+**(''Nae'': No)
+*{{AC|CloveHeadshot6.mp3}} "Nat twenty."
+*{{AC|CloveHeadshot7.mp3}} "Skedaddle off!"
+*{{AC|CloveHeadshot8.mp3}} "Sorted!"
+*{{AC|CloveHeadshot9.mp3}} "That's you, pal?"
+
+===[[Melee]]===
+*{{AC|CloveMeleeKill1.mp3}} "Knock knock."
+*{{AC|CloveMeleeKill2.mp3}} "Surprise!"
+
+===Triple===
+*{{AC|CloveTriple1.mp3}}{{AC|CloveTriple2.mp3}} "That's three!"
+
+===Quadra===
+*{{AC|CloveQuadra1.mp3}}{{AC|CloveQuadra2.mp3}} "Four in the dirt!"
+
+===One kill remaining (game-mode specific)===
+*{{AC|CloveOneKillLeft1.mp3}} "Just one more."
+*{{AC|CloveOneKillLeft2.mp3}} "Just one more!"
+
+==Round End==
+===Ace===
+*{{AC|CloveAce1.mp3}} "And I did that with a sore tummy!"
+*{{AC|CloveAce3.mp3}} "Fear me mortals!"
+*{{AC|CloveAce6.mp3}} "You were only a moment, I am forever."
+
+===Clutch===
+*{{AC|CloveClutch1.mp3}} "Brand new, that one!"
+*{{AC|CloveClutch2.mp3}} "Do I get a prize for that or what?"
+*{{AC|CloveClutch3.mp3}} "Not today, not tomorrow, not ever."
+*{{AC|CloveClutch4.mp3}} "There's a name for this? Oh yeah, second-hand embarrassment."
+*{{AC|CloveClutch5.mp3}} "Please, please. Hold your applause until the end."{{#tag:sup|{{patchv|13.00}}^}}
+
+===Flawless or Team Ace===
+*{{AC|CloveFlawless1.mp3}} "We are just too good!"
+*{{AC|CloveFlawless2.mp3}} "Were they born yesterday or something?"
+
+===Thrifty===
+*{{AC|CloveThrifty1.mp3}} "Just simple economics! I'm kidding, I'm terrible with money."
+
+===Last Kill===
+*{{AC|CloveLastKill1.mp3}} "And that's another dead one."
+*{{AC|CloveLastKill2.mp3}} "Don't get back up, sweetheart."
+*{{AC|CloveLastKill3.mp3}} "Everyone has off days eh?"
+*{{AC|CloveLastKill4.mp3}} "I'll just let you think about that one, alright?"
+*{{AC|CloveLastKill5.mp3}} "You did your best, just wasn't enough."
+*{{AC|CloveLastKill6.mp3}} "You made a mess of yourself!"
+*{{AC|CloveLastKill7.mp3}} "Aw, a wee shame, really."{{#tag:sup|{{patchv|13.00}}^}}
+*{{AC|CloveLastKill8.mp3}} "Promise me you won't try that again?"{{#tag:sup|{{patchv|13.00}}^}}
+
+====Enemy MVP====
+There are no voice lines at the moment in this section for this Agent.
+
+====Using [[Melee]]====
+*{{AC|CloveLastKillMelee1.mp3}} "Ah, skill issue I'm afraid."
+*{{AC|CloveLastKillMelee2.mp3}} "What, did you not hear me?"
+
+===Low HP===
+*{{AC|CloveLowHP1.mp3}} "Just a wee flesh wound, I'll walk it off!"
+*{{AC|CloveLowHP2.mp3}} "Ooh, I worked up an appetite on that one."
+*{{AC|CloveLowHP3.mp3}} "Ugh, can I trade my powers in for invincibility? Much prefer that."
+
+==Match End==
+===Match Win===
+*{{AC|CloveMatchWin1.mp3}} "And we'll do it again, and again, and a bunch of other times after that!"
+*{{AC|CloveMatchWin2.mp3}} "I hecking love this team!"
+*{{AC|CloveMatchWin3.mp3}} "We need to celebrate! Party in the danger room!"
+
+====[[Bind]]====
+*{{AC|CloveMatchWinBind.mp3}} "Don't let the portal hit you on the way out!"
+
+===Runner-up (game-mode specific)===
+*{{AC|CloveRunnerUp1.mp3}} "Anybody wanna go again?"
+*{{AC|CloveRunnerUp2.mp3}} "Victory will be mine."
+*{{AC|CloveRunnerUp3.mp3}} "Well alright, I'll take it!"
+
+==Agent-specific interactions==
+{| class="wikitable sortable"
+!To Agent
+!Scenario
+!width=40%; class=unsortable|Ally
+!width=40%; class=unsortable|Enemy
+|-
+|{{ai|Breach}}
+|Barrier Down
+|
+|{{AC|CloveEnemyBreachBarrierDown.mp3}} "Stop their Breach before he stops us."
+|-
+|{{ai|Brimstone}}
+|Last Kill
+|
+|{{AC|CloveEnemyBrimstoneLastKill.mp3}} "Bang!"
+|-
+|rowspan=2|{{ai|Chamber}}
+|Round Start
+|
+|{{AC|CloveEnemyChamberRoundStart.mp3}} "That Chamber is dressed like a fancy waiter. Let's ask him for the wine list."
+|-
+|Last Kill
+|
+|{{AC|CloveEnemyChamberLastKill.mp3}} "Ooft, not your best."
+|-
+|rowspan=2|{{ai|Clove}}
+|Round Start
+|
+|{{AC|CloveEnemyCloveRoundStart.mp3}} "I'm nothing like the enemy Clove. I wouldn't be caught dead in that outfit."
+|-
+|Last Kill
+|
+|{{AC|CloveEnemyCloveLastKill.mp3}} "We could have ruled this world together."
+|-
+|rowspan=3|{{ai|Cypher}}
+|Match Start
+|{{AC|CloveAllyCypherMatchStart.mp3}} "You know, we're a covert organization. Shouldn't we be wearing masks? Cypher's got the right idea."
+|
+|-
+|Commend
+|{{AC|CloveAllyCypherCommend.mp3}} "Cy, you wee punk! How d'you pull that off? Keep it up!"
+|
+|-
+|Kill
+|
+|{{AC|CloveEnemyCypherKill.mp3}} "Sorry, not sorry."
+|-
+|rowspan=3|{{ai|Deadlock}}
+|Barrier Down
+|{{AC|CloveAllyDeadlockBarrierDown.mp3}} "Wrap 'em up, Locky."
+|
+|-
+|Commend
+|{{AC|CloveAllyDeadlockCommend.mp3}} "Okay, Deadlock! Let's see more of that, aye?"
+|
+|-
+|Kill
+|
+|{{AC|CloveEnemyDeadlockKill.mp3}} "No, my rules."
+|-
+|rowspan=2|{{ai|Fade}}
+|Chat
+|
+:[[File:Fade icon.png|20px|link=Fade]] {{AC|FadeAllyCloveChat.mp3}} "So, Clove, how exactly did you, you know, become immortal?"
+:[[File:Clove icon.png|20px|link=Clove]] {{AC|CloveAllyFadeChat.mp3}} "Well, it all started when I was born and then uh- you know what, I'll just tell you later."
+|
+|-
+|Round Start
+|
+|{{AC|CloveEnemyFadeRoundStart.mp3}} "Fade's mind games are no match for my secret weapon: ibuprofen."
+|-
+|rowspan=6|{{ai|Gekko}}
+|Chat
+|
+:[[File:Clove icon.png|20px|link=Clove]] {{AC|CloveAllyGekkoChat.mp3}} ''*Clove gasps*'' "[[Wingman|Wings]]! How are you wee fella!" ''*Clove speaking gibberish*''
+:[[File:Gekko icon.png|20px|link=Gekko]] {{AC|GekkoAllyCloveChat.mp3}} "Uh, he has no idea what you just said."
+|
+|-
+|Match Start
+|{{AC|CloveAllyGekkoMatchStart.mp3}} "Hey Gekko! You ever think about teaching Wingman to use a gun? Just a thought, write it down maybe!"
+|
+|-
+|Barrier Down
+|{{AC|CloveAllyGekkoBarrierDown.mp3}} "Gekks, do your thing!"
+|
+|-
+|Commend
+|{{AC|CloveAllyGekkoCommend.mp3}} "[[Wingman|Wings]], [[Dizzy]], [[Thrash]], [[Mosh Pit|Mosh]]! Youse are the actual best! Oh and, you too, Gekko."
+|
+|-
+|Kill
+|
+|{{AC|CloveEnemyGekkoKill.mp3}} "You dafty!"
+|-
+|Last Kill
+|
+|{{AC|CloveEnemyGekkoLastKill.mp3}} "See ya later Gekko-rator!"
+|-
+|rowspan=4|{{ai|Iso}}
+|Match Start
+|{{AC|CloveAllyIsoMatchStart.mp3}} "So, Iso, you've got your own [[Kill Contract|little pocket dimension]], yeah? Hear me out, what if we threw a wee rave in there? Think about it, think about it!"
+|
+|-
+|Barrier Down
+|{{AC|CloveAllyIsoBarrierDown.mp3}} "Iso, pull 'em apart!"
+|{{AC|CloveEnemyIsoBarrierDown.mp3}} "Don't let their Iso separate us!"
+|-
+|Commend
+|{{AC|CloveAllyIsoCommend.mp3}} "Iso, that was, that was beautiful!"
+|
+|-
+|Last Kill
+|
+|{{AC|CloveEnemyIsoLastKill.mp3}} "Face the music!"
+|-
+|{{ai|KAY/O}}
+|Match Start
+|{{AC|CloveAllyKAYOMatchStart.mp3}} "Hey, KAY/O, my phone died on the way here. You think I could, uh, you know- can you charge batteries?"
+|
+|-
+|{{ai|Killjoy}}
+|Barrier Down
+|{{AC|CloveAllyKilljoyBarrierDown.mp3}} "Watch our backs, KJ."
+|
+|-
+|rowspan=2|{{ai|Neon}}
+|Chat
+|
+:[[File:Neon icon.png|20px|link=Neon]] {{AC|NeonAllyCloveChat.mp3}} "Clove, you were up at 3AM watching cooking videos. How are you awake right now?"
+:[[File:Clove icon.png|20px|link=Clove]] {{AC|CloveAllyNeonChat.mp3}} "Eh, I'll sleep when I'm dead, which I guess is never."
+|
+|-
+|Barrier Down
+|
+|{{AC|CloveEnemyNeonBarrierDown.mp3}} "Just trip their Neon while she's running!"
+|-
+|rowspan=2|{{ai|Omen}}
+|Match Start
+|
+|{{AC|CloveEnemyOmenMatchStart.mp3}} "So like, those blue things on their Omen's face are eyes, right? So he has three? O-or is the middle one a mouth? Are they all mouths? Cool!"
+|-
+|Last Kill
+|
+|{{AC|CloveEnemyOmenLastKill.mp3}} "Boo!"
+|-
+|rowspan=3|{{ai|Phoenix}}
+|Match Start
+|{{AC|CloveAllyPhoenixMatchStart.mp3}} "Uh-oh, me and Phoenix on the same team! They're gonna waste twice as many bullets trying to take as down!"
+|
+|-
+|rowspan=2|Kill
+|
+|{{AC|CloveEnemyPhoenixKill1.mp3}} "You numpty!"
+|-
+|
+|{{AC|CloveEnemyPhoenixKill2.mp3}} "You plum!"
+|-
+|rowspan=4|{{ai|Reyna}}
+|Match Start
+|{{AC|CloveAllyReynaMatchStart.mp3}} "Reyna, a certain someone tells me you play guitar? You have to play for us later, no getting out of that."
+|
+|-
+|Round Start
+|{{AC|CloveAllyReynaRoundStart.mp3}} "Reyna, the offer stands, take whatever life you need from me, she deserves it."
+|
+|-
+|Commend
+|{{AC|CloveAllyReynaCommend.mp3}} "Reyna, that was like a dance, a really violent dance."
+|
+|-
+|Last Kill
+|
+|{{AC|CloveEnemyReynaLastKill.mp3}} "The hunt's over!"
+|-
+|{{ai|Sage}}
+|Match Start
+|
+|{{AC|CloveEnemySageMatchStart.mp3}} "Well well well, they brought along my archnemesis, Sage. Just kidding, we're like standard nemesis-sis-sis."
+|-
+|rowspan=2|{{ai|Skye}}
+|Match Start
+|{{AC|CloveAllySkyeMatchStart.mp3}} "Skye, you're looking awfully braw today, could cut myself on those biceps."
+|
+|-
+|Commend
+|{{AC|CloveAllySkyeCommend.mp3}} "What- Skye! That was tidy! Is that- is that what hiking does for you?"
+|
+|-
+|rowspan=2|{{ai|Viper}}
+|Chat
+|
+:[[File:Viper icon.png|20px|link=Viper]] {{AC|ViperAllyCloveChat.mp3}} "I look forward to watching the light leave their eyes!"
+:[[File:Clove icon.png|20px|link=Clove]] {{AC|CloveAllyViperChat.mp3}} "Whoa, Viper. You know what? I love your attitude."
+|
+|-
+|Last Kill
+|
+|{{AC|CloveEnemyViperLastKill.mp3}} "Sorry snake lady!"
+|-
+|rowspan=2|{{ai|Yoru}}
+|Match Start
+|{{AC|CloveAllyYoruMatchStart.mp3}} "Hey, Yoru, don't forget to fill out your character sheet again. You know how hard it is planning sessions around saving the world?"
+|
+|-
+|Round Start
+|{{AC|CloveAllyYoruRoundStart.mp3}} "Yoru, how did you get so sneaky? Is it the hair? It's probably the hair."
+|
+|}
+
+==Radio Commands==
+===Menu Index only===
+====Caution here====
+*{{AC|CloveCaution1.mp3}}{{AC|CloveCaution2.mp3}} "Enemy close."
+
+====Going Area====
+*{{AC|CloveGoingA1.mp3}}{{AC|CloveGoingA2.mp3}} "Going A."
+*{{AC|CloveGoingB1.mp3}}{{AC|CloveGoingB2.mp3}} "Going B."
+*{{AC|CloveGoingC1.mp3}}{{AC|CloveGoingC2.mp3}} "Going C."
+*{{AC|CloveGoingMid1.mp3}}{{AC|CloveGoingMid2.mp3}} "Going Mid."
+
+====Need Support====
+*{{AC|CloveHelp1.mp3}}{{AC|CloveHelp2.mp3}} "I need help."
+
+====On my way====
+*{{AC|CloveOnMyWay1.mp3}}{{AC|CloveOnMyWay2.mp3}} "On my way."
+
+====Play for picks====
+*{{AC|ClovePlayForPicks1.mp3}}{{AC|ClovePlayForPicks2.mp3}} "Play for picks."
+
+===Wheel Index only===
+====Encourage====
+*{{AC|CloveEncouraging1.mp3}}{{AC|CloveEncouraging2.mp3}}{{AC|CloveEncouraging3.mp3}} "We can do this."
+
+====I'll lurk====
+Only as Attackers during Buy Phase.
+*{{AC|CloveLurking1.mp3}}{{AC|CloveLurking2.mp3}} "I'm lurking."
+
+====I'll push out====
+Only as Defenders during Buy Phase.
+*{{AC|ClovePushingOut1.mp3}}{{AC|ClovePushingOut2.mp3}} "I'm pushing out."
+
+====I'm holding position====
+Only as Defenders during Buy Phase.
+*{{AC|CloveHoldingPosition1.mp3}}{{AC|CloveHoldingPosition2.mp3}} "Holding position."
+
+====Let's Attack====
+Only during Round Phase.
+*{{AC|CloveLetsAttack1.mp3}}{{AC|CloveLetsAttack2.mp3}} "Let's attack."
+
+====Let's hold positions====
+Only as Defenders during Buy Phase.
+*{{AC|CloveHoldPositions1.mp3}}{{AC|CloveHoldPositions2.mp3}} "Let's hold positions."
+
+====Let's play slow====
+Only as Attackers at anytime.
+*{{AC|ClovePlaySlow1.mp3}}{{AC|ClovePlaySlow2.mp3}} "Let's play slow."
+
+====Let's push out====
+Only as Defenders during Buy Phase.
+*{{AC|ClovePushOut1.mp3}}{{AC|ClovePushOut2.mp3}} "Let's push out."
+
+====Let's spread out====
+*{{AC|CloveSpreadOut1.mp3}}{{AC|CloveSpreadOut2.mp3}} "Let's spread out."
+
+====Nice Try====
+*{{AC|CloveNiceTry1.mp3}}{{AC|CloveNiceTry2.mp3}}{{AC|CloveNiceTry3.mp3}} "Good try."
+
+====Stick together====
+*{{AC|CloveStickTogether1.mp3}}{{AC|CloveStickTogether2.mp3}} "Stick together."
+
+===Menu and Wheel Index===
+====Commend====
+*{{AC|CloveCommend1.mp3}}{{AC|CloveCommend2.mp3}}{{AC|CloveCommend3.mp3}} "Well done."
+
+====Fall Back====
+Menu Index at anytime, or Wheel Index only during Round Phase.
+*{{AC|CloveFallBack1.mp3}}{{AC|CloveFallBack2.mp3}} "Fall back."
+
+====Hello====
+*{{AC|CloveHello1.mp3}}{{AC|CloveHello2.mp3}}{{AC|CloveHello3.mp3}} "Hello."
+
+====I'll take point====
+Wheel Index only as Attackers during Buy Phase, or Menu Index at anytime regardless of Attackers or Defenders.
+*{{AC|CloveTakePoint1.mp3}}{{AC|CloveTakePoint2.mp3}} "Taking point."
+
+====Let's rush them (Radio Command)====
+*{{AC|CloveRush1.mp3}}{{AC|CloveRush2.mp3}} "Rush them."
+
+====Need healing====
+*{{AC|CloveHealing1.mp3}}{{AC|CloveHealing2.mp3}} "Need healing."
+
+====No====
+*{{AC|CloveNo1.mp3}} "Nah."
+*{{AC|CloveNo2.mp3}} "No."
+*{{AC|CloveNo3.mp3}} "Nope."
+
+====Sorry====
+*{{AC|CloveSorry1.mp3}} "My bad."
+*{{AC|CloveSorry2.mp3}}{{AC|CloveSorry3.mp3}} "Sorry."
+
+====Thanks====
+*{{AC|CloveThanks1.mp3}} "Thanks."
+*{{AC|CloveThanks2.mp3}}{{AC|CloveThanks3.mp3}} "Thank you."
+
+====Ultimate Status====
+*{{AC|CloveUltDown1.mp3}}{{AC|CloveUltDown2.mp3}} "My ult's not ready."
+*{{AC|CloveUltAlmost1.mp3}}{{AC|CloveUltAlmost2.mp3}} "My ult is almost ready."
+*{{AC|CloveUltReady1.mp3}}{{AC|CloveUltReady2.mp3}} "My ult is ready."
+
+====Yes====
+*{{AC|CloveYes1.mp3}} "Aye."
+*{{AC|CloveYes2.mp3}}{{AC|CloveYes3.mp3}} "Yeah."
+
+===Wheel Index requiring Minimap===
+For the following voicelines, the minimap must be open and then open ping wheel and activate strategy.
+====Faking====
+Only as Attackers during Buy Phase.
+*{{AC|CloveFaking1.mp3}}{{AC|CloveFaking2.mp3}} "I'm faking."
+*{{AC|CloveFakingA1.mp3}}{{AC|CloveFakingA2.mp3}} "I'm faking A."
+*{{AC|CloveFakingB1.mp3}}{{AC|CloveFakingB2.mp3}} "I'm faking B."
+*{{AC|CloveFakingC1.mp3}}{{AC|CloveFakingC2.mp3}} "I'm faking C."
+
+====I'm Going Here====
+As Defenders during Buy Phase, or as Attackers at anytime.
+*{{AC|CloveGoingA1.mp3}}{{AC|CloveGoingA2.mp3}} "Going A."
+*{{AC|CloveGoingB1.mp3}}{{AC|CloveGoingB2.mp3}} "Going B."
+*{{AC|CloveGoingC1.mp3}}{{AC|CloveGoingC2.mp3}} "Going C."
+*{{AC|CloveGoingMid1.mp3}}{{AC|CloveGoingMid2.mp3}} "Going Mid."
+
+====Let's Go Here====
+Only as Attackers during Buy Phase.
+*{{AC|CloveLetsGoA1.mp3}}{{AC|CloveLetsGoA2.mp3}} "Let's go A."
+*{{AC|CloveLetsGoB1.mp3}}{{AC|CloveLetsGoB2.mp3}} "Let's go B."
+*{{AC|CloveLetsGoC1.mp3}}{{AC|CloveLetsGoC2.mp3}} "Let's go C."
+*{{AC|CloveLetsGoHere1.mp3}}{{AC|CloveLetsGoHere2.mp3}} "Let's go here."
+
+====Let's rush them (Minimap)====
+Only as Attackers during Buy Phase.
+*{{AC|CloveLetsRush1.mp3}}{{AC|CloveLetsRush2.mp3}} "Let's rush them."
+*{{AC|CloveLetsRushA1.mp3}}{{AC|CloveLetsRushA2.mp3}} "Let's rush A."
+*{{AC|CloveLetsRushB1.mp3}}{{AC|CloveLetsRushB2.mp3}} "Let's rush B."
+*{{AC|CloveLetsRushC1.mp3}}{{AC|CloveLetsRushC2.mp3}} "Let's rush C."
+
+====Let's Sneak Here====
+Only as Attackers during Buy Phase.
+*{{AC|CloveSneakA1.mp3}}{{AC|CloveSneakA2.mp3}} "Let's sneak A."
+*{{AC|CloveSneakB1.mp3}}{{AC|CloveSneakB2.mp3}} "Let's sneak B."
+*{{AC|CloveSneakC1.mp3}}{{AC|CloveSneakC2.mp3}} "Let's sneak C."
+*{{AC|CloveSneakMid1.mp3}}{{AC|CloveSneakMid2.mp3}} "Let's sneak Mid."
+
+====Let's Stack Here====
+Only as Defenders during Buy Phase.
+*{{AC|CloveStack1.mp3}}{{AC|CloveStack2.mp3}} "Let's stack up."
+*{{AC|CloveStackA1.mp3}}{{AC|CloveStackA2.mp3}} "Let's stack A."
+*{{AC|CloveStackB1.mp3}}{{AC|CloveStackB2.mp3}} "Let's stack B."
+*{{AC|CloveStackC1.mp3}}{{AC|CloveStackC2.mp3}} "Let's stack C."
+*{{AC|CloveStackMid1.mp3}}{{AC|CloveStackMid2.mp3}} "Let's stack Mid."
+
+====Someone Go Here====
+As Attackers during Round Phase, or as Defenders at anytime.
+*{{AC|CloveNeedSomeoneA1.mp3}}{{AC|CloveNeedSomeoneA2.mp3}} "Someone go A."
+*{{AC|CloveNeedSomeoneB1.mp3}}{{AC|CloveNeedSomeoneB2.mp3}} "Someone go B."
+*{{AC|CloveNeedSomeoneC1.mp3}}{{AC|CloveNeedSomeoneC2.mp3}} "Someone go C."
+*{{AC|CloveNeedSomeoneMid1.mp3}}{{AC|CloveNeedSomeoneMid2.mp3}} "Someone go Mid."
+
+====Spike's here====
+Only as Defenders during Round Phase.
+*{{AC|CloveSpikeA1.mp3}}{{AC|CloveSpikeA2.mp3}} "Spike's A."
+*{{AC|CloveSpikeB1.mp3}}{{AC|CloveSpikeB2.mp3}} "Spike's B."
+*{{AC|CloveSpikeC1.mp3}}{{AC|CloveSpikeC2.mp3}} "Spike's C."
+*{{AC|CloveSpikeMid1.mp3}}{{AC|CloveSpikeMid2.mp3}} "Spike's Mid."
+*{{AC|CloveSpikeSpottedASpawn1.mp3}}{{AC|CloveSpikeSpottedASpawn2.mp3}} "Spike spotted Attacker Spawn."
+*{{AC|CloveSpikeSpottedDSpawn1.mp3}}{{AC|CloveSpikeSpottedDSpawn2.mp3}} "Spike spotted Defender Spawn."
+
+==Pings==
+===General===
+*{{AC|ClovePing1.mp3}}{{AC|ClovePing2.mp3}} "Right here."
+
+===Caution===
+*{{AC|ClovePingCaution1.mp3}}{{AC|ClovePingCaution2.mp3}} "Careful here."
+
+===Need support===
+*{{AC|CloveHelp1.mp3}}{{AC|CloveHelp2.mp3}} "I need help!"
+
+===On my mark===
+*{{AC|CloveOnMyMark1.mp3}}{{AC|CloveOnMyMark2.mp3}} "On my mark."
+
+===Ping gun===
+*{{AC|ClovePingGun1.mp3}}{{AC|ClovePingGun2.mp3}} "Gun here."
+
+===Ping spike===
+*{{AC|ClovePingSpike1.mp3}}{{AC|ClovePingSpike2.mp3}} "Spike's here."
+
+===Ping for spike defuse===
+*{{AC|CloveDefuseSpike1.mp3}}{{AC|CloveDefuseSpike2.mp3}} "Defuse the spike!"
+
+===Ping for spike plant===
+*{{AC|ClovePlantSpike1.mp3}}{{AC|ClovePlantSpike2.mp3}} "Plant the spike!"
+
+===Watching===
+*{{AC|CloveWatching1.mp3}}{{AC|CloveWatching2.mp3}} "Watching here."
+
+==Other lines==
+===Ability unusable===
+====[[Status Effect#Suppress|Suppressed]] or attempting to use {{abi text|Not Dead Yet}} while alive====
+*{{AC|CloveCantUse1.mp3}}{{AC|CloveCantUse2.mp3}} "I can't use that."
+
+====Attempting to use {{abi text|Not Dead Yet}} after duration expired or when not ready while dead==== 
+*{{AC|CloveCantUseDead1.mp3}}{{AC|CloveCantUseDead2.mp3}} "I can't use that."
+
+====On cooldown while alive====
+*{{AC|CloveOnCooldown1.mp3}}{{AC|CloveOnCooldown2.mp3}} "Not ready yet." 
+
+====On cooldown while dead====
+*{{AC|CloveOnCooldownDead1.mp3}}{{AC|CloveOnCooldownDead2.mp3}} "Not ready yet."
+
+====No charges====
+*{{AC|CloveNoCharges1.mp3}}{{AC|CloveNoCharges2.mp3}} "No charges."
+
+===Enemy spotted===
+*{{AC|CloveEnemyA1.mp3}}{{AC|CloveEnemyA2.mp3}} "Enemy spotted A."
+*{{AC|CloveEnemyB1.mp3}}{{AC|CloveEnemyB2.mp3}} "Enemy spotted B."
+*{{AC|CloveEnemyC1.mp3}}{{AC|CloveEnemyC2.mp3}} "Enemy spotted C."
+*{{AC|CloveEnemyASpawn1.mp3}}{{AC|CloveEnemyASpawn2.mp3}} "Enemy spotted Attacker Spawn."
+*{{AC|CloveEnemyDSpawn1.mp3}}{{AC|CloveEnemyDSpawn2.mp3}} "Enemy spotted Defender Spawn."
+*{{AC|CloveEnemyMid1.mp3}}{{AC|CloveEnemyMid2.mp3}} "Enemy spotted Mid."
+
+====Multiple====
+*{{AC|CloveEnemiesA1.mp3}}{{AC|CloveEnemiesA2.mp3}} "Multiple enemies A!"
+*{{AC|CloveEnemiesB1.mp3}}{{AC|CloveEnemiesB2.mp3}} "Multiple enemies B!"
+*{{AC|CloveEnemiesC1.mp3}}{{AC|CloveEnemiesC2.mp3}} "Multiple enemies C!"
+*{{AC|CloveEnemiesASpawn1.mp3}}{{AC|CloveEnemiesASpawn2.mp3}} "Multiple enemies Attacker Spawn!"
+*{{AC|CloveEnemiesDSpawn1.mp3}}{{AC|CloveEnemiesDSpawn2.mp3}} "Multiple enemies Defender Spawn!"
+*{{AC|CloveEnemiesMid1.mp3}}{{AC|CloveEnemiesMid2.mp3}} "Multiple enemies Mid!"
+
+===Reloading===
+*{{AC|CloveReloading1.mp3}}{{AC|CloveReloading2.mp3}} "Reloading."
+
+===Healed===
+*{{AC|CloveRelief1.mp3}}{{AC|CloveRelief2.mp3}}{{AC|CloveRelief3.mp3}} ''*Clove sighs*''
+
+===Killed===
+*{{AC|CloveDeath1.mp3}}{{AC|CloveDeath2.mp3}}{{AC|CloveDeath3.mp3}} ''*Clove groans*''
+
+===Resurrected via {{abi text|Resurrection}}===
+*{{AC|CloveResurrect.mp3}} "That was weird."
+
+===Wounded===
+====Light damage====
+*{{AC|ClovePainLight1.mp3}}{{AC|ClovePainLight2.mp3}}{{AC|ClovePainLight3.mp3}} ''*Clove groans*''
+
+====Medium damage====
+*{{AC|ClovePainMedium1.mp3}}{{AC|ClovePainMedium2.mp3}}{{AC|ClovePainMedium3.mp3}} ''*Clove groans*''
+
+====Heavy damage====
+*{{AC|ClovePainHeavy1.mp3}}{{AC|ClovePainHeavy2.mp3}}{{AC|ClovePainHeavy3.mp3}} ''*Clove groans*''
+
+====Fall damage====
+*{{AC|ClovePainFall1.mp3}}{{AC|ClovePainFall2.mp3}}{{AC|ClovePainFall3.mp3}} ''*Clove groans*''
+
+==Unused lines==
+==={{abi text|Ruse}} Cast all charges while dead===
+*{{AC|CloveRuseAllChargesDead1.mp3}}{{AC|CloveRuseAllChargesDead2.mp3}} "Dropping smokes."
+
+===Need utility here===
+*{{AC|CloveNeedUtilityHere1.mp3}}{{AC|CloveNeedUtilityHere2.mp3}} "Need util here."
+
+==Removed lines==
+===Round Start===
+*{{AC|CloveRoundStart6.mp3}} "Listen up you muckers, if I don't get back up, just give me a nudge. I might not be dead, just taking a wee kip."{{#tag:sup|-{{patchv|13.00}}}}
+
+===Barrier Down===
+*{{AC|CloveBarrierDown2.mp3}} "Alright muckers, off we go!"{{#tag:sup|-{{patchv|13.00}}}}
+
+===Last Kill Enemy MVP===
+*{{AC|CloveLastKillMVP1.mp3}} "That was their best? Huh, alright."{{#tag:sup|-{{patchv|13.00}}}}
+
+===Spike Spotted General===
+*{{AC|CloveSpikeSpotted1.mp3}}{{AC|CloveSpikeSpotted2.mp3}} "I see the spike."
+
+===Enemy spotted General===
+*{{AC|CloveEnemy1.mp3}}{{AC|CloveEnemy2.mp3}} "Enemy spotted."
+
+===Multiple Enemies spotted General===
+*{{AC|CloveEnemies1.mp3}}{{AC|CloveEnemies2.mp3}} "Multiple enemies spotted!"
+
+===Be Quiet===
+*{{AC|CloveBeQuiet1.mp3}}{{AC|CloveBeQuiet2.mp3}} "Quiet down."
+
+===Rotate===
+*{{AC|CloveRotating1.mp3}}{{AC|CloveRotating2.mp3}} "Rotating."
+
+===Let's Rotate===
+*{{AC|CloveLetsRotate1.mp3}}{{AC|CloveLetsRotate2.mp3}} "Let's rotate."
+
+===Clear Area===
+*{{AC|CloveClearThisArea1.mp3}}{{AC|CloveClearThisArea2.mp3}} "Clear this area."
+
+===Hold===
+*{{AC|CloveHold1.mp3}}{{AC|CloveHold2.mp3}} "Hold."
+
+===Push===
+*{{AC|ClovePush1.mp3}}{{AC|ClovePush2.mp3}} "Let's push."
+
+===Regroup===
+*{{AC|CloveRegroup1.mp3}}{{AC|CloveRegroup2.mp3}} "Regroup."
+
+===Ping Go here===
+*{{AC|CloveGoHere1.mp3}}{{AC|CloveGoHere2.mp3}} "Go here."
+
+==[[Range/Lore|The Range's lore assets]]==
+===[[Range/Lore/EP8|Episode 8]]===
+*{{AC|file=VoicemailBrimstone78.mp3}} "Grand, boss' already ignoring my calls- Oh, hello! [[Brimstone]], no rush, but uh... I was getting set up in my room - lovely accommodation, by the way! - and uh... the door's stuck. Not like, locked but... stuck. I tried prying it open and that didnae work, and uh... I don't have anyone else's number yet! I know you're busy, but I'd prefer the option to leave. Unless... is this part of the onboarding?! Am I being tested right now? Haha! Nothing gets past me, aye? I can do this, don't you fret!"
+*{{AC|file=VoicemailBrimstone80.mp3}} "Hey, Brimstone! I've been helping [[Cypher]] with the journal, aye? The one [[Hourglass]] tried to steal. There were some bits in there he couldn't figure out, something about a secret cavern or some such. And that got me thinking 'bout some things those Hourglass numpties let slip when they hauled me aboard their wee little boat. You'd be amazed at what some people say around a dead body! Yapping on and on about bringing the journal back to its rightful place in the Elder Grotto. You see where I'm going with this? The journal's talking about an Hourglass base, a special one too! Cy's getting the ship's navigation logs. We'll suss it out, just you wait!"
+
+===[[Range/Lore/EP9|Episode 9]]===
+*{{AC|file=VoicemailBrimstone96.mp3}} "Brimstone! Hate to ask but, uh... [[Thrash]] ate [[Gekko]]'s dice set again. Not a clue where they ended up but that's better left a mystery. I had a few to lend him but he's short a D20, was wondering if you had one to spare? No one else will part with theirs, too afraid of the aformentioned Thrash. If so, just bring them to the session tomorrow night. Cool, grand! All right, see ya!"
+
+==Notes==
+:''To easily see which quotes were added corresponding to the patch, use your browser's Find function and type the patch number (e.g. v13.00).
+*{{ui|Removed}} 3 voice lines removed from patch {{patchv|13.00}}, documented in the patch notes.
+*Additional radio commands added in patch {{patchv|8.11}} are not mentioned in this page.
+*Other voice lines removed were at an unknown timeframe.
+
+==Navigation==
+{{Navbox agents}}
+[[Category:Quotes]]

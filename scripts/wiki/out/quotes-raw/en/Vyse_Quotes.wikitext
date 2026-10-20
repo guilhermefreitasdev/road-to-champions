@@ -1,0 +1,800 @@
+{{TOCright}}
+This is a '''list of quotes by {{ai|Vyse}}'''. Vyse is voiced by 
+Marta Svetek in English. Vyse has a total of {{PAGESINCATEGORY:Vyse Quotes}} files of quotes including unused and removed lines, and excluding [[#The Range's lore assets|The Range's lore assets]].
+
+A downloadable folder containing all the audio files on this page can be found [https://drive.google.com/drive/folders/1xAK9Xd6lXn48I0vXmOMX2y0Q7qVdrU7t?usp=sharing here].
+
+==Agent Selected/Unlocked==
+*{{AC|VysePick.mp3}} "All paths end with me."
+
+==Abilities==
+==={{abi text|Razorvine}}===
+====Cast====
+*{{AC|VyseRazorvineCast1.mp3}}{{AC|VyseRazorvineCast2.mp3}} "Launching thorns."
+*{{AC|VyseRazorvineCast3.mp3}}{{AC|VyseRazorvineCast4.mp3}} "Rip and tear."
+
+====Activate====
+*{{AC|VyseRazorvineActivate1.mp3}}{{AC|VyseRazorvineActivate2.mp3}} "Thorns activated."
+*{{AC|VyseRazorvineActivate3.mp3}}{{AC|VyseRazorvineActivate4.mp3}} "Thorns are live."
+
+====Destroyed====
+*{{AC|VyseRazorvineDestroyed1.mp3}}{{AC|VyseRazorvineDestroyed2.mp3}} "Thorns down."
+*{{AC|VyseRazorvineDestroyed3.mp3}}{{AC|VyseRazorvineDestroyed4.mp3}} "No more thorns."
+
+====Kill====
+*{{AC|VyseRazorvineKill1.mp3}} "Bled out."
+*{{AC|VyseRazorvineKill2.mp3}} "Mangled."
+
+====Recall====
+*{{AC|VyseRazorvineRecall1.mp3}}{{AC|VyseRazorvineRecall2.mp3}} "Retrieving thorn trap."
+*{{AC|VyseRazorvineRecall3.mp3}}{{AC|VyseRazorvineRecall4.mp3}} "Retrieving thorns."
+
+==={{abi text|Shear}}===
+====Cast during Buy Phase====
+*{{AC|VyseShearCastBuyPhase1.mp3}}{{AC|VyseShearCastBuyPhase2.mp3}} "Now we wait."
+
+====Cast====
+*{{AC|VyseShearCast1.mp3}}{{AC|VyseShearCast2.mp3}} "Placing wall trap."
+*{{AC|VyseShearCast3.mp3}}{{AC|VyseShearCast4.mp3}} "Wall set."
+
+====Destroyed====
+*{{AC|VyseShearDestroyed1.mp3}}{{AC|VyseShearDestroyed2.mp3}} "Wall destroyed."
+*{{AC|VyseShearDestroyed3.mp3}}{{AC|VyseShearDestroyed4.mp3}} "Wall trap destroyed."
+
+====Triggered====
+*{{AC|VyseShearTriggered1.mp3}}{{AC|VyseShearTriggered2.mp3}} "Wall tripped!"
+
+====Recall====
+*{{AC|VyseShearRecall1.mp3}}{{AC|VyseShearRecall2.mp3}} "Need to move my wall."
+*{{AC|VyseShearRecall3.mp3}}{{AC|VyseShearRecall4.mp3}} "Retrieving wall."
+
+==={{abi text|Arc Rose}}===
+====Cast====
+*{{AC|VyseArcRoseCast1.mp3}}{{AC|VyseArcRoseCast2.mp3}} "Blinding prepped."
+*{{AC|VyseArcRoseCast3.mp3}}{{AC|VyseArcRoseCast4.mp3}} "Flash placed."
+
+====Recall during Buy Phase====
+*{{AC|VyseArcRoseRecall1.mp3}}{{AC|VyseArcRoseRecall2.mp3}} "Retrieving flash."
+*{{AC|VyseArcRoseRecall3.mp3}}{{AC|VyseArcRoseRecall4.mp3}} "Too obvious."
+
+====Activate====
+*{{AC|VyseArcRoseActivate1.mp3}}{{AC|VyseArcRoseActivate2.mp3}} "Blinding!"
+*{{AC|VyseArcRoseActivate3.mp3}}{{AC|VyseArcRoseActivate4.mp3}} "Flashing!"
+
+====Kill assist====
+*{{AC|VyseArcRoseKill1.mp3}} "Blind and dead."
+*{{AC|VyseArcRoseKill2.mp3}} "Brilliant."
+
+====Destroyed====
+*{{AC|VyseArcRoseDestroyed1.mp3}}{{AC|VyseArcRoseDestroyed2.mp3}} "Flash trap destroyed."
+*{{AC|VyseArcRoseDestroyed3.mp3}}{{AC|VyseArcRoseDestroyed4.mp3}} "My blind is dead."
+
+==={{abi text|Steel Garden}}===
+====Ally Cast====
+*{{AC|VyseUltAllyCast.mp3}} "Bring me the arsenal!"
+
+====Enemy Cast====
+*{{AC|VyseUltEnemyCast.mp3}} "Adapt or die!"
+
+==Buy Phase==
+===Match Start===
+*{{AC|VyseMatchStart1.mp3}} "A battle is just a conflict in need of resolution. Focus on the fix, then execute."
+*{{AC|VyseMatchStart2.mp3}} "History doesn't remember the almosts. We'll be the best, or we'll be forgotten."
+*{{AC|VyseMatchStart3.mp3}} "I didn't come here to lose. We'll win, or we'll die."
+*{{AC|VyseMatchStart4.mp3}} "It's time. Remember your role, keep your nerve, and if all else fails, send them my way."
+*{{AC|VyseMatchStart5.mp3}} "Practice is easy, safe, sterile. This is where you are truly measured."
+*{{AC|VyseMatchStart6.mp3}} "Our enemies had every chance to back down, but they chose violence, and I choose to reply in kind."
+*{{AC|VyseMatchStart7.mp3}} "This is what we trained for. Pick a weapon, choose your sector and fight for your future."
+
+====Attacking====
+*{{AC|VyseMatchStartAttack1.mp3}} "Five people stand between us and what's ours. Arm up and fight for your future!"
+*{{AC|VyseMatchStartAttack2.mp3}} "Our key objectives today are: kill the opposition and plant the spike. Great, very doable."
+*{{AC|VyseMatchStartAttack3.mp3}} "Your enemy has everything you need to survive. You have the means to take it, so take it!"
+
+====Defending====
+*{{AC|VyseMatchStartDefense1.mp3}} "The self-righteous thieves are back. Good, I have plans for them." 
+*{{AC|VyseMatchStartDefense2.mp3}} "The temerity, to think they can come and here and take what's ours? No!" 
+
+====[[Abyss]]====
+*{{AC|VyseMatchStartAbyss.mp3}} "If it were up to me, I'd have [[Raze]] rig this place with explosives and send it crashing into the void."
+
+====[[Icebox]]====
+*{{AC|VyseMatchStartIcebox.mp3}} "So this is the project that sapped my funding all those years ago. Looks like it worked out well for you, Kingdom." 
+
+====[[Lotus]]====
+*{{AC|VyseMatchStartLotus.mp3}} "So much to research here, but here we are, about to fill it with bullet holes."
+
+====[[Pearl]]====
+*{{AC|VyseMatchStartPearl.mp3}} "Hm, impressive engineering for a precarious little place."
+
+====[[Split]]====
+*{{AC|VyseMatchStartSplit.mp3}} "Why hasn't Kingdom abandoned their headquarters here yet? I would've thought. Huh, so be it."
+
+====[[Sunset]]====
+*{{AC|VyseMatchStartSunset.mp3}} "Interverse research causing massive catastrophies. Huh, imagine that."
+
+===Round Start===
+*{{AC|VyseRoundStart1.mp3}} "Ability, dedication, time. That's all we need."
+*{{AC|VyseRoundStart2.mp3}} "Control the space, control their choices."
+*{{AC|VyseRoundStart3.mp3}} "I demand what I'm owed."
+*{{AC|VyseRoundStart4.mp3}} "I feel no empathy for them, what does that say about me? Don't answer, it was rhethorical."
+*{{AC|VyseRoundStart5.mp3}} "I'll isolate the problem. You crush it."
+*{{AC|VyseRoundStart6.mp3}} "Speak up and ask questions, assumptions will only get us in trouble."
+*{{AC|VyseRoundStart7.mp3}} "They brought weapons made of metal, to kill me? Huh, ironic."
+*{{AC|VyseRoundStart8.mp3}} "This is where someone says something pithy and we pretend to tolerate them. Go ahead, I'll wait."
+
+====Last round won====
+*{{AC|VyseRoundWon1.mp3}} "Hm, I'm partial to winning. Let's do more of it."
+*{{AC|VyseRoundWon2.mp3}} "Keep pushing, don't give them time to adapt."
+*{{AC|VyseRoundWon3.mp3}} "People are all the same. Predictable, punishable."
+*{{AC|VyseRoundWon4.mp3}} "Success is the only axis that matters."
+*{{AC|VyseRoundWon5.mp3}} "We're finding our feet, excellent."
+
+=====While in the lead=====
+*{{AC|VyseLead1.mp3}} "I love it when our competition embraces chaos theory, and makes the same mistakes expecting different results."
+*{{AC|VyseLead2.mp3}} "If they're learning, it's not fast enough."
+*{{AC|VyseLead3.mp3}} "Never interrupt your enemy when they're making a mistake."
+*{{AC|VyseLead4.mp3}} "Progress, good."
+*{{AC|VyseLead5.mp3}} "There's something to be said for downright doggedness, no? Most people would know when they're beaten."
+
+=====Making a comeback=====
+*{{AC|VyseComeback1.mp3}} "Good, now we build on this success."
+*{{AC|VyseComeback2.mp3}} "Momentum is a powerful thing. Keep it up."
+*{{AC|VyseComeback3.mp3}} "That was evidence of our worth. Now, we prove it."
+
+=====Self commend=====
+*{{AC|VyseSelfCommend1.mp3}} "Good, aren't I?"
+
+===Last round in the half===
+====Attacking====
+*{{AC|VyseLastRound1.mp3}} "Frugality has its place, but it's not here. Spend."
+
+====Defending====
+*{{AC|VyseLastRound2.mp3}} "No sense in saving now. Spend, enjoy the arsenal."
+
+===Match Point===
+*{{AC|VyseMatchPoint1.mp3}} "Mercy now would be weakness. Break them!"
+*{{AC|VyseMatchPoint2.mp3}} "Their spirits are broken. Let's attend to the rest."
+
+===Shop===
+====Let's Buy====
+*{{AC|VyseBuying1.mp3}}{{AC|VyseBuying2.mp3}} "Buying."
+
+====Let's Save====
+*{{AC|VyseSaving1.mp3}}{{AC|VyseSaving2.mp3}} "Saving."
+
+====I Have Extra Creds====
+*{{AC|VyseOffer1.mp3}}{{AC|VyseOffer2.mp3}} "I'm feeling charitable, who needs something?"
+*{{AC|VyseOffer3.mp3}}{{AC|VyseOffer4.mp3}} "I've got funds to burn, who needs a gun?"
+
+====Requested====
+*{{AC|VyseRequest1.mp3}}{{AC|VyseRequest2.mp3}} "I need a weapon."
+
+===Barrier Down===
+*{{AC|VyseBarrierDown1.mp3}} "Again!"
+*{{AC|VyseBarrierDown2.mp3}} "Back to it."
+*{{AC|VyseBarrierDown3.mp3}} "Check your posture."
+*{{AC|VyseBarrierDown4.mp3}} "Come on, test us!"
+*{{AC|VyseBarrierDown5.mp3}} "Don't give them any chances."
+*{{AC|VyseBarrierDown6.mp3}} "Even isn't good enough."
+*{{AC|VyseBarrierDown7.mp3}} "I am the master of my fate."
+*{{AC|VyseBarrierDown8.mp3}} "Isn't this fun?"
+*{{AC|VyseBarrierDown9.mp3}} "Let's kill this competition."
+*{{AC|VyseBarrierDown10.mp3}} "Move!"
+*{{AC|VyseBarrierDown11.mp3}} "No more theory."
+*{{AC|VyseBarrierDown12.mp3}} "Right then, let's go kill them."
+*{{AC|VyseBarrierDown13.mp3}} "Show them we're better."
+*{{AC|VyseBarrierDown14.mp3}} "These parameters are too close."
+*{{AC|VyseBarrierDown15.mp3}} "They've taken enough, no more!"
+*{{AC|VyseBarrierDown16.mp3}} "We must be better."
+*{{AC|VyseBarrierDown17.mp3}} "What are the use in lessons if we don't learn?"
+*{{AC|VyseBarrierDown18.mp3}} "You get what you fight for."
+
+==Spike==
+===Forgotten in spawn===
+*{{AC|VyseForgotSpike1.mp3}} "I thought the spike was an integral part of our plan."
+
+===Ally carrier down===
+*{{AC|VyseSpikeDown1.mp3}}{{AC|VyseSpikeDown2.mp3}} "Our spike's down."
+
+===Dropped===
+*{{AC|VyseSpikeDropped1.mp3}}{{AC|VyseSpikeDropped2.mp3}} "Spike dropped."
+
+===Retrieved===
+*{{AC|VyseSpikePickedUp1.mp3}}{{AC|VyseSpikePickedUp2.mp3}} "I have the spike."
+
+===Planted===
+*{{AC|VyseSpikePlanted1.mp3}}{{AC|VyseSpikePlanted2.mp3}} "Spike planted."
+
+===Spotted===
+*{{AC|VyseSpikeSpottedA1.mp3}}{{AC|VyseSpikeSpottedA2.mp3}} "Spike spotted A."
+*{{AC|VyseSpikeSpottedB1.mp3}}{{AC|VyseSpikeSpottedB2.mp3}} "Spike spotted B."
+*{{AC|VyseSpikeSpottedC1.mp3}}{{AC|VyseSpikeSpottedC2.mp3}} "Spike spotted C."
+*{{AC|VyseSpikeSpottedASpawn1.mp3}}{{AC|VyseSpikeSpottedASpawn2.mp3}} "Spike spotted Attacker Spawn."
+*{{AC|VyseSpikeSpottedDSpawn1.mp3}}{{AC|VyseSpikeSpottedDSpawn2.mp3}} "Spike spotted Defender Spawn."
+*{{AC|VyseSpikeSpottedMid1.mp3}}{{AC|VyseSpikeSpottedMid2.mp3}} "Spike spotted Mid."
+
+===Defuse resumed===
+*{{AC|VyseDefuseResumed1.mp3}} "A for effort."
+*{{AC|VyseDefuseResumed2.mp3}} "You have to be smarter than that!"
+
+===Defuse time running out===
+*{{AC|VyseDefuseLate1.mp3}} "Move faster!"
+*{{AC|VyseDefuseLate2.mp3}} "Okay, okay."
+*{{AC|VyseDefuseLate3.mp3}} "This is bullshit."
+
+===Defuse successful===
+*{{AC|VyseDefuseComplete1.mp3}} "I don't lose."
+*{{AC|VyseDefuseComplete2.mp3}} "No, not while I'm here."
+
+==Kill==
+*{{AC|VyseKill1.mp3}} "Deficient."
+*{{AC|VyseKill2.mp3}} "Futile."
+*{{AC|VyseKill3.mp3}} "Go away."
+*{{AC|VyseKill4.mp3}} "Hah!"
+*{{AC|VyseKill5.mp3}} "Irrelevant."
+*{{AC|VyseKill6.mp3}} "Just die!"
+*{{AC|VyseKill7.mp3}} "Obsolete."
+*{{AC|VyseKill8.mp3}} "Redundant."
+*{{AC|VyseKill9.mp3}} "Shame."
+
+===Headshot===
+*{{AC|VyseHeadshot1.mp3}} "Down."
+*{{AC|VyseHeadshot2.mp3}} "Hush up."
+*{{AC|VyseHeadshot3.mp3}} "Pinpoint."
+*{{AC|VyseHeadshot4.mp3}} "Please."
+*{{AC|VyseHeadshot5.mp3}} "Perfect."
+*{{AC|VyseHeadshot6.mp3}} "Tragic."
+
+===[[Melee]]===
+*{{AC|VyseMeleeKill1.mp3}} "I hope that hurt."
+*{{AC|VyseMeleeKill2.mp3}} "That looked painful."
+
+===Triple===
+*{{AC|VyseTriple1.mp3}}{{AC|VyseTriple2.mp3}} "That's three."
+*{{AC|VyseTriple3.mp3}}{{AC|VyseTriple4.mp3}} "Three down."
+
+===Quadra===
+*{{AC|VyseQuadra1.mp3}}{{AC|VyseQuadra2.mp3}} "Four."
+*{{AC|VyseQuadra3.mp3}}{{AC|VyseQuadra4.mp3}} "Minus four."
+
+===One kill remaining (game-mode specific)===
+*{{AC|VyseOneKillLeft1.mp3}} "This is it, one left!"
+
+==Round End==
+===Ace===
+*{{AC|VyseAce1.mp3}} "I have the vision, I am the means."
+*{{AC|VyseAce2.mp3}} "I'll drag this world forward by my damn self!"
+*{{AC|VyseAce3.mp3}} "If any of you mattered, you'd be alive."
+*{{AC|VyseAce4.mp3}} "This world will be one that I make!"
+
+===Clutch===
+*{{AC|VyseClutch1.mp3}} "I am everything that you're not!"
+*{{AC|VyseClutch2.mp3}} "I expected a little more competency."
+*{{AC|VyseClutch3.mp3}} "This world will know my name!"
+
+===Flawless or Team Ace===
+*{{AC|VyseFlawless1.mp3}} "A team like this can do anything."
+*{{AC|VyseFlawless2.mp3}} "Good, this is our new standard."
+*{{AC|VyseFlawless3.mp3}} "That's a hell of a benchmark."
+
+===Thrifty===
+*{{AC|VyseThrifty1.mp3}} "All that, and with so few means."
+
+===Last Kill===
+*{{AC|VyseLastKill1.mp3}} "I'll have what I'm owed."
+*{{AC|VyseLastKill2.mp3}} "If you can't do something right, don't do it at all."
+*{{AC|VyseLastKill3.mp3}} "That's the last of them."
+*{{AC|VyseLastKill4.mp3}} "Those were your last words?"
+*{{AC|VyseLastKill5.mp3}} "You can't see my face right now, but just know, I'm smiling."
+*{{AC|VyseLastKill6.mp3}} "Who gave you all that confidence?"{{#tag:sup|{{patchv|13.00}}^}}
+
+====Enemy MVP====
+There are no voice lines at the moment in this section for this Agent.
+
+====Using [[Melee]]====
+*{{AC|VyseLastKillMelee1.mp3}} "I'm a hands-on kind of leader."
+*{{AC|VyseLastKillMelee2.mp3}} "You have to break some bones to change the world."
+
+===Low HP===
+*{{AC|VyseLowHP1.mp3}} "Can't die yet, so much... to do."
+*{{AC|VyseLowHP2.mp3}} "This is nothing."
+
+==Match End==
+===Match Win===
+*{{AC|VyseMatchWin1.mp3}} "Axes satisfied, well done."
+*{{AC|VyseMatchWin2.mp3}} "I deserve this. Uh- we, deserve this."
+*{{AC|VyseMatchWin3.mp3}} "That's one way of getting what you want, I suppose. I'll take it."
+*{{AC|VyseMatchWin4.mp3}} "Victory might have been inevitable, but damn it feels good."
+
+====[[Abyss]]====
+*{{AC|VyseMatchWinAbyss.mp3}} "I never thought I'd make pleasant memories here. Heh, well done."
+
+===Runner-up (game-mode specific)===
+*{{AC|VyseRunnerUp1.mp3}} "Acceptable, good, even. But I can do better."
+*{{AC|VyseRunnerUp2.mp3}} "I was so close, put me back in!"
+
+==Agent-specific interactions==
+{| class="wikitable sortable"
+!To Agent
+!Scenario
+!width=40%; class=unsortable|Ally
+!width=40%; class=unsortable|Enemy
+|-
+|{{ai|Breach}}
+|Round Start
+|{{AC|VyseAllyBreachRoundStart.mp3}} "You're a disruptive one, Breach. But that's welcomed here, go rattle their heads for us."
+|
+|-
+|rowspan=4|{{ai|Brimstone}}
+|Match Start
+|{{AC|VyseAllyBrimstoneMatchStart.mp3}} "Say you hadn't founded VALORANT, Brimstone, do you think you'd still get in now? Do you think you have something the rest of us don't? Aside from experience of course." 
+|
+|-
+|Round Start
+|
+|{{AC|VyseEnemyBrimstoneRoundStart.mp3}} "Their Brimstone will learn what real leadership looks like."
+|-
+|Barrier Down
+|
+|{{AC|VyseEnemyBrimstoneBarrierDown.mp3}} "I'll demolish their Brimstone."
+|-
+|Kill
+|
+|{{AC|VyseEnemyBrimstoneKill.mp3}} "Has-been!"
+|-
+|{{ai|Chamber}}
+|Match Start
+|
+|{{AC|VyseEnemyChamberMatchStart.mp3}} "Oh good, they brought the gun obsessed valet. Let's see if his predictability matches his vanity."
+|-
+|rowspan=2|{{ai|Clove}}
+|Round Start
+|
+|{{AC|VyseEnemyCloveRoundStart.mp3}} "I can't end their Clove, but I can break their spirit." 
+|-
+|Kill
+|
+|{{AC|VyseEnemyCloveKill.mp3}} "Clove's in timeout."
+|-
+|{{ai|Cypher}}
+|Match Start
+|
+|{{AC|VyseEnemyCypherMatchStart.mp3}} "Their Cypher will share his knowledge with me, even if I have to prise it out of him."
+|-
+|{{ai|Deadlock}}
+|Kill
+|
+|{{AC|VyseEnemyDeadlockKill.mp3}} "Deadlock picked."
+|-
+|rowspan=2|{{ai|Fade}}
+|Round Start
+|
+|{{AC|VyseEnemyFadeRoundStart.mp3}} "I hear Fade has trouble sleeping. Hmph, I'll be her remedy."
+|-
+|Commend
+|{{AC|VyseAllyFadeCommend.mp3}} "You remind me of me sometimes, Fade. Good work."
+|
+|-
+|rowspan=2|{{ai|Gekko}}
+|Barrier Down
+|{{AC|VyseAllyGekkoBarrierDown.mp3}} "Mind your way, Gekko."
+|
+|-
+|Kill
+|
+|{{AC|VyseEnemyGekkoKill.mp3}} "Sorry little guy."
+|-
+|{{ai|Harbor}}
+|Barrier Down
+|{{AC|VyseAllyHarborBarrierDown.mp3}} "Force them out, Harbor."
+|
+|-
+|rowspan=2|{{ai|Iso}}
+|Commend
+|{{AC|VyseAllyIsoCommend.mp3}} "That's one way of manifesting flow state. Nicely done, Iso."
+|
+|-
+|Kill
+|
+|{{AC|VyseEnemyIsoKill.mp3}} "Fixer down."
+|-
+|rowspan=3|{{ai|KAY/O}}
+|Round Start
+|
+|{{AC|VyseEnemyKAYORoundStart.mp3}} "Whoever puts their KAY/O back together is going to have their hands full after this."
+|-
+|Commend
+|{{AC|VyseAllyKAYOCommend.mp3}} "I studied robotics for a time, but I've never seen anything like you, KAY/O. Remarkable."
+|
+|-
+|Last Kill
+|
+|{{AC|VyseEnemyKAYOLastKill.mp3}} "That's not getting reassembled."
+|-
+|{{ai|Killjoy}}
+|Round Start
+|
+|{{AC|VyseEnemyKilljoyRoundStart.mp3}} "They call their Killjoy a genius, and yet here she is, walking into a battlefield wearing bright yellow." 
+|-
+|rowspan=5|{{ai|Omen}}
+|Chat
+|
+:[[File:Vyse icon.png|20px|link=Vyse]] {{AC|VyseAllyOmenChat.mp3}} "Omen, the Scions spoke of you often. Is it true you once killed a man with a tree branch?"
+:[[File:Omen icon.png|20px|link=Omen]] {{AC|OmenAllyVyseChat.mp3}} "Anything can be made a weapon. But I am sorry, I don't recall."
+|
+|-
+|Match Start
+|{{AC|VyseAllyOmenMatchStart.mp3}} "Omen, surely VALORANT has the budget to replace those rags hanging off you." 
+|
+|-
+|Round Start
+|
+|{{AC|VyseEnemyOmenRoundStart.mp3}} "This isn't fair, being forced to fight Omen. But this isn't a fair world."
+|-
+|Commend
+|{{AC|VyseAllyOmenCommend.mp3}} "I never tire of watching you work, Omen."
+|
+|-
+|Barrier Down
+|{{AC|VyseAllyOmenBarrierDown.mp3}} "Send them to me, Omen."
+|
+|-
+|{{Ai|Phoenix}}
+|Chat
+|
+:[[File:Phoenix icon.png|20px|link=Phoenix]] {{AC|PhoenixAllyVyseChat.mp3}} "Yo, Vyse! Bere flashes on this team. They're going to hate us for sure!"
+:[[File:Vyse icon.png|20px|link=Vyse]] {{AC|VyseAllyPhoenixChat.mp3}} "Are you referring to the enemy or our allies? Probably both."
+|
+|-
+|{{ai|Raze}}
+|Round Start
+|{{AC|VyseAllyRazeRoundStart.mp3}} "So, you use explosives to propel yourself, Raze. That's... that's creative. I think I like it." 
+|
+|-
+|{{ai|Reyna}}
+|Commend
+|{{AC|VyseAllyReynaCommend.mp3}} "Tactically sound, practically proficient. Fine work, Reyna." 
+|
+|-
+|{{ai|Sage}}
+|Barrier Down
+|
+|{{AC|VyseEnemySageBarrierDown.mp3}} "I'll give their Sage something to heal."
+|-
+|{{ai|Skye}}
+|Barrier Down
+|{{AC|VyseAllySkyeBarrierDown.mp3}} "Lead the way, Skye."
+|
+|-
+|rowspan=7|{{ai|Viper}}
+|Chat
+|
+:[[File:Viper icon.png|20px|link=Viper]] {{AC|ViperAllyVyseChat.mp3}} "Vyse, I've been comparing your recent DNA samples to irradiated nucleotides and-"
+:[[File:Vyse icon.png|20px|link=Vyse]] {{AC|VyseAllyViperChat.mp3}} "No need, Sabine. The Scions ran their tests. I know what I am. I know it can't be undone."{{#tag:sup|{{patchv|12.03}}+}}
+|
+|-
+|Match Start
+|{{AC|VyseAllyViperMatchStart.mp3}} "We saved the world once, Sabine. I don't doubt we can do it again."
+|
+|-
+|Round Start
+|{{AC|VyseAllyViperRoundStart.mp3}} "Oh Sabine, how did we both change careers and still end up working together?"
+|
+|-
+|Barrier Down
+|{{AC|VyseAllyViperBarrierDown.mp3}} "Just like old times, Viper." 
+|{{AC|VyseEnemyViperBarrierDown.mp3}} "Leave me with Viper."
+|-
+|Commend
+|{{AC|VyseAllyViperCommend.mp3}} "Still sharp, Sabine."
+|
+|-
+|Kill
+|
+|{{AC|VyseEnemyViperKill.mp3}} "So long, Sabine."
+|-
+|Last Kill
+|
+|{{AC|VyseEnemyViperLastKill.mp3}} "There goes the competition."
+|-
+|rowspan=2|{{ai|Vyse}}
+|Match Start
+|
+|{{AC|VyseEnemyVyseMatchStart.mp3}} "I see I have an impostor across the way. Hmph, I'll take it as a compliment."
+|-
+|Last Kill
+|
+|{{AC|VyseEnemyVyseLastKill.mp3}} "Who do you think you are?"
+|-
+|{{ai|Yoru}}
+|Round Start
+|
+|{{AC|VyseEnemyYoruRoundStart.mp3}} "I want Yoru's head, figuratively. But also let's kill him."
+|}
+
+==Radio Commands==
+===Menu Index only===
+====Caution here====
+*{{AC|VyseCaution1.mp3}}{{AC|VyseCaution2.mp3}} "Enemy close."
+
+====Going Area====
+*{{AC|VyseGoingA1.mp3}}{{AC|VyseGoingA2.mp3}} "Going A."
+*{{AC|VyseGoingB1.mp3}}{{AC|VyseGoingB2.mp3}} "Going B."
+*{{AC|VyseGoingC1.mp3}}{{AC|VyseGoingC2.mp3}} "Going C."
+*{{AC|VyseGoingMid1.mp3}}{{AC|VyseGoingMid2.mp3}} "Going Mid."
+
+====Need Support====
+*{{AC|VyseHelp1.mp3}}{{AC|VyseHelp2.mp3}} "Need backup."
+
+====On my way====
+*{{AC|VyseOnMyWay1.mp3}}{{AC|VyseOnMyWay2.mp3}} "On my way."
+
+====Play for picks====
+*{{AC|VysePlayForPicks1.mp3}}{{AC|VysePlayForPicks2.mp3}} "Play for picks."
+
+===Wheel Index only===
+====Encourage====
+*{{AC|VyseEncouraging1.mp3}} "We've got this."
+*{{AC|VyseEncouraging2.mp3}}{{AC|VyseEncouraging3.mp3}} "We can do this."
+
+====I'll lurk====
+Only as Attackers during Buy Phase.
+*{{AC|VyseLurking1.mp3}}{{AC|VyseLurking2.mp3}} "I'm lurking."
+
+====I'll push out====
+Only as Defenders during Buy Phase.
+*{{AC|VysePushingOut1.mp3}}{{AC|VysePushingOut2.mp3}} "I'm pushing out."
+
+====I'm holding position====
+Only as Defenders during Buy Phase.
+*{{AC|VyseHoldingPosition1.mp3}}{{AC|VyseHoldingPosition2.mp3}} "Holding position."
+
+====Let's Attack====
+Only during Round Phase.
+*{{AC|VyseLetsAttack1.mp3}}{{AC|VyseLetsAttack2.mp3}} "Let's attack."
+
+====Let's hold positions====
+Only as Defenders during Buy Phase.
+*{{AC|VyseHoldPositions1.mp3}}{{AC|VyseHoldPositions2.mp3}} "Let's hold positions."
+
+====Let's play slow====
+Only as Attackers at anytime.
+*{{AC|VysePlaySlow1.mp3}}{{AC|VysePlaySlow2.mp3}} "Let's play slow."
+
+====Let's push out====
+Only as Defenders during Buy Phase.
+*{{AC|VysePushOut1.mp3}}{{AC|VysePushOut2.mp3}} "Let's push out."
+
+====Let's spread out====
+*{{AC|VyseSpreadOut1.mp3}}{{AC|VyseSpreadOut2.mp3}} "Let's spread out."
+
+====Nice Try====
+*{{AC|VyseNiceTry1.mp3}}{{AC|VyseNiceTry2.mp3}}{{AC|VyseNiceTry3.mp3}} "Nice try."
+
+====Stick together====
+*{{AC|VyseStickTogether1.mp3}}{{AC|VyseStickTogether2.mp3}} "Stick together."
+
+===Menu and Wheel Index===
+====Commend====
+*{{AC|VyseCommend1.mp3}} "Commendable."
+*{{AC|VyseCommend2.mp3}} "Good work."
+*{{AC|VyseCommend3.mp3}} "Well done."
+
+====Fall Back====
+Menu Index at anytime, or Wheel Index only during Round Phase.
+*{{AC|VyseFallBack1.mp3}}{{AC|VyseFallBack2.mp3}} "Fall back!"
+
+====Hello====
+*{{AC|VyseHello1.mp3}} "Hello!"
+*{{AC|VyseHello2.mp3}} "Hi."
+*{{AC|VyseHello3.mp3}} "Hi there."
+
+====I'll take point====
+Wheel Index only as Attackers during Buy Phase, or Menu Index at anytime regardless of Attackers or Defenders.
+*{{AC|VyseTakePoint1.mp3}}{{AC|VyseTakePoint2.mp3}} "I'll take point."
+
+====Let's rush them (Radio Command)====
+*{{AC|VyseRush1.mp3}}{{AC|VyseRush2.mp3}} "Rush them."
+
+====Need healing====
+*{{AC|VyseHealing1.mp3}}{{AC|VyseHealing2.mp3}} "Need healing."
+
+====No====
+*{{AC|VyseNo1.mp3}} "Hm, no."
+*{{AC|VyseNo2.mp3}}{{AC|VyseNo3.mp3}} "No."
+
+====Sorry====
+*{{AC|VyseSorry1.mp3}} "Apologies."
+*{{AC|VyseSorry2.mp3}}{{AC|VyseSorry3.mp3}} "Sorry."
+
+====Thanks====
+*{{AC|VyseThanks1.mp3}} "I appreciate that."
+*{{AC|VyseThanks2.mp3}} "Thanks."
+*{{AC|VyseThanks3.mp3}} "Thank you."
+
+====Ultimate Status====
+*{{AC|VyseUltDown1.mp3}}{{AC|VyseUltDown2.mp3}} "My ultimate's not ready."
+*{{AC|VyseUltAlmost1.mp3}}{{AC|VyseUltAlmost2.mp3}} "My ultimate's almost ready."
+*{{AC|VyseUltReady1.mp3}}{{AC|VyseUltReady2.mp3}} "My ultimate's ready."
+
+====Yes====
+*{{AC|VyseYes1.mp3}} "Absolutely."
+*{{AC|VyseYes2.mp3}} "Sure."
+*{{AC|VyseYes3.mp3}} "Yes."
+
+===Wheel Index requiring Minimap===
+For the following voicelines, the minimap must be open and then open ping wheel and activate strategy.
+====Faking====
+Only as Attackers during Buy Phase.
+*{{AC|VyseFaking1.mp3}}{{AC|VyseFaking2.mp3}} "I'm faking."
+*{{AC|VyseFakingA1.mp3}}{{AC|VyseFakingA2.mp3}} "I'm faking A."
+*{{AC|VyseFakingB1.mp3}}{{AC|VyseFakingB2.mp3}} "I'm faking B."
+*{{AC|VyseFakingC1.mp3}}{{AC|VyseFakingC2.mp3}} "I'm faking C."
+
+====I'm Going Here====
+As Defenders during Buy Phase, or as Attackers at anytime.
+*{{AC|VyseGoingA1.mp3}}{{AC|VyseGoingA2.mp3}} "Going A."
+*{{AC|VyseGoingB1.mp3}}{{AC|VyseGoingB2.mp3}} "Going B."
+*{{AC|VyseGoingC1.mp3}}{{AC|VyseGoingC2.mp3}} "Going C."
+*{{AC|VyseGoingMid1.mp3}}{{AC|VyseGoingMid2.mp3}} "Going Mid."
+
+====Let's Go Here====
+Only as Attackers during Buy Phase.
+*{{AC|VyseLetsGoA1.mp3}}{{AC|VyseLetsGoA2.mp3}} "Let's go A."
+*{{AC|VyseLetsGoB1.mp3}}{{AC|VyseLetsGoB2.mp3}} "Let's go B."
+*{{AC|VyseLetsGoC1.mp3}}{{AC|VyseLetsGoC2.mp3}} "Let's go C."
+*{{AC|VyseLetsGoHere1.mp3}}{{AC|VyseLetsGoHere2.mp3}} "Let's go here."
+
+====Let's rush them (Minimap)====
+Only as Attackers during Buy Phase.
+*{{AC|VyseLetsRush1.mp3}}{{AC|VyseLetsRush2.mp3}} "Let's rush them."
+*{{AC|VyseLetsRushA1.mp3}}{{AC|VyseLetsRushA2.mp3}} "Let's rush A."
+*{{AC|VyseLetsRushB1.mp3}}{{AC|VyseLetsRushB2.mp3}} "Let's rush B."
+*{{AC|VyseLetsRushC1.mp3}}{{AC|VyseLetsRushC2.mp3}} "Let's rush C."
+
+====Let's Sneak Here====
+Only as Attackers during Buy Phase.
+*{{AC|VyseSneakA1.mp3}}{{AC|VyseSneakA2.mp3}} "Let's sneak A."
+*{{AC|VyseSneakB1.mp3}}{{AC|VyseSneakB2.mp3}} "Let's sneak B."
+*{{AC|VyseSneakC1.mp3}}{{AC|VyseSneakC2.mp3}} "Let's sneak C."
+*{{AC|VyseSneakMid1.mp3}}{{AC|VyseSneakMid2.mp3}} "Let's sneak Mid."
+
+====Let's Stack Here====
+Only as Defenders during Buy Phase.
+*{{AC|VyseStack1.mp3}}{{AC|VyseStack2.mp3}} "Let's stack up."
+*{{AC|VyseStackA1.mp3}}{{AC|VyseStackA2.mp3}} "Let's stack A."
+*{{AC|VyseStackB1.mp3}}{{AC|VyseStackB2.mp3}} "Let's stack B."
+*{{AC|VyseStackC1.mp3}}{{AC|VyseStackC2.mp3}} "Let's stack C."
+*{{AC|VyseStackMid1.mp3}}{{AC|VyseStackMid2.mp3}} "Let's stack Mid."
+
+====Someone Go Here====
+As Attackers during Round Phase, or as Defenders at anytime.
+*{{AC|VyseNeedSomeoneA1.mp3}}{{AC|VyseNeedSomeoneA2.mp3}} "Someone go A."
+*{{AC|VyseNeedSomeoneB1.mp3}}{{AC|VyseNeedSomeoneB2.mp3}} "Someone go B."
+*{{AC|VyseNeedSomeoneC1.mp3}}{{AC|VyseNeedSomeoneC2.mp3}} "Someone go C."
+*{{AC|VyseNeedSomeoneMid1.mp3}}{{AC|VyseNeedSomeoneMid2.mp3}} "Someone go Mid."
+
+====Spike's here====
+Only as Defenders during Round Phase.
+*{{AC|VyseSpikeA1.mp3}}{{AC|VyseSpikeA2.mp3}} "Spike's A."
+*{{AC|VyseSpikeB1.mp3}}{{AC|VyseSpikeB2.mp3}} "Spike's B."
+*{{AC|VyseSpikeC1.mp3}}{{AC|VyseSpikeC2.mp3}} "Spike's C."
+*{{AC|VyseSpikeMid1.mp3}}{{AC|VyseSpikeMid2.mp3}} "Spike's Mid."
+*{{AC|VyseSpikeSpottedASpawn1.mp3}}{{AC|VyseSpikeSpottedASpawn2.mp3}} "Spike spotted Attacker Spawn."
+*{{AC|VyseSpikeSpottedDSpawn1.mp3}}{{AC|VyseSpikeSpottedDSpawn2.mp3}} "Spike spotted Defender Spawn."
+
+==Pings==
+===General===
+*{{AC|VysePing1.mp3}}{{AC|VysePing2.mp3}} "There."
+
+===Caution===
+*{{AC|VysePingCaution1.mp3}}{{AC|VysePingCaution2.mp3}} "Caution here."
+
+===Need support===
+*{{AC|VyseHelp1.mp3}}{{AC|VyseHelp2.mp3}} "Need backup."
+
+===On my mark===
+*{{AC|VyseOnMyMark1.mp3}}{{AC|VyseOnMyMark2.mp3}} "On my mark."
+
+===Ping gun===
+*{{AC|VysePingGun1.mp3}}{{AC|VysePingGun2.mp3}} "Gun here."
+
+===Ping spike===
+*{{AC|VysePingSpike1.mp3}}{{AC|VysePingSpike2.mp3}} "Spike's here."
+
+===Ping for spike defuse===
+*{{AC|VyseDefuseSpike1.mp3}}{{AC|VyseDefuseSpike2.mp3}} "Defuse the spike!"
+
+===Ping for spike plant===
+*{{AC|VysePlantSpike1.mp3}}{{AC|VysePlantSpike2.mp3}} "Plant the spike!"
+
+===Watching===
+*{{AC|VyseWatching1.mp3}}{{AC|VyseWatching2.mp3}} "Watching here."
+
+==Other lines==
+===Ability unusable===
+====[[Status Effect#Suppress|Suppressed]] or attempting to use {{abi text|Shear}} on unviable surface====
+*{{AC|VyseCantUse1.mp3}}{{AC|VyseCantUse2.mp3}} "No good."
+*{{AC|VyseCantUse3.mp3}}{{AC|VyseCantUse4.mp3}} "Unable."
+
+====On cooldown====
+*{{AC|VyseOnCooldown1.mp3}}{{AC|VyseOnCooldown2.mp3}} "Not ready yet."
+
+====No charges====
+*{{AC|VyseNoCharges1.mp3}}{{AC|VyseNoCharges2.mp3}} "No charges."
+
+===Enemy spotted===
+*{{AC|VyseEnemyA1.mp3}}{{AC|VyseEnemyA2.mp3}} "Enemy spotted A."
+*{{AC|VyseEnemyB1.mp3}}{{AC|VyseEnemyB2.mp3}} "Enemy spotted B."
+*{{AC|VyseEnemyC1.mp3}}{{AC|VyseEnemyC2.mp3}} "Enemy spotted C."
+*{{AC|VyseEnemyASpawn1.mp3}}{{AC|VyseEnemyASpawn2.mp3}} "Enemy in Attacker Spawn."
+*{{AC|VyseEnemyDSpawn1.mp3}}{{AC|VyseEnemyDSpawn2.mp3}} "Enemy spotted Defender Spawn."
+*{{AC|VyseEnemyMid1.mp3}}{{AC|VyseEnemyMid2.mp3}} "Enemy spotted Mid."
+
+====Multiple====
+*{{AC|VyseEnemiesA1.mp3}}{{AC|VyseEnemiesA2.mp3}} "Multiple enemies A!"
+*{{AC|VyseEnemiesB1.mp3}}{{AC|VyseEnemiesB2.mp3}} "Multiple enemies B!"
+*{{AC|VyseEnemiesC1.mp3}}{{AC|VyseEnemiesC2.mp3}} "Multiple enemies C!"
+*{{AC|VyseEnemiesASpawn1.mp3}}{{AC|VyseEnemiesASpawn2.mp3}} "Multiple enemies Attacker Spawn!"
+*{{AC|VyseEnemiesDSpawn1.mp3}}{{AC|VyseEnemiesDSpawn2.mp3}} "Multiple enemies Defender Spawn!"
+*{{AC|VyseEnemiesMid1.mp3}}{{AC|VyseEnemiesMid2.mp3}} "Multiple enemies Mid!"
+
+===Reloading===
+*{{AC|VyseReloading1.mp3}}{{AC|VyseReloading2.mp3}} "Reloading."
+
+===Healed===
+*{{AC|VyseRelief1.mp3}}{{AC|VyseRelief2.mp3}}{{AC|VyseRelief3.mp3}} ''*Vyse sighs*''
+
+===Killed===
+*{{AC|VyseDeath1.mp3}}{{AC|VyseDeath2.mp3}}{{AC|VyseDeath3.mp3}} ''*Vyse groans*''
+
+===Resurrected via {{abi text|Resurrection}}===
+*{{AC|VyseResurrect.mp3}} "I'll die when I'm ready."
+
+===Wounded===
+====Light damage====
+*{{AC|VysePainLight1.mp3}}{{AC|VysePainLight2.mp3}}{{AC|VysePainLight3.mp3}} ''*Vyse groans*''
+
+====Medium damage====
+*{{AC|VysePainMedium1.mp3}}{{AC|VysePainMedium2.mp3}}{{AC|VysePainMedium3.mp3}} ''*Vyse groans*''
+
+====Heavy damage====
+*{{AC|VysePainHeavy1.mp3}}{{AC|VysePainHeavy2.mp3}}{{AC|VysePainHeavy3.mp3}} ''*Vyse groans*''
+
+====Fall damage====
+*{{AC|VysePainFall1.mp3}}{{AC|VysePainFall2.mp3}}{{AC|VysePainFall3.mp3}} ''*Vyse groans*''
+
+==Unused lines==
+===={{abi text|Arc Rose}} Afflict enemy====
+*{{AC|VyseArcRoseHit1.mp3}}{{AC|VyseArcRoseHit2.mp3}} "Good hit."
+
+==Removed lines==
+===Last Kill Enemy MVP===
+*{{AC|VyseLastKillMVP1.mp3}} "And you were doing so well."{{#tag:sup|-{{patchv|13.00}}}}
+
+===Be Quiet===
+*{{AC|VyseBeQuiet1.mp3}}{{AC|VyseBeQuiet2.mp3}} "Stay quiet."
+
+===Rotate===
+*{{AC|VyseRotating1.mp3}}{{AC|VyseRotating2.mp3}} "Rotating."
+
+===Let's Rotate===
+*{{AC|VyseLetsRotate1.mp3}}{{AC|VyseLetsRotate2.mp3}} "Let's rotate."
+
+==[[Range/Lore|The Range's lore assets]]==
+===[[Range/Lore/EP9|Episode 9]]===
+*{{AC|VoicemailBrimstone95.mp3}} "Huh. For some reason, your failing to answer your phone does not surprise me. Let's hope this isn't a precedent you continue to cement. I finished reading through VALORANT's interversal documentation and your research is... borderline amateur. Your findings on seismic fluctuations, isotope decay, even organic substrates are all objectively wrong. My team and I had a more comprehensive understanding on all these fields over a decade ago. Has there been no more work done? This is one the most intriguing fields of scientific research and all I see from this team... your team... is apathy and atrophy. I will spearhead this project. I will teach you all about my work... and you will thank me."
+*{{AC|VoicemailBrimstone97.mp3}} "[[Brimstone]], I told you my focus would remain fixed on the [[Scions]] until I was confident their threat was nullified. Today, I am confident. Their communication relays still sputter to life on occasion but it amounts to little more than background noise, the last groans of a hurt animal with a broken back. In short, I am satisfied. As agreed, I will now fully align my efforts with yours."
+*{{AC|VoicemailBrimstone103.mp3}} "My interversal probes have been sending me improbable readouts all day. I initially assumed I'd encountered a malfunction, but the readings spiked on each of the probes in sequence, like a wave rolling through a string of buoys. They're calibrated correctly and I've validated the software. They're working as intended. Something is affecting the Interverse, Brimstone, and these readouts seem similar to those my former team gathered the day that... Call me back. Something is happening, I need to know what."
+
+==Notes==
+:''To easily see which quotes were added corresponding to the patch, use your browser's Find function and type the patch number (e.g. v12.03).
+*{{ui|Removed}} 1 voice line removed from patch {{patchv|13.00}}, documented in the patch notes.
+*{{ui|Adjustment}} 1 voice line moved (marked ^) from patch {{patchv|13.00}}.
+*{{ui|Added}} 1 voice line added from patch {{patchv|12.03}}, documented in the patch notes.
+*Other voice lines removed were at an unknown timeframe.
+
+==Navigation==
+{{Navbox agents}}
+[[Category:Quotes]]

@@ -1,0 +1,790 @@
+{{TOCright}}
+This is a '''list of quotes by {{ai|Fade}}'''. Fade is voiced by 
+Selin Çuhadaroğlu in English. Necessary quotes translated are from Turkish to English. Fade has a total of {{PAGESINCATEGORY:Fade Quotes}} files of quotes including unused and removed lines, and excluding [[#The Range's lore assets|The Range's lore assets]]. 
+
+A downloadable folder containing all the audio files on this page can be found [https://drive.google.com/drive/folders/1VKO9YPxK6LWGVCOn5OR5-jELSzRQ2Ei5 here].
+
+==Agent Selected/Unlocked==
+*{{AC|FadePick.mp3}} "Everyone is afraid of something."
+
+==Abilities==
+==={{abi text|Prowler}}===
+====Cast====
+*{{AC|FadeProwlerCast1.mp3}}{{AC|FadeProwlerCast2.mp3}} "Bring them down!"
+
+====Afflicted enemy====
+*{{AC|FadeProwlerHit1.mp3}}{{AC|FadeProwlerHit4.mp3}} "We found one."
+*{{AC|FadeProwlerHit2.mp3}}{{AC|FadeProwlerHit3.mp3}} "They're blind with fear."
+
+====Kill afflicted enemy====
+*{{AC|FadeProwlerKill.mp3}} "Close your eyes!"
+
+==={{abi text|Seize}}===
+====Cast====
+*{{AC|FadeSeizeCast1.mp3}}{{AC|FadeSeizeCast2.mp3}} "Take hold."
+*{{AC|FadeSeizeCast3.mp3}}{{AC|FadeSeizeCast4.mp3}} "We'll catch them!"
+
+====Kill afflicted enemy====
+*{{AC|FadeSeizeKill1.mp3}} "No escape."
+*{{AC|FadeSeizeKill2.mp3}} "It was fate."
+
+==={{abi text|Haunt}}===
+====Cast====
+*{{AC|FadeHauntCast1.mp3}}{{AC|FadeHauntCast2.mp3}} "Where are you?"
+*{{AC|FadeHauntCast3.mp3}}{{AC|FadeHauntCast4.mp3}} "I'll find you!"
+
+====Marked====
+*{{AC|FadeHauntMarkOne1.mp3}}{{AC|FadeHauntMarkOne2.mp3}} "Marked one!"
+*{{AC|FadeHauntMarkTwo1.mp3}}{{AC|FadeHauntMarkTwo2.mp3}} "Marked two!"
+*{{AC|FadeHauntMarkThree1.mp3}}{{AC|FadeHauntMarkThree2.mp3}} "Marked three!"
+*{{AC|FadeHauntMarkFour1.mp3}}{{AC|FadeHauntMarkFour2.mp3}} "Marked four!"
+*{{AC|FadeHauntMarkFive1.mp3}}{{AC|FadeHauntMarkFive2.mp3}} "Marked five!"
+
+====Kill afflicted enemy====
+*{{AC|FadeHauntKill1.mp3}} "Trying to hide?"
+*{{AC|FadeHauntKill2.mp3}} "Gotcha!"
+*{{AC|FadeHauntKill3.mp3}} "Right where I thought!"
+
+==={{abi text|Nightfall}}===
+====Ally Cast====
+*{{AC|FadeUltAllyCast.mp3}} "Nightmare, take them!"
+
+====Enemy Cast====
+*{{AC|FadeUltEnemyCast.mp3}} "Face your fear!"
+
+====Kill afflicted enemy====
+*{{AC|FadeUltKill1.mp3}} "I'm done with you"
+*{{AC|FadeUltKill2.mp3}} "Inevitable."
+*{{AC|FadeUltKill3.mp3}} "Contract complete."
+*{{AC|FadeUltKill4.mp3}} "Dream no more."
+
+===[[Deafen]] and [[Nearsight]] whispers ([[Prowler]], [[Seize]] and [[Nightfall]])===
+*{{AC|FadeDeafen1.mp3}} "Like a fly in a web."
+*{{AC|FadeDeafen2.mp3}} "Who are you? What do you want?"
+*{{AC|FadeDeafen3.mp3}} "I'm in your head."
+*{{AC|FadeDeafen4.mp3}} "The nightmare has you."
+*{{AC|FadeDeafen5.mp3}} "Give him back to me."
+*{{AC|FadeDeafen6.mp3}} "Look into the dark."
+
+==Buy Phase==
+===Match Start===
+*{{AC|FadeMatchStart1.mp3}} "I paid a heavy price to commune with Nightmare. Don't waste it."
+*{{AC|FadeMatchStart2.mp3}} "It doesn't matter where they hide, I'll find them. I always find them."
+*{{AC|FadeMatchStart3.mp3}} "Hop! Eyes open, we have a job to do."
+**(''Hop'': Hey)
+*{{AC|FadeMatchStart4.mp3}} "Another mission? Good. Anything to keep me awake."
+*{{AC|FadeMatchStart5.mp3}} "There's truth in every dream, if you dig deep enough. Let's find out what they buried."
+*{{AC|FadeMatchStart6.mp3}} "Don't worry everyone, I won't tell them what scares you. Promise."
+
+====Attacking====
+*{{AC|FadeMatchStartAttack1.mp3}} "Let's cut them down then plant the spike and sweep the stragglers into the trash!"
+*{{AC|FadeMatchStartAttack2.mp3}} "We find what's hidden, we take it, then we leave."
+
+====Defending====
+*{{AC|FadeMatchStartDefense1.mp3}} "They think they can steal from us? Hadi lan, this is funny."
+**(''Hadi lan'': Come the hell on)
+*{{AC|FadeMatchStartDefense2.mp3}} "How many times must we turn them away?! I'm getting aggravated."
+
+====[[Fracture]]====
+*{{AC|FadeMatchStartFracture.mp3}} "Many people died here. Their fear still lingers."
+
+===Round Start===
+*{{AC|FadeRoundStart1.mp3}} "One dream ends, another begins."
+*{{AC|FadeRoundStart2.mp3}} "Hesitation is for amateurs, let's go!"
+*{{AC|FadeRoundStart3.mp3}} "Pry open their mind, find the weakness."
+*{{AC|FadeRoundStart4.mp3}} "Their teeth will chatter in the cold and dark."
+*{{AC|FadeRoundStart5.mp3}} "Make their fear your weapon. Or use a gun, whichever."
+*{{AC|FadeRoundStart6.mp3}} "Boş yapmayın, keep fighting. Rest is overrated."
+**(''Boş yapmayın'': Stop messing around)
+*{{AC|FadeRoundStart7.mp3}} "They have courage, but no one is immune to fear."
+*{{AC|FadeRoundStart8.mp3}} "Dreams are a funny thing. One little twist, and it all turns dark."
+*{{AC|FadeRoundStart9.mp3}} "Whatever happens, sakin, don't panic. Trembling is bad for your aim."
+**(''Sakin'': Chill)
+*{{AC|FadeRoundStart10.mp3}} "Hadi, again. Their fear is a track, and the track is fresh."
+**(''Hadi'': Come on)
+
+====Last round won====
+*{{AC|FadeRoundWon1.mp3}} "Nice work lan. All of you."
+**(''Nice work lan'': Nice bloody work)
+*{{AC|FadeRoundWon2.mp3}} "Keep hitting them like that and this job is done."
+*{{AC|FadeRoundWon3.mp3}} "Their heart rate just went up."
+*{{AC|FadeRoundWon4.mp3}} "Savor the good dreams while you can."
+
+=====While in the lead=====
+*{{AC|FadeLead1.mp3}} "We could finish this with our eyes closed! But I wouldn't recommend it."
+*{{AC|FadeLead2.mp3}} "Güzel, we are doing very well."
+**(''Güzel'': Nice)
+*{{AC|FadeLead3.mp3}} "You don't need nightmare powers to see them shaking."
+*{{AC|FadeLead4.mp3}} "Look at them, pale and sweating. All good signs."
+
+=====Making a comeback=====
+*{{AC|FadeComeback1.mp3}} "You see? There's still plenty of fun to be had."
+*{{AC|FadeComeback2.mp3}} "The nightmare turns in our favor."
+*{{AC|FadeComeback3.mp3}} "This fight isn't over until we are dead!"
+
+===Last round in the half===
+====Attacking====
+*{{AC|FadeLastRound1.mp3}} "Buy what you need, otherwise we're going to look very stupid."
+
+====Defending====
+*{{AC|FadeLastRound2.mp3}} "Spend everything. Hoarding money is useless now."
+
+===Match Point===
+*{{AC|FadeMatchPoint1.mp3}} "This is it! Their courage falters!"
+*{{AC|FadeMatchPoint2.mp3}} "Their spirit is cracking! Now shatter it!"
+
+===Shop===
+====Let's Buy====
+*{{AC|FadeBuying1.mp3}}{{AC|FadeBuying2.mp3}} "I will buy."
+
+====Let's Save====
+*{{AC|FadeSaving1.mp3}}{{AC|FadeSaving2.mp3}} "I will save."
+
+====I Have Extra Creds====
+*{{AC|FadeOffer1.mp3}}{{AC|FadeOffer2.mp3}} "Who needs a weapon?"
+
+====Requested====
+*{{AC|FadeRequest1.mp3}}{{AC|FadeRequest2.mp3}} "Anyone feeling generous?"
+
+===Barrier Down===
+*{{AC|FadeBarrierDown1.mp3}} "Push them back!"
+*{{AC|FadeBarrierDown2.mp3}} "They are terrified."
+*{{AC|FadeBarrierDown3.mp3}} "Shit, they're good."
+*{{AC|FadeBarrierDown4.mp3}} "Fight harder!"
+*{{AC|FadeBarrierDown5.mp3}} "Do not relent!"
+*{{AC|FadeBarrierDown6.mp3}} "Keep them on the run."
+*{{AC|FadeBarrierDown7.mp3}} "Never give in."
+*{{AC|FadeBarrierDown8.mp3}} "Their line can't hold forever."
+*{{AC|FadeBarrierDown9.mp3}} "Give me a challenge, ya?"
+*{{AC|FadeBarrierDown10.mp3}} "Stay awake! They strike again."
+*{{AC|FadeBarrierDown11.mp3}} "Make them fight for it."
+*{{AC|FadeBarrierDown12.mp3}} "They will break against me."
+*{{AC|FadeBarrierDown13.mp3}} "Stay focused."
+*{{AC|FadeBarrierDown14.mp3}} "They are mine."
+*{{AC|FadeBarrierDown15.mp3}} "Time to work."
+*{{AC|FadeBarrierDown16.mp3}} "Where are they?"
+*{{AC|FadeBarrierDown17.mp3}} "Their fears betray them."
+
+==Spike==
+===Forgotten in spawn===
+*{{AC|FadeForgotSpike1.mp3}} "Yok ebesinin nikahı, we forgot the spike."
+**(''Yok ebesinin nikahı'': No midwife's wedding, meaning "that's unbelievable")
+*{{AC|FadeForgotSpike2.mp3}} "Hey, isn't the spike important?"
+
+===Ally carrier down===
+*{{AC|FadeSpikeDown1.mp3}}{{AC|FadeSpikeDown2.mp3}} "The spike is down."
+
+===Dropped===
+*{{AC|FadeSpikeDropped1.mp3}}{{AC|FadeSpikeDropped2.mp3}} "Dropping spike."
+
+===Retrieved===
+*{{AC|FadeSpikePickedUp1.mp3}}{{AC|FadeSpikePickedUp2.mp3}} "I have the spike."
+
+===Planted===
+*{{AC|FadeSpikePlanted1.mp3}}{{AC|FadeSpikePlanted2.mp3}} "Spike planted."
+
+===Spotted===
+*{{AC|FadeSpikeSpottedA1.mp3}}{{AC|FadeSpikeSpottedA2.mp3}} "Spike A."
+*{{AC|FadeSpikeSpottedB1.mp3}}{{AC|FadeSpikeSpottedB2.mp3}} "Spike B."
+*{{AC|FadeSpikeSpottedC1.mp3}}{{AC|FadeSpikeSpottedC2.mp3}} "Spike C."
+*{{AC|FadeSpikeSpottedASpawn1.mp3}}{{AC|FadeSpikeSpottedASpawn2.mp3}} "Spike Attacker Spawn."
+*{{AC|FadeSpikeSpottedDSpawn1.mp3}}{{AC|FadeSpikeSpottedDSpawn2.mp3}} "Spike Defender Spawn."
+*{{AC|FadeSpikeSpottedMid1.mp3}}{{AC|FadeSpikeSpottedMid2.mp3}} "Spike Mid."
+
+===Defuse resumed===
+*{{AC|FadeDefuseResumed1.mp3}} "No more distractions."
+*{{AC|FadeDefuseResumed2.mp3}} "Okay, where was I?"
+
+===Defuse time running out===
+*{{AC|FadeDefuseLate1.mp3}} "You have got to be kidding me!"
+*{{AC|FadeDefuseLate2.mp3}} "Come on, come on! Please."
+
+===Defuse successful===
+*{{AC|FadeDefuseComplete1.mp3}} "Push a button, save the day, easy."
+
+==Kill==
+*{{AC|FadeKill1.mp3}} "Sleep!"
+*{{AC|FadeKill2.mp3}} "Ah be abi."
+**(Oh dude.)
+*{{AC|FadeKill3.mp3}} "Enemy down."
+*{{AC|FadeKill4.mp3}} "Goodbye."
+*{{AC|FadeKill5.mp3}} "Typical."
+*{{AC|FadeKill6.mp3}} "Geber."
+**(Die.)
+*{{AC|FadeKill7.mp3}} "Hush."
+*{{AC|FadeKill8.mp3}} "İyi geceler."
+**(Goodnight.)
+*{{AC|FadeKill9.mp3}} "Night-night."
+*{{AC|FadeKill10.mp3}} "Bam!"
+
+===Headshot===
+*{{AC|FadeHeadshot1.mp3}} "No more dreams."
+*{{AC|FadeHeadshot2.mp3}} "Yat aşağı."
+**(Lie down.)
+*{{AC|FadeHeadshot3.mp3}} "Rezalet!"
+**(Disgrace!)
+*{{AC|FadeHeadshot4.mp3}} "Removed."
+*{{AC|FadeHeadshot5.mp3}} "Try again."
+*{{AC|FadeHeadshot6.mp3}} "Satisfying."
+
+===[[Melee]]===
+*{{AC|FadeMeleeKill1.mp3}} "Quietly now."
+*{{AC|FadeMeleeKill2.mp3}} "Yikes."
+
+===Triple===
+*{{AC|FadeTriple1.mp3}}{{AC|FadeTriple2.mp3}} "That makes three."
+
+===Quadra===
+*{{AC|FadeQuadra1.mp3}}{{AC|FadeQuadra2.mp3}} "Four down!"
+
+===One kill remaining (game-mode specific)===
+*{{AC|FadeOneKillLeft1.mp3}}{{AC|FadeOneKillLeft2.mp3}} "Alright, one more."
+
+==Round End==
+===Ace===
+*{{AC|FadeAce1.mp3}} "Don't worry, I did all the work!"
+*{{AC|FadeAce2.mp3}} "Your dreams are dust!"
+
+===Clutch===
+*{{AC|FadeClutch1.mp3}} "Did they really think they could scare me?"
+*{{AC|FadeClutch2.mp3}} "Not even sweating."
+*{{AC|FadeClutch3.mp3}} "You can't kill a nightmare!"
+
+===Flawless or Team Ace===
+*{{AC|FadeFlawless1.mp3}} "Now this pleases me."
+*{{AC|FadeFlawless2.mp3}} "Nothing's perfect, but, that was perfection."
+
+===Thrifty===
+*{{AC|FadeThrifty1.mp3}} "Next time we'll use wooden sticks! Make it fair."
+
+===Last Kill===
+*{{AC|FadeLastKill1.mp3}} "Did I get inside your head?"
+*{{AC|FadeLastKill2.mp3}} "You should have run."
+*{{AC|FadeLastKill3.mp3}} "I knew your every move."
+*{{AC|FadeLastKill4.mp3}} "You were so close."
+*{{AC|FadeLastKill5.mp3}} "Sweet dreams, asshole!"
+
+====Enemy MVP====
+There are no voice lines at the moment in this section for this Agent.
+
+====Using [[Melee]]====
+*{{AC|FadeLastKillMelee1.mp3}} "And I didn't even need a gun."
+
+===Low HP===
+*{{AC|FadeLowHP1.mp3}} "That's going to leave a scar."
+
+==Match End==
+===Match Win===
+*{{AC|FadeMatchWin1.mp3}} "The nightmare is over, for them at least."
+*{{AC|FadeMatchWin2.mp3}} "Okay, time for coffee. My treat."
+*{{AC|FadeMatchWin3.mp3}} "We won, they lost. This is the way of things."
+
+===Runner-up (game-mode specific)===
+*{{AC|FadeRunnerUp1.mp3}} "Better than being at the bottom."
+*{{AC|FadeRunnerUp2.mp3}} "If they see me again, I'll bury them all."
+
+==Agent-specific interactions==
+{| class="wikitable sortable"
+!To Agent
+!Scenario
+!width=40%; class=unsortable|Ally
+!width=40%; class=unsortable|Enemy
+|-
+|{{ai|Astra}}
+|Commend
+|{{AC|FadeAllyAstraCommend.mp3}} "When in doubt, let the astral guardian do the job."
+|
+|-
+|{{ai|Breach}}
+|Barrier Down
+|{{AC|FadeAllyBreachBarrierDown.mp3}} "Breach! Clear a path."
+|
+|-
+|{{ai|Brimstone}}
+|Match Start
+|{{AC|FadeAllyBrimstoneMatchStart.mp3}} "I choose to trust you, Brimstone. Show me I made the right choice."
+|
+|-
+|rowspan=4|{{ai|Chamber}}
+|Round Start
+|{{AC|FadeAllyChamberRoundStart.mp3}} "Chamber, I mark them, you shoot them. It's a good arrangement."
+|
+|-
+|Commend
+|{{AC|FadeAllyChamberCommend.mp3}} "So Chamber's more than just a nice suit, well done."
+|{{AC|FadeEnemyChamberRoundStart.mp3}} "Their Chamber is dangerous from afar. But up close, he bleeds like the rest of us."
+|-
+|Barrier Down
+|
+|{{AC|FadeEnemyChamberBarrierDown.mp3}} "I'm gunning for Chamber."
+|-
+|Kill
+|
+|{{AC|FadeEnemyChamberKill.mp3}} "Missed me."
+|-
+|{{Ai|Clove}}
+|Chat
+|
+:[[File:Fade icon.png|20px|link=Fade]] {{AC|FadeAllyCloveChat.mp3}} "So, Clove, how exactly did you, you know, become immortal?"
+:[[File:Clove icon.png|20px|link=Clove]] {{AC|CloveAllyFadeChat.mp3}} "Well, it all started when I was born and then uh- you know what, I'll just tell you later."
+|
+|-
+|rowspan=4|{{Ai|Cypher}}
+|Chat
+|
+:[[File:Cypher icon.png|20px|link=Cypher]] {{AC|CypherAllyFadeChat.mp3}} "Fade, of all people, you've never asked to see my face."
+:[[File:Fade icon.png|20px|link=Fade]] {{AC|FadeAllyCypherChat.mp3}} "There are more valuable secrets than the look of someone. Will you share those?"
+|
+|-
+|Match Start
+|
+|{{AC|FadeEnemyCypherMatchStart.mp3}} "Their Cypher has a fear filled with regret. Voices calling for help, and he cannot answer."
+|-
+|Round Start
+|{{AC|FadeAllyCypherRoundStart.mp3}} "You have such a way with information, Cypher. After this, let's trade notes."
+|
+|-
+|Commend
+|{{AC|FadeAllyCypherCommend.mp3}} "Helal, Cypher. There is no hiding from you, is there?"
+*(''Helal'': Nice work)
+|
+|-
+|rowspan=3|{{Ai|Fade}}
+|Barrier Down
+|
+|{{AC|FadeEnemyFadeBarrierDown.mp3}} "Leave the dream seer to me."
+|-
+|Kill
+|
+|{{AC|FadeEnemyFadeKill.mp3}} "Silence, dream seer!"
+|-
+|Last Kill
+|
+|{{AC|FadeEnemyFadeLastKill.mp3}} "Sleep, my sister. You've seen too much."
+|-
+|rowspan=3|{{ai|KAYO}}
+|Match Start
+|{{AC|FadeAllyKAYOMatchStart.mp3}} "KAY/O, a radiant's nightmare. So glad we are very good friends."
+|
+|-
+|Round Start
+|
+|{{AC|FadeEnemyKAYORoundStart.mp3}} "Their KAY/O is tough. A bullet is tougher."
+|-
+|Commend
+|{{AC|FadeAllyKAYOCommend.mp3}} "I admit, fighting beside a killer robot is a plus."
+|
+|-
+|rowspan=2|{{ai|Neon}}
+|Commend
+|{{AC|FadeAllyNeonCommend.mp3}} "Neon, nice work."
+|
+|-
+|Kill
+|
+|{{AC|FadeEnemyNeonKill.mp3}} "Neon stopped."
+|-
+|rowspan=6|{{ai|Omen}}
+|Chat
+|
+:[[File:Fade icon.png|20px|link=Fade]] {{AC|FadeAllyOmenChat.mp3}} "Omen, I wonder, how quickly can we unravel their will to fight?"
+:[[File:Omen icon.png|20px|link=Omen]] {{AC|OmenAllyFadeChat.mp3}} "With you and I in concert, immediately."
+|
+|-
+|Match Start
+|{{AC|FadeAllyOmenMatchStart.mp3}} "Omen, with me. Nightmare thrives in the dark."
+|{{AC|FadeEnemyOmenMatchStart.mp3}} "They brought along Omen. His fear is a sorrowful kind. Like a broken doll lost in the attic."
+|-
+|Commend
+|{{AC|FadeAllyOmenCommend.mp3}} "Omen, that gave me the chills, abi. The good kind."
+*(''Abi'': Brother)
+|
+|-
+|Barrier Down
+|{{AC|FadeAllyOmenBarrierDown.mp3}} "Give them darkness, Omen."
+|
+|-
+|Kill
+|
+|{{AC|FadeEnemyOmenKill.mp3}} "Omen killed."
+|-
+|Last Kill
+|
+|{{AC|FadeEnemyOmenLastKill.mp3}} "Now your nightmare is over."
+|-
+|rowspan=2|{{ai|Phoenix}}
+|Round Start
+|
+|{{AC|FadeEnemyPhoenixRoundStart.mp3}} "Their Phoenix shines on the outside, but within I feel his doubt."
+|-
+|Last Kill
+|
+|{{AC|FadeEnemyPhoenixLastKill.mp3}} "Talking a big game doesn't mean much if you lose."
+|-
+|{{ai|Raze}}
+|Round Start
+|{{AC|FadeAllyRazeRoundStart.mp3}} "Raze, you do not fear the chaos you inflict. I'm impressed."
+|
+|-
+|{{ai|Reyna}}
+|Round Start
+|{{AC|FadeAllyReynaRoundStart.mp3}} "Reyna, after you take from the fallen, what remains? It makes me wonder."
+|{{AC|FadeEnemyReynaRoundStart.mp3}} "Hmph, that Reyna is not as fearless as she appears."
+|-
+|{{ai|Skye}}
+|Barrier Down
+|
+|{{AC|FadeEnemySkyeBarrierDown.mp3}} "I'll hunt down Skye."
+|-
+|rowspan=3|{{ai|Sova}}
+|Match Start
+|{{AC|FadeAllySovaMatchStart.mp3}} "Sova, today, we hunt."
+|
+|-
+|Barrier Down
+|{{AC|FadeAllySovaBarrierDown.mp3}} "Let's run them down, Sova."
+|
+|-
+|Kill
+|
+|{{AC|FadeEnemySovaKill.mp3}} "So much for recon."
+|-
+|rowspan=6|{{ai|Viper}}
+|Match Start
+|{{AC|FadeAllyViperMatchStart.mp3}} "Together, Viper. Fear and toxin is an effective combination."
+|
+|-
+|Round Start
+|{{AC|FadeAllyViperRoundStart.mp3}} "We must make the enemy afraid. Look at Viper, yani. Scary mask, scary voice. She understands."
+*(''Yani'': Namely)
+|{{AC|FadeEnemyViperRoundStart.mp3}} "That Viper believes she is in control. She is not."
+|-
+|Commend
+|{{AC|FadeAllyViperCommend.mp3}} "Viper, oy! Holy shit!"
+|
+|-
+|Barrier Down
+|{{AC|FadeAllyViperBarrierDown.mp3}} "Viper, fight with me."
+|
+|-
+|Kill
+|
+|{{AC|FadeEnemyViperKill.mp3}} "Viper down."
+|-
+|Last Kill
+|
+|{{AC|FadeEnemyViperLastKill.mp3}} "Goodbye Viper, well fought."
+|-
+|{{ai|Yoru}}
+|Barrier Down
+|
+|{{AC|FadeEnemyYoruBarrierDown.mp3}} "Yoru can't hide from me."
+|}
+
+==Radio Commands==
+===Menu Index only===
+====Caution here====
+*{{AC|FadeCaution1.mp3}}{{AC|FadeCaution2.mp3}} "Enemy close."
+
+====Going Area====
+*{{AC|FadeGoingA1.mp3}}{{AC|FadeGoingA2.mp3}} "Going A."
+*{{AC|FadeGoingB1.mp3}}{{AC|FadeGoingB2.mp3}} "Going B."
+*{{AC|FadeGoingC1.mp3}}{{AC|FadeGoingC2.mp3}} "Going C."
+*{{AC|FadeGoingMid1.mp3}}{{AC|FadeGoingMid2.mp3}} "Going Mid."
+
+====Need Support====
+*{{AC|FadeHelp1.mp3}} "A little help?"
+*{{AC|FadeHelp2.mp3}} "Little help?!"
+
+====On my way====
+*{{AC|FadeOnMyWay1.mp3}}{{AC|FadeOnMyWay2.mp3}} "On my way."
+
+====Play for picks====
+*{{AC|FadePlayForPicks1.mp3}}{{AC|FadePlayForPicks2.mp3}} "Play for picks."
+
+===Wheel Index only===
+====Encourage====
+*{{AC|FadeEncouraging1.mp3}}{{AC|FadeEncouraging2.mp3}}{{AC|FadeEncouraging3.mp3}} "We've got this."
+
+====I'll lurk====
+Only as Attackers during Buy Phase.
+*{{AC|FadeLurking1.mp3}}{{AC|FadeLurking2.mp3}} "I'm lurking."
+
+====I'll push out====
+Only as Defenders during Buy Phase.
+*{{AC|FadePushingOut1.mp3}}{{AC|FadePushingOut2.mp3}} "I'm pushing out."
+
+====I'm holding position====
+Only as Defenders during Buy Phase.
+*{{AC|FadeHoldingPosition1.mp3}}{{AC|FadeHoldingPosition2.mp3}} "Holding position."
+
+====Let's Attack====
+Only during Round Phase.
+*{{AC|FadeLetsAttack1.mp3}}{{AC|FadeLetsAttack2.mp3}} "Let's attack."
+
+====Let's hold positions====
+Only as Defenders during Buy Phase.
+*{{AC|FadeHoldPositions1.mp3}}{{AC|FadeHoldPositions2.mp3}} "Let's hold positions."
+
+====Let's play slow====
+Only as Attackers at anytime.
+*{{AC|FadePlaySlow1.mp3}}{{AC|FadePlaySlow2.mp3}} "Let's play slow."
+
+====Let's push out====
+Only as Defenders during Buy Phase.
+*{{AC|FadePushOut1.mp3}}{{AC|FadePushOut2.mp3}} "Let's push out."
+
+====Let's spread out====
+*{{AC|FadeSpreadOut1.mp3}}{{AC|FadeSpreadOut2.mp3}} "Let's spread out."
+
+====Nice Try====
+*{{AC|FadeNiceTry1.mp3}}{{AC|FadeNiceTry2.mp3}}{{AC|FadeNiceTry3.mp3}} "Nice try."
+
+====Stick together====
+*{{AC|FadeStickTogether1.mp3}}{{AC|FadeStickTogether2.mp3}} "Stick together."
+
+===Menu and Wheel Index===
+====Commend====
+*{{AC|FadeCommend1.mp3}}{{AC|FadeCommend2.mp3}}{{AC|FadeCommend3.mp3}} "Not bad."
+
+====Fall Back====
+Menu Index at anytime, or Wheel Index only during Round Phase.
+*{{AC|FadeFallBack1.mp3}}{{AC|FadeFallBack2.mp3}} "Fall back."
+
+====Hello====
+*{{AC|FadeHello1.mp3}}{{AC|FadeHello2.mp3}}{{AC|FadeHello3.mp3}} "Selam."
+
+====I'll take point====
+Wheel Index only as Attackers during Buy Phase, or Menu Index at anytime regardless of Attackers or Defenders.
+*{{AC|FadeTakePoint1.mp3}}{{AC|FadeTakePoint2.mp3}} "Taking point."
+
+====Let's rush them (Radio Command)====
+*{{AC|FadeRush1.mp3}}{{AC|FadeRush2.mp3}} "Rush them."
+
+====Need healing====
+*{{AC|FadeHealing1.mp3}}{{AC|FadeHealing2.mp3}} "Healing please."
+
+====No====
+*{{AC|FadeNo1.mp3}}{{AC|FadeNo2.mp3}}{{AC|FadeNo3.mp3}} "No."
+
+====Sorry====
+*{{AC|FadeSorry1.mp3}}{{AC|FadeSorry2.mp3}}{{AC|FadeSorry3.mp3}} "Pardon."
+
+====Thanks====
+*{{AC|FadeThanks1.mp3}}{{AC|FadeThanks2.mp3}}{{AC|FadeThanks3.mp3}} "Teşekkürler, thank you!"
+
+====Ultimate Status====
+*{{AC|FadeUltDown1.mp3}}{{AC|FadeUltDown2.mp3}} "My ult's not ready."
+*{{AC|FadeUltAlmost1.mp3}}{{AC|FadeUltAlmost2.mp3}} "My ult is almost ready."
+*{{AC|FadeUltReady1.mp3}}{{AC|FadeUltReady2.mp3}} "My ult is ready."
+
+====Yes====
+*{{AC|FadeYes1.mp3}}{{AC|FadeYes2.mp3}}{{AC|FadeYes3.mp3}} "Yes."
+
+===Wheel Index requiring Minimap===
+For the following voicelines, the minimap must be open and then open ping wheel and activate strategy.
+====Faking====
+Only as Attackers during Buy Phase.
+*{{AC|FadeFaking1.mp3}}{{AC|FadeFaking2.mp3}} "I'm faking."
+*{{AC|FadeFakingA1.mp3}}{{AC|FadeFakingA2.mp3}} "I'm faking A."
+*{{AC|FadeFakingB1.mp3}}{{AC|FadeFakingB2.mp3}} "I'm faking B."
+*{{AC|FadeFakingC1.mp3}}{{AC|FadeFakingC2.mp3}} "I'm faking C."
+
+====I'm Going Here====
+As Defenders during Buy Phase, or as Attackers at anytime.
+*{{AC|FadeGoingA1.mp3}}{{AC|FadeGoingA2.mp3}} "Going A."
+*{{AC|FadeGoingB1.mp3}}{{AC|FadeGoingB2.mp3}} "Going B."
+*{{AC|FadeGoingC1.mp3}}{{AC|FadeGoingC2.mp3}} "Going C."
+*{{AC|FadeGoingMid1.mp3}}{{AC|FadeGoingMid2.mp3}} "Going Mid."
+
+====Let's Go Here====
+Only as Attackers during Buy Phase.
+*{{AC|FadeLetsGoA1.mp3}}{{AC|FadeLetsGoA2.mp3}} "Let's go A."
+*{{AC|FadeLetsGoB1.mp3}}{{AC|FadeLetsGoB2.mp3}} "Let's go B."
+*{{AC|FadeLetsGoC1.mp3}}{{AC|FadeLetsGoC2.mp3}} "Let's go C."
+*{{AC|FadeLetsGoHere1.mp3}}{{AC|FadeLetsGoHere2.mp3}} "Let's go here."
+
+====Let's rush them (Minimap)====
+Only as Attackers during Buy Phase.
+*{{AC|FadeLetsRush1.mp3}}{{AC|FadeLetsRush2.mp3}} "Let's rush them."
+*{{AC|FadeLetsRushA1.mp3}}{{AC|FadeLetsRushA2.mp3}} "Let's rush A."
+*{{AC|FadeLetsRushB1.mp3}}{{AC|FadeLetsRushB2.mp3}} "Let's rush B."
+*{{AC|FadeLetsRushC1.mp3}}{{AC|FadeLetsRushC2.mp3}} "Let's rush C."
+
+====Let's Sneak Here====
+Only as Attackers during Buy Phase.
+*{{AC|FadeSneakA1.mp3}}{{AC|FadeSneakA2.mp3}} "Let's sneak A."
+*{{AC|FadeSneakB1.mp3}}{{AC|FadeSneakB2.mp3}} "Let's sneak B."
+*{{AC|FadeSneakC1.mp3}}{{AC|FadeSneakC2.mp3}} "Let's sneak C."
+*{{AC|FadeSneakMid1.mp3}}{{AC|FadeSneakMid2.mp3}} "Let's sneak Mid."
+
+====Let's Stack Here====
+Only as Defenders during Buy Phase.
+*{{AC|FadeStack1.mp3}}{{AC|FadeStack2.mp3}} "Let's stack up."
+*{{AC|FadeStackA1.mp3}}{{AC|FadeStackA2.mp3}} "Let's stack A."
+*{{AC|FadeStackB1.mp3}}{{AC|FadeStackB2.mp3}} "Let's stack B."
+*{{AC|FadeStackC1.mp3}}{{AC|FadeStackC2.mp3}} "Let's stack C."
+*{{AC|FadeStackMid1.mp3}}{{AC|FadeStackMid2.mp3}} "Let's stack Mid."
+
+====Someone Go Here====
+As Attackers during Round Phase, or as Defenders at anytime.
+*{{AC|FadeNeedSomeoneA1.mp3}}{{AC|FadeNeedSomeoneA2.mp3}} "Someone go A."
+*{{AC|FadeNeedSomeoneB1.mp3}}{{AC|FadeNeedSomeoneB2.mp3}} "Someone go B."
+*{{AC|FadeNeedSomeoneC1.mp3}}{{AC|FadeNeedSomeoneC2.mp3}} "Someone go C."
+*{{AC|FadeNeedSomeoneMid1.mp3}}{{AC|FadeNeedSomeoneMid2.mp3}} "Someone go Mid."
+
+====Spike's here====
+Only as Defenders during Round Phase.
+*{{AC|FadeSpikeA1.mp3}}{{AC|FadeSpikeA2.mp3}} "Spike's A."
+*{{AC|FadeSpikeB1.mp3}}{{AC|FadeSpikeB2.mp3}} "Spike's B."
+*{{AC|FadeSpikeC1.mp3}}{{AC|FadeSpikeC2.mp3}} "Spike's C."
+*{{AC|FadeSpikeMid1.mp3}}{{AC|FadeSpikeMid2.mp3}} "Spike's Mid."
+*{{AC|FadeSpikeSpottedASpawn1.mp3}}{{AC|FadeSpikeSpottedASpawn2.mp3}} "Spike Attacker Spawn."
+*{{AC|FadeSpikeSpottedDSpawn1.mp3}}{{AC|FadeSpikeSpottedDSpawn2.mp3}} "Spike Defender Spawn."
+
+==Pings==
+===General===
+*{{AC|FadePing1.mp3}}{{AC|FadePing2.mp3}} "There."
+
+===Caution===
+*{{AC|FadePingCaution1.mp3}}{{AC|FadePingCaution2.mp3}} "Careful here."
+
+===Need support===
+*{{AC|FadeHelp1.mp3}} "A little help?!"
+*{{AC|FadeHelp2.mp3}} "Little help?!"
+
+===On my mark===
+*{{AC|FadeOnMyMark1.mp3}}{{AC|FadeOnMyMark2.mp3}} "On my mark."
+
+===Ping gun===
+*{{AC|FadePingGun1.mp3}}{{AC|FadePingGun2.mp3}} "Weapon here."
+
+===Ping spike===
+*{{AC|FadePingSpike1.mp3}}{{AC|FadePingSpike2.mp3}} "The spike is here."
+
+===Ping for spike defuse===
+*{{AC|FadeDefuseSpike1.mp3}}{{AC|FadeDefuseSpike2.mp3}} "Defuse the spike!"
+
+===Ping for spike plant===
+*{{AC|FadePlantSpike1.mp3}}{{AC|FadePlantSpike2.mp3}} "Plant the spike!"
+
+===Watching===
+*{{AC|FadeWatching1.mp3}}{{AC|FadeWatching2.mp3}} "Watching here."
+
+==Other lines==
+===Ability unusable===
+====[[Status Effect#Suppress|Suppressed]]====
+*{{AC|FadeCantUse1.mp3}}{{AC|FadeCantUse2.mp3}} "Can't use that."
+
+====On cooldown====
+*{{AC|FadeOnCooldown1.mp3}}{{AC|FadeOnCooldown2.mp3}} "Still waiting."
+
+====No charges====
+*{{AC|FadeNoCharges1.mp3}}{{AC|FadeNoCharges2.mp3}} "No charges."
+
+===Enemy spotted===
+*{{AC|FadeEnemyA1.mp3}}{{AC|FadeEnemyA2.mp3}} "Enemy A."
+*{{AC|FadeEnemyB1.mp3}}{{AC|FadeEnemyB2.mp3}} "Enemy B."
+*{{AC|FadeEnemyC1.mp3}}{{AC|FadeEnemyC2.mp3}} "Enemy C."
+*{{AC|FadeEnemyASpawn1.mp3}}{{AC|FadeEnemyASpawn2.mp3}} "Enemy Attacker Spawn."
+*{{AC|FadeEnemyDSpawn1.mp3}}{{AC|FadeEnemyDSpawn2.mp3}}  "Enemy Defender Spawn."
+*{{AC|FadeEnemyMid1.mp3}}{{AC|FadeEnemyMid2.mp3}} "Enemy Mid."
+
+====Multiple====
+*{{AC|FadeEnemiesA1.mp3}}{{AC|FadeEnemiesA2.mp3}} "Multiple enemies A!"
+*{{AC|FadeEnemiesB1.mp3}}{{AC|FadeEnemiesB2.mp3}} "Multiple enemies B!"
+*{{AC|FadeEnemiesC1.mp3}}{{AC|FadeEnemiesC2.mp3}} "Multiple enemies C!"
+{{AC|FadeEnemiesASpawn1.mp3}}{{AC|FadeEnemiesASpawn2.mp3}} "Enemies Attacker Spawn!"
+*{{AC|FadeEnemiesDSpawn1.mp3}}{{AC|FadeEnemiesDSpawn2.mp3}} "Enemies Defender Spawn!"
+*{{AC|FadeEnemiesMid1.mp3}}{{AC|FadeEnemiesMid2.mp3}} "Multiple enemies Mid!"
+
+===Reloading===
+*{{AC|FadeReloading1.mp3}}{{AC|FadeReloading2.mp3}} "Reloading."
+
+===Healed===
+*{{AC|FadeRelief1.mp3}}{{AC|FadeRelief2.mp3}}{{AC|FadeRelief3.mp3}} ''*Fade sighs*''
+
+===Killed===
+*{{AC|FadeDeath1.mp3}}{{AC|FadeDeath2.mp3}}{{AC|FadeDeath3.mp3}} ''*Fade groans*''
+
+===Resurrected via {{abi text|Resurrection}}===
+*{{AC|FadeResurrect.mp3}} "I'm up, I'm up! Shit!"
+
+===Wounded===
+====Light damage====
+*{{AC|FadePainLight1.mp3}}{{AC|FadePainLight2.mp3}}{{AC|FadePainLight3.mp3}} ''*Fade groans*''
+
+====Medium damage====
+*{{AC|FadePainMedium1.mp3}}{{AC|FadePainMedium2.mp3}}{{AC|FadePainMedium3.mp3}} ''*Fade groans*''
+
+====Heavy damage====
+*{{AC|FadePainHeavy1.mp3}}{{AC|FadePainHeavy2.mp3}}{{AC|FadePainHeavy3.mp3}} ''*Fade groans*''
+
+====Fall damage====
+*{{AC|FadePainFall1.mp3}}{{AC|FadePainFall2.mp3}}{{AC|FadePainFall3.mp3}} ''*Fade groans*''
+
+==Unused lines==
+There are no voice lines at the moment in this section for this Agent.
+
+==Removed lines==
+===Last Kill Enemy MVP===
+*{{AC|FadeLastKillMVP1.mp3}} "So much for their elite agent."{{#tag:sup|-{{patchv|13.00}}}}
+
+===Spike Spotted General===
+*{{AC|FadeSpikeSpotted1.mp3}}{{AC|FadeSpikeSpotted2.mp3}} "Spike spotted."
+
+===Enemy spotted General===
+*{{AC|FadeEnemy1.mp3}}{{AC|FadeEnemy2.mp3}} "Enemy spotted."
+
+===Multiple Enemies spotted General===
+*{{AC|FadeEnemies1.mp3}}{{AC|FadeEnemies2.mp3}} "Multiple enemies spotted!"
+
+===Be Quiet===
+*{{AC|FadeBeQuiet1.mp3}}{{AC|FadeBeQuiet2.mp3}} "Silence."
+
+===Rotate===
+*{{AC|FadeRotating1.mp3}}{{AC|FadeRotating2.mp3}} "Rotating."
+
+===Let's Rotate===
+*{{AC|FadeLetsRotate1.mp3}}{{AC|FadeLetsRotate2.mp3}} "Let's rotate."
+
+===Clear Area===
+*{{AC|FadeClearThisArea1.mp3}}{{AC|FadeClearThisArea2.mp3}} "Clear this spot."
+
+===Hold===
+*{{AC|FadeHold1.mp3}}{{AC|FadeHold2.mp3}} "Wait."
+
+===Push===
+*{{AC|FadePush1.mp3}}{{AC|FadePush2.mp3}} "Push."
+
+===Regroup===
+*{{AC|FadeRegroup1.mp3}}{{AC|FadeRegroup2.mp3}} "Regroup."
+
+===Ping Go here===
+*{{AC|FadeGoHere1.mp3}}{{AC|FadeGoHere2.mp3}} "Move here."
+
+==[[Range/Lore|The Range's lore assets]]==
+===[[Range/Lore/EP4|Episode 4]]===
+*{{AC|file=VoicemailBrimstone18.mp3}} "So what do I call you now? Sir? Commander? Maybe not. The Nightmare is not an easy thing to wield. Rarely has it led me amiss... and yet it has. That is regrettable. But it is behind us. I will help you scout this "[[Omega Earth]]" as you call it. But there can be no secrets between us. I carry your banner as long as it brings me closer to him. With that said, if I even sense that you have strayed from your word... well, you will be lucky if you never see me again."
+*{{AC|file=Cypher Interrogation Audio.mp3}} ''(For the entire transcription between [[Cypher]] and Fade, see [[Range/Lore/EP4#Cypher's_Office_2|Range/Lore/EP4 → v4.08 → Cypher's Office]].)''
+*{{AC|file=VoicemailBrimstone19.mp3}} "I am back from [[Omega]]. You got lucky, the inbound terminal is abandoned, it is safe for us. I checked the area, but could not go far. I felt fear all around me, the whole city is on edge. I do not know why. But in the minds I touched, I saw a place of secrets. It is near another terminal. If you want answers, that is where you must go."
+
+===[[Range/Lore/EP6|Episode 6]]===
+*{{AC|file=VoicemailBrimstone43.mp3}} "[[Brimstone]], the Nightmare came to me with a vision, different from the rest, I-... I saw the walls holding our world together fall apart. I felt the wind go still, I could smell the bitterness of blood and bile. I heard small, uncertain voices crying out, and I could taste the fear. There was so much of it, like the whole planet had fever. So I climbed, I climbed this... tall cliff. It was jagged as bone, stretching up, dizzying. But with broken fingers I reached the top and saw the end of our time. A silent window, stretching over the ocean, filled with dead faces.  And then I woke up. Brimstone, I have seen many things in my line of work but... we must not let this come to pass!"
+
+===[[Range/Lore/EP8|Episode 8]]===
+*{{AC|file=VoicemailBrimstone75.mp3}} "Brimstone, the Nightmare brings more visions. I see someone I've never seen before. Bright lights darting around a dimmed room, silenced gunfire, and hundreds of butterflies. [[Clove|This person]], they're in danger, but... the danger means nothing to them! Still, I worry. Cypher mentioned Edinburgh, no? I anticipate a connection. We should hurry."
+
+===[[Range/Lore/EP9|Episode 9]]===
+*{{AC|file=VoicemailBrimstone87.mp3}} "Brimstone! Brimstone, it's- It's Fade. When you briefed us on [[Abyss|this location]], I thought maybe, maybe this is where he's been all this time. But no! There was no sign of him in the cells, there's nothing! Nothing! You live until you're forgotten, right? I'll keep looking."
+
+==Notes==
+<!--:''To easily see which quotes were added corresponding to the patch, use your browser's Find function and type the patch number (e.g. v2.05).
+*{{ui|Added}} 10 voice lines added from patch {{patchv|5.06}}, undocumented in the patch notes.-->
+*Additional radio commands added in patch {{patchv|8.11}} are not mentioned in this page.
+*Other voice lines removed were at an unknown timeframe.
+
+==Navigation==
+{{Navbox agents}}
+
+[[Category:Quotes]]

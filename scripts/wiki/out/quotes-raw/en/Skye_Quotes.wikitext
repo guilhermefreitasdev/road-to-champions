@@ -1,0 +1,861 @@
+{{TOCright}}
+This is a '''list of quotes by {{ai|Skye}}'''. Skye is voiced by Miranda O'Hare in English. Skye has a total of {{PAGESINCATEGORY:Skye Quotes}} files of quotes including unused and removed lines, and excluding [[#The Range's lore assets|The Range's lore assets]].
+
+A downloadable folder containing all the audio files on this page can be found [https://drive.google.com/drive/folders/1xYeX7u4mNBGHrs7lmj7CZht2J8UJAgQx?usp=sharing here].
+
+==Agent Selected/Unlocked==
+*{{AC|SkyePick.mp3}} "Alright! Where's the fight?"
+
+==Abilities==
+==={{abi text|Regrowth}}===
+====Cast====
+*{{AC|SkyeRegrowthCast1.mp3}}{{AC|SkyeRegrowthCast2.mp3}} "Healing over here."
+*{{AC|SkyeRegrowthCast3.mp3}}{{AC|SkyeRegrowthCast4.mp3}} "Heal up, squad!"
+
+====Depleted while cast====
+*{{AC|SkyeRegrowthDepleted1.mp3}} "Out o' healing."
+*{{AC|SkyeRegrowthDepleted2.mp3}} "Out of healing."
+
+==={{abi text|Trailblazer}}===
+====Cast====
+*{{AC|SkyeTrailblazerCast1.mp3}}{{AC|SkyeTrailblazerCast2.mp3}} "Time to hunt."
+
+====Concussed enemy====
+*{{AC|SkyeTrailblazerStun1.mp3}}{{AC|SkyeTrailblazerStun2.mp3}} "They're concussed."
+
+====Damaged enemy====
+*{{AC|SkyeTrailblazerDamage1.mp3}}{{AC|SkyeTrailblazerDamage2.mp3}} "Got 'em.
+
+====Kill====
+*{{AC|SkyeTrailblazerKill1.mp3}}{{AC|SkyeTrailblazerKill2.mp3}} "Ha! Wild!"
+*{{AC|SkyeTrailblazerKill3.mp3}}{{AC|SkyeTrailblazerKill4.mp3}} "Good boy!"
+
+====Destroyed====
+*{{AC|SkyeTrailblazerDestroyed1.mp3}}{{AC|SkyeTrailblazerDestroyed2.mp3}} "Scout destroyed."
+
+==={{abi text|Guiding Light}}===
+====Cast====
+*{{AC|SkyeGuidingLightCast1.mp3}}{{AC|SkyeGuidingLightCast2.mp3}} "Hawk out."
+
+====Afflict enemy====
+*{{AC|SkyeGuidingLightHit1.mp3}}{{AC|SkyeGuidingLightHit2.mp3}} "Blinded."
+
+====Kill assist====
+*{{AC|SkyeGuidingLightAssist1.mp3}}{{AC|SkyeGuidingLightAssist2.mp3}} "Good bird!"
+
+==={{abi text|Seekers}}===
+====Ally Cast====
+*{{AC|SkyeUltAllyCast.mp3}} "Seek them out!"
+
+====Enemy Cast====
+*{{AC|SkyeUltEnemyCast.mp3}} "I've got your trail!"
+
+====First enemy enters line of sight====
+*{{AC|SkyeUltEnemySpotted1.mp3}}{{AC|SkyeUltEnemySpotted2.mp3}} "Found one!"
+
+====Second enemy====
+*{{AC|SkyeUltHitSecond1.mp3}}{{AC|SkyeUltHitSecond2.mp3}} "There's another!"
+
+====Third enemy====
+*{{AC|SkyeUltHitThird1.mp3}}{{AC|SkyeUltHitThird2.mp3}} "Three for three!"
+
+==Buy Phase==
+===Match Start===
+*{{AC|SkyeMatchStart1.mp3}} "Remember everyone, if we survive, woodworking class tonight in the mess hall. Nimble hands, nimble minds."
+*{{AC|SkyeMatchStart2.mp3}} "Not used to working with humans. Usually just me and my pack. I guess it's worse if you guys get shot, yeah?"
+*{{AC|SkyeMatchStart3.mp3}} "Okay, let's get going. This work won't take care of itself."
+*{{AC|SkyeMatchStart5.mp3}} "Anyone I catch slacking off has to join my morning run tomorrow. Wake up's at four, sound good?"
+*{{AC|SkyeMatchStart6.mp3}} "Everyone good if my pets run around out here? I don't do leashes. Should be alright."
+
+====Attacking====
+*{{AC|SkyeMatchStartAttack1.mp3}} "Game faces team, those defenders will make us work for it."
+*{{AC|SkyeMatchStartAttack2.mp3}} "Let's get this spike down, and get the hell away from the blast. I'd rather not die to our own tech."
+
+====Defending====
+*{{AC|SkyeMatchStartDefense1.mp3}} "They crossed the line coming here. This ain't their world, it's ours."
+*{{AC|SkyeMatchStartDefense2.mp3}} "If they detonate that thing, this place is done for. I'd say our world's been through enough, yeah?"
+
+====[[Haven]]====
+*{{AC|SkyeMatchStartHaven.mp3}} "I can feel what this place used to be. It's dying! What a damn shame."
+
+====[[Lotus]]====
+*{{AC|SkyeMatchStartLotus.mp3}} "Those flowers are massive! Who grew these? Them and me, we gotta link up."
+
+===Round Start===
+*{{AC|SkyeRoundStart1.mp3}} "I'm no doctor, but I can patch a bullet hole or two. Let me know if you need healing."
+*{{AC|SkyeRoundStart2.mp3}} "If you see one of my creatures, it's a good thing, alright? You'll figure out what they do eventually."
+*{{AC|SkyeRoundStart3.mp3}} "Just some good old hard yakka, standing in between us and victory."
+*{{AC|SkyeRoundStart4.mp3}} "These parasites aren't gonna take one step past this place."
+*{{AC|SkyeRoundStart6.mp3}} "Another fight? Clean slate! Let's leave whatever happened, in the past."
+*{{AC|SkyeRoundStart7.mp3}} "We move as a unit, okay? Last thing I need is some hero messing things up."
+*{{AC|SkyeRoundStart9.mp3}} "Make sure to follow my pack in. They'll lead us right to the enemy."
+*{{AC|SkyeRoundStart10.mp3}} "We know what we're doing. Trust each other and we'll be fine."
+*{{AC|SkyeRoundStart11.mp3}} "Don't sit down! We're not done yet."
+
+====Last round won====
+*{{AC|SkyeRoundWon1.mp3}} "No wuckas, mate! Just keep it up."
+**(''No wuckas'': No problem)
+*{{AC|SkyeRoundWon2.mp3}} "Keep that fire, yeah?"
+*{{AC|SkyeRoundWon3.mp3}} "Keep that focus. More o' that, and we're outta here!"
+*{{AC|SkyeRoundWon4.mp3}} "That's a good run."
+
+=====While in the lead=====
+*{{AC|SkyeLead1.mp3}} "We're going off like a cut snake!"
+*{{AC|SkyeLead2.mp3}} ''*Skye laughs*'' "Well I reckon morale's gonna be pretty low over there."
+*{{AC|SkyeLead3.mp3}} "Stay keen. They don't have to be good to be dangerous."
+
+=====Making a comeback=====
+*{{AC|SkyeComeback1.mp3}} "They think they put us in the dirt! They're gonna find out we weren't buried! Just planted."
+*{{AC|SkyeComeback2.mp3}} "There's the toehold. Now just dig in and climb up."
+*{{AC|SkyeComeback3.mp3}} "Now we're on the right path. Let's keep going!"
+
+===Last round in the half===
+====Attacking====
+*{{AC|SkyeLastRound1.mp3}} "Don't save anything. Last chance to use our stuff."
+
+====Defending====
+*{{AC|SkyeLastRound2.mp3}} "Don't save anything. Last chance to use our stuff."
+
+===Match Point===
+*{{AC|SkyeMatchPoint1.mp3}} "One more. Then first shout's, on me!"
+*{{AC|SkyeMatchPoint2.mp3}} "Come on, squad. Gotta play that whistle!"
+
+===Shop===
+====Let's Buy====
+*{{AC|SkyeBuying1.mp3}}{{AC|SkyeBuying2.mp3}} "I'm gonna buy."
+
+====Let's Save====
+*{{AC|SkyeSaving1.mp3}}{{AC|SkyeSaving2.mp3}} "I'm gonna save this time."
+
+====I Have Extra Creds====
+*{{AC|SkyeOffer1.mp3}} "Who needs something?"
+*{{AC|SkyeOffer2.mp3}} "Who needs somethin'?"
+
+====Requested====
+*{{AC|SkyeRequest1.mp3}} "Help a girl out, would ya?"
+*{{AC|SkyeRequest2.mp3}} "Help a girl out, would you?"
+
+===Barrier Down===
+*{{AC|SkyeBarrierDown1.mp3}} "We're not equals. Let's go!"
+*{{AC|SkyeBarrierDown2.mp3}} "Shut and lock the door."
+*{{AC|SkyeBarrierDown3.mp3}} "Let's get this win."
+*{{AC|SkyeBarrierDown5.mp3}} "Pull your socks up!"
+*{{AC|SkyeBarrierDown6.mp3}} "They can't get an inch!"
+*{{AC|SkyeBarrierDown7.mp3}} "Don't let me down now, yeah?"
+*{{AC|SkyeBarrierDown8.mp3}} "Let's go for the throat."
+*{{AC|SkyeBarrierDown9.mp3}} "Keep them out."
+*{{AC|SkyeBarrierDown10.mp3}} "Push them out."
+*{{AC|SkyeBarrierDown11.mp3}} "Don't give them ground!"
+*{{AC|SkyeBarrierDown12.mp3}} "I got yous, okay?"
+*{{AC|SkyeBarrierDown13.mp3}} "Time to mobilize my pack."
+*{{AC|SkyeBarrierDown14.mp3}} "Find the weak point, and break it."
+*{{AC|SkyeBarrierDown15.mp3}} "Trample them."
+
+==Spike==
+===Forgotten in spawn===
+*{{AC|SkyeForgotSpike1.mp3}} "Well, I mean someone's gotta grab the spike, right?"
+*{{AC|SkyeForgotSpike2.mp3}} "Look, I know I didn't grab the spike, but none of you did either! So it's not just my fault."
+
+===Ally carrier down===
+*{{AC|SkyeSpikeDown1.mp3}}{{AC|SkyeSpikeDown2.mp3}} "Our spike carrier's down."
+
+===Dropped===
+*{{AC|SkyeSpikeDropped1.mp3}}{{AC|SkyeSpikeDropped2.mp3}} "Spike dropped."
+
+===Retrieved===
+*{{AC|SkyeSpikePickedUp1.mp3}}{{AC|SkyeSpikePickedUp2.mp3}} "I got the spike."
+
+===Planted===
+*{{AC|SkyeSpikePlanted1.mp3}}{{AC|SkyeSpikePlanted2.mp3}} "Spike planted."
+
+===Spotted===
+*{{AC|SkyeSpikeSpottedA1.mp3}}{{AC|SkyeSpikeSpottedA2.mp3}} "Spike spotted A."
+*{{AC|SkyeSpikeSpottedB1.mp3}}{{AC|SkyeSpikeSpottedB2.mp3}} "Spike spotted B."
+*{{AC|SkyeSpikeSpottedC1.mp3}}{{AC|SkyeSpikeSpottedC2.mp3}} "Spike spotted C."
+*{{AC|SkyeSpikeSpottedASpawn1.mp3}}{{AC|SkyeSpikeSpottedASpawn2.mp3}} "Spike's in Attacker Spawn."
+*{{AC|SkyeSpikeSpottedDSpawn1.mp3}}{{AC|SkyeSpikeSpottedDSpawn2.mp3}} "Spike's in Defender Spawn."
+*{{AC|SkyeSpikeSpottedMid1.mp3}}{{AC|SkyeSpikeSpottedMid2.mp3}} "Spike spotted Mid."
+
+===Defuse resumed===
+*{{AC|SkyeDefuseResumed1.mp3}}{{AC|SkyeDefuseResumed2.mp3}} "Nice try, mate."
+
+===Defuse time running out===
+*{{AC|SkyeDefuseLate1.mp3}}{{AC|SkyeDefuseLate2.mp3}} "Why did I sign up for this shit?"
+
+===Defuse successful===
+*{{AC|SkyeDefuseComplete1.mp3}} "Don't even start that shit here, mate!"
+
+==Kill==
+*{{AC|SkyeKill1.mp3}} "Ended."
+*{{AC|SkyeKill2.mp3}} "Enough."
+*{{AC|SkyeKill3.mp3}} "One less."
+*{{AC|SkyeKill4.mp3}} "Finished."
+*{{AC|SkyeKill5.mp3}} "Sleep tight."
+*{{AC|SkyeKill6.mp3}} "One down."
+*{{AC|SkyeKill7.mp3}} "Buried."
+*{{AC|SkyeKill8.mp3}} "One dead."
+*{{AC|SkyeKill9.mp3}} "Out."
+*{{AC|SkyeKill10.mp3}} "Taken out."
+
+===Headshot===
+*{{AC|SkyeHeadshot1.mp3}} "Look at that."
+*{{AC|SkyeHeadshot2.mp3}} "Dropped."
+*{{AC|SkyeHeadshot3.mp3}} "Knocked 'em."
+*{{AC|SkyeHeadshot4.mp3}} "Piss off!"
+*{{AC|SkyeHeadshot5.mp3}} "Done with."
+*{{AC|SkyeHeadshot6.mp3}} "Headshot."
+
+===[[Melee]]===
+*{{AC|SkyeMeleeKill1.mp3}} "Night!"
+*{{AC|SkyeMeleeKill2.mp3}} "Didn't think I was that quiet!"
+
+===Triple===
+*{{AC|SkyeTriple1.mp3}}{{AC|SkyeTriple2.mp3}} "That's three."
+
+===Quadra===
+*{{AC|SkyeQuadra1.mp3}}{{AC|SkyeQuadra2.mp3}} "Four down."
+
+===One kill remaining (game-mode specific)===
+*{{AC|SkyeOneKillLeft1.mp3}}{{AC|SkyeOneKillLeft2.mp3}} "Last one!"
+
+==Round End==
+===Ace===
+*{{AC|SkyeAce1.mp3}} "I can feel it. I can be so much more!"
+*{{AC|SkyeAce2.mp3}} "How did I get this powerful?!"
+
+===Clutch===
+*{{AC|SkyeClutch1.mp3}} "Don't even try me."
+*{{AC|SkyeClutch2.mp3}} "Ah, now there's some serenity."
+
+===Flawless or Team Ace===
+*{{AC|SkyeFlawless1.mp3}} "In the words of our [[Sova]], the pack survives!"
+*{{AC|SkyeFlawless2.mp3}} "Now this, is a team. You see that?"
+*{{AC|SkyeFlawless3.mp3}} "You beauts. That's what I like to see!"
+
+===Thrifty===
+*{{AC|SkyeThrifty1.mp3}} "I'll crab walk next time. Make it easier for ya."
+
+===Last Kill===
+*{{AC|SkyeLastKill1.mp3}} "No drama."
+*{{AC|SkyeLastKill2.mp3}} "We're done here."
+*{{AC|SkyeLastKill3.mp3}} "That's the last of 'em."
+*{{AC|SkyeLastKill4.mp3}} "I think that's it."
+*{{AC|SkyeLastKill5.mp3}} "That's done. Quick break."
+
+====Enemy MVP====
+There are no voice lines at the moment in this section for this Agent.
+
+====Using [[Melee]]====
+*{{AC|SkyeLastKillMelee1.mp3}} "Well that's a knife."
+
+===Low HP===
+*{{AC|SkyeLowHP1.mp3}} "Shit, ugh, I'm buggered."
+
+==Match End==
+===Match Win===
+*{{AC|SkyeMatchWin1.mp3}} "And that's full time! Good stuff!"
+*{{AC|SkyeMatchWin2.mp3}} "Come bother me again when you're trying."
+*{{AC|SkyeMatchWin3.mp3}} "Reap what you sow."
+
+====[[Bind]]====
+*{{AC|SkyeMatchWinBind.mp3}} "Anyone up for a cuppa at [[Cypher]]'s place? Wherever that is."
+
+====[[Lotus]]====
+*{{AC|SkyeMatchWinLotus.mp3}} "Just leave me here! This place is great!"
+
+===Runner-up (game-mode specific)===
+*{{AC|SkyeRunnerUp1.mp3}} "Nothing wrong with 'at!"
+*{{AC|SkyeRunnerUp2.mp3}} "Strong finish. Could be even stronger."
+*{{AC|SkyeRunnerUp3.mp3}} "Chin up, that was good!"
+
+==Agent-specific interactions==
+{| class="wikitable sortable"
+!To Agent
+!Scenario
+!width=40%; class=unsortable|Ally
+!width=40%; class=unsortable|Enemy
+|-
+|{{Ai|Astra}}
+|Commend
+|{{AC|SkyeAllyAstraCommend.mp3}} "Astra, those guys must hate you."
+|
+|-
+|rowspan=5|{{Ai|Breach}}
+|Chat
+|
+:[[File:Skye icon.png|20px|link=Skye]] {{AC|SkyeAllyBreachChat.mp3}} "Breach, I'm thinking I'll hit the gym later. You in?"
+:[[File:Breach icon.png|20px|link=Breach]] {{AC|BreachAllySkyeChat.mp3}} "So long as it's leg day!" ''*Breach laughs*''
+|
+|-
+|Match Start
+|{{AC|SkyeAllyBreachMatchStart.mp3}} "Breach, you big beaut, get up here. The front line's got room for one more animal."
+|
+|-
+|Round Start
+|
+|{{AC|SkyeEnemyBreachRoundStart.mp3}} "Shame their Breach is against us! I really need a gym buddy."
+|-
+|Commend
+|{{AC|SkyeAllyBreachCommend.mp3}} "You decided to show off a little, eh Breach?"
+|
+|-
+|Barrier Down 
+|{{AC|SkyeAllyBreachBarrierDown.mp3}} "You and me, Breach. Let's go!"
+|
+|-
+|rowspan=2|{{Ai|Brimstone}}
+|Match Start
+|{{AC|SkyeAllyBrimstoneMatchStart.mp3}} "Brimstone, you old dog! I respect that you've still got some bite! If you break a hip out there, I got you covered."
+|{{AC|SkyeEnemyBrimstoneMatchStart.mp3}} "There's a Brimstone over there. That man's a fossil! Put 'im in the ground where he belongs."
+|-
+|Kill
+|
+|{{AC|SkyeEnemyBrimstoneKill.mp3}} "Brimstone down."
+|-
+|{{Ai|Cypher}}
+|Commend
+|{{AC|SkyeAllyCypherCommend.mp3}} "Cypher, I knew you were a legend from the start. Great work mate!"
+|
+|-
+|{{ai|Deadlock}}
+|Chat
+|
+:[[File:Skye icon.png|20px|link=Skye]] {{AC|SkyeAllyDeadlockChat.mp3}} "Deadlock, you promised to loosen up, mate. I can see the tension from here."
+:[[File:Deadlock icon.png|20px|link=Deadlock]] {{AC|DeadlockAllySkyeChat.mp3}} "But this is the most relaxed I've been all day."
+|
+|-
+|rowspan=2|{{Ai|Fade}}
+|Round Start
+|{{AC|SkyeEnemyFadeRoundStart.mp3}} "That Fade's got demons. It's gonna take more than fresh air to clear her head."
+|
+|-
+|Kill
+|
+|{{AC|SkyeEnemyFadeKill.mp3}} "Fade's a goner."
+|-
+|rowspan=6|{{Ai|Harbor}}
+|Chat
+|
+:[[File:Skye icon.png|20px|link=Skye]] {{AC|SkyeAllyHarborChat.mp3}} "Harbor, whatever stunts you're planning today, count me in."
+:[[File:Harbor icon.png|20px|link=Harbor]] {{AC|HarborAllySkyeChat.mp3}} "You know I will! Can't pull a गंगा double without the double."
+:*(''गंगा'': Ganges)
+|
+|-
+|Match Start
+|{{AC|SkyeAllyHarborMatchStart.mp3}} "One look at our muscle man Harbor here and those baddies are gonna piss themselves."
+|
+|-
+|Round Start
+|{{AC|SkyeAllyHarborRoundStart.mp3}} "Harbor, you can stop pouring water on your arms. Those cannons shine enough already. Don't be vain."
+|
+|-
+|Commend
+|{{AC|SkyeAllyHarborCommend.mp3}} "Harbor, you weapon! I love it."
+|
+|-
+|Kill
+|
+|{{AC|SkyeEnemyHarborKill.mp3}} "See ya, buddy!"
+|-
+|Last Kill
+|
+|{{AC|SkyeEnemyHarborLastKill.mp3}} "Sorry bud, that's game."
+|-
+|rowspan=4|{{Ai|Jett}}
+|Chat
+|
+:[[File:Jett icon.png|20px|link=Jett]] {{AC|JettAllySkyeChat.mp3}} "Skye. Ever though thought about making other summons? Like, uh, lions. Or, ooh, dragons!"
+:[[File:Skye icon.png|20px|link=Skye]] {{AC|SkyeAllyJettChat.mp3}} "Tried once. It was, not pretty."
+|
+|-
+|Match Start
+|
+|{{AC|SkyeEnemyJettMatchStart.mp3}} "I bet their Jett thinks she's all that. Well news flash, girlie. No one wins alone! I'll take her and her team down."
+|-
+|Round Start
+|{{AC|SkyeAllyJettRoundStart.mp3}} "Jett, don't slow down for us. My creatures move fast, they'll keep up."
+|
+|-
+|Commend
+|{{AC|SkyeAllyJettCommend.mp3}} "Jett, you little ripper, that was insane! Keep it up, love!
+|
+|-
+|rowspan=3|{{Ai|Killjoy}}
+|Match Start
+|
+|{{AC|SkyeEnemyKilljoyMatchStart.mp3}} "That Killjoy thinks a few bots will keep her safe? Give me a break!"
+|-
+|Round Start
+|
+|{{AC|SkyeEnemyKilljoyRoundStart.mp3}} "What's so special about that Killjoy's tech? I've got visual sensors too. They're called eyes!"
+|-
+|Last Kill
+|
+|{{AC|SkyeEnemyKilljoyLastKill.mp3}} "Great inventions. I'm so impressed."
+|-
+|rowspan=4|{{Ai|Omen}}
+|Match Start
+|{{AC|SkyeAllyOmenMatchStart.mp3}} "Omen all that slinking around makes you hard to track. Glad you're on my side, eh?"
+|
+|-
+|Round Start
+|{{AC|SkyeAllyOmenRoundStart.mp3}} "Omen, when you teleport, I don't know. Sometimes, I lose you. Does that make sense?"
+|
+|-
+|Commend
+|{{AC|SkyeAllyOmenCommend.mp3}} "Omen, you monster! I mean it in a good way, I swear."
+|
+|-
+|Kill
+|
+|{{AC|SkyeEnemyOmenKill.mp3}} "Killed their Omen."
+|-
+|rowspan=2|{{Ai|Phoenix}}
+|Commend
+|{{AC|SkyeAllyPhoenixCommend.mp3}} "Phoenix, you're killing it out there!"
+|
+|-
+|Kill
+|
+|{{AC|SkyeEnemyPhoenixKill.mp3}} "Fire boy's gone."
+|-
+|rowspan=3|{{Ai|Raze}}
+|Round Start
+|{{AC|SkyeAllyRazeRoundStart.mp3}} "Come on, Raze, you cheeky bugger. 't's get into 'em!"
+|
+|-
+|Commend
+|{{AC|SkyeAllyRazeCommend.mp3}} "Raze, I love the destruction! Just keep it on their side, yeah?"
+|
+|-
+|Barrier Down
+|
+|{{AC|SkyeEnemyRazeBarrierDown.mp3}} "If that Raze breaks one more thing..."
+|-
+|rowspan=5|{{Ai|Reyna}}
+|Match Start
+|{{AC|SkyeAllyReynaMatchStart.mp3}} "Reyna, I know that look. I've lost people too. Let's do this for them."
+|
+|-
+|Round Start
+|{{AC|SkyeAllyReynaRoundStart.mp3}} "Reyna, still hungry? I'm sure my pets can chase out some game for ya."
+|
+|-
+|Commend
+|{{AC|SkyeAllyReynaCommend.mp3}} "Reyna that was savage! How'd you learn to hunt like that?!"
+|
+|-
+|Barrier Down
+|{{AC|SkyeAllyReynaBarrierDown.mp3}} "Reyna, take 'em all down."
+|
+|-
+|Last Kill
+|
+|{{AC|SkyeEnemyReynaLastKill.mp3}} "I'll keep my soul, thank you."
+|-
+|rowspan=4|{{Ai|Sage}}
+|Match Start
+|{{AC|SkyeAllySageMatchStart.mp3}} "Sage, I'll teach you how to control my seekers if you teach me how to raise the dead. Fair trade I reckon."
+|
+|-
+|Round Start
+|{{AC|SkyeAllySageRoundStart.mp3}} "Everyone give Sage a break! Crying over every bruise. I'm here! You can bother me."
+|
+|-
+|Barrier Down
+|{{AC|SkyeAllySageBarrierDown.mp3}} "Sage, let's keep everyone alive."
+|
+|-
+|Last Kill
+|
+|{{AC|SkyeEnemySageLastKill.mp3}} "You made this happen, Sage."
+|-
+|rowspan=3|{{Ai|Skye}}
+|Match Start
+|
+|{{AC|SkyeEnemySkyeMatchStart.mp3}} "Two of us?!" ''*Skye laughs*'' "This place is gonna be a zoo!"
+|-
+|Barrier Down
+|
+|{{AC|SkyeEnemySkyeBarrierDown.mp3}} "I got their Aussie!"
+|-
+|Last Kill
+|
+|{{AC|SkyeEnemySkyeLastKill.mp3}} "There can only be one Aussie around here."
+|-
+|rowspan=3|{{Ai|Sova}}
+|Match Start
+|
+|{{AC|SkyeEnemySovaMatchStart.mp3}} "If that Sova's arrows come anywhere near my pack? He's dead!"
+|-
+|Round Start
+|
+|{{AC|SkyeEnemySovaRoundStart.mp3}} "That Sova's gonna put his eye out with all that tech. Mhm. His other eye I mean."
+|-
+|Barrier Down
+|
+|{{AC|SkyeEnemySovaBarrierDown.mp3}} "Leave that Sova to me."
+|-
+|rowspan=3|{{Ai|Viper}}
+|Round Start
+|
+|{{AC|SkyeEnemyViperRoundStart.mp3}} "I can't believe their Viper's dumping all that shit in the air. I'll kill her!"
+|-
+|Barrier Down
+|
+|{{AC|SkyeEnemyViperBarrierDown.mp3}} "Careful of the Viper!"
+|-
+|Kill
+|
+|{{AC|SkyeEnemyViperKill.mp3}} "No more Viper."
+|-
+|rowspan=3|{{Ai|Yoru}}
+|Chat
+|
+:[[File:Yoru icon.png|20px|link=Yoru]] {{AC|YoruAllySkyeChat.mp3}} "Hey, flower girl. I found some leaves. Do you want them?"
+:[[File:Skye icon.png|20px|link=Skye]] {{AC|SkyeAllyYoruChat.mp3}} "I've got enough, thanks. But call me flower girl again, I'll break your nose."
+|
+|-
+|Commend
+|{{AC|SkyeAllyYoruCommend.mp3}} "Wow, someone wants attention."
+|
+|-
+|Kill
+|
+|{{AC|SkyeEnemyYoruKill.mp3}} "Rift walker's dead."
+|}
+
+==Radio Commands==
+===Menu Index only===
+====Caution here====
+*{{AC|SkyeCaution1.mp3}}{{AC|SkyeCaution2.mp3}} "Enemies nearby."
+
+====Going Area====
+*{{AC|SkyeGoingA1.mp3}}{{AC|SkyeGoingA2.mp3}} "Going A."
+*{{AC|SkyeGoingB1.mp3}}{{AC|SkyeGoingB2.mp3}} "Going B."
+*{{AC|SkyeGoingC1.mp3}}{{AC|SkyeGoingC2.mp3}} "Going C."
+*{{AC|SkyeGoingMid1.mp3}}{{AC|SkyeGoingMid2.mp3}} "Going Mid."
+
+====Need Support====
+*{{AC|SkyeHelp1.mp3}}{{AC|SkyeHelp2.mp3}}{{AC|SkyeHelp3.mp3}} "I need help."
+
+====On my way====
+*{{AC|SkyeOnMyWay1.mp3}}{{AC|SkyeOnMyWay2.mp3}} "On my way."
+
+====Play for picks====
+*{{AC|SkyePlayForPicks1.mp3}}{{AC|SkyePlayForPicks2.mp3}} "Play for picks."
+
+===Wheel Index only===
+====Encourage====
+*{{AC|SkyeEncouraging1.mp3}}{{AC|SkyeEncouraging2.mp3}}{{AC|SkyeEncouraging3.mp3}} "We can do this."
+
+====I'll lurk====
+Only as Attackers during Buy Phase.
+*{{AC|SkyeLurking1.mp3}}{{AC|SkyeLurking2.mp3}} "I'm lurking."
+
+====I'll push out====
+Only as Defenders during Buy Phase.
+*{{AC|SkyePushingOut1.mp3}}{{AC|SkyePushingOut2.mp3}} "I'm pushing out."
+
+====I'm holding position====
+Only as Defenders during Buy Phase.
+*{{AC|SkyeHoldingPosition1.mp3}}{{AC|SkyeHoldingPosition2.mp3}} "Holding position."
+
+====Let's Attack====
+Only during Round Phase.
+*{{AC|SkyeLetsAttack1.mp3}}{{AC|SkyeLetsAttack2.mp3}} "Let's attack."
+
+====Let's hold positions====
+Only as Defenders during Buy Phase.
+*{{AC|SkyeHoldPositions1.mp3}}{{AC|SkyeHoldPositions2.mp3}} "Let's hold positions."
+
+====Let's play slow====
+Only as Attackers at anytime.
+*{{AC|SkyePlaySlow1.mp3}}{{AC|SkyePlaySlow2.mp3}} "Let's play slow."
+
+====Let's push out====
+Only as Defenders during Buy Phase.
+*{{AC|SkyePushOut1.mp3}}{{AC|SkyePushOut2.mp3}} "Let's push out."
+
+====Let's spread out====
+*{{AC|SkyeSpreadOut1.mp3}}{{AC|SkyeSpreadOut2.mp3}} "Let's spread out."
+
+====Nice Try====
+*{{AC|SkyeNiceTry1.mp3}}{{AC|SkyeNiceTry2.mp3}}{{AC|SkyeNiceTry3.mp3}} "Solid try."
+
+====Stick together====
+*{{AC|SkyeStickTogether1.mp3}}{{AC|SkyeStickTogether2.mp3}} "Stick together."
+
+===Menu and Wheel Index===
+====Commend====
+*{{AC|SkyeCommend1.mp3}}{{AC|SkyeCommend3.mp3}}{{AC|SkyeCommend3.mp3}} "Good on ya."
+
+====Fall Back====
+Menu Index at anytime, or Wheel Index only during Round Phase.
+*{{AC|SkyeFallBack1.mp3}}{{AC|SkyeFallBack2.mp3}} "Fall back."
+
+====Hello====
+*{{AC|SkyeHello1.mp3}}{{AC|SkyeHello2.mp3}}{{AC|SkyeHello3.mp3}} "G'day."
+
+====I'll take point====
+Wheel Index only as Attackers during Buy Phase, or Menu Index at anytime regardless of Attackers or Defenders.
+*{{AC|SkyeTakePoint1.mp3}}{{AC|SkyeTakePoint2.mp3}} "I'll take point."
+
+====Let's rush them (Radio Command)====
+*{{AC|SkyeRush1.mp3}}{{AC|SkyeRush2.mp3}} "Rush them."
+
+====Need healing====
+*{{AC|SkyeHealing1.mp3}}{{AC|SkyeHealing2.mp3}} "Need healing."
+
+====No====
+*{{AC|SkyeNo1.mp3}}{{AC|SkyeNo2.mp3}}{{AC|SkyeNo3.mp3}} "No."
+
+====Sorry====
+*{{AC|SkyeSorry1.mp3}}{{AC|SkyeSorry2.mp3}}{{AC|SkyeSorry3.mp3}} "Sorry 'bout that."
+
+====Thanks====
+*{{AC|SkyeThanks1.mp3}}{{AC|SkyeThanks2.mp3}}{{AC|SkyeThanks3.mp3}} "Cheers, mate!"
+
+====Ultimate Status====
+*{{AC|SkyeUltDown1.mp3}}{{AC|SkyeUltDown2.mp3}} "My ult's not ready."
+*{{AC|SkyeUltAlmost1.mp3}}{{AC|SkyeUltAlmost2.mp3}} "My ult's almost ready."
+*{{AC|SkyeUltReady1.mp3}}{{AC|SkyeUltReady2.mp3}} "My ult's ready."
+
+====Yes====
+*{{AC|SkyeYes1.mp3}}{{AC|SkyeYes2.mp3}}{{AC|SkyeYes3.mp3}} "Righty-o."
+
+===Wheel Index requiring Minimap===
+For the following voicelines, the minimap must be open and then open ping wheel and activate strategy.
+====Faking====
+Only as Attackers during Buy Phase.
+*{{AC|SkyeFaking1.mp3}}{{AC|SkyeFaking2.mp3}} "I'm faking."
+*{{AC|SkyeFakingA1.mp3}}{{AC|SkyeFakingA2.mp3}} "I'm faking A."
+*{{AC|SkyeFakingB1.mp3}}{{AC|SkyeFakingB2.mp3}} "I'm faking B."
+*{{AC|SkyeFakingC1.mp3}}{{AC|SkyeFakingC2.mp3}} "I'm faking C."
+
+====I'm Going Here====
+As Defenders during Buy Phase, or as Attackers at anytime.
+*{{AC|SkyeGoingA1.mp3}}{{AC|SkyeGoingA2.mp3}} "Going A."
+*{{AC|SkyeGoingB1.mp3}}{{AC|SkyeGoingB2.mp3}} "Going B."
+*{{AC|SkyeGoingC1.mp3}}{{AC|SkyeGoingC2.mp3}} "Going C."
+*{{AC|SkyeGoingMid1.mp3}}{{AC|SkyeGoingMid2.mp3}} "Going Mid."
+
+====Let's Go Here====
+Only as Attackers during Buy Phase.
+*{{AC|SkyeLetsGoA1.mp3}}{{AC|SkyeLetsGoA2.mp3}} "Let's go A."
+*{{AC|SkyeLetsGoB1.mp3}}{{AC|SkyeLetsGoB2.mp3}} "Let's go B."
+*{{AC|SkyeLetsGoC1.mp3}}{{AC|SkyeLetsGoC2.mp3}} "Let's go C."
+*{{AC|SkyeLetsGoHere1.mp3}}{{AC|SkyeLetsGoHere2.mp3}} "Let's go here."
+
+====Let's rush them (Minimap)====
+Only as Attackers during Buy Phase.
+*{{AC|SkyeLetsRush1.mp3}}{{AC|SkyeLetsRush2.mp3}} "Let's rush them."
+*{{AC|SkyeLetsRushA1.mp3}}{{AC|SkyeLetsRushA2.mp3}} "Let's rush A."
+*{{AC|SkyeLetsRushB1.mp3}}{{AC|SkyeLetsRushB2.mp3}} "Let's rush B."
+*{{AC|SkyeLetsRushC1.mp3}}{{AC|SkyeLetsRushC2.mp3}} "Let's rush C."
+
+====Let's Sneak Here====
+Only as Attackers during Buy Phase.
+*{{AC|SkyeSneakA1.mp3}}{{AC|SkyeSneakA2.mp3}} "Let's sneak A."
+*{{AC|SkyeSneakB1.mp3}}{{AC|SkyeSneakB2.mp3}} "Let's sneak B."
+*{{AC|SkyeSneakC1.mp3}}{{AC|SkyeSneakC2.mp3}} "Let's sneak C."
+*{{AC|SkyeSneakMid1.mp3}}{{AC|SkyeSneakMid2.mp3}} "Let's sneak Mid."
+
+====Let's Stack Here====
+Only as Defenders during Buy Phase.
+*{{AC|SkyeStack1.mp3}}{{AC|SkyeStack2.mp3}} "Let's stack up."
+*{{AC|SkyeStackA1.mp3}}{{AC|SkyeStackA2.mp3}} "Let's stack A."
+*{{AC|SkyeStackB1.mp3}}{{AC|SkyeStackB2.mp3}} "Let's stack B."
+*{{AC|SkyeStackC1.mp3}}{{AC|SkyeStackC2.mp3}} "Let's stack C."
+*{{AC|SkyeStackMid1.mp3}}{{AC|SkyeStackMid2.mp3}} "Let's stack Mid."
+
+====Someone Go Here====
+As Attackers during Round Phase, or as Defenders at anytime.
+*{{AC|SkyeNeedSomeoneA1.mp3}}{{AC|SkyeNeedSomeoneA2.mp3}} "Someone go A."
+*{{AC|SkyeNeedSomeoneB1.mp3}}{{AC|SkyeNeedSomeoneB2.mp3}} "Someone go B."
+*{{AC|SkyeNeedSomeoneC1.mp3}}{{AC|SkyeNeedSomeoneC2.mp3}} "Someone go C."
+*{{AC|SkyeNeedSomeoneMid1.mp3}}{{AC|SkyeNeedSomeoneMid2.mp3}} "Someone go Mid."
+
+====Spike's here====
+Only as Defenders during Round Phase.
+*{{AC|SkyeSpikeA1.mp3}}{{AC|SkyeSpikeA2.mp3}} "Spike's A."
+*{{AC|SkyeSpikeB1.mp3}}{{AC|SkyeSpikeB2.mp3}} "Spike's B."
+*{{AC|SkyeSpikeC1.mp3}}{{AC|SkyeSpikeC2.mp3}} "Spike's C."
+*{{AC|SkyeSpikeMid1.mp3}}{{AC|SkyeSpikeMid2.mp3}} "Spike's Mid."
+*{{AC|SkyeSpikeSpottedASpawn1.mp3}}{{AC|SkyeSpikeSpottedASpawn2.mp3}} "Spike's in Attacker Spawn."
+*{{AC|SkyeSpikeSpottedDSpawn1.mp3}}{{AC|SkyeSpikeSpottedDSpawn2.mp3}} "Spike's in Defender Spawn."
+
+==Pings==
+===General===
+*{{AC|SkyePing1.mp3}}{{AC|SkyePing2.mp3}} "Here."
+
+===Caution===
+*{{AC|SkyePingCaution1.mp3}}{{AC|SkyePingCaution2.mp3}} "Careful here."
+
+===Need support===
+*{{AC|SkyeHelp1.mp3}}{{AC|SkyeHelp2.mp3}}{{AC|SkyeHelp3.mp3}} "I need help!"
+
+===On my mark===
+*{{AC|SkyeOnMyMark1.mp3}}{{AC|SkyeOnMyMark2.mp3}} "Go on my mark, yeah?"
+
+===Ping gun===
+*{{AC|SkyePingGun1.mp3}}{{AC|SkyePingGun2.mp3}} "Gun here."
+
+===Ping spike===
+*{{AC|SkyePingSpike1.mp3}}{{AC|SkyePingSpike2.mp3}} "Spike's here."
+
+===Ping for spike defuse===
+*{{AC|SkyeDefuseSpike1.mp3}}{{AC|SkyeDefuseSpike2.mp3}} "Defuse the spike!"
+
+===Ping for spike plant===
+*{{AC|SkyePlantSpike1.mp3}}{{AC|SkyePlantSpike2.mp3}} "Plant the spike!"
+
+===Watching===
+*{{AC|SkyeWatching1.mp3}}{{AC|SkyeWatching2.mp3}} "Watching this spot."
+
+==Other lines==
+===Ability unusable===
+====[[Status Effect#Suppress|Suppressed]]====
+*{{AC|SkyeCantUse1.mp3}}{{AC|SkyeCantUse2.mp3}} "Can't use that."
+
+====On cooldown====
+*{{AC|SkyeOnCooldown1.mp3}}{{AC|SkyeOnCooldown2.mp3}} "Not ready yet." 
+
+====No charges====
+*{{AC|SkyeNoCharges1.mp3}}{{AC|SkyeNoCharges2.mp3}} "I'm out of stuff."
+
+===Enemy spotted===
+*{{AC|SkyeEnemyA1.mp3}}{{AC|SkyeEnemyA2.mp3}} "Enemy spotted A."
+*{{AC|SkyeEnemyB1.mp3}}{{AC|SkyeEnemyB2.mp3}} "Enemy spotted B."
+*{{AC|SkyeEnemyC1.mp3}}{{AC|SkyeEnemyC2.mp3}} "Enemy spotted C."
+*{{AC|SkyeEnemyASpawn1.mp3}}{{AC|SkyeEnemyASpawn2.mp3}} "Enemy in Attacker Spawn."
+*{{AC|SkyeEnemyDSpawn1.mp3}}{{AC|SkyeEnemyDSpawn2.mp3}} "Enemy in Defender Spawn."
+*{{AC|SkyeEnemyMid1.mp3}}{{AC|SkyeEnemyMid2.mp3}} "Enemy spotted Mid."
+
+====Multiple====
+*{{AC|SkyeEnemiesA1.mp3}}{{AC|SkyeEnemiesA2.mp3}} "Multiple enemies A!"
+*{{AC|SkyeEnemiesB1.mp3}}{{AC|SkyeEnemiesB2.mp3}} "Multiple enemies B!"
+*{{AC|SkyeEnemiesC1.mp3}}{{AC|SkyeEnemiesC2.mp3}} "Multiple enemies C!"
+*{{AC|SkyeEnemiesASpawn1.mp3}}{{AC|SkyeEnemiesASpawn2.mp3}} "Enemies in Attacker Spawn!"
+*{{AC|SkyeEnemiesDSpawn1.mp3}}{{AC|SkyeEnemiesDSpawn2.mp3}} "Enemies in Defender Spawn!"
+*{{AC|SkyeEnemiesMid1.mp3}}{{AC|SkyeEnemiesMid2.mp3}} "Multiple enemies Mid!"
+
+===Reloading===
+*{{AC|SkyeReloading1.mp3}}{{AC|SkyeReloading2.mp3}} "Reloading."
+
+===Healed===
+*{{AC|SkyeRelief1.mp3}}{{AC|SkyeRelief2.mp3}}{{AC|SkyeRelief3.mp3}} ''*Skye sighs*''
+
+===Killed===
+*{{AC|SkyeDeath1.mp3}}{{AC|SkyeDeath2.mp3}}{{AC|SkyeDeath3.mp3}} ''*Skye groans*''
+
+===Resurrected via {{abi text|Resurrection}}===
+*{{AC|SkyeResurrect.mp3}} "Wait, this feels different."
+
+===Wounded===
+====Light damage====
+*{{AC|SkyePainLight1.mp3}}{{AC|SkyePainLight2.mp3}}{{AC|SkyePainLight3.mp3}} ''*Skye groans*''
+
+====Medium damage====
+*{{AC|SkyePainMedium1.mp3}}{{AC|SkyePainMedium2.mp3}}{{AC|SkyePainMedium3.mp3}} ''*Skye groans*''
+
+====Heavy damage====
+*{{AC|SkyePainHeavy1.mp3}}{{AC|SkyePainHeavy2.mp3}}{{AC|SkyePainHeavy3.mp3}} ''*Skye groans*''
+
+====Fall damage====
+*{{AC|SkyePainFall1.mp3}}{{AC|SkyePainFall2.mp3}}{{AC|SkyePainFall3.mp3}} ''*Skye groans*''
+
+==Unused lines==
+===Match MVP===
+*{{AC|SkyeMatchMVP1.mp3}} "How did I get this powerful?"
+
+==={{abi text|Guiding Light}} Activate===
+*{{AC|SkyeGuidingLightActivate1.mp3}}{{AC|SkyeGuidingLightActivate2.mp3}} "Blinding."
+
+===Need utility here===
+*{{AC|SkyeNeedUtilityHere1.mp3}}{{AC|SkyeNeedUtilityHere2.mp3}} "Need util here."
+
+==Removed lines==
+===Match Start===
+*{{AC|SkyeMatchStart4.mp3}} "These guys keep taking our Earth. Let's kick 'em out and get back to our lives."
+
+===Round Start===
+*{{AC|SkyeRoundStart8.mp3}} "Tell you what. A day working the farm, would do these fellas good."
+*{{AC|SkyeRoundStart5.mp3}} "I feel something over there. Can't place it. Like us, but, different."{{#tag:sup|-{{patchv|13.00}}}}
+
+===Last Kill Enemy MVP===
+*{{AC|SkyeLastKillMVP1.mp3}} "See? Not that scary."{{#tag:sup|-{{patchv|13.00}}}}
+
+==={{abi text|Guiding Light}} Destroyed===
+*{{AC|SkyeGuidingLightDestroyed1.mp3}}{{AC|SkyeGuidingLightDestroyed2.mp3}} "Hawk destroyed."
+
+===Barrier Down===
+*{{AC|SkyeBarrierDown4.mp3}} "We gotta get our land back."
+
+===Wounded Annoyed===
+*{{AC|SkyePainAnnoyed1.mp3}}{{AC|SkyePainAnnoyed2.mp3}}{{AC|SkyePainAnnoyed3.mp3}} ''*Skye groans*''
+
+===Spike Spotted General===
+*{{AC|SkyeSpikeSpotted1.mp3}}{{AC|SkyeSpikeSpotted2.mp3}} "Spike spotted."
+
+===Enemy spotted General===
+*{{AC|SkyeEnemy1.mp3}}{{AC|SkyeEnemy2.mp3}} "Enemy spotted."
+
+===Multiple Enemies spotted General===
+*{{AC|SkyeEnemies1.mp3}}{{AC|SkyeEnemies2.mp3}} "Bunch of enemies here!"
+
+===Be Quiet===
+*{{AC|SkyeBeQuiet1.mp3}}{{AC|SkyeBeQuiet2.mp3}} "Be quiet."
+
+===Rotate===
+*{{AC|SkyeRotating1.mp3}}{{AC|SkyeRotating2.mp3}} "Rotating."
+
+===Let's Rotate===
+*{{AC|SkyeLetsRotate1.mp3}}{{AC|SkyeLetsRotate2.mp3}} "Let's rotate."
+
+===Affirmation===
+*{{AC|SkyeAffirmation1.mp3}}{{AC|SkyeAffirmation2.mp3}} "Got it."
+
+===Callouts===
+*{{AC|SkyeCalloutA1.mp3}}{{AC|SkyeCalloutA2.mp3}} "A Site."
+*{{AC|SkyeCalloutB1.mp3}}{{AC|SkyeCalloutB2.mp3}} "B Site."
+*{{AC|SkyeCalloutC1.mp3}}{{AC|SkyeCalloutC2.mp3}} "C Site."
+*{{AC|SkyeCalloutMid1.mp3}}{{AC|SkyeCalloutMid2.mp3}} "Mid."
+
+===Hold===
+*{{AC|SkyeHold1.mp3}}{{AC|SkyeHold2.mp3}} "Hold on."
+
+===Push===
+*{{AC|SkyePush1.mp3}}{{AC|SkyePush2.mp3}} "Let's push."
+
+===Regroup===
+*{{AC|SkyeRegroup1.mp3}}{{AC|SkyeRegroup2.mp3}} "Regroup, okay?"
+
+===Ping Go here===
+*{{AC|SkyeGoHere1.mp3}}{{AC|SkyeGoHere2.mp3}} "Let's go here."
+
+===Ping enemy utility===
+*{{AC|SkyePingUtility1.mp3}}{{AC|SkyePingUtility2.mp3}} "Enemy utility here."
+
+==[[Range/Lore|The Range's lore assets]]==
+===[[Range/Lore/EP5|Episode 5]]===
+*{{AC|file=VoicemailBrimstone31.mp3}} "Hey, I'm in the mangroves. Took forever, this place is huge! But, I found the spot. The fugitive was here, so was [[REALM]], there was definitely a fire fight. Here's the weird thing though. I fished up these spent bullets from the water, fired west to east, but they're not scattered like you would expect, they dropped in... a semi-circle. Clearly, they were aimed at the same target so you would expect some grouping. But this is too uniform, I don't know... Anyway, REALM's convoy turned north. We'll keep on 'em."
+*{{AC|file=VoicemailBrimstone42.mp3}} "Skye to base. We, uh... we ran into some trouble. Those [[Atlas]] dogs were on us. They had us moving too slow, I had to break off and take care of it, which I did. It may have gotten a little out of hand, but [[Harbor]] and [[Astra]] definitely have the breathing room they need. Yeah, definitely... Huh, I'm a bit separated now, about 10 klicks. I'll do what I can to catch up to them. Skye out!"
+*{{AC|file=Skye Audio Log Omega Mission Complete.mp3}} ''(For the entire transcription between [[Astra]], Harbor, [[Skye]] and Atlas troops, see [[Range/Lore/EP5#Cypher's_Office_4|Range/Lore/EP5 → v5.12 → Cypher's Office]].)''
+
+===[[Range/Lore/EP6|Episode 6]]===
+*{{AC|file=VoicemailBrimstone48.mp3}} "[[Brimstone]], I'm sorry, but I gotta call you out on this. You are too soft on [[Kingdom Corporation|Kingdom]]. I know K-SEC meant something to you, they gave you something when you needed it, I get that. But the more we dig into everything, the more that company is stuck in the center, and I do not like it. You know my history with them, we take the good with the bad, but the shit they get away with-?! Your past with them is clouding your judgment. Get it sorted."
+
+===[[Range/Lore/EP9|Episode 9]]===
+*{{AC|file=VoicemailBrimstone88.mp3}} "I swear one day you'll pick up the bloody phone! We need to get some samples from this [[Hourglass]] [[Abyss|base]] over to the lab, alright? Cause I'm down in the South Wing, and there's this... "flora" down here. Brimstone, I have spent enough time outside to know that these things aren't indigenous to our [[Alpha Earth|Earth]]. I mean, it looks almost... nah... I'm gonna go track down [[Gekko]], call me back."
+*{{AC|file=VoicemailBrimstone100.mp3}} "Hey, so here's some shit news. [[Neon]] and [[Fade]] both told me they've never gone camping before, which is ridiculous! Grown women who've never slept under the stars. I'm straight up offended, honestly, so this weekend I'm fixing it, I don't care what you had them signed up for, pick someone else, because those two are with me. Alright, thanks."
+
+==Notes==
+:''To easily see which quotes were added corresponding to the patch, use your browser's Find function and type the patch number (e.g. v13.00).
+*{{ui|Removed}} 2 voice lines removed from patch {{patchv|13.00}}, documented in the patch notes.
+*Additional radio commands added in patch {{patchv|8.11}} are not mentioned in this page.
+*Other voice lines removed were at an unknown timeframe.
+
+==Navigation==
+{{Navbox agents}}
+[[Category:Quotes]]

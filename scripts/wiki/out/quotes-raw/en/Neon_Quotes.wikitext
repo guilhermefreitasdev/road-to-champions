@@ -1,0 +1,822 @@
+{{TOCright}}
+This is a '''list of quotes by {{ai|Neon}}'''. Neon is voiced by Vanille Velasquez in English. Necessary quotes translated are from Filipino to English. Neon has a total of {{PAGESINCATEGORY:Neon Quotes}} files of quotes including unused and removed lines, and excluding [[#The Range's lore assets|The Range's lore assets]].
+
+A downloadable folder containing all the audio files on this page can be found [https://drive.google.com/drive/folders/1YJ6XuYyLhzrtJqai0_j0UqvN83Ktlph8?usp=sharing here].
+
+==Agent Selected/Unlocked==
+*{{AC|NeonPick.mp3}} "Move, or get zapped."
+
+==Abilities==
+==={{abi text|Fast Lane}}===
+====Cast====
+*{{AC|NeonFastLaneCast1.mp3}}{{AC|NeonFastLaneCast2.mp3}} "Coming through!"
+*{{AC|NeonFastLaneCast3.mp3}}{{AC|NeonFastLaneCast4.mp3}} "This way!"
+
+====Cast during {{abi text|High Gear}}====
+*{{AC|NeonFastLaneSprintCast1.mp3}}{{AC|NeonFastLaneSprintCast2.mp3}} "Shortcut!"
+
+==={{abi text|Relay Bolt}}===
+====Cast====
+*{{AC|NeonRelayBoltCast1.mp3}}{{AC|NeonRelayBoltCast3.mp3}} "Take this!"
+*{{AC|NeonRelayBoltCast2.mp3}}{{AC|NeonRelayBoltCast4.mp3}} "Watch out!"
+
+====Cast during {{abi|High Gear}}====
+*{{AC|NeonRelayBoltSprintCast1.mp3}}{{AC|NeonRelayBoltSprintCast2.mp3}} "Shocking!"
+
+====Kill afflicted enemy====
+*{{AC|NeonRelayBoltAssist1.mp3}} "Get wrecked!"
+*{{AC|NeonRelayBoltAssist2.mp3}} "Gottem!"
+*{{AC|NeonRelayBoltAssist3.mp3}} "Shocked one!"
+
+==={{abi text|High Gear}}===
+====Cast====
+*{{AC|NeonHighGearCast1.mp3}}{{AC|NeonHighGearCast3.mp3}} "Go, go, go!"
+*{{AC|NeonHighGearCast2.mp3}}{{AC|NeonHighGearCast6.mp3}} "Gotta go!"
+*{{AC|NeonHighGearCast4.mp3}}{{AC|NeonHighGearCast5.mp3}} "I'm outta here!"
+
+====Kill after using Slide====
+*{{AC|NeonHighGearKill1.mp3}} "Down."
+*{{AC|NeonHighGearKill2.mp3}} "Next."
+*{{AC|NeonHighGearKill3.mp3}} "Too slow."
+
+==={{abi text|Overdrive}}===
+====Ally Cast====
+*{{AC|NeonUltAllyCast.mp3}} "Here we go!"
+
+====Enemy Cast====
+*{{AC|NeonUltEnemyCast.mp3}} "Hoy! I'm pissed!"
+**(''Hoy'': Hey)
+
+====Fire====
+*{{AC|NeonUltFire1.mp3}}{{AC|NeonUltFire2.mp3}}{{AC|NeonUltFire3.mp3}} ''*Neon grunts*''
+
+====Kill====
+*{{AC|NeonUltKill1.mp3}} "Die!"
+*{{AC|NeonUltKill2.mp3}} "Dead!"
+*{{AC|NeonUltKill3.mp3}} "Zapped!"
+
+===[[Energy]] ([[High Gear]], [[Overdrive]])===
+====Running out====
+*{{AC|NeonFuelLow1.mp3}}{{AC|NeonFuelLow4.mp3}} "Runnin' low."
+*{{AC|NeonFuelLow2.mp3}}{{AC|NeonFuelLow3.mp3}} "Almost out."
+
+====Depleted====
+*{{AC|NeonFuelDepleted1.mp3}}{{AC|NeonFuelDepleted2.mp3}} ''*Neon gasps*''
+
+====Not enough Energy====
+*{{AC|NeonNoFuel1.mp3}}{{AC|NeonNoFuel2.mp3}} "Gotta recharge."
+
+==Buy Phase==
+===Match Start===
+*{{AC|NeonMatchStart1.mp3}} "This covert ops thing, I kind of like it. Let's not mess that up."
+*{{AC|NeonMatchStart2.mp3}} "Radiant powers, deadly tech. I'm sure we won't break anything."
+*{{AC|NeonMatchStart3.mp3}} "Let's go. World's not saving itself."
+*{{AC|NeonMatchStart4.mp3}} "Another site on the brink of destruction. At least we're consistent."
+*{{AC|NeonMatchStart5.mp3}} "Look, I'm glad you're all here. There, I said it."
+*{{AC|NeonMatchStart6.mp3}} "Enemies in our way? Hope they like getting hit by lightning."
+
+====Attacking====
+*{{AC|NeonMatchStartAttack1.mp3}} "Any chance they'll let us through? Fine, we'll do it the hard way."
+*{{AC|NeonMatchStartAttack2.mp3}} "Here's the plan; whatever they got, tear it down."
+
+====Defending====
+*{{AC|NeonMatchStartDefense1.mp3}} "They come at us, we push them back. They don't stop, we don't either."
+*{{AC|NeonMatchStartDefense2.mp3}} "Huh, they came all this way. That was stupid."
+
+====[[Fracture]]====
+*{{AC|NeonMatchStartFracture.mp3}} "Big surprise, someone blew the fuse. No wonder you brought me."
+
+===Round Start===
+*{{AC|NeonRoundStart1.mp3}} "Hoy, fight's not over you know."
+**(''Hoy'': Hey)
+*{{AC|NeonRoundStart2.mp3}} "Please stay alive, I hate making new friends."
+*{{AC|NeonRoundStart3.mp3}} "Listen up, kill them before they kill us."
+*{{AC|NeonRoundStart4.mp3}} "Remember, bullets hurt."
+*{{AC|NeonRoundStart5.mp3}} "Ingat ka, don't get stabbed, bad way to go."
+**(''Ingat ka'': Take care)
+*{{AC|NeonRoundStart6.mp3}} "Get ready, I go fast."
+*{{AC|NeonRoundStart7.mp3}} "Fight till the end, no matter what."
+*{{AC|NeonRoundStart8.mp3}} "Ugh, I'm over them."
+*{{AC|NeonRoundStart9.mp3}} "Tara na, clock's ticking."
+**(''Tara na'': Let's go)
+*{{AC|NeonRoundStart10.mp3}} "Charge and shoot, easy enough."
+*{{AC|NeonRoundStart11.mp3}} "My advice? Don't get shot."
+
+====Last round won====
+*{{AC|NeonRoundWon1.mp3}} "Again."
+*{{AC|NeonRoundWon2.mp3}} "Fine, I admit it. That was nice!"
+*{{AC|NeonRoundWon3.mp3}} "Not bad, I could get used to that."
+*{{AC|NeonRoundWon4.mp3}} "They'll hit back, or at least they should."
+
+=====While in the lead=====
+*{{AC|NeonLead1.mp3}} "They're a mess over there!"
+*{{AC|NeonLead2.mp3}} "Free target practice, I'll take it."
+*{{AC|NeonLead3.mp3}} "I feel good! That's weird."
+
+=====Making a comeback=====
+*{{AC|NeonComeback1.mp3}} "I belong here. We all belong here."
+*{{AC|NeonComeback2.mp3}} "My lola was right; weeds are difficult to kill."
+**(''Lola'': Grandma)
+
+===Last round in the half===
+====Attacking====
+*{{AC|NeonLastRound1.mp3}} "Spend your cash, don't look back."
+
+====Defending====
+*{{AC|NeonLastRound2.mp3}} "No point saving, buy it all."
+
+===Match Point===
+*{{AC|NeonMatchPoint1.mp3}} "We can all agree losing sucks, come on let's win!"
+*{{AC|NeonMatchPoint2.mp3}} "Let's end their misery."
+*{{AC|NeonMatchPoint3.mp3}} "They look tired, finish it!"
+
+===Shop===
+====Let's Buy====
+*{{AC|NeonBuying1.mp3}}{{AC|NeonBuying2.mp3}} "Buying."
+
+====Let's Save====
+*{{AC|NeonSaving1.mp3}}{{AC|NeonSaving2.mp3}}  "Saving."
+
+====I Have Extra Creds====
+*{{AC|NeonOffer1.mp3}}{{AC|NeonOffer2.mp3}} "I can buy, who needs what?"
+
+====Requested====
+*{{AC|NeonRequest1.mp3}}{{AC|NeonRequest2.mp3}} "Need a drop."
+
+===Barrier Down===
+*{{AC|NeonBarrierDown1.mp3}} "Kick them out, I don't do visitors."
+*{{AC|NeonBarrierDown2.mp3}} "Maybe they're pacifists."
+*{{AC|NeonBarrierDown3.mp3}} "Get these losers out of here!"
+*{{AC|NeonBarrierDown4.mp3}} "Shoot them! Always works."
+*{{AC|NeonBarrierDown5.mp3}} "I suggest we keep winning."
+*{{AC|NeonBarrierDown6.mp3}} "We fight to win."
+*{{AC|NeonBarrierDown7.mp3}} "Whatever they're doing, I like it."
+*{{AC|NeonBarrierDown8.mp3}} "Could be worse, could be better."
+*{{AC|NeonBarrierDown9.mp3}} "Switch it up? Just for fun?"
+*{{AC|NeonBarrierDown10.mp3}} "Tabla tayo, I'd rather win."
+**(''Tabla tayo'': We're even)
+*{{AC|NeonBarrierDown11.mp3}} "Halika na, we can do this."
+**(''Halika na'': Let's go)
+*{{AC|NeonBarrierDown12.mp3}} "Stop them please? Thank you!"
+*{{AC|NeonBarrierDown13.mp3}} "Let's go!"
+*{{AC|NeonBarrierDown14.mp3}} "Tch, move!"
+*{{AC|NeonBarrierDown15.mp3}} "Tara, break's over."
+**(''Tara'': Let's go)
+*{{AC|NeonBarrierDown16.mp3}} "I'll show them! Lintik kayo!"
+**(''Lintik kayo'': Lightning, meaning you wish for someone to get hit by lightning in the context of cursing)
+*{{AC|NeonBarrierDown17.mp3}} "Quick feet, quick trigger."
+
+==Spike==
+===Forgotten in spawn===
+*{{AC|NeonForgotSpike1.mp3}} "Hoy! Grab the spike!"
+**(''Hoy'': Hey)
+*{{AC|NeonForgotSpike2.mp3}} "Really? No one got the spike?"
+
+===Ally carrier down===
+*{{AC|NeonSpikeDown1.mp3}}{{AC|NeonSpikeDown2.mp3}} "Our spike's down."
+
+===Dropped===
+*{{AC|NeonSpikeDropped1.mp3}}{{AC|NeonSpikeDropped2.mp3}} "Spike dropped."
+
+===Retrieved===
+*{{AC|NeonSpikePickedUp1.mp3}}{{AC|NeonSpikePickedUp2.mp3}} "I got spike."
+
+===Planted===
+*{{AC|NeonSpikePlanted1.mp3}}{{AC|NeonSpikePlanted2.mp3}} "Spike planted."
+
+===Spotted===
+*{{AC|NeonSpikeSpottedA1.mp3}}{{AC|NeonSpikeSpottedA2.mp3}} "Spike A."
+*{{AC|NeonSpikeSpottedB1.mp3}}{{AC|NeonSpikeSpottedB2.mp3}} "Spike B."
+*{{AC|NeonSpikeSpottedC1.mp3}}{{AC|NeonSpikeSpottedC2.mp3}} "Spike C."
+*{{AC|NeonSpikeSpottedASpawn1.mp3}}{{AC|NeonSpikeSpottedASpawn2.mp3}} "Spike's in Attacker Spawn."
+*{{AC|NeonSpikeSpottedDSpawn1.mp3}}{{AC|NeonSpikeSpottedDSpawn2.mp3}} "Spike's in Defender Spawn."
+*{{AC|NeonSpikeSpottedMid1.mp3}}{{AC|NeonSpikeSpottedMid2.mp3}} "Spike Mid."
+
+===Defuse resumed===
+*{{AC|NeonDefuseResumed1.mp3}} "Bastos!"
+**(Disrespectful!)
+*{{AC|NeonDefuseResumed2.mp3}} "All right, back to it."
+
+===Defuse time running out===
+*{{AC|NeonDefuseLate1.mp3}} "I didn't come here to die."
+*{{AC|NeonDefuseLate2.mp3}} "Are you kidding me right now?!"
+
+===Defuse successful===
+*{{AC|NeonDefuseComplete1.mp3}} "I've tried explosions, not a fan."
+*{{AC|NeonDefuseComplete2.mp3}} "Spike's dead, you're welcome."
+
+==Kill==
+*{{AC|NeonKill1.mp3}} "Back off!"
+*{{AC|NeonKill2.mp3}} "Smart move."
+*{{AC|NeonKill3.mp3}} "Nice try!"
+*{{AC|NeonKill4.mp3}} "Wiped!"
+*{{AC|NeonKill5.mp3}} "Taken out."
+*{{AC|NeonKill6.mp3}} "Killed."
+*{{AC|NeonKill7.mp3}} "Go away!"
+*{{AC|NeonKill8.mp3}} "Alis!"
+**(Get lost!)
+*{{AC|NeonKill9.mp3}} "Bye-bye!"
+*{{AC|NeonKill10.mp3}} "Got one!"
+
+===Headshot===
+*{{AC|NeonHeadshot1.mp3}} "Bad move!"
+*{{AC|NeonHeadshot2.mp3}} "They're dead."
+*{{AC|NeonHeadshot3.mp3}} "Dropped!"
+*{{AC|NeonHeadshot4.mp3}} "Head's up!"
+*{{AC|NeonHeadshot5.mp3}} "Get lost!"
+*{{AC|NeonHeadshot6.mp3}} "You blinked!"
+
+===[[Melee]]===
+*{{AC|NeonMeleeKill1.mp3}} "Hush!"
+*{{AC|NeonMeleeKill2.mp3}} "Must've hurt."
+
+===Triple===
+*{{AC|NeonTriple1.mp3}}{{AC|NeonTriple2.mp3}} "That's three!"
+
+===Quadra===
+*{{AC|NeonQuadra1.mp3}}{{AC|NeonQuadra2.mp3}} "Four down!"
+
+===One kill remaining (game-mode specific)===
+*{{AC|NeonOneKillLeft1.mp3}} "One more."
+*{{AC|NeonOneKillLeft2.mp3}} "One left."
+
+==Round End==
+===Ace===
+*{{AC|NeonAce1.mp3}} "You made me care. Big mistake."
+*{{AC|NeonAce2.mp3}} "All done, please don't hug me."
+*{{AC|NeonAce3.mp3}} "And don't come back!"
+
+===Clutch===
+*{{AC|NeonClutch1.mp3}} "I've faced worse."
+*{{AC|NeonClutch2.mp3}} "Try that again, I dare you!"
+*{{AC|NeonClutch3.mp3}} "Almost got me! Ha, not."
+
+===Flawless or Team Ace===
+*{{AC|NeonFlawless1.mp3}} "We did that. Lola, I know you'd be proud."
+**(''Lola'': Grandma)
+*{{AC|NeonFlawless2.mp3}} "That was clean, keep it up."
+*{{AC|NeonFlawless3.mp3}} "We crushed it! Should we... celebrate or something?"
+
+===Thrifty===
+*{{AC|NeonThrifty1.mp3}} "Well, that was embarrassing."
+
+===Last Kill===
+*{{AC|NeonLastKill1.mp3}} "You had it coming!"
+*{{AC|NeonLastKill2.mp3}} "Not a chance!"
+*{{AC|NeonLastKill3.mp3}} "It's over!"
+*{{AC|NeonLastKill4.mp3}} "Hoy! Found you!"
+**(''Hoy'': Hey)
+*{{AC|NeonLastKill5.mp3}} "End of story."
+*{{AC|NeonLastKill6.mp3}} "Tapos ka na! You're done!"
+**(''Tapos ka na'': You're done")
+
+====Enemy MVP====
+There are no voice lines at the moment in this section for this Agent.
+
+====Using [[Melee]]====
+*{{AC|NeonLastKillMelee1.mp3}} "Not a good look."
+
+===Low HP===
+*{{AC|NeonLowHP1.mp3}} "Ow."
+
+==Match End==
+===Match Win===
+*{{AC|NeonMatchWin1.mp3}} "What did I say? Don't mess with me."
+*{{AC|NeonMatchWin2.mp3}} "Ayos! That's how we do it!"
+**(''Ayos'': Great!)
+*{{AC|NeonMatchWin3.mp3}} "For their sake, I'm glad it's over."
+
+===Runner-up (game-mode specific)===
+*{{AC|NeonRunnerUp1.mp3}} "Next time, they're dead."
+*{{AC|NeonRunnerUp2.mp3}} "I let them win."
+*{{AC|NeonRunnerUp3.mp3}} "Not the worst."
+
+==Agent-specific interactions==
+{| class="wikitable sortable"
+!To Agent
+!Scenario
+!width=40%; class=unsortable|Ally
+!width=40%; class=unsortable|Enemy
+|-
+|rowspan=2|{{Ai|Astra}}
+|Chat
+|
+:[[File:Neon icon.png|20px|link=Neon]] {{AC|NeonAllyAstraChat.mp3}} "Oy Astra. How would I, hypothetically, go to other worlds, or whatever?"
+:[[File:Astra icon.png|20px|link=Astra]] {{AC|AstraAllyNeonChat.mp3}} ''*Astra chuckles*'' "That's my thing. That's my secret!"
+|
+|-
+|Commend
+|{{AC|NeonAllyAstraCommend.mp3}} "Astra, your aim was on point! Husay!"
+*(''Husay'': Nice job)
+|
+|-
+|{{Ai|Brimstone}}
+|Round Start
+|{{AC|NeonAllyBrimstoneRoundStart.mp3}} "Let's go, Brim. Ex-Kingdom represent!"
+|
+|-
+|rowspan=4|{{Ai|Chamber}}
+|Match Start
+|{{AC|NeonAllyChamberMatchStart.mp3}} "Chamber, I'm here to fight. Whatever you're scheming, leave me out of it."
+|{{AC|NeonEnemyChamberMatchStart.mp3}} "Don't listen to that Chamber. What he wants is not what he says."
+|-
+|Barrier Down
+|
+|{{AC|NeonEnemyChamberBarrierDown.mp3}} "Chamber's going down!"
+|-
+|Kill
+|
+|{{AC|NeonEnemyChamberKill.mp3}} "Bye, monsieur!"
+|-
+|Last Kill
+|
+|{{AC|NeonEnemyChamberLastKill.mp3}} "No more deals, Chamber!"
+|-
+|{{Ai|Clove}}
+|Chat
+|
+:[[File:Neon icon.png|20px|link=Neon]] {{AC|NeonAllyCloveChat.mp3}} "Clove, you were up at 3AM watching cooking videos. How are you awake right now?"
+:[[File:Clove icon.png|20px|link=Clove]] {{AC|CloveAllyNeonChat.mp3}} "Eh, I'll sleep when I'm dead, which I guess is never."
+|
+|-
+|rowspan=5|{{Ai|Cypher}}
+|Match Start
+|{{AC|NeonAllyCypherMatchStart.mp3}} "Cypher, I am not kidding. If you take my picture I will fry that thing. Just try me."
+|
+|-
+|Round Start
+|{{AC|NeonAllyCypherRoundStart.mp3}} "Cypher, get their good side. We don't want to be rude."
+|{{AC|NeonEnemyCypherRoundStart.mp3}} "Enough cameras. Their Cypher's gotta go."
+|-
+|Commend
+|{{AC|NeonAllyCypherCommend.mp3}} "Hanep, Cypher! Hope you caught all that on camera."
+*(''Hanep'': Wow)
+|
+|-
+|Kill
+|
+|{{AC|NeonEnemyCypherKill.mp3}} "Found the spy."
+|-
+|Last Kill
+|
+|{{AC|NeonEnemyCypherLastKill.mp3}} "Nosy weirdo!"
+|-
+|{{Ai|Gekko}}
+|Chat
+|
+:[[File:Neon icon.png|20px|link=Neon]] {{AC|NeonAllyGekkoChat.mp3}} "Gekko, you told me you'd buy me boba later, I'll hold you to it."
+:[[File:Gekko icon.png|20px|link=Gekko]] {{AC|GekkoAllyNeonChat.mp3}} "I did? I did. Wingman... stole my wallet?"
+|
+|-
+|rowspan=5|{{Ai|Jett}}
+|Chat
+|
+:[[File:Jett icon.png|20px|link=Jett]] {{AC|JettAllyNeonChat.mp3}} "Hey Neon, just saying, wind, lightning, we could make a storm!"
+:[[File:Neon icon.png|20px|link=Neon]] {{AC|NeonAllyJettChat.mp3}} "Sounds reckless. Sure, why not?" 
+|
+|-
+|Match Start
+|{{AC|NeonAllyJettMatchStart.mp3}} "Save it Jett, I'm not racing you. You'd only embarrass yourself."
+|
+|-
+|Round Start
+|{{AC|NeonAllyJettRoundStart.mp3}} "Fair winds, tight corners. Time to show off, Jett."
+|{{AC|NeonEnemyJettRoundStart.mp3}} "That Jett is all speed, no skill. She's mine!"
+|-
+|Commend
+|{{AC|NeonAllyJettCommend.mp3}} "Jett wins again, I'm shocked."
+|
+|-
+|Barrier Down
+|{{AC|NeonAllyJettBarrierDown.mp3}} "Do your thing, Jett!"
+|
+|-
+|{{Ai|KAYO}}
+|Barrier Down
+|
+|{{AC|NeonEnemyKAYOBarrierDown.mp3}} "I'm gonna fry that bot!"
+|-
+|{{Ai|Killjoy}}
+|Chat
+|
+:[[File:Killjoy icon.png|20px|link=Killjoy]] {{AC|KilljoyAllyNeonChat.mp3}} "Neon, how much power do you generate, exactly? If I could just attach this meter-"
+:[[File:Neon icon.png|20px|link=Neon]] {{AC|NeonAllyKilljoyChat.mp3}} "Killjoy my suit's got, like, a billion volts. Don't touch it."
+|
+|-
+|rowspan=3|{{Ai|Neon}}
+|Match Start
+|
+|{{AC|NeonEnemyNeonMatchStart.mp3}} "That's my double, yeah? I got her."
+|-
+|Round Start
+|
+|{{AC|NeonEnemyNeonRoundStart.mp3}} "My double thinks she can take me? Bad call."
+|-
+|Last Kill
+|
+|{{AC|NeonEnemyNeonLastKill.mp3}} "Just my double. No problem."
+|-
+|rowspan=4|{{Ai|Raze}}
+|Chat
+|
+:[[File:Neon icon.png|20px|link=Neon]] {{AC|NeonAllyRazeChat.mp3}} "Hoy, Raze? Raze! Ugh, 'di bale na."
+:*(''Hoy'': Hey)
+:*(''<nowiki>'</nowiki>di bale na'': Never mind)
+:[[File:Raze icon.png|20px|link=Raze]] {{AC|RazeAllyNeonChat.mp3}} "Wait, what? I'm listening to music, let me just- you say something? What did she say?"
+|
+|-
+|Match Start
+|{{AC|NeonAllyRazeMatchStart.mp3}} "So Raze, you got a plan? Or are you gonna... y'know... do what you always do?"
+|
+|-
+|Round Start
+|{{AC|NeonAllyRazeRoundStart.mp3}} "Raze, the plan is-... never mind, just keep blowing them up."
+|
+|-
+|Commend
+|{{AC|NeonAllyRazeCommend.mp3}} "Nice Raze, subtle!"
+|
+|-
+|rowspan=3|{{Ai|Reyna}}
+|Match Start
+|
+|{{AC|NeonEnemyReynaMatchStart.mp3}} "That Reyna won't hold back. I won't either."
+|-
+|Commend
+|{{AC|NeonAllyReynaCommend.mp3}} "Reyna, remind me to never piss you off."
+|
+|-
+|Barrier Down
+|{{AC|NeonAllyReynaBarrierDown.mp3}} "You and me, Reyna. No limits."
+|
+|-
+|rowspan=3|{{Ai|Sage}}
+|Match Start
+|{{AC|NeonAllySageMatchStart.mp3}} "I know Sage, "don't hurt myself", but it's a gunfight so no promises."
+|
+|-
+|Commend
+|{{AC|NeonAllySageCommend.mp3}} "Galing mo, Sage! I gotta take notes!"
+*(''Galing mo'': You're awesome)
+|
+|-
+|Barrier Down
+|{{AC|NeonAllySageBarrierDown.mp3}} "I'm ready, Sage! We got this."
+|
+|-
+|rowspan=4|{{Ai|Skye}}
+|Match Start
+|{{AC|NeonAllySkyeMatchStart.mp3}} "Skye, I like morning runs, but morning implies sunlight. No more 4 AM wake ups, you maniac."
+|
+|-
+|Round Start
+|{{AC|NeonAllySkyeRoundStart.mp3}} "Skye if your pets find them, tell me. I don't speak Wolf or Tiger, whatever."
+|
+|-
+|Barrier Down
+|
+|{{AC|NeonEnemySkyeBarrierDown.mp3}} "Bury their Skye!"
+|-
+|Kill
+|
+|{{AC|NeonEnemySkyeKill.mp3}} "Skye's fallen!"
+|-
+|{{Ai|Viper}}
+|Chat
+|
+:[[File:Viper icon.png|20px|link=Viper]] {{AC|ViperAllyNeonChat.mp3}} "Neon? What was that meal you made earlier, it was... good."
+:[[File:Neon icon.png|20px|link=Neon]] {{AC|NeonAllyViperChat.mp3}} "Oh, my nanay's adobo? You're, uh, welcome."
+:*(''Nanay'': Mom)
+|
+|-
+|rowspan=2|{{Ai|Yoru}}
+|Round Start
+|
+|{{AC|NeonEnemyYoruRoundStart.mp3}} "That Yoru looks pissed all the time. Honestly, it's impressive."
+|-
+|Kill
+|
+|{{AC|NeonEnemyYoruKill.mp3}} "Yoru's down."
+|}
+
+==Radio Commands==
+===Menu Index only===
+====Caution here====
+*{{AC|NeonCaution1.mp3}}{{AC|NeonCaution2.mp3}} "Enemy close."
+
+====Going Area====
+*{{AC|NeonGoingA1.mp3}}{{AC|NeonGoingA2.mp3}} "Going A."
+*{{AC|NeonGoingB1.mp3}}{{AC|NeonGoingB2.mp3}} "Going B."
+*{{AC|NeonGoingC1.mp3}}{{AC|NeonGoingC2.mp3}} "Going C."
+*{{AC|NeonGoingMid1.mp3}}{{AC|NeonGoingMid2.mp3}} "Going Mid."
+
+====Need Support====
+*{{AC|NeonHelp1.mp3}}{{AC|NeonHelp2.mp3}} "Need backup."
+
+====On my way====
+*{{AC|NeonOnMyWay1.mp3}}{{AC|NeonOnMyWay2.mp3}} "On my way."
+
+====Play for picks====
+*{{AC|NeonPlayForPicks1.mp3}}{{AC|NeonPlayForPicks2.mp3}} "Play for picks."
+
+===Wheel Index only===
+====Encourage====
+*{{AC|NeonEncouraging1.mp3}}{{AC|NeonEncouraging2.mp3}}{{AC|NeonEncouraging3.mp3}} "We've got this."
+
+====I'll lurk====
+Only as Attackers during Buy Phase.
+*{{AC|NeonLurking1.mp3}}{{AC|NeonLurking2.mp3}} "I'm lurking."
+
+====I'll push out====
+Only as Defenders during Buy Phase.
+*{{AC|NeonPushingOut1.mp3}}{{AC|NeonPushingOut2.mp3}} "I'm pushing out."
+
+====I'm holding position====
+Only as Defenders during Buy Phase.
+*{{AC|NeonHoldingPosition1.mp3}}{{AC|NeonHoldingPosition2.mp3}} "Holding position."
+
+====Let's Attack====
+Only during Round Phase.
+*{{AC|NeonLetsAttack1.mp3}}{{AC|NeonLetsAttack2.mp3}} "Let's attack."
+
+====Let's hold positions====
+Only as Defenders during Buy Phase.
+*{{AC|NeonHoldPositions1.mp3}}{{AC|NeonHoldPositions2.mp3}} "Let's hold positions."
+
+====Let's play slow====
+Only as Attackers at anytime.
+*{{AC|NeonPlaySlow1.mp3}}{{AC|NeonPlaySlow2.mp3}} "Let's play slow."
+
+====Let's push out====
+Only as Defenders during Buy Phase.
+*{{AC|NeonPushOut1.mp3}}{{AC|NeonPushOut2.mp3}} "Let's push out."
+
+====Let's spread out====
+*{{AC|NeonSpreadOut1.mp3}}{{AC|NeonSpreadOut2.mp3}} "Let's spread out."
+
+====Nice Try====
+*{{AC|NeonNiceTry1.mp3}}{{AC|NeonNiceTry2.mp3}}{{AC|NeonNiceTry3.mp3}} "Nice try."
+
+====Stick together====
+*{{AC|NeonStickTogether1.mp3}}{{AC|NeonStickTogether2.mp3}} "Stick together."
+
+===Menu and Wheel Index===
+====Commend====
+*{{AC|NeonCommend1.mp3}}{{AC|NeonCommend2.mp3}}{{AC|NeonCommend3.mp3}} "Nice job."
+
+====Fall Back====
+Menu Index at anytime, or Wheel Index only during Round Phase.
+*{{AC|NeonFallBack1.mp3}}{{AC|NeonFallBack2.mp3}} "Fall back."
+
+====Hello====
+*{{AC|NeonHello1.mp3}}{{AC|NeonHello2.mp3}}{{AC|NeonHello3.mp3}} "What's up?"
+
+====I'll take point====
+Wheel Index only as Attackers during Buy Phase, or Menu Index at anytime regardless of Attackers or Defenders.
+*{{AC|NeonTakePoint1.mp3}}{{AC|NeonTakePoint2.mp3}} "I got point."
+
+====Let's rush them (Radio Command)====
+*{{AC|NeonRush1.mp3}}{{AC|NeonRush2.mp3}} "Rush them."
+
+====Need healing====
+*{{AC|NeonHealing1.mp3}}{{AC|NeonHealing2.mp3}} "Need healing."
+
+====No====
+*{{AC|NeonNo1.mp3}}{{AC|NeonNo2.mp3}}{{AC|NeonNo3.mp3}} "Nope."
+
+====Sorry====
+*{{AC|NeonSorry1.mp3}}{{AC|NeonSorry2.mp3}}{{AC|NeonSorry3.mp3}} "Sorry."
+
+====Thanks====
+*{{AC|NeonThanks1.mp3}}{{AC|NeonThanks2.mp3}}{{AC|NeonThanks3.mp3}} "Salamat, thanks!"
+
+====Ultimate Status====
+*{{AC|NeonUltDown1.mp3}}{{AC|NeonUltDown2.mp3}} "My ult's not ready."
+*{{AC|NeonUltAlmost1.mp3}}{{AC|NeonUltAlmost2.mp3}} "My ult's almost ready."
+*{{AC|NeonUltReady1.mp3}}{{AC|NeonUltReady2.mp3}} "My ult's ready."
+
+====Yes====
+*{{AC|NeonYes1.mp3}}{{AC|NeonYes2.mp3}}{{AC|NeonYes3.mp3}} "Yup."
+
+===Wheel Index requiring Minimap===
+For the following voicelines, the minimap must be open and then open ping wheel and activate strategy.
+====Faking====
+Only as Attackers during Buy Phase.
+*{{AC|NeonFaking1.mp3}}{{AC|NeonFaking2.mp3}} "I'm faking."
+*{{AC|NeonFakingA1.mp3}}{{AC|NeonFakingA2.mp3}} "I'm faking A."
+*{{AC|NeonFakingB1.mp3}}{{AC|NeonFakingB2.mp3}} "I'm faking B."
+*{{AC|NeonFakingC1.mp3}}{{AC|NeonFakingC2.mp3}} "I'm faking C."
+
+====I'm Going Here====
+As Defenders during Buy Phase, or as Attackers at anytime.
+*{{AC|NeonGoingA1.mp3}}{{AC|NeonGoingA2.mp3}} "Going A."
+*{{AC|NeonGoingB1.mp3}}{{AC|NeonGoingB2.mp3}} "Going B."
+*{{AC|NeonGoingC1.mp3}}{{AC|NeonGoingC2.mp3}} "Going C."
+*{{AC|NeonGoingMid1.mp3}}{{AC|NeonGoingMid2.mp3}} "Going Mid."
+
+====Let's Go Here====
+Only as Attackers during Buy Phase.
+*{{AC|NeonLetsGoA1.mp3}}{{AC|NeonLetsGoA2.mp3}} "Let's go A."
+*{{AC|NeonLetsGoB1.mp3}}{{AC|NeonLetsGoB2.mp3}} "Let's go B."
+*{{AC|NeonLetsGoC1.mp3}}{{AC|NeonLetsGoC2.mp3}} "Let's go C."
+*{{AC|NeonLetsGoHere1.mp3}}{{AC|NeonLetsGoHere2.mp3}} "Let's go here."
+
+====Let's rush them (Minimap)====
+Only as Attackers during Buy Phase.
+*{{AC|NeonLetsRush1.mp3}}{{AC|NeonLetsRush2.mp3}} "Let's rush them."
+*{{AC|NeonLetsRushA1.mp3}}{{AC|NeonLetsRushA2.mp3}} "Let's rush A."
+*{{AC|NeonLetsRushB1.mp3}}{{AC|NeonLetsRushB2.mp3}} "Let's rush B."
+*{{AC|NeonLetsRushC1.mp3}}{{AC|NeonLetsRushC2.mp3}} "Let's rush C."
+
+====Let's Sneak Here====
+Only as Attackers during Buy Phase.
+*{{AC|NeonSneakA1.mp3}}{{AC|NeonSneakA2.mp3}} "Let's sneak A."
+*{{AC|NeonSneakB1.mp3}}{{AC|NeonSneakB2.mp3}} "Let's sneak B."
+*{{AC|NeonSneakC1.mp3}}{{AC|NeonSneakC2.mp3}} "Let's sneak C."
+*{{AC|NeonSneakMid1.mp3}}{{AC|NeonSneakMid2.mp3}} "Let's sneak Mid."
+
+====Let's Stack Here====
+Only as Defenders during Buy Phase.
+*{{AC|NeonStack1.mp3}}{{AC|NeonStack2.mp3}} "Let's stack up."
+*{{AC|NeonStackA1.mp3}}{{AC|NeonStackA2.mp3}} "Let's stack A."
+*{{AC|NeonStackB1.mp3}}{{AC|NeonStackB2.mp3}} "Let's stack B."
+*{{AC|NeonStackC1.mp3}}{{AC|NeonStackC2.mp3}} "Let's stack C."
+*{{AC|NeonStackMid1.mp3}}{{AC|NeonStackMid2.mp3}} "Let's stack Mid."
+
+====Someone Go Here====
+As Attackers during Round Phase, or as Defenders at anytime.
+*{{AC|NeonNeedSomeoneA1.mp3}}{{AC|NeonNeedSomeoneA2.mp3}} "Someone go A."
+*{{AC|NeonNeedSomeoneB1.mp3}}{{AC|NeonNeedSomeoneB2.mp3}} "Someone go B."
+*{{AC|NeonNeedSomeoneC1.mp3}}{{AC|NeonNeedSomeoneC2.mp3}} "Someone go C."
+*{{AC|NeonNeedSomeoneMid1.mp3}}{{AC|NeonNeedSomeoneMid2.mp3}} "Someone go Mid."
+
+====Spike's here====
+Only as Defenders during Round Phase.
+*{{AC|NeonSpikeA1.mp3}}{{AC|NeonSpikeA2.mp3}} "Spike's A."
+*{{AC|NeonSpikeB1.mp3}}{{AC|NeonSpikeB2.mp3}} "Spike's B."
+*{{AC|NeonSpikeC1.mp3}}{{AC|NeonSpikeC2.mp3}} "Spike's C."
+*{{AC|NeonSpikeMid1.mp3}}{{AC|NeonSpikeMid2.mp3}} "Spike's Mid."
+*{{AC|NeonSpikeSpottedASpawn1.mp3}}{{AC|NeonSpikeSpottedASpawn2.mp3}} "Spike's in Attacker Spawn."
+*{{AC|NeonSpikeSpottedDSpawn1.mp3}}{{AC|NeonSpikeSpottedDSpawn2.mp3}} "Spike's in Defender Spawn."
+
+==Pings==
+===General===
+*{{AC|NeonPing1.mp3}}{{AC|NeonPing2.mp3}} "There."
+
+===Caution===
+*{{AC|NeonPingCaution1.mp3}}{{AC|NeonPingCaution2.mp3}} "Careful here."
+
+===Need support===
+*{{AC|NeonHelp1.mp3}}{{AC|NeonHelp2.mp3}} "Need backup!"
+
+===On my mark===
+*{{AC|NeonOnMyMark1.mp3}}{{AC|NeonOnMyMark2.mp3}} "On my mark."
+
+===Ping gun===
+*{{AC|NeonPingGun1.mp3}}{{AC|NeonPingGun2.mp3}} "Gun here."
+
+===Ping spike===
+*{{AC|NeonPingSpike1.mp3}}{{AC|NeonPingSpike2.mp3}} "Spike's here."
+
+===Ping for spike defuse===
+*{{AC|NeonDefuseSpike1.mp3}}{{AC|NeonDefuseSpike2.mp3}} "Defuse!"
+
+===Ping for spike plant===
+*{{AC|NeonPlantSpike1.mp3}}{{AC|NeonPlantSpike2.mp3}} "Plant the spike!"
+
+===Watching===
+*{{AC|NeonWatching1.mp3}}{{AC|NeonWatching2.mp3}} "Watching here."
+
+==Other lines==
+===Ability unusable===
+====[[Status Effect#Suppress|Suppressed]]====
+*{{AC|NeonCantUse1.mp3}}{{AC|NeonCantUse2.mp3}} "Can't use it."
+
+====On cooldown====
+*{{AC|NeonOnCooldown1.mp3}}{{AC|NeonOnCooldown2.mp3}} "Not ready yet."
+
+====No charges====
+*{{AC|NeonNoCharges1.mp3}}{{AC|NeonNoCharges2.mp3}} "Out of charges."
+
+===Enemy spotted===
+*{{AC|NeonEnemyA1.mp3}}{{AC|NeonEnemyA2.mp3}} "Enemy A."
+*{{AC|NeonEnemyB1.mp3}}{{AC|NeonEnemyB2.mp3}} "Enemy B."
+*{{AC|NeonEnemyC1.mp3}}{{AC|NeonEnemyC2.mp3}} "Enemy C."
+*{{AC|NeonEnemyASpawn1.mp3}}{{AC|NeonEnemyASpawn2.mp3}} "Enemy in Attacker Spawn."
+*{{AC|NeonEnemyDSpawn1.mp3}}{{AC|NeonEnemyDSpawn2.mp3}} "Enemy in Defender Spawn."
+*{{AC|NeonEnemyMid1.mp3}}{{AC|NeonEnemyMid2.mp3}} "Enemy Mid."
+
+====Multiple====
+*{{AC|NeonEnemiesA1.mp3}}{{AC|NeonEnemiesA2.mp3}} "Many enemies A!"
+*{{AC|NeonEnemiesB1.mp3}}{{AC|NeonEnemiesB2.mp3}} "Many enemies B!"
+*{{AC|NeonEnemiesC1.mp3}}{{AC|NeonEnemiesC2.mp3}} "Many enemies C!"
+*{{AC|NeonEnemiesASpawn1.mp3}}{{AC|NeonEnemiesASpawn2.mp3}} "Enemies Attacker Spawn!"
+*{{AC|NeonEnemiesDSpawn1.mp3}}{{AC|NeonEnemiesDSpawn2.mp3}} "Enemies Defender Spawn!"
+*{{AC|NeonEnemiesMid1.mp3}}{{AC|NeonEnemiesMid2.mp3}} "Many enemies Mid!"
+
+===Reloading===
+*{{AC|NeonReloading1.mp3}}{{AC|NeonReloading2.mp3}} "Reloading."
+
+===Healed===
+*{{AC|NeonRelief1.mp3}}{{AC|NeonRelief2.mp3}}{{AC|NeonRelief3.mp3}} ''*Neon sighs*''
+
+===Killed===
+*{{AC|NeonDeath1.mp3}}{{AC|NeonDeath2.mp3}}{{AC|NeonDeath3.mp3}} ''*Neon groans*''
+
+===Resurrected via {{abi text|Resurrection}}===
+*{{AC|NeonResurrect.mp3}} "That sucked!"
+
+===Wounded===
+====Light damage====
+*{{AC|NeonPainLight1.mp3}}{{AC|NeonPainLight2.mp3}}{{AC|NeonPainLight3.mp3}} ''*Neon groans*''
+
+====Medium damage====
+*{{AC|NeonPainMedium1.mp3}}{{AC|NeonPainMedium2.mp3}}{{AC|NeonPainMedium3.mp3}} ''*Neon groans*''
+
+====Heavy damage====
+*{{AC|NeonPainHeavy1.mp3}}{{AC|NeonPainHeavy2.mp3}}{{AC|NeonPainHeavy3.mp3}} ''*Neon groans*''
+
+====Fall damage====
+*{{AC|NeonPainFall1.mp3}}{{AC|NeonPainFall2.mp3}}{{AC|NeonPainFall3.mp3}} ''*Neon groans*''
+
+==Unused lines==
+==={{abi text|Fast Lane}} Kill===
+*{{AC|NeonFastLaneKill1.mp3}} "Idiot!"
+*{{AC|NeonFastLaneKill2.mp3}} "Nuh-uh!"
+*{{AC|NeonFastLaneKill3.mp3}} "No you don't!"
+
+==={{abi text|Overdrive}} "UltEscape"===
+*{{AC|NeonUltEscape1.mp3}}{{AC|NeonUltEscape3.mp3}} "Uh-oh!"
+*{{AC|NeonUltEscape2.mp3}}{{AC|NeonUltEscape4.mp3}} "Time to go!"
+
+===Need utility here===
+*{{AC|NeonNeedUtilityHere1.mp3}}{{AC|NeonNeedUtilityHere2.mp3}} "Need util here."
+
+==Removed lines==
+===[[Energy]] Pool recharged===
+*{{AC|NeonFuelRecharged1.mp3}}{{AC|NeonFuelRecharged4.mp3}} "Ready."
+*{{AC|NeonFuelRecharged2.mp3}}{{AC|NeonFuelRecharged3.mp3}} "Full charge."
+
+==={{abi text|High Gear}} Cast Slide during {{abi|Overdrive}} Overdrive===
+*{{AC|NeonUltSlide1.mp3}}{{AC|NeonUltSlide2.mp3}}{{AC|NeonUltSlide3.mp3}} ''*Neon grunts*''
+
+===Last Kill Enemy MVP===
+*{{AC|NeonLastKillMVP1.mp3}} "That was their best, 'di ba? Not impressed."{{#tag:sup|-{{patchv|13.00}}}}
+**("That was their best, right? Not impressed.")
+
+===Spike Spotted General===
+*{{AC|NeonSpikeSpotted1.mp3}}{{AC|NeonSpikeSpotted2.mp3}} "Found the spike."
+
+===Enemy spotted General===
+*{{AC|NeonEnemy1.mp3}}{{AC|NeonEnemy2.mp3}} "Enemy spotted."
+
+===Multiple Enemies spotted General===
+*{{AC|NeonEnemies1.mp3}}{{AC|NeonEnemies2.mp3}} "Enemies here!"
+
+===Be Quiet===
+*{{AC|NeonBeQuiet1.mp3}}{{AC|NeonBeQuiet2.mp3}} "Be quiet."
+
+===Rotate===
+*{{AC|NeonRotating1.mp3}}{{AC|NeonRotating2.mp3}} "Rotating."
+
+===Let's Rotate===
+*{{AC|NeonLetsRotate1.mp3}}{{AC|NeonLetsRotate2.mp3}} "Let's rotate."
+
+===Clear Area===
+*{{AC|NeonClearThisArea1.mp3}}{{AC|NeonClearThisArea2.mp3}} "Clear it out."
+
+===Hold===
+*{{AC|NeonHold1.mp3}}{{AC|NeonHold2.mp3}} "Wait."
+
+===Push===
+*{{AC|NeonPush1.mp3}}{{AC|NeonPush2.mp3}} "C'mon, push."
+
+===Regroup===
+*{{AC|NeonRegroup1.mp3}}{{AC|NeonRegroup2.mp3}} "Regroup."
+
+===Ping Go here===
+*{{AC|NeonGoHere1.mp3}}{{AC|NeonGoHere2.mp3}} "Let's go here."
+
+==[[Range/Lore|The Range's lore assets]]==
+===[[Range/Lore/EP4|Episode 4]]===
+*{{AC|file=VoicemailBrimstone9.mp3}} "Um, hi. It's me. Can you talk to [[Killjoy]]? She keeps getting close to the conduction cells, like, really close, and I keep telling her "Ano ba?! Back up! I'm moving a lot of power!", and she does but then she comes back and they're her safety protocols to begin with, and I'm following them. If she says "Stand behind the yellow line", I stand behind the yellow line. But she doesn't stand behind the yellow line, she just walks right up and she's gonna get fried! When she dies by electrocution it's her fault, not mine so, do something? Okay. Bye."
+*{{AC|file=VoicemailBrimstone12.mp3}} "What did Chamber say about my suit?! I know he called you! Was it the voltage caps? Sabi ko na nga ba eh... if he said remove them, he's wrong, even with the caps on I can power a whole city block, and not like, a small block, a big one, with restaurants! Hotels! Take them off, and say goodbye to half of headquarters! The limiter stays on Brim. Tapos! End of story!"
+**(''Sabi ko na nga ba eh'': Just as I thought)
+**(''Tapos'': End of story)
+*{{AC|file=KAYO Audio Log Istanbul Mission Complete.mp3}} ''(For the entire transcription amongst the agents, see [[Range/Lore/EP4#Cypher's_Office|Range/Lore/EP4 → v4.07 → Cypher's Office]].)''
+
+===[[Range/Lore/EP5|Episode 5]]===
+*{{AC|file=VoicemailBrimstone25.mp3}} "Hey, thanks for visiting me earlier. I'm fine, don't worry. My suit had it worse! Totally fried. [[Killjoy]]'s working on repairs but, I have to wait in a containment room that can soak up my extra volts. Kinda boring. If... if the lights flicker around the base... sorry! Uh, anyway, as soon as the suit's ready, send me out. I want payback!"
+
+===[[Range/Lore/EP9|Episode 9]]===
+*{{AC|file=VoicemailBrimstone101.mp3}} "Hi, since I've been on the team for a while now, I figure I could make a request? Feels like I've put in the time and energy, so... Can we get a basketball court for the rec center? Honestly, I'm surprised I even have to ask! How does the VALORANT rec center not have a basketball court? That seems like a major oversight. We have six machines for rowing, but no basketball? Come on! And it's not just for me. [[Skye]] and [[Astra]] said they'd play too! This is for, uh, teambuilding! Okay, if a court is out of the question, I would settle for one hoop. I'll even help put it up! Okay, thanks!"
+
+==Notes==
+:''To easily see which quotes were added corresponding to the patch, use your browser's Find function and type the patch number (e.g. v13.00).
+*{{ui|Removed}} 1 voice line removed from patch {{patchv|13.00}}, documented in the patch notes.
+*Additional radio commands added in patch {{patchv|8.11}} are not mentioned in this page.
+*Other voice lines removed were at an unknown timeframe.
+
+==Navigation==
+{{Navbox agents}}
+[[Category:Quotes]]

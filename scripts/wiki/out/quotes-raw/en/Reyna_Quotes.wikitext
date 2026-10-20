@@ -1,0 +1,897 @@
+{{TOCright}}
+This is a '''list of quotes by {{ai|Reyna}}'''. Reyna is voiced by Karina Altamirano in English. Necessary quotes translated are from Spanish to English, unless otherwise stated. Reyna has two versions of her quotes; her standard set, and Empress set for when she is empowered by {{abi text|Empress}} with the latter having a filter applied to them. The standard set contains {{PAGESINCATEGORY:Reyna Quotes}} files of quotes and the Empress set contains {{PAGESINCATEGORY:Reyna Empress Quotes}} files of quotes, giving Reyna a grand total of {{#expr: {{PAGESINCATEGORY:Reyna Quotes}} + {{PAGESINCATEGORY:Reyna Empress Quotes}}}} files of quotes including unused and removed lines, and excluding [[#The Range's lore assets|The Range's lore assets]].
+
+A downloadable folder containing all the audio files on this page can be found [https://drive.google.com/drive/folders/1tAVPVmtpjDeZmbI8ZDQKPsMg3wssBvbk?usp=sharing here]. For quotes during Empress, see [[Reyna/Quotes/Empress]].
+
+==Agent Selected/Unlocked==
+*{{AC|ReynaPick.mp3}} "They have no idea how heartless I am."
+
+==Abilities==
+==={{abi text|Leer}}===
+====Cast====
+*{{AC|ReynaLeerCast1.mp3}}{{AC|ReynaLeerCast2.mp3}} "Cutting their vision."
+*{{AC|ReynaLeerCast3.mp3}}{{AC|ReynaLeerCast4.mp3}} "Stealing sight."
+
+====Kill afflicted enemy====
+*{{AC|ReynaLeerKill1.mp3}}{{AC|ReynaLeerKill2.mp3}} "Peekaboo!"
+*{{AC|ReynaLeerKill3.mp3}}{{AC|ReynaLeerKill4.mp3}} "Adiós."
+**(Goodbye.)
+*{{AC|ReynaLeerKill5.mp3}}{{AC|ReynaLeerKill6.mp3}} "Never saw me."
+
+==={{abi text|Devour}}===
+====Cast====
+*{{AC|ReynaDevourCast1.mp3}}{{AC|ReynaDevourCast2.mp3}}{{AC|ReynaDevourCast3.mp3}} ''*Reyna sighs*''
+
+==={{abi text|Dismiss}}===
+:''Main article: [[Reyna/Quotes/Empress#Empress|Reyna/Quotes/Empress → Empress]]
+Reyna has no voice lines when using this ability. However, there are voice lines in the game files that are [[#Dismiss Cast|unused]] in standard form. There are playable voice lines for when she is in Empress form.
+
+==={{abi text|Empress}}===
+:''Main article: [[Reyna/Quotes/Empress#Empress|Reyna/Quotes/Empress → Empress]]
+
+==Buy Phase==
+===Match Start===
+*{{AC|ReynaMatchStart1.mp3}} "It doesn't matter what this place used to be. Now it's just another graveyard."
+*{{AC|ReynaMatchStart2.mp3}} "Ah, what hope do these criaturas have? I almost pity them."
+**(''Criaturas'': Creatures)
+*{{AC|ReynaMatchStart3.mp3}} "Are those our enemies? Huh. This won't take long."
+*{{AC|ReynaMatchStart4.mp3}} "I've stood over so many corpses. A few more, does not matter."
+*{{AC|ReynaMatchStart5.mp3}} "This enemy's nothing special. Still human, still mortal."
+*{{AC|ReynaMatchStart6.mp3}} "I will drain the life from our prey. That's all they're good for."
+*{{AC|ReynaMatchStart7.mp3}} "I have lied, beaten, killed to survive. I will kill again and again if it means one more day."
+
+====Attacking====
+*{{AC|ReynaMatchStartAttack1.mp3}} "As many souls as it takes Lucia. Te lo juro."
+**(''Te lo juro'': I swear)
+
+====Defending====
+*{{AC|ReynaMatchStartDefense1.mp3}} ''*Reyna sighs*'' "Today the meal came to me. Óptimo."
+**(''Óptimo'': Optimal)
+
+====[[Ascent]]====
+*{{AC|ReynaMatchStartAscent.mp3}} ''*Reyna sighs*'' "This poor place. It clings to life. A city after my own heart"
+
+====[[Sunset]]====
+*{{AC|ReynaMatchStartSunset.mp3}} "Kingdom bleeds our planet once again!" ''*Reyna sighs*'' "Too many scars to count."
+
+===Round Start===
+*{{AC|ReynaRoundStart1.mp3}} "As much as this world hurt me, it's mine, and I will kill to defend it."
+*{{AC|ReynaRoundStart2.mp3}} "The enemy only looks composed. Their hearts tell a different story."
+*{{AC|ReynaRoundStart3.mp3}} "I'm the last thing they'll see before they die. Lucky them."
+*{{AC|ReynaRoundStart4.mp3}} "They're just batteries, and I need a recharge."
+*{{AC|ReynaRoundStart5.mp3}} "Their lives are so meaningless. Might as well give them to me."
+*{{AC|ReynaRoundStart6.mp3}} "Look your enemy in the eye. It helps with accuracy."
+*{{AC|ReynaRoundStart7.mp3}} "Stay alive! I want their life, not yours."
+*{{AC|ReynaRoundStart8.mp3}} "They don't have a single life worth saving."
+*{{AC|ReynaRoundStart9.mp3}} "Deep breaths everyone. Your hearts are pounding."
+*{{AC|ReynaRoundStart10.mp3}} "My city needs me. I can't be away for long. Let's end this quickly."
+*{{AC|ReynaRoundStart11.mp3}} "Ah, the symphony of death. Don't worry, you get used to it."
+
+====Last round won====
+*{{AC|ReynaRoundWon1.mp3}} "We showed them their place. Now keep them there."
+*{{AC|ReynaRoundWon2.mp3}} "You see? They're flawed. Ordinary."
+*{{AC|ReynaRoundWon3.mp3}} "That should humble them."
+*{{AC|ReynaRoundWon4.mp3}} "Feels good, doesn't it? Now do it again!"
+
+=====While in the lead=====
+*{{AC|ReynaLead1.mp3}} "If you've never seen a massacre, this is what it looks like."
+*{{AC|ReynaLead2.mp3}} "They're losing heart. I can feel it."
+*{{AC|ReynaLead3.mp3}} "They're starting to panic. I can feel their pulse quickening from here."
+
+=====Making a comeback=====
+*{{AC|ReynaComeback1.mp3}} "Ah, those fools just wasted their advantage."
+*{{AC|ReynaComeback2.mp3}} "They couldn't kill us. Now, they're dead."
+*{{AC|ReynaComeback3.mp3}} "Time for them to kneel."
+
+===Last round in the half===
+====Attacking====
+*{{AC|ReynaLastRound1.mp3}} "Don't be cheap. Spend it all before it's gone."
+
+====Defending====
+*{{AC|ReynaLastRound2.mp3}} "Don't be cheap. Spend it all before it's gone."
+
+===Match Point===
+*{{AC|ReynaMatchPoint1.mp3}} "Their head is in the guillotina, now pull!"
+**(''Guillotina'': Guillotine)
+*{{AC|ReynaMatchPoint2.mp3}} "Stamp out their last breath."
+
+===Shop===
+====Let's Buy====
+*{{AC|ReynaBuying1.mp3}}{{AC|ReynaBuying2.mp3}} "Buying."
+
+====Let's Save====
+*{{AC|ReynaSaving1.mp3}}{{AC|ReynaSaving2.mp3}} "Saving."
+
+====I Have Extra Creds====
+*{{AC|ReynaOffer1.mp3}}{{AC|ReynaOffer2.mp3}} "What do you need?"
+
+====Requested====
+*{{AC|ReynaRequest1.mp3}}{{AC|ReynaRequest2.mp3}} "Need a drop."
+
+===Barrier Down===
+*{{AC|ReynaBarrierDown1.mp3}} "Break them."
+*{{AC|ReynaBarrierDown2.mp3}} "They forget their place."
+*{{AC|ReynaBarrierDown3.mp3}} "At least they kept it interesting."
+*{{AC|ReynaBarrierDown4.mp3}} "They want to die? Let them."
+*{{AC|ReynaBarrierDown5.mp3}} "I get what I want."
+*{{AC|ReynaBarrierDown6.mp3}} "Take everything."
+*{{AC|ReynaBarrierDown7.mp3}} "Take control."
+*{{AC|ReynaBarrierDown8.mp3}} "Let's remind them who we are."
+*{{AC|ReynaBarrierDown9.mp3}} "We are ready for them."
+*{{AC|ReynaBarrierDown10.mp3}} "I will rip their hearts out."
+*{{AC|ReynaBarrierDown11.mp3}} "Bleed them dry."
+*{{AC|ReynaBarrierDown12.mp3}} "For you, hermanita."
+**(''Hermanita'': Little sister)
+*{{AC|ReynaBarrierDown13.mp3}} "Embarrass them."
+*{{AC|ReynaBarrierDown14.mp3}} "No prisoners."
+*{{AC|ReynaBarrierDown15.mp3}} "Cower, run!"
+*{{AC|ReynaBarrierDown16.mp3}} "We win, we survive."
+*{{AC|ReynaBarrierDown17.mp3}} "Let's watch 'em struggle."
+
+==Spike==
+===Forgotten in spawn===
+*{{AC|ReynaForgotSpike1.mp3}}{{AC|ReynaForgotSpike2.mp3}} "How did we forget the spike?"
+
+===Ally carrier down===
+*{{AC|ReynaSpikeDown1.mp3}}{{AC|ReynaSpikeDown2.mp3}} "Our spike's down."
+
+===Dropped===
+*{{AC|ReynaSpikeDropped1.mp3}}{{AC|ReynaSpikeDropped2.mp3}} "Spike dropped."
+
+===Retrieved===
+*{{AC|ReynaSpikePickedUp1.mp3}}{{AC|ReynaSpikePickedUp2.mp3}} "I have the spike."
+
+===Planted===
+*{{AC|ReynaSpikePlanted1.mp3}}{{AC|ReynaSpikePlanted2.mp3}} "Spike planted."
+
+===Spotted===
+*{{AC|ReynaSpikeSpottedA1.mp3}}{{AC|ReynaSpikeSpottedA2.mp3}} "Spike is A."
+*{{AC|ReynaSpikeSpottedB1.mp3}}{{AC|ReynaSpikeSpottedB2.mp3}} "Spike is B."
+*{{AC|ReynaSpikeSpottedC1.mp3}}{{AC|ReynaSpikeSpottedC2.mp3}} "Spike is C."
+*{{AC|ReynaSpikeSpottedASpawn1.mp3}}{{AC|ReynaSpikeSpottedASpawn2.mp3}} "Spike's in Attacker Spawn."
+*{{AC|ReynaSpikeSpottedDSpawn1.mp3}}{{AC|ReynaSpikeSpottedDSpawn2.mp3}} "Spike's in Defender Spawn."
+*{{AC|ReynaSpikeSpottedMid1.mp3}}{{AC|ReynaSpikeSpottedMid2.mp3}} "Spike is Mid."
+
+===Defuse resumed===
+*{{AC|ReynaDefuseResumed1.mp3}}{{AC|ReynaDefuseResumed2.mp3}} "Don't insult me."
+
+===Defuse time running out===
+*{{AC|ReynaDefuseLate1.mp3}}{{AC|ReynaDefuseLate2.mp3}} ''*Reyna sighs*'' "Don't rush me!"
+
+===Defuse successful===
+*{{AC|ReynaDefuseComplete1.mp3}} "Did you really expect that to work?"
+
+==Kill==
+*{{AC|ReynaKill1.mp3}} "Hush!"
+*{{AC|ReynaKill2.mp3}}{{AC|ReynaKill3.mp3}} "Pathetic!"
+*{{AC|ReynaKill4.mp3}}{{AC|ReynaKill5.mp3}} "Finished!"
+*{{AC|ReynaKill6.mp3}}{{AC|ReynaKill7.mp3}} "Insecto."
+**(Insect.)
+*{{AC|ReynaKill8.mp3}} "You're done."
+*{{AC|ReynaKill9.mp3}} "Poor wretch."
+*{{AC|ReynaKill10.mp3}} "Enough."
+*{{AC|ReynaKill11.mp3}} "Die!"
+*{{AC|ReynaKill12.mp3}} "Adiós."
+**(Goodbye.)
+*{{AC|ReynaKill13.mp3}} "Dead."
+
+===Headshot===
+*{{AC|ReynaHeadshot1.mp3}} "Don't resist."
+*{{AC|ReynaHeadshot2.mp3}}{{AC|ReynaHeadshot3.mp3}} "You're nothing!"
+*{{AC|ReynaHeadshot4.mp3}} "No need to suffer."
+*{{AC|ReynaHeadshot5.mp3}}{{AC|ReynaHeadshot6.mp3}} "You disappoint me."
+*{{AC|ReynaHeadshot7.mp3}} "Shoo!"
+*{{AC|ReynaHeadshot8.mp3}} "Embarrassing."
+
+===[[Melee]]===
+*{{AC|ReynaMeleeKill1.mp3}} "Out of my way!"
+*{{AC|ReynaMeleeKill2.mp3}} "Butchered!"
+
+===Triple===
+*{{AC|ReynaTriple1.mp3}}{{AC|ReynaTriple2.mp3}} "Three souls."
+
+===Quadra===
+*{{AC|ReynaQuadra1.mp3}}{{AC|ReynaQuadra2.mp3}} "Four dead."
+
+===One kill remaining (game-mode specific)===
+*{{AC|ReynaOneKillLeft1.mp3}}{{AC|ReynaOneKillLeft2.mp3}} "It's playtime."
+
+==Round End==
+===Ace===
+*{{AC|ReynaAce1.mp3}} "Bow before me!"
+*{{AC|ReynaAce2.mp3}} "Thank you. I was starving!"
+*{{AC|ReynaAce3.mp3}} "Die meaningless."
+*{{AC|ReynaAce4.mp3}} "What can I say. When I want something, I take it."
+
+===Clutch===
+*{{AC|ReynaClutch1.mp3}} "If I act superior, it's because I am."
+*{{AC|ReynaClutch2.mp3}} "My heart's racing!"
+*{{AC|ReynaClutch3.mp3}} "You should stop trying."
+*{{AC|ReynaClutch4.mp3}} "They're nothing to me!"
+
+===Flawless or Team Ace===
+*{{AC|ReynaFlawless1.mp3}} "Such trash!"
+*{{AC|ReynaFlawless2.mp3}} "Ha! Let them rot!"
+*{{AC|ReynaFlawless3.mp3}} "Poor, miserable criaturas."
+**(''Criaturas'': Creatures)
+
+===Thrifty===
+*{{AC|ReynaThrifty1.mp3}} "That cost them everything, and me? Well, nothing."
+*{{AC|ReynaThrifty2.mp3}} "Keep your weapons. This heart is all I need."
+
+===Last Kill===
+*{{AC|ReynaLastKill1.mp3}} "You were barely worth the effort."
+*{{AC|ReynaLastKill2.mp3}} "Don't worry, your life won't go to waste."
+*{{AC|ReynaLastKill3.mp3}} "All dead, and I'm still hungry."
+*{{AC|ReynaLastKill4.mp3}} "Be grateful I killed you quickly."
+*{{AC|ReynaLastKill5.mp3}} "You were pitiful."
+*{{AC|ReynaLastKill6.mp3}} "You are so disappointing."{{#tag:sup|{{patchv|13.00}}^}}
+
+====Enemy MVP====
+There are no voice lines at the moment in this section for this Agent.
+
+====Using [[Melee]]====
+*{{AC|ReynaLastKillMelee1.mp3}} "Hello darling."
+
+===Low HP===
+*{{AC|ReynaLowHP1.mp3}} "Ugh, I don't die so easily!"
+
+==Match End==
+===Match Win===
+*{{AC|ReynaMatchWin1.mp3}} "They stopped breathing? Excellent. Then we're done."
+*{{AC|ReynaMatchWin2.mp3}} "Somehow the hunger always lingers."
+*{{AC|ReynaMatchWin3.mp3}} "I'd thought they'd have more to offer. How foolish of me."
+*{{AC|ReynaMatchWin4.mp3}} "Someone else will clean up. I don't take out the trash."
+
+====[[Icebox]]====
+*{{AC|ReynaMatchWinIcebox.mp3}} "I was not meant for this climate, let's go!"
+
+===Runner-up (game-mode specific)===
+*{{AC|ReynaRunnerUp1.mp3}} "That was a snack. I want a meal."
+*{{AC|ReynaRunnerUp2.mp3}} "Next time I'll be on top."
+*{{AC|ReynaRunnerUp3.mp3}} "Not first? Disappointing."
+
+==Agent-specific interactions==
+{| class="wikitable sortable"
+!To Agent
+!Scenario
+!width=40%; class=unsortable|Ally
+!width=40%; class=unsortable|Enemy
+|-
+|Any [[Radiant]] [[Agent]]
+|Match Start
+|{{AC|ReynaAllyRadiantMatchStart.mp3}} "Today is a gift to Radiants. We're finally free to use our power!"
+|
+|-
+|rowspan=3|Any Human Agent
+|Match Start
+|{{AC|ReynaAllyTechMatchStart.mp3}} "Oh, do your little machines need help? Take your time. We Radiantes will start without you."
+*(''Radiantes'': Radiants)
+|
+|-
+|rowspan=2|Last Kill
+|
+|{{AC|ReynaEnemyTechLastKill.mp3}} "You could never hope to match a Radiante!"
+*(''Radiante'': Radiant)
+|-
+|
+|{{AC|ReynaEnemyTechLastKill2.mp3}} "Enough of your technology! The future is Radiant!"
+|-
+|rowspan=2|{{Ai|Breach}}
+|Commend 
+|{{AC|ReynaAllyBreachCommend.mp3}} "I like the way you work, Breach. Violento. Me gusta."
+*(''Violento'': Violent)
+*(''Me gusta'': I like it)
+|
+|-
+|Kill
+|
+|{{AC|ReynaEnemyBreachKill.mp3}} "Breach killed."
+|-
+|rowspan=4|{{Ai|Brimstone}}
+|rowspan=2|Match Start
+|
+|{{AC|ReynaEnemyBrimstoneMatchStart.mp3}} "If that Brimstone is like ours, he's not going to quit. Let's make him retire, shall we?"
+|-
+|
+|{{AC|ReynaEnemyBrimstoneMatchStart2.mp3}} "Ugh, I can't deal with the morality of yet another Brimstone! The hipocresía! I'll silence him."
+*(''Hipocresía'': Hypocrisy)
+|-
+|Round Start 
+|{{AC|ReynaAllyBrimstoneRoundStart.mp3}} "Brimstone, if you must lead, then lead well. Where do we go?"
+|
+|-
+|Barrier Down
+|
+|{{AC|ReynaEnemyBrimstoneBarrierDown.mp3}} "I'll show that Brimstone true power!"
+|-
+|{{ai|Chamber}}
+|Chat
+|
+:[[File:Reyna icon.png|20px|link=Reyna]] {{AC|ReynaAllyChamberChat.mp3}} "The Sanctuary is grateful for your support, Chamber, but do not expect any favors."
+:[[File:Chamber icon.png|20px|link=Chamber]] {{AC|ChamberAllyReynaChat.mp3}} "Of course, I only wish to help a friend, nothing more."
+|
+|-
+|rowspan=2|{{Ai|Cypher}}
+|Round Start 
+|{{AC|ReynaAllyCypherRoundStart.mp3}} "I don't like your toys, Cypher. Don't spy on me."
+|
+|-
+|Kill
+|
+|{{AC|ReynaEnemyCypherKill.mp3}} "Cypher buried."
+|-
+|{{Ai|Fade}}
+|Match Start
+|
+|{{AC|ReynaEnemyFadeMatchStart.mp3}} "Their Fade will need to be creative, I already live my nightmare."
+|-
+|rowspan=5|{{Ai|Gekko}}
+|Chat
+|
+:[[File:Gekko icon.png|20px|link=Gekko]] {{AC|GekkoAllyReynaChat.mp3}} "Reyna, you keep like glancing at me. Why you smiling?"
+:[[File:Reyna icon.png|20px|link=Reyna]] {{AC|ReynaAllyGekkoChat.mp3}} "Sorry cariño, you remind me of someone."
+:*(''Cariño'': Darling)
+|
+|-
+|Match Start
+|{{AC|ReynaAllyGekkoMatchStart.mp3}} "Escúchame Gekko, I am with you. No tienes que hacer todo solo."
+*(''Escúchame '': Listen to me)
+*(''No tienes que hacer todo solo'': You don't have to do everything alone)
+|
+|-
+|Round Start
+|{{AC|ReynaAllyGekkoRoundStart.mp3}} "Gekko, fuerte y feroz. They will not hesitate, you must not either."
+*(''Fuerte y feroz'': Strong and fierce)
+|
+|-
+|Commend
+|{{AC|ReynaAllyGekkoCommend.mp3}} "Bien hecho Gekko," ''*Reyna chuckles*'' "ustedes también chiquitines."
+*(''Bien hecho'': Well done)
+*(''Ustedes también chiquitines'': You too little ones)
+|
+|-
+|Barrier Down
+|{{AC|ReynaAllyGekkoBarrierDown.mp3}} "Con cuidado, Gekko."
+*(''Con cuidado'': Carefully)
+|
+|-
+|rowspan=3|{{Ai|Jett}}
+|Match Start
+|{{AC|ReynaAllyJettMatchStart.mp3}} "Jett, you're very talented. Aim for the neck. Easy kill."
+|
+|-
+|Round Start 
+|
+|{{AC|ReynaEnemyJettRoundStart.mp3}} "Their Jett is playing hard to get. Alright, I'll play."
+|-
+|Barrier Down
+|{{AC|ReynaAllyJettBarrierDown.mp3}} "Okay, Jett. Time to fly."
+|
+|-
+|rowspan=5|{{Ai|KAY/O}}
+|Chat
+|
+:[[File:KAYO icon.png|20px|link=KAYO]] {{AC|KAYOAllyReynaChat.mp3}} "I will work with you, Reyna. I don't have to like it."
+:[[File:Reyna icon.png|20px|link=Reyna]] {{AC|ReynaAllyKAYOChat.mp3}} ''*Reyna scoffs*'' "You'll work with me? What a relief!"
+|
+|-
+|Match Start
+|{{AC|ReynaAllyKAYOMatchStart.mp3}} "KAY/O, you are the solution to a problem that does not exist. Déjame en paz."
+*(''Déjame en paz'': Leave me alone)
+|{{AC|ReynaEnemyKAYOMatchStart.mp3}} "Their KAY/O can believe what he pleases, I do only what is necessary."
+|-
+|Round Start
+|{{AC|ReynaAllyKAYORoundStart.mp3}} "Focus your hate at the enemy, KAY/O, it is wasted on me."
+|{{AC|ReynaEnemyKAYORoundStart.mp3}} "KAY/O, la máquina de muerte muere hoy."
+*(''La máquina de muerte muere hoy'': The murder machine dies today)
+|-
+|Barrier Down
+|
+|{{AC|ReynaEnemyKAYOBarrierDown.mp3}} "KAY/O will not silence us."
+|-
+|Last Kill
+|
+|{{AC|ReynaEnemyKAYOLastKill.mp3}} "Terminado."
+*(Finished.)
+|-
+|rowspan=4|{{Ai|Killjoy}}
+|Match Start 
+|
+|{{AC|ReynaEnemyKilljoyMatchStart.mp3}} "I remember the machines Killjoy made. What they did to- never mind, it does not matter!"
+|-
+|rowspan=2|Round Start
+|
+|{{AC|ReynaEnemyKilljoyRoundStart.mp3}} "Enough with the robots, I want their maker."
+|-
+|
+|{{AC|ReynaEnemyKilljoyRoundStart2.mp3}} "Killjoy is an offense to my Radiance. I'll break her apart!"
+|-
+|Last Kill
+|
+|{{AC|ReynaEnemyKilljoyLastKill.mp3}} "I don't care how bright you are! You'll never be a Radiant!"
+|-
+|rowspan=3|{{Ai|Neon}}
+|Match Start
+|{{AC|ReynaAllyNeonMatchStart.mp3}} "Remember Neon, you are so much more than your powers. Show them."
+|
+|-
+|Round Start
+|{{AC|ReynaAllyNeonRoundStart.mp3}} "Harness your emotions, Neon. Just as we trained."
+|
+|-
+|Barrier Down
+|{{AC|ReynaAllyNeonBarrierDown.mp3}} "Go Neon, defy your limits!"
+|
+|- 
+|rowspan=3|{{Ai|Omen}}
+|Match Start
+|{{AC|ReynaAllyOmenMatchStart.mp3}} "Omen, shall we see who cuts quicker? No harm in a little competition."
+|
+|-
+|Commend
+|{{AC|ReynaAllyOmenCommend.mp3}} "Okay Omen, you won that round."
+|
+|-
+|Barrier Down
+|{{AC|ReynaAllyOmenBarrierDown.mp3}} "Happy hunting, Omen."
+|
+|-
+|rowspan=4|{{Ai|Phoenix}}
+|Match Start
+|{{AC|ReynaAllyPhoenixMatchStart.mp3}} "See you on the front lines, Phoenix. Save some enemies for me."
+|
+|-
+|Round Start 
+|
+|{{AC|ReynaEnemyPhoenixRoundStart.mp3}} "The sun is so bright. Don't worry. I'll kill him."
+|-
+|Barrier Down
+|{{AC|ReynaAllyPhoenixBarrierDown.mp3}} "Light the way, Phoenix."
+|
+|-
+|Kill
+|
+|{{AC|ReynaEnemyPhoenixKill.mp3}} "Phoenix killed."
+|-
+|rowspan=2|{{Ai|Raze}}
+|Commend 
+|{{AC|ReynaAllyRazeCommend.mp3}} "Raze? Good. Never lose your voice."
+|
+|-
+|Kill
+|
+|{{AC|ReynaEnemyRazeKill.mp3}} "Raze dead."
+|-
+|rowspan=4|{{Ai|Reyna}}
+|Match Start
+|
+|{{AC|ReynaEnemyReynaMatchStart.mp3}} "My reflection is here. Do me a favour, cariño. Kill her."
+*(''Cariño'': Darling)
+|-
+|Barrier Down
+|
+|{{AC|ReynaEnemyReynaBarrierDown.mp3}} "You're mine, Reyna."
+|-
+|Kill
+|
+|{{AC|ReynaEnemyReynaKill.mp3}} "Parasite."
+|-
+|Last Kill 
+|
+|{{AC|ReynaEnemyReynaLastKill.mp3}} "Forgive me if I don't grieve."
+|-
+|rowspan=6|{{Ai|Sage}}
+|Chat
+|
+:[[File:Sage icon.png|20px|link=Sage]] {{AC|SageAllyReynaChat.mp3}} "Reyna, there are better ways to survive than your path."
+:[[File:Reyna icon.png|20px|link=Reyna]] {{AC|ReynaAllySageChat.mp3}} "Oh I'm so ashamed. Pobre de mi, how will I live with myself?"
+:*(''Pobre de mi'': Poor me)
+|
+|-
+|Round Start
+|{{AC|ReynaAllySageRoundStart.mp3}} "Sage, we are the perfect pair. You give life. I take it."
+|
+|-
+|Commend
+|{{AC|ReynaAllySageCommend.mp3}} "Gentle Sage is not so gentle after all."
+|
+|-
+|Barrier Down
+|
+|{{AC|ReynaEnemySageBarrierDown.mp3}} "Who will heal their healer?"
+|-
+|Kill
+|
+|{{AC|ReynaEnemySageKill.mp3}} "Ay corazón."
+*(Oh sweetheart.)
+|-
+|Last Kill
+|
+|{{AC|ReynaEnemySageLastKill.mp3}} "I'll send flowers."
+|-
+|rowspan=2|{{Ai|Skye}}
+|Commend 
+|{{AC|ReynaAllySkyeCommend.mp3}} "Skye. This is just the beginning of your power."
+|
+|-
+|Barrier Down
+|{{AC|ReynaAllySkyeBarrierDown.mp3}} "Be strong, Skye."
+|
+|-
+|rowspan=3|{{Ai|Sova}}
+|Round Start
+|{{AC|ReynaAllySovaRoundStart.mp3}} "Sova, be a dear and find them for me."
+|
+|-
+|Commend 
+|{{AC|ReynaAllySovaCommend.mp3}} "I'm impressed, Sova. Even with blood on your hands you're keeping control."
+|
+|-
+|Last Kill
+|
+|{{AC|ReynaEnemySovaLastKill.mp3}} "Who's the hunter now?!"
+|-
+|rowspan=2|{{Ai|Viper}}
+|Round Start 
+|
+|{{AC|ReynaEnemyViperRoundStart.mp3}} "Their Viper is terrifying. I love it!"
+|-
+|Commend
+|{{AC|ReynaAllyViperCommend.mp3}} "Ah, Viper, must you always play with your food?"
+|
+|-
+|{{Ai|Yoru}}
+|Barrier Down
+|
+|{{AC|ReynaEnemyYoruBarrierDown.mp3}} "He won't fool me."
+|}
+
+==Radio Commands==
+===Menu Index only===
+====Caution here====
+*{{AC|ReynaCaution1.mp3}}{{AC|ReynaCaution2.mp3}} "Enemies nearby."
+
+====Going Area====
+*{{AC|ReynaGoingA1.mp3}}{{AC|ReynaGoingA2.mp3}} "Going A."
+*{{AC|ReynaGoingB1.mp3}}{{AC|ReynaGoingB2.mp3}} "Going B."
+*{{AC|ReynaGoingC1.mp3}}{{AC|ReynaGoingC2.mp3}} "Going C."
+*{{AC|ReynaGoingMid1.mp3}}{{AC|ReynaGoingMid2.mp3}} "Going Mid."
+
+====Need Support====
+*{{AC|ReynaHelp1.mp3}}{{AC|ReynaHelp2.mp3}}{{AC|ReynaHelp3.mp3}} "Need help."
+
+====On my way====
+*{{AC|ReynaOnMyWay1.mp3}}{{AC|ReynaOnMyWay2.mp3}} "On my way."
+
+====Play for picks====
+*{{AC|ReynaPlayForPicks1.mp3}}{{AC|ReynaPlayForPicks2.mp3}} "Play for picks."
+
+===Wheel Index only===
+====Encourage====
+*{{AC|ReynaEncouraging1.mp3}}{{AC|ReynaEncouraging2.mp3}}{{AC|ReynaEncouraging3.mp3}} "We've got this."
+
+====I'll lurk====
+Only as Attackers during Buy Phase.
+*{{AC|ReynaLurking1.mp3}}{{AC|ReynaLurking2.mp3}} "I'm lurking."
+
+====I'll push out====
+Only as Defenders during Buy Phase.
+*{{AC|ReynaPushingOut1.mp3}}{{AC|ReynaPushingOut2.mp3}} "I'm pushing out."
+
+====I'm holding position====
+Only as Defenders during Buy Phase.
+*{{AC|ReynaHoldingPosition1.mp3}}{{AC|ReynaHoldingPosition2.mp3}} "Holding position."
+
+====Let's Attack====
+Only during Round Phase.
+*{{AC|ReynaLetsAttack1.mp3}}{{AC|ReynaLetsAttack2.mp3}} "Let's attack."
+
+====Let's hold positions====
+Only as Defenders during Buy Phase.
+*{{AC|ReynaHoldPositions1.mp3}}{{AC|ReynaHoldPositions2.mp3}} "Let's hold positions."
+
+====Let's play slow====
+Only as Attackers at anytime.
+*{{AC|ReynaPlaySlow1.mp3}}{{AC|ReynaPlaySlow2.mp3}} "Let's play slow."
+
+====Let's push out====
+Only as Defenders during Buy Phase.
+*{{AC|ReynaPushOut1.mp3}}{{AC|ReynaPushOut2.mp3}} "Let's push out."
+
+====Let's spread out====
+*{{AC|ReynaSpreadOut1.mp3}}{{AC|ReynaSpreadOut2.mp3}} "Let's spread out."
+
+====Nice Try====
+*{{AC|ReynaNiceTry1.mp3}}{{AC|ReynaNiceTry2.mp3}}{{AC|ReynaNiceTry3.mp3}} "Nice try."
+
+====Stick together====
+*{{AC|ReynaStickTogether1.mp3}}{{AC|ReynaStickTogether2.mp3}} "Stick together."
+
+===Menu and Wheel Index===
+====Commend====
+*{{AC|ReynaCommend1.mp3}}{{AC|ReynaCommend2.mp3}}{{AC|ReynaCommend3.mp3}} "Impressive."
+
+====Fall Back====
+Menu Index at anytime, or Wheel Index only during Round Phase.
+*{{AC|ReynaFallBack1.mp3}}{{AC|ReynaFallBack2.mp3}} "Fall back."
+
+====Hello====
+*{{AC|ReynaHello1.mp3}}{{AC|ReynaHello2.mp3}}{{AC|ReynaHello3.mp3}} "Hola."
+
+====I'll take point====
+Wheel Index only as Attackers during Buy Phase, or Menu Index at anytime regardless of Attackers or Defenders.
+*{{AC|ReynaTakePoint1.mp3}}{{AC|ReynaTakePoint2.mp3}} "I'm taking point."
+
+====Let's rush them (Radio Command)====
+*{{AC|ReynaRush1.mp3}}{{AC|ReynaRush2.mp3}} "Rush them."
+
+====Need healing====
+*{{AC|ReynaHealing1.mp3}}{{AC|ReynaHealing2.mp3}} "I need healing."
+
+====No====
+*{{AC|ReynaNo1.mp3}}{{AC|ReynaNo2.mp3}}{{AC|ReynaNo3.mp3}} "No."
+
+====Sorry====
+*{{AC|ReynaSorry1.mp3}}{{AC|ReynaSorry2.mp3}}{{AC|ReynaSorry3.mp3}} "Forgive me."
+
+====Thanks====
+*{{AC|ReynaThanks1.mp3}}{{AC|ReynaThanks2.mp3}}{{AC|ReynaThanks3.mp3}} "Thank you."
+
+====Ultimate Status====
+*{{AC|ReynaUltDown1.mp3}}{{AC|ReynaUltDown2.mp3}} "My ult's not ready."
+*{{AC|ReynaUltAlmost1.mp3}}{{AC|ReynaUltAlmost2.mp3}} "My ult's almost ready."
+*{{AC|ReynaUltReady1.mp3}}{{AC|ReynaUltReady2.mp3}} "My ult's ready."
+
+====Yes====
+*{{AC|ReynaYes1.mp3}}{{AC|ReynaYes2.mp3}}{{AC|ReynaYes3.mp3}} "Yes."
+
+===Wheel Index requiring Minimap===
+For the following voicelines, the minimap must be open and then open ping wheel and activate strategy.
+====Faking====
+Only as Attackers during Buy Phase.
+*{{AC|ReynaFaking1.mp3}}{{AC|ReynaFaking2.mp3}} "I'm faking."
+*{{AC|ReynaFakingA1.mp3}}{{AC|ReynaFakingA2.mp3}} "I'm faking A."
+*{{AC|ReynaFakingB1.mp3}}{{AC|ReynaFakingB2.mp3}} "I'm faking B."
+*{{AC|ReynaFakingC1.mp3}}{{AC|ReynaFakingC2.mp3}} "I'm faking C."
+
+====I'm Going Here====
+As Defenders during Buy Phase, or as Attackers at anytime.
+*{{AC|ReynaGoingA1.mp3}}{{AC|ReynaGoingA2.mp3}} "Going A."
+*{{AC|ReynaGoingB1.mp3}}{{AC|ReynaGoingB2.mp3}} "Going B."
+*{{AC|ReynaGoingC1.mp3}}{{AC|ReynaGoingC2.mp3}} "Going C."
+*{{AC|ReynaGoingMid1.mp3}}{{AC|ReynaGoingMid2.mp3}} "Going Mid."
+
+====Let's Go Here====
+Only as Attackers during Buy Phase.
+*{{AC|ReynaLetsGoA1.mp3}}{{AC|ReynaLetsGoA2.mp3}} "Let's go A."
+*{{AC|ReynaLetsGoB1.mp3}}{{AC|ReynaLetsGoB2.mp3}} "Let's go B."
+*{{AC|ReynaLetsGoC1.mp3}}{{AC|ReynaLetsGoC2.mp3}} "Let's go C."
+*{{AC|ReynaLetsGoHere1.mp3}}{{AC|ReynaLetsGoHere2.mp3}} "Let's go here."
+
+====Let's rush them (Minimap)====
+Only as Attackers during Buy Phase.
+*{{AC|ReynaLetsRush1.mp3}}{{AC|ReynaLetsRush2.mp3}} "Let's rush them."
+*{{AC|ReynaLetsRushA1.mp3}}{{AC|ReynaLetsRushA2.mp3}} "Let's rush A."
+*{{AC|ReynaLetsRushB1.mp3}}{{AC|ReynaLetsRushB2.mp3}} "Let's rush B."
+*{{AC|ReynaLetsRushC1.mp3}}{{AC|ReynaLetsRushC2.mp3}} "Let's rush C."
+
+====Let's Sneak Here====
+Only as Attackers during Buy Phase.
+*{{AC|ReynaSneakA1.mp3}}{{AC|ReynaSneakA2.mp3}} "Let's sneak A."
+*{{AC|ReynaSneakB1.mp3}}{{AC|ReynaSneakB2.mp3}} "Let's sneak B."
+*{{AC|ReynaSneakC1.mp3}}{{AC|ReynaSneakC2.mp3}} "Let's sneak C."
+*{{AC|ReynaSneakMid1.mp3}}{{AC|ReynaSneakMid2.mp3}} "Let's sneak Mid."
+
+====Let's Stack Here====
+Only as Defenders during Buy Phase.
+*{{AC|ReynaStack1.mp3}}{{AC|ReynaStack2.mp3}} "Let's stack up."
+*{{AC|ReynaStackA1.mp3}}{{AC|ReynaStackA2.mp3}} "Let's stack A."
+*{{AC|ReynaStackB1.mp3}}{{AC|ReynaStackB2.mp3}} "Let's stack B."
+*{{AC|ReynaStackC1.mp3}}{{AC|ReynaStackC2.mp3}} "Let's stack C."
+*{{AC|ReynaStackMid1.mp3}}{{AC|ReynaStackMid2.mp3}} "Let's stack Mid."
+
+====Someone Go Here====
+As Attackers during Round Phase, or as Defenders at anytime.
+*{{AC|ReynaNeedSomeoneA1.mp3}}{{AC|ReynaNeedSomeoneA2.mp3}} "Someone go A."
+*{{AC|ReynaNeedSomeoneB1.mp3}}{{AC|ReynaNeedSomeoneB2.mp3}} "Someone go B."
+*{{AC|ReynaNeedSomeoneC1.mp3}}{{AC|ReynaNeedSomeoneC2.mp3}} "Someone go C."
+*{{AC|ReynaNeedSomeoneMid1.mp3}}{{AC|ReynaNeedSomeoneMid2.mp3}} "Someone go Mid."
+
+====Spike's here====
+Only as Defenders during Round Phase.
+*{{AC|ReynaSpikeA1.mp3}}{{AC|ReynaSpikeA2.mp3}} "Spike's A."
+*{{AC|ReynaSpikeB1.mp3}}{{AC|ReynaSpikeB2.mp3}} "Spike's B."
+*{{AC|ReynaSpikeC1.mp3}}{{AC|ReynaSpikeC2.mp3}} "Spike's C."
+*{{AC|ReynaSpikeMid1.mp3}}{{AC|ReynaSpikeMid2.mp3}} "Spike's Mid."
+*{{AC|ReynaSpikeSpottedASpawn1.mp3}}{{AC|ReynaSpikeSpottedASpawn2.mp3}} "Spike's in Attacker Spawn."
+*{{AC|ReynaSpikeSpottedDSpawn1.mp3}}{{AC|ReynaSpikeSpottedDSpawn2.mp3}} "Spike's in Defender Spawn."
+
+==Pings==
+===General===
+*{{AC|ReynaPing1.mp3}}{{AC|ReynaPing2.mp3}} "There."
+
+===Caution===
+*{{AC|ReynaPingCaution1.mp3}}{{AC|ReynaPingCaution2.mp3}} "Careful here."
+
+===Need support===
+*{{AC|ReynaHelp1.mp3}}{{AC|ReynaHelp2.mp3}}{{AC|ReynaHelp3.mp3}} "Need help!"
+
+===On my mark===
+*{{AC|ReynaOnMyMark1.mp3}}{{AC|ReynaOnMyMark2.mp3}} "On my mark."
+
+===Ping gun===
+*{{AC|ReynaPingGun1.mp3}}{{AC|ReynaPingGun2.mp3}} "Gun here."
+
+===Ping spike===
+*{{AC|ReynaPingSpike1.mp3}}{{AC|ReynaPingSpike2.mp3}} "Spike's here."
+
+===Ping for spike defuse===
+*{{AC|ReynaDefuseSpike1.mp3}}{{AC|ReynaDefuseSpike2.mp3}} "Defuse the spike!"
+
+===Ping for spike plant===
+*{{AC|ReynaPlantSpike1.mp3}}{{AC|ReynaPlantSpike2.mp3}} "Plant the spike!"
+
+===Watching===
+*{{AC|ReynaWatching1.mp3}}{{AC|ReynaWatching2.mp3}} "I'm watching here."
+
+==Other lines==
+===Ability unusable===
+====[[Status Effect#Suppress|Suppressed]]====
+*{{AC|ReynaCantUse1.mp3}}{{AC|ReynaCantUse2.mp3}} "Can't use that."
+
+====On cooldown====
+*{{AC|ReynaOnCooldown1.mp3}}{{AC|ReynaOnCooldown2.mp3}} "Not ready yet."
+
+====No charges====
+*{{AC|ReynaNoCharges1.mp3}}{{AC|ReynaNoCharges2.mp3}} "Out of charges."
+
+===Enemy spotted===
+*{{AC|ReynaEnemyA1.mp3}}{{AC|ReynaEnemyA2.mp3}} "Enemy spotted A."
+*{{AC|ReynaEnemyB1.mp3}}{{AC|ReynaEnemyB2.mp3}} "Enemy spotted B."
+*{{AC|ReynaEnemyC1.mp3}}{{AC|ReynaEnemyC2.mp3}} "Enemy spotted C."
+*{{AC|ReynaEnemyASpawn1.mp3}}{{AC|ReynaEnemyASpawn2.mp3}} "Enemy in Attacker Spawn."
+*{{AC|ReynaEnemyDSpawn1.mp3}}{{AC|ReynaEnemyDSpawn2.mp3}} "Enemy in Defender Spawn."
+*{{AC|ReynaEnemyMid1.mp3}}{{AC|ReynaEnemyMid2.mp3}} "Enemy spotted Mid."
+
+====Multiple====
+*{{AC|ReynaEnemiesA1.mp3}}{{AC|ReynaEnemiesA2.mp3}} "Many enemies A!"
+*{{AC|ReynaEnemiesB1.mp3}}{{AC|ReynaEnemiesB2.mp3}} "Many enemies B!"
+*{{AC|ReynaEnemiesC1.mp3}}{{AC|ReynaEnemiesC2.mp3}} "Many enemies C!"
+*{{AC|ReynaEnemiesASpawn1.mp3}}{{AC|ReynaEnemiesASpawn2.mp3}} "Enemies in Attacker Spawn!"
+*{{AC|ReynaEnemiesDSpawn1.mp3}}{{AC|ReynaEnemiesDSpawn2.mp3}} "Enemies in Defender Spawn!"
+*{{AC|ReynaEnemiesMid1.mp3}}{{AC|ReynaEnemiesMid2.mp3}} "Many enemies Mid!"
+
+===Reloading===
+*{{AC|ReynaReloading1.mp3}}{{AC|ReynaReloading2.mp3}} "Reloading."
+
+===Healed===
+*{{AC|ReynaRelief1.mp3}}{{AC|ReynaRelief2.mp3}}{{AC|ReynaRelief3.mp3}} ''*Reyna sighs*''
+
+===Killed===
+*{{AC|ReynaDeath1.mp3}}{{AC|ReynaDeath2.mp3}}{{AC|ReynaDeath3.mp3}} ''*Reyna groans*''
+
+===Resurrected via {{abi text|Resurrection}}===
+*{{AC|ReynaResurrect.mp3}} "Ah, back where I belong."
+
+===Wounded===
+====Light damage====
+*{{AC|ReynaPainLight1.mp3}}{{AC|ReynaPainLight2.mp3}}{{AC|ReynaPainLight3.mp3}} ''*Reyna groans*''
+
+====Medium damage====
+*{{AC|ReynaPainMedium1.mp3}}{{AC|ReynaPainMedium2.mp3}}{{AC|ReynaPainMedium3.mp3}} ''*Reyna groans*''
+
+====Heavy damage====
+*{{AC|ReynaPainHeavy1.mp3}}{{AC|ReynaPainHeavy2.mp3}}{{AC|ReynaPainHeavy3.mp3}} ''*Reyna groans*''
+
+====Fall damage====
+*{{AC|ReynaPainFall1.mp3}}{{AC|ReynaPainFall2.mp3}}{{AC|ReynaPainFall3.mp3}} ''*Reyna groans*''
+
+==Unused lines==
+==={{abi text|Dismiss}} Cast===
+*{{AC|ReynaDismissCast1.mp3}}{{AC|ReynaDismissCast2.mp3}}{{AC|ReynaDismissCast3.mp3}} ''*Reyna giggles*''
+
+==={{abi text|Empress}}===
+====Ally Cast====
+*{{AC|ReynaUltAllyCast.mp3}} "They will cower!"
+
+====Enemy Cast====
+*{{AC|ReynaUltEnemyCast.mp3}} "The hunt begins!"
+
+====Kill====
+*{{AC|ReynaUltKill1.mp3}}{{AC|ReynaUltKill2.mp3}} "All mine!"
+*{{AC|ReynaUltKill3.mp3}}{{AC|ReynaUltKill4.mp3}} "Oh, the rush."
+*{{AC|ReynaUltKill5.mp3}}{{AC|ReynaUltKill6.mp3}} "More, more!"
+
+===Match MVP===
+*{{AC|ReynaMatchMVP1.mp3}} "If I act superior, it's because I am."
+*{{AC|ReynaMatchMVP2.mp3}} "What can I say. When I want something, I take it."
+
+===Need utility here===
+*{{AC|ReynaNeedUtilityHere1.mp3}}{{AC|ReynaNeedUtilityHere2.mp3}} "Need util here."
+
+==Removed lines==
+===Enemy {{ai|Jett}} Match Start===
+*{{AC|ReynaEnemyJettMatchStart.mp3}} "Oi Jett, I remember being so young. It's good that you'll die before feeling old like me."{{#tag:sup|-{{patchv|13.00}}}}
+
+===Last Kill Enemy MVP===
+*{{AC|ReynaLastKillMVP2.mp3}} "How sad. You're just like everyone else."{{#tag:sup|-{{patchv|13.00}}}}
+
+===Wounded Annoyed===
+*{{AC|ReynaPainAnnoyed1.mp3}}{{AC|ReynaPainAnnoyed2.mp3}}{{AC|ReynaPainAnnoyed3.mp3}} ''*Reyna groans*''
+
+===Spike Spotted General===
+*{{AC|ReynaSpikeSpotted1.mp3}}{{AC|ReynaSpikeSpotted2.mp3}} "Spike spotted."
+
+===Enemy spotted General===
+*{{AC|ReynaEnemy1.mp3}}{{AC|ReynaEnemy2.mp3}} "Enemy spotted."
+
+===Multiple Enemies spotted General===
+*{{AC|ReynaEnemies1.mp3}}{{AC|ReynaEnemies2.mp3}} "Multiple enemies ahead!"
+
+===Be Quiet===
+*{{AC|ReynaBeQuiet1.mp3}}{{AC|ReynaBeQuiet2.mp3}} "Be quiet."
+
+===Rotate===
+*{{AC|ReynaRotating1.mp3}}{{AC|ReynaRotating2.mp3}} "Rotating."
+
+===Let's Rotate===
+*{{AC|ReynaLetsRotate1.mp3}}{{AC|ReynaLetsRotate2.mp3}} "Let's rotate."
+
+===Affirmation===
+*{{AC|ReynaAffirmation1.mp3}}{{AC|ReynaAffirmation2.mp3}} "That's fine."
+
+===Callouts===
+*{{AC|ReynaCalloutA1.mp3}}{{AC|ReynaCalloutA2.mp3}} "A."
+*{{AC|ReynaCalloutB1.mp3}}{{AC|ReynaCalloutB2.mp3}} "B."
+*{{AC|ReynaCalloutC1.mp3}}{{AC|ReynaCalloutC2.mp3}} "C."
+*{{AC|ReynaCalloutMid1.mp3}}{{AC|ReynaCalloutMid2.mp3}} "Mid."
+
+===Clear Area===
+*{{AC|ReynaClearThisArea1.mp3}}{{AC|ReynaClearThisArea2.mp3}} "Clear this area."
+
+===Hold===
+*{{AC|ReynaHold1.mp3}}{{AC|ReynaHold2.mp3}} "Hold."
+
+===Push===
+*{{AC|ReynaPush1.mp3}}{{AC|ReynaPush2.mp3}} "Push forward."
+
+===Regroup===
+*{{AC|ReynaRegroup1.mp3}}{{AC|ReynaRegroup2.mp3}} "Regroup."
+
+===Need disrupt===
+*{{AC|ReynaDisrupt1.mp3}}{{AC|ReynaDisrupt2.mp3}} "Need a disrupt."
+
+===Need scouting===
+*{{AC|ReynaScout1.mp3}}{{AC|ReynaScout2.mp3}} "Need scouting."
+
+===Need vision block===
+*{{AC|ReynaBlockVision1.mp3}}{{AC|ReynaBlockVision2.mp3}} "Need cover."
+
+===Ping enemy utility===
+*{{AC|ReynaPingUtility1.mp3}}{{AC|ReynaPingUtility2.mp3}} "Enemy utility here."
+
+===Ping Go here===
+*{{AC|ReynaGoHere1.mp3}}{{AC|ReynaGoHere2.mp3}} "Go here."
+
+==[[Range/Lore|The Range's lore assets]]==
+===[[Range/Lore/EP7|Episode 7]]===
+*{{AC|file=VoicemailBrimstone60.mp3}} "[[Brimstone]], [[Deadlock]] will not harm [[Gekko]]'s friends, understood? I would hate for our new recruit to make a poor first impression."
+
+===[[Range/Lore/EP8|Episode 8]]===
+*{{AC|file=VoicemailBrimstone86.mp3}} "Is it true? Our history was filled with [[radiants]]?! How long have the [[Scions of Hourglass|Scions]] committed this crime?! No puedo creer los malditos! It is unforgivable! They erased us! This place is our legacy, it belongs to radiants, and they stole it! I will see it returned, and we will destroy the Scions!"
+**(''No puedo creer los malditos'': I can't believe the damned ones)
+
+===[[Range/Lore/V25|Season 2025]]===
+*{{AC|file=VoicemailBrimstone112.mp3}} "Brimstone, I will be out the next two days. My people need my attention. Keep an eye on [[Neon]] and [[Gekko]] for me. Thank you."
+
+==Notes==
+:''To easily see which quotes were added corresponding to the patch, use your browser's Find function and type the patch number (e.g. v13.00).
+*{{ui|Removed}} 2 voice lines removed from patch {{patchv|13.00}}, documented in the patch notes.
+*{{ui|Adjustment}} 1 voice line moved (marked ^) from patch {{patchv|13.00}}.
+*Additional radio commands added in patch {{patchv|8.11}} are not mentioned in this page.
+*Other voice lines removed were at an unknown timeframe.
+
+==Navigation==
+{{Navbox agents}}
+[[Category:Quotes]]

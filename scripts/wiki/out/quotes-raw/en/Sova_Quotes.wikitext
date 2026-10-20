@@ -1,0 +1,878 @@
+{{TOCright}}
+This is a '''list of quotes by {{ai|Sova}}'''. Sova is voiced by Aaron Vodovoz in English. Necessary quotes are translated from Russian to English. Sova has a total of {{PAGESINCATEGORY:Sova Quotes}} files of quotes including unused and removed lines, and excluding [[#The Range's lore assets|The Range's lore assets]].
+
+A downloadable folder containing all the audio files on this page can be found [https://drive.google.com/drive/folders/11jWv4Oe-fXM5kYpo5tpASz1i_pJQMfcc?usp=sharing here].
+
+==Agent Selected==
+*{{AC|SovaPick.mp3}} "Wherever they run, I will find them."
+
+==Abilities==
+==={{abi text|Owl Drone}}===
+====Cast====
+*{{AC|SovaOwlDroneCast1.mp3}} "Deploying drone."
+*{{AC|SovaOwlDroneCast2.mp3}} "Take flight."
+
+====Tagged====
+*{{AC|SovaOwlDroneMark1.mp3}}{{AC|SovaOwlDroneMark4.mp3}} "Enemy marked."
+*{{AC|SovaOwlDroneMark3.mp3}}{{AC|SovaOwlDroneMark2.mp3}} "Enemy tagged."
+
+==={{abi text|Shock Bolt}}===
+====Cast====
+*{{AC|SovaShockBoltCast1.mp3}}{{AC|SovaShockBoltCast2.mp3}} "Shock dart."
+*{{AC|SovaShockBoltCast3.mp3}}{{AC|SovaShockBoltCast4.mp3}} ''*Sova grunts*''
+
+====Kill enemy with bounce cast====
+*{{AC|SovaShockBoltKillDouble1.mp3}} "Trick shot!"
+*{{AC|SovaShockBoltKillDouble2.mp3}} "Any angle!"
+
+==={{abi text|Recon Bolt}}===
+====Cast====
+*{{AC|SovaReconBoltCast1.mp3}}{{AC|SovaReconBoltCast2.mp3}} "Revealing area."
+*{{AC|SovaReconBoltCast3.mp3}}{{AC|SovaReconBoltCast4.mp3}} "Scanning ahead."
+
+====Revealed====
+*{{AC|SovaReconBoltReveal1.mp3}}{{AC|SovaReconBoltReveal2.mp3}} "There they are."
+*{{AC|SovaReconBoltReveal3.mp3}}{{AC|SovaReconBoltReveal4.mp3}} "Found them."
+
+==={{abi text|Hunter's Fury}}===
+====Ally Cast====
+*{{AC|SovaUltAllyCast.mp3}} "I, am the hunter!"
+
+====Enemy Cast====
+*{{AC|SovaUltEnemyCast.mp3}} "Nowhere to run!"
+
+====Kill====
+*{{AC|SovaUltKill1.mp3}} "None escape me."{{#tag:sup|{{patchv|12.04}}+}}
+*{{AC|SovaUltKill2.mp3}} "You cannot escape!"{{#tag:sup|{{patchv|12.04}}+}}
+
+==Buy Phase==
+===Match Start===
+*{{AC|SovaMatchStart1.mp3}} "This bow has taken man and beast alike. I have found there is little difference."
+*{{AC|SovaMatchStart2.mp3}} "There is no retreat. Not when annihilation is at stake. This is our day."
+*{{AC|SovaMatchStart3.mp3}} "Don't be afraid. I've gone through rifts before."
+*{{AC|SovaMatchStart4.mp3}} "I believe in all of you, like I believe in myself."
+*{{AC|SovaMatchStart5.mp3}} "I was told you are all the best. That is why I'm here."
+*{{AC|SovaMatchStart6.mp3}} "You'll have your intel. I promise."
+*{{AC|SovaMatchStart7.mp3}} "You have me. That is good for you."
+*{{AC|SovaMatchStart8.mp3}} "Another day, another battle. So be it. I do not fear blood on my hands."
+
+====Attacking====
+*{{AC|SovaMatchStartAttack1.mp3}} "Remember, the enemy defends this world. It is their home, and that makes them dangerous."
+*{{AC|SovaMatchStartAttack2.mp3}} "We will not withdraw until their radianite is ours."
+
+====Defending====
+*{{AC|SovaMatchStartDefense1.mp3}} "Anyone that lays a hand on our radianite may find a bullet in their jaw."
+*{{AC|SovaMatchStartDefense2.mp3}} "As long as there is breath in your lungs, you have the strength to fight. Hold them back!"
+
+====[[Icebox]]====
+*{{AC|SovaMatchStartIcebox.mp3}} "The cold air feels wonderful!"
+
+===Round Start===
+*{{AC|SovaRoundStart1.mp3}} "Watch them run when lit by my sonar. That's when we strike."
+*{{AC|SovaRoundStart2.mp3}} "Level heads until we're home, yes? Good."
+*{{AC|SovaRoundStart3.mp3}} "If you're not a good shot today, don't worry. There are other ways to be useful."
+*{{AC|SovaRoundStart4.mp3}} "My quiver is never full."
+*{{AC|SovaRoundStart5.mp3}} "What do you say, drone. Ready to stretch your wings?"
+*{{AC|SovaRoundStart6.mp3}} "Stay taut as a bowstring. The fight demands it."
+*{{AC|SovaRoundStart7.mp3}} "We are strong because we are together. Don't forget that."
+*{{AC|SovaRoundStart8.mp3}} "They demand a fight. Who are we to disobey?"
+*{{AC|SovaRoundStart9.mp3}} "Enemies close. Eyes up."
+*{{AC|SovaRoundStart10.mp3}} "Act on my intel. Don't give them time to reposition."
+*{{AC|SovaRoundStart11.mp3}} "A bow and arrow is old fashioned. But sometimes old ways are best."
+
+====Last round won====
+*{{AC|SovaRoundWon1.mp3}} "Keep them in our sights."
+*{{AC|SovaRoundWon2.mp3}} "I have survived more than they have ever seen."
+*{{AC|SovaRoundWon3.mp3}} "Stay on their trail."
+*{{AC|SovaRoundWon4.mp3}} "One step closer."
+
+=====While in the lead=====
+*{{AC|SovaLead1.mp3}} "If we go easy on them, they will never learn."
+*{{AC|SovaLead2.mp3}} "Why are they so determined to die?"
+*{{AC|SovaLead3.mp3}} "I expected better of them."
+
+=====Making a comeback=====
+*{{AC|SovaComeback1.mp3}} "A second wind. Let your senses come alive!"
+*{{AC|SovaComeback2.mp3}} "The winds shift in our favor."
+*{{AC|SovaComeback3.mp3}} "They aren't impervious. We can do this!"
+
+===Last round in the half===
+====Attacking====
+*{{AC|SovaLastRound1.mp3}} "Buy all you need."
+
+====Defending====
+*{{AC|SovaLastRound2.mp3}} "Save nothing."
+
+===Match Point===
+*{{AC|SovaMatchPoint1.mp3}} "We can end it now. Once more!"
+*{{AC|SovaMatchPoint2.mp3}} "Their winter has come. Bury them!"
+
+===Shop===
+====Let's Buy====
+*{{AC|SovaBuying1.mp3}}{{AC|SovaBuying2.mp3}} "I'm gearing up."
+
+====Let's Save====
+*{{AC|SovaSaving1.mp3}}{{AC|SovaSaving2.mp3}} "I'm saving."
+
+====I Have Extra Creds====
+*{{AC|SovaOffer1.mp3}}{{AC|SovaOffer2.mp3}} "I have money."
+
+====Requested====
+*{{AC|SovaRequest1.mp3}}{{AC|SovaRequest2.mp3}} "Need a drop."
+
+===Barrier Down===
+*{{AC|SovaBarrierDown1.mp3}} "Protect our homeland."
+*{{AC|SovaBarrierDown2.mp3}}{{AC|SovaBarrierDown3.mp3}} "Keep them cornered."
+*{{AC|SovaBarrierDown4.mp3}} "Overtake them."
+*{{AC|SovaBarrierDown5.mp3}} "Beat them back."
+*{{AC|SovaBarrierDown6.mp3}} "Find their weakness."
+*{{AC|SovaBarrierDown7.mp3}} "Protect our motherland!"
+*{{AC|SovaBarrierDown8.mp3}} "Leave them no escape!"
+*{{AC|SovaBarrierDown9.mp3}} "Break away."
+*{{AC|SovaBarrierDown10.mp3}} "Never lose sight."
+*{{AC|SovaBarrierDown11.mp3}} "They tire. We don't."
+*{{AC|SovaBarrierDown12.mp3}} "Eyes on target."
+*{{AC|SovaBarrierDown13.mp3}} "Repel them."
+*{{AC|SovaBarrierDown14.mp3}} "Pick them off."
+*{{AC|SovaBarrierDown15.mp3}} "Let us hunt."
+*{{AC|SovaBarrierDown16.mp3}} "Deep breath."
+*{{AC|SovaBarrierDown17.mp3}} "Hunt them down."
+*{{AC|SovaBarrierDown18.mp3}} "Ready."
+*{{AC|SovaBarrierDown19.mp3}} "Come, into the unknown!"
+*{{AC|SovaBarrierDown20.mp3}} "Eyes up."
+*{{AC|SovaBarrierDown21.mp3}} "I'll find them."
+*{{AC|SovaBarrierDown22.mp3}} "Track them down."
+
+==Spike==
+===Forgotten in spawn===
+*{{AC|SovaForgotSpike1.mp3}} "The best of the best and we still forget the spike."
+*{{AC|SovaForgotSpike2.mp3}} "At some point we'll have to get the spike."
+
+===Ally carrier down===
+*{{AC|SovaSpikeDown1.mp3}}{{AC|SovaSpikeDown2.mp3}} "Our spike carrier is dead."
+
+===Dropped===
+*{{AC|SovaSpikeDropped1.mp3}}{{AC|SovaSpikeDropped2.mp3}} "Spike dropped."
+
+===Retrieved===
+*{{AC|SovaSpikePickedUp1.mp3}}{{AC|SovaSpikePickedUp2.mp3}} "I have the spike."
+
+===Planted===
+*{{AC|SovaSpikePlanted1.mp3}}{{AC|SovaSpikePlanted2.mp3}} "Spike planted."
+
+===Spotted===
+*{{AC|SovaSpikeSpottedA1.mp3}}{{AC|SovaSpikeSpottedA2.mp3}} "Spike spotted A."
+*{{AC|SovaSpikeSpottedB1.mp3}}{{AC|SovaSpikeSpottedB2.mp3}} "Spike spotted B."
+*{{AC|SovaSpikeSpottedC1.mp3}}{{AC|SovaSpikeSpottedC2.mp3}} "Spike spotted C."
+*{{AC|SovaSpikeSpottedASpawn1.mp3}}{{AC|SovaSpikeSpottedASpawn2.mp3}} "Spike in Attacker Spawn."
+*{{AC|SovaSpikeSpottedDSpawn1.mp3}}{{AC|SovaSpikeSpottedDSpawn2.mp3}} "Spike in Defender Spawn."
+*{{AC|SovaSpikeSpottedMid1.mp3}}{{AC|SovaSpikeSpottedMid2.mp3}} "Spike spotted Mid."
+
+===Defuse resumed===
+*{{AC|SovaDefuseResumed1.mp3}}{{AC|SovaDefuseResumed2.mp3}} "Back to work."
+
+===Defuse time running out===
+*{{AC|SovaDefuseLate1.mp3}}{{AC|SovaDefuseLate2.mp3}} "Concentrate, Sova."
+
+===Defuse successful===
+*{{AC|SovaDefuseComplete1.mp3}} "You failed. Now flee."
+*{{AC|SovaDefuseComplete2.mp3}} "It is over."
+
+==Kill==
+*{{AC|SovaKill1.mp3}} "Shot down."
+*{{AC|SovaKill2.mp3}} "Neutralized."
+*{{AC|SovaKill3.mp3}} "Enemy down."
+*{{AC|SovaKill4.mp3}} "Silence."
+*{{AC|SovaKill5.mp3}} "Gone."
+*{{AC|SovaKill6.mp3}} "Die."
+*{{AC|SovaKill7.mp3}} "No more."
+*{{AC|SovaKill8.mp3}} "Down."
+*{{AC|SovaKill9.mp3}} "Taken out."
+*{{AC|SovaKill10.mp3}} "Defeated."
+
+===Headshot===
+*{{AC|SovaHeadshot1.mp3}} "Bullseye."
+*{{AC|SovaHeadshot2.mp3}} "Stay down."
+*{{AC|SovaHeadshot3.mp3}} "Clean."
+*{{AC|SovaHeadshot4.mp3}} "On target."
+*{{AC|SovaHeadshot5.mp3}} "No chance."
+*{{AC|SovaHeadshot6.mp3}} "Perfect."
+
+===[[Melee]]===
+*{{AC|SovaMeleeKill1.mp3}} "Rest."
+*{{AC|SovaMeleeKill2.mp3}} "Cut down."
+*{{AC|SovaMeleeKill3.mp3}} "Put down."
+
+===Triple===
+*{{AC|SovaTriple1.mp3}}{{AC|SovaTriple2.mp3}} "Three gone."
+
+===Quadra===
+*{{AC|SovaQuadra1.mp3}}{{AC|SovaQuadra2.mp3}} "Now four."
+
+===One kill remaining (game-mode specific)===
+*{{AC|SovaOneKillLeft1.mp3}}{{AC|SovaOneKillLeft2.mp3}} "One target left."
+
+==Round End==
+===Ace===
+*{{AC|SovaAce1.mp3}} "Is there no one left?"
+*{{AC|SovaAce5.mp3}} "Never come back!"
+*{{AC|SovaAce6.mp3}} "I'll tear through you all!"
+*{{AC|SovaAce7.mp3}} "Who else do you have?!"
+
+===Clutch===
+*{{AC|SovaClutch1.mp3}} "A little recognition is nice, now and then. Thank you."
+*{{AC|SovaClutch2.mp3}} "Do not hunt the hunter."
+*{{AC|SovaClutch3.mp3}} "Is that it?!"{{#tag:sup|{{patchv|12.04}}+}}
+
+===Flawless or Team Ace===
+*{{AC|SovaFlawless1.mp3}} "I love you all."
+*{{AC|SovaFlawless2.mp3}} "You all are wonderful!"
+*{{AC|SovaFlawless3.mp3}} "Now this is worth celebrating!"
+*{{AC|SovaFlawless4.mp3}} "We all did our part!"
+*{{AC|SovaFlawless5.mp3}} "The pack survives!"
+
+===Thrifty===
+*{{AC|SovaThrifty1.mp3}} "They sacrifice for nothing."
+
+===Last Kill===
+*{{AC|SovaLastKill1.mp3}} "Be still."
+*{{AC|SovaLastKill2.mp3}} "Death is cold, friend."
+*{{AC|SovaLastKill3.mp3}} "It is done."
+*{{AC|SovaLastKill4.mp3}} "No more to oppose us."
+*{{AC|SovaLastKill5.mp3}} "Be at rest."
+
+====Enemy MVP====
+There are no voice lines at the moment in this section for this Agent.
+
+====Using [[Melee]]====
+*{{AC|SovaLastKillMelee1.mp3}} "You should pay more attention."
+*{{AC|SovaLastKillMelee2.mp3}} "I'm not just an archer, you know."
+
+===Low HP===
+*{{AC|SovaLowHP1.mp3}} "Close one."
+*{{AC|SovaLowHP2.mp3}} "Nice shot."
+
+==Match End==
+===Match Win===
+*{{AC|SovaMatchWin1.mp3}} "Today is not our day to die."
+*{{AC|SovaMatchWin2.mp3}} "I'm not tired. Are you?"
+*{{AC|SovaMatchWin3.mp3}} "Okay, that is done."
+*{{AC|SovaMatchWin4.mp3}} "Tracked and hunted."
+
+====[[Icebox]]====
+*{{AC|SovaMatchWinIcebox.mp3}} "The snow should hide our tracks. We were never here."
+
+===Runner-up (game-mode specific)===
+*{{AC|SovaRunnerUp1.mp3}} "Good. Next time, better."
+*{{AC|SovaRunnerUp2.mp3}} "This will do."
+*{{AC|SovaRunnerUp3.mp3}} "I am pleased."
+
+==Agent-specific interactions==
+{| class="wikitable sortable"
+!To Agent
+!Scenario
+!width=40%; class=unsortable|Ally
+!width=40%; class=unsortable|Enemy
+|-
+|Any Male [[Agent]]
+|Kill
+|
+|{{AC|SovaEnemyMaleKill.mp3}} "Sleep, brother."
+|-
+|rowspan=3|{{Ai|Breach}}
+|Match Start
+|{{AC|SovaAllyBreachMatchStart2.mp3}} "Breach and I are here. Loyal wolf, mad hound. So give the order! Let slip your dogs of war."{{#tag:sup|{{patchv|12.04}}+}}
+|{{AC|SovaEnemyBreachMatchStart.mp3}} "Their Breach has no patience at all. He attacks fast, be ready to move."
+|-
+|Barrier Down
+|
+|{{AC|SovaEnemyBreachBarrierDown.mp3}} "Stop their Breach at all costs."
+|-
+|Kill
+|
+|{{AC|SovaEnemyBreachKill.mp3}} "Thug."
+|-
+|rowspan=6|{{Ai|Brimstone}}
+|Match Start
+|{{AC|SovaAllyBrimstoneMatchStart.mp3}} "Brimstone, after we win, I'll buy you a drink if you share a memory with us."
+|
+|-
+|Round Start 
+|{{AC|SovaAllyBrimstoneRoundStart.mp3}} "Lead us to victory, Brimstone."
+|
+|-
+|Commend
+|{{AC|SovaAllyBrimstoneCommend.mp3}} "Brimstone! You are a true leader!"
+|
+|-
+|Barrier Down
+|{{AC|SovaAllyBrimstoneBarrierDown.mp3}} "At your command, Brimstone."
+|
+|-
+|Kill
+|
+|{{AC|SovaEnemyBrimstoneKill.mp3}} "Captain killed."
+|-
+|Last Kill 
+|
+|{{AC|SovaEnemyBrimstoneLastKill.mp3}} "Be at peace, my friend."
+|-
+|{{ai|Chamber}}
+|Round Start
+|{{AC|SovaAllyChamberRoundStart.mp3}} "Chamber, you are a good shot. But when you can bounce your bullets off the wall, then I'll be impressed."
+|
+|-
+|rowspan=7|{{Ai|Cypher}}
+|Chat
+|
+:[[File:Cypher icon.png|20px|link=Cypher]] {{AC|CypherAllySovaChat.mp3}} "Sova, I accessed your background file, a good story! But that's not really how you lost your eye."
+:[[File:Sova icon.png|20px|link=Sova]] {{AC|SovaAllyCypherChat.mp3}} "And your file is missing, Amir. Explain that."
+|
+|-
+|Match Start
+|{{AC|SovaAllyCypherMatchStart.mp3}} "You've buried your secrets well, Cypher. But I am a hunter, and I will find them."
+|
+|-
+|Round Start
+|
+|{{AC|SovaEnemyCypherRoundStart.mp3}} "Take out Cypher's cameras. He's weak when he's blind."
+|-
+|Commend
+|{{AC|SovaAllyCypherCommend.mp3}} "Okay Cypher, I admit. That was good."
+|
+|-
+|Barrier Down
+|
+|{{AC|SovaEnemyCypherBarrierDown.mp3}} "I'm done with Cypher's secrets."
+|-
+|Kill
+|
+|{{AC|SovaEnemyCypherKill.mp3}} "No more secrets."
+|-
+|Last Kill 
+|
+|{{AC|SovaEnemyCypherLastKill.mp3}} "Goodbye, Cypher. You will not be missed."
+|-
+|rowspan=5|{{ai|Fade}}
+|Match Start
+|{{AC|SovaAllyFadeMatchStart.mp3}} "Fade, with you and I on the field, the enemy's plans will crumble."
+|{{AC|SovaEnemyFadeMatchStart.mp3}} "The Fade will use our fear against us. So it is better to be fearless I think."
+|-
+|Round Start
+|
+|{{AC|SovaEnemyFadeRoundStart.mp3}} "The monsters that Fade commands are imitations at best. She does not frighten me."
+|-
+|Commend
+|{{AC|SovaAllyFadeCommend.mp3}} "Fade, well fought! There is no other hunter quite like you."
+|
+|-
+|Barrier Down
+|{{AC|SovaAllyFadeBarrierDown.mp3}} "Swiftly and silent, Fade."
+|{{AC|SovaEnemyFadeBarrierDown.mp3}} "Now, swallow your fear!"
+|-
+|Last Kill
+|
+|{{AC|SovaEnemyFadeLastKill.mp3}} "The hunt does not always go as planned, does it?"
+|-
+|rowspan=4|{{Ai|Jett}}
+|Match Start
+|
+|{{AC|SovaEnemyJettMatchStart.mp3}} "Their Jett is fast! So are rabbits and squirrels. I hunt both."
+|-
+|Round Start
+|{{AC|SovaAllyJettRoundStart.mp3}} "May the wind guide your blades, Jett, and my arrows."
+|{{AC|SovaEnemyJettRoundStart.mp3}} "Listen for the wind. It will tell you where their Jett is."
+|-
+|Commend
+|{{AC|SovaAllyJettCommend.mp3}} "Jett! You were amazing!"
+|
+|-
+|Barrier Down
+|{{AC|SovaAllyJettBarrierDown.mp3}} "Jett, fly safe."
+|
+|-
+|{{Ai|Killjoy}}
+|Match Start
+|
+|{{AC|SovaEnemyKilljoyMatchStart.mp3}} "Killjoy is no threat without her toys. Break them and remove her."
+|-
+|{{ai|Neon}}
+|Round Start
+|{{AC|SovaAllyNeonRoundStart.mp3}} "Neon, perhaps I will nock an arrow in advance. There is very little time to react once you start the fight."
+|
+|-
+|rowspan=5|{{Ai|Omen}}
+|Match Start
+|{{AC|SovaAllyOmenMatchStart.mp3}} "Omen, we will find your answer. You will not be this way forever. I promise."
+|
+|-
+|Round Start
+|{{AC|SovaAllyOmenRoundStart.mp3}} "Don't forget who you are, Omen. A man, not a monster."
+|{{AC|SovaEnemyOmenRoundStart.mp3}} "It is difficult tracking their Omen, but not impossible. I can do it."
+|-
+|Commend
+|{{AC|SovaAllyOmenCommend.mp3}} "Thank you, Omen. Startled prey is easier to hunt."
+|
+|-
+|Barrier Down
+|{{AC|SovaAllyOmenBarrierDown.mp3}} "Be strong, Omen."
+|
+|-
+|Last Kill
+|
+|{{AC|SovaEnemyOmenLastKill.mp3}} "I've survived much worse than you."{{#tag:sup|{{patchv|13.00}}^}}
+|-
+|rowspan=2|{{Ai|Phoenix}}
+|Round Start
+|{{AC|SovaAllyPhoenixRoundStart.mp3}} "In the wild, fire means life. You be our fire, Phoenix."
+|
+|-
+|Commend
+|{{AC|SovaAllyPhoenixCommend.mp3}} "Вот это да. No one can beat our Phoenix!"
+*(''Вот это да'': Wow)
+|
+|-
+|rowspan=2|{{Ai|Raze}}
+|Round Start
+|{{AC|SovaAllyRazeRoundStart.mp3}} "Raze, you always work to lift our spirits. Thank you."
+|
+|-
+|Kill
+|
+|{{AC|SovaEnemyRazeKill.mp3}} "Quiet now."
+|-
+|{{Ai|Reyna}}
+|Match Start
+|
+|{{AC|SovaEnemyReynaMatchStart.mp3}} "Their Reyna prepares on the other side. Kill her before she becomes monstrous."
+|-
+|rowspan=4|{{Ai|Sage}}
+|Commend
+|{{AC|SovaAllySageCommend.mp3}} "I did not expect a healer to fight so well. You are incredible."
+|
+|-
+|Round Start
+|
+|{{AC|SovaEnemySageRoundStart.mp3}} "Drive Sage out, then gut the rest."{{#tag:sup|{{patchv|12.04}}+}}
+|-
+|Barrier Down
+|{{AC|SovaAllySageBarrierDown.mp3}} "Sage, protect the others."
+|{{AC|SovaEnemySageBarrierDown.mp3}} "Take out their healer."
+|-
+|Last Kill
+|
+|{{AC|SovaEnemySageLastKill.mp3}} "Sage has fallen. VALORANT will follow."{{#tag:sup|{{patchv|12.04}}+}}
+|-
+|rowspan=7|{{Ai|Sova}}
+|rowspan=2|Match Start
+|
+|{{AC|SovaEnemySovaMatchStart.mp3}} "Sova, I spared you when we first met. I can't let you go again."
+|-
+|
+|{{AC|SovaEnemySovaMatchStart2.mp3}} "This time, I will take more than just your eye, Sasha."{{#tag:sup|{{patchv|12.04}}+}}
+|-
+|Round Start
+|
+|{{AC|SovaEnemySovaRoundStart.mp3}} "I must kill my reflection. It's the only way forward."
+|-
+|Barrier Down
+|
+|{{AC|SovaEnemySovaBarrierDown.mp3}} "Беги, Sova."
+*(''Беги'': Run)
+|-
+|Kill
+|
+|{{AC|SovaEnemySovaKill.mp3}} "A fine death."
+|-
+|rowspan=2|Last Kill
+|
+|{{AC|SovaEnemySovaLastKill.mp3}} "It was you, or me."
+|-
+|
+|{{AC|SovaEnemySovaLastKill2.mp3}} "Winter has come for you, hunter."{{#tag:sup|{{patchv|12.04}}+}}
+|-
+|rowspan=4|{{Ai|Viper}}
+|rowspan=2|Match Start 
+|{{AC|SovaAllyViperMatchStart.mp3}} "Your justice frightens me, Viper. Is there no other way to find peace?"
+|
+|-
+|{{AC|SovaAllyViperMatchStart2.mp3}} "Viper, signal your mark. I will return with their head in hand."{{#tag:sup|{{patchv|12.04}}+}}
+|
+|-
+|Round Start
+|
+|{{AC|SovaEnemyViperRoundStart.mp3}} "I will put their Viper down. It is mercy."
+|-
+|Commend
+|{{AC|SovaAllyViperCommend.mp3}} "Viper. For a scientist, you are very violent."
+|
+|-
+|rowspan=4|{{Ai|Yoru}}
+|Match Start
+|{{AC|SovaAllyYoruMatchStart.mp3}} "Yoru, we sever the limbs of these beasts together."{{#tag:sup|{{patchv|12.04}}+}}
+|
+|}
+
+==Radio Commands==
+===Menu Index only===
+====Caution here====
+*{{AC|SovaCaution1.mp3}}{{AC|SovaCaution2.mp3}} "Enemies close."
+
+====Going Area====
+*{{AC|SovaGoingA1.mp3}}{{AC|SovaGoingA2.mp3}} "Going A."
+*{{AC|SovaGoingB1.mp3}}{{AC|SovaGoingB2.mp3}} "Going B."
+*{{AC|SovaGoingC1.mp3}}{{AC|SovaGoingC2.mp3}} "Going C."
+*{{AC|SovaGoingMid1.mp3}}{{AC|SovaGoingMid2.mp3}} "Going Mid."
+
+====Need Support====
+*{{AC|SovaHelp1.mp3}}{{AC|SovaHelp2.mp3}}{{AC|SovaHelp3.mp3}} "Need help."
+
+====On my way====
+*{{AC|SovaOnMyWay1.mp3}}{{AC|SovaOnMyWay2.mp3}} "On my way."
+
+====Play for picks====
+*{{AC|SovaPlayForPicks1.mp3}}{{AC|SovaPlayForPicks2.mp3}} "Play for picks."
+
+===Wheel Index only===
+====Encourage====
+*{{AC|SovaEncouraging1.mp3}}{{AC|SovaEncouraging2.mp3}}{{AC|SovaEncouraging3.mp3}} "We can do this."
+
+====I'll lurk====
+Only as Attackers during Buy Phase.
+*{{AC|SovaLurking1.mp3}}{{AC|SovaLurking2.mp3}} "I'm lurking."
+
+====I'll push out====
+Only as Defenders during Buy Phase.
+*{{AC|SovaPushingOut1.mp3}}{{AC|SovaPushingOut2.mp3}} "I'm pushing out."
+
+====I'm holding position====
+Only as Defenders during Buy Phase.
+*{{AC|SovaHoldingPosition1.mp3}}{{AC|SovaHoldingPosition2.mp3}} "Holding position."
+
+====Let's Attack====
+Only during Round Phase.
+*{{AC|SovaLetsAttack1.mp3}}{{AC|SovaLetsAttack2.mp3}} "Let's attack."
+
+====Let's hold positions====
+Only as Defenders during Buy Phase.
+*{{AC|SovaHoldPositions1.mp3}}{{AC|SovaHoldPositions2.mp3}} "Let's hold positions."
+
+====Let's play slow====
+Only as Attackers at anytime.
+*{{AC|SovaPlaySlow1.mp3}}{{AC|SovaPlaySlow2.mp3}} "Let's play slow."
+
+====Let's push out====
+Only as Defenders during Buy Phase.
+*{{AC|SovaPushOut1.mp3}}{{AC|SovaPushOut2.mp3}} "Let's push out."
+
+====Let's spread out====
+*{{AC|SovaSpreadOut1.mp3}}{{AC|SovaSpreadOut2.mp3}} "Let's spread out."
+
+====Nice Try====
+*{{AC|SovaNiceTry1.mp3}}{{AC|SovaNiceTry2.mp3}}{{AC|SovaNiceTry3.mp3}} "Good attempt."
+
+====Stick together====
+*{{AC|SovaStickTogether1.mp3}}{{AC|SovaStickTogether2.mp3}} "Stick together."
+
+===Menu and Wheel Index===
+====Commend====
+*{{AC|SovaCommend1.mp3}}{{AC|SovaCommend2.mp3}}{{AC|SovaCommend3.mp3}} "Good."
+
+====Fall Back====
+Menu Index at anytime, or Wheel Index only during Round Phase.
+*{{AC|SovaFallBack1.mp3}}{{AC|SovaFallBack2.mp3}} "Fall back."
+
+====Hello====
+*{{AC|SovaHello1.mp3}}{{AC|SovaHello2.mp3}}{{AC|SovaHello3.mp3}} "Hello."
+
+====I'll take point====
+Wheel Index only as Attackers during Buy Phase, or Menu Index at anytime regardless of Attackers or Defenders.
+*{{AC|SovaTakePoint1.mp3}}{{AC|SovaTakePoint2.mp3}} "Taking point."
+
+====Let's rush them (Radio Command)====
+*{{AC|SovaRush1.mp3}}{{AC|SovaRush2.mp3}} "Rush them."
+
+====Need healing====
+*{{AC|SovaHealing1.mp3}}{{AC|SovaHealing2.mp3}} "Need healing."
+
+====No====
+*{{AC|SovaNo1.mp3}}{{AC|SovaNo2.mp3}}{{AC|SovaNo3.mp3}} "No."
+
+====Sorry====
+*{{AC|SovaSorry1.mp3}}{{AC|SovaSorry2.mp3}}{{AC|SovaSorry3.mp3}} "Sorry."
+
+====Thanks====
+*{{AC|SovaThanks1.mp3}}{{AC|SovaThanks2.mp3}}{{AC|SovaThanks3.mp3}} "Thanks."
+
+====Ultimate Status====
+*{{AC|SovaUltDown1.mp3}}{{AC|SovaUltDown2.mp3}} "My ult's not ready."
+*{{AC|SovaUltAlmost1.mp3}}{{AC|SovaUltAlmost2.mp3}} "Ult's almost ready."
+*{{AC|SovaUltReady1.mp3}}{{AC|SovaUltReady2.mp3}} "My ult is ready."
+
+====Yes====
+*{{AC|SovaYes1.mp3}}{{AC|SovaYes2.mp3}} "Yes."
+*{{AC|SovaYes3.mp3}}{{AC|SovaYes4.mp3}} "Да."
+**(Yes.)
+
+===Wheel Index requiring Minimap===
+For the following voicelines, the minimap must be open and then open ping wheel and activate strategy.
+====Faking====
+Only as Attackers during Buy Phase.
+*{{AC|SovaFaking1.mp3}}{{AC|SovaFaking2.mp3}} "I'm faking."
+*{{AC|SovaFakingA1.mp3}}{{AC|SovaFakingA2.mp3}} "I'm faking A."
+*{{AC|SovaFakingB1.mp3}}{{AC|SovaFakingB2.mp3}} "I'm faking B."
+*{{AC|SovaFakingC1.mp3}}{{AC|SovaFakingC2.mp3}} "I'm faking C."
+
+====I'm Going Here====
+As Defenders during Buy Phase, or as Attackers at anytime.
+*{{AC|SovaGoingA1.mp3}}{{AC|SovaGoingA2.mp3}} "Going A."
+*{{AC|SovaGoingB1.mp3}}{{AC|SovaGoingB2.mp3}} "Going B."
+*{{AC|SovaGoingC1.mp3}}{{AC|SovaGoingC2.mp3}} "Going C."
+*{{AC|SovaGoingMid1.mp3}}{{AC|SovaGoingMid2.mp3}} "Going Mid."
+
+====Let's Go Here====
+Only as Attackers during Buy Phase.
+*{{AC|SovaLetsGoA1.mp3}}{{AC|SovaLetsGoA2.mp3}} "Let's go A."
+*{{AC|SovaLetsGoB1.mp3}}{{AC|SovaLetsGoB2.mp3}} "Let's go B."
+*{{AC|SovaLetsGoC1.mp3}}{{AC|SovaLetsGoC2.mp3}} "Let's go C."
+*{{AC|SovaLetsGoHere1.mp3}}{{AC|SovaLetsGoHere2.mp3}} "Let's go here."
+
+====Let's rush them (Minimap)====
+Only as Attackers during Buy Phase.
+*{{AC|SovaLetsRush1.mp3}}{{AC|SovaLetsRush2.mp3}} "Let's rush them."
+*{{AC|SovaLetsRushA1.mp3}}{{AC|SovaLetsRushA2.mp3}} "Let's rush A."
+*{{AC|SovaLetsRushB1.mp3}}{{AC|SovaLetsRushB2.mp3}} "Let's rush B."
+*{{AC|SovaLetsRushC1.mp3}}{{AC|SovaLetsRushC2.mp3}} "Let's rush C."
+
+====Let's Sneak Here====
+Only as Attackers during Buy Phase.
+*{{AC|SovaSneakA1.mp3}}{{AC|SovaSneakA2.mp3}} "Let's sneak A."
+*{{AC|SovaSneakB1.mp3}}{{AC|SovaSneakB2.mp3}} "Let's sneak B."
+*{{AC|SovaSneakC1.mp3}}{{AC|SovaSneakC2.mp3}} "Let's sneak C."
+*{{AC|SovaSneakMid1.mp3}}{{AC|SovaSneakMid2.mp3}} "Let's sneak Mid."
+
+====Let's Stack Here====
+Only as Defenders during Buy Phase.
+*{{AC|SovaStack1.mp3}}{{AC|SovaStack2.mp3}} "Let's stack up."
+*{{AC|SovaStackA1.mp3}}{{AC|SovaStackA2.mp3}} "Let's stack A."
+*{{AC|SovaStackB1.mp3}}{{AC|SovaStackB2.mp3}} "Let's stack B."
+*{{AC|SovaStackC1.mp3}}{{AC|SovaStackC2.mp3}} "Let's stack C."
+*{{AC|SovaStackMid1.mp3}}{{AC|SovaStackMid2.mp3}} "Let's stack Mid."
+
+====Someone Go Here====
+As Attackers during Round Phase, or as Defenders at anytime.
+*{{AC|SovaNeedSomeoneA1.mp3}}{{AC|SovaNeedSomeoneA2.mp3}} "Someone go A."
+*{{AC|SovaNeedSomeoneB1.mp3}}{{AC|SovaNeedSomeoneB2.mp3}} "Someone go B."
+*{{AC|SovaNeedSomeoneC1.mp3}}{{AC|SovaNeedSomeoneC2.mp3}} "Someone go C."
+*{{AC|SovaNeedSomeoneMid1.mp3}}{{AC|SovaNeedSomeoneMid2.mp3}} "Someone go Mid."
+
+====Spike's here====
+Only as Defenders during Round Phase.
+*{{AC|SovaSpikeA1.mp3}}{{AC|SovaSpikeA2.mp3}} "Spike's A."
+*{{AC|SovaSpikeB1.mp3}}{{AC|SovaSpikeB2.mp3}} "Spike's B."
+*{{AC|SovaSpikeC1.mp3}}{{AC|SovaSpikeC2.mp3}} "Spike's C."
+*{{AC|SovaSpikeMid1.mp3}}{{AC|SovaSpikeMid2.mp3}} "Spike's Mid."
+*{{AC|SovaSpikeSpottedASpawn1.mp3}}{{AC|SovaSpikeSpottedASpawn2.mp3}} "Spike in Attacker Spawn."
+*{{AC|SovaSpikeSpottedDSpawn1.mp3}}{{AC|SovaSpikeSpottedDSpawn2.mp3}} "Spike in Defender Spawn."
+
+==Pings==
+===General===
+*{{AC|SovaPing1.mp3}}{{AC|SovaPing2.mp3}} "Right here."
+
+===Caution===
+*{{AC|SovaPingCaution1.mp3}}{{AC|SovaPingCaution2.mp3}} "Caution here."
+
+===Need support===
+*{{AC|SovaHelp1.mp3}}{{AC|SovaHelp2.mp3}}{{AC|SovaHelp3.mp3}} "Need help!"
+
+===On my mark===
+*{{AC|SovaOnMyMark1.mp3}}{{AC|SovaOnMyMark2.mp3}} "On my mark."
+
+===Ping gun===
+*{{AC|SovaPingGun1.mp3}}{{AC|SovaPingGun2.mp3}} "Gun here."
+
+===Ping spike===
+*{{AC|SovaPingSpike1.mp3}}{{AC|SovaPingSpike2.mp3}} "Spike's here."
+
+===Ping for spike defuse===
+*{{AC|SovaDefuseSpike1.mp3}}{{AC|SovaDefuseSpike2.mp3}} "Defuse the spike!"
+
+===Ping for spike plant===
+*{{AC|SovaPlantSpike1.mp3}}{{AC|SovaPlantSpike2.mp3}} "Plant the spike!"
+
+===Watching===
+*{{AC|SovaWatching1.mp3}}{{AC|SovaWatching2.mp3}} "Watching here."
+
+==Other lines==
+===Ability unusable===
+====[[Status Effect#Suppress|Suppressed]]====
+*{{AC|SovaCantUse1.mp3}} "I cannot use that."
+
+====On cooldown====
+*{{AC|SovaOnCooldown1.mp3}} "Not ready yet."
+
+====No charges====
+*{{AC|SovaNoCharges1.mp3}} "Out of charges."
+
+===Enemy spotted===
+*{{AC|SovaEnemyA1.mp3}}{{AC|SovaEnemyA2.mp3}} "Enemy spotted A."
+*{{AC|SovaEnemyB1.mp3}}{{AC|SovaEnemyB2.mp3}} "Enemy spotted B."
+*{{AC|SovaEnemyC1.mp3}}{{AC|SovaEnemyC2.mp3}} "Enemy spotted C."
+*{{AC|SovaEnemyASpawn1.mp3}}{{AC|SovaEnemyASpawn2.mp3}} "Enemy in Attacker Spawn."
+*{{AC|SovaEnemyDSpawn1.mp3}}{{AC|SovaEnemyDSpawn2.mp3}} "Enemy in Defender Spawn."
+*{{AC|SovaEnemyMid1.mp3}}{{AC|SovaEnemyMid2.mp3}} "Enemy spotted Mid."
+
+====Multiple====
+*{{AC|SovaEnemiesA1.mp3}}{{AC|SovaEnemiesA2.mp3}} "Multiple enemies A!"
+*{{AC|SovaEnemiesB1.mp3}}{{AC|SovaEnemiesB2.mp3}} "Multiple enemies B!"
+*{{AC|SovaEnemiesC1.mp3}}{{AC|SovaEnemiesC2.mp3}} "Multiple enemies C!"
+*{{AC|SovaEnemiesASpawn1.mp3}}{{AC|SovaEnemiesASpawn2.mp3}} "Many enemies at Attacker Spawn!"
+*{{AC|SovaEnemiesDSpawn1.mp3}}{{AC|SovaEnemiesDSpawn2.mp3}} "Many enemies at Defender Spawn!"
+*{{AC|SovaEnemiesMid1.mp3}}{{AC|SovaEnemiesMid2.mp3}} "Multiple enemies Mid!"
+
+===Reloading===
+*{{AC|SovaReloading1.mp3}}{{AC|SovaReloading2.mp3}} "Reloading."
+
+===Healed===
+*{{AC|SovaRelief1.mp3}}{{AC|SovaRelief2.mp3}}{{AC|SovaRelief3.mp3}} ''*Sova sighs*''
+
+===Killed===
+*{{AC|SovaDeath1.mp3}}{{AC|SovaDeath2.mp3}}{{AC|SovaDeath3.mp3}}{{AC|SovaDeath4.mp3}} ''*Sova groans*''
+
+===Resurrected via {{abi text|Resurrection}}===
+*{{AC|SovaResurrect.mp3}} "They should've dug a deeper grave."
+*{{AC|SovaResurrect2.mp3}} "Thank you."
+
+===Wounded===
+====Light damage====
+*{{AC|SovaPainLight1.mp3}}{{AC|SovaPainLight2.mp3}}{{AC|SovaPainLight3.mp3}} ''*Sova groans*''
+
+====Medium damage====
+*{{AC|SovaPainMedium1.mp3}}{{AC|SovaPainMedium2.mp3}}{{AC|SovaPainMedium3.mp3}} ''*Sova groans*''
+
+====Heavy damage====
+*{{AC|SovaPainHeavy1.mp3}}{{AC|SovaPainHeavy2.mp3}}{{AC|SovaPainHeavy3.mp3}} ''*Sova groans*''
+
+====Fall damage====
+*{{AC|SovaPainFall1.mp3}}{{AC|SovaPainFall2.mp3}}{{AC|SovaPainFall3.mp3}} ''*Sova groans*''
+
+==Unused lines==
+===Match MVP===
+*{{AC|SovaMatchMVP1.mp3}} "A little recognition is nice, now and then. Thank you."
+*{{AC|SovaMatchMVP2.mp3}} "My babushka told me not to brag. But for this I make an exception!"
+**(''Babushka'': Grandma)
+*{{AC|SovaMatchMVP3.mp3}} "You were nothing compared to the alpha!"
+*{{AC|SovaMatchMVP4.mp3}} "Good thing I was with you, yes?"
+
+==Removed lines==
+===Ally {{ai|Phoenix}} Chat===
+:[[File:Phoenix icon.png|20px|link=Phoenix]] {{AC|PhoenixAllySovaChat.mp3}} "Hey Sova! We're gonna hit the chessboard after this yeah?"
+:[[File:Sova icon.png|20px|link=Sova]] {{AC|SovaAllyPhoenixChat.mp3}} "You lack the patience, friend. Learn that first, then we'll approach strategy."{{#tag:sup|-{{patchv|12.04}}}}
+
+===Ally {{ai|Breach}} Match Start===
+*{{AC|SovaAllyBreachMatchStart.mp3}} "Breach, we can only follow up if you wait for us. Nothing comes from rushing."{{#tag:sup|-{{patchv|12.04}}}}
+
+===Ace===
+*{{AC|SovaAce2.mp3}} "You cannot escape!"{{#tag:sup|-{{patchv|12.04}}}}
+*{{AC|SovaAce3.mp3}} "None escape me."{{#tag:sup|-{{patchv|12.04}}}}
+*{{AC|SovaAce4.mp3}} "Is that it?!"{{#tag:sup|-{{patchv|12.04}}}}
+
+===Last Kill Enemy MVP===
+*{{AC|SovaLastKillMVP2.mp3}} "No one escapes my sight. No one."{{#tag:sup|-{{patchv|13.00}}}}
+
+===Match Start===
+*{{AC|SovaMatchStart9.mp3}} "My friends, good news. The new recruit is now combat ready. Even if they weren't, the radiant power certainly helps."
+
+===Wounded Annoyed===
+*{{AC|SovaPainAnnoyed1.mp3}}{{AC|SovaPainAnnoyed2.mp3}}{{AC|SovaPainAnnoyed3.mp3}}{{AC|SovaPainAnnoyed4.mp3}} ''*Sova groans*''
+
+===Spike Spotted General===
+*{{AC|SovaSpikeSpotted1.mp3}}{{AC|SovaSpikeSpotted2.mp3}} "I see the spike."
+
+===Enemy spotted General===
+*{{AC|SovaEnemy1.mp3}}{{AC|SovaEnemy2.mp3}} "Enemy spotted."
+
+===Multiple Enemies spotted General===
+*{{AC|SovaEnemies1.mp3}}{{AC|SovaEnemies2.mp3}} "Multiple enemies!"
+
+===Be Quiet===
+*{{AC|SovaBeQuiet1.mp3}}{{AC|SovaBeQuiet2.mp3}} "Be quiet."
+
+===Rotate===
+*{{AC|SovaRotating1.mp3}}{{AC|SovaRotating2.mp3}} "Rotating."
+
+===Let's Rotate===
+*{{AC|SovaLetsRotate1.mp3}}{{AC|SovaLetsRotate2.mp3}} "Rotate."
+
+===Affirmation===
+*{{AC|SovaAffirmation1.mp3}}{{AC|SovaAffirmation2.mp3}} "I agree."
+
+===Callouts===
+*{{AC|SovaCalloutA1.mp3}}{{AC|SovaCalloutA2.mp3}} "A."
+*{{AC|SovaCalloutB1.mp3}}{{AC|SovaCalloutB2.mp3}} "B."
+*{{AC|SovaCalloutC1.mp3}}{{AC|SovaCalloutC2.mp3}} "C."
+*{{AC|SovaCalloutMid1.mp3}}{{AC|SovaCalloutMid2.mp3}} "Mid."
+
+===Clear Area===
+*{{AC|SovaClearThisArea1.mp3}}{{AC|SovaClearThisArea2.mp3}} "Clear this area."
+
+===Hold===
+*{{AC|SovaHold1.mp3}}{{AC|SovaHold2.mp3}} "Hold."
+
+===Push===
+*{{AC|SovaPush1.mp3}}{{AC|SovaPush2.mp3}} "Push."
+
+===Regroup===
+*{{AC|SovaRegroup1.mp3}}{{AC|SovaRegroup2.mp3}} "Regroup."
+
+===Need disrupt===
+*{{AC|SovaDisrupt1.mp3}}{{AC|SovaDisrupt2.mp3}} "Disrupt here."
+
+===Need scouting===
+*{{AC|SovaScout1.mp3}}{{AC|SovaScout2.mp3}} "Scout here."
+
+===Need vision block===
+*{{AC|SovaBlockVision1.mp3}}{{AC|SovaBlockVision2.mp3}} "Block vision here."
+
+===Ping enemy utility===
+*{{AC|SovaPingUtility1.mp3}}{{AC|SovaPingUtility2.mp3}} "Enemy utility here."
+
+===Ping Go here===
+*{{AC|SovaGoHere1.mp3}}{{AC|SovaGoHere2.mp3}} "Let's go here."
+
+==[[Range/Lore|The Range's lore assets]]==
+===[[Range/Lore/EP4|Episode 4]]===
+*{{AC|file=VoicemailBrimstone13.mp3}} "[[Brimstone]], I do not understand. Our secrets were buried deep. But [[Fade|a blackmailer]] has everything. They did not leak our [[VALORANT Protocol#The Blackmailer's agent dossiers|dossiers]] to the public, but they could, and they will. [[Cypher]] has rivals, but they are not behind this. He claims the work is too impressive, and if Cypher's impressed, we should all be very concerned. You need to put the [[Omega]] plans on hold. We are far too exposed to fight a war on both fronts. This blackmailer is the priority now. We need them found... or dead."
+*{{AC|file=VoicemailBrimstone15.mp3}} "Commander, the strike team to apprehend this [[Fade|blackmailer]], you asked for my recommendations. Besides myself, we must send [[Cypher]]. No one else can handle surveillance of an entire city. [[Chamber]] can provide fire support from a vantage position. [[Breach]] has a... history with extractions, it would be foolish not to take advantage. [[Neon]] can help cover ground quickly. Also, she needs a break from [[Killjoy]]. Those two have been cooped up in the lab for too long. And [[KAYO|KAY/O]] has agreed to pilot the VLT/R. Five on the ground, one in the skies, this is good. We will bring this threat to justice, Brimstone. You have my word."
+*{{AC|file=KAYO Audio Log Istanbul Mission Complete.mp3}} ''(For the entire transcription amongst the agents, see [[Range/Lore/EP4#Cypher's_Office|Range/Lore/EP4 → v4.07 → Cypher's Office]].)''
+*{{AC|file=VoicemailBrimstone24.mp3}} "Commander, I return with good news. A rarity these days, but, no less welcome. My mission to Alpha Lisbon was a success by two measures. First, [[Killjoy]]'s invention worked without incident. The dimensional radiometer can calculate the [[Alpha]]-[[Omega]] mesh with a two percent margin of error. Extraordinary!... or so I am told. Killjoy ran off shouting before I was given a better explanation, huh. Second, the readings confirm our projections. The [[radianite]] fabric on our side is strong. There is no imminent danger of Omega breaching this location. We can relocate our defenses to more vulnerable sites. I would suggest S43, but that is a contentious point at best. I look forward to my next assignment. Until then."
+
+===[[Range/Lore/EP5|Episode 5]]===
+*{{AC|file=VoicemailBrimstone41.mp3}} "Commander, please accept my sincerest apologies. In my zealousness I may have set the danger room to... slightly above the recommended safety limit. Uh, as a result, I have received a non-life-threatening injury which I can assure you will not interrupt my duties. I'm on the way to medical as we speak. Once I am treated I will ensure that the blood on the floor is cleaned. It is a slipping hazard, and for this, again, I apologize. Speak to you soon."
+
+===[[Range/Lore/EP9|Episode 9]]===
+*{{AC|file=VoicemailBrimstone92.mp3}} "Brimstone! Brimstone, pick up! Listen, something's happened! The containment cell has been smashed open by [[Vyse|whatever]] was inside, there's metal everywhere, and I can't turn these alarms off! Brimstone, get over here now!"
+
+===[[Range/Lore/V26|Season 2026]]===
+*{{AC|file=LegionAudioTap2.mp3}} ''(For the entire transcription amongst the agents, see [[Range/Lore/V26#Cypher's Office 5|Range/Lore/V26 → v12.04 → Cypher's Office]].)''
+*{{AC|file=LegionAudioTap3.mp3}} ''(For the entire transcription amongst the agents, see [[Range/Lore/V26#Cypher's Office 6|Range/Lore/V26 → v12.05 → Cypher's Office]].)''
+*{{AC|file=LegionAudioTap4.mp3}} ''(For the entire transcription amongst the agents, see [[Range/Lore/V26#Cypher's Office 7|Range/Lore/V26 → v12.06 → Cypher's Office]].)''
+*{{AC|file=LegionAudioTap6.mp3}} ''(For the entire transcription amongst the agents, see [[Range/Lore/V26#Cypher's Office 9|Range/Lore/V26 → v12.08 → Cypher's Office]].)''
+*{{AC|file=LegionAudioTap8.mp3}} "[[Omega Viper|Commander]], this couldn't wait. The operation was a success, by more than our typical measures! α-[[Sage]]'s abilities are compromised. We confirmed it at 0820 and it matches the combat data from last week. This is the result we've been fighting for! With Sage no longer a factor, we can advance our plans into the next phase. Congratulations! We're lifting off in two minutes, see you soon!"
+*{{AC|file=LegionAudioTap11.mp3}} ''(For the entire transcription amongst the agents, see [[Range/Lore/V26#Cypher's Office 14|Range/Lore/V26 → v13.01 → Cypher's Office]].)''
+*{{AC|file=LegionAudioTap12.mp3}} "Yes, thank you, Doctor, it's fine. Uh, I know she can't respond, I'll only be a moment... yes, yes, go on ahead... Hello, [[Omega Sage|Sage]]. I'd rather let you dream peacefully in there but... who else will listen to my insufferable conscience. [[Omega Omen|Omen]] says hello, by the way. He's working on the matching hat. When you get out, don't forget to wear it around the base. He'll be... well, I'm sure he'll be his version of happy. Things are... things are not well. [[Omega Viper|Sabine]] claims she's fighting for you but... her anger, it's eaten up everything else. We need you home, out of these damn chemicals! Cruel of me to ask but it's true! We need your kindness! Your compassion! You are the one who held us back from our worst instincts, I see that now. I'll do what I can in your absence, I owe you that much. Keep feeling better, my friend. Doctor!... I'm okay, thank you..."
+*{{AC|file=VoicemailBrimstone134.mp3}} "You need to speak with [[Cypher]] and [[Fade]]. We're staking too much on this wiretap. I admit they're skilled hackers but it's not their primary expertise. There will be breaches they won't detect. It's not a question of if this bites us, but when. The longer we leave it open, the greater the risk Omega can use it against us. For all we know, maybe they already have. Please, talk to them. So that when the time comes, they're ready to shut it down."
+*{{AC|file=LegionAudioTap14.mp3}} ''(For the entire transcription amongst the agents, see [[Range/Lore/V26#Cypher's Office 17|Range/Lore/V26 → v13.05 → Cypher's Office]].)''
+
+==Notes==
+:''To easily see which quotes were added corresponding to the patch, use your browser's Find function and type the patch number (e.g. v12.04).
+*{{ui|Removed}} 1 voice line removed from patch {{patchv|13.00}}, documented in the patch notes.
+*{{ui|Adjustment}} 1 voice line moved (marked ^) from patch {{patchv|13.00}}.
+*{{ui|Added}} 10 voice lines added from patch {{patchv|12.04}}, documented in the patch notes.
+*{{ui|Removed}} 5 voice lines removed from patch {{patchv|12.04}}, undocumented in the patch notes.
+*Additional radio commands added in patch {{patchv|8.11}} are not mentioned in this page.
+*Other voice lines removed were at an unknown timeframe.
+
+==Navigation==
+{{Navbox agents}}
+[[Category:Quotes]]

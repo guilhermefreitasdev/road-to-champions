@@ -1,0 +1,670 @@
+{{TOCright}}
+This is a '''list of quotes by {{ai|Miks}}'''. Miks is voiced by Jan Kovačić in English. Necessary quotes are translated from Croatian to English unless otherwise stated. Miks has a total of {{PAGESINCATEGORY:Miks Quotes}} files of quotes including unused and removed lines, and excluding [[#The Range's lore assets|The Range's lore assets]].
+
+A downloadable folder containing all the audio files on this page can be found [https://drive.google.com/drive/folders/1cdHdT3V_PDlUtFoQJsA70230yMAWILPI here].
+
+==Agent Selected/Unlocked==
+*{{AC|MiksPick.mp3}} "Let's make some noise!"
+
+==Abilities==
+==={{abi text|M-pulse}}===
+====Cast for concuss====
+*{{AC|MiksMpulseCastConcuss1.mp3}}{{AC|MiksMpulseCastConcuss2.mp3}} "I'm concussing!"
+*{{AC|MiksMpulseCastConcuss3.mp3}}{{AC|MiksMpulseCastConcuss4.mp3}} "That's a concuss!"
+
+====Cast for heal====
+*{{AC|MiksMpulseCastHeal1.mp3}}{{AC|MiksMpulseCastHeal2.mp3}} "Get healing!"
+*{{AC|MiksMpulseCastHeal3.mp3}}{{AC|MiksMpulseCastHeal4.mp3}} "Here's a heal!"
+
+==={{abi text|Harmonize}}===
+====Cast on ally====
+*{{AC|MiksHarmonizeCast1.mp3}}{{AC|MiksHarmonizeCast2.mp3}} "Pairing up!"
+*{{AC|MiksHarmonizeCast3.mp3}}{{AC|MiksHarmonizeCast4.mp3}} "Teaming up!"
+
+====Cast to self====
+*{{AC|MiksHarmonizeSelfCast1.mp3}}{{AC|MiksHarmonizeSelfCast2.mp3}} "My time."
+
+==={{abi text|Waveform}}===
+====Cast====
+*{{AC|MiksWaveformCast1.mp3}}{{AC|MiksWaveformCast2.mp3}} "Smokes resonating."
+*{{AC|MiksWaveformCast3.mp3}}{{AC|MiksWaveformCast4.mp3}} "Smokes up."
+
+==={{abi text|Bassquake}}===
+====Ally Cast====
+*{{AC|MiksUltAllyCast.mp3}} "Right here, right now!"
+
+====Enemy Cast====
+*{{AC|MiksUltEnemyCast.mp3}} "Listen to this!"
+
+==Buy Phase==
+===Match Start===
+*{{AC|MiksMatchStart1.mp3}} "Da da, we've got the MVP crew today! Yeah, you can tell the others I said that."
+**(''Da da'': Yes yes)
+*{{AC|MiksMatchStart2.mp3}} "Don't worry, everything you need is already inside you. Plus, we have guns."
+*{{AC|MiksMatchStart3.mp3}} "I'm telling you, we need a battle soundtrack. Imagine it: we drop in, guns up, all cinematic, and then" *''Miks beatboxes''* "Ugh, epic!"
+*{{AC|MiksMatchStart4.mp3}} "Those doubles think they know our tricks? No, they don't know you, they don't know us! They have no idea what we're capable of."
+*{{AC|MiksMatchStart5.mp3}} "You guys brought your earplugs, right? I'm just saying tinnitus will mess you up."
+
+====Attacking====
+*{{AC|MiksMatchStartAttack1.mp3}} "Remember what we came for. It's [[Radianite]], or nothing."
+
+====Defending====
+*{{AC|MiksMatchStartDefense1.mp3}} "Tell us we can't defend our own Radianite, see what happens."
+
+====[[Abyss]]====
+*{{AC|MiksMatchStartAbyss.mp3}} "Whoa, the reverb in this place must be insane!"
+
+====[[Corrode]]====
+*{{AC|MiksMatchStartCorrode.mp3}} "Ugh, I'll need a shower after this. There's salt in places I didn't even know were possible."
+
+===Round Start===
+*{{AC|MiksRoundStart1.mp3}} "If anyone needs an energy boost out there, I've got you."
+*{{AC|MiksRoundStart2.mp3}} "They keep trying to silence us, we keep talking."
+*{{AC|MiksRoundStart3.mp3}} "Trust each other, that's all."
+*{{AC|MiksRoundStart4.mp3}} "Sound is everything on the battlefield, so listen for noises. You'll hear those jerks before you see them."
+*{{AC|MiksRoundStart5.mp3}} "Watch for my tech, everyone. If I throw it left and you go right, I can't heal you, or hurt you, for that matter." 
+
+====Last round won====
+*{{AC|MiksRoundWon1.mp3}} "Bravo, bravo! Let's stay in sync."
+*{{AC|MiksRoundWon2.mp3}} "Ee, tako treba, keep this energy!"
+**(''Ee, tako treba'': Oh, that's how it should be)
+*{{AC|MiksRoundWon3.mp3}} "Nice tempo, everyone."
+*{{AC|MiksRoundWon4.mp3}} "That was quite the show!"
+
+=====While in the lead=====
+*{{AC|MiksLead1.mp3}} "It's like they're running around looking for a Wi-Fi signal."
+*{{AC|MiksLead2.mp3}} "Ma daj me nemoj jebat! My grandma holds a gun better than them!"
+**(''Ma daj me nemoj jebat'': Come on, don't fuck with me)
+*{{AC|MiksLead3.mp3}} "They're bad but also, we're just good."
+*{{AC|MiksLead4.mp3}} "Yeah, they don't get it."
+
+=====Making a comeback=====
+*{{AC|MiksComeback1.mp3}} "The right rhythm changes everything!"
+*{{AC|MiksComeback2.mp3}} "Yeah they weren't ready for the mix-up."
+*{{AC|MiksComeback3.mp3}} "You feel it? Yeah, I feel it!"
+
+===Last round in the half===
+====Attacking====
+*{{AC|MiksLastRound1.mp3}} "Don't make it harder on yourself, spend that money."
+
+====Defending====
+*{{AC|MiksLastRound2.mp3}} "Don't make it harder on yourself, spend that money."
+
+===Match Point===
+*{{AC|MiksMatchPoint1.mp3}} "Don't quit. Commit right now, and we win this."
+*{{AC|MiksMatchPoint2.mp3}} "I can feel it, we're right there!"
+
+===Shop===
+====Let's Buy====
+*{{AC|MiksBuying1.mp3}}{{AC|MiksBuying2.mp3}} "I'm buying."
+
+====Let's Save====
+*{{AC|MiksSaving1.mp3}}{{AC|MiksSaving2.mp3}} "Saving."
+
+====I Have Extra Creds====
+*{{AC|MiksOffer1.mp3}}{{AC|MiksOffer2.mp3}} "I can buy for you."
+
+====Requested====
+*{{AC|MiksRequest1.mp3}}{{AC|MiksRequest2.mp3}} "Need a drop."
+
+===Barrier Down===
+*{{AC|MiksBarrierDown1.mp3}} "Ajmo ekipa, it's showtime!"
+**(''Ajmo ekipa'': Let's go, team)
+*{{AC|MiksBarrierDown2.mp3}} "Back each other up!"
+*{{AC|MiksBarrierDown3.mp3}} "Don't back down!"
+*{{AC|MiksBarrierDown4.mp3}} "Don't take their shit."
+*{{AC|MiksBarrierDown5.mp3}} "Držite se, ljudi!"
+**(Keep it together, people)
+*{{AC|MiksBarrierDown6.mp3}} "Hey, we start thinking we'll lose, we will."
+*{{AC|MiksBarrierDown7.mp3}} "Lock in."
+*{{AC|MiksBarrierDown8.mp3}} "No backing out now."
+*{{AC|MiksBarrierDown9.mp3}} "Ooh, I'm feeling this one."
+*{{AC|MiksBarrierDown10.mp3}} "Pop their egos."
+*{{AC|MiksBarrierDown11.mp3}} "Radianite, here we come."
+*{{AC|MiksBarrierDown12.mp3}} "Stay in it!"
+*{{AC|MiksBarrierDown13.mp3}} "This is brutal."
+*{{AC|MiksBarrierDown14.mp3}} "Turn it up!"
+*{{AC|MiksBarrierDown15.mp3}} "We don't quit."
+*{{AC|MiksBarrierDown16.mp3}} "We've got a winning loop!"
+
+==Spike==
+===Forgotten in spawn===
+*{{AC|MiksForgotSpike1.mp3}} "Team, we leave no one behind. That includes the Spike."
+
+===Ally carrier down===
+*{{AC|MiksSpikeDown1.mp3}}{{AC|MiksSpikeDown2.mp3}} "Our spike's down."
+
+===Dropped===
+*{{AC|MiksSpikeDropped1.mp3}}{{AC|MiksSpikeDropped2.mp3}} "Spike dropped."
+
+===Retrieved===
+*{{AC|MiksSpikePickedUp1.mp3}}{{AC|MiksSpikePickedUp2.mp3}} "I have the spike."
+
+===Planted===
+*{{AC|MiksSpikePlanted1.mp3}}{{AC|MiksSpikePlanted2.mp3}} "Spike planted."
+
+===Spotted===
+*{{AC|MiksSpikeSpottedA1.mp3}}{{AC|MiksSpikeSpottedA2.mp3}} "Spike spotted A."
+*{{AC|MiksSpikeSpottedB1.mp3}}{{AC|MiksSpikeSpottedB2.mp3}} "Spike spotted B."
+*{{AC|MiksSpikeSpottedC1.mp3}}{{AC|MiksSpikeSpottedC2.mp3}} "Spike spotted C."
+*{{AC|MiksSpikeSpottedASpawn1.mp3}}{{AC|MiksSpikeSpottedASpawn2.mp3}} "Spike spotted Attacker Spawn."
+*{{AC|MiksSpikeSpottedDSpawn1.mp3}}{{AC|MiksSpikeSpottedDSpawn2.mp3}} "Spike spotted Defender Spawn."
+*{{AC|MiksSpikeSpottedMid1.mp3}}{{AC|MiksSpikeSpottedMid2.mp3}} "Spike spotted Mid."
+
+===Defuse resumed===
+*{{AC|MiksDefuseResumed1.mp3}} "Why are you always causing trouble?"
+
+===Defuse time running out===
+*{{AC|MiksDefuseLate1.mp3}} "Nah I'm sorry but this is shit!"
+
+===Defuse successful===
+*{{AC|MiksDefuseComplete1.mp3}} "Get this thing out of here."
+*{{AC|MiksDefuseComplete2.mp3}} "Yeah, let's skip the beat drop this time."
+
+==Kill==
+*{{AC|MiksKill1.mp3}} "Ajmo!"
+**(Let's go!)
+*{{AC|MiksKill2.mp3}} "Alright!"
+*{{AC|MiksKill3.mp3}} "Back off!"
+*{{AC|MiksKill4.mp3}} "Dead enough."
+*{{AC|MiksKill5.mp3}} "Done."
+*{{AC|MiksKill6.mp3}} "I can work with that."
+*{{AC|MiksKill7.mp3}} "Muted!"
+*{{AC|MiksKill8.mp3}} "Pipe down!"
+*{{AC|MiksKill9.mp3}} "Super!"
+*{{AC|MiksKill10.mp3}} "That's it!"
+
+===Headshot===
+*{{AC|MiksHeadshot1.mp3}} "Eto!"
+**(There you go!)
+*{{AC|MiksHeadshot2.mp3}} "Ludilo!"
+**(Madness!)
+*{{AC|MiksHeadshot3.mp3}} "Ma daj!"
+**(Come on!)
+*{{AC|MiksHeadshot4.mp3}} "Nice one!"
+*{{AC|MiksHeadshot5.mp3}} "So clean!"
+*{{AC|MiksHeadshot6.mp3}} "Čovječe!"
+**(Man!)
+
+===[[Melee]]===
+*{{AC|MiksMeleeKill1.mp3}} "Come on!"
+*{{AC|MiksMeleeKill2.mp3}} "Ne mogu."
+**(I can't.)
+
+===Triple===
+*{{AC|MiksTriple1.mp3}}{{AC|MiksTriple2.mp3}} "Three is good."
+
+===Quadra===
+*{{AC|MiksQuadra1.mp3}}{{AC|MiksQuadra2.mp3}} "Four's better!"
+
+===One kill remaining (game-mode specific)===
+*{{AC|MiksOneKillLeft1.mp3}} "Ajmo, one more!"
+**(''Ajmo'': Let's go)
+
+==Round End==
+===Ace===
+*{{AC|MiksAce1.mp3}} "Do not disrespect my team!"
+*{{AC|MiksAce2.mp3}} "Show's over, go home!"
+
+===Clutch===
+*{{AC|MiksClutch1.mp3}} "A little bit of luck and a whole lot of skill."
+*{{AC|MiksClutch2.mp3}} "Do you see this? That's why you never quit."
+*{{AC|MiksClutch3.mp3}} "Oh man, I need the replay."
+
+===Flawless or Team Ace===
+*{{AC|MiksFlawless1.mp3}} "Ee, to je to. Now they know who we are."
+**(''Ee, to je to'': Eh, that's it)
+*{{AC|MiksFlawless2.mp3}} "We dominated, I love it!"
+
+===Thrifty===
+*{{AC|MiksThrifty1.mp3}} "When you are poor, you get creative."
+
+===Last Kill===
+*{{AC|MiksLastKill1.mp3}} "Just, no."
+*{{AC|MiksLastKill2.mp3}} "Oh, the last one is always so satisfying."
+*{{AC|MiksLastKill3.mp3}} "They were killing the vibe."
+*{{AC|MiksLastKill4.mp3}} "Was never gonna happen, buraz."
+**(''Buraz'': Brother)
+*{{AC|MiksLastKill5.mp3}} "Aye, finally."{{#tag:sup|{{patchv|13.00}}^}}
+
+====Using [[Melee]]====
+*{{AC|MiksLastKillMelee1.mp3}} "Had to switch it up."
+
+===Low HP===
+*{{AC|MiksLowHP1.mp3}} *''Miks winces''* "Pain and suffering, it's the Slavic way."
+
+==Match End==
+===Match Win===
+*{{AC|MiksMatchWin1.mp3}} "Buraz, ovo je top! Tears of joy."
+**(''Buraz, ovo je top'': Dude, this is great)
+*{{AC|MiksMatchWin2.mp3}} "Hell yeah, that's my team!"
+*{{AC|MiksMatchWin3.mp3}} "Time for the after party!"
+
+===Runner-up (game-mode specific)===
+*{{AC|MiksRunnerUp1.mp3}} "Ey, one day, I'll be the best."
+*{{AC|MiksRunnerUp2.mp3}} "Jako dobro. That was good."
+**(''Jako dobro'': Very good)
+
+==Agent-specific interactions==
+{| class="wikitable sortable"
+!Agent
+!Scenario
+!width=40%; class=unsortable|Ally
+!width=40%; class=unsortable|Enemy
+|-
+|{{ai|Breach}}
+|Round Start
+|
+|{{AC|MiksEnemyBreachRoundStart.mp3}} "Look, you wanna beat their Breach, go crazy on him. Crazy beats big every time."
+|-
+|{{ai|Clove}}
+|Last Kill
+|
+|{{AC|MiksEnemyCloveLastKill.mp3}} "They're never this quiet."
+|-
+|rowspan=3|{{ai|Gekko}}
+|Chat
+|
+:[[File:Gekko icon.png|20px|link=Gekko]] {{AC|GekkoAllyMiksChat.mp3}} "M-Miks, you didn't have to finish my mom's {{w|pozole}}. Ugh, I told her not to send you so much!"
+:[[File:Miks icon.png|20px|link=Miks]] {{AC|MiksAllyGekkoChat.mp3}} "You what- oh don't ever do that again."{{#tag:sup|{{patchv|13.00}}+}}
+|
+|-
+|Kill
+|
+|{{AC|MiksEnemyGekkoKill.mp3}} "Sorry jazavče."
+*(''Jazavče'': Badger)
+|-
+|Last Kill
+|
+|{{AC|MiksEnemyGekkoLastKill.mp3}} "Other [[Wingman]], come here! It's okay, I'll be your new papa."
+|-
+|rowspan=2|{{ai|Iso}}
+|Match Start
+|{{AC|MiksAllyIsoMatchStart.mp3}} "Iso, you're about to go as hard as you did last weekend? Yeah that's right, we all saw that."
+|
+|-
+|Commend
+|{{AC|MiksAllyIsoCommend.mp3}} "Iso, the stories don't even do you justice."
+|
+|-
+|{{ai|Jett}}
+|Round Start
+|{{AC|MiksAllyJettRoundStart.mp3}} "Jett, you're tired of me yet? Football earlier and now this. You can't get a break from me."
+|{{AC|MiksEnemyJettRoundStart.mp3}} "Oh I'm so done with their Jett. All that," *''Miks making wind noises''* "is giving me whiplash."
+|-
+|rowspan=2|{{ai|Miks}}
+|Round Start
+|
+|{{AC|MiksEnemyMiksRoundStart.mp3}} "My double is probably doing some group huddle no one asked for. I respect it."
+|-
+|Last Kill
+|
+|{{AC|MiksEnemyMiksLastKill.mp3}} "Daj, mogao si bolje."
+*(Come on, you could have done better.)
+|-
+|rowspan=2|{{ai|Phoenix}}
+|Match Start
+|{{AC|MiksAllyPhoenixMatchStart.mp3}} "Phoenix, should I throw some sound waves your way? Not that you need them hot shot."
+|
+|-
+|Commend
+|{{AC|MiksAllyPhoenixCommend.mp3}} "Phoenix, this is my guy!"
+|
+|-
+|rowspan=2|{{ai|Raze}}
+|Commend
+|{{AC|MiksAllyRazeCommend.mp3}} "Čovječe, Raze! You fight as hard as you party."
+*(''Čovječe'': Man)
+|
+|-
+|Barrier Down
+|{{AC|MiksAllyRazeBarrierDown.mp3}} "Blast off, Raze!"
+|{{AC|MiksEnemyRazeBarrierDown.mp3}} "Drown out enemy Raze."
+|-
+|{{ai|Reyna}}
+|Match Start
+|{{AC|MiksAllyReynaMatchStart.mp3}} "Reyna, let me demo at the sanctuary. I'll show some layering effects, filters- they'll love it. Don't think about it. Just say yes."
+|
+|-
+|rowspan=5|{{ai|Sage}}
+|Chat
+|
+:[[File:Sage icon.png|20px|link=Sage]] {{AC|SageAllyMiksChat.mp3}} "Miks, there's that look again!"
+:[[File:Miks icon.png|20px|link=Miks]] {{AC|MiksAllySageChat.mp3}} "No, it's just-" ''*Miks sighs*'' "look, you don't always have to be strong for everyone, that's all."{{#tag:sup|{{patchv|12.07}}+}}
+|
+|-
+|Match Start
+|{{AC|MiksAllySageMatchStart.mp3}} "Sage, I can't replace you, but I can help. Backup's here if you need it."
+|
+|-
+|Round Start
+|{{AC|MiksAllySageRoundStart.mp3}} "Sage, pick your battles. Every fight you take should be worth fighting, not just for us, but for you."
+|
+|-
+|Commend
+|{{AC|MiksAllySageCommend.mp3}} "Damn Sage! Who trained you? I need some of that."
+|
+|-
+|Barrier Down
+|{{AC|MiksAllySageBarrierDown.mp3}} "Lean on me when you need, Sage."
+|
+|-
+|rowspan=2|{{ai|Sova}}
+|Kill
+|
+|{{AC|MiksEnemySovaKill.mp3}} "Be quiet, small man."
+|-
+|Last Kill
+|
+|{{AC|MiksEnemySovaLastKill.mp3}} "Relax, I'm not a deer."
+|-
+|rowspan=2|{{ai|Tejo}}
+|Match Start
+|{{AC|MiksAllyTejoMatchStart.mp3}} "Sorry Tejo, no more running the playlist. There's a time for jazz, but pre-battle warm-up is not it."
+|
+|-
+|Round Start
+|{{AC|MiksAllyTejoRoundStart.mp3}} "Tejo, why even bring artillery? You could kill them with your bare hands. I mean, look at you, your chest is bigger than my apartment."
+|{{AC|MiksEnemyTejoRoundStart.mp3}} "Their Tejo's artillery is no joke. The second you hear that," *''Miks making artillery noises''* "get the hell out of there."
+|-
+|{{ai|Veto}}
+|Commend
+|{{AC|MiksAllyVetoCommend.mp3}} "Ajme majko, Veto, how the hell did you do that?"
+*(''Ajme majko:'' Oh mother)
+|
+|-
+|rowspan=2|{{ai|Viper}}
+|Match Start
+|
+|{{AC|MiksEnemyViperMatchStart.mp3}} "Their Viper can't stand us. Mislim, halo, she can barely stand her own team. Imagine living like that. Sad."
+*(''Mislim, halo'': I mean, hello)
+|-
+|Kill
+|
+|{{AC|MiksEnemyViperKill.mp3}} "Your team's better off!"
+|-
+|{{ai|Vyse}}
+|Last Kill
+|
+|{{AC|MiksEnemyVyseLastKill.mp3}} "Never heard of her."
+|-
+|rowspan=4|{{ai|Yoru}}
+|Match Start
+|{{AC|MiksAllyYoruMatchStart.mp3}} "Okay, party people, good vibes today. We get Yoru to smile, and we'll have the best vibes."
+|
+|-
+|Round Start
+|{{AC|MiksAllyYoruRoundStart.mp3}} "Yoru, keep giving it everything out there. We don't compromise, not on who we are, or what we do."
+|
+|-
+|Commend
+|{{AC|MiksAllyYoruCommend.mp3}} "Yoru! With a straight face too!"
+|
+|-
+|Barrier Down
+|{{AC|MiksAllyYoruBarrierDown.mp3}} "Yoru, never yield."
+|{{AC|MiksEnemyYoruBarrierDown.mp3}} "Their Yoru is not cool."
+|}
+
+==Radio Commands==
+===Menu Index only===
+====Caution here====
+*{{AC|MiksCaution1.mp3}}{{AC|MiksCaution2.mp3}} "Enemy close."
+
+====Going Area====
+*{{AC|MiksGoingA1.mp3}}{{AC|MiksGoingA2.mp3}} "Going A."
+*{{AC|MiksGoingB1.mp3}}{{AC|MiksGoingB2.mp3}} "Going B."
+*{{AC|MiksGoingC1.mp3}}{{AC|MiksGoingC2.mp3}} "Going C."
+*{{AC|MiksGoingMid1.mp3}}{{AC|MiksGoingMid2.mp3}} "Going Mid."
+
+====Need Support====
+*{{AC|MiksHelp1.mp3}}{{AC|MiksHelp2.mp3}} "Need backup."
+
+====On my way====
+*{{AC|MiksOnMyWay1.mp3}}{{AC|MiksOnMyWay2.mp3}} "On my way."
+<!--
+====Play for picks====
+*{{AC|MiksPlayForPicks1.mp3}}{{AC|MiksPlayForPicks2.mp3}} "Play for picks."
+-->
+===Wheel Index only===
+====Encourage====
+*{{AC|MiksEncouraging1.mp3}}{{AC|MiksEncouraging2.mp3}}{{AC|MiksEncouraging3.mp3}} "We've got this."
+
+====I'll lurk====
+Only as Attackers during Buy Phase.
+*{{AC|MiksLurking1.mp3}}{{AC|MiksLurking2.mp3}} "I'm lurking."
+
+====I'll push out====
+Only as Defenders during Buy Phase.
+*{{AC|MiksPushingOut1.mp3}}{{AC|MiksPushingOut2.mp3}} "I'm pushing out."
+
+====I'm holding position====
+Only as Defenders during Buy Phase.
+*{{AC|MiksHoldingPosition1.mp3}}{{AC|MiksHoldingPosition2.mp3}} "Holding position."
+
+====Let's Attack====
+Only during Round Phase.
+*{{AC|MiksLetsAttack1.mp3}}{{AC|MiksLetsAttack2.mp3}} "Let's attack."
+
+====Let's hold positions====
+Only as Defenders during Buy Phase.
+*{{AC|MiksHoldPositions1.mp3}}{{AC|MiksHoldPositions2.mp3}} "Let's hold positions."
+
+====Let's play slow====
+Only as Attackers at anytime.
+*{{AC|MiksPlaySlow1.mp3}}{{AC|MiksPlaySlow2.mp3}} "Let's play slow."
+
+====Let's push out====
+Only as Defenders during Buy Phase.
+*{{AC|MiksPushOut1.mp3}}{{AC|MiksPushOut2.mp3}} "Let's push out."
+
+====Let's spread out====
+*{{AC|MiksSpreadOut1.mp3}}{{AC|MiksSpreadOut2.mp3}} "Let's spread out."
+
+====Nice Try====
+*{{AC|MiksNiceTry1.mp3}}{{AC|MiksNiceTry2.mp3}}{{AC|MiksNiceTry3.mp3}} "Nice try."
+
+====Stick together====
+*{{AC|MiksStickTogether1.mp3}}{{AC|MiksStickTogether2.mp3}} "Stick together."
+
+===Menu and Wheel Index===
+====Commend====
+*{{AC|MiksCommend1.mp3}}{{AC|MiksCommend2.mp3}}{{AC|MiksCommend3.mp3}} "Bravo."
+
+====Fall Back====
+Menu Index at anytime, or Wheel Index only during Round Phase.
+*{{AC|MiksFallBack1.mp3}}{{AC|MiksFallBack2.mp3}} "Fall back!"
+
+====Hello====
+*{{AC|MiksHello1.mp3}}{{AC|MiksHello2.mp3}}{{AC|MiksHello3.mp3}} "Ey."
+
+====I'll take point====
+Wheel Index only as Attackers during Buy Phase, or Menu Index at anytime regardless of Attackers or Defenders.
+*{{AC|MiksTakePoint1.mp3}}{{AC|MiksTakePoint2.mp3}} "I'll take point."
+
+====Let's rush them (Radio Command)====
+*{{AC|MiksRush1.mp3}}{{AC|MiksRush2.mp3}} "Rush them."
+
+====Need healing====
+*{{AC|MiksHealing1.mp3}}{{AC|MiksHealing2.mp3}} "Need healing."
+
+====No====
+*{{AC|MiksNo1.mp3}}{{AC|MiksNo2.mp3}}{{AC|MiksNo3.mp3}} "No."
+
+====Sorry====
+*{{AC|MiksSorry1.mp3}}{{AC|MiksSorry2.mp3}}{{AC|MiksSorry3.mp3}} "Sorry."
+
+====Thanks====
+*{{AC|MiksThanks1.mp3}}{{AC|MiksThanks2.mp3}}{{AC|MiksThanks3.mp3}} "Thanks."
+
+====Ultimate Status====
+*{{AC|MiksUltDown1.mp3}}{{AC|MiksUltDown2.mp3}} "My ult's not ready."
+*{{AC|MiksUltAlmost1.mp3}}{{AC|MiksUltAlmost2.mp3}} "My ult's almost ready."
+*{{AC|MiksUltReady1.mp3}}{{AC|MiksUltReady2.mp3}} "My ult's ready."
+
+====Yes====
+*{{AC|MiksYes1.mp3}}{{AC|MiksYes2.mp3}}{{AC|MiksYes3.mp3}} "Yes."
+
+===Wheel Index requiring Minimap===
+For the following voicelines, the minimap must be open and then open ping wheel and activate strategy.
+====Faking====
+Only as Attackers during Buy Phase.
+*{{AC|MiksFaking1.mp3}}{{AC|MiksFaking2.mp3}} "I'm faking."
+*{{AC|MiksFakingA1.mp3}}{{AC|MiksFakingA2.mp3}} "I'm faking A."
+*{{AC|MiksFakingB1.mp3}}{{AC|MiksFakingB2.mp3}} "I'm faking B."
+*{{AC|MiksFakingC1.mp3}}{{AC|MiksFakingC2.mp3}} "I'm faking C."
+
+====I'm Going Here====
+As Defenders during Buy Phase, or as Attackers at anytime.
+*{{AC|MiksGoingA1.mp3}}{{AC|MiksGoingA2.mp3}} "Going A."
+*{{AC|MiksGoingB1.mp3}}{{AC|MiksGoingB2.mp3}} "Going B."
+*{{AC|MiksGoingC1.mp3}}{{AC|MiksGoingC2.mp3}} "Going C."
+*{{AC|MiksGoingMid1.mp3}}{{AC|MiksGoingMid2.mp3}} "Going Mid."
+
+====Let's Go Here====
+Only as Attackers during Buy Phase.
+*{{AC|MiksLetsGoA1.mp3}}{{AC|MiksLetsGoA2.mp3}} "Let's go A."
+*{{AC|MiksLetsGoB1.mp3}}{{AC|MiksLetsGoB2.mp3}} "Let's go B."
+*{{AC|MiksLetsGoC1.mp3}}{{AC|MiksLetsGoC2.mp3}} "Let's go C."
+*{{AC|MiksLetsGoHere1.mp3}}{{AC|MiksLetsGoHere2.mp3}} "Let's go here."
+
+====Let's rush them (Minimap)====
+Only as Attackers during Buy Phase.
+*{{AC|MiksLetsRush1.mp3}}{{AC|MiksLetsRush2.mp3}} "Let's rush them."
+*{{AC|MiksLetsRushA1.mp3}}{{AC|MiksLetsRushA2.mp3}} "Let's rush A."
+*{{AC|MiksLetsRushB1.mp3}}{{AC|MiksLetsRushB2.mp3}} "Let's rush B."
+*{{AC|MiksLetsRushC1.mp3}}{{AC|MiksLetsRushC2.mp3}} "Let's rush C."
+
+====Let's Sneak Here====
+Only as Attackers during Buy Phase.
+*{{AC|MiksSneakA1.mp3}}{{AC|MiksSneakA2.mp3}} "Let's sneak A."
+*{{AC|MiksSneakB1.mp3}}{{AC|MiksSneakB2.mp3}} "Let's sneak B."
+*{{AC|MiksSneakC1.mp3}}{{AC|MiksSneakC2.mp3}} "Let's sneak C."
+*{{AC|MiksSneakMid1.mp3}}{{AC|MiksSneakMid2.mp3}} "Let's sneak Mid."
+
+====Let's Stack Here====
+Only as Defenders during Buy Phase.
+*{{AC|MiksStack1.mp3}}{{AC|MiksStack2.mp3}} "Let's stack up."
+*{{AC|MiksStackA1.mp3}}{{AC|MiksStackA2.mp3}} "Let's stack A."
+*{{AC|MiksStackB1.mp3}}{{AC|MiksStackB2.mp3}} "Let's stack B."
+*{{AC|MiksStackC1.mp3}}{{AC|MiksStackC2.mp3}} "Let's stack C."
+*{{AC|MiksStackMid1.mp3}}{{AC|MiksStackMid2.mp3}} "Let's stack Mid."
+
+====Someone Go Here====
+As Attackers during Round Phase, or as Defenders at anytime.
+*{{AC|MiksNeedSomeoneA1.mp3}}{{AC|MiksNeedSomeoneA2.mp3}} "Someone go A."
+*{{AC|MiksNeedSomeoneB1.mp3}}{{AC|MiksNeedSomeoneB2.mp3}} "Someone go B."
+*{{AC|MiksNeedSomeoneC1.mp3}}{{AC|MiksNeedSomeoneC2.mp3}} "Someone go C."
+*{{AC|MiksNeedSomeoneMid1.mp3}}{{AC|MiksNeedSomeoneMid2.mp3}} "Someone go Mid."
+
+====Spike's here====
+Only as Defenders during Round Phase.
+*{{AC|MiksSpikeA1.mp3}}{{AC|MiksSpikeA2.mp3}} "Spike's A."
+*{{AC|MiksSpikeB1.mp3}}{{AC|MiksSpikeB2.mp3}} "Spike's B."
+*{{AC|MiksSpikeC1.mp3}}{{AC|MiksSpikeC2.mp3}} "Spike's C."
+*{{AC|MiksSpikeMid1.mp3}}{{AC|MiksSpikeMid2.mp3}} "Spike's Mid."
+*{{AC|MiksSpikeSpottedASpawn1.mp3}}{{AC|MiksSpikeSpottedASpawn2.mp3}} "Spike spotted Attacker Spawn."
+*{{AC|MiksSpikeSpottedDSpawn1.mp3}}{{AC|MiksSpikeSpottedDSpawn2.mp3}} "Spike spotted Defender Spawn."
+
+==Pings==
+===General===
+*{{AC|MiksPing1.mp3}}{{AC|MiksPing2.mp3}} "There."
+
+===Caution===
+*{{AC|MiksPingCaution1.mp3}}{{AC|MiksPingCaution2.mp3}} "Caution here."
+
+===Need support===
+*{{AC|MiksHelp1.mp3}}{{AC|MiksHelp2.mp3}} "Need backup."
+
+===On my mark===
+*{{AC|MiksOnMyMark1.mp3}}{{AC|MiksOnMyMark2.mp3}} "On my mark."
+
+===Ping gun===
+*{{AC|MiksPingGun1.mp3}}{{AC|MiksPingGun2.mp3}} "Gun here."
+
+===Ping spike===
+*{{AC|MiksPingSpike1.mp3}}{{AC|MiksPingSpike2.mp3}} "Spike's here."
+
+===Ping for spike defuse===
+*{{AC|MiksDefuseSpike1.mp3}}{{AC|MiksDefuseSpike2.mp3}} "Defuse the spike!"
+
+===Ping for spike plant===
+*{{AC|MiksPlantSpike1.mp3}}{{AC|MiksPlantSpike2.mp3}} "Plant the spike!"
+
+===Watching===
+*{{AC|MiksWatching1.mp3}}{{AC|MiksWatching2.mp3}} "Watching here."
+
+==Other lines==
+===Ability unusable===
+====[[Status Effect#Suppress|Suppressed]]====
+*{{AC|MiksCantUse1.mp3}}{{AC|MiksCantUse2.mp3}} "Can't use that."
+
+====On cooldown====
+*{{AC|MiksOnCooldown1.mp3}}{{AC|MiksOnCooldown2.mp3}} "On cooldown."
+
+====No charges====
+*{{AC|MiksNoCharges1.mp3}}{{AC|MiksNoCharges2.mp3}} "No charges."
+
+===Enemy spotted===
+*{{AC|MiksEnemyA1.mp3}}{{AC|MiksEnemyA2.mp3}} "Enemy spotted A."
+*{{AC|MiksEnemyB1.mp3}}{{AC|MiksEnemyB2.mp3}} "Enemy spotted B."
+*{{AC|MiksEnemyC1.mp3}}{{AC|MiksEnemyC2.mp3}} "Enemy spotted C."
+*{{AC|MiksEnemyASpawn1.mp3}}{{AC|MiksEnemyASpawn2.mp3}} "Enemy spotted Attacker Spawn."
+*{{AC|MiksEnemyDSpawn1.mp3}}{{AC|MiksEnemyDSpawn2.mp3}} "Enemy spotted Defender Spawn."
+*{{AC|MiksEnemyMid1.mp3}}{{AC|MiksEnemyMid2.mp3}} "Enemy spotted Mid."
+
+====Multiple====
+*{{AC|MiksEnemiesA1.mp3}}{{AC|MiksEnemiesA2.mp3}} "Multiple enemies A!"
+*{{AC|MiksEnemiesB1.mp3}}{{AC|MiksEnemiesB2.mp3}} "Multiple enemies B!"
+*{{AC|MiksEnemiesC1.mp3}}{{AC|MiksEnemiesC2.mp3}} "Multiple enemies C!"
+*{{AC|MiksEnemiesASpawn1.mp3}}{{AC|MiksEnemiesASpawn2.mp3}} "Multiple enemies Attacker Spawn!"
+*{{AC|MiksEnemiesDSpawn1.mp3}}{{AC|MiksEnemiesDSpawn2.mp3}} "Multiple enemies Defender Spawn!"
+*{{AC|MiksEnemiesMid1.mp3}}{{AC|MiksEnemiesMid2.mp3}} "Multiple enemies Mid!"
+
+===Reloading===
+*{{AC|MiksReloading1.mp3}}{{AC|MiksReloading2.mp3}} "Reloading."
+
+===Healed===
+*{{AC|MiksRelief1.mp3}}{{AC|MiksRelief2.mp3}}{{AC|MiksRelief3.mp3}} ''*Miks sighs*''
+
+===Killed===
+*{{AC|MiksDeath1.mp3}}{{AC|MiksDeath2.mp3}}{{AC|MiksDeath3.mp3}} ''*Miks groans*''
+
+===Resurrected via {{abi text|Resurrection}}===
+*{{AC|MiksResurrect1.mp3}} "Encore!"
+*{{AC|MiksResurrect2.mp3}} "That went well."
+
+===Wounded===
+====Light damage====
+*{{AC|MiksPainLight1.mp3}}{{AC|MiksPainLight2.mp3}}{{AC|MiksPainLight3.mp3}} ''*Miks groans*''
+
+====Medium damage====
+*{{AC|MiksPainMedium1.mp3}}{{AC|MiksPainMedium2.mp3}}{{AC|MiksPainMedium3.mp3}} ''*Miks groans*''
+
+====Heavy damage====
+*{{AC|MiksPainHeavy1.mp3}}{{AC|MiksPainHeavy2.mp3}}{{AC|MiksPainHeavy3.mp3}} ''*Miks groans*''
+
+====Fall damage====
+*{{AC|MiksPainFall1.mp3}}{{AC|MiksPainFall2.mp3}}{{AC|MiksPainFall3.mp3}} ''*Miks groans*''
+
+==Unused lines==
+There are no voice lines at the moment in this section for this Agent.
+
+==Removed lines==
+There are no voice lines at the moment in this section for this Agent.
+
+==[[Range/Lore|The Range's lore assets]]==
+===[[Range/Lore/V26|Season 2026]]===
+*{{AC|VoicemailBrimstone123.mp3}} "Brim, look at [[Sage|her]]. Look at how banged up she was today! I respect Sage too much to feel sorry for her but... there's a limit to how much one person can take. She's hitting that limit and the rest of the team can feel it. Look, I'm no Sage, hmm, jebiga, I'm no [[Skye]] either but... I'm better than nothing, we could use the extra healing backup. Next mission, the mission after, I'm there. It's gonna be hell but we've got this."
+*{{AC|VoicemailBrimstone125.mp3}} "People have filed complaints? You mean [[Vyse]]. Brim, come on, is she serious? It's like complaining that a dog barks. It's a dog! Now she wants a sound guy who makes no sound. I already wear my hoodie and my gloves, how else can I dampen the noise?! Ugh, okay, okay here's what we'll do. Starting now, no more loud music in the personnel quarters. [[Raze]] and whoever else can jam with me in another area! And that way Vyse can read her romance novels in peace. And everybody's happy! Good talk, Brim, good talk."
+*{{AC|VoicemailBrimstone127.mp3}} "Brim, this sucks. You know it, I know it. It's not just the physical injuries, it's-... it's the mental fatigue, everyone's just so... down. But nothing we say will make a difference at this point so when words can't help you gotta get creative. Let's fly the VLT/R to rush in some proper pizza. I know! I know, but it could really make a difference. Food is the most basic form of comfort, and that's what everyone needs right now. We don't throw a party or make it a whole thing, we just pick it up, set it out, and let the smell of piping hot pizza do the rest of the work. Seriously. And let me know if you want my help picking toppings."
+*{{AC|VoicemailBrimstone135.mp3}} "Brim, here's an update for you. [[Sage]] just kicked my ass in the gym. Everyone told me she was good but... I had no idea she was this good! It's like she evolves, from Sage to... I don't know, Battle Sage. She's still dealing with the, uh, crystallization, but I'm telling you, she is in her element right now. Injuries or not, I dare anyone to mess with her now!"
+
+==Notes==
+:''To easily see which quotes were added corresponding to the patch, use your browser's Find function and type the patch number (e.g. v12.07).
+*{{ui|Added}} 1 voice line added from patch {{patchv|13.00}}, documented in the patch notes.
+*{{ui|Added}} 1 voice line added from patch {{patchv|12.07}}, undocumented in the patch notes.
+
+==Navigation==
+{{Navbox agents}}
+[[Category:Quotes]]

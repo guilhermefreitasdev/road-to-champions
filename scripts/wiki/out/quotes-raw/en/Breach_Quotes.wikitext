@@ -1,0 +1,921 @@
+{{TOCright}}
+This is a '''list of quotes by {{ai|Breach}}'''. Breach is voiced by David Menkin in English. Necessary quotes translated are from Swedish to English. Breach has a total of {{PAGESINCATEGORY:Breach Quotes}} files of quotes including unused and removed lines, and excluding [[#The Range's lore assets|The Range's lore assets]]. 
+
+A downloadable folder containing all the audio files on this page can be found [https://drive.google.com/drive/folders/1kHy8JQSnfhEr307cKVdyV-gMMeXq4dlx?usp=sharing here].
+
+==Agent Selected/Unlocked==
+*{{AC|BreachPick.mp3}} "Stand in my way. I dare you."
+
+==Abilities==
+==={{abi text|Aftershock}}===
+====Cast====
+*{{AC|BreachAftershockCast1.mp3}} "Clearing out!"
+*{{AC|BreachAftershockCast2.mp3}} "Blasting!"
+
+==={{abi text|Flashpoint}}===
+====Cast====
+*{{AC|BreachFlashpointCast1.mp3}} "Flash out!"
+*{{AC|BreachFlashpointCast2.mp3}} "Blinding!"
+
+==={{abi text|Fault Line}}===
+====Cast====
+*{{AC|BreachFaultLineCast1.mp3}} "Concussing!"
+*{{AC|BreachFaultLineCast2.mp3}} "Tremor!"
+
+==={{abi text|Rolling Thunder}}===
+====Ally Cast====
+*{{AC|BreachUltAllyCast.mp3}} "Let's go!"
+
+====Enemy Cast====
+*{{AC|BreachUltEnemyCast.mp3}} "Off your feet!"
+
+==Buy Phase==
+===Match Start===
+*{{AC|BreachMatchStart1.mp3}} "Guns in my face? Just another Tuesday."
+*{{AC|BreachMatchStart2.mp3}} "Nothing fancy, uh? We go in, we crush them, we get out."
+*{{AC|BreachMatchStart3.mp3}} "The faster we do this, the faster I get paid."
+*{{AC|BreachMatchStart4.mp3}} "We treat this like any other job. No more, no less."
+*{{AC|BreachMatchStart5.mp3}} "They're not intimidating, they're stupid. Big difference."
+*{{AC|BreachMatchStart6.mp3}} "Been pulling jobs like this for years. Risky? Sure. But never boring."
+*{{AC|BreachMatchStart7.mp3}} "I don't need these arms to fight, but they're fun. Might as well use 'em."
+*{{AC|BreachMatchStart8.mp3}} "These cowards aren't ready for me. No one ever is."
+
+====Attacking====
+*{{AC|BreachMatchStartAttack1.mp3}} "Alpha Earth, Omega Earth, Kingdom- who cares? Let's fight!"{{#tag:sup|{{patchv|8.03}}+}}
+*{{AC|BreachMatchStartAttack2.mp3}} "Don't get too cute with the plan, the more complicated our attack, the faster it goes to shit."{{#tag:sup|{{patchv|8.03}}+}}
+*{{AC|BreachMatchStartAttack3.mp3}} "You clowns brought me along, so we're doing this my way - quick and violent."{{#tag:sup|{{patchv|8.03}}+}}
+
+====Defending====
+*{{AC|BreachMatchStartDefense1.mp3}} "Hah, those idiots don't know what they're walking into. I'll rattle their heads, you take 'em out."{{#tag:sup|{{patchv|8.03}}+}}
+*{{AC|BreachMatchStartDefense2.mp3}} "They're coming for us, huh? Sure, their funeral."{{#tag:sup|{{patchv|8.03}}+}}
+
+====[[Split]]====
+*{{AC|BreachMatchStartSplit.mp3}} "Look at this place! Kingdom has more money than they know what to do with! I wonder where they keep it."
+
+====[[Sunset]]====
+*{{AC|BreachMatchStartSunset.mp3}} "Ah, LA! I've got a few spots I should revisit out here! Couple of foodtrucks, that bank in Malibu! Good times!"{{#tag:sup|{{patchv|8.03}}+}}
+
+===Round Start===
+*{{AC|BreachRoundStart1.mp3}} "They think they're so secure."
+*{{AC|BreachRoundStart2.mp3}} "If you're not being shot at you're doing something wrong!"
+*{{AC|BreachRoundStart3.mp3}} "I'll do my job, you do yours."
+*{{AC|BreachRoundStart4.mp3}} "Trust me, they'll know what hit 'em."
+*{{AC|BreachRoundStart5.mp3}} "We doing this or what?"
+*{{AC|BreachRoundStart6.mp3}} "Come on! Get me in the line of fire."
+*{{AC|BreachRoundStart7.mp3}} "They think they're better than us. I can tell."
+*{{AC|BreachRoundStart8.mp3}} "Time to take these arms for a spin."
+*{{AC|BreachRoundStart9.mp3}} "They're not getting the message. Leave it to me, I'll rough them up."
+*{{AC|BreachRoundStart10.mp3}} "Just swapping in new fusion cells. Okay, my arms are good! We can go."
+*{{AC|BreachRoundStart11.mp3}} "I hate waiting. Let's do this!"
+
+===Last round won===
+*{{AC|BreachRoundWon1.mp3}} "Oh yeah, there's the adrenaline."
+*{{AC|BreachRoundWon2.mp3}} "I've been itching for a fight."
+*{{AC|BreachRoundWon3.mp3}} "You see an insect, you crush it."
+*{{AC|BreachRoundWon4.mp3}} "You flinch, you lose."
+*{{AC|BreachRoundWon5.mp3}} "Push 'em 'til they break!"
+*{{AC|BreachRoundWon6.mp3}} "Keep them off balance!"
+
+====While in the lead====
+*{{AC|BreachLead1.mp3}} "They can run, or get run over. Their choice."
+*{{AC|BreachLead2.mp3}} "They don't get to surrender, keep swinging!"
+*{{AC|BreachLead3.mp3}} "This isn't a fight, it's stealing lunch money."
+
+====Making a comeback====
+*{{AC|BreachComeback1.mp3}} "I'm done playing."
+*{{AC|BreachComeback2.mp3}} "Their crew got sloppy. Punish them."
+*{{AC|BreachComeback3.mp3}} "The fools gave us a window. Smash through it!"
+
+====Self commend====
+*{{AC|BreachSelfCommend1.mp3}} "I know, I'm great, you're welcome."{{#tag:sup|{{patchv|8.03}}+}}
+
+===Last round in the half===
+====Attacking====
+*{{AC|BreachLastRound1.mp3}} "Spend what you got."
+
+====Defending====
+*{{AC|BreachLastRound2.mp3}} "No point saving. Spend it all."
+
+===Match Point===
+*{{AC|BreachMatchPoint1.mp3}} "We got them beat. Knock 'em out!"
+*{{AC|BreachMatchPoint2.mp3}} "Let's put them in the ground."
+*{{AC|BreachMatchPoint3.mp3}} "Let's finish this already!"
+
+===Shop===
+====Let's Buy====
+*{{AC|BreachBuying1.mp3}}{{AC|BreachBuying2.mp3}} "Buying."
+
+====Let's Save====
+*{{AC|BreachSaving1.mp3}}{{AC|BreachSaving2.mp3}} "Saving."
+
+====I Have Extra Creds====
+*{{AC|BreachOffer1.mp3}}{{AC|BreachOffer2.mp3}} "I'm feeling generous. Who needs a buy?"
+
+====Requested====
+*{{AC|BreachRequest1.mp3}}{{AC|BreachRequest2.mp3}} "I need a drop."
+
+===Barrier Down===
+*{{AC|BreachBarrierDown1.mp3}} "Break through!"
+*{{AC|BreachBarrierDown2.mp3}} "Enough."
+*{{AC|BreachBarrierDown3.mp3}} "They want a fight? Let's fight."
+*{{AC|BreachBarrierDown4.mp3}} "I don't have all day."
+*{{AC|BreachBarrierDown5.mp3}} "Stomp 'em!"
+*{{AC|BreachBarrierDown6.mp3}} "Attack us, come on!"
+*{{AC|BreachBarrierDown7.mp3}} "Hit them back!"
+*{{AC|BreachBarrierDown8.mp3}} "I take what I want."
+*{{AC|BreachBarrierDown9.mp3}} "Punch in."
+*{{AC|BreachBarrierDown10.mp3}} "Crush them."
+*{{AC|BreachBarrierDown11.mp3}} "Keep up the pressure."
+*{{AC|BreachBarrierDown12.mp3}} "Mow 'em down!"
+*{{AC|BreachBarrierDown13.mp3}} "Behind me."
+*{{AC|BreachBarrierDown14.mp3}} "Let's have some fun."
+*{{AC|BreachBarrierDown15.mp3}} "Don't let up."
+*{{AC|BreachBarrierDown16.mp3}} "I'm ready."
+*{{AC|BreachBarrierDown17.mp3}} "Keep up!"
+*{{AC|BreachBarrierDown18.mp3}} "Hit them fast, hit them hard."
+*{{AC|BreachBarrierDown19.mp3}} "Take 'em."
+*{{AC|BreachBarrierDown20.mp3}} "Okay, nu kör vi!"{{#tag:sup|{{patchv|8.03}}+}}
+**(''Nu kör vi'': Here we go)
+*{{AC|BreachBarrierDown21.mp3}} "In i skärselden."{{#tag:sup|{{patchv|8.03}}+}}
+**(Into purgatory.)
+*{{AC|BreachBarrierDown22.mp3}} "For the misfits."{{#tag:sup|{{patchv|12.05}}+}}
+
+==Spike==
+===Forgotten in spawn===
+*{{AC|BreachForgotSpike1.mp3}} "Where the hell's the spike?"
+*{{AC|BreachForgotSpike2.mp3}} "Too eager! Forgot the spike."
+
+===Ally carrier down===
+*{{AC|BreachSpikeDown1.mp3}}{{AC|BreachSpikeDown2.mp3}} "Our carrier's dead."
+
+===Dropped===
+*{{AC|BreachSpikeDropped1.mp3}}{{AC|BreachSpikeDropped2.mp3}} "Spike dropped."
+
+===Retrieved===
+*{{AC|BreachSpikePickedUp1.mp3}}{{AC|BreachSpikePickedUp2.mp3}} "Got the spike."
+
+===Planted===
+*{{AC|BreachSpikePlanted1.mp3}}{{AC|BreachSpikePlanted2.mp3}} "Spike planted."
+
+===Spotted===
+*{{AC|BreachSpikeSpottedA1.mp3}}{{AC|BreachSpikeSpottedA2.mp3}} "Spike is A."
+*{{AC|BreachSpikeSpottedB1.mp3}}{{AC|BreachSpikeSpottedB2.mp3}}  "Spike is B."
+*{{AC|BreachSpikeSpottedC1.mp3}}{{AC|BreachSpikeSpottedC2.mp3}} "Spike is C."
+*{{AC|BreachSpikeSpottedASpawn1.mp3}}{{AC|BreachSpikeSpottedASpawn2.mp3}} "Spike in Attacker Spawn."
+*{{AC|BreachSpikeSpottedDSpawn1.mp3}}{{AC|BreachSpikeSpottedDSpawn2.mp3}} "Spike in Defender Spawn."
+*{{AC|BreachSpikeSpottedMid1.mp3}}{{AC|BreachSpikeSpottedMid2.mp3}} "Spike is Mid."
+
+===Defuse resumed===
+*{{AC|BreachDefuseResumed1.mp3}}{{AC|BreachDefuseResumed2.mp3}} "Get off my back."
+
+===Defuse time running out===
+*{{AC|BreachDefuseLate1.mp3}}{{AC|BreachDefuseLate2.mp3}} "Shut up and let me work."
+*{{AC|BreachDefuseLate3.mp3}}{{AC|BreachDefuseLate4.mp3}} "Come on, come on."
+
+===Defuse successful===
+*{{AC|BreachDefuseComplete1.mp3}} "Not your day, is it."
+*{{AC|BreachDefuseComplete2.mp3}} "Change of plans."
+
+==Kill==
+*{{AC|BreachKill1.mp3}}{{AC|BreachKill2.mp3}} "Dead."
+*{{AC|BreachKill3.mp3}}{{AC|BreachKill4.mp3}} "Too late!"
+*{{AC|BreachKill5.mp3}} "Worthless!"
+*{{AC|BreachKill6.mp3}} "Pitiful."
+*{{AC|BreachKill7.mp3}} "Gotchu."
+*{{AC|BreachKill8.mp3}} "Weak."
+*{{AC|BreachKill9.mp3}} "Dusted."
+*{{AC|BreachKill10.mp3}} "Amateur."
+*{{AC|BreachKill11.mp3}} "Hejdå."{{#tag:sup|{{patchv|8.03}}+}}
+**(Bye.)
+*{{AC|BreachKill12.mp3}} "Nog om dig"{{#tag:sup|{{patchv|8.03}}+}}
+**(Enough about you.)
+*{{AC|BreachKill13.mp3}} "Sov gott."{{#tag:sup|{{patchv|8.03}}+}}
+**(Sleep tight.)
+
+===Headshot===
+*{{AC|BreachHeadshot1.mp3}} ''*Breach laughs*''
+*{{AC|BreachHeadshot2.mp3}} "Ha!"
+*{{AC|BreachHeadshot3.mp3}} "Popped!"
+*{{AC|BreachHeadshot4.mp3}} "Headshot."
+*{{AC|BreachHeadshot5.mp3}} "You're nothing."
+*{{AC|BreachHeadshot6.mp3}} "No match."
+*{{AC|BreachHeadshot7.mp3}} "Easy!"
+*{{AC|BreachHeadshot8.mp3}} "Mitt I prick!"{{#tag:sup|{{patchv|8.03}}+}}
+**(Right on target!)
+*{{AC|BreachHeadshot9.mp3}} "Fullträff!"{{#tag:sup|{{patchv|8.03}}+}}
+**(Direct hit!)
+
+===[[Melee]]===
+*{{AC|BreachMeleeKill1.mp3}} "Night-night."
+*{{AC|BreachMeleeKill2.mp3}} "Gutted!"
+
+===Triple===
+*{{AC|BreachTriple1.mp3}}{{AC|BreachTriple2.mp3}} "Three out!"
+
+===Quadra===
+*{{AC|BreachQuadra1.mp3}}{{AC|BreachQuadra2.mp3}} "Make it four!"
+
+===One kill remaining (game-mode specific)===
+*{{AC|BreachOneKillLeft1.mp3}} "Game time!"
+*{{AC|BreachOneKillLeft2.mp3}} "Game time!"
+
+==Round End==
+===Ace===
+*{{AC|BreachAce1.mp3}} "I'm in overdrive!"
+*{{AC|BreachAce2.mp3}} "I'll run through you every damn time!"
+*{{AC|BreachAce3.mp3}} "I'm firing on all cylinders!"
+*{{AC|BreachAce4.mp3}} "Anyone else want to try me?!"
+
+===Clutch===
+*{{AC|BreachClutch1.mp3}} "Stay out of my way."
+*{{AC|BreachClutch2.mp3}} "I go through anyone!"
+*{{AC|BreachClutch3.mp3}} "My rate just went up!"
+*{{AC|BreachClutch4.mp3}} "Is that the best you've got?"
+*{{AC|BreachClutch5.mp3}} "Always got to overprove myself!"
+*{{AC|BreachClutch6.mp3}} "Doubt me again!"
+
+===Flawless or Team Ace===
+*{{AC|BreachFlawless1.mp3}} "Child's play!"
+*{{AC|BreachFlawless2.mp3}} "We ran right over them!"
+*{{AC|BreachFlawless3.mp3}} "Hell yeah! Next drink's on me."
+*{{AC|BreachFlawless4.mp3}} "I could've left my arms at home."
+
+===Thrifty===
+*{{AC|BreachThrifty1.mp3}} "I don't have to pack heavy. These arms are heavy enough."
+*{{AC|BreachThrifty2.mp3}} "I'm here to make money, not spend it."
+
+===Last Kill===
+*{{AC|BreachLastKill1.mp3}} "Not one left."
+*{{AC|BreachLastKill2.mp3}} "Ha!"
+*{{AC|BreachLastKill3.mp3}} "We bring enough body bags?"
+*{{AC|BreachLastKill4.mp3}} "Quit your tiptoeing. They're all dead."
+*{{AC|BreachLastKill5.mp3}} "Kill everyone, and our job gets a whole lot easier."
+
+====Enemy MVP====
+There are no voice lines at the moment in this section for this Agent.
+
+====Using [[Melee]]====
+*{{AC|BreachLastKillMelee1.mp3}} "Never been in a knife fight, have you?"
+*{{AC|BreachLastKillMelee2.mp3}} "I fight dirty."
+
+===Low HP===
+*{{AC|BreachLowHP1.mp3}} "Takes more than that."
+*{{AC|BreachLowHP2.mp3}} "Ungh... I've taken worse."
+
+==Match End==
+===Match Win===
+*{{AC|BreachMatchWin1.mp3}} "Hell yeah! Who's up for another?"
+*{{AC|BreachMatchWin2.mp3}} "Time to go home. Scrape these bugs off my boots."
+*{{AC|BreachMatchWin3.mp3}} "The fight is over? I just warmed up!"
+*{{AC|BreachMatchWin4.mp3}} "Job's done! Pay up."
+
+====[[Icebox]]====
+*{{AC|BreachMatchWinIcebox.mp3}} "Oh, I've missed the cold! This was great!"
+
+===Runner-up (game-mode specific)===
+*{{AC|BreachRunnerUp1.mp3}} "Good take. Next one I'll take it all!"
+*{{AC|BreachRunnerUp2.mp3}} "I got robbed!"
+*{{AC|BreachRunnerUp3.mp3}} "Hell yeah, let's go again!"
+
+==Agent-specific interactions==
+{| class="wikitable sortable"
+!To Agent
+!Scenario
+!width=40%; class=unsortable|Ally
+!width=40%; class=unsortable|Enemy
+|-
+|rowspan=3|{{ai|Breach}}
+|Match Start
+|
+|{{AC|BreachEnemyBreachMatchStart.mp3}} "A second Breach, huh? Huh, this might be a fair fight after all!"
+|-
+|Kill
+|
+|{{AC|BreachEnemyBreachKill.mp3}} "Nice try."
+|-
+|Last Kill
+|
+|{{AC|BreachEnemyBreachLastKill.mp3}} "You're just a pretender."
+|-
+|rowspan=7|{{ai|Brimstone}}
+|Chat
+|
+:[[File:Breach icon.png|20px|link=Breach]] {{AC|BreachAllyBrimstoneChat.mp3}} "Brimstone, the corporate sellout! Here to look out for Kingdom's special interests?"{{#tag:sup|{{patchv|2.05}}+}}
+:[[File:Brimstone icon.png|20px|link=Brimstone]] {{AC|BrimstoneAllyBreachChat.mp3}} "You don't know what you're talking about, Breach."
+|
+|-
+|Match Start
+|{{AC|BreachAllyBrimstoneMatchStart.mp3}} "It could be worse, Brimstone! Instead of working together we could be facing off! Or maybe you'd prefer that."
+|{{AC|BreachEnemyBrimstoneMatchStart.mp3}} "Haha, when that Brimstone sees me here, he's gonna be so pissed!"
+|-
+|Round Start
+|{{AC|BreachAllyBrimstoneRoundStart.mp3}} "Hey Brimmy, remind me to play you this riff I recorded once we're done. I-I think it's a winner."{{#tag:sup|{{patchv|8.03}}+}}
+|{{AC|BreachEnemyBrimstoneRoundStart.mp3}} "That Brimstone better stay out of my way."
+|-
+|Barrier Down
+|{{AC|BreachAllyBrimstoneBarrierDown.mp3}} "I hope you're ready, old man!"
+|{{AC|BreachEnemyBrimstoneBarrierDown.mp3}} "That Brimstone can't stop me."
+|-
+|Commend
+|{{AC|BreachAllyBrimstoneCommend.mp3}} "Leave some fight for the rest of us, old man!"
+|
+|-
+|Kill
+|
+|{{AC|BreachEnemyBrimstoneKill.mp3}} "Retired."
+|-
+|Last Kill
+|
+|{{AC|BreachEnemyBrimstoneLastKill.mp3}} "See, you're not too stubborn to die. You're just stubborn enough."
+|-
+|rowspan=5|{{ai|Cypher}}
+|Match Start
+|{{AC|BreachAllyCypherMatchStart.mp3}} "Don't aim that camera at me, Cypher! Save it for the enemy."
+|
+|-
+|Round Start
+|{{AC|BreachAllyCypherRoundStart.mp3}} "Cypher, stop bugging my gear with microphones! You're worse than Interpol!"
+|
+|-
+|Barrier Down
+|{{AC|BreachAllyCypherBarrierDown.mp3}} "Where are they, Cypher?"
+|
+|-
+|Kill
+|
+|{{AC|BreachEnemyCypherKill.mp3}} "Killed the rat!"
+|-
+|Last Kill
+|
+|{{AC|BreachEnemyCypherLastKill.mp3}} "Didn't see me coming."
+|-
+|rowspan=5|{{ai|Deadlock}}
+|Chat
+|
+:[[File:Breach icon.png|20px|link=Breach]] {{AC|BreachAllyDeadlockChat.mp3}} "Hey, Deadlock, listen, what do you get when you cross two Norwegians?" ''*Breach wheezes*''{{#tag:sup|{{patchv|8.03}}+}}
+:[[File:Deadlock icon.png|20px|link=Deadlock]] {{AC|DeadlockAllyBreachChat.mp3}} "Breach, shut up. If you were funny, I'd come to your open mic nights."
+|
+|-
+|Match Start
+|{{AC|BreachAllyDeadlockMatchStart.mp3}} "Hey Deadlock, we make a decent team, eller hur? They attack and you butcher them, they stay put and I turn them to mush." ''*Breach laughs*'' "Inte illa."{{#tag:sup|{{patchv|8.03}}+}}
+*(''Eller hur'': Right)
+*(''Inte illa'': Not bad)
+|
+|-
+|Commend
+|{{AC|BreachAllyDeadlockCommend.mp3}} "Well well well, Deadlock didn't screw it up. I'm proud of you."{{#tag:sup|{{patchv|8.03}}+}}
+|
+|-
+|Barrier Down
+|
+|{{AC|BreachEnemyDeadlockBarrierDown.mp3}} "Deadlock is mine."{{#tag:sup|{{patchv|8.03}}+}}
+|-
+|Last Kill
+|
+|{{AC|BreachEnemyDeadlockLastKill.mp3}} "Ska du föreställa en Ståljeger?"{{#tag:sup|{{patchv|8.03}}+}}
+*(Are you supposed to be a Ståljeger?)
+|-
+|{{ai|Gekko}}
+|Chat
+|
+:[[File:Gekko icon.png|20px|link=Gekko]] {{AC|GekkoAllyBreachChat.mp3}} "Ayy, B-man! What you doing after this? Put me and the crew on to some Swedish eats, yeah?"
+:[[File:Breach icon.png|20px|link=Breach]] {{AC|BreachAllyGekkoChat.mp3}} "Is that- Am I B-ma-? Okay, uh, yeah Gekko, yeah yeah yeah sure, yeah. Eats. Cool."{{#tag:sup|{{patchv|8.03}}+}}
+|
+|-
+|rowspan=2|{{ai|Harbor}}
+|Match Start
+|{{AC|BreachAllyHarborMatchStart.mp3}} "So Harbor, those relics you used to recover with REALM. You remember where they... kept them?"{{#tag:sup|{{patchv|8.03}}+}}
+|
+|-
+|Chat
+|
+:[[File:Harbor icon.png|20px|link=Harbor]] {{AC|HarborAllyBreachChat.mp3}} "Breach, you still haven't apologized to me for that job you tried in Bengaluru."
+:[[File:Breach icon.png|20px|link=Breach]] {{AC|BreachAllyHarborChat.mp3}} "Well, you haven't apologized for getting in my way."{{#tag:sup|{{patchv|8.03}}+}}
+|
+|-
+|rowspan=2|{{ai|Iso}}
+|Barrier Down
+|{{AC|BreachAllyIsoBarrierDown.mp3}} "Iso, go show off."{{#tag:sup|{{patchv|8.03}}+}}
+|{{AC|BreachEnemyIsoBarrierDown.mp3}} "I'm coming for you, Iso."{{#tag:sup|{{patchv|8.03}}+}}
+|-
+|Last Kill
+|
+|{{AC|BreachEnemyIsoLastKill.mp3}} "I've got quite the payday coming my way, Iso. Tack-tack."{{#tag:sup|{{patchv|8.03}}+}}
+*(''Tack-tack'': Thank you, thank you)
+|-
+|{{ai|Jett}}
+|Commend
+|{{AC|BreachAllyJettCommend.mp3}} "Damn, Jett, have you ever considered a life of crime? I have contacts. Let me know."
+|
+|-
+|{{ai|KAY/O}}
+|Last Kill
+|
+|{{AC|BreachEnemyKAYOLastKill.mp3}} "In a fair fight I'd still kill you."
+|-
+|rowspan=4|{{ai|Killjoy}}
+|Match Start
+|{{AC|BreachAllyKilljoyMatchStart.mp3}} "Killjoy, your inventions are too fragile. See these arms? Carbon steel with titanium plating! That's what you need!"
+|
+|-
+|Round Start
+|
+|{{AC|BreachEnemyKilljoyRoundStart.mp3}} "So the German has some fancy toys. Let's break them!"
+|-
+|Barrier Down
+|
+|{{AC|BreachEnemyKilljoyBarrierDown.mp3}} "I'll make that Killjoy cry!"
+|-
+|Kill
+|
+|{{AC|BreachEnemyKilljoyKill.mp3}} "Nerd!"
+|-
+|rowspan=3|{{ai|Omen}}
+|Round Start
+|{{AC|BreachAllyOmenRoundStart.mp3}} "Okay Omen, I'll smash in the front door while you sneak in the back. It's a good plan, yeah?"
+|{{AC|BreachEnemyOmenRoundStart.mp3}} "I'm gonna run my fist through that Omen's face. Can you even punch a ghost? Who cares, I'm doing it!"
+|-
+|Commend
+|{{AC|BreachAllyOmenCommend.mp3}} "Omen! That scared the shit out of me!"
+|
+|-
+|Kill
+|
+|{{AC|BreachEnemyOmenKill.mp3}} "Freak!"
+|-
+|rowspan=4|{{ai|Phoenix}}
+|Match Start
+|
+|{{AC|BreachEnemyPhoenixMatchStart.mp3}} "Let that Phoenix run his mouth. We'll shut him up soon enough."
+|-
+|Round Start
+|{{AC|BreachAllyPhoenixRoundStart.mp3}} "You got fire in your eyes, Phoenix. I like that."
+|
+|-
+|Commend
+|{{AC|BreachAllyPhoenixCommend.mp3}} "Phoenix keeps bringing the fire, it's like a Viking funeral!" *''laughs''*
+|
+|-
+|Barrier Down
+|{{AC|BreachAllyPhoenixBarrierDown.mp3}} "Phoenix, burn 'em down."
+|
+|-
+|rowspan=6|{{ai|Raze}}
+|Chat
+|
+:[[File:Raze icon.png|20px|link=Raze]] {{AC|RazeAllyBreachChat.mp3}} "You know, Breachy, in all this chaos it would be terrible if some equipment just, got lost, you know?"
+:[[File:Breach icon.png|20px|link=Breach]] {{AC|BreachAllyRazeChat.mp3}} "Oh man, just awful. A tragedy."{{#tag:sup|{{patchv|2.05}}+}}
+|-
+|Match Start
+|{{AC|BreachAllyRazeMatchStart.mp3}} "Raze! Huh, together again and we're not even breaking the law!"
+|
+|-
+|Round Start
+|{{AC|BreachAllyRazeRoundStart.mp3}} "Raze, don't wreck this place all on your own! Hehe, save some demo for me!"
+|
+|-
+|Commend
+|{{AC|BreachAllyRazeCommend.mp3}} "''"Mandou bem"'', Raze! How's that for pronunciation, huh?" *''laughs''*
+*(''Mandou bem (in Portuguese)'': Nice job)
+|
+|-
+|Barrier Down
+|{{AC|BreachAllyRazeBarrierDown.mp3}} "It's you and me, Raze."
+|
+|-
+|Last Kill
+|
+|{{AC|BreachEnemyRazeLastKill.mp3}} "Sorry, lillsyrran."{{#tag:sup|{{patchv|8.03}}+}}
+*(''Lillsyrran'': Little sister)
+|-
+|{{ai|Reyna}} 
+|Commend
+|{{AC|BreachAllyReynaCommend.mp3}} "Reyna, I think I'm in love!" *''laughs''*
+|
+|-
+|rowspan=7|{{ai|Sage}}
+|rowspan=2|Match Start
+|
+|{{AC|BreachEnemySageMatchStart.mp3}} "The enemy Sage thinks she will slow us down. Haha! That's cute."
+|-
+|
+|{{AC|BreachEnemySageMatchStart2.mp3}} "Good, an enemy Sage. Just what the snake ordered.{{#tag:sup|{{patchv|12.05}}+}}
+|-
+|rowspan=2|Round Start
+|
+|{{AC|BreachEnemySageRoundStart.mp3}} "That monk thinks she's an angel. Let's clip her wings."
+|-
+|
+|{{AC|BreachEnemySageRoundStart2.mp3}} "Their Sage is a coward hiding behind walls. Grow a spine already!"
+|-
+|Barrier Down
+|
+|{{AC|BreachEnemySageBarrierDown.mp3}} "I'll destroy their Sage!"
+|-
+|Kill
+|
+|{{AC|BreachEnemySageKill.mp3}} "The angel's dead."
+|-
+|Last Kill
+|
+|{{AC|BreachEnemySageLastKill.mp3}} "Please Sage, don't get up."{{#tag:sup|{{patchv|12.05}}+}}
+|-
+|{{ai|Skye}}
+|Chat
+|
+:[[File:Skye icon.png|20px|link=Skye]] {{AC|SkyeAllyBreachChat.mp3}} "Breach, I'm thinking I'll hit the gym later. You in?"
+:[[File:Breach icon.png|20px|link=Breach]] {{AC|BreachAllySkyeChat.mp3}} "So long as it's leg day!" ''*Breach laughs*''{{#tag:sup|{{patchv|2.05}}+}}
+|
+|-
+|rowspan=5|{{ai|Sova}}
+|rowspan=2|Match Start
+|{{AC|BreachAllySovaMatchStart.mp3}} "Sova you can stop pretending. Under your shining armor, there's a mad dog. I've seen it. Not so different after all, eh?" ''*Breach laughs*''{{#tag:sup|{{patchv|12.05}}+}}
+|{{AC|BreachEnemySovaMatchStart.mp3}} "If that Sova thinks an arrow will stop me, he's got another thing coming - my fist!" *''laughs''*
+|-
+|
+|{{AC|BreachEnemySovaMatchStart2.mp3}} "That pretty boy Sova sure looks the hero, I'll give him that. I'll still kill him."
+|-
+|Round Start
+|{{AC|BreachAllySovaRoundStart.mp3}} "Just tell me where they are, Sova. I'll take it from there."
+|
+|-
+|Barrier Down
+|{{AC|BreachAllySovaBarrierDown.mp3}} "Unleash the fury, Sova."{{#tag:sup|{{patchv|12.05}}+}}
+|{{AC|BreachEnemySovaBarrierDown.mp3}} "That Sova's mine."
+|-
+|Kill
+|
+|{{AC|BreachEnemySovaKill.mp3}} "Sova's dead."
+|-
+|rowspan=5|{{ai|Viper}}
+|rowspan=2|Match Start
+|{{AC|BreachAllyViperMatchStart.mp3}} "You never stop fighting, Viper. No matter what."
+|
+|-
+|{{AC|BreachAllyViperMatchStart2.mp3}} "Viper's with us, team, and the boss lady's order's are to make them hurt, which is what I do normally so, no problem."{{#tag:sup|{{patchv|12.05}}+}}
+|
+|-
+|Round Start
+|{{AC|BreachAllyViperRoundStart.mp3}} "I'll get you your opening Viper, as promised."{{#tag:sup|{{patchv|12.05}}+}}
+|-
+|Commend
+|{{AC|BreachAllyViperCommend.mp3}} "Viper, you're enjoying this a little too much."
+|
+|-
+|Last Kill
+|
+|{{AC|BreachEnemyViperLastKill.mp3}} "It was never personal, Viper. Just business."
+|-
+|rowspan=2|{{ai|Yoru}}
+|Match Start
+|{{AC|BreachAllyYoruMatchStart.mp3}} "Yoru! Great, you and me keep this simple uh? No bullshit, just results."{{#tag:sup|{{patchv|12.05}}+}}
+|
+|-
+|Barrier Down
+|{{AC|BreachAllyYoruBarrierDown.mp3}} "We break them, Yoru."{{#tag:sup|{{patchv|12.05}}+}}
+|
+|}
+
+==Radio Commands==
+===Menu Index only===
+====Caution here====
+*{{AC|BreachCaution1.mp3}}{{AC|BreachCaution2.mp3}} "Enemies nearby."
+
+====Going Area====
+*{{AC|BreachGoingA1.mp3}}{{AC|BreachGoingA2.mp3}} "Going A."
+*{{AC|BreachGoingB1.mp3}}{{AC|BreachGoingB2.mp3}} "Going B."
+*{{AC|BreachGoingC1.mp3}}{{AC|BreachGoingC2.mp3}} "Going C."
+*{{AC|BreachGoingMid1.mp3}}{{AC|BreachGoingMid2.mp3}} "Heading Mid."
+
+====Need Support====
+*{{AC|BreachHelp1.mp3}}{{AC|BreachHelp2.mp3}}{{AC|BreachHelp3.mp3}} "Need backup."
+
+====On my way====
+*{{AC|BreachOnMyWay1.mp3}}{{AC|BreachOnMyWay2.mp3}} "On my way."
+
+====Play for picks====
+*{{AC|BreachPlayForPicks1.mp3}}{{AC|BreachPlayForPicks2.mp3}} "Play for picks."
+
+===Wheel Index only===
+====Encourage====
+*{{AC|BreachEncouraging1.mp3}}{{AC|BreachEncouraging2.mp3}}{{AC|BreachEncouraging3.mp3}} "We can do this."
+
+====I'll lurk====
+Only as Attackers during Buy Phase.
+*{{AC|BreachLurking1.mp3}}{{AC|BreachLurking2.mp3}} "I'm lurking."
+
+====I'll push out====
+Only as Defenders during Buy Phase.
+*{{AC|BreachPushingOut1.mp3}}{{AC|BreachPushingOut2.mp3}} "I'm pushing out."
+
+====I'm holding position====
+Only as Defenders during Buy Phase.
+*{{AC|BreachHoldingPosition1.mp3}}{{AC|BreachHoldingPosition2.mp3}} "Holding position."
+
+====Let's Attack====
+Only during Round Phase.
+*{{AC|BreachLetsAttack1.mp3}}{{AC|BreachLetsAttack2.mp3}} "Let's attack."
+
+====Let's hold positions====
+Only as Defenders during Buy Phase.
+*{{AC|BreachHoldPositions1.mp3}}{{AC|BreachHoldPositions2.mp3}} "Let's hold positions."
+
+====Let's play slow====
+Only as Attackers at anytime.
+*{{AC|BreachPlaySlow1.mp3}}{{AC|BreachPlaySlow2.mp3}} "Let's play slow."
+
+====Let's push out====
+Only as Defenders during Buy Phase.
+*{{AC|BreachPushOut1.mp3}}{{AC|BreachPushOut2.mp3}} "Let's push out."
+
+====Let's spread out====
+*{{AC|BreachSpreadOut1.mp3}}{{AC|BreachSpreadOut2.mp3}} "Let's spread out."
+
+====Nice Try====
+*{{AC|BreachNiceTry1.mp3}}{{AC|BreachNiceTry2.mp3}}{{AC|BreachNiceTry3.mp3}} "Nice try."
+
+====Stick together====
+*{{AC|BreachStickTogether1.mp3}}{{AC|BreachStickTogether2.mp3}} "Stick together."
+
+===Menu and Wheel Index===
+====Commend====
+*{{AC|BreachCommend1.mp3}}{{AC|BreachCommend2.mp3}}{{AC|BreachCommend3.mp3}} "Hell of a job."
+
+====Fall Back====
+Menu Index at anytime, or Wheel Index only during Round Phase.
+*{{AC|BreachFallBack1.mp3}}{{AC|BreachFallBack2.mp3}} "Fall back."
+
+====Hello====
+*{{AC|BreachHello1.mp3}}{{AC|BreachHello2.mp3}}{{AC|BreachHello3.mp3}} "Hey."
+
+====I'll take point====
+Wheel Index only as Attackers during Buy Phase, or Menu Index at anytime regardless of Attackers or Defenders.
+*{{AC|BreachTakePoint1.mp3}}{{AC|BreachTakePoint2.mp3}} "Taking point."
+
+====Let's rush them (Radio Command)====
+*{{AC|BreachRush1.mp3}}{{AC|BreachRush2.mp3}} "Rush them."
+
+====Need healing====
+*{{AC|BreachHealing1.mp3}}{{AC|BreachHealing2.mp3}} "Need healing."
+
+====No====
+*{{AC|BreachNo1.mp3}}{{AC|BreachNo2.mp3}}{{AC|BreachNo3.mp3}} "No."
+
+====Sorry====
+*{{AC|BreachSorry1.mp3}}{{AC|BreachSorry2.mp3}}{{AC|BreachSorry3.mp3}} "Sorry."
+
+====Thanks====
+*{{AC|BreachThanks1.mp3}}{{AC|BreachThanks2.mp3}}{{AC|BreachThanks3.mp3}} "Tack-tack."
+**(Thank you, thank you.)
+
+====Ultimate Status====
+*{{AC|BreachUltDown1.mp3}}{{AC|BreachUltDown2.mp3}} "My ult's not ready."
+*{{AC|BreachUltAlmost1.mp3}}{{AC|BreachUltAlmost2.mp3}} "My ult's almost ready."
+*{{AC|BreachUltReady1.mp3}}{{AC|BreachUltReady2.mp3}} "My ult's ready."
+
+====Yes====
+*{{AC|BreachYes1.mp3}}{{AC|BreachYes2.mp3}}{{AC|BreachYes3.mp3}} "Ja."
+
+===Wheel Index requiring Minimap===
+For the following voicelines, the minimap must be open and then open ping wheel and activate strategy.
+====Faking====
+Only as Attackers during Buy Phase.
+*{{AC|BreachFaking1.mp3}}{{AC|BreachFaking2.mp3}} "I'm faking."
+*{{AC|BreachFakingA1.mp3}}{{AC|BreachFakingA2.mp3}} "I'm faking A."
+*{{AC|BreachFakingB1.mp3}}{{AC|BreachFakingB2.mp3}} "I'm faking B."
+*{{AC|BreachFakingC1.mp3}}{{AC|BreachFakingC2.mp3}} "I'm faking C."
+
+====I'm Going Here====
+As Defenders during Buy Phase, or as Attackers at anytime.
+*{{AC|BreachGoingA1.mp3}}{{AC|BreachGoingA2.mp3}} "Going A."
+*{{AC|BreachGoingB1.mp3}}{{AC|BreachGoingB2.mp3}} "Going B."
+*{{AC|BreachGoingC1.mp3}}{{AC|BreachGoingC2.mp3}} "Going C."
+*{{AC|BreachGoingMid1.mp3}}{{AC|BreachGoingMid2.mp3}} "Heading Mid."
+
+====Let's Go Here====
+Only as Attackers during Buy Phase.
+*{{AC|BreachLetsGoA1.mp3}}{{AC|BreachLetsGoA2.mp3}} "Let's go A."
+*{{AC|BreachLetsGoB1.mp3}}{{AC|BreachLetsGoB2.mp3}} "Let's go B."
+*{{AC|BreachLetsGoC1.mp3}}{{AC|BreachLetsGoC2.mp3}} "Let's go C."
+*{{AC|BreachLetsGoHere1.mp3}}{{AC|BreachLetsGoHere2.mp3}} "Let's go here."
+
+====Let's rush them (Minimap)====
+Only as Attackers during Buy Phase.
+*{{AC|BreachLetsRush1.mp3}}{{AC|BreachLetsRush2.mp3}} "Let's rush them."
+*{{AC|BreachLetsRushA1.mp3}}{{AC|BreachLetsRushA2.mp3}} "Let's rush A."
+*{{AC|BreachLetsRushB1.mp3}}{{AC|BreachLetsRushB2.mp3}} "Let's rush B."
+*{{AC|BreachLetsRushC1.mp3}}{{AC|BreachLetsRushC2.mp3}} "Let's rush C."
+
+====Let's Sneak Here====
+Only as Attackers during Buy Phase.
+*{{AC|BreachSneakA1.mp3}}{{AC|BreachSneakA2.mp3}} "Let's sneak A."
+*{{AC|BreachSneakB1.mp3}}{{AC|BreachSneakB2.mp3}} "Let's sneak B."
+*{{AC|BreachSneakC1.mp3}}{{AC|BreachSneakC2.mp3}} "Let's sneak C."
+*{{AC|BreachSneakMid1.mp3}}{{AC|BreachSneakMid2.mp3}} "Let's sneak Mid."
+
+====Let's Stack Here====
+Only as Defenders during Buy Phase.
+*{{AC|BreachStack1.mp3}}{{AC|BreachStack2.mp3}} "Let's stack up."
+*{{AC|BreachStackA1.mp3}}{{AC|BreachStackA2.mp3}} "Let's stack A."
+*{{AC|BreachStackB1.mp3}}{{AC|BreachStackB2.mp3}} "Let's stack B."
+*{{AC|BreachStackC1.mp3}}{{AC|BreachStackC2.mp3}} "Let's stack C."
+*{{AC|BreachStackMid1.mp3}}{{AC|BreachStackMid2.mp3}} "Let's stack Mid."
+
+====Someone Go Here====
+As Attackers during Round Phase, or as Defenders at anytime.
+*{{AC|BreachNeedSomeoneA1.mp3}}{{AC|BreachNeedSomeoneA2.mp3}} "Someone go A."
+*{{AC|BreachNeedSomeoneB1.mp3}}{{AC|BreachNeedSomeoneB2.mp3}} "Someone go B."
+*{{AC|BreachNeedSomeoneC1.mp3}}{{AC|BreachNeedSomeoneC2.mp3}} "Someone go C."
+*{{AC|BreachNeedSomeoneMid1.mp3}}{{AC|BreachNeedSomeoneMid2.mp3}} "Someone go Mid."
+
+====Spike's here====
+Only as Defenders during Round Phase.
+*{{AC|BreachSpikeA1.mp3}}{{AC|BreachSpikeA2.mp3}} "Spike's A."
+*{{AC|BreachSpikeB1.mp3}}{{AC|BreachSpikeB2.mp3}} "Spike's B."
+*{{AC|BreachSpikeC1.mp3}}{{AC|BreachSpikeC2.mp3}} "Spike's C."
+*{{AC|BreachSpikeMid1.mp3}}{{AC|BreachSpikeMid2.mp3}} "Spike's Mid."
+*{{AC|BreachSpikeSpottedASpawn1.mp3}}{{AC|BreachSpikeSpottedASpawn2.mp3}} "Spike in Attacker Spawn."
+*{{AC|BreachSpikeSpottedDSpawn1.mp3}}{{AC|BreachSpikeSpottedDSpawn2.mp3}} "Spike in Defender Spawn."
+
+==Pings==
+===General===
+*{{AC|BreachPing1.mp3}}{{AC|BreachPing2.mp3}} "Right there."
+
+===Caution===
+*{{AC|BreachPingCaution1.mp3}}{{AC|BreachPingCaution2.mp3}} "Careful there."
+
+===Need support===
+*{{AC|BreachHelp1.mp3}}{{AC|BreachHelp2.mp3}}{{AC|BreachHelp3.mp3}} "Need backup!"
+
+===On my mark===
+*{{AC|BreachOnMyMark1.mp3}}{{AC|BreachOnMyMark2.mp3}} "On my mark."
+
+===Ping gun===
+*{{AC|BreachPingGun1.mp3}}{{AC|BreachPingGun2.mp3}} "Gun here."
+
+===Ping spike===
+*{{AC|BreachPingSpike1.mp3}}{{AC|BreachPingSpike2.mp3}} "Spike's here."
+
+===Ping for spike defuse===
+*{{AC|BreachDefuseSpike1.mp3}}{{AC|BreachDefuseSpike2.mp3}} "Defuse the spike!"
+
+===Ping for spike plant===
+*{{AC|BreachPlantSpike1.mp3}}{{AC|BreachPlantSpike2.mp3}} "Plant the spike!"
+
+===Watching===
+*{{AC|BreachWatching1.mp3}}{{AC|BreachWatching2.mp3}} "Guarding here."
+
+==Other lines==
+===Ability unusable===
+====[[Status Effect#Suppress|Suppressed]]====
+*{{AC|BreachCantUse1.mp3}} "Can't use that."
+
+====On cooldown====
+*{{AC|BreachOnCooldown1.mp3}} "That's not ready"
+
+====No charges====
+*{{AC|BreachNoCharges1.mp3}} "Out of charges."
+
+===Enemy spotted===
+*{{AC|BreachEnemyA1.mp3}}{{AC|BreachEnemyA2.mp3}} "Enemy spotted A."
+*{{AC|BreachEnemyB1.mp3}}{{AC|BreachEnemyB2.mp3}} "Enemy spotted B."
+*{{AC|BreachEnemyC1.mp3}}{{AC|BreachEnemyC2.mp3}} "Enemy spotted C."
+*{{AC|BreachEnemyASpawn1.mp3}}{{AC|BreachEnemyASpawn2.mp3}} "Enemy in Attacker Spawn."
+*{{AC|BreachEnemyDSpawn1.mp3}}{{AC|BreachEnemyDSpawn2.mp3}} "Enemy in Defender Spawn."
+*{{AC|BreachEnemyMid1.mp3}}{{AC|BreachEnemyMid2.mp3}} "Enemy spotted Mid."
+
+====Multiple====
+*{{AC|BreachEnemiesA1.mp3}}{{AC|BreachEnemiesA2.mp3}} "I got enemies A!"
+*{{AC|BreachEnemiesB1.mp3}}{{AC|BreachEnemiesB2.mp3}} "I got enemies B!"
+*{{AC|BreachEnemiesC1.mp3}}{{AC|BreachEnemiesC2.mp3}} "I got enemies C!"
+*{{AC|BreachEnemiesASpawn1.mp3}}{{AC|BreachEnemiesASpawn2.mp3}} "Enemies in Attacker Spawn!"
+*{{AC|BreachEnemiesDSpawn1.mp3}}{{AC|BreachEnemiesDSpawn2.mp3}} "Enemies in Defender Spawn!"
+*{{AC|BreachEnemiesMid1.mp3}}{{AC|BreachEnemiesMid2.mp3}} "I got enemies Mid!"
+
+===Reloading===
+*{{AC|BreachReloading1.mp3}}{{AC|BreachReloading2.mp3}} "Reloading."
+
+===Healed===
+*{{AC|BreachRelief1.mp3}}{{AC|BreachRelief2.mp3}}{{AC|BreachRelief3.mp3}} ''*Breach sighs*''
+
+===Killed===
+*{{AC|BreachDeath1.mp3}}{{AC|BreachDeath2.mp3}}{{AC|BreachDeath3.mp3}} ''*Breach groans*''
+
+===Resurrected via {{abi text|Resurrection}}===
+*{{AC|BreachResurrect.mp3}} "Hehe, of course you still need me."
+
+===Wounded===
+====Light damage====
+*{{AC|BreachPainLight1.mp3}}{{AC|BreachPainLight2.mp3}}{{AC|BreachPainLight3.mp3}} ''*Breach groans*''
+
+====Medium damage====
+*{{AC|BreachPainMedium1.mp3}}{{AC|BreachPainMedium2.mp3}}{{AC|BreachPainMedium3.mp3}} ''*Breach groans*''
+
+====Heavy damage====
+*{{AC|BreachPainHeavy1.mp3}}{{AC|BreachPainHeavy2.mp3}}{{AC|BreachPainHeavy3.mp3}} ''*Breach groans*''
+
+====Fall damage====
+*{{AC|BreachPainFall1.mp3}}{{AC|BreachPainFall2.mp3}}{{AC|BreachPainFall3.mp3}} ''*Breach groans*''
+
+==Unused lines==
+===Match MVP===
+*{{AC|BreachMatchMVP1.mp3}} "I always do the heavy lifting!"
+*{{AC|BreachMatchMVP2.mp3}} "Maybe now you'll take me seriously."
+*{{AC|BreachMatchMVP3.mp3}} "My rate just went up!"{{#tag:sup|{{patchv|2.05}}+}}
+*{{AC|BreachMatchMVP4.mp3}} "Always got to overprove myself!"{{#tag:sup|{{patchv|2.05}}+}}
+
+==Removed lines==
+===Last Kill Enemy MVP===
+*{{AC|BreachLastKillMVP2.mp3}} "No one beats me! No one."{{#tag:sup|-{{patchv|13.00}}}}
+
+===Ace===
+*{{AC|BreachAce5.mp3}} "You're pathetic!"{{#tag:sup|-{{patchv|12.05}}}}
+*{{AC|BreachAce6.mp3}} "What the hell were the rest of you doing?!"{{#tag:sup|-{{patchv|12.05}}}}
+
+===Wounded Annoyed===
+*{{AC|BreachPainAnnoyed1.mp3}}{{AC|BreachPainAnnoyed2.mp3}}{{AC|BreachPainAnnoyed3.mp3}} ''*Breach groans*''
+
+===Spike Spotted General===
+*{{AC|BreachSpikeSpotted1.mp3}}{{AC|BreachSpikeSpotted2.mp3}} "I see the spike."
+
+===Enemy spotted General===
+*{{AC|BreachEnemy1.mp3}}{{AC|BreachEnemy2.mp3}} "Enemy spotted."
+
+===Multiple Enemies spotted General===
+*{{AC|BreachEnemies1.mp3}}{{AC|BreachEnemies2.mp3}} "Multiple enemies spotted!"
+
+===Be Quiet===
+*{{AC|BreachBeQuiet1.mp3}}{{AC|BreachBeQuiet2.mp3}} "Quiet."
+
+===Rotate===
+*{{AC|BreachRotating1.mp3}}{{AC|BreachRotating2.mp3}} "Rotating."
+
+===Let's Rotate===
+*{{AC|BreachLetsRotate1.mp3}}{{AC|BreachLetsRotate2.mp3}} "Let's rotate."
+
+===Affirmation===
+*{{AC|BreachAffirmation1.mp3}}{{AC|BreachAffirmation2.mp3}} "Got it."
+
+===Callouts===
+*{{AC|BreachCalloutA1.mp3}}{{AC|BreachCalloutA2.mp3}} "A."
+*{{AC|BreachCalloutB1.mp3}}{{AC|BreachCalloutB2.mp3}} "B."
+*{{AC|BreachCalloutC1.mp3}}{{AC|BreachCalloutC2.mp3}} "C."
+*{{AC|BreachCalloutMid1.mp3}}{{AC|BreachCalloutMid2.mp3}} "Mid."
+
+===Clear Area===
+*{{AC|BreachClearThisArea1.mp3}}{{AC|BreachClearThisArea2.mp3}} "Clear this area."
+
+===Hold===
+*{{AC|BreachHold1.mp3}}{{AC|BreachHold2.mp3}} "Hold."
+
+===Push===
+*{{AC|BreachPush1.mp3}}{{AC|BreachPush2.mp3}} "Push."
+
+===Regroup===
+*{{AC|BreachRegroup1.mp3}}{{AC|BreachRegroup2.mp3}} "Regroup."
+
+===Need disrupt===
+*{{AC|BreachDisrupt1.mp3}}{{AC|BreachDisrupt2.mp3}} "Disrupt here."
+
+===Need scouting===
+*{{AC|BreachScout1.mp3}}{{AC|BreachScout2.mp3}} "Scout here."
+
+===Need vision block===
+*{{AC|BreachBlockVision1.mp3}}{{AC|BreachBlockVision2.mp3}} "Block vision here."
+
+===Ping enemy utility===
+*{{AC|BreachPingUtility1.mp3}}{{AC|BreachPingUtility2.mp3}} "Enemy utility here."
+
+===Ping Go here===
+*{{AC|BreachGoHere1.mp3}}{{AC|BreachGoHere2.mp3}} "Let's go here."
+
+==[[Range/Lore|The Range's lore assets]]==
+===[[Range/Lore/EP4|Episode 4]]===
+*{{AC|file=KAYO Audio Log Istanbul Mission Complete.mp3}} ''(For the entire transcription amongst the agents, see [[Range/Lore/EP4#Cypher's_Office|Range/Lore/EP4 → v4.07 → Cypher's Office]].)''
+
+===[[Range/Lore/EP5|Episode 5]]===
+*{{AC|file=VoicemailBrimstone26.mp3}} "I did the raid on [[Kingdom Industries]]. It was a clean job, in and out. I grabbed everything I could, documents, hard drives. [[Cypher]]'s gonna flip for some of the things in here. It's all dumped in, uh, Storage 5 for now. I'll get it organized for a comb-through next week."
+*{{AC|file=VoicemailBrimstone39.mp3}} "[[Brimstone]], I got the news that my nephew's sentence was reduced. He's getting out next month. I wonder how that could have happened... Thanks, for... pulling strings."
+
+===[[Range/Lore/EP6|Episode 6]]===
+*{{AC|file=VoicemailBrimstone46.mp3}} "Hey, Brimmy. There's a jam session tonight, training room, south wing... [[Sova]] tells me you play bass, be there."
+
+===[[Range/Lore/V26|Season 2026]]===
+*{{AC|file=LegionAudioTap2.mp3}} ''(For the entire transcription amongst the agents, see [[Range/Lore/V26#Cypher's Office 5|Range/Lore/V26 → v12.04 → Cypher's Office]].)''
+*{{AC|file=LegionAudioTap3.mp3}} ''(For the entire transcription amongst the agents, see [[Range/Lore/V26#Cypher's Office 6|Range/Lore/V26 → v12.05 → Cypher's Office]].)''
+*{{AC|file=VoicemailBrimstone133.mp3}} "Boss, listen up, I've got an issue and no one's taking it seriously. All the intercepts we're getting from [[Omega]], all the dirty details on this power play from [[Omega Viper|Viper]], and no one is asking the real question: why the hell did she choose [[Omega Sova|Sova]] as her second-in-command instead of me?! Listen, I don't like backstabbing either, but you pick your golden boy who always follows his conscience over the career criminal?! Are you out of your goddamn mind?! You know how many crews I've pulled together after someone decides to shake up the big boss? This shit is a regular occurrence in my field! Damn, sometimes these Omega guys really scramble my brain! Anyway, don't worry, I'm not planning to backstab you. I could, and I'd be the best at it! But I won't."
+
+==Notes==
+:''To easily see which quotes were added corresponding to the patch, use your browser's Find function and type the patch number (e.g. v8.03).
+*{{ui|Removed}} 1 voice line removed from patch {{patchv|13.00}}, documented in the patch notes.
+*{{ui|Adjustment}} 1 voice line moved (marked ^) from patch {{patchv|13.00}}.
+*{{ui|Added}} 9 voice lines added from patch {{patchv|12.05}}, documented in the patch notes.
+*{{ui|Removed}} 2 voice lines removed from patch {{patchv|12.05}}, undocumented in the patch notes.
+*{{ui|Added}} 27 voice lines added from patch {{patchv|8.03}}, documented in the patch notes.
+*{{ui|Added}} 5 voice lines added from patch {{patchv|2.05}}, undocumented in the patch notes.
+*Additional radio commands added in patch {{patchv|8.11}} are not mentioned in this page.
+*Other voice lines removed were at an unknown timeframe.
+
+==Navigation==
+{{Navbox agents}}
+[[Category:Quotes]]

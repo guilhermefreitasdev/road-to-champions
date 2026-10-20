@@ -1,0 +1,954 @@
+{{TOCright}}
+This is a '''list of quotes by {{ai|Sage}}'''. Sage is voiced by Naomi Yang in English. Necessary quotes are translated from Chinese to English. Sage has a total of {{PAGESINCATEGORY:Sage Quotes}} files of quotes including unused and removed lines, and excluding [[#The Range's lore assets|The Range's lore assets]].
+
+A downloadable folder containing all the audio files on this page can be found [https://drive.google.com/drive/folders/12tkF_ND5riJ6aBRUQQDr_4-iS0m5axsC?usp=sharing here].
+==Agent Selected==
+*{{AC|SagePick.mp3}} "I am both shield and sword."
+
+==Abilities==
+==={{abi text|Barrier Orb}}===
+====Cast====
+*{{AC|SageBarrierOrbCast1.mp3}}{{AC|SageBarrierOrbCast2.mp3}} "Wall raised."
+*{{AC|SageBarrierOrbCast3.mp3}}{{AC|SageBarrierOrbCast4.mp3}} "Barrier created."
+
+==={{abi text|Slow Orb}}===
+====Cast====
+*{{AC|SageSlowOrbCast1.mp3}}{{AC|SageSlowOrbCast2.mp3}} ''*Sage grunts*''
+
+==={{abi text|Healing Orb}}===
+====Cast on ally====
+*{{AC|SageHealingOrbCast1.mp3}}{{AC|SageHealingOrbCast2.mp3}} "For you."
+*{{AC|SageHealingOrbCast3.mp3}}{{AC|SageHealingOrbCast4.mp3}} "Healing you."
+
+====Self cast====
+*{{AC|SageHealingOrbSelfCast1.mp3}}{{AC|SageHealingOrbSelfCast2.mp3}}{{AC|SageHealingOrbSelfCast3.mp3}} ''*Sage sighs*''
+
+==={{abi text|Resurrection}}===
+====Ally Cast====
+*{{AC|SageUltAllyCast.mp3}} "Your duty is not over!"
+
+====Enemy Cast====
+*{{AC|SageUltEnemyCast.mp3}} "You will not kill my allies!"
+
+==Buy Phase==
+===Match Start===
+*{{AC|SageMatchStart2.mp3}} "I will defend you all with my power and with my life."
+*{{AC|SageMatchStart4.mp3}} "I wasn't strong enough before. But now, now I am strong enough for us all."
+*{{AC|SageMatchStart5.mp3}} "I will soothe this turmoil. With fire if I must."
+*{{AC|SageMatchStart6.mp3}} "The blossom wavers in strong wind. Yet I am no flower."
+*{{AC|SageMatchStart7.mp3}} "Before we begin, know that there's no one I would rather have by my side than you."
+*{{AC|SageMatchStart8.mp3}} "Together, friends. We can do anything, we can save the world!"
+*{{AC|SageMatchStart9.mp3}} "Search for the good in all things. If there is none to be found, then act decisively, violently."
+*{{AC|SageMatchStart10.mp3}} "I will do anything for you all. I will subvert the flow, I will hold back the tides."
+
+====Attacking====
+*{{AC|SageMatchStartAttack1.mp3}} "They thought they could attack us without repercussions. They were wrong."
+*{{AC|SageMatchStartAttack2.mp3}} "Remember friends, we're doing this to protect our people. It's the only way."
+*{{AC|SageMatchStartAttack3.mp3}} "Stay strong. The spike must be delivered if we are to save our friends."
+
+====Defending====
+*{{AC|SageMatchStartDefense1.mp3}} "Our enemies want to tear our home apart. We cannot let them."
+*{{AC|SageMatchStartDefense2.mp3}} "Stand with me, agents of VALORANT. Let's push back these invaders. Let's save our home!" 
+
+====[[Haven]]====
+*{{AC|SageMatchStartHaven.mp3}} "This place. I can feel its pain, it aches for redemption."
+
+====[[Split]]====
+*{{AC|SageMatchStartSplit.mp3}} "This place is a testament to science. A testament to folly."
+
+====[[Summit]]====
+*{{AC|SageMatchStartSummit.mp3}} "I took so much from this place. Here I am again, taking more. I must make this right."{{#tag:sup|{{patchv|13.00}}+}}
+
+===Round Start===
+*{{AC|SageRoundStart1.mp3}} "My power does not ebb. Ask for aid, and you shall receive."
+*{{AC|SageRoundStart2.mp3}} "Look at me, and know that I am by your side."
+*{{AC|SageRoundStart3.mp3}} "I know what must be done."
+*{{AC|SageRoundStart4.mp3}} "Prepare yourselves. We fight once again."
+*{{AC|SageRoundStart5.mp3}} "Stand tall. We are VALORANT. We are fighters!"
+*{{AC|SageRoundStart6.mp3}} "Together, we will bury them under their transgressions."
+*{{AC|SageRoundStart7.mp3}} "Let them try to get through me."
+*{{AC|SageRoundStart8.mp3}} "Even with numbers, anything can still happen. Remember that."
+*{{AC|SageRoundStart9.mp3}} "Once more into battle. I'm not tired. Are you?"
+*{{AC|SageRoundStart10.mp3}} "Time to stock back up."
+*{{AC|SageRoundStart11.mp3}} "What will it be this time? Have any patterns emerged yet?"
+*{{AC|SageRoundStart12.mp3}} "If you must fall, then fall near me." 
+
+====Last round won====
+*{{AC|SageRoundWon1.mp3}} "Commendable. Again!"
+*{{AC|SageRoundWon2.mp3}} "Continue to fight. Continue to win!"
+*{{AC|SageRoundWon3.mp3}} "That was good, but we are not done."
+*{{AC|SageRoundWon4.mp3}} "We won because we were focused! Keep that!"
+
+=====While in the lead=====
+*{{AC|SageLead1.mp3}} "Continue on our path. It is righteous."
+*{{AC|SageLead2.mp3}} "This is why we are a team."
+*{{AC|SageLead3.mp3}} "Phenomenal! We trained for this."
+*{{AC|SageLead4.mp3}} "A healer's burden is light when her team is this good!"
+*{{AC|SageLead5.mp3}} "I'm not sure you even need a healer!"
+
+=====Making a comeback=====
+*{{AC|SageComeback1.mp3}} "We will claw our way back, up to the light!"
+*{{AC|SageComeback2.mp3}} "They stumble. Now is our chance!"
+*{{AC|SageComeback3.mp3}} "We have come back from worse. Let's go!"
+*{{AC|SageComeback4.mp3}} "别泄气! Now let's turn this around!"
+**(''别泄气'': Don't be discouraged)
+
+===Last round in the half===
+====Attacking====
+*{{AC|SageLastRound1.mp3}} "We cannot keep our goods after this. Spend all."
+
+====Defending====
+*{{AC|SageLastRound2.mp3}} "We cannot keep our goods after this. Spend all."
+
+===Match Point===
+*{{AC|SageMatchPoint1.mp3}} "A single battle between us, and victory."
+*{{AC|SageMatchPoint2.mp3}} "Usher them towards their eternal rest."
+
+===Shop===
+====Let's Buy====
+*{{AC|SageBuying1.mp3}}{{AC|SageBuying2.mp3}} "I'm buying."
+
+====Let's Save====
+*{{AC|SageSaving1.mp3}}{{AC|SageSaving2.mp3}} "I'm saving."
+
+====I Have Extra Creds====
+*{{AC|SageOffer1.mp3}}{{AC|SageOffer2.mp3}} "Anyone need anything?"
+
+====Requested====
+*{{AC|SageRequest1.mp3}}{{AC|SageRequest2.mp3}} "Can someone get this?"
+
+===Barrier Down===
+*{{AC|SageBarrierDown1.mp3}} "Tip the balance in our favor."
+*{{AC|SageBarrierDown2.mp3}} "Fulfill our mission."
+*{{AC|SageBarrierDown3.mp3}} "Trust in my healing."
+*{{AC|SageBarrierDown4.mp3}} "This is where we win."
+*{{AC|SageBarrierDown5.mp3}} "We can overcome them."
+*{{AC|SageBarrierDown6.mp3}} "We can push them back."
+*{{AC|SageBarrierDown7.mp3}} "Keep them out."
+*{{AC|SageBarrierDown8.mp3}} "Tighten our defenses."
+*{{AC|SageBarrierDown9.mp3}} "Continue to overwhelm them."
+*{{AC|SageBarrierDown10.mp3}} "Let us take the lead here."
+*{{AC|SageBarrierDown11.mp3}} "We are immovable."
+*{{AC|SageBarrierDown12.mp3}} "March through them."
+*{{AC|SageBarrierDown13.mp3}} "Forward!"
+*{{AC|SageBarrierDown14.mp3}} "We go!"
+*{{AC|SageBarrierDown15.mp3}} "As one!"
+*{{AC|SageBarrierDown16.mp3}} "Fight!"
+*{{AC|SageBarrierDown17.mp3}} "Together!"
+*{{AC|SageBarrierDown18.mp3}} "This fight is ours to win!"
+*{{AC|SageBarrierDown19.mp3}} "Let's tip the balance!"
+*{{AC|SageBarrierDown20.mp3}} "Stanch the bleeding. Fight back!" 
+*{{AC|SageBarrierDown21.mp3}} "I will hold up the sky."
+*{{AC|SageBarrierDown22.mp3}} "Through the calm, I see. Through the storm, I fight."
+*{{AC|SageBarrierDown23.mp3}} "I have your back!"
+
+==Spike==
+===Forgotten in spawn===
+*{{AC|SageForgotSpike1.mp3}} "The spike is still in base."
+*{{AC|SageForgotSpike2.mp3}} "We need the spike for our mission."
+
+===Ally carrier down===
+*{{AC|SageSpikeDown1.mp3}}{{AC|SageSpikeDown2.mp3}} "Our spike is down."
+
+===Dropped===
+*{{AC|SageSpikeDropped1.mp3}}{{AC|SageSpikeDropped2.mp3}} "Spike dropped."
+
+===Retrieved===
+*{{AC|SageSpikePickedUp1.mp3}}{{AC|SageSpikePickedUp2.mp3}} "I have the spike."
+
+===Planted===
+*{{AC|SageSpikePlanted1.mp3}}{{AC|SageSpikePlanted2.mp3}} "Spike planted."
+
+===Spotted===
+*{{AC|SageSpikeSpottedA1.mp3}}{{AC|SageSpikeSpottedA2.mp3}} "Spike spotted A."
+*{{AC|SageSpikeSpottedB1.mp3}}{{AC|SageSpikeSpottedB2.mp3}} "Spike spotted B."
+*{{AC|SageSpikeSpottedC1.mp3}}{{AC|SageSpikeSpottedC2.mp3}} "Spike spotted C."
+*{{AC|SageSpikeSpottedASpawn1.mp3}}{{AC|SageSpikeSpottedASpawn2.mp3}} "Spike is in Attacker Spawn."
+*{{AC|SageSpikeSpottedDSpawn1.mp3}}{{AC|SageSpikeSpottedDSpawn2.mp3}} "Spike is in Defender Spawn."
+*{{AC|SageSpikeSpottedMid1.mp3}}{{AC|SageSpikeSpottedMid2.mp3}} "Spike spotted Mid."
+
+===Defuse resumed===
+*{{AC|SageDefuseResumed1.mp3}}{{AC|SageDefuseResumed2.mp3}} "Valiant effort."
+
+===Defuse time running out===
+*{{AC|SageDefuseLate1.mp3}} "I will not die here."
+
+===Defuse successful===
+*{{AC|SageDefuseComplete2.mp3}} "They had no right to do this."
+*{{AC|SageDefuseComplete3.mp3}} "We cannot let them unweave our world."
+*{{AC|SageDefuseComplete4.mp3}} "This is our home."
+
+==Kill==
+*{{AC|SageKill1.mp3}} "You fought well."
+*{{AC|SageKill2.mp3}} "Return to dust."
+*{{AC|SageKill3.mp3}} "Enemy removed."
+*{{AC|SageKill4.mp3}} "Eliminated."
+*{{AC|SageKill5.mp3}} "Enemy down."
+*{{AC|SageKill6.mp3}} "Rest."
+*{{AC|SageKill7.mp3}} "Removed."
+*{{AC|SageKill8.mp3}} "Opponent killed."
+*{{AC|SageKill9.mp3}} "One dead."
+*{{AC|SageKill10.mp3}} "Good attempt."
+*{{AC|SageKill11.mp3}} "Be at peace."
+
+===Headshot===
+*{{AC|SageHeadshot1.mp3}} "Stand down."
+*{{AC|SageHeadshot2.mp3}} "Train harder."
+*{{AC|SageHeadshot3.mp3}} "Headshot."
+*{{AC|SageHeadshot4.mp3}} "Unavoidable."
+*{{AC|SageHeadshot5.mp3}} "Message sent."
+*{{AC|SageHeadshot6.mp3}} "Satisfying."
+
+===[[Melee]]===
+*{{AC|SageMeleeKill1.mp3}} "Sloppy."
+*{{AC|SageMeleeKill2.mp3}} "Quiet now."
+
+===Triple===
+*{{AC|SageTriple1.mp3}}{{AC|SageTriple2.mp3}} "Three down."
+
+===Quadra===
+*{{AC|SageQuadra1.mp3}}{{AC|SageQuadra2.mp3}} "Four down."
+
+===One kill remaining (game-mode specific)===
+*{{AC|SageOneKillLeft1.mp3}}{{AC|SageOneKillLeft2.mp3}} "Just one more!"
+
+==Round End==
+===Ace===
+*{{AC|SageAce1.mp3}} "Must I do everything?"
+*{{AC|SageAce2.mp3}} "Today, I was the sword!"
+
+===Clutch===
+*{{AC|SageClutch1.mp3}} "I am not just your healer!"
+*{{AC|SageClutch2.mp3}} "This is what I trained for!"
+
+===Flawless or Team Ace===
+*{{AC|SageFlawless1.mp3}} "They have seen our power!"
+*{{AC|SageFlawless2.mp3}} "Unscathed! I'm delighted."
+*{{AC|SageFlawless3.mp3}} "Amazing! I am honored!"
+
+===Thrifty===
+*{{AC|SageThrifty1.mp3}} "We need nothing but our gifts."
+
+===Last Kill===
+*{{AC|SageLastKill1.mp3}} "Do not fight us."
+*{{AC|SageLastKill2.mp3}} "You were in our way."
+*{{AC|SageLastKill3.mp3}} "Last enemy taken out."
+*{{AC|SageLastKill4.mp3}} "Your tactics failed."
+*{{AC|SageLastKill5.mp3}} "They were not good enough."
+
+====Enemy MVP====
+*{{AC|SageLastKillMVP.mp3}} "You were a boulder. I am a mountain!"
+
+====Using [[Melee]]====
+*{{AC|SageLastKillMelee.mp3}} "Slip away, quietly."
+
+===Low HP===
+*{{AC|SageLowHP1.mp3}} "Ugh, just give me a moment."
+*{{AC|SageLowHP2.mp3}} "Even death cannot stop me."
+
+==Match End==
+===Match Win===
+*{{AC|SageMatchWin1.mp3}} "Now to mend what we have broken."
+*{{AC|SageMatchWin2.mp3}} "We move forward."
+*{{AC|SageMatchWin3.mp3}} "Do not fight us again."
+
+====[[Bind]]====
+*{{AC|SageMatchWinBind.mp3}} "This city is safe once more."
+
+====[[Summit]]====
+*{{AC|SageMatchWinSummit.mp3}} "Like the mountains above, we live on."{{#tag:sup|{{patchv|13.00}}+}}
+
+===Runner-up (game-mode specific)===
+*{{AC|SageRunnerUp1.mp3}} "Close!"
+*{{AC|SageRunnerUp2.mp3}} "I'm satisfied."
+*{{AC|SageRunnerUp3.mp3}} "I can always do better."
+
+==Agent-specific interactions==
+{| class="wikitable sortable"
+!To Agent
+!Scenario
+!width=40%; class=unsortable|Ally
+!width=40%; class=unsortable|Enemy
+|-
+|{{Ai|Astra}}
+|Match Start
+|{{AC|SageAllyAstraMatchStart.mp3}} "Astra, your perspective is so vast. I have so much I'd like to learn from you."
+|
+|-
+|rowspan=2|{{Ai|Breach}}
+|Match Start
+|{{AC|SageAllyBreachMatchStart.mp3}} "Breach, clear a path. I will keep us safe along the way."
+|
+|-
+|Last Kill
+|
+|{{AC|SageEnemyBreachLastKill.mp3}} "This is not your fight, Breach."{{#tag:sup|{{patchv|12.07}}+}}
+|-
+|rowspan=3|{{Ai|Brimstone}}
+|Match Start
+|{{AC|SageAllyBrimstoneMatchStart.mp3}} "We've got this, Brimstone. You handle the strategy, I'll take tactics."
+|{{AC|SageEnemyBrimstoneMatchStart.mp3}} "I know their leader well. I assume he's like ours, right?"
+|-
+|Round Start
+|{{AC|SageAllyBrimstoneRoundStart.mp3}} "Remember, Brimstone, if anything happens to you, I'll take the lead."
+|
+|-
+|Last Kill
+|
+|{{AC|SageEnemyBrimstoneLastKill.mp3}} "Goodbye, old friend."
+|-
+|rowspan=2|{{Ai|Chamber}}
+|Match Start
+|{{AC|SageAllyChamberMatchStart.mp3}} "It's hard to embrace a mystery, Chamber. Open up to us and I'll happily trust you."
+|
+|-
+|Commend
+|{{AC|SageAllyChamberCommend.mp3}} "Style and substance, Chamber. Excellent work."
+|
+|-
+|rowspan=2|{{Ai|Clove}}
+|Match Start
+|{{AC|SageAllyCloveMatchStart.mp3}} "Clove, your offer to forgo my healing is admirable, but I'm afraid I don't take chances. So please, stay safe."{{#tag:sup|{{patchv|12.07}}+}}
+|
+|-
+|Last Kill
+|
+|{{AC|SageEnemyCloveLastKill.mp3}} "Yours is a curse even I fear."{{#tag:sup|{{patchv|12.07}}+}}
+|-
+|rowspan=3|{{Ai|Cypher}}
+|Commend
+|{{AC|SageAllyCypherCommend.mp3}} "Your web is deadly, Cypher."
+|
+|-
+|Barrier Down
+|{{AC|SageAllyCypherBarrierDown.mp3}} "Find them, Cypher."
+|{{AC|SageEnemyCypherBarrierDown.mp3}} "Take out Cypher's tools."
+|-
+|Kill
+|
+|{{AC|SageEnemyCypherKill.mp3}} "Cypher removed."
+|-
+|rowspan=3|{{Ai|Deadlock}}
+|Match Start
+|
+|{{AC|SageEnemyDeadlockMatchStart.mp3}} "I can feel their Deadlock's sadness. Perhaps we should send her to her sisters."
+|-
+|Round Start
+|
+|{{AC|SageEnemyDeadlockRoundStart.mp3}} "Their Deadlock knows pain so intimately and still wants to inflict it. Such a shame."
+|-
+|Commend
+|{{AC|SageAllyDeadlockCommend.mp3}} "You could let some of us help, Deadlock. Just an idea!"
+|
+|-
+|rowspan=2|{{Ai|Fade}}
+|Match Start
+|
+|{{AC|SageEnemyFadeMatchStart.mp3}} "Their Fade's malevolence is too much to bear. We must end her madness."
+|-
+|Last Kill
+|
+|{{AC|SageEnemyFadeLastKill.mp3}} "Silence your mind."
+|-
+|rowspan=3|{{Ai|Gekko}}
+|Match Start
+|{{AC|SageAllyGekkoMatchStart.mp3}} "Gekko, can you please teach Wingman what's trash and what isn't. He threw so many of my things away!" 
+|
+|-
+|Commend
+|{{AC|SageAllyGekkoCommend.mp3}} "Goodness, Gekko! What was that?"
+|
+|-
+|Kill
+|
+|{{AC|SageEnemyGekkoKill.mp3}} "Gekko's gone."
+|-
+|rowspan=3|{{Ai|Harbor}}
+|Chat
+|
+:[[File:Sage icon.png|20px|link=Sage]] {{AC|SageAllyHarborChat.mp3}} "Harbor, after this, how about a little spicy food-off? I'll prepare a little 胡辣汤."
+:*(''胡辣汤'': Hot pepper soup)
+:[[File:Harbor icon.png|20px|link=Harbor]] {{AC|HarborAllySageChat.mp3}} ''*Harbor laughs*'' "We'll forge our friendship in the fires of {{w|misal pav}}!"
+|
+|-
+|Match Start
+|{{AC|SageAllyHarborMatchStart.mp3}} "Between your walls and my healing Harbor, this almost seems unfair, no?"
+|
+|-
+|Commend
+|{{AC|SageAllyHarborCommend.mp3}} "No one can repel Harbor when he's fighting like this."
+|
+|-
+|rowspan=3|{{ai|Iso}}
+|Chat
+|
+:[[File:Sage icon.png|20px|link=Sage]] {{AC|SageAllyIsoChat.mp3}} "Iso, what advice would your grandmother have for you today? Give us something good."
+:[[File:Iso icon.png|20px|link=Iso]] {{AC|IsoAllySageChat.mp3}} "Hm. Study hard, become a doctor!"
+|
+|-
+|Commend
+|{{AC|SageAllyIsoCommend.mp3}} "Remarkable performance, Iso. No notes."{{#tag:sup|{{patchv|12.07}}+}}
+|
+|-
+|Last Kill
+|
+|{{AC|SageEnemyIsoLastKill.mp3}} "Why must they look so alike?"{{#tag:sup|{{patchv|12.07}}+}}
+|-
+|rowspan=4|{{Ai|Jett}}
+|Chat
+|
+:[[File:Jett icon.png|20px|link=Jett]] {{AC|JettAllySageChat.mp3}} "So Sage, when are you going to teach me how to revive people, huh?" 
+:[[File:Sage icon.png|20px|link=Sage]] {{AC|SageAllyJettChat.mp3}} "Jett, you- that's not how radiants work-. Oh I see, you're joking. Hilarious."
+|
+|-
+|Commend
+|{{AC|SageAllyJettCommend.mp3}} "Jett, you were the wind. So powerful! Well done!"
+|
+|-
+|Kill
+|
+|{{AC|SageEnemyJettKill.mp3}} "Jett grounded."
+|-
+|Last Kill
+|
+|{{AC|SageEnemyJettLastKill.mp3}} "Brief, tragic life."
+|-
+|{{Ai|KAY/O}}
+|Match Start
+|{{AC|SageAllyKAYOMatchStart.mp3}} "Be careful, KAY/O. I don't know how many times I can bring you back."
+|
+|-
+|rowspan=3|{{ai|Miks}}
+|Chat
+|
+:[[File:Sage icon.png|20px|link=Sage]] {{AC|SageAllyMiksChat.mp3}} "Miks, there's that look again!"{{#tag:sup|{{patchv|12.07}}+}}
+:[[File:Miks icon.png|20px|link=Miks]] {{AC|MiksAllySageChat.mp3}} "No, it's just-" ''*Miks sighs*'' "look, you don't always have to be strong for everyone, that's all."
+|
+|-
+|Match Start
+|{{AC|SageAllyMiksMatchStart.mp3}} "Miks, please tell me you have more of those pepper cookies left. They're the only thing keeping me from losing my mind right now."{{#tag:sup|{{patchv|12.07}}+}}
+|
+|-
+|Round Start
+|{{AC|SageAllyMiksRoundStart.mp3}} "Miks, never let them silence you."{{#tag:sup|{{patchv|12.07}}+}}
+|
+|-
+|{{Ai|Neon}}
+|Commend
+|{{AC|SageAllyNeonCommend.mp3}} "Not a step wrong, Neon."
+|
+|-
+|rowspan=4|{{Ai|Omen}}
+|Match Start
+|
+|{{AC|SageEnemyOmenMatchStart.mp3}} "I wonder what torture their Omen is going through. Is it like ours? Poor soul."
+|-
+|Round Start
+|
+|{{AC|SageEnemyOmenRoundStart.mp3}} "Their Omen may be a nightmare, but I was never scared of the dark."
+|-
+|Commend
+|{{AC|SageAllyOmenCommend.mp3}} "Omen, you are a force of nature."
+|
+|-
+|Kill
+|
+|{{AC|SageEnemyOmenKill.mp3}} "Omen killed."
+|-
+|rowspan=4|{{Ai|Phoenix}}
+|rowspan=2|Round Start
+|{{AC|SageAllyPhoenixRoundStart.mp3}} "Burn bright, Phoenix."
+|{{AC|SageEnemyPhoenixRoundStart.mp3}} "I will quench your eternal flames, Phoenix."
+|-
+|
+|{{AC|SageEnemyPhoenixRoundStart2.mp3}} "Their Phoenix may feel immortal. I shall remind him just how mortal he truly is."
+|-
+|Commend
+|{{AC|SageAllyPhoenixCommend.mp3}} "Your star shines bright, Phoenix."
+|
+|-
+|Barrier Down
+|{{AC|SageAllyPhoenixBarrierDown.mp3}} "Together, Phoenix."
+|
+|-
+|rowspan=2|{{Ai|Raze}}
+|Match Start
+|{{AC|SageAllyRazeMatchStart.mp3}} "Remember the plan, everyone. And please, please, stick to it. I'm talking to you, Raze."
+|{{AC|SageEnemyRazeMatchStart.mp3}} "Raze has no patience. Wait out her explosions and strike when she's empty."
+|-
+|Barrier Down
+|{{AC|SageAllyRazeBarrierDown.mp3}} "Ignite this place, Raze."
+|
+|-
+|rowspan=6|{{Ai|Reyna}}
+|Chat
+|
+:[[File:Sage icon.png|20px|link=Sage]] {{AC|SageAllyReynaChat.mp3}} "Reyna, there are better ways to survive than your path."
+:[[File:Reyna icon.png|20px|link=Reyna]] {{AC|ReynaAllySageChat.mp3}} "Oh I'm so ashamed. Pobre de mi, how will I live with myself?"
+:*(''Pobre de mi'': Poor me)
+|
+|-
+|Match Start
+|{{AC|SageAllyReynaMatchStart.mp3}} "Work with me Reyna. Your enthusiasm and my caution both have qualities on the battlefield."
+|
+|-
+|Round Start
+|{{AC|SageAllyReynaRoundStart.mp3}} "Reyna, time to hunt."
+|
+|-
+|Commend
+|{{AC|SageAllyReynaCommend.mp3}} "That was worrisome, Reyna."
+|
+|-
+|Barrier Down
+|
+|{{AC|SageEnemyReynaBarrierDown.mp3}} "I must stop their Reyna."
+|-
+|Last Kill
+|
+|{{AC|SageEnemyReynaLastKill.mp3}} "No more hunting."
+|-
+|rowspan=6|{{Ai|Sage}}
+|rowspan=2|Match Start
+|
+|{{AC|SageEnemySageMatchStart.mp3}} "I know I am over there. But my mind rejects the thought. Does she feel the same?"
+|-
+|
+|{{AC|SageEnemySageMatchStart2.mp3}} "Their team has a healer too, but she won't be enough."
+|-
+|Round Start
+|
+|{{AC|SageEnemySageRoundStart.mp3}} "Now I know how annoying my healing can be."
+|-
+|Barrier Down
+|
+|{{AC|SageEnemySageBarrierDown.mp3}} "Kill my copy."
+|-
+|Kill
+|
+|{{AC|SageEnemySageKill.mp3}} "Imposter killed."
+|-
+|Last Kill
+|
+|{{AC|SageEnemySageLastKill.mp3}} "I had to kill you."
+|-
+|rowspan=6|{{Ai|Skye}}
+|rowspan=2|Match Start
+|{{AC|SageAllySkyeMatchStart.mp3}} "Another healer? Good. Now it's someone else's turn to answer requests."
+|
+|-
+|{{AC|SageAllySkyeMatchStart2.mp3}} "You finally joined us, Skye! We're better for you being here."
+|
+|-
+|Round Start
+|
+|{{AC|SageEnemySkyeRoundStart.mp3}} "I'll take out their Skye. It's something I must do."
+|-
+|Commend
+|{{AC|SageAllySkyeCommend.mp3}} "Skye, I am so proud. Keep fighting!"
+|
+|-
+|Kill
+|
+|{{AC|SageEnemySkyeKill.mp3}} "Skye killed."
+|-
+|Last Kill
+|
+|{{AC|SageEnemySkyeLastKill.mp3}} "You did not deserve this, [[Skye|Kirra]]."{{#tag:sup|{{patchv|12.07}}+}}
+|-
+|rowspan=5|{{Ai|Sova}}
+|Match Start
+|
+|{{AC|SageEnemySovaMatchStart.mp3}} "Their Sova looks familiar. Hm, what am I saying, of course he does."
+|-
+|Round Start
+|{{AC|SageAllySovaRoundStart.mp3}} "Continue to give us vision, Sova."
+|{{AC|SageEnemySovaRoundStart.mp3}} "Their Sova wants justice. Let this be his trial."{{#tag:sup|{{patchv|12.07}}+}}
+|-
+|Barrier Down
+|
+|{{AC|SageEnemySovaBarrierDown.mp3}} "Blind their scout."
+|-
+|Kill
+|
+|{{AC|SageEnemySovaKill.mp3}} "Sova removed."
+|-
+|Last Kill
+|
+|{{AC|SageEnemySovaLastKill.mp3}} "I forgive you, [[Sova|Sasha]]."{{#tag:sup|{{patchv|12.07}}+}}
+|-
+|rowspan=2|{{Ai|Tejo}}
+|Round Start
+|{{AC|SageAllyTejoRoundStart.mp3}} "Mind yourself on those explosives, Tejo. I grow tired of mending shrapnel ridden limbs."{{#tag:sup|{{patchv|12.07}}+}}
+|
+|-
+|Last Kill
+|
+|{{AC|SageEnemyTejoLastKill.mp3}} "Face your demons, Tejo."{{#tag:sup|{{patchv|12.07}}+}}
+|-
+|{{Ai|Veto}}
+|Match Start
+|{{AC|SageAllyVetoMatchStart.mp3}} "Hey Veto, your arm, I thought I saw-. Forgive me, I think my late nights are catching up to me."{{#tag:sup|{{patchv|12.07}}+}}
+|
+|-
+|rowspan=2|{{Ai|Viper}}
+|Chat
+|
+:[[File:Sage icon.png|20px|link=Sage]] {{AC|SageAllyViperChat.mp3}} "Viper, have you thought about my offer? You don't have to-"
+:[[File:Viper icon.png|20px|link=Viper]] {{AC|ViperAllySageChat.mp3}} "Never, ever assume you can help me. You can't help me, you can't help them!"
+|
+|-
+|Match Start
+|
+|{{AC|SageEnemyViperMatchStart.mp3}} "I will not suffer Viper's vengeance any longer. We must put her to rest."{{#tag:sup|{{patchv|12.07}}+}}
+|-
+|{{Ai|Vyse}}
+|Last Kill
+|
+|{{AC|SageEnemyVyseLastKill.mp3}} "All vision, no results."{{#tag:sup|{{patchv|12.07}}+}}
+|-
+|rowspan=2|{{Ai|Yoru}}
+|Match Start
+|{{AC|SageAllyYoruMatchStart.mp3}} "Yoru, tea soon? I want to hear more about where you go when you... disappear."
+|
+|-
+|Last Kill
+|
+|{{AC|SageEnemyYoruLastKill.mp3}} "I'm sorry, Yoru, my quarrel was not with you."{{#tag:sup|{{patchv|12.07}}+}}
+|}
+
+==Radio Commands==
+===Menu Index only===
+====Caution here====
+*{{AC|SageCaution1.mp3}}{{AC|SageCaution2.mp3}} "Enemy activity near."
+
+====Going Area====
+*{{AC|SageGoingA1.mp3}}{{AC|SageGoingA2.mp3}} "Going A."
+*{{AC|SageGoingB1.mp3}}{{AC|SageGoingB2.mp3}} "Going B."
+*{{AC|SageGoingC1.mp3}}{{AC|SageGoingC2.mp3}} "Going C."
+*{{AC|SageGoingMid1.mp3}}{{AC|SageGoingMid2.mp3}} "Going Mid."
+
+====Need Support====
+*{{AC|SageHelp1.mp3}}{{AC|SageHelp2.mp3}}{{AC|SageHelp3.mp3}} "Help!"
+
+====On my way====
+*{{AC|SageOnMyWay1.mp3}}{{AC|SageOnMyWay2.mp3}} "I'm on my way."
+
+====Play for picks====
+*{{AC|SagePlayForPicks1.mp3}}{{AC|SagePlayForPicks2.mp3}} "Pick them off."
+
+===Wheel Index only===
+====Encourage====
+*{{AC|SageEncouraging1.mp3}}{{AC|SageEncouraging2.mp3}}{{AC|SageEncouraging3.mp3}} "We can do this."
+
+====I'll lurk====
+Only as Attackers during Buy Phase.
+*{{AC|SageLurking1.mp3}}{{AC|SageLurking2.mp3}} "I'm lurking."
+
+====I'll push out====
+Only as Defenders during Buy Phase.
+*{{AC|SagePushingOut1.mp3}}{{AC|SagePushingOut2.mp3}} "I'm pushing out."
+
+====I'm holding position====
+Only as Defenders during Buy Phase.
+*{{AC|SageHoldingPosition1.mp3}}{{AC|SageHoldingPosition2.mp3}} "Holding position."
+
+====Let's Attack====
+Only during Round Phase.
+*{{AC|SageLetsAttack1.mp3}}{{AC|SageLetsAttack2.mp3}} "Let's attack."
+
+====Let's hold positions====
+Only as Defenders during Buy Phase.
+*{{AC|SageHoldPositions1.mp3}}{{AC|SageHoldPositions2.mp3}} "Let's hold positions."
+
+====Let's play slow====
+Only as Attackers at anytime.
+*{{AC|SagePlaySlow1.mp3}}{{AC|SagePlaySlow2.mp3}} "Let's play slow."
+
+====Let's push out====
+Only as Defenders during Buy Phase.
+*{{AC|SagePushOut1.mp3}}{{AC|SagePushOut2.mp3}} "Let's push out."
+
+====Let's spread out====
+*{{AC|SageSpreadOut1.mp3}}{{AC|SageSpreadOut2.mp3}} "Let's spread out."
+
+====Nice Try====
+*{{AC|SageNiceTry1.mp3}}{{AC|SageNiceTry2.mp3}}{{AC|SageNiceTry3.mp3}} "Good attempt."
+
+====Stick together====
+*{{AC|SageStickTogether1.mp3}}{{AC|SageStickTogether2.mp3}} "Stick together."
+
+===Menu and Wheel Index===
+====Commend====
+*{{AC|SageCommend1.mp3}}{{AC|SageCommend2.mp3}}{{AC|SageCommend3.mp3}} "Wonderful."
+
+====Fall Back====
+Menu Index at anytime, or Wheel Index only during Round Phase.
+*{{AC|SageFallBack1.mp3}}{{AC|SageFallBack2.mp3}} "Fall back."
+
+====Hello====
+*{{AC|SageHello1.mp3}}{{AC|SageHello2.mp3}}{{AC|SageHello3.mp3}} "Hello."
+
+====I'll take point====
+Wheel Index only as Attackers during Buy Phase, or Menu Index at anytime regardless of Attackers or Defenders.
+*{{AC|SageTakePoint1.mp3}}{{AC|SageTakePoint2.mp3}} "I'll take point."
+
+====Let's rush them (Radio Command)====
+*{{AC|SageRush1.mp3}}{{AC|SageRush2.mp3}} "We rush."
+
+====Need healing====
+*{{AC|SageHealing1.mp3}}{{AC|SageHealing2.mp3}} "I need healing."
+
+====No====
+*{{AC|SageNo1.mp3}}{{AC|SageNo2.mp3}}{{AC|SageNo3.mp3}} "No."
+
+====Sorry====
+*{{AC|SageSorry1.mp3}}{{AC|SageSorry2.mp3}}{{AC|SageSorry3.mp3}} "I'm sorry."
+
+====Thanks====
+*{{AC|SageThanks1.mp3}}{{AC|SageThanks2.mp3}}{{AC|SageThanks3.mp3}} "Thank you."
+
+====Ultimate Status====
+*{{AC|SageUltDown1.mp3}}{{AC|SageUltDown2.mp3}} "My ultimate is not ready."
+*{{AC|SageUltAlmost1.mp3}}{{AC|SageUltAlmost2.mp3}} "My ultimate is almost ready."
+*{{AC|SageUltReady1.mp3}}{{AC|SageUltReady2.mp3}} "My ultimate is ready."
+
+====Yes====
+*{{AC|SageYes1.mp3}}{{AC|SageYes2.mp3}}{{AC|SageYes3.mp3}} "Yes."
+
+===Wheel Index requiring Minimap===
+For the following voicelines, the minimap must be open and then open ping wheel and activate strategy.
+====Faking====
+Only as Attackers during Buy Phase.
+*{{AC|SageFaking1.mp3}}{{AC|SageFaking2.mp3}} "I'm faking."
+*{{AC|SageFakingA1.mp3}}{{AC|SageFakingA2.mp3}} "I'm faking A."
+*{{AC|SageFakingB1.mp3}}{{AC|SageFakingB2.mp3}} "I'm faking B."
+*{{AC|SageFakingC1.mp3}}{{AC|SageFakingC2.mp3}} "I'm faking C."
+
+====I'm Going Here====
+As Defenders during Buy Phase, or as Attackers at anytime.
+*{{AC|SageGoingA1.mp3}}{{AC|SageGoingA2.mp3}} "Going A."
+*{{AC|SageGoingB1.mp3}}{{AC|SageGoingB2.mp3}} "Going B."
+*{{AC|SageGoingC1.mp3}}{{AC|SageGoingC2.mp3}} "Going C."
+*{{AC|SageGoingMid1.mp3}}{{AC|SageGoingMid2.mp3}} "Going Mid."
+
+====Let's Go Here====
+Only as Attackers during Buy Phase.
+*{{AC|SageLetsGoA1.mp3}}{{AC|SageLetsGoA2.mp3}} "Let's go A."
+*{{AC|SageLetsGoB1.mp3}}{{AC|SageLetsGoB2.mp3}} "Let's go B."
+*{{AC|SageLetsGoC1.mp3}}{{AC|SageLetsGoC2.mp3}} "Let's go C."
+*{{AC|SageLetsGoHere1.mp3}}{{AC|SageLetsGoHere2.mp3}} "Let's go here."
+
+====Let's rush them (Minimap)====
+Only as Attackers during Buy Phase.
+*{{AC|SageLetsRush1.mp3}}{{AC|SageLetsRush2.mp3}} "Let's rush them."
+*{{AC|SageLetsRushA1.mp3}}{{AC|SageLetsRushA2.mp3}} "Let's rush A."
+*{{AC|SageLetsRushB1.mp3}}{{AC|SageLetsRushB2.mp3}} "Let's rush B."
+*{{AC|SageLetsRushC1.mp3}}{{AC|SageLetsRushC2.mp3}} "Let's rush C."
+
+====Let's Sneak Here====
+Only as Attackers during Buy Phase.
+*{{AC|SageSneakA1.mp3}}{{AC|SageSneakA2.mp3}} "Let's sneak A."
+*{{AC|SageSneakB1.mp3}}{{AC|SageSneakB2.mp3}} "Let's sneak B."
+*{{AC|SageSneakC1.mp3}}{{AC|SageSneakC2.mp3}} "Let's sneak C."
+*{{AC|SageSneakMid1.mp3}}{{AC|SageSneakMid2.mp3}} "Let's sneak Mid."
+
+====Let's Stack Here====
+Only as Defenders during Buy Phase.
+*{{AC|SageStack1.mp3}}{{AC|SageStack2.mp3}} "Let's stack up."
+*{{AC|SageStackA1.mp3}}{{AC|SageStackA2.mp3}} "Let's stack A."
+*{{AC|SageStackB1.mp3}}{{AC|SageStackB2.mp3}} "Let's stack B."
+*{{AC|SageStackC1.mp3}}{{AC|SageStackC2.mp3}} "Let's stack C."
+*{{AC|SageStackMid1.mp3}}{{AC|SageStackMid2.mp3}} "Let's stack Mid."
+
+====Someone Go Here====
+As Attackers during Round Phase, or as Defenders at anytime.
+*{{AC|SageNeedSomeoneA1.mp3}}{{AC|SageNeedSomeoneA2.mp3}} "Someone go A."
+*{{AC|SageNeedSomeoneB1.mp3}}{{AC|SageNeedSomeoneB2.mp3}} "Someone go B."
+*{{AC|SageNeedSomeoneC1.mp3}}{{AC|SageNeedSomeoneC2.mp3}} "Someone go C."
+*{{AC|SageNeedSomeoneMid1.mp3}}{{AC|SageNeedSomeoneMid2.mp3}} "Someone go Mid."
+
+====Spike's here====
+Only as Defenders during Round Phase.
+*{{AC|SageSpikeA1.mp3}}{{AC|SageSpikeA2.mp3}} "Spike's A."
+*{{AC|SageSpikeB1.mp3}}{{AC|SageSpikeB2.mp3}} "Spike's B."
+*{{AC|SageSpikeC1.mp3}}{{AC|SageSpikeC2.mp3}} "Spike's C."
+*{{AC|SageSpikeMid1.mp3}}{{AC|SageSpikeMid2.mp3}} "Spike's Mid."
+*{{AC|SageSpikeSpottedASpawn1.mp3}}{{AC|SageSpikeSpottedASpawn2.mp3}} "Spike is in Attacker Spawn."
+*{{AC|SageSpikeSpottedDSpawn1.mp3}}{{AC|SageSpikeSpottedDSpawn2.mp3}} "Spike is in Defender Spawn."
+
+==Pings==
+===General===
+*{{AC|SagePing1.mp3}}{{AC|SagePing2.mp3}} "Here."
+
+===Caution===
+*{{AC|SagePingCaution1.mp3}}{{AC|SagePingCaution2.mp3}} "Careful."
+
+===Need support===
+*{{AC|SageHelp1.mp3}}{{AC|SageHelp2.mp3}}{{AC|SageHelp3.mp3}} "Help!"
+
+===On my mark===
+*{{AC|SageOnMyMark1.mp3}}{{AC|SageOnMyMark2.mp3}} "On my mark."
+
+===Ping gun===
+*{{AC|SagePingGun1.mp3}}{{AC|SagePingGun2.mp3}} "Weapon here."
+
+===Ping spike===
+*{{AC|SagePingSpike1.mp3}}{{AC|SagePingSpike2.mp3}} "Spike is here."
+
+===Ping for spike defuse===
+*{{AC|SageDefuseSpike1.mp3}}{{AC|SageDefuseSpike2.mp3}} "Defuse the spike!"
+
+===Ping for spike plant===
+*{{AC|SagePlantSpike1.mp3}}{{AC|SagePlantSpike2.mp3}} "Plant the spike!"
+
+===Watching===
+*{{AC|SageWatching1.mp3}}{{AC|SageWatching2.mp3}} "Watching here."
+
+==Other lines==
+===Ability unusable===
+====[[Status Effect#Suppress|Suppressed]]====
+*{{AC|SageCantUse1.mp3}} "I can't use that."
+
+====On cooldown====
+*{{AC|SageOnCooldown1.mp3}} "Can't use this yet."
+
+====No charges====
+*{{AC|SageNoCharges1.mp3}} "No charges left."
+
+===Enemy spotted===
+*{{AC|SageEnemyA1.mp3}}{{AC|SageEnemyA2.mp3}} "Enemy spotted A."
+*{{AC|SageEnemyB1.mp3}}{{AC|SageEnemyB2.mp3}} "Enemy spotted B."
+*{{AC|SageEnemyC1.mp3}}{{AC|SageEnemyC2.mp3}} "Enemy spotted C."
+*{{AC|SageEnemyASpawn1.mp3}}{{AC|SageEnemyASpawn2.mp3}} "Enemy in Attacker Spawn."
+*{{AC|SageEnemyDSpawn1.mp3}}{{AC|SageEnemyDSpawn2.mp3}} "Enemy in Defender Spawn."
+*{{AC|SageEnemyMid1.mp3}}{{AC|SageEnemyMid2.mp3}} "Enemy spotted Mid."
+
+====Multiple====
+*{{AC|SageEnemiesA1.mp3}}{{AC|SageEnemiesA2.mp3}} "Many enemies A!"
+*{{AC|SageEnemiesB1.mp3}}{{AC|SageEnemiesB2.mp3}} "Many enemies B!"
+*{{AC|SageEnemiesC1.mp3}}{{AC|SageEnemiesC2.mp3}} "Many enemies C!"
+*{{AC|SageEnemiesASpawn1.mp3}}{{AC|SageEnemiesASpawn2.mp3}} "Many enemies in Attacker Spawn!"
+*{{AC|SageEnemiesDSpawn1.mp3}}{{AC|SageEnemiesDSpawn2.mp3}} "Many enemies in Defender Spawn!"
+*{{AC|SageEnemiesMid1.mp3}}{{AC|SageEnemiesMid2.mp3}} "Many enemies Mid!"
+
+===Reloading===
+*{{AC|SageReloading1.mp3}}{{AC|SageReloading2.mp3}} "Reloading."
+
+===Healed===
+*{{AC|SageRelief1.mp3}}{{AC|SageRelief2.mp3}}{{AC|SageRelief3.mp3}} ''*Sage sighs*''
+
+===Killed===
+*{{AC|SageDeath1.mp3}}{{AC|SageDeath2.mp3}}{{AC|SageDeath3.mp3}} ''*Sage groans*''
+
+===Resurrected via {{abi text|Resurrection}}===
+*{{AC|SageResurrect.mp3}} "So that's what it feels like."
+
+===Wounded===
+====Light damage====
+*{{AC|SagePainLight1.mp3}}{{AC|SagePainLight2.mp3}}{{AC|SagePainLight3.mp3}} ''*Sage groans*''
+
+====Medium damage====
+*{{AC|SagePainMedium1.mp3}}{{AC|SagePainMedium2.mp3}}{{AC|SagePainMedium3.mp3}} ''*Sage groans*''
+
+====Heavy damage====
+*{{AC|SagePainHeavy1.mp3}}{{AC|SagePainHeavy2.mp3}}{{AC|SagePainHeavy3.mp3}} ''*Sage groans*''
+
+====Fall damage====
+*{{AC|SagePainFall1.mp3}}{{AC|SagePainFall2.mp3}}{{AC|SagePainFall3.mp3}} ''*Sage groans*''
+
+==Unused lines==
+===Match MVP===
+*{{AC|SageMatchMVP1.mp3}} "Even death cannot stop me!"
+
+==Removed lines==
+===Match Start===
+*{{AC|SageMatchStart1.mp3}} "My purpose is my gift. Be not afraid to accept it."
+*{{AC|SageMatchStart3.mp3}} "This place. I can feel its pain, it aches for redemption."
+
+===Spike defuse successful===
+*{{AC|SageDefuseComplete1.mp3}} "Blasphemers!"
+
+===Wounded Annoyed===
+*{{AC|SagePainAnnoyed1.mp3}}{{AC|SagePainAnnoyed2.mp3}}{{AC|SagePainAnnoyed3.mp3}} ''*Sage groans*''
+
+===Spike Spotted General===
+*{{AC|SageSpikeSpotted1.mp3}}{{AC|SageSpikeSpotted2.mp3}} "I see the spike."
+
+===Enemy spotted General===
+*{{AC|SageEnemy1.mp3}}{{AC|SageEnemy2.mp3}} "Enemy spotted."
+
+===Multiple Enemies spotted General===
+*{{AC|SageEnemies1.mp3}}{{AC|SageEnemies2.mp3}} "Many enemies spotted!"
+
+===Be Quiet===
+*{{AC|SageBeQuiet1.mp3}}{{AC|SageBeQuiet2.mp3}} "Quiet."
+
+===Rotate===
+*{{AC|SageRotating1.mp3}}{{AC|SageRotating2.mp3}} "I'm rotating."
+
+===Let's Rotate===
+*{{AC|SageLetsRotate1.mp3}}{{AC|SageLetsRotate2.mp3}} "Let us rotate."
+
+===Affirmation===
+*{{AC|SageAffirmation1.mp3}}{{AC|SageAffirmation2.mp3}} "Okay."
+
+===Callouts===
+*{{AC|SageCalloutA1.mp3}}{{AC|SageCalloutA2.mp3}} "A Site."
+*{{AC|SageCalloutB1.mp3}}{{AC|SageCalloutB2.mp3}} "B Site."
+*{{AC|SageCalloutC1.mp3}}{{AC|SageCalloutC2.mp3}} "C Site."
+*{{AC|SageCalloutMid1.mp3}}{{AC|SageCalloutMid2.mp3}} "Middle."
+
+===Clear Area===
+*{{AC|SageClearThisArea1.mp3}}{{AC|SageClearThisArea2.mp3}} "Clear the area."
+
+===Hold===
+*{{AC|SageHold1.mp3}}{{AC|SageHold2.mp3}} "Hold."
+
+===Push===
+*{{AC|SagePush1.mp3}}{{AC|SagePush2.mp3}} "Push."
+
+===Regroup===
+*{{AC|SageRegroup1.mp3}}{{AC|SageRegroup2.mp3}} "Regroup."
+
+===Need disrupt===
+*{{AC|SageDisrupt1.mp3}}{{AC|SageDisrupt2.mp3}} "Disrupt here."
+
+===Need scouting===
+*{{AC|SageScout1.mp3}}{{AC|SageScout2.mp3}} "Scout here."
+
+===Need vision block===
+*{{AC|SageBlockVision1.mp3}}{{AC|SageBlockVision2.mp3}} "Block vision here."
+
+===Ping enemy utility===
+*{{AC|SagePingUtility1.mp3}}{{AC|SagePingUtility2.mp3}} "Enemy utility here."
+
+===Ping Go here===
+*{{AC|SageGoHere1.mp3}}{{AC|SageGoHere2.mp3}} "Let's go here."
+
+==[[Range/Lore|The Range's lore assets]]==
+===[[Range/Lore/EP7|Episode 7]]===
+*{{AC|VoicemailBrimstone64.mp3}} "Brimstone, I met with [[Deadlock]] earlier. It was the first time we spoke about her injuries since those first few days and I, hoping to help, offered again to return her arm to its previous state. After a pause, Deadlock just raised her arm and said, "take this away and everything they gave would have been for nothing". Then she left. My thoughts are so clouded now. I always considered my healing a gift that helped people but, is it always good to undo pain? Are the scars we wear lessons that we learned from, do they make us stronger? Better? I don't know. I don't know."
+
+===[[Range/Lore/EP8|Episode 8]]===
+*{{AC|VoicemailBrimstone77.mp3}} "Brimstone, I want to discuss [[Omen]]. It's clear to me that he's on your mind. You seem so distracted in our briefings and... I assume he's the reason you're meeting with [[Cypher]] so often. You're concerned. I am too, especially with the way he left. You know, I've been trying to put myself in his shoes. Finally understanding more about his past and... feeling a sense of shame that he is struggling to overcome. It's a terrible feeling, Brimstone. One that I think I understand because... well I have felt it too. He and I are both burdened by past wrongs, which is why I think I can help. If I know his pain, maybe I can heal it. I'm going to find him, and I'm going to bring him back. I'll be in touch, I promise. Wish me luck."
+
+===[[Range/Lore/EP9|Episode 9]]===
+*{{AC|VoicemailBrimstone98.mp3}} "Brimstone, I've been reflecting on our team's well-being lately and I think it would serve us all well if we encouraged the rest to take time away from their responsibilities more often. The trips we've taken in the past have all been wonderful experiences and sometimes I think it's good to remind us all of exactly what we're fighting for. That's about it. I don't want to seem overbearing so please tell me if it seems that way."
+
+===[[Range/Lore/V26|Season 2026]]===
+*{{AC|VoicemailBrimstone124.mp3}} "Brimstone, I know the others are talking. I do not blame them, but they need to spend that energy elsewhere. I'm fine! The crystals won't interfere with the work ahead of us and I've already proven that on the field. You have seen what kind of damage Omega can do under their new leadership. This is not the time to rest, fighting back now is the only way forward. We bear the cost until it is done. So do not listen to the others, listen to me. I'm fine! This is not up for discussion!"
+*{{AC|VoicemailBrimstone126.mp3}} "Brimstone, I... appreciate your concern but mandatory bed rest?! We are in crisis! The team needs me. They're putting their lives at risk with every mission, we both know it, and if I'm not there to help with-... one moment... I... just need a moment to catch... my... I... I apologize... the crystal growth... it's more painful now. Skye has some solutions but... they don't get at the root cause, I-... shit. Commander, I-... I'm sorry. I'm so... sorry, I thought I was strong enough, I really did, and I want to be. But this is too much, you are right. I need help. And answer your phone next time! I can't believe this is recorded..."
+*{{AC|VoicemailBrimstone128.mp3}} "Hi, me again! Uh... thank you for keeping the previous message between us. Not my finest moment. Things are... a little better. Really! The crystals break apart when I rest, so a small victory! It's just... the moment I'm forced to strain my powers again it... comes back. But it's okay, I have Skye! And listen, [[Skye]] and [[Miks]], they're... amazing. I know everyone's fussing over me but the two of them, what they're doing for everyone, uh, for me, without asking for anything in return, I don't have the words to describe it. I just... I need to know that you see them."
+*{{AC|VoicemailBrimstone129.mp3}} "Brimstone, I, uh... I have an idea... about how to fix all of this. There's a place where I trained before. [[Viper|Sabine]] knows it. It's much bigger now, nothing like what it was. Back then, I left before finishing my studies, and to be honest... there are some lessons I chose to never learn. Well an old friend runs the program now and... something tells me she'll know how to help. It would mean more time away from base but is that so different from sitting in the medical wing? When we meet I'll tell you more. Then we can decide together."
+
+==Notes==
+:''To easily see which quotes were added corresponding to the patch, use your browser's Find function and type the patch number (e.g. v12.07).
+*{{ui|Added}} 2 voice lines added from patch {{patchv|13.00}}, documented in the patch notes.
+*{{ui|Added}} 17 voice lines added from patch {{patchv|12.07}}, undocumented in the patch notes.
+*Additional radio commands added in patch {{patchv|8.11}} are not mentioned in this page.
+*Other voice lines removed were at an unknown timeframe.
+
+==Navigation==
+{{Navbox agents}}
+[[Category:Quotes]]

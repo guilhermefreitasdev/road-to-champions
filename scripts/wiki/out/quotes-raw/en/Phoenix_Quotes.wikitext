@@ -1,0 +1,945 @@
+{{TOCright}}
+This is a '''list of quotes by {{ai|Phoenix}}'''. Phoenix is voiced by Afolabi Alli in English. Phoenix has a total of {{PAGESINCATEGORY:Phoenix Quotes}} files of quotes including unused and removed lines, and excluding [[#The Range's lore assets|The Range's lore assets]].
+
+A downloadable folder containing all the audio files on this page can be found [https://drive.google.com/drive/folders/1KKtLO4VDMQ6DbERSW6G5O1izmCGXvYe4?usp=sharing here].
+
+==Agent Selected==
+*{{AC|PhoenixPick.mp3}} "Just take a seat, I got this."
+
+==Abilities==
+==={{abi text|Blaze}}===
+====Cast====
+*{{AC|PhoenixBlazeCast1.mp3}}{{AC|PhoenixBlazeCast2.mp3}} "Goin' up."
+
+==={{abi text|Curveball}}===
+====Cast====
+*{{AC|PhoenixCurveballCast1.mp3}}{{AC|PhoenixCurveballCast4.mp3}} "Flash!"
+*{{AC|PhoenixCurveballCast2.mp3}} "Watch ya eyes!"
+*{{AC|PhoenixCurveballCast3.mp3}} "Watch your eyes!"
+
+==={{abi text|Hot Hands}}===
+====Cast====
+*{{AC|PhoenixHotHandsCast1.mp3}}{{AC|PhoenixHotHandsCast2.mp3}} "Careful now."
+
+==={{abi text|Run it Back}}===
+====Ally Cast====
+*{{AC|PhoenixUltAllyCast.mp3}} "C'mon, let's go!"
+
+====Enemy Cast====
+*{{AC|PhoenixUltEnemyCast.mp3}} "Joke's over, you're dead!"
+
+==Buy Phase==
+===Match Start===
+*{{AC|PhoenixMatchStart1.mp3}} "Don't worry guys, they say I'm a prodigy. Not my words! Not my words, baby!"
+*{{AC|PhoenixMatchStart2.mp3}} "Let's make this quick bro, I got things to do."
+*{{AC|PhoenixMatchStart3.mp3}} "Yes, yes, it's me, autographs if we survive, yeah?"
+*{{AC|PhoenixMatchStart4.mp3}} "Relax, settle down, I've got this. And I'm not leaving until we're done out here, yeah?"
+*{{AC|PhoenixMatchStart5.mp3}} "When I'm done, they'll be nothing more than ash."
+*{{AC|PhoenixMatchStart6.mp3}} "Keep a healthy distance! I burn hot!"
+*{{AC|PhoenixMatchStart7.mp3}} "Okay fam, if any of you die I'll be vexed so just keep alive, yeah?"
+
+====Attacking====
+*{{AC|PhoenixMatchStartAttack.mp3}} "All this for some radianite? It's mad. Let's get it and be done!"
+
+====Defending====
+*{{AC|PhoenixMatchStartDefense.mp3}} "Yo, let's stop these guys, for real. No one gets past me again."
+
+====[[Corrode]]====
+*{{AC|PhoenixMatchStartCorrode.mp3}} "Wow! C'est sympa cette petite ville là. That's right! Pick up a bit every place we go. Your man's international now."
+**(''C'est sympa cette petite ville là'': This little town is nice. (in French))
+
+====[[Icebox]]====
+*{{AC|PhoenixMatchStartIcebox.mp3}} "Man this weather is not on. Anyone got a jacket?"
+
+====[[Pearl]]====
+*{{AC|PhoenixMatchStartPearl.mp3}} "Really? You dragged your fire guy underwater? Fam, you're killing me!"
+
+===Round Start===
+*{{AC|PhoenixRoundStart1.mp3}} "Remember, stay out of the fire. Super high level tactic, remember that, yeah?"
+*{{AC|PhoenixRoundStart2.mp3}} "I'm twitchy here, let's go already."
+*{{AC|PhoenixRoundStart3.mp3}} "Look, don't start restin'. There's still work to do."
+*{{AC|PhoenixRoundStart4.mp3}} "You want me serious? You got it!"
+*{{AC|PhoenixRoundStart5.mp3}} "Y'all better keep up!"
+*{{AC|PhoenixRoundStart6.mp3}} "This is crazy, it feels like we've been doing this forever. Anyone else feel like that? Just me? Okay."
+*{{AC|PhoenixRoundStart7.mp3}} "New fight, new tactics, keep it fresh yeah?"
+*{{AC|PhoenixRoundStart8.mp3}} "Buy stuff, kaching, lil' skrrt, then we're done, yeah?"
+*{{AC|PhoenixRoundStart9.mp3}} "Their MVP is mine. Let's do this!"
+*{{AC|PhoenixRoundStart10.mp3}} "You man ready for a light show?"
+
+====Last round won====
+*{{AC|PhoenixRoundWon1.mp3}} "Feels good to stretch my wings."
+*{{AC|PhoenixRoundWon2.mp3}} "That was easy!"
+*{{AC|PhoenixRoundWon3.mp3}} "They're still fightin'? After seeing what we can do? Not wise."
+*{{AC|PhoenixRoundWon4.mp3}} "I'm kinda feeling myself right now, y'all better keep up!"
+*{{AC|PhoenixRoundWon5.mp3}} "Do they still want it? Mad guys."
+
+=====While in the lead=====
+*{{AC|PhoenixLead1.mp3}} "Ayy, I like this game!"
+*{{AC|PhoenixLead2.mp3}} "Damn, this is fun! Let's keep it going."
+*{{AC|PhoenixLead3.mp3}} "Who else is havin' a great time? Just me? Tsk, ah, I'm gutted!"
+
+=====Making a comeback=====
+*{{AC|PhoenixComeback1.mp3}} "Knock me down, I'll get right back up."
+*{{AC|PhoenixComeback2.mp3}} "Oh, okay! We back in it now!"
+*{{AC|PhoenixComeback3.mp3}} "They're in for a rude awakenin'."
+
+===Last round in the half===
+====Attacking====
+*{{AC|PhoenixLastRound1.mp3}} "Either spend all your money, or give it to me. Good cause either way."
+
+====Defending====
+*{{AC|PhoenixLastRound2.mp3}} "Spend it now, or it's gone!"
+
+===Match Point===
+*{{AC|PhoenixMatchPoint1.mp3}} "We win this battle, we win this war. Let's do it!"
+*{{AC|PhoenixMatchPoint2.mp3}} "One more win and we're going out for drinks lads!"
+
+===Shop===
+====Let's Buy====
+*{{AC|PhoenixBuying1.mp3}}{{AC|PhoenixBuying2.mp3}} "I'm buyin'"
+
+====Let's Save====
+*{{AC|PhoenixSaving1.mp3}}{{AC|PhoenixSaving2.mp3}} "I'm savin'"
+
+====I Have Extra Creds====
+*{{AC|PhoenixOffer1.mp3}}{{AC|PhoenixOffer2.mp3}}{{AC|PhoenixOffer3.mp3}} "Anyone need something?"
+
+====Requested====
+*{{AC|PhoenixRequest1.mp3}}{{AC|PhoenixRequest2.mp3}} "I need a drop."
+
+===Barrier Down===
+*{{AC|PhoenixBarrierDown1.mp3}} "Keep it hot!"
+*{{AC|PhoenixBarrierDown2.mp3}} "Stop them! This is our turf!"
+*{{AC|PhoenixBarrierDown3.mp3}} "Knock 'em down!"
+*{{AC|PhoenixBarrierDown4.mp3}} "Gotta plug those holes, guys!"
+*{{AC|PhoenixBarrierDown5.mp3}} "Let's get the advantage."
+*{{AC|PhoenixBarrierDown6.mp3}} "They're not gonna get an inch!"
+*{{AC|PhoenixBarrierDown7.mp3}} "Bring it up!"
+*{{AC|PhoenixBarrierDown8.mp3}} "They should stop tryin'!"
+*{{AC|PhoenixBarrierDown9.mp3}} "Let's turn this around, squad!"
+*{{AC|PhoenixBarrierDown10.mp3}} "We got it this time!"
+*{{AC|PhoenixBarrierDown11.mp3}} "Let's push 'em out."
+*{{AC|PhoenixBarrierDown12.mp3}} "Let's keep it rollin'!"
+*{{AC|PhoenixBarrierDown13.mp3}} "Let me show you how the boss does it."
+*{{AC|PhoenixBarrierDown14.mp3}} "I got you, bruv!"
+*{{AC|PhoenixBarrierDown15.mp3}} "Don't hold back."
+*{{AC|PhoenixBarrierDown16.mp3}} "Let's go!"
+*{{AC|PhoenixBarrierDown17.mp3}} "This one's for the fam back home."
+
+==Spike==
+===Forgotten in spawn===
+*{{AC|PhoenixForgotSpike1.mp3}} "You're kiddin', right? Fam, get the spike!"
+*{{AC|PhoenixForgotSpike2.mp3}} "Someone get the spike."
+
+===Ally carrier down===
+*{{AC|PhoenixSpikeDown1.mp3}}{{AC|PhoenixSpikeDown2.mp3}} "Our spike carrier's down."
+
+===Dropped===
+*{{AC|PhoenixSpikeDropped1.mp3}}{{AC|PhoenixSpikeDropped2.mp3}} "Spike dropped."
+
+===Retrieved===
+*{{AC|PhoenixSpikePickedUp1.mp3}}{{AC|PhoenixSpikePickedUp2.mp3}} "Got spike."
+
+===Planted===
+*{{AC|PhoenixSpikePlanted1.mp3}}{{AC|PhoenixSpikePlanted2.mp3}} "Spike planted."
+
+===Spotted===
+*{{AC|PhoenixSpikeSpottedA1.mp3}}{{AC|PhoenixSpikeSpottedA2.mp3}} "Spike's A."
+*{{AC|PhoenixSpikeSpottedB1.mp3}}{{AC|PhoenixSpikeSpottedB2.mp3}} "Spike's B."
+*{{AC|PhoenixSpikeSpottedC1.mp3}}{{AC|PhoenixSpikeSpottedC2.mp3}} "Spike's C."
+*{{AC|PhoenixSpikeSpottedASpawn1.mp3}}{{AC|PhoenixSpikeSpottedASpawn2.mp3}} "Spike's in Attacker Spawn."
+*{{AC|PhoenixSpikeSpottedDSpawn1.mp3}}{{AC|PhoenixSpikeSpottedDSpawn2.mp3}} "Spike's in Defender Spawn."
+*{{AC|PhoenixSpikeSpottedMid1.mp3}}{{AC|PhoenixSpikeSpottedMid2.mp3}} "Spike's Mid."
+
+===Defuse resumed===
+*{{AC|PhoenixDefuseResumed1.mp3}}{{AC|PhoenixDefuseResumed2.mp3}} "Cheeky!"
+
+===Defuse time running out===
+*{{AC|PhoenixDefuseLate1.mp3}} "All good, all good."
+*{{AC|PhoenixDefuseLate2.mp3}} "All good."
+
+===Defuse successful===
+*{{AC|PhoenixDefuseComplete1.mp3}} "We good, we good."
+
+==Kill==
+*{{AC|PhoenixKill1.mp3}} "Skrra!"
+*{{AC|PhoenixKill2.mp3}} "Embarrassin'!"
+*{{AC|PhoenixKill3.mp3}} "Sorry bro!"
+*{{AC|PhoenixKill4.mp3}} "Dead!"
+*{{AC|PhoenixKill5.mp3}} "Target down."
+*{{AC|PhoenixKill6.mp3}} "Get outta here!"
+*{{AC|PhoenixKill7.mp3}} "You're out."
+*{{AC|PhoenixKill8.mp3}} "Put down!"
+*{{AC|PhoenixKill9.mp3}} "That's done."
+*{{AC|PhoenixKill10.mp3}} "No you don't!"
+*{{AC|PhoenixKill11.mp3}} "What?"
+
+===Headshot===
+*{{AC|PhoenixHeadshot1.mp3}} "Sit down!"
+*{{AC|PhoenixHeadshot2.mp3}} "Head's up!"
+*{{AC|PhoenixHeadshot3.mp3}} "Look sharp!"
+*{{AC|PhoenixHeadshot4.mp3}} "Walk it off, G!"
+*{{AC|PhoenixHeadshot5.mp3}} "Eh, what're you doin'?!"
+*{{AC|PhoenixHeadshot6.mp3}} "Oh you ain't comin' back!"
+*{{AC|PhoenixHeadshot7.mp3}} "They're super dead!"
+
+===[[Melee]]===
+*{{AC|PhoenixMeleeKill1.mp3}} "Pay attention!"
+*{{AC|PhoenixMeleeKill2.mp3}} "Really?!"
+
+===Triple===
+*{{AC|PhoenixTriple1.mp3}}{{AC|PhoenixTriple2.mp3}} "Triple, baby!"
+
+===Quadra===
+*{{AC|PhoenixQuadra1.mp3}}{{AC|PhoenixQuadra2.mp3}} "Quadra!"
+
+===One kill remaining (game-mode specific)===
+*{{AC|PhoenixOneKillLeft1.mp3}}{{AC|PhoenixOneKillLeft2.mp3}} "Game point, bruv!"
+
+==Round End==
+===Ace===
+*{{AC|PhoenixAce1.mp3}} "Mess with again? Oh wait, you can't!"
+*{{AC|PhoenixAce2.mp3}} "You thought you could come against I."
+*{{AC|PhoenixAce4.mp3}} "Props for the stats, bruvs!"
+
+===Clutch===
+*{{AC|PhoenixClutch1.mp3}} "Ooh, that's going on a highlight reel for sure!"
+*{{AC|PhoenixClutch2.mp3}} "Oh you thought you'd put up a fight?"
+*{{AC|PhoenixClutch3.mp3}} "Pressure makes diamonds, baby."{{#tag:sup|{{patchv|13.00}}^}}
+
+===Flawless or Team Ace===
+*{{AC|PhoenixFlawless1.mp3}} "You see that? Tell me you caught that!"
+*{{AC|PhoenixFlawless2.mp3}} "You get that on camera?"
+*{{AC|PhoenixFlawless3.mp3}} "The best! I said it, yeah! Everybody go home!"
+
+===Thrifty===
+*{{AC|PhoenixThrifty1.mp3}} "All I need are these hands and this fire."
+
+===Last Kill===
+*{{AC|PhoenixLastKill1.mp3}} "You tried, ahaha, I'd stop that!"
+*{{AC|PhoenixLastKill2.mp3}} "Easy mate. There can only be one hero."
+*{{AC|PhoenixLastKill3.mp3}} "I got it! Yeah!"
+*{{AC|PhoenixLastKill4.mp3}} "That's it, break time!"
+
+====Enemy MVP====
+*{{AC|PhoenixLastKillMVP1.mp3}} "Uhhh, I can't see your guy."
+
+====Using [[Melee]]====
+*{{AC|PhoenixLastKillMelee1.mp3}} ''*Phoenix laughs*''
+
+===Low HP===
+*{{AC|PhoenixLowHP1.mp3}} "You think you can kill me?"
+
+==Match End==
+===Match Win===
+*{{AC|PhoenixMatchWin1.mp3}} "They're done? I was just getting started!"
+*{{AC|PhoenixMatchWin2.mp3}} "Ah, come on bruv! Like it was gonna happen any other way!"
+*{{AC|PhoenixMatchWin3.mp3}} "They're done! Who's up next?"
+*{{AC|PhoenixMatchWin4.mp3}} "And that's how it gets done!"
+*{{AC|PhoenixMatchWin5.mp3}} "Oh man I was just getting warmed up!"
+
+====[[Icebox]]====
+*{{AC|PhoenixMatchWinIcebox.mp3}} "Okay we out! Gonna go crawl under some blankets now."
+
+====[[Pearl]]====
+*{{AC|PhoenixMatchWinPearl.mp3}} "Ayy! And we didn't even break the glass! Double win, baby!"
+
+===Runner-up (game-mode specific)===
+*{{AC|PhoenixRunnerUp1.mp3}} "Okay I'm feelin' good about that."
+*{{AC|PhoenixRunnerUp2.mp3}} "Next time I'm gettin' first place!"
+*{{AC|PhoenixRunnerUp3.mp3}} "Hey that's not bad."
+
+==Agent-specific interactions==
+{| class="wikitable sortable"
+!To Agent
+!Scenario
+!width=40%; class=unsortable|Ally
+!width=40%; class=unsortable|Enemy
+|-
+|Any Female Agent
+|Commend
+|{{AC|PhoenixAllyFemaleCommend.mp3}} "You go girl!"
+|
+|-
+|Any Human Agent
+|Match Start
+|{{AC|PhoenixAllyTechMatchStart.mp3}} "Just keep your tech off my flames, yeah? Wouldn't wanna fry your circuitry."
+|
+|-
+|Any [[Radiant]] Agent
+|Round Start
+|
+|{{AC|PhoenixEnemyRadiantRoundStart.mp3}} "I'll outshine all their Radiants!"
+|-
+|rowspan=3|{{Ai|Astra}}
+|Match Start
+|{{AC|PhoenixAllyAstraMatchStart.mp3}} "Who's hungry? Astra, let's finish up then get jollof. I bought last time, so your treat!"
+|
+|-
+|Round Start
+|{{AC|PhoenixAllyAstraRoundStart.mp3}} "Astra! I bring the fire, you bring the stars. They are stars, right? Are they stars?"
+|
+|-
+|Commend
+|{{AC|PhoenixAllyAstraCommend.mp3}} "Oh Astra with the galaxy brain, yeah!"
+|
+|-
+|rowspan=2|{{Ai|Breach}}
+|Match Start
+|{{AC|PhoenixAllyBreachMatchStart.mp3}} "Breach! You flash, I flash, everyone's blinded, let's go!"
+|
+|-
+|Barrier Down
+|{{AC|PhoenixAllyBreachBarrierDown.mp3}} "Tear them down, Breach!"
+|
+|-
+|rowspan=7|{{Ai|Brimstone}}
+|rowspan=2|Match Start 
+|{{AC|PhoenixAllyBrimstoneMatchStart.mp3}} "Yo Brim, don't go tweaking your back out there. Leave the fancy stuff to the young'uns."
+|
+|-
+|{{AC|PhoenixAllyBrimstoneMatchStart2.mp3}} "Brim, been reading your tactics report. It's super helpful! I'll be looking proper sharp today."
+|
+|-
+|Round Start
+|{{AC|PhoenixAllyBrimstoneRoundStart.mp3}} "I won't let you down Brim. We'll make it happen."
+|
+|-
+|rowspan=2|Commend
+|{{AC|PhoenixAllyBrimstoneCommend.mp3}} "Looks like the old dog's still got some fire."
+|
+|-
+|{{AC|PhoenixAllyBrimstoneCommend2.mp3}} "Brimstone, that's why you're the top boss! Yes!"
+|
+|-
+|Barrier Down
+|{{AC|PhoenixAllyBrimstoneBarrierDown.mp3}} "I'm fire, you're brimstone, let's go!"
+|
+|-
+|Kill
+|
+|{{AC|PhoenixEnemyBrimstoneKill.mp3}} "Brimstone's out."
+|-
+|rowspan=2|{{Ai|Chamber}}
+|Chat
+|
+:[[File:Phoenix icon.png|20px|link=Phoenix]] {{AC|PhoenixAllyChamberChat.mp3}} "Chamber! I'm ready for some custom guns. You'll hook me up, yeah?"
+:[[File:Chamber icon.png|20px|link=Chamber]] {{AC|ChamberAllyPhoenixChat.mp3}} ''*Chamber chuckles*'' "I am sorry, Phoenix, you cannot afford me."
+|
+|-
+|Commend
+|{{AC|PhoenixAllyChamberCommend.mp3}} "Chamber! Man, consistently consistent."
+|-
+|rowspan=2|{{Ai|Clove}}
+|Round Start
+|{{AC|PhoenixAllyCloveRoundStart.mp3}} "Clove, immortal or not, dying's gotta hurt. Mad respect, you know."
+|
+|-
+|Commend
+|{{AC|PhoenixAllyCloveCommend.mp3}} "Yo, I said it as well. Clove is a killer."
+|
+|-
+|rowspan=3|{{Ai|Cypher}}
+|Match Start 
+|{{AC|PhoenixAllyCypherMatchStart.mp3}} "Remember fam, winning takes sacrifice, right Cypher? Sacrifice? Like chess? Our chess game? Come on, I know you got it."
+|
+|-
+|Round Start
+|{{AC|PhoenixAllyCypherRoundStart.mp3}} "Cypher thanks for setting your stuff up. It's super useful man!"
+|
+|-
+|Last Kill
+|
+|{{AC|PhoenixEnemyCypherLastKill.mp3}} "Stop snoopin'!"
+|-
+|{{Ai|Harbor}}
+|Chat
+|
+:[[File:Phoenix icon.png|20px|link=Phoenix]] {{AC|PhoenixAllyHarborChat.mp3}} "I'm feeling myself today, Harbor! Bet we clean them up in twenty minutes!"
+:[[File:Harbor icon.png|20px|link=Harbor]] {{AC|HarborAllyPhoenixChat.mp3}} "You lose your edge, यार? Make it ten."
+:*(''यार'': Buddy)
+|
+|-
+|rowspan=3|{{Ai|Iso}}
+|Match Start
+|
+|{{AC|PhoenixEnemyIsoMatchStart.mp3}} "I'll deal with their Iso anytime, any place. That's here and now, innit?"
+|-
+|Commend
+|{{AC|PhoenixAllyIsoCommend.mp3}} "Oh Iso, share the tunes man. They got you in the zone!" 
+|
+|-
+|Last Kill
+|
+|{{AC|PhoenixEnemyIsoLastKill.mp3}} "Scuffed like your shoes, bro!"
+|-
+|rowspan=7|{{Ai|Jett}}
+|rowspan=2|Chat
+|
+:[[File:Jett icon.png|20px|link=Jett]] {{AC|JettAllyPhoenixChat.mp3}} "Hey Phoenix, if you die, I call dibs on your jacket."
+:[[File:Phoenix icon.png|20px|link=Phoenix]] {{AC|PhoenixAllyJettChat.mp3}} "Ah don't be like that, you know you'd also want my shoes."
+|
+|-
+|
+:[[File:Jett icon.png|20px|link=Jett]] {{AC|JettAllyPhoenixChat2.mp3}} "Hey Phoenix, if I die out there, you get dibs on my secret cookbook."
+:[[File:Phoenix icon.png|20px|link=Phoenix]] {{AC|PhoenixAllyJettChat2.mp3}} "Don't be joking like that! You have me in tears for real, Jett."{{#tag:sup|{{patchv|13.00}}+}}
+|
+|-
+|Match Start
+|
+|{{AC|PhoenixEnemyJettMatchStart.mp3}} "They got a Jett too? Nah, there's only one wind girl, and she's ours. That's a fake!"
+|-
+|Round Start
+|{{AC|PhoenixAllyJettRoundStart.mp3}} "Come on, Jett, me and you we never lose. Let's do this!"
+|
+|-
+|Commend
+|{{AC|PhoenixAllyJettCommend.mp3}} "You're mad Jett, damn!"
+|
+|-
+|Barrier Down
+|
+|{{AC|PhoenixEnemyJettBarrierDown.mp3}} "I'll clip that Jett's wings!"
+|-
+|Last Kill
+|
+|{{AC|PhoenixEnemyJettLastKill.mp3}} "Sorry Jett!"
+|-
+|{{Ai|KAYO}}
+|Barrier Down
+|{{AC|PhoenixAllyKAYOBarrierDown.mp3}} "KAY/O, Team Forge, let's go!"
+|
+|-
+|rowspan=3|{{Ai|Killjoy}}
+|Chat
+|
+:[[File:Phoenix icon.png|20px|link=Phoenix]] {{AC|PhoenixAllyKilljoyChat.mp3}} "Hey KJ, you good on the tech stuff? Need anything, you know, superheated?"
+:[[File:Killjoy icon.png|20px|link=Killjoy]] {{AC|KilljoyAllyPhoenixChat.mp3}} "Okay, that literally happened one time, Phoenix, stop asking."
+|
+|-
+|Commend 
+|{{AC|PhoenixAllyKilljoyCommend.mp3}} "Tech support with the carry! Nice work!"
+|-
+|Kill
+|
+|{{AC|PhoenixEnemyKilljoyKill.mp3}} "Engineer's down."
+|-
+|rowspan=3|{{Ai|Omen}}
+|Chat
+|
+:[[File:Phoenix icon.png|20px|link=Phoenix]] {{AC|PhoenixAllyOmenChat.mp3}} "Hey Omen, I respect a guy who knits. That's pretty cute."
+:[[File:Omen icon.png|20px|link=Omen]] {{AC|OmenAllyPhoenixChat.mp3}} "It helps me focus! Oh, what do you care?"
+|
+|-
+|Round Start
+|{{AC|PhoenixAllyOmenRoundStart.mp3}} "Omen, you got a new energy about you these days. I can feel it, man. Hope you do, too."
+|{{AC|PhoenixEnemyOmenRoundStart.mp3}} "Omen wins by fear, don't let him get to you."
+|-
+|Commend
+|{{AC|PhoenixAllyOmenCommend.mp3}} "Omen you're not even winded. You sure you're human?"
+|
+|-
+|rowspan=5|{{Ai|Phoenix}}
+|Match Start
+|
+|{{AC|PhoenixEnemyPhoenixMatchStart.mp3}} "Who's this other Phoenix guy? Nah mate, you're mine!"
+|-
+|Round Start
+|
+|{{AC|PhoenixEnemyPhoenixRoundStart.mp3}} "There can only be one Phoenix. I'm coming for you."
+|-
+|Barrier Down
+|
+|{{AC|PhoenixEnemyPhoenixBarrierDown.mp3}} "Gonna burn you up, Phoenix."
+|-
+|rowspan=2|Last Kill
+|
+|{{AC|PhoenixEnemyPhoenixLastKill.mp3}} "You're nothing, cous."
+|-
+|
+|{{AC|PhoenixEnemyPhoenixLastKill2.mp3}} "You should see your face!"
+|-
+|rowspan=2|{{Ai|Raze}}
+|Match Start
+|
+|{{AC|PhoenixEnemyRazeMatchStart.mp3}} "Aww it's a shame I gotta take out their Raze. That girl's a one-woman party."
+|-
+|Round Start
+|{{AC|PhoenixAllyRazeRoundStart.mp3}} "Raze, plug me into the tunes, yeah, I know you got the good stuff."
+|{{AC|PhoenixEnemyRazeRoundStart.mp3}} "Look out for that Raze, fam. Can't have you blowing up."
+|-
+|rowspan=5|{{Ai|Reyna}}
+|Match Start
+|{{AC|PhoenixAllyReynaMatchStart.mp3}} "Hey Reyna, how old are you? No shade, you look great, but, like, sometimes you say the strangest things."
+|{{AC|PhoenixEnemyReynaMatchStart.mp3}} "Man, that malice comin' off their Reyna, feels like she's already hunting me."
+|-
+|rowspan=2|Commend
+|{{AC|PhoenixAllyReynaCommend.mp3}} "Damn, that was impressive, Mexico in the house!"
+|
+|-
+|{{AC|PhoenixAllyReynaCommend2.mp3}} "Damn, that was impressive, Mexico represent!"
+|
+|-
+|Barrier Down
+|
+|{{AC|PhoenixEnemyReynaBarrierDown.mp3}} "I'll crush her Radiant heart."
+|-
+|Kill
+|
+|{{AC|PhoenixEnemyReynaKill.mp3}} "Reyna's down."
+|-
+|rowspan=6|{{Ai|Sage}}
+|Match Start
+|{{AC|PhoenixAllySageMatchStart.mp3}} "Glad you're here Sage. With you we can't lose!"
+|{{AC|PhoenixEnemySageMatchStart.mp3}} "Their healer is nothing, I'll burn them faster than they can mend."
+|-
+|Commend
+|{{AC|PhoenixAllySageCommend.mp3}} "Everyone just learnt what I already knew; you're wild Sage!"
+|
+|-
+|Barrier Down
+|{{AC|PhoenixAllySageBarrierDown.mp3}} "Yo, doc! Keep us topped up!"
+|
+|-
+|Round Start
+|
+|{{AC|PhoenixEnemySageRoundStart.mp3}} "Don't wanna take you out Sage, but I gotta!"
+|-
+|Kill
+|
+|{{AC|PhoenixEnemySageKill.mp3}} "Healer's down."
+|-
+|Last Kill
+|
+|{{AC|PhoenixEnemySageLastKill.mp3}} "Easy, Sage."
+|-
+|{{Ai|Skye}}
+|Barrier Down
+|{{AC|PhoenixAllySkyeBarrierDown.mp3}} "Guide us in, Skye!"
+|
+|-
+|rowspan=3|{{Ai|Sova}}
+|Round Start
+|{{AC|PhoenixAllySovaRoundStart.mp3}} "Yo Sova, that owl's pretty dope. Would look a lot better with some flame decals on it, right?"
+|
+|-
+|Barrier Down
+|
+|{{AC|PhoenixEnemySovaBarrierDown.mp3}} "You're mine, Sova!"
+|-
+|Kill
+|
+|{{AC|PhoenixEnemySovaKill.mp3}} "Scout's down."
+|-
+|rowspan=5|{{Ai|Tejo}}
+|Match Start
+|{{AC|PhoenixAllyTejoMatchStart.mp3}} "Tejo, need anything out there? Say the word, I'll get cracking."
+|
+|-
+|Round Start
+|{{AC|PhoenixAllyTejoRoundStart.mp3}} "You know, Tejo? It's weird, I don't think I've ever seen your eyes, big man. You do have eyes, right? I'll circle back."
+|
+|-
+|Commend
+|{{AC|PhoenixAllyTejoCommend.mp3}} "Straight fire, Tejo. I would know!"
+|
+|-
+|Barrier Down
+|{{AC|PhoenixAllyTejoBarrierDown.mp3}} "Tejo, send those clowns at me, yeah?"
+|
+|-
+|Last Kill
+|
+|{{AC|PhoenixEnemyTejoLastKill.mp3}} "Back in retirement, mate!"
+|-
+|{{Ai|Viper}}
+|Round Start
+|{{AC|PhoenixAllyViperRoundStart.mp3}} "Ay Viper, none of your gas is flammable, right?"
+|
+|-
+|rowspan=2|{{Ai|Vyse}}
+|Chat
+|
+:[[File:Phoenix icon.png|20px|link=Phoenix]] {{AC|PhoenixAllyVyseChat.mp3}} "Yo, Vyse! Bere flashes on this team. They're going to hate us for sure!"
+:[[File:Vyse icon.png|20px|link=Vyse]] {{AC|VyseAllyPhoenixChat.mp3}} "Are you referring to the enemy or our allies? Probably both."
+|
+|-
+|Round Start
+|{{AC|PhoenixAllyVyseRoundStart.mp3}} "You get lost out there, look to Vyse. Boss lady always has a plan."
+|
+|-
+|rowspan=2|{{Ai|Waylay}}
+|Round Start
+|{{AC|PhoenixAllyWaylayRoundStart.mp3}} "Yo, Waylay! Watch me pop these guys. Wanna hear your notes after."
+|
+|-
+|Commend
+|{{AC|PhoenixAllyWaylayCommend.mp3}} "Waylay, on that level, you're serious, you know?"
+|
+|-
+|rowspan=3|{{Ai|Yoru}}
+|Chat
+|
+:[[File:Phoenix icon.png|20px|link=Phoenix]] {{AC|PhoenixAllyYoruChat.mp3}} "Okay Yoru, right here, right now. We'll see who's the better shot."
+:[[File:Yoru icon.png|20px|link=Yoru]] {{AC|YoruAllyPhoenixChat.mp3}} "Fine, but I'll keep score."
+|
+|-
+|Barrier Down
+|{{AC|PhoenixAllyYoruBarrierDown.mp3}} "Yoru let's see what you got, mate."
+|
+|-
+|Kill
+|
+|{{AC|PhoenixEnemyYoruKill.mp3}} "Rift walker's out."
+|}
+
+==Radio Commands==
+===Menu Index only===
+====Caution here====
+*{{AC|PhoenixCaution1.mp3}}{{AC|PhoenixCaution2.mp3}} "They're nearby."
+
+====Going Area====
+*{{AC|PhoenixGoingA1.mp3}}{{AC|PhoenixGoingA2.mp3}} "Going A."
+*{{AC|PhoenixGoingB1.mp3}}{{AC|PhoenixGoingB2.mp3}} "Going B."
+*{{AC|PhoenixGoingC1.mp3}}{{AC|PhoenixGoingC2.mp3}} "Going C."
+*{{AC|PhoenixGoingMid1.mp3}}{{AC|PhoenixGoingMid2.mp3}} "Going Mid."
+
+====Need Support====
+*{{AC|PhoenixHelp1.mp3}}{{AC|PhoenixHelp2.mp3}}{{AC|PhoenixHelp3.mp3}} "Help."
+
+====On my way====
+*{{AC|PhoenixOnMyWay1.mp3}}{{AC|PhoenixOnMyWay2.mp3}} "On my way."
+
+====Play for picks====
+*{{AC|PhoenixPlayForPicks1.mp3}}{{AC|PhoenixPlayForPicks2.mp3}} "Pick 'em off."
+
+===Wheel Index only===
+====Encourage====
+*{{AC|PhoenixEncouraging1.mp3}}{{AC|PhoenixEncouraging2.mp3}}{{AC|PhoenixEncouraging3.mp3}} "We got this."
+
+====I'll lurk====
+Only as Attackers during Buy Phase.
+*{{AC|PhoenixLurking1.mp3}}{{AC|PhoenixLurking2.mp3}} "I'm lurking."
+
+====I'll push out====
+Only as Defenders during Buy Phase.
+*{{AC|PhoenixPushingOut1.mp3}}{{AC|PhoenixPushingOut2.mp3}} "I'm pushing out."
+
+====I'm holding position====
+Only as Defenders during Buy Phase.
+*{{AC|PhoenixHoldingPosition1.mp3}}{{AC|PhoenixHoldingPosition2.mp3}} "Holding position."
+
+====Let's Attack====
+Only during Round Phase.
+*{{AC|PhoenixLetsAttack1.mp3}}{{AC|PhoenixLetsAttack2.mp3}} "Let's attack."
+
+====Let's hold positions====
+Only as Defenders during Buy Phase.
+*{{AC|PhoenixHoldPositions1.mp3}}{{AC|PhoenixHoldPositions2.mp3}} "Let's hold positions."
+
+====Let's play slow====
+Only as Attackers at anytime.
+*{{AC|PhoenixPlaySlow1.mp3}}{{AC|PhoenixPlaySlow2.mp3}} "Let's play slow."
+
+====Let's push out====
+Only as Defenders during Buy Phase.
+*{{AC|PhoenixPushOut1.mp3}}{{AC|PhoenixPushOut2.mp3}} "Let's push out."
+
+====Let's spread out====
+*{{AC|PhoenixSpreadOut1.mp3}}{{AC|PhoenixSpreadOut2.mp3}} "Let's spread out."
+
+====Nice Try====
+*{{AC|PhoenixNiceTry1.mp3}}{{AC|PhoenixNiceTry2.mp3}}{{AC|PhoenixNiceTry3.mp3}} "Nice try."
+
+====Stick together====
+*{{AC|PhoenixStickTogether1.mp3}}{{AC|PhoenixStickTogether2.mp3}} "Stick together."
+
+===Menu and Wheel Index===
+====Commend====
+*{{AC|PhoenixCommend1.mp3}}{{AC|PhoenixCommend3.mp3}} "Nice."
+*{{AC|PhoenixCommend2.mp3}} "Yo, nice."
+
+====Fall Back====
+Menu Index at anytime, or Wheel Index only during Round Phase.
+*{{AC|PhoenixFallBack1.mp3}}{{AC|PhoenixFallBack2.mp3}} "Get back."
+
+====Hello====
+*{{AC|PhoenixHello1.mp3}}{{AC|PhoenixHello2.mp3}}{{AC|PhoenixHello3.mp3}} "What's up?"
+
+====I'll take point====
+Wheel Index only as Attackers during Buy Phase, or Menu Index at anytime regardless of Attackers or Defenders.
+*{{AC|PhoenixTakePoint1.mp3}}{{AC|PhoenixTakePoint2.mp3}} "I'll take point."
+
+====Let's rush them (Radio Command)====
+*{{AC|PhoenixRush1.mp3}}{{AC|PhoenixRush2.mp3}} "Rush them."
+
+====Need healing====
+*{{AC|PhoenixHealing1.mp3}}{{AC|PhoenixHealing2.mp3}} "Need healing."
+
+====No====
+*{{AC|PhoenixNo1.mp3}}{{AC|PhoenixNo2.mp3}}{{AC|PhoenixNo3.mp3}} "Nah."
+
+====Sorry====
+*{{AC|PhoenixSorry1.mp3}}{{AC|PhoenixSorry2.mp3}}{{AC|PhoenixSorry3.mp3}} "Sorry, mate."
+
+====Thanks====
+*{{AC|PhoenixThanks1.mp3}}{{AC|PhoenixThanks2.mp3}}{{AC|PhoenixThanks3.mp3}} "Cheers."
+
+====Ultimate Status====
+*{{AC|PhoenixUltDown1.mp3}}{{AC|PhoenixUltDown2.mp3}} "My ultimate's not ready."
+*{{AC|PhoenixUltAlmost1.mp3}}{{AC|PhoenixUltAlmost2.mp3}} "My ultimate's almost ready."
+*{{AC|PhoenixUltReady1.mp3}}{{AC|PhoenixUltReady2.mp3}} "My ultimate's ready."
+
+====Yes====
+*{{AC|PhoenixYes1.mp3}}{{AC|PhoenixYes2.mp3}}{{AC|PhoenixYes3.mp3}} "Yeah."
+
+===Wheel Index requiring Minimap===
+For the following voicelines, the minimap must be open and then open ping wheel and activate strategy.
+====Faking====
+Only as Attackers during Buy Phase.
+*{{AC|PhoenixFaking1.mp3}}{{AC|PhoenixFaking2.mp3}} "I'm faking."
+*{{AC|PhoenixFakingA1.mp3}}{{AC|PhoenixFakingA2.mp3}} "I'm faking A."
+*{{AC|PhoenixFakingB1.mp3}}{{AC|PhoenixFakingB2.mp3}} "I'm faking B."
+*{{AC|PhoenixFakingC1.mp3}}{{AC|PhoenixFakingC2.mp3}} "I'm faking C."
+
+====I'm Going Here====
+As Defenders during Buy Phase, or as Attackers at anytime.
+*{{AC|PhoenixGoingA1.mp3}}{{AC|PhoenixGoingA2.mp3}} "Going A."
+*{{AC|PhoenixGoingB1.mp3}}{{AC|PhoenixGoingB2.mp3}} "Going B."
+*{{AC|PhoenixGoingC1.mp3}}{{AC|PhoenixGoingC2.mp3}} "Going C."
+*{{AC|PhoenixGoingMid1.mp3}}{{AC|PhoenixGoingMid2.mp3}} "Going Mid."
+
+====Let's Go Here====
+Only as Attackers during Buy Phase.
+*{{AC|PhoenixLetsGoA1.mp3}}{{AC|PhoenixLetsGoA2.mp3}} "Let's go A."
+*{{AC|PhoenixLetsGoB1.mp3}}{{AC|PhoenixLetsGoB2.mp3}} "Let's go B."
+*{{AC|PhoenixLetsGoC1.mp3}}{{AC|PhoenixLetsGoC2.mp3}} "Let's go C."
+*{{AC|PhoenixLetsGoHere1.mp3}}{{AC|PhoenixLetsGoHere2.mp3}} "Let's go here."
+
+====Let's rush them (Minimap)====
+Only as Attackers during Buy Phase.
+*{{AC|PhoenixLetsRush1.mp3}}{{AC|PhoenixLetsRush2.mp3}} "Let's rush them."
+*{{AC|PhoenixLetsRushA1.mp3}}{{AC|PhoenixLetsRushA2.mp3}} "Let's rush A."
+*{{AC|PhoenixLetsRushB1.mp3}}{{AC|PhoenixLetsRushB2.mp3}} "Let's rush B."
+*{{AC|PhoenixLetsRushC1.mp3}}{{AC|PhoenixLetsRushC2.mp3}} "Let's rush C."
+
+====Let's Sneak Here====
+Only as Attackers during Buy Phase.
+*{{AC|PhoenixSneakA1.mp3}}{{AC|PhoenixSneakA2.mp3}} "Let's sneak A."
+*{{AC|PhoenixSneakB1.mp3}}{{AC|PhoenixSneakB2.mp3}} "Let's sneak B."
+*{{AC|PhoenixSneakC1.mp3}}{{AC|PhoenixSneakC2.mp3}} "Let's sneak C."
+*{{AC|PhoenixSneakMid1.mp3}}{{AC|PhoenixSneakMid2.mp3}} "Let's sneak Mid."
+
+====Let's Stack Here====
+Only as Defenders during Buy Phase.
+*{{AC|PhoenixStack1.mp3}}{{AC|PhoenixStack2.mp3}} "Let's stack up."
+*{{AC|PhoenixStackA1.mp3}}{{AC|PhoenixStackA2.mp3}} "Let's stack A."
+*{{AC|PhoenixStackB1.mp3}}{{AC|PhoenixStackB2.mp3}} "Let's stack B."
+*{{AC|PhoenixStackC1.mp3}}{{AC|PhoenixStackC2.mp3}} "Let's stack C."
+*{{AC|PhoenixStackMid1.mp3}}{{AC|PhoenixStackMid2.mp3}} "Let's stack Mid."
+
+====Someone Go Here====
+As Attackers during Round Phase, or as Defenders at anytime.
+*{{AC|PhoenixNeedSomeoneA1.mp3}}{{AC|PhoenixNeedSomeoneA2.mp3}} "Someone go A."
+*{{AC|PhoenixNeedSomeoneB1.mp3}}{{AC|PhoenixNeedSomeoneB2.mp3}} "Someone go B."
+*{{AC|PhoenixNeedSomeoneC1.mp3}}{{AC|PhoenixNeedSomeoneC2.mp3}} "Someone go C."
+*{{AC|PhoenixNeedSomeoneMid1.mp3}}{{AC|PhoenixNeedSomeoneMid2.mp3}} "Someone go Mid."
+
+====Spike's here====
+Only as Defenders during Round Phase.
+*{{AC|PhoenixSpikeA1.mp3}}{{AC|PhoenixSpikeA2.mp3}} "Spike's A."
+*{{AC|PhoenixSpikeB1.mp3}}{{AC|PhoenixSpikeB2.mp3}} "Spike's B."
+*{{AC|PhoenixSpikeC1.mp3}}{{AC|PhoenixSpikeC2.mp3}} "Spike's C."
+*{{AC|PhoenixSpikeMid1.mp3}}{{AC|PhoenixSpikeMid2.mp3}} "Spike's Mid."
+*{{AC|PhoenixSpikeSpottedASpawn1.mp3}}{{AC|PhoenixSpikeSpottedASpawn2.mp3}} "Spike's in Attacker Spawn."
+*{{AC|PhoenixSpikeSpottedDSpawn1.mp3}}{{AC|PhoenixSpikeSpottedDSpawn2.mp3}} "Spike's in Defender Spawn."
+
+==Pings==
+===General===
+*{{AC|PhoenixPing1.mp3}}{{AC|PhoenixPing2.mp3}} "Here."
+
+===Caution===
+*{{AC|PhoenixPingCaution1.mp3}}{{AC|PhoenixPingCaution2.mp3}} "Watch out."
+
+===Need support===
+*{{AC|PhoenixHelp1.mp3}}{{AC|PhoenixHelp2.mp3}}{{AC|PhoenixHelp3.mp3}} "Help!"
+
+===On my mark===
+*{{AC|PhoenixOnMyMark1.mp3}}{{AC|PhoenixOnMyMark2.mp3}} "Go on my mark."
+
+===Ping gun===
+*{{AC|PhoenixPingGun1.mp3}}{{AC|PhoenixPingGun2.mp3}} "Gun here."
+
+===Ping spike===
+*{{AC|PhoenixPingSpike1.mp3}}{{AC|PhoenixPingSpike2.mp3}} "Spike's here."
+
+===Ping for spike defuse===
+*{{AC|PhoenixDefuseSpike1.mp3}}{{AC|PhoenixDefuseSpike2.mp3}} "Defuse the spike!"
+
+===Ping for spike plant===
+*{{AC|PhoenixPlantSpike1.mp3}}{{AC|PhoenixPlantSpike2.mp3}} "Plant the spike!"
+
+===Watching===
+*{{AC|PhoenixWatching1.mp3}}{{AC|PhoenixWatching2.mp3}} "Watchin' here."
+
+==Other lines==
+===Ability unusable===
+====[[Status Effect#Suppress|Suppressed]]====
+*{{AC|PhoenixCantUse1.mp3}} "Can't use that."
+
+====On cooldown====
+*{{AC|PhoenixOnCooldown1.mp3}} "Can't use that yet." 
+
+====No charges====
+*{{AC|PhoenixNoCharges1.mp3}} "No charges left."
+
+===Enemy spotted===
+*{{AC|PhoenixEnemyA1.mp3}}{{AC|PhoenixEnemyA2.mp3}} "Someone's A."
+*{{AC|PhoenixEnemyB1.mp3}}{{AC|PhoenixEnemyB2.mp3}} "Someone's B."
+*{{AC|PhoenixEnemyC1.mp3}}{{AC|PhoenixEnemyC2.mp3}} "Someone's C."
+*{{AC|PhoenixEnemyASpawn1.mp3}}{{AC|PhoenixEnemyASpawn2.mp3}} "Someone's in Attacker Spawn."
+*{{AC|PhoenixEnemyDSpawn1.mp3}}{{AC|PhoenixEnemyDSpawn2.mp3}} "Someone's in Defender Spawn."
+*{{AC|PhoenixEnemyMid1.mp3}}{{AC|PhoenixEnemyMid2.mp3}} "Someone's Mid."
+
+====Multiple====
+*{{AC|PhoenixEnemiesA1.mp3}}{{AC|PhoenixEnemiesA2.mp3}} "Bunch of guys A!"
+*{{AC|PhoenixEnemiesB1.mp3}}{{AC|PhoenixEnemiesB2.mp3}} "Bunch of guys B!"
+*{{AC|PhoenixEnemiesC1.mp3}}{{AC|PhoenixEnemiesC2.mp3}} "Bunch of guys C!"
+*{{AC|PhoenixEnemiesASpawn1.mp3}}{{AC|PhoenixEnemiesASpawn2.mp3}} "Bunch of guys Attacker Spawn!"
+*{{AC|PhoenixEnemiesDSpawn1.mp3}}{{AC|PhoenixEnemiesDSpawn2.mp3}} "Bunch of guys Defender Spawn!"
+*{{AC|PhoenixEnemiesMid1.mp3}}{{AC|PhoenixEnemiesMid2.mp3}} "Bunch of guys Mid!"
+
+===Reloading===
+*{{AC|PhoenixReloading1.mp3}}{{AC|PhoenixReloading2.mp3}} "Reloading."
+
+===Healed===
+*{{AC|PhoenixRelief1.mp3}}{{AC|PhoenixRelief2.mp3}}{{AC|PhoenixRelief3.mp3}} ''*Phoenix sighs*''
+
+===Killed===
+*{{AC|PhoenixDeath1.mp3}}{{AC|PhoenixDeath2.mp3}}{{AC|PhoenixDeath3.mp3}}{{AC|PhoenixDeath4.mp3}} ''*Phoenix groans*'' 
+
+===Resurrected via {{abi text|Resurrection}}===
+*{{AC|PhoenixResurrect.mp3}} "Yo, you can do that too?!"
+
+===Wounded===
+====Light damage====
+*{{AC|PhoenixPainLight1.mp3}}{{AC|PhoenixPainLight2.mp3}}{{AC|PhoenixPainLight3.mp3}} ''*Phoenix groans*''
+
+====Medium damage====
+*{{AC|PhoenixPainMedium1.mp3}}{{AC|PhoenixPainMedium2.mp3}}{{AC|PhoenixPainMedium3.mp3}} ''*Phoenix groans*''
+
+====Heavy damage====
+*{{AC|PhoenixPainHeavy1.mp3}}{{AC|PhoenixPainHeavy2.mp3}}{{AC|PhoenixPainHeavy3.mp3}} ''*Phoenix groans*''
+
+====Fall damage====
+*{{AC|PhoenixPainFall1.mp3}}{{AC|PhoenixPainFall2.mp3}}{{AC|PhoenixPainFall3.mp3}} ''*Phoenix groans*''
+
+==Unused lines==
+===Match MVP===
+*{{AC|PhoenixMatchMVP1.mp3}} "They're done? I was just getting started!"
+*{{AC|PhoenixMatchMVP2.mp3}} "Ah, come on bruv! Like it was gonna happen any other way!"
+
+===Many Enemies Spotted===
+*{{AC|PhoenixManyEnemiesHere1.mp3}}{{AC|PhoenixManyEnemiesHere2.mp3}} "Many enemies here."
+
+===Enemies On Site===
+*{{AC|PhoenixEnemiesOnSite1.mp3}}{{AC|PhoenixEnemiesOnSite2.mp3}} "Enemies on site."
+
+===Go Mid (unused)===
+*{{AC|PhoenixGoMid1.mp3}}{{AC|PhoenixGoMid2.mp3}} "Going Mid."
+
+==Removed lines==
+===Ally {{ai|Sova}} Chat===
+:[[File:Phoenix icon.png|20px|link=Phoenix]] {{AC|PhoenixAllySovaChat.mp3}} "Hey Sova! We're gonna hit the chessboard after this, yeah?"{{#tag:sup|-{{patchv|12.04}}}}
+:[[File:Sova icon.png|20px|link=Sova]] {{AC|SovaAllyPhoenixChat.mp3}} "You lack the patience, friend. Learn that first, then we'll approach strategy."
+
+==={{abi text|Curveball}} Cast===
+*{{AC|PhoenixCurveballCast5.mp3}}{{AC|PhoenixCurveballCast6.mp3}} ''*Phoenix grunts*''
+
+===Match Start===
+*{{AC|PhoenixMatchStart8.mp3}} "Ay fam! Imagine when me and the new kid go on the same mission! ''*Phoenix laughs*'' "Other team is gonna be stressing, with both of us coming back to life!" 
+
+===Wounded Annoyed===
+*{{AC|PhoenixPainAnnoyed1.mp3}}{{AC|PhoenixPainAnnoyed2.mp3}}{{AC|PhoenixPainAnnoyed3.mp3}} ''*Phoenix groans*''
+
+===Spike Spotted General===
+*{{AC|PhoenixSpikeSpotted1.mp3}}{{AC|PhoenixSpikeSpotted2.mp3}} "Spike spotted."
+
+===Enemy spotted General===
+*{{AC|PhoenixEnemy1.mp3}}{{AC|PhoenixEnemy2.mp3}} "Enemy spotted."
+
+===Multiple Enemies spotted General===
+*{{AC|PhoenixEnemies1.mp3}}{{AC|PhoenixEnemies2.mp3}} "Bunch of guys here!"
+
+===Be Quiet===
+*{{AC|PhoenixBeQuiet1.mp3}}{{AC|PhoenixBeQuiet2.mp3}} "Quiet."
+
+===Rotate===
+*{{AC|PhoenixRotating1.mp3}}{{AC|PhoenixRotating2.mp3}} "I'm rotating."
+
+===Let's Rotate===
+*{{AC|PhoenixLetsRotate1.mp3}}{{AC|PhoenixLetsRotate2.mp3}} "Let's rotate."
+
+===Affirmation===
+*{{AC|PhoenixAffirmation1.mp3}}{{AC|PhoenixAffirmation2.mp3}} "Alright."
+
+===Callouts===
+*{{AC|PhoenixCalloutA1.mp3}}{{AC|PhoenixCalloutA2.mp3}} "A Site."
+*{{AC|PhoenixCalloutB1.mp3}}{{AC|PhoenixCalloutB2.mp3}} "B Site."
+*{{AC|PhoenixCalloutC1.mp3}}{{AC|PhoenixCalloutC2.mp3}} "C Site."
+*{{AC|PhoenixCalloutMid1.mp3}}{{AC|PhoenixCalloutMid2.mp3}} "Middle."
+
+===Clear Area===
+*{{AC|PhoenixClearThisArea1.mp3}}{{AC|PhoenixClearThisArea2.mp3}} "Clear this."
+
+===Hold===
+*{{AC|PhoenixHold1.mp3}}{{AC|PhoenixHold2.mp3}} "Hold on."
+
+===Push===
+*{{AC|PhoenixPush1.mp3}}{{AC|PhoenixPush2.mp3}} "Let's push."
+
+===Regroup===
+*{{AC|PhoenixRegroup1.mp3}}{{AC|PhoenixRegroup2.mp3}} "Regroup."
+
+===Need disrupt===
+*{{AC|PhoenixDisrupt1.mp3}}{{AC|PhoenixDisrupt2.mp3}} "Disrupt here."
+
+===Need scouting===
+*{{AC|PhoenixScout1.mp3}}{{AC|PhoenixScout2.mp3}} "Scout here."
+
+===Need vision block===
+*{{AC|PhoenixBlockVision1.mp3}}{{AC|PhoenixBlockVision2.mp3}} "Block vision here."
+
+===Ping enemy utility===
+*{{AC|PhoenixPingUtility1.mp3}}{{AC|PhoenixPingUtility2.mp3}} "Enemy utility here."
+
+===Ping Go here===
+*{{AC|PhoenixGoHere1.mp3}}{{AC|PhoenixGoHere2.mp3}} "Let's go here."
+
+==[[Range/Lore|The Range's lore assets]]==
+===[[Range/Lore/EP4|Episode 4]]===
+*{{AC|file=VoicemailBrimstone8.mp3}} "Hey [[Brimstone|Brim]], listen up. So, today's mission got me proper tired. I'mma pass out right now. And you're always going on about getting enough rest, yeah? Like, self-care? So... I was thinking... I should probably skip today's debrief. You know, cause... I gotta look after my health and, like, everyone else was there, and they remember what happened way better cause, I'm tired, right? You don't need me. So, the squad's gonna cover for me. So we're good, yeah? We're good."
+*{{AC|file=VoicemailBrimstone16.mp3}} "Yo, Big Man. Seriously, tell us what's going on right now. Because me and the others? We're all seeing things like, ghosts or something. Nightmare shit. Flicking lights, cold door handles... it's got us all twitchy, [[Raze]] is freaking out... and you and [[Cypher]] keep doing these... secret meetings. Every time you do it gets all scary, man. So look, I get it. You handle the serious stuff, it's need-to-know, but... you have to give us something. Who are you meeting with? Man, what's going on, we can handle it!"
+
+===[[Range/Lore/EP5|Episode 5]]===
+*{{AC|file=VoicemailBrimstone32.mp3}} "Ayo Brim, hear me out on this one. We've got a few days 'til our next mission, right? And [[Killjoy]] has these tickets to this massive concert in Berlin! Party of the century, mate! And I think it's really important you let me, and KJ, and [[Raze]], and whoever wants to go, see the show. We'll just pop overseas, see the show, get a bite, and head right back. I promise, I'll play it cool, no stunts, no trouble-making, model citizen, yeah? Thanks boss, you're the man!"
+
+===[[Range/Lore/EP6|Episode 6]]===
+*{{AC|file=VoicemailBrimstone47.mp3}} "Hey Brim! So... for my [[Radiant]] training, [[Sage]] says I gotta open up more. And the easiest way is to write it out. So, here goes: Dear Brimstone. I hope you're well. I have some things I would like to share. First, thank you for having me on [[VALORANT Protocol|VALORANT]]! Saving the world and using my powers is a dream come true. Second, I know we don't always agree, your rules are too strict. Please consider how crazy a curfew is for grown-arse adults. I would suggest lightening up by 30%? Training with Sage has given me some fresh perspective. I get that I can be a handful sometimes, but my best work comes when I can be myself! I need room to freestyle and spread my wings. If you give me space for that, I can do great things for the team. Third, sorry about the gun range, I'll fix it! Okay, that's it."
+
+===[[Range/Lore/V25|Season 2025]]===
+*{{AC|file=VoicemailCypher1.mp3}} "Yo, baby sis, giving me a taste of my own medicine, huh? Not picking up? Huh, right... Sorry I missed your call- uh, calls, yeah... been meaning to call you earlier, just... you know how it is. Hope Lagos is treating you alright. Send Auntie Bukki my best. Last we spoke you were back home in London. No... that must have been years ago, man. Told Mum I'd visit soon too but things keep popping up. My mind's all scrambled... just work stuff I guess. Makes me miss home a bit more. Anyway, not your concern, just been thinking about you is all. Be nice to catch up. How's the music going? You a superstar yet? I wanna know everything, call me back."
+*{{AC|file=VoicemailCypher3.mp3}} "Mary, listen. I'm sorry. I wanted to be there, I... I just couldn't. Something important came up at work, you know I can't control my schedule, I don't know what else to say. Sounds like you crushed it though, caught some videos online, your set was fire! Glad you finished your song. I... I didn't realize, but I hear you, okay? I hear you, loud and clear. I'll be there next time, promise."
+*{{AC|file=VoicemailBrimstone115.mp3}} "Brim, it's Phoenix. We need to move now. KJ's still digging, I get it, but we have enough! Every mission, Toronto, Bangkok, Omega, we went in part-blind and made it out every single one! That was nothing! This is my baby sis, right? Even if there's a chance she's in trouble, then I can't-... I can't just sit here! Give me a team, Brim. Big, small, I don't care. I'll make it work."
+*{{AC|file=VoicemailBrimstone120.mp3}} "Hey Brim. I'm still thinking about Paris. That was too close for comfort, man, way too close. If our [[Veto|newest recruit]] hadn't come in clutch... I don't even know! And what's next? [[Atlas]] is down, but the war's not over. [[Mary Adeyemi|Mary]]'s not the only one at risk, we need something for all our families! Surveillance, emergency protocols, whatever ensures their safety year-round. Not sure what that looks like but it's something to think about. Oh, one last thing. Don't be shocked by a few requests from me to swing home. I know, it's not really my style, but it's long overdue."
+
+==Notes==
+:''To easily see which quotes were added corresponding to the patch, use your browser's Find function and type the patch number (e.g. v12.04).
+*{{ui|Added}} 1 voice line added from patch {{patchv|13.00}}, documented in the patch notes.
+*{{ui|Removed}} 1 voice line removed from patch {{patchv|12.04}}, undocumented in the patch notes.
+*Additional radio commands added in patch {{patchv|8.11}} are not mentioned in this page.
+*Other voice lines removed were at an unknown timeframe.
+
+==Navigation==
+{{Navbox agents}}
+[[Category:Quotes]]

@@ -1,0 +1,528 @@
+This is a '''list of quotes by Reyna when {{abi text|Empress}} is activated''', having a filter applied to them. Reyna is voiced by Karina Altamirano in English. Necessary quotes translated are from Spanish to English, unless otherwise stated. There are a few voice lines unique to Empress (marked with †). The Empress set contains {{PAGESINCATEGORY:Reyna Empress Quotes}} quotes.
+
+A downloadable folder containing all the audio files on this page can be found [https://drive.google.com/drive/folders/1tAVPVmtpjDeZmbI8ZDQKPsMg3wssBvbk?usp=sharing here]. For the standard set, see [[Reyna/Quotes]].
+
+{{TOCright}}
+==Abilities==
+==={{abi text|Leer}}===
+====Cast====
+*{{AC|UltReynaLeerCast1.mp3}}{{AC|UltReynaLeerCast2.mp3}} "See nothing."†
+*{{AC|UltReynaLeerCast3.mp3}}{{AC|UltReynaLeerCast4.mp3}} "Blind fools."†
+
+====Kill afflicted enemy====
+*{{AC|UltReynaLeerKill1.mp3}}{{AC|UltReynaLeerKill2.mp3}} "Peekaboo!"
+*{{AC|UltReynaLeerKill3.mp3}}{{AC|UltReynaLeerKill4.mp3}} "Adiós."
+**(Goodbye.)
+*{{AC|UltReynaLeerKill5.mp3}}{{AC|UltReynaLeerKill6.mp3}} "Never saw me."
+
+==={{abi text|Dismiss}}===
+====Cast====
+*{{AC|UltReynaDismissCast1.mp3}}{{AC|UltReynaDismissCast2.mp3}}{{AC|UltReynaDismissCast3.mp3}} ''*Reyna laughs*''†
+
+==={{abi text|Devour}}===
+Reyna has no voice lines when using this ability. However, there are voice lines in the game files that are [[#Devour Cast|unused]].
+
+==={{abi text|Empress}}===
+====Ally Cast====
+*{{AC|UltReynaUltAllyCast.mp3}} "They will cower!"†
+
+====Enemy Cast====
+*{{AC|UltReynaUltEnemyCast.mp3}} "The hunt begins!"†
+
+====Kill====
+*{{AC|UltReynaUltKill1.mp3}}{{AC|UltReynaUltKill2.mp3}} "All mine!"†
+*{{AC|UltReynaUltKill3.mp3}}{{AC|UltReynaUltKill4.mp3}} "Oh, the rush."†
+*{{AC|UltReynaUltKill5.mp3}}{{AC|UltReynaUltKill6.mp3}} "More, more!"†
+
+==Buy Phase==
+These voice lines can still be heard if they are in a [[Game Modes#Custom Game|custom game]] and using Cheats.
+===Shop===
+====Let's Buy====
+*{{AC|UltReynaBuying1.mp3}}{{AC|UltReynaBuying2.mp3}} "Buying."
+
+====Let's Save====
+*{{AC|UltReynaSaving1.mp3}}{{AC|UltReynaSaving2.mp3}} "Saving."
+
+====I Have Extra Creds====
+*{{AC|UltReynaOffer1.mp3}}{{AC|UltReynaOffer2.mp3}} "What do you need?"
+
+====Requested====
+*{{AC|UltReynaRequest1.mp3}}{{AC|UltReynaRequest2.mp3}} "Need a drop."
+
+==Spike==
+===Forgotten in spawn===
+*{{AC|UltReynaForgotSpike1.mp3}}{{AC|UltReynaForgotSpike2.mp3}} "How did we forget the spike?"
+
+===Ally carrier down===
+*{{AC|UltReynaSpikeDown1.mp3}}{{AC|UltReynaSpikeDown2.mp3}} "Our spike's down."
+
+===Dropped===
+*{{AC|UltReynaSpikeDropped1.mp3}}{{AC|UltReynaSpikeDropped2.mp3}} "Spike dropped."
+
+===Retrieved===
+*{{AC|UltReynaSpikePickedUp1.mp3}}{{AC|UltReynaSpikePickedUp2.mp3}} "I have the spike."
+
+===Planted===
+*{{AC|UltReynaSpikePlanted1.mp3}}{{AC|UltReynaSpikePlanted2.mp3}} "Spike planted."
+
+===Spotted===
+*{{AC|UltReynaSpikeSpotted1.mp3}}{{AC|UltReynaSpikeSpotted2.mp3}} "Spike spotted."
+*{{AC|UltReynaSpikeSpottedA1.mp3}}{{AC|UltReynaSpikeSpottedA2.mp3}} "Spike is A."
+*{{AC|UltReynaSpikeSpottedB1.mp3}}{{AC|UltReynaSpikeSpottedB2.mp3}} "Spike is B."
+*{{AC|UltReynaSpikeSpottedC1.mp3}}{{AC|UltReynaSpikeSpottedC2.mp3}} "Spike is C."
+*{{AC|UltReynaSpikeSpottedASpawn1.mp3}}{{AC|UltReynaSpikeSpottedASpawn2.mp3}} "Spike's in Attacker Spawn."
+*{{AC|UltReynaSpikeSpottedDSpawn1.mp3}}{{AC|UltReynaSpikeSpottedDSpawn2.mp3}} "Spike's in Defender Spawn."
+*{{AC|UltReynaSpikeSpottedMid1.mp3}}{{AC|UltReynaSpikeSpottedMid2.mp3}} "Spike is Mid."
+
+===Defuse resumed===
+*{{AC|UltReynaDefuseResumed1.mp3}}{{AC|UltReynaDefuseResumed2.mp3}} "Don't insult me."
+
+===Defuse time running out===
+*{{AC|UltReynaDefuseLate1.mp3}}{{AC|UltReynaDefuseLate2.mp3}} ''*Reyna sighs*'' "Don't rush me!"
+
+===Defuse successful===
+*{{AC|UltReynaDefuseComplete1.mp3}} "Did you really expect that to work?"
+
+==Kill==
+Reyna has no voice lines when killing an enemy normally.
+
+===Headshot===
+*{{AC|UltReynaHeadshot1.mp3}} "Don't resist."
+*{{AC|UltReynaHeadshot2.mp3}}{{AC|UltReynaHeadshot3.mp3}} "You're nothing!"
+*{{AC|UltReynaHeadshot4.mp3}} "No need to suffer."
+*{{AC|UltReynaHeadshot5.mp3}}{{AC|UltReynaHeadshot6.mp3}} "You disappoint me."
+*{{AC|UltReynaHeadshot7.mp3}} "Shoo!"
+*{{AC|UltReynaHeadshot8.mp3}} "Embarrassing."
+
+===[[Melee]]===
+*{{AC|UltReynaMeleeKill1.mp3}} "Out of my way!"
+*{{AC|UltReynaMeleeKill2.mp3}} "Butchered!"
+
+===Triple===
+*{{AC|UltReynaTriple1.mp3}}{{AC|UltReynaTriple2.mp3}} "Three souls."
+
+===Quadra===
+*{{AC|UltReynaQuadra1.mp3}}{{AC|UltReynaQuadra2.mp3}} "Four dead."
+
+==Round End==
+===Ace===
+*{{AC|UltReynaUltAce.mp3}} "Yes!" ''*Reyna laughs*''†
+
+===Clutch===
+*{{AC|UltReynaClutch1.mp3}} "If I act superior, it's because I am."
+*{{AC|UltReynaClutch2.mp3}} "My heart's racing!"
+*{{AC|UltReynaClutch3.mp3}} "You should stop trying."
+*{{AC|UltReynaClutch4.mp3}} "They're nothing to me!"
+
+===Flawless or Team Ace===
+*{{AC|UltReynaFlawless1.mp3}} "Such trash!"
+*{{AC|UltReynaFlawless2.mp3}} "Ha! Let them rot!"
+*{{AC|UltReynaFlawless3.mp3}} "Poor, miserable criaturas."
+**(''Criaturas'': Creatures)
+
+===Thrifty===
+*{{AC|UltReynaThrifty1.mp3}} "That cost them everything, and me? Well, nothing."
+*{{AC|UltReynaThrifty2.mp3}} "Keep your weapons. This heart is all I need."
+
+===Last Kill===
+*{{AC|UltReynaLastKill1.mp3}} "You were barely worth the effort."
+*{{AC|UltReynaLastKill2.mp3}} "Don't worry, your life won't go to waste."
+*{{AC|UltReynaLastKill3.mp3}} "All dead, and I'm still hungry."
+*{{AC|UltReynaLastKill4.mp3}} "Be grateful I killed you quickly."
+*{{AC|UltReynaLastKill5.mp3}} "You were pitiful."
+*{{AC|UltReynaLastKill6.mp3}} "You are so disappointing."
+
+====Using [[Melee]]====
+*{{AC|UltReynaLastKillMelee1.mp3}} "Hello darling."
+
+===Low HP===
+*{{AC|UltReynaLowHP1.mp3}} "Ugh, I don't die so easily!"
+
+==Match End==
+===Match Win===
+*{{AC|UltReynaMatchWin1.mp3}} "They stopped breathing? Excellent. Then we're done."
+*{{AC|UltReynaMatchWin2.mp3}} "Somehow the hunger always lingers."
+*{{AC|UltReynaMatchWin3.mp3}} "I'd thought they'd have more to offer. How foolish of me."
+*{{AC|UltReynaMatchWin4.mp3}} "Someone else will clean up. I don't take out the trash."
+*{{AC|UltReynaMatchWin5.mp3}} ''*Reyna laughs*'' "This is who I was meant to be!"†
+
+====[[Icebox]]====
+*{{AC|UltReynaMatchWinIcebox.mp3}} "I was not meant for this climate, let's go!"
+
+==Agent-specific interactions==
+{| class="wikitable sortable"
+!To Agent
+!Scenario
+!class=unsortable|Enemy
+|-
+|rowspan=2|Any Human [[Agent]]
+|rowspan=2|Last Kill
+|{{AC|UltReynaEnemyTechLastKill.mp3}} "You could never hope to match a Radiante!"
+*(''Radiante'': Radiant)
+|-
+|{{AC|UltReynaEnemyTechLastKill2.mp3}} "Enough of your technology! The future is Radiant!"
+|-
+|{{Ai|Breach}}
+|Kill
+|{{AC|UltReynaEnemyBreachKill.mp3}} "Breach killed."
+|-
+|{{Ai|Cypher}}
+|Kill
+|{{AC|UltReynaEnemyCypherKill.mp3}} "Cypher buried."
+|-
+|{{Ai|KAY/O}}
+|Last Kill
+|{{AC|UltReynaEnemyKAYOLastKill.mp3}} "Terminado."
+*(Finished.)
+|-
+|{{Ai|Killjoy}}
+|Last Kill
+|{{AC|UltReynaEnemyKilljoyLastKill.mp3}} "I don't care how bright you are! You'll never be a Radiant!"
+|-
+|{{Ai|Phoenix}}
+|Kill
+|{{AC|UltReynaEnemyPhoenixKill.mp3}} "Phoenix killed."
+|-
+|{{Ai|Raze}}
+|Kill
+|{{AC|UltReynaEnemyRazeKill.mp3}} "Raze dead."
+|-
+|rowspan=2|{{Ai|Reyna}}
+|Kill
+|{{AC|UltReynaEnemyReynaKill.mp3}} "Parasite."
+|-
+|Last Kill 
+|{{AC|UltReynaEnemyReynaLastKill.mp3}} "Forgive me if I don't grieve."
+|-
+|rowspan=2|{{Ai|Sage}}
+|Kill
+|{{AC|UltReynaEnemySageKill.mp3}} "Ay corazón."
+*(Oh sweetheart.)
+|-
+|Last Kill
+|{{AC|UltReynaEnemySageLastKill.mp3}} "I'll send flowers."
+|-
+|{{Ai|Sova}}
+|Last Kill
+|{{AC|UltReynaEnemySovaLastKill.mp3}} "Who's the hunter now?!"
+|}
+
+==Radio Commands==
+===Menu Index only===
+====Caution here====
+*{{AC|UltReynaCaution1.mp3}}{{AC|UltReynaCaution2.mp3}} "Enemies nearby."
+
+====Going Area====
+*{{AC|UltReynaGoingA1.mp3}}{{AC|UltReynaGoingA2.mp3}} "Going A."
+*{{AC|UltReynaGoingB1.mp3}}{{AC|UltReynaGoingB2.mp3}} "Going B."
+*{{AC|UltReynaGoingC1.mp3}}{{AC|UltReynaGoingC2.mp3}} "Going C."
+*{{AC|UltReynaGoingMid1.mp3}}{{AC|UltReynaGoingMid2.mp3}} "Going Mid."
+
+====Need Support====
+*{{AC|UltReynaHelp1.mp3}}{{AC|UltReynaHelp2.mp3}}{{AC|UltReynaHelp3.mp3}} "Need help."
+
+====On my way====
+*{{AC|UltReynaOnMyWay1.mp3}}{{AC|UltReynaOnMyWay2.mp3}} "On my way."
+
+====Play for picks====
+*{{AC|UltReynaPlayForPicks1.mp3}}{{AC|UltReynaPlayForPicks2.mp3}} "Play for picks."
+
+===Wheel Index only===
+====Encourage====
+*{{AC|UltReynaEncouraging1.mp3}}{{AC|UltReynaEncouraging2.mp3}}{{AC|UltReynaEncouraging3.mp3}} "We've got this."
+
+====Let's Attack====
+Only during Round Phase.
+*{{AC|UltReynaLetsAttack1.mp3}}{{AC|UltReynaLetsAttack2.mp3}} "Let's attack."
+
+====Let's play slow====
+Only as Attackers at anytime.
+*{{AC|UltReynaPlaySlow1.mp3}}{{AC|UltReynaPlaySlow2.mp3}} "Let's play slow."
+
+====Let's spread out====
+*{{AC|UltReynaSpreadOut1.mp3}}{{AC|UltReynaSpreadOut2.mp3}} "Let's spread out."
+
+====Nice Try====
+*{{AC|UltReynaNiceTry1.mp3}}{{AC|UltReynaNiceTry2.mp3}}{{AC|UltReynaNiceTry3.mp3}} "Nice try."
+
+====Stick together====
+*{{AC|UltReynaStickTogether1.mp3}}{{AC|UltReynaStickTogether2.mp3}} "Stick together."
+
+===Menu and Wheel Index===
+====Commend====
+*{{AC|UltReynaCommend1.mp3}}{{AC|UltReynaCommend2.mp3}}{{AC|UltReynaCommend3.mp3}} "Impressive."
+
+====Fall Back====
+Menu Index at anytime, or Wheel Index only during Round Phase.
+*{{AC|UltReynaFallBack1.mp3}}{{AC|UltReynaFallBack2.mp3}} "Fall back."
+
+====Hello====
+*{{AC|UltReynaHello1.mp3}}{{AC|UltReynaHello2.mp3}}{{AC|UltReynaHello3.mp3}} "Hola."
+
+====I'll take point====
+Wheel Index only as Attackers during Buy Phase, or Menu Index at anytime regardless of Attackers or Defenders.
+*{{AC|UltReynaTakePoint1.mp3}}{{AC|UltReynaTakePoint2.mp3}} "I'm taking point."
+
+====Let's rush them (Radio Command)====
+*{{AC|UltReynaRush1.mp3}}{{AC|UltReynaRush2.mp3}} "Rush them."
+
+====Need healing====
+*{{AC|UltReynaHealing1.mp3}}{{AC|UltReynaHealing2.mp3}} "I need healing."
+
+====No====
+*{{AC|UltReynaNo1.mp3}}{{AC|UltReynaNo2.mp3}}{{AC|UltReynaNo3.mp3}} "No."
+
+====Sorry====
+*{{AC|UltReynaSorry1.mp3}}{{AC|UltReynaSorry2.mp3}}{{AC|UltReynaSorry3.mp3}} "Forgive me."
+
+====Thanks====
+*{{AC|UltReynaThanks1.mp3}}{{AC|UltReynaThanks2.mp3}}{{AC|UltReynaThanks3.mp3}} "Thank you."
+
+====Ultimate Status====
+*{{AC|UltReynaUltDown1.mp3}}{{AC|UltReynaUltDown2.mp3}} "My ult's not ready."
+*{{AC|UltReynaUltAlmost1.mp3}}{{AC|UltReynaUltAlmost2.mp3}} "My ult's almost ready."
+*{{AC|UltReynaUltReady1.mp3}}{{AC|UltReynaUltReady2.mp3}} "My ult's ready."
+
+====Yes====
+*{{AC|UltReynaYes1.mp3}}{{AC|UltReynaYes2.mp3}}{{AC|UltReynaYes3.mp3}} "Yes."
+
+===Wheel Index requiring Minimap===
+For the following voicelines, the minimap must be open and then open ping wheel and activate strategy.
+
+====I'm Going Here====
+As Defenders during Buy Phase, or as Attackers at anytime.
+*{{AC|UltReynaGoingA1.mp3}}{{AC|UltReynaGoingA2.mp3}} "Going A."
+*{{AC|UltReynaGoingB1.mp3}}{{AC|UltReynaGoingB2.mp3}} "Going B."
+*{{AC|UltReynaGoingC1.mp3}}{{AC|UltReynaGoingC2.mp3}} "Going C."
+*{{AC|UltReynaGoingMid1.mp3}}{{AC|UltReynaGoingMid2.mp3}} "Going Mid."
+
+====Someone Go Here====
+As Attackers during Round Phase, or as Defenders at anytime.
+*{{AC|UltReynaNeedSomeoneA1.mp3}}{{AC|UltReynaNeedSomeoneA2.mp3}} "Someone go A."
+*{{AC|UltReynaNeedSomeoneB1.mp3}}{{AC|UltReynaNeedSomeoneB2.mp3}} "Someone go B."
+*{{AC|UltReynaNeedSomeoneC1.mp3}}{{AC|UltReynaNeedSomeoneC2.mp3}} "Someone go C."
+*{{AC|UltReynaNeedSomeoneMid1.mp3}}{{AC|UltReynaNeedSomeoneMid2.mp3}} "Someone go Mid."
+
+====Spike's here====
+Only as Defenders during Round Phase.
+*{{AC|UltReynaSpikeA1.mp3}}{{AC|UltReynaSpikeA2.mp3}} "Spike's A."
+*{{AC|UltReynaSpikeB1.mp3}}{{AC|UltReynaSpikeB2.mp3}} "Spike's B."
+*{{AC|UltReynaSpikeC1.mp3}}{{AC|UltReynaSpikeC2.mp3}} "Spike's C."
+*{{AC|UltReynaSpikeMid1.mp3}}{{AC|UltReynaSpikeMid2.mp3}} "Spike's Mid."
+*{{AC|UltReynaSpikeSpottedASpawn1.mp3}}{{AC|UltReynaSpikeSpottedASpawn2.mp3}} "Spike's in Attacker Spawn."
+*{{AC|UltReynaSpikeSpottedDSpawn1.mp3}}{{AC|UltReynaSpikeSpottedDSpawn2.mp3}} "Spike's in Defender Spawn."
+
+==Pings==
+===General===
+*{{AC|UltReynaPing1.mp3}}{{AC|UltReynaPing2.mp3}} "There."
+
+===Caution===
+*{{AC|UltReynaPingCaution1.mp3}}{{AC|UltReynaPingCaution2.mp3}} "Careful here."
+
+===Need support===
+*{{AC|UltReynaHelp1.mp3}}{{AC|UltReynaHelp2.mp3}}{{AC|UltReynaHelp3.mp3}} "Need help!"
+
+===On my mark===
+*{{AC|UltReynaOnMyMark1.mp3}}{{AC|UltReynaOnMyMark2.mp3}} "On my mark."
+
+===Ping gun===
+*{{AC|UltReynaPingGun1.mp3}}{{AC|UltReynaPingGun2.mp3}} "Gun here."
+
+===Ping spike===
+*{{AC|UltReynaPingSpike1.mp3}}{{AC|UltReynaPingSpike2.mp3}} "Spike's here."
+
+===Ping for spike defuse===
+*{{AC|UltReynaDefuseSpike1.mp3}}{{AC|UltReynaDefuseSpike2.mp3}} "Defuse the spike!"
+
+===Ping for spike plant===
+*{{AC|UltReynaPlantSpike1.mp3}}{{AC|UltReynaPlantSpike2.mp3}} "Plant the spike!"
+
+===Watching===
+*{{AC|UltReynaWatching1.mp3}}{{AC|UltReynaWatching2.mp3}} "I'm watching here."
+
+==Other lines==
+===Ability unusable===
+====[[Status Effect#Suppress|Suppressed]]====
+*{{AC|UltReynaCantUse1.mp3}}{{AC|UltReynaCantUse2.mp3}} "Can't use that."
+
+====On cooldown====
+*{{AC|UltReynaOnCooldown1.mp3}}{{AC|UltReynaOnCooldown2.mp3}} "Not ready yet."
+
+====No charges====
+*{{AC|UltReynaNoCharges1.mp3}}{{AC|UltReynaNoCharges2.mp3}} "Out of charges."
+
+===Enemy spotted===
+*{{AC|UltReynaEnemyA1.mp3}}{{AC|UltReynaEnemyA2.mp3}} "Enemy spotted A."
+*{{AC|UltReynaEnemyB1.mp3}}{{AC|UltReynaEnemyB2.mp3}} "Enemy spotted B."
+*{{AC|UltReynaEnemyC1.mp3}}{{AC|UltReynaEnemyC2.mp3}} "Enemy spotted C."
+*{{AC|UltReynaEnemyASpawn1.mp3}}{{AC|UltReynaEnemyASpawn2.mp3}} "Enemy in Attacker Spawn."
+*{{AC|UltReynaEnemyDSpawn1.mp3}}{{AC|UltReynaEnemyDSpawn2.mp3}} "Enemy in Defender Spawn."
+*{{AC|UltReynaEnemyMid1.mp3}}{{AC|UltReynaEnemyMid2.mp3}} "Enemy spotted Mid."
+
+====Multiple====
+*{{AC|UltReynaEnemiesA1.mp3}}{{AC|UltReynaEnemiesA2.mp3}} "Many enemies A!"
+*{{AC|UltReynaEnemiesB1.mp3}}{{AC|UltReynaEnemiesB2.mp3}} "Many enemies B!"
+*{{AC|UltReynaEnemiesC1.mp3}}{{AC|UltReynaEnemiesC2.mp3}} "Many enemies C!"
+*{{AC|UltReynaEnemiesASpawn1.mp3}}{{AC|UltReynaEnemiesASpawn2.mp3}} "Enemies in Attacker Spawn!"
+*{{AC|UltReynaEnemiesDSpawn1.mp3}}{{AC|UltReynaEnemiesDSpawn2.mp3}} "Enemies in Defender Spawn!"
+*{{AC|UltReynaEnemiesMid1.mp3}}{{AC|UltReynaEnemiesMid2.mp3}} "Many enemies Mid!"
+
+===Reloading===
+*{{AC|UltReynaReloading1.mp3}}{{AC|UltReynaReloading2.mp3}} "Reloading."
+
+===Healed===
+*{{AC|UltReynaRelief1.mp3}}{{AC|UltReynaRelief2.mp3}}{{AC|UltReynaRelief3.mp3}} ''*Reyna sighs*''
+
+===Killed===
+*{{AC|UltReynaDeath1.mp3}}{{AC|UltReynaDeath2.mp3}}{{AC|UltReynaDeath3.mp3}} ''*Reyna groans*''
+
+===Wounded===
+====Light damage====
+*{{AC|UltReynaPainLight1.mp3}}{{AC|UltReynaPainLight2.mp3}}{{AC|UltReynaPainLight3.mp3}} ''*Reyna groans*''
+
+====Medium damage====
+*{{AC|UltReynaPainMedium1.mp3}}{{AC|UltReynaPainMedium2.mp3}}{{AC|UltReynaPainMedium3.mp3}} ''*Reyna groans*''
+
+====Heavy damage====
+*{{AC|UltReynaPainHeavy1.mp3}}{{AC|UltReynaPainHeavy2.mp3}}{{AC|UltReynaPainHeavy3.mp3}} ''*Reyna groans*''
+
+====Fall damage====
+*{{AC|UltReynaPainFall1.mp3}}{{AC|UltReynaPainFall2.mp3}}{{AC|UltReynaPainFall3.mp3}} ''*Reyna groans*''
+
+==Unused lines==
+==={{abi text|Devour}} Cast===
+*{{AC|UltReynaDevourCast1.mp3}}{{AC|UltReynaDevourCast2.mp3}} "Return."
+*{{AC|UltReynaDevourCast3.mp3}}{{AC|UltReynaDevourCast4.mp3}} "Return to me."
+
+===Resurrected via {{abi text|Resurrection}}===
+*{{AC|UltReynaResurrect.mp3}} "Ah, back where I belong."
+
+===Match MVP===
+*{{AC|UltReynaMatchMVP1.mp3}} "If I act superior, it's because I am."
+*{{AC|UltReynaMatchMVP2.mp3}} "What can I say. When I want something, I take it."
+
+===Need utility here===
+*{{AC|UltReynaNeedUtilityHere1.mp3}}{{AC|UltReynaNeedUtilityHere2.mp3}} "Need util here."
+
+===One kill remaining (game-mode specific)===
+*{{AC|UltReynaOneKillLeft1.mp3}}{{AC|UltReynaOneKillLeft2.mp3}} "It's playtime."
+
+===Runner-up (game-mode specific)===
+*{{AC|UltReynaRunnerUp1.mp3}} "That was a snack. I want a meal."
+*{{AC|UltReynaRunnerUp2.mp3}} "Next time I'll be on top."
+*{{AC|UltReynaRunnerUp3.mp3}} "Not first? Disappointing."
+
+===I'll lurk===
+*{{AC|UltReynaLurking1.mp3}}{{AC|UltReynaLurking2.mp3}} "I'm lurking."
+
+===I'll push out===
+*{{AC|UltReynaPushingOut1.mp3}}{{AC|UltReynaPushingOut2.mp3}} "I'm pushing out."
+
+===I'm holding position===
+*{{AC|UltReynaHoldingPosition1.mp3}}{{AC|UltReynaHoldingPosition2.mp3}} "Holding position."
+
+===Let's hold positions===
+*{{AC|UltReynaHoldPositions1.mp3}}{{AC|UltReynaHoldPositions2.mp3}} "Let's hold positions."
+
+===Let's push out===
+*{{AC|UltReynaPushOut1.mp3}}{{AC|UltReynaPushOut2.mp3}} "Let's push out."
+
+===Faking===
+*{{AC|UltReynaFaking1.mp3}}{{AC|UltReynaFaking2.mp3}} "I'm faking."
+*{{AC|UltReynaFakingA1.mp3}}{{AC|UltReynaFakingA2.mp3}} "I'm faking A."
+*{{AC|UltReynaFakingB1.mp3}}{{AC|UltReynaFakingB2.mp3}} "I'm faking B."
+*{{AC|UltReynaFakingC1.mp3}}{{AC|UltReynaFakingC2.mp3}} "I'm faking C."
+
+===Let's Go Here===
+*{{AC|UltReynaLetsGoA1.mp3}}{{AC|UltReynaLetsGoA2.mp3}} "Let's go A."
+*{{AC|UltReynaLetsGoB1.mp3}}{{AC|UltReynaLetsGoB2.mp3}} "Let's go B."
+*{{AC|UltReynaLetsGoC1.mp3}}{{AC|UltReynaLetsGoC2.mp3}} "Let's go C."
+*{{AC|UltReynaLetsGoHere1.mp3}}{{AC|UltReynaLetsGoHere2.mp3}} "Let's go here."
+
+===Let's rush them (Minimap)===
+*{{AC|UltReynaLetsRush1.mp3}}{{AC|UltReynaLetsRush2.mp3}} "Let's rush them."
+*{{AC|UltReynaLetsRushA1.mp3}}{{AC|UltReynaLetsRushA2.mp3}} "Let's rush A."
+*{{AC|UltReynaLetsRushB1.mp3}}{{AC|UltReynaLetsRushB2.mp3}} "Let's rush B."
+*{{AC|UltReynaLetsRushC1.mp3}}{{AC|UltReynaLetsRushC2.mp3}} "Let's rush C."
+
+===Let's Sneak Here===
+*{{AC|UltReynaSneakA1.mp3}}{{AC|UltReynaSneakA2.mp3}} "Let's sneak A."
+*{{AC|UltReynaSneakB1.mp3}}{{AC|UltReynaSneakB2.mp3}} "Let's sneak B."
+*{{AC|UltReynaSneakC1.mp3}}{{AC|UltReynaSneakC2.mp3}} "Let's sneak C."
+*{{AC|UltReynaSneakMid1.mp3}}{{AC|UltReynaSneakMid2.mp3}} "Let's sneak Mid."
+
+===Let's Stack Here===
+*{{AC|UltReynaStack1.mp3}}{{AC|UltReynaStack2.mp3}} "Let's stack up."
+*{{AC|UltReynaStackA1.mp3}}{{AC|UltReynaStackA2.mp3}} "Let's stack A."
+*{{AC|UltReynaStackB1.mp3}}{{AC|UltReynaStackB2.mp3}} "Let's stack B."
+*{{AC|UltReynaStackC1.mp3}}{{AC|UltReynaStackC2.mp3}} "Let's stack C."
+*{{AC|UltReynaStackMid1.mp3}}{{AC|UltReynaStackMid2.mp3}} "Let's stack Mid."
+
+==Removed lines==
+===Last Kill Enemy MVP===
+*{{AC|UltReynaLastKillMVP2.mp3}} "How sad. You're just like everyone else."
+
+===Wounded Annoyed===
+*{{AC|UltReynaPainAnnoyed1.mp3}}{{AC|UltReynaPainAnnoyed2.mp3}}{{AC|UltReynaPainAnnoyed3.mp3}} ''*Reyna groans*''
+
+===Enemy Spotted General===
+*{{AC|UltReynaEnemy1.mp3}}{{AC|UltReynaEnemy2.mp3}} "Enemy spotted."
+
+===Multiple Enemies spotted General===
+*{{AC|UltReynaEnemies1.mp3}}{{AC|UltReynaEnemies2.mp3}} "Multiple enemies ahead!"
+
+===Be Quiet===
+*{{AC|UltReynaBeQuiet1.mp3}}{{AC|UltReynaBeQuiet2.mp3}} "Be quiet."
+
+===Rotate===
+*{{AC|UltReynaRotating1.mp3}}{{AC|UltReynaRotating2.mp3}} "Rotating."
+
+===Let's Rotate===
+*{{AC|UltReynaLetsRotate1.mp3}}{{AC|UltReynaLetsRotate2.mp3}} "Let's rotate."
+
+===Affirmation===
+*{{AC|UltReynaAffirmation1.mp3}}{{AC|UltReynaAffirmation2.mp3}} "That's fine."
+
+===Callouts===
+*{{AC|UltReynaCalloutA1.mp3}}{{AC|UltReynaCalloutA2.mp3}} "A."
+*{{AC|UltReynaCalloutB1.mp3}}{{AC|UltReynaCalloutB2.mp3}} "B."
+*{{AC|UltReynaCalloutC1.mp3}}{{AC|UltReynaCalloutC2.mp3}} "C."
+*{{AC|UltReynaCalloutMid1.mp3}}{{AC|UltReynaCalloutMid2.mp3}} "Mid."
+
+===Clear Area===
+*{{AC|UltReynaClearThisArea1.mp3}}{{AC|UltReynaClearThisArea2.mp3}} "Clear this area."
+
+===Hold===
+*{{AC|UltReynaHold1.mp3}}{{AC|UltReynaHold2.mp3}} "Hold."
+
+===Push===
+*{{AC|UltReynaPush1.mp3}}{{AC|UltReynaPush2.mp3}} "Push forward."
+
+===Regroup===
+*{{AC|UltReynaRegroup1.mp3}}{{AC|UltReynaRegroup2.mp3}} "Regroup."
+
+===Need disrupt===
+*{{AC|UltReynaDisrupt1.mp3}}{{AC|UltReynaDisrupt2.mp3}} "Need a disrupt."
+
+===Need scouting===
+*{{AC|UltReynaScout1.mp3}}{{AC|UltReynaScout2.mp3}} "Need scouting."
+
+===Need vision block===
+*{{AC|UltReynaBlockVision1.mp3}}{{AC|UltReynaBlockVision2.mp3}} "Need cover."
+
+===Ping enemy utility===
+*{{AC|UltReynaPingUtility1.mp3}}{{AC|UltReynaPingUtility2.mp3}} "Enemy utility here."
+
+===Ping Go here===
+*{{AC|UltReynaGoHere1.mp3}}{{AC|UltReynaGoHere2.mp3}} "Go here."
+
+==Notes==
+:''To easily see which quotes were added corresponding to the patch, use your browser's Find function and type the patch number (e.g. v13.00).
+*{{ui|Removed}} 1 voice line removed from patch {{patchv|13.00}}, documented in the patch notes.
+*{{ui|Adjustment}} 1 voice line moved (marked ^) from patch {{patchv|13.00}}, documented in the patch notes.
+*Additional radio commands added in patch {{patchv|8.11}} are not mentioned in this page.
+*Other voice lines removed were at an unknown timeframe.
+
+==Navigation==
+{{Navbox agents}}
+[[Category:Quotes]]

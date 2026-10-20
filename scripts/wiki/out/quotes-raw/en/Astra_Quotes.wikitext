@@ -1,0 +1,887 @@
+{{Stub|This page contains missing Twi transcriptions and translations (marked with [TWI])}}
+{{TOCright}}
+This is a '''list of quotes by {{ai|Astra}}'''. Astra is voiced by Effie Nkrumah in English. Necessary quotes translated are from Twi to English. Astra has a total of {{PAGESINCATEGORY:Astra Quotes}} files of quotes including unused and removed lines, and excluding [[#The Range's lore assets|The Range's lore assets]]. 
+
+A downloadable folder containing all the audio files on this page can be found [https://drive.google.com/drive/folders/1RBmsdXTNzIKKYUQlqVtpW3vlCQybwYpY?usp=sharing here].
+
+==Agent Selected/Unlocked==
+*{{AC|AstraPick.mp3}} "I am on a higher plane, chale, literally!"
+**(''Chale'': Friend)
+
+==Abilities==
+===[[Astral Form]]===
+====Cast during Buy Phase====
+*{{AC|AstraAstralFormEnter1.mp3}} "Checking the situation."
+*{{AC|AstraAstralFormEnter2.mp3}} "Heading to the above."
+*{{AC|AstraAstralFormEnter3.mp3}} "Up I go!"
+*{{AC|AstraAstralFormEnter4.mp3}} "Hm, let's see now."
+*{{AC|AstraAstralFormEnter5.mp3}} "Going astral, guys."
+*{{AC|AstraAstralFormEnter6.mp3}} "I'm going above!"
+
+==={{abi text|Gravity Well}}===
+====Cast====
+*{{AC|AstraGravityWellCast1.mp3}}{{AC|AstraGravityWellCast2.mp3}} "Pulling them in!"
+
+==={{abi text|Nova Pulse}}===
+====Cast====
+*{{AC|AstraNovaPulseCast1.mp3}} "Blasting them!"
+*{{AC|AstraNovaPulseCast2.mp3}} "Blasting 'em!"
+*{{AC|AstraNovaPulseCast3.mp3}}{{AC|AstraNovaPulseCast4.mp3}} "Knocking them."
+*{{AC|AstraNovaPulseCast5.mp3}}{{AC|AstraNovaPulseCast6.mp3}} "Concussing 'em."
+
+==={{abi text|Nebula/Dissipate}}===
+====Cast====
+*{{AC|AstraNebulaCast1.mp3}}{{AC|AstraNebulaCast2.mp3}} "Blocking vision."
+*{{AC|AstraNebulaCast3.mp3}}{{AC|AstraNebulaCast4.mp3}} "Obscuring vision."
+*{{AC|AstraNebulaCast5.mp3}}{{AC|AstraNebulaCast6.mp3}}{{AC|AstraNebulaCast7.mp3}} "Concealment."
+
+==={{abi text|Stars}}===
+====Placing stars during Buy Phase====
+*{{AC|AstraAstralFormPlace1.mp3}} "About there."
+*{{AC|AstraAstralFormPlace2.mp3}}{{AC|AstraAstralFormPlace3.mp3}} "That'll work."
+*{{AC|AstraAstralFormPlace4.mp3}} "That should work."
+*{{AC|AstraAstralFormPlace5.mp3}} "Right there."
+
+====No more stars====
+*{{AC|AstraAstralFormNoCharges1.mp3}}{{AC|AstraAstralFormNoCharges2.mp3}} "Need more astral stars."
+*{{AC|AstraAstralFormNoCharges3.mp3}}{{AC|AstraAstralFormNoCharges4.mp3}} "No more stars."
+*{{AC|AstraAstralFormNoCharges5.mp3}}{{AC|AstraAstralFormNoCharges6.mp3}} "I'm out of astral stars."
+*{{AC|AstraAstralFormNoCharges7.mp3}} "Ooh, I'm out of stars."
+*{{AC|AstraAstralFormNoCharges8.mp3}} "I'm out of stars."
+
+====Recall stars====
+*{{AC|AstraDissipateCast1.mp3}}{{AC|AstraDissipateCast2.mp3}} "Need that back."
+*{{AC|AstraDissipateCast3.mp3}}{{AC|AstraDissipateCast4.mp3}} "Taking that back."
+*{{AC|AstraDissipateCast5.mp3}}{{AC|AstraDissipateCast6.mp3}} "Recovering it."
+
+====Attempt ability cast without target star====
+*{{AC|AstraAttemptCast1.mp3}}{{AC|AstraAttemptCast2.mp3}} "I need a star."
+*{{AC|AstraAttemptCast3.mp3}}{{AC|AstraAttemptCast4.mp3}} "Got to target a star."
+*{{AC|AstraAttemptCast5.mp3}}{{AC|AstraAttemptCast6.mp3}} "Without a star, I cannot."
+
+==={{abi text|Cosmic Divide}}===
+====Ally Cast====
+*{{AC|AstraUltAllyCast.mp3}} "World divided!"
+
+====Enemy Cast====
+*{{AC|AstraUltEnemyCast.mp3}} "You are divided!"
+
+==Buy Phase==
+===Match Start===
+*{{AC|AstraMatchStart1.mp3}} "My plan may sound irrational, only because you cannot see what I can!"
+*{{AC|AstraMatchStart2.mp3}} "Chale, you are ready for this situation, right my friends?"
+*{{AC|AstraMatchStart3.mp3}} "Now we show dem, eh? They see our strength."
+*{{AC|AstraMatchStart4.mp3}} "Okay, okay guys, let's get going. Win this!"
+*{{AC|AstraMatchStart5.mp3}} "Relax, my friends. Time and space are, ''*Astra chuckles*'', they're not what you think."
+*{{AC|AstraMatchStart6.mp3}} "Don't underestimate me-o. Gold is my heart and my soul cuts like the sword."
+*{{AC|AstraMatchStart7.mp3}} "Waddup, suckers! You okay?"
+*{{AC|AstraMatchStart8.mp3}} "Guys, don't think what you're fighting against. Consider what you are fighting for!"
+*{{AC|AstraMatchStart9.mp3}} "Five on five, pa-pa-pa-pa-pa. We go clear them all."
+
+====Attacking====
+*{{AC|AstraMatchStartAttack1.mp3}} "We get the spike down, that's one piece of the puzzle. Plenty more but, ''*Astra clicks tongue*'', one at a time!"{{#tag:sup|{{patchv|6.03}}+}}
+*{{AC|AstraMatchStartAttack2.mp3}} "No choice but to get that radianite, make we go."{{#tag:sup|{{patchv|6.03}}+}}
+**(''Make we go'': Let's go)
+
+====Defending====
+*{{AC|AstraMatchStartDefense1.mp3}} "That spike they got is like a loose thread. We let them pull it, it's over! Not today."{{#tag:sup|{{patchv|6.03}}+}}
+*{{AC|AstraMatchStartDefense2.mp3}} "Them fools thought they'd get here first? Huh, they must be running on Ghanaian time because, chale, them late, [TWI]!"{{#tag:sup|{{patchv|6.03}}+}}
+
+====[[Icebox]]====
+*{{AC|AstraMatchStartIcebox.mp3}} "Why... would anyone agree to work in this cold place?!" ''*Astra shudders*''
+
+====[[Lotus]]====
+*{{AC|AstraMatchStartLotus.mp3}} "The secrets of this place, chale, they must wait a little longer! First, we fight."{{#tag:sup|{{patchv|6.0}}+}}
+
+====[[Pearl]]====
+*{{AC|AstraMatchStartPearl.mp3}} "The world may be crumbling, not this place-o, they thriving! Feel that energy!"{{#tag:sup|{{patchv|6.02}}+}}
+
+====[[Split]]====
+*{{AC|AstraMatchStartSplit.mp3}} "I like flowers and stuff, but this place no give flavor. No gold, where's the signs, the bling-blings, come on!"
+
+===Round Start===
+*{{AC|AstraRoundStart1.mp3}} "Don't worry. Don't think it, eh?"
+*{{AC|AstraRoundStart2.mp3}} "You can tell a person's character by their first action. Check me then, eh?"
+*{{AC|AstraRoundStart3.mp3}} "We have plenty of time-o, here and now. Be here, and now."
+*{{AC|AstraRoundStart4.mp3}} "I call you 'chale' because it means you're my friend. But maybe I should call you 'kwasia' because you-you fool-o!"
+*{{AC|AstraRoundStart5.mp3}} ''*Astra hums*''
+*{{AC|AstraRoundStart6.mp3}} "No worries, chale. No worries."
+*{{AC|AstraRoundStart7.mp3}} "Have I told you you're okay? You're okay, fam! Good even."
+*{{AC|AstraRoundStart8.mp3}} "My people, are you ready? You must cultivate a sense of calm."
+*{{AC|AstraRoundStart9.mp3}} "Take a breath now. Release the tension. Good? Let's go!"
+*{{AC|AstraRoundStart10.mp3}} "That moment is gone, but it be cool-o. Now we are here. Here."
+
+====Last round won====
+*{{AC|AstraRoundWon1.mp3}} "I myself predict we will win, again!"
+*{{AC|AstraRoundWon2.mp3}} "Ye-heah, good effort, my friends!"
+*{{AC|AstraRoundWon3.mp3}} "Stand tall, chale. Stand tall."
+*{{AC|AstraRoundWon4.mp3}} "Haha, we just do that again! Cool-o!"
+
+=====While in the lead=====
+*{{AC|AstraLead1.mp3}} "This, is the continuation!"
+*{{AC|AstraLead2.mp3}} "We are above this. We are above this!"
+*{{AC|AstraLead3.mp3}} "Look down on them, my friends."
+*{{AC|AstraLead4.mp3}} "Hey, that was audacious!"
+
+=====Making a comeback=====
+*{{AC|AstraComeback1.mp3}} "Now again! We must repeat that, our progress demands it."
+*{{AC|AstraComeback2.mp3}} "Huh I'm being truthful, that was good! And needed!"
+*{{AC|AstraComeback3.mp3}} "Yes fam, yes! This is what we needed."
+
+===Last round in the half===
+====Attacking====
+*{{AC|AstraLastRound1.mp3}} "Gold is in our hearts. But empty your pockets, fools!"
+
+====Defending====
+*{{AC|AstraLastRound2.mp3}} "Equip yourselves-o. Money dey falaa, spend it!"
+**(''Money dey falaa'': There's a lot of money)
+
+===Match Point===
+*{{AC|AstraMatchPoint1.mp3}} "This is the final moment of destiny."
+*{{AC|AstraMatchPoint2.mp3}} "We saw the beginning, and the continuation. Now, the end."
+
+===Shop===
+====Let's Buy====
+*{{AC|AstraBuying1.mp3}}{{AC|AstraBuying2.mp3}} "I'm buying."
+
+====Let's Save====
+*{{AC|AstraSaving1.mp3}}{{AC|AstraSaving2.mp3}} "I'm saving."
+
+====I Have Extra Creds====
+*{{AC|AstraOffer1.mp3}}{{AC|AstraOffer2.mp3}} "I got money. Anyone need something?"
+
+====Requested====
+*{{AC|AstraRequest1.mp3}}{{AC|AstraRequest2.mp3}} "Need a drop."
+
+===Barrier Down===
+*{{AC|AstraBarrierDown1.mp3}} "Yawa that. New energy now, eh?"
+**(''Yawa'': Disgrace)
+*{{AC|AstraBarrierDown2.mp3}} "We must be better now."
+*{{AC|AstraBarrierDown3.mp3}} "Rise up and hold."
+*{{AC|AstraBarrierDown4.mp3}} "Chale, like, move from here."
+*{{AC|AstraBarrierDown5.mp3}} "Oh, eternity blesses us!"
+*{{AC|AstraBarrierDown6.mp3}} "Do not let yourselves fall!"
+*{{AC|AstraBarrierDown7.mp3}} "Push forward, chale!"
+*{{AC|AstraBarrierDown8.mp3}} "Next time is now, fam."
+*{{AC|AstraBarrierDown9.mp3}} "Flow with this energy!"
+*{{AC|AstraBarrierDown10.mp3}} "Show me your true selves!"
+*{{AC|AstraBarrierDown11.mp3}} "Alright, alright! Make we go, squad."
+**(''Make we go'': Let's go)
+*{{AC|AstraBarrierDown12.mp3}} "Be worthy, guys. Be worthy."
+*{{AC|AstraBarrierDown13.mp3}} "We are above them."
+*{{AC|AstraBarrierDown14.mp3}} "Let's make progress, my friends. Make progress."
+*{{AC|AstraBarrierDown15.mp3}} "This is your glory."
+*{{AC|AstraBarrierDown16.mp3}} "Rise and bring glory."
+*{{AC|AstraBarrierDown17.mp3}} "Woo! Let's start!"
+*{{AC|AstraBarrierDown18.mp3}} "I am with you. We are strong."
+
+==Spike==
+===Forgotten in spawn===
+*{{AC|AstraForgotSpike1.mp3}} "The spike, don't forget that!"
+*{{AC|AstraForgotSpike2.mp3}} "Don't forget the spike!"
+
+===Ally carrier down===
+*{{AC|AstraSpikeDown1.mp3}}{{AC|AstraSpikeDown2.mp3}} "Our spike's down."
+
+===Dropped===
+*{{AC|AstraSpikeDropped1.mp3}}{{AC|AstraSpikeDropped2.mp3}} "Spike dropped."
+
+===Retrieved===
+*{{AC|AstraSpikePickedUp1.mp3}}{{AC|AstraSpikePickedUp2.mp3}} "I have the spike."
+
+===Planted===
+*{{AC|AstraSpikePlanted1.mp3}}{{AC|AstraSpikePlanted2.mp3}} "Spike planted."
+
+===Spotted===
+*{{AC|AstraSpikeSpotted1.mp3}}{{AC|AstraSpikeSpotted2.mp3}} "I see the spike."
+*{{AC|AstraSpikeSpottedA1.mp3}}{{AC|AstraSpikeSpottedA2.mp3}} "Spike spotted A."
+*{{AC|AstraSpikeSpottedB1.mp3}}{{AC|AstraSpikeSpottedB2.mp3}} "Spike spotted B."
+*{{AC|AstraSpikeSpottedC1.mp3}}{{AC|AstraSpikeSpottedC2.mp3}} "Spike spotted C."
+*{{AC|AstraSpikeSpottedASpawn1.mp3}}{{AC|AstraSpikeSpottedASpawn2.mp3}} "Spike's in Attacker Spawn."
+*{{AC|AstraSpikeSpottedDSpawn1.mp3}}{{AC|AstraSpikeSpottedDSpawn2.mp3}} "Spike's in Defender Spawn."
+*{{AC|AstraSpikeSpottedMid1.mp3}}{{AC|AstraSpikeSpottedMid2.mp3}} "Spike spotted Mid."
+
+===Defuse resumed===
+*{{AC|AstraDefuseResumed1.mp3}} "These interruptions, mmm!"
+*{{AC|AstraDefuseResumed2.mp3}} "Okay, I'm still on it."
+
+===Defuse time running out===
+*{{AC|AstraDefuseLate1.mp3}} "Defusing! I hope."
+*{{AC|AstraDefuseLate2.mp3}} "Come now, come on, defuse, defuse."
+
+===Defuse successful===
+*{{AC|AstraDefuseComplete1.mp3}} "We defend this place-o, heh! We defend this reality!"
+*{{AC|AstraDefuseComplete2.mp3}} "Huh, ɛyɛ. It's good."
+
+==Kill==
+*{{AC|AstraKill1.mp3}} "Better luck next life!"
+*{{AC|AstraKill2.mp3}} "Mereko, bye bye!"
+**(''Mereko'': I'm going)
+*{{AC|AstraKill3.mp3}} "Kill am!"
+**(''Am'': Them)
+*{{AC|AstraKill4.mp3}} "Too easy, too easy!"
+*{{AC|AstraKill5.mp3}} "Enemy punished!"
+*{{AC|AstraKill6.mp3}} "Nice!"
+*{{AC|AstraKill7.mp3}} "Oh, come off!"
+*{{AC|AstraKill8.mp3}} "I take them out."
+*{{AC|AstraKill9.mp3}} "Aboa."
+**(Animal.)
+*{{AC|AstraKill10.mp3}} "Useless individual."
+*{{AC|AstraKill11.mp3}} "I killed 'em."
+*{{AC|AstraKill12.mp3}} "Just swag."
+*{{AC|AstraKill13.mp3}} "You dead!"
+*{{AC|AstraKill14.mp3}} "Akoa wei paa ara."
+**(Look at this dude.)
+
+===Headshot===
+*{{AC|AstraHeadshot1.mp3}} "Uh-uh, idiots!"
+*{{AC|AstraHeadshot2.mp3}} "Soul shots!"
+*{{AC|AstraHeadshot3.mp3}} "Boom! Haha!"
+*{{AC|AstraHeadshot4.mp3}} "I punish you."
+*{{AC|AstraHeadshot5.mp3}} "See this dead fool-o!"
+*{{AC|AstraHeadshot6.mp3}} "Mmhm, too stupid!"
+
+===[[Melee]]===
+*{{AC|AstraMeleeKill1.mp3}} "Look at my beauty."
+*{{AC|AstraMeleeKill2.mp3}} "No problem, no problem!"
+
+===Triple===
+*{{AC|AstraTriple1.mp3}}{{AC|AstraTriple2.mp3}} "Trinity, you're welcome!"
+
+===Quadra===
+*{{AC|AstraQuadra1.mp3}}{{AC|AstraQuadra2.mp3}} "Quadra!"
+
+===One kill remaining (game-mode specific)===
+*{{AC|AstraOneKillLeft1.mp3}}{{AC|AstraOneKillLeft2.mp3}} "One more!"
+
+==Round End==
+===Ace===
+*{{AC|AstraAce1.mp3}} "The barrel of the gun is always dark."
+
+===Clutch===
+*{{AC|AstraClutch1.mp3}} "Hey, people, come on now! I'm anticipating my congratulations!"
+*{{AC|AstraClutch2.mp3}} "Woohoohoo! I'm too sharp for them!"
+
+===Flawless or Team Ace===
+*{{AC|AstraFlawless1.mp3}} "Wo ntumi ntaake!"
+**(The enemies have no ability to attack!)
+*{{AC|AstraFlawless2.mp3}} "I myself know that was good! Walk majestically, my friends."
+*{{AC|AstraFlawless3.mp3}} "Ye-e-es, my fam, this is how you prove yourselves worthy!"
+*{{AC|AstraFlawless4.mp3}} "It was never in doubt. Yeah, my people-o, yeah!"
+
+===Thrifty===
+*{{AC|AstraThrifty1.mp3}} "Woo, I beg, try harder now!" ''*Astra laughs*''
+*{{AC|AstraThrifty2.mp3}} "It be so! Everyone brought knives!"
+
+===Last Kill===
+*{{AC|AstraLastKill1.mp3}} "And the enemy was punished."
+*{{AC|AstraLastKill2.mp3}} "Hah, I end them, feeli feeli!"
+**(''Feeli feeli'': See it with your own eyes)
+*{{AC|AstraLastKill3.mp3}} "This thing? Kwɛ, settled!"
+**(''Kwɛ'': See)
+*{{AC|AstraLastKill4.mp3}} "Oh, haha, I sent the punishments on them."
+*{{AC|AstraLastKill5.mp3}} "Chale, I face one, I kill 'em!"
+*{{AC|AstraLastKill6.mp3}} "No wahala, I end the trouble."
+**(''Wahala'': Trouble)
+
+====Enemy MVP====
+There are no voice lines at the moment in this section for this Agent.
+
+====Using [[Melee]]====
+*{{AC|AstraLastKillMelee1.mp3}} "Ha! My gift to you, and my lesson."
+
+===Low HP===
+*{{AC|AstraLowHP1.mp3}} "Woo, okay, woo, nice!"
+*{{AC|AstraLowHP2.mp3}} "Yes, that is it, my fam, woo."
+*{{AC|AstraLowHP3.mp3}} "Hey, too close! But close enough, eh?"
+
+==Match End==
+===Match Win===
+*{{AC|AstraMatchWin1.mp3}} "Aha, as I myself predicted."
+*{{AC|AstraMatchWin2.mp3}} "Haha, yes! This is progress, my friends."
+*{{AC|AstraMatchWin3.mp3}} "Of course we won! Chale, don't insult my personality."
+
+====[[Lotus]]====
+*{{AC|AstraMatchWinLotus.mp3}} "Don't mess with a Guardian on their home turf!"{{#tag:sup|{{patchv|6.0}}+}}
+
+===Runner-up (game-mode specific)===
+*{{AC|AstraRunnerUp1.mp3}} "Ɛbε yε yie, okay."
+**(''Ɛbε yε yie'': It'll be alright)
+*{{AC|AstraRunnerUp2.mp3}} "Not ashamed, not ashamed."
+*{{AC|AstraRunnerUp3.mp3}} "Ɛnyε hwee, okay."
+**(''Ɛnyε hwee'': Not a big deal)
+
+==Agent-specific interactions==
+{| class="wikitable sortable"
+!To Agent
+!Scenario
+!width=40%; class=unsortable|Ally
+!width=40%; class=unsortable|Enemy
+|-
+|rowspan=2|{{ai|Astra}}
+|Match Start
+|
+|{{AC|AstraEnemyAstraMatchStart.mp3}} "Hey, other Astra! If you know what I know, eh, then what are you doing? Yawa, come on, clear off!"{{#tag:sup|{{patchv|2.05}}+}}
+*(''Yawa'': Disgrace)
+|-
+|Kill
+|
+|{{AC|AstraEnemyAstraKill.mp3}} "I broke ya, mirror!"{{#tag:sup|{{patchv|2.05}}+}}
+|-
+|{{ai|Breach}}
+|Round Start
+|{{AC|AstraAllyBreachRoundStart.mp3}} "Breach, you don't respect what you should. All shiny buttons, no juju."
+*(''Juju'': Magic)
+|{{AC|AstraEnemyBreachRoundStart.mp3}} "What up with that Breach? Uh! See him, kill him."
+|-
+|rowspan=4|{{ai|Brimstone}}
+|Match Start
+|
+|{{AC|AstraEnemyBrimstoneMatchStart.mp3}} "This Brimstone's got a space satellite, eh? Ha. Let's stick that yankee down into the earth."
+|-
+|Round Start
+|
+|{{AC|AstraEnemyBrimstoneRoundStart.mp3}} "Okay, like, I'm done playing nice with old yankee boy."
+|-
+|Barrier Down
+|
+|{{AC|AstraEnemyBrimstoneBarrierDown.mp3}} "Take that boomer soldier boy out!"
+|-
+|Kill
+|
+|{{AC|AstraEnemyBrimstoneKill.mp3}} "Bye bye, boomer!"
+|-
+|rowspan=3|{{ai|Cypher}}
+|rowspan=2|Match Start
+|{{AC|AstraAllyCypherMatchStart.mp3}} "Why, Cypher, like, you think I don't see you. I know who you are, man!"
+|
+|-
+|{{AC|AstraAllyCypherMatchStart2.mp3}} "Cypher, your head is too hard. I like you but expand your personality, wai?"
+|
+|-
+|Barrier Down
+|{{AC|AstraAllyCypherBarrierDown.mp3}} "Okay, Morocco. Look alive."
+|
+|-
+|rowspan=2|{{ai|Fade}}
+|Commend
+|{{AC|AstraAllyFadeCommend.mp3}} "Fade, woah-ho! You are magical, girl!"{{#tag:sup|{{patchv|6.03}}+}}
+|
+|-
+|Round Start
+|
+|{{AC|AstraEnemyFadeRoundStart.mp3}} "This Fade's giving us nightmares. I got enough problems, chale, [TWI]."{{#tag:sup|{{patchv|6.03}}+}}
+|-
+|rowspan=6|{{ai|Harbor}}
+|Chat
+|
+:[[File:Astra icon.png|20px|link=Astra]] {{AC|AstraAllyHarborChat.mp3}} "Hey, water boy! You and me, let's show them how the scholars get it done."
+:[[File:Harbor icon.png|20px|link=Harbor]] {{AC|HarborAllyAstraChat.mp3}} "Hell yeah! As long as there's no test at the end."
+|
+|-
+|Match Start
+|{{AC|AstraAllyHarborMatchStart.mp3}} "Chale, if my hair gets wet you're in trouble, okay? Hey! I see that smile, water boy, don't even think it!"{{#tag:sup|{{patchv|6.03}}+}}
+|
+|-
+|Round Start
+|{{AC|AstraAllyHarborRoundStart.mp3}} "How's the bling-bling, water boy? The ancient jewelry shines on you, no lie!"{{#tag:sup|{{patchv|6.03}}+}}
+|
+|-
+|Commend
+|{{AC|AstraAllyHarborCommend.mp3}} "Water boy's making waves out there! Keep going, my guy!"{{#tag:sup|{{patchv|6.03}}+}}
+|
+|-
+|Barrier Down
+|{{AC|AstraAllyHarborBarrierDown.mp3}} "Wash them away, water boy."{{#tag:sup|{{patchv|6.03}}+}}
+|
+|-
+|Last Kill
+|
+|{{AC|AstraEnemyHarborLastKill.mp3}} "Why those relics chose this one, I never gon' know."{{#tag:sup|{{patchv|6.03}}+}}
+|-
+|{{ai|Jett}}
+|Kill
+|
+|{{AC|AstraEnemyJettKill.mp3}} "Daggers girl goes bye bye!"
+|-
+|rowspan=2|{{ai|KAYO}}
+|Match Start
+|
+|{{AC|AstraEnemyKAYOMatchStart.mp3}} "Their KAY/O's gonna mess with my power? Kwasia, robo boy's going down, that's a promise!"{{#tag:sup|{{patchv|6.03}}+}}
+*(''Kwasia'': Idiot)
+|-
+|Commend
+|{{AC|AstraAllyKAYOCommend.mp3}} "Okay, robo boy, I see you!"{{#tag:sup|{{patchv|6.03}}+}}
+|
+|-
+|rowspan=3|{{ai|Killjoy}}
+|Round Start
+|
+|{{AC|AstraEnemyKilljoyRoundStart.mp3}} "Let's make that Killjoy's toys look as dumb as her jacket, eh?"
+|-
+|rowspan=2|Commend
+|{{AC|AstraAllyKilljoyCommend.mp3}} "Killjoy-o! The industrious leaves a legacy!" ''*Astra laughs*''
+|
+|-
+|{{AC|AstraAllyKilljoyCommend2.mp3}} "Wassup, Killjoy? You and your little akokɔ crushed it!"
+*(''Akokɔ'': Chicken)
+|-
+|rowspan=2|{{ai|Neon}}
+|Chat
+|
+:[[File:Neon icon.png|20px|link=Neon]] {{AC|NeonAllyAstraChat.mp3}} "Oy Astra. How would I, hypothetically, go to other worlds, or whatever?"
+:[[File:Astra icon.png|20px|link=Astra]] {{AC|AstraAllyNeonChat.mp3}} ''*Astra chuckles*'' "That's my thing. That's my secret!"{{#tag:sup|{{patchv|6.03}}+}}
+|
+|-
+|Barrier Down
+|{{AC|AstraAllyNeonBarrierDown.mp3}} "Neon, let's fly!"{{#tag:sup|{{patchv|6.03}}+}}
+|
+|-
+|rowspan=5|{{ai|Omen}}
+|Match Start
+|
+|{{AC|AstraEnemyOmenMatchStart.mp3}} "Check that Omen, okay? Ghost boy's gonna try and sneak behind us, fam."
+|-
+|Round Start
+|
+|{{AC|AstraEnemyOmenRoundStart.mp3}} "We get eyes on that Omen, then we bury that thing!"
+|-
+|Barrier Down
+|
+|{{AC|AstraEnemyOmenBarrierDown.mp3}} "We got to bury that teleporting ghost!"
+|-
+|Commend
+|{{AC|AstraAllyOmenCommend.mp3}} "I'm not sure what you are, Omen, but you did well!"
+|
+|-
+|Kill
+|
+|{{AC|AstraEnemyOmenKill.mp3}} "Ghost boy, bye bye!"
+|-
+|rowspan=5|{{ai|Phoenix}}
+|rowspan=2|Match Start
+|{{AC|AstraAllyPhoenixMatchStart.mp3}} "Ah, chale from Babylon! You good? You good."
+|
+|-
+|{{AC|AstraAllyPhoenixMatchStart2.mp3}} "You dey bore me, Phoenix. A warrior is known by his deeds, not his mouth."
+*(''You dey bore me'': You're getting on my nerves)
+|
+|-
+|Round Start
+|{{AC|AstraAllyPhoenixRoundStart.mp3}} "Eh, Phoenix, chalk it to all this aggrandizement."
+|
+|-
+|Commend
+|{{AC|AstraAllyPhoenixCommend.mp3}} "Not bad, Phoenix. Hope for you yet."
+|
+|-
+|Barrier Down
+|{{AC|AstraAllyPhoenixBarrierDown.mp3}} "Simmer down, Babylon, follow me!"
+|
+|-
+|rowspan=4|{{ai|Raze}}
+|Match Start
+|{{AC|AstraAllyRazeMatchStart.mp3}} "Ayy, Raze, waddup my queen! Make we go show them how it's done, girl!"
+*(''Make we go'': Let's go)
+|
+|-
+|Round Start
+|{{AC|AstraAllyRazeRoundStart.mp3}} "Raze, I love your boom style, my girl!"
+|
+|-
+|Barrier Down
+|{{AC|AstraAllyRazeBarrierDown.mp3}} "Raze, it's time to get cray-cray, my girl!"
+|
+|-
+|Commend
+|{{AC|AstraAllyRazeCommend.mp3}} "Yeah, Raze! That's my girl's boom style!
+|
+|-
+|rowspan=4|{{ai|Reyna}}
+|Match Start
+|
+|{{AC|AstraEnemyReynaMatchStart.mp3}} "Waste that Reyna creature! End her!"
+|-
+|Round Start
+|{{AC|AstraAllyReynaRoundStart.mp3}} "Reyna, just stay in your lane, yawa girl."
+*(''Yawa'': Disgrace)
+|{{AC|AstraEnemyReynaRoundStart.mp3}} "Waste that Reyna, guys. Before she beast mode."
+|-
+|Barrier Down
+|
+|{{AC|AstraEnemyReynaBarrierDown.mp3}} "Let's take this Reyna down!"
+|-
+|Kill
+|
+|{{AC|AstraEnemyReynaKill.mp3}} "That creature is dead."
+|-
+|rowspan=2|{{ai|Sage}}
+|Barrier Down
+|{{AC|AstraAllySageBarrierDown.mp3}} "Stay safe, Sage. I got you."
+|{{AC|AstraEnemySageBarrierDown.mp3}} "Drop that mystic healer!"
+|-
+|Commend
+|{{AC|AstraAllySageCommend.mp3}} "Mad love, Sage. Come on, girl. That win's gotta be worth a smile!"
+|-
+|rowspan=5|{{ai|Viper}}
+|Match Start
+|{{AC|AstraAllyViperMatchStart.mp3}} "Ah, Viper, what's your problem, girl? Who caused you such rage?"
+|
+|-
+|Round Start
+|{{AC|AstraAllyViperRoundStart.mp3}} "I've told you, you are better than all this, Viper. Share your heart, eh?"
+|
+|-
+|Commend
+|{{AC|AstraAllyViperCommend.mp3}} "Woah, Viper, you are fierce, girl!"
+|
+|-
+|Barrier Down
+|{{AC|AstraAllyViperBarrierDown.mp3}} "Viper, don't get missing, girl!"
+|-
+|Kill
+|
+|{{AC|AstraEnemyViperKill.mp3}} "I dropped ya, Viper!"
+|}
+
+==Radio Commands==
+===Menu Index only===
+====Caution here====
+*{{AC|AstraCaution1.mp3}}{{AC|AstraCaution2.mp3}} "Enemy activity."
+
+====Going Area====
+*{{AC|AstraGoingA1.mp3}}{{AC|AstraGoingA2.mp3}} "Going A."
+*{{AC|AstraGoingB1.mp3}}{{AC|AstraGoingB2.mp3}} "Going B."
+*{{AC|AstraGoingC1.mp3}}{{AC|AstraGoingC2.mp3}} "Going C."
+*{{AC|AstraGoingMid1.mp3}}{{AC|AstraGoingMid2.mp3}} "Going Mid."
+
+====Need Support====
+*{{AC|AstraHelp1.mp3}}{{AC|AstraHelp2.mp3}}{{AC|AstraHelp3.mp3}} "Help!"
+
+====On my way====
+*{{AC|AstraOnMyWay1.mp3}}{{AC|AstraOnMyWay2.mp3}} "On my way."
+
+====Play for picks====
+*{{AC|AstraPlayForPicks1.mp3}}{{AC|AstraPlayForPicks2.mp3}} "Play for picks."
+
+===Wheel Index only===
+====Encourage====
+*{{AC|AstraEncouraging1.mp3}}{{AC|AstraEncouraging2.mp3}}{{AC|AstraEncouraging3.mp3}} "We've got this."
+
+====I'll lurk====
+Only as Attackers during Buy Phase.
+*{{AC|AstraLurking1.mp3}}{{AC|AstraLurking2.mp3}} "I'm lurking."
+
+====I'll push out====
+Only as Defenders during Buy Phase.
+*{{AC|AstraPushingOut1.mp3}}{{AC|AstraPushingOut2.mp3}} "I'm pushing out."
+
+====I'm holding position====
+Only as Defenders during Buy Phase.
+*{{AC|AstraHoldingPosition1.mp3}}{{AC|AstraHoldingPosition2.mp3}} "Holding position."
+
+====Let's Attack====
+Only during Round Phase.
+*{{AC|AstraLetsAttack1.mp3}}{{AC|AstraLetsAttack2.mp3}} "Let's attack."
+
+====Let's hold positions====
+Only as Defenders during Buy Phase.
+*{{AC|AstraHoldPositions1.mp3}}{{AC|AstraHoldPositions2.mp3}} "Let's hold positions."
+
+====Let's play slow====
+Only as Attackers at anytime.
+*{{AC|AstraPlaySlow1.mp3}}{{AC|AstraPlaySlow2.mp3}} "Let's play slow."
+
+====Let's push out====
+Only as Defenders during Buy Phase.
+*{{AC|AstraPushOut1.mp3}}{{AC|AstraPushOut2.mp3}} "Let's push out."
+
+====Let's spread out====
+*{{AC|AstraSpreadOut1.mp3}}{{AC|AstraSpreadOut2.mp3}} "Let's spread out."
+
+====Nice Try====
+*{{AC|AstraNiceTry1.mp3}}{{AC|AstraNiceTry2.mp3}}{{AC|AstraNiceTry3.mp3}} "Good try."
+
+====Stick together====
+*{{AC|AstraStickTogether1.mp3}}{{AC|AstraStickTogether2.mp3}} "Stick together."
+
+===Menu and Wheel Index===
+====Commend====
+*{{AC|AstraCommend1.mp3}}{{AC|AstraCommend2.mp3}}{{AC|AstraCommend3.mp3}} "Nice, nice!"
+*{{AC|AstraCommend4.mp3}}{{AC|AstraCommend5.mp3}} "Ɛyɛ, good!"
+*{{AC|AstraCommend6.mp3}} "Ayo, good!"
+
+====Fall Back====
+Menu Index at anytime, or Wheel Index only during Round Phase.
+*{{AC|AstraFallBack1.mp3}}{{AC|AstraFallBack2.mp3}} "Fall back!"
+
+====Hello====
+*{{AC|AstraHello1.mp3}}{{AC|AstraHello2.mp3}}{{AC|AstraHello3.mp3}} "Hello."
+*{{AC|AstraHello4.mp3}}{{AC|AstraHello5.mp3}}{{AC|AstraHello6.mp3}} "Agoo!"
+
+====I'll take point====
+Wheel Index only as Attackers during Buy Phase, or Menu Index at anytime regardless of Attackers or Defenders.
+*{{AC|AstraTakePoint1.mp3}}{{AC|AstraTakePoint2.mp3}} "I'm taking point."
+
+====Let's rush them (Radio Command)====
+*{{AC|AstraRush1.mp3}}{{AC|AstraRush2.mp3}} "Rush them."
+
+====Need healing====
+*{{AC|AstraHealing1.mp3}}{{AC|AstraHealing2.mp3}} "Need healing."
+
+====No====
+*{{AC|AstraNo1.mp3}}{{AC|AstraNo2.mp3}}{{AC|AstraNo3.mp3}} "Nah, nah."
+
+====Sorry====
+*{{AC|AstraSorry1.mp3}}{{AC|AstraSorry2.mp3}}{{AC|AstraSorry3.mp3}} "Sorry."
+
+====Thanks====
+*{{AC|AstraThanks1.mp3}}{{AC|AstraThanks2.mp3}}{{AC|AstraThanks3.mp3}} "Medaase, thanks!"
+
+====Ultimate Status====
+*{{AC|AstraUltDown1.mp3}}{{AC|AstraUltDown2.mp3}} "My ult's not ready."
+*{{AC|AstraUltAlmost1.mp3}}{{AC|AstraUltAlmost2.mp3}} "My ult's almost ready."
+*{{AC|AstraUltReady1.mp3}}{{AC|AstraUltReady2.mp3}} "My ult's ready."
+
+====Yes====
+*{{AC|AstraYes1.mp3}}{{AC|AstraYes2.mp3}}{{AC|AstraYes3.mp3}} "Got that."
+
+===Wheel Index requiring Minimap===
+For the following voicelines, the minimap must be open and then open ping wheel and activate strategy.
+====Faking====
+Only as Attackers during Buy Phase.
+*{{AC|AstraFaking1.mp3}}{{AC|AstraFaking2.mp3}} "I'm faking."
+*{{AC|AstraFakingA1.mp3}}{{AC|AstraFakingA2.mp3}} "I'm faking A."
+*{{AC|AstraFakingB1.mp3}}{{AC|AstraFakingB2.mp3}} "I'm faking B."
+*{{AC|AstraFakingC1.mp3}}{{AC|AstraFakingC2.mp3}} "I'm faking C."
+
+====I'm Going Here====
+As Defenders during Buy Phase, or as Attackers at anytime.
+*{{AC|AstraGoingA1.mp3}}{{AC|AstraGoingA2.mp3}} "Going A."
+*{{AC|AstraGoingB1.mp3}}{{AC|AstraGoingB2.mp3}} "Going B."
+*{{AC|AstraGoingC1.mp3}}{{AC|AstraGoingC2.mp3}} "Going C."
+*{{AC|AstraGoingMid1.mp3}}{{AC|AstraGoingMid2.mp3}} "Going Mid."
+
+====Let's Go Here====
+Only as Attackers during Buy Phase.
+*{{AC|AstraLetsGoA1.mp3}}{{AC|AstraLetsGoA2.mp3}} "Let's go A."
+*{{AC|AstraLetsGoB1.mp3}}{{AC|AstraLetsGoB2.mp3}} "Let's go B."
+*{{AC|AstraLetsGoC1.mp3}}{{AC|AstraLetsGoC2.mp3}} "Let's go C."
+*{{AC|AstraLetsGoHere1.mp3}}{{AC|AstraLetsGoHere2.mp3}} "Let's go here."
+
+====Let's rush them (Minimap)====
+Only as Attackers during Buy Phase.
+*{{AC|AstraLetsRush1.mp3}}{{AC|AstraLetsRush2.mp3}} "Let's rush them."
+*{{AC|AstraLetsRushA1.mp3}}{{AC|AstraLetsRushA2.mp3}} "Let's rush A."
+*{{AC|AstraLetsRushB1.mp3}}{{AC|AstraLetsRushB2.mp3}} "Let's rush B."
+*{{AC|AstraLetsRushC1.mp3}}{{AC|AstraLetsRushC2.mp3}} "Let's rush C."
+
+====Let's Sneak Here====
+Only as Attackers during Buy Phase.
+*{{AC|AstraSneakA1.mp3}}{{AC|AstraSneakA2.mp3}} "Let's sneak A."
+*{{AC|AstraSneakB1.mp3}}{{AC|AstraSneakB2.mp3}} "Let's sneak B."
+*{{AC|AstraSneakC1.mp3}}{{AC|AstraSneakC2.mp3}} "Let's sneak C."
+*{{AC|AstraSneakMid1.mp3}}{{AC|AstraSneakMid2.mp3}} "Let's sneak Mid."
+
+====Let's Stack Here====
+Only as Defenders during Buy Phase.
+*{{AC|AstraStack1.mp3}}{{AC|AstraStack2.mp3}} "Let's stack up."
+*{{AC|AstraStackA1.mp3}}{{AC|AstraStackA2.mp3}} "Let's stack A."
+*{{AC|AstraStackB1.mp3}}{{AC|AstraStackB2.mp3}} "Let's stack B."
+*{{AC|AstraStackC1.mp3}}{{AC|AstraStackC2.mp3}} "Let's stack C."
+*{{AC|AstraStackMid1.mp3}}{{AC|AstraStackMid2.mp3}} "Let's stack Mid."
+
+====Someone Go Here====
+As Attackers during Round Phase, or as Defenders at anytime.
+*{{AC|AstraNeedSomeoneA1.mp3}}{{AC|AstraNeedSomeoneA2.mp3}} "Someone go A."
+*{{AC|AstraNeedSomeoneB1.mp3}}{{AC|AstraNeedSomeoneB2.mp3}} "Someone go B."
+*{{AC|AstraNeedSomeoneC1.mp3}}{{AC|AstraNeedSomeoneC2.mp3}} "Someone go C."
+*{{AC|AstraNeedSomeoneMid1.mp3}}{{AC|AstraNeedSomeoneMid2.mp3}} "Someone go Mid."
+
+====Spike's here====
+Only as Defenders during Round Phase.
+*{{AC|AstraSpikeA1.mp3}}{{AC|AstraSpikeA2.mp3}} "Spike's A."
+*{{AC|AstraSpikeB1.mp3}}{{AC|AstraSpikeB2.mp3}} "Spike's B."
+*{{AC|AstraSpikeC1.mp3}}{{AC|AstraSpikeC2.mp3}} "Spike's C."
+*{{AC|AstraSpikeMid1.mp3}}{{AC|AstraSpikeMid2.mp3}} "Spike's Mid."
+*{{AC|AstraSpikeSpottedASpawn1.mp3}}{{AC|AstraSpikeSpottedASpawn2.mp3}} "Spike's in Attacker Spawn."
+*{{AC|AstraSpikeSpottedDSpawn1.mp3}}{{AC|AstraSpikeSpottedDSpawn2.mp3}} "Spike's in Defender Spawn."
+
+==Pings==
+===General===
+*{{AC|AstraPing1.mp3}}{{AC|AstraPing2.mp3}} "Right there."
+
+===Caution===
+*{{AC|AstraPingCaution1.mp3}}{{AC|AstraPingCaution2.mp3}} "Careful here."
+
+===Need support===
+*{{AC|AstraHelp1.mp3}}{{AC|AstraHelp2.mp3}}{{AC|AstraHelp3.mp3}} "Help!"
+
+===On my mark===
+*{{AC|AstraOnMyMark1.mp3}}{{AC|AstraOnMyMark2.mp3}} "On my mark."
+
+===Ping gun===
+*{{AC|AstraPingGun1.mp3}}{{AC|AstraPingGun2.mp3}} "Gun here."
+
+===Ping spike===
+*{{AC|AstraPingSpike1.mp3}}{{AC|AstraPingSpike2.mp3}} "Spike is here."
+
+===Ping for spike defuse===
+*{{AC|AstraDefuseSpike1.mp3}}{{AC|AstraDefuseSpike2.mp3}} "Defuse the spike!"
+
+===Ping for spike plant===
+*{{AC|AstraPlantSpike1.mp3}}{{AC|AstraPlantSpike2.mp3}} "Plant the spike!"
+
+===Watching===
+*{{AC|AstraWatching1.mp3}}{{AC|AstraWatching2.mp3}} "Watching here."
+
+==Other lines==
+===Ability unusable===
+====[[Status Effect#Suppress|Suppressed]]====
+*{{AC|AstraCantUse1.mp3}}{{AC|AstraCantUse2.mp3}} "I cannot use that."
+
+====On cooldown====
+*{{AC|AstraOnCooldown1.mp3}}{{AC|AstraOnCooldown2.mp3}} "Can't use that yet."
+
+====No charges====
+*{{AC|AstraNoCharges1.mp3}}{{AC|AstraNoCharges2.mp3}} "Out of the charges."
+
+===Enemy spotted===
+*{{AC|AstraEnemyA1.mp3}}{{AC|AstraEnemyA2.mp3}} "Enemy spotted A."
+*{{AC|AstraEnemyB1.mp3}}{{AC|AstraEnemyB2.mp3}} "Enemy spotted B."
+*{{AC|AstraEnemyC1.mp3}}{{AC|AstraEnemyC2.mp3}} "Enemy spotted C."
+*{{AC|AstraEnemyASpawn1.mp3}}{{AC|AstraEnemyASpawn2.mp3}} "Enemy in Attacker Spawn."
+*{{AC|AstraEnemyDSpawn1.mp3}}{{AC|AstraEnemyDSpawn2.mp3}} "Enemy in Defender Spawn."
+*{{AC|AstraEnemyMid1.mp3}}{{AC|AstraEnemyMid2.mp3}} "Enemy spotted Mid."
+
+====Multiple====
+*{{AC|AstraEnemiesA1.mp3}}{{AC|AstraEnemiesA2.mp3}} "Many enemies A!"
+*{{AC|AstraEnemiesB1.mp3}}{{AC|AstraEnemiesB2.mp3}} "Many enemies B!"
+*{{AC|AstraEnemiesC1.mp3}}{{AC|AstraEnemiesC2.mp3}} "Many enemies C!"
+*{{AC|AstraEnemiesASpawn1.mp3}}{{AC|AstraEnemiesASpawn2.mp3}} "Enemies in Attacker Spawn!"
+*{{AC|AstraEnemiesDSpawn1.mp3}}{{AC|AstraEnemiesDSpawn2.mp3}} "Enemies in Defender Spawn!"
+*{{AC|AstraEnemiesMid1.mp3}}{{AC|AstraEnemiesMid2.mp3}} "Many enemies Mid!"
+
+===Reloading===
+*{{AC|AstraReloading1.mp3}}{{AC|AstraReloading2.mp3}} "Reloading."
+
+===Healed===
+*{{AC|AstraRelief1.mp3}}{{AC|AstraRelief2.mp3}}{{AC|AstraRelief3.mp3}} ''*Astra sighs*''
+
+===Killed===
+*{{AC|AstraDeath1.mp3}}{{AC|AstraDeath2.mp3}}{{AC|AstraDeath3.mp3}} ''*Astra groans*''
+
+===Resurrected via {{abi text|Resurrection}}===
+*{{AC|AstraResurrect.mp3}} "My ancestors say wassup!" ''*Astra laughs*''
+
+===Wounded===
+====Light damage====
+*{{AC|AstraPainLight1.mp3}}{{AC|AstraPainLight2.mp3}}{{AC|AstraPainLight3.mp3}} ''*Astra groans*''
+
+====Medium damage====
+*{{AC|AstraPainMedium1.mp3}}{{AC|AstraPainMedium2.mp3}} ''*Astra groans*''
+*{{AC|AstraPainMedium3.mp3}} "Agyei!"
+
+====Heavy damage====
+*{{AC|AstraPainHeavy1.mp3}}{{AC|AstraPainHeavy2.mp3}}{{AC|AstraPainHeavy3.mp3}} ''*Astra groans*''
+
+====Fall damage====
+*{{AC|AstraPainFall1.mp3}}{{AC|AstraPainFall2.mp3}}{{AC|AstraPainFall3.mp3}} ''*Astra groans*''
+
+==Unused lines==
+===Match MVP===
+*{{AC|AstraMatchMVP1.mp3}} "MVP me-o! Was this a dream-o? Chale, give me pinch-o!" ''*Astra laughs*''
+
+===Need utility here===
+*{{AC|AstraNeedUtilityHere1.mp3}}{{AC|AstraNeedUtilityHere2.mp3}} "Need util here."
+
+==Removed lines==
+==={{abi text|Stars}}: Reminder to use stars===
+*{{AC|AstraAstralFormReminder1.mp3}} "I got enough time to go into the astral form."{{#tag:sup|-{{patchv|13.00}}}}
+*{{AC|AstraAstralFormReminder2.mp3}} "BYB, fam. Going to astral to do them astral guardian things I do."{{#tag:sup|-{{patchv|13.00}}}}
+*{{AC|AstraAstralFormReminder3.mp3}} "Should I place some stars in this reality?"{{#tag:sup|-{{patchv|13.00}}}}
+*{{AC|AstraAstralFormReminder4.mp3}} "I should place some astral stars in this reality."{{#tag:sup|-{{patchv|13.00}}}}
+*{{AC|AstraAstralFormReminder5.mp3}} "One second, peeps! I gotta visit the astral to place some stars."{{#tag:sup|-{{patchv|13.00}}}}
+*{{AC|AstraAstralFormReminder6.mp3}} "I should probably place some stars in the astral plane-o. I should-oo."{{#tag:sup|-{{patchv|13.00}}}}
+
+===Last Kill Enemy MVP===
+*{{AC|AstraLastKillMVP.mp3}} "I take lungulungu kill am, eh? My own style wey, I take kill am."{{#tag:sup|-{{patchv|13.00}}}}
+**(''Lungulungu'', meaning the paths taken on a journey)
+**(''Am'': Them)
+
+===Enemy {{Ai|Yoru}} Match Start===
+*{{AC|AstraEnemyYoruMatchStart.mp3}} "Where their Yoru skulks like a rat, I will float above like an eagle."{{#tag:sup|-{{patchv|4.07}}}}
+
+===Enemy spotted General===
+*{{AC|AstraEnemy1.mp3}}{{AC|AstraEnemy2.mp3}} "I see the enemy."
+
+===Multiple Enemies spotted General===
+*{{AC|AstraEnemies1.mp3}}{{AC|AstraEnemies2.mp3}} "Lots of enemies!"
+
+===Be Quiet===
+*{{AC|AstraBeQuiet1.mp3}}{{AC|AstraBeQuiet2.mp3}} "Stay quiet!"
+
+===Rotate===
+*{{AC|AstraRotating1.mp3}}{{AC|AstraRotating2.mp3}} "Rotating."
+
+===Let's Rotate===
+*{{AC|AstraLetsRotate1.mp3}}{{AC|AstraLetsRotate2.mp3}} "Let's rotate."
+
+===Affirmation===
+*{{AC|AstraAffirmation1.mp3}}{{AC|AstraAffirmation2.mp3}} "Okay."
+
+===Callouts===
+*{{AC|AstraCalloutA1.mp3}}{{AC|AstraCalloutA2.mp3}} "A."
+*{{AC|AstraCalloutB1.mp3}}{{AC|AstraCalloutB2.mp3}} "B."
+*{{AC|AstraCalloutC1.mp3}}{{AC|AstraCalloutC2.mp3}} "C."
+*{{AC|AstraCalloutMid1.mp3}}{{AC|AstraCalloutMid2.mp3}} "Mid."
+
+===Clear Area===
+*{{AC|AstraClearThisArea1.mp3}}{{AC|AstraClearThisArea2.mp3}} "Clear this area."
+
+===Hold===
+*{{AC|AstraHold1.mp3}}{{AC|AstraHold2.mp3}} "Hold up."
+
+===Push===
+*{{AC|AstraPush1.mp3}}{{AC|AstraPush2.mp3}} "Okay, push."
+
+===Regroup===
+*{{AC|AstraRegroup1.mp3}}{{AC|AstraRegroup2.mp3}} "Regroup."
+
+===Ping enemy utility===
+*{{AC|AstraPingUtility1.mp3}}{{AC|AstraPingUtility2.mp3}} "Enemy utility here."
+
+===Ping Go here===
+*{{AC|AstraGoHere1.mp3}}{{AC|AstraGoHere2.mp3}} "Let's go here."
+
+==[[Range/Lore|The Range's lore assets]]==
+===[[Range/Lore/EP5|Episode 5]]===
+*{{AC|VoicemailBrimstone30.mp3}} "[[Fade]] says you spoke to [[REALM]]. So this guy's a man on the run, a thief? Huh. The universe never makes it easy! And now these REALM people wanna shut you out, huh?! "Stay out of our business", they said that, as if they gonna tell you what to do. I like making friends, but not this time! We gotta find this fugitive before they do. We wanna know what [[VALORANT Legion|Legion]] is up to, he's the key!"
+*{{AC|file=Research Wing Recording Complete.mp3}} ''(For the entire transcription between Astra and [[Harbor]], see [[Range/Lore/EP5#Cypher's_Office_2|Range/Lore/EP5 → v5.08 → Cypher's Office]].)''
+*{{AC|file=VoicemailBrimstone35.mp3}} "[[Brimstone]], I didn't know before, but now I'm sure. This is the one, it has to be! Every mention of the artifact is a match! And if this runaway can use it? Game changer! So we must hurry, chale. Our water boy is out of time. [[REALM]] is too close, they're gonna get him! They cannot. It has to be us!"
+*{{AC|file=VoicemailBrimstone40.mp3}} "Brimstone, can you hear this? Hope so, sending comms from the other side is not easy. We made it out of [[Pearl|Portugal]] but they are on us! These [[Atlas]] fools are all over the place. We split up, I drew them away from [[Skye]] and [[Harbor|Water Boy]], we'll work through Europe, then regroup. No sign of [[Legion]] yet, could be very good or very bad. But we'll make it, I promise you! Just wish us luck, okay? Okay."
+*{{AC|file=Skye Audio Log Omega Mission Complete.mp3}} ''(For the entire transcription between Astra, [[Harbor]], [[Skye]] and Atlas troops, see [[Range/Lore/EP5#Cypher's_Office_4|Range/Lore/EP5 → v5.12 → Cypher's Office]].)''
+
+===[[Range/Lore/EP7|Episode 7]]===
+*{{AC|file=VoicemailBrimstone62.mp3}} "Boss. Where are you? Come on now, the food's ready and the fam's all here! You know they're not going to wait for you and they're not gonna save you a plate. Team potluck dinner and you're the last one I gotta track down, are you serious?! The world won't die tonight. So, put down those reports and move!"
+
+===[[Range/Lore/EP8|Episode 8]]===
+*{{AC|file=VoicemailBrimstone79.mp3}} "Hey boss, I spoke with our [[Clove|new friend]]. Wanted to know more about, uh, where they go when their soul takes a break. Nothing like the [[Astral Form|astral plane-o]]. I checked our database and got my small collection of [[Guardians|Guardian]] records there. As far as I can tell, immortality is not rare in [[radiants]], it is unprecedented! Hm. They worry me. That their power, it's a blessing now, but later? Chale... I'm not so sure."
+*{{AC|file=VoicemailBrimstone82.mp3}} ''(This voicemail was left by both Harbor and Astra at the same time.)''
+**[[File:Harbor icon.png|25px|link=Harbor]]: "Brimstone, Astra and I are over at the α-[[Lotus]] site, or should I say what's left of it. We wanted to come back and see if there was any pertinent information here now that we know a little about this [[Scions of Hourglass]] group. Suffice to say, while the [[Omega]] site is still bristling with [[radianite]] signatures, this place has been scrubbed clean. We've also been- oh-... yeah yeah yeah... one moment..."
+**[[File:Astra icon.png|25px|link=Astra]]: "Hey, Water Boy! Hand me the phone! Brim, Harbor gave you the deets, hm? Look, Hourglass kills scientists instead of kidnapping them and they tried to leave no witnesses to that journal, huh? And now this with the Nexus?! This is about erasing information, keeping it from the public! That place the journal describes? It will show us how deep this goes! Of this I am certain!"
+
+==Notes==
+:''To easily see which quotes were added corresponding to the patch, use your browser's Find function and type the patch number (e.g. v6.03).
+*{{ui|Removed}} 7 voice lines removed from patch {{patchv|13.00}}, documented in the patch notes.
+*{{ui|Added}} 15 voice lines added from patch {{patchv|6.03}}, undocumented in the patch notes.
+*{{ui|Added}} 1 voice line added from patch {{patchv|6.02}}, undocumented in the patch notes.
+*{{ui|Added}} 2 voice lines added from patch {{patchv|6.0}}, undocumented in the patch notes.
+*{{ui|Added}} 2 voice lines added from patch {{patchv|2.05}}, undocumented in the patch notes.
+*{{ui|Removed}} 1 voice line [[#Removed lines|removed]] from patch {{patchv|4.07}}, undocumented in the patch notes.
+*Additional radio commands added in patch {{patchv|8.11}} are not mentioned in this page.
+*Other voice lines removed were at an unknown timeframe.
+
+==Navigation==
+{{Navbox agents}}
+[[Category:Quotes]]

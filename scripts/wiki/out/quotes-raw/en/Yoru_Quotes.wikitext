@@ -1,0 +1,895 @@
+{{TOCright}}
+This is a '''list of quotes by {{ai|Yoru}}'''. Yoru is voiced by Daisuke Takahashi in English. Necessary quotes are translated from Japanese to English. Yoru has a total of {{PAGESINCATEGORY:Yoru Quotes}} files of quotes including unused and removed lines, and excluding [[#The Range's lore assets|The Range's lore assets]].
+
+A downloadable folder containing all the audio files on this page can be found [https://drive.google.com/drive/folders/1BP8R9X4rqkmuG3DbF2HiTkYE5jqXSeZz?usp=sharing here].
+
+==Agent Selected/Unlocked==
+*{{AC|YoruPick.mp3}} "I'll fight anybody. I'll fight everybody."
+
+==Abilities==
+==={{abi text|Fakeout}}===
+====Cast====
+*{{AC|YoruFakeoutCast1.mp3}}{{AC|YoruFakeoutCast2.mp3}} "Decoy."
+
+==={{abi text|Blindside}}===
+====Cast====
+*{{AC|YoruBlindsideCast1.mp3}}{{AC|YoruBlindsideCast2.mp3}}{{AC|YoruBlindsideCast3.mp3}} ''*Yoru grunts*''
+
+====Kill afflicted enemy====
+*{{AC|YoruBlindsideKill1.mp3}}{{AC|YoruBlindsideKill2.mp3}} "Too easy."
+*{{AC|YoruBlindsideKill3.mp3}}{{AC|YoruBlindsideKill4.mp3}} "No chance."
+
+==={{abi text|Gatecrash}}===
+====Cast====
+*{{AC|YoruGatecrashCast1.mp3}}{{AC|YoruGatecrashCast2.mp3}} "Time to jump."
+*{{AC|YoruGatecrashCast3.mp3}}{{AC|YoruGatecrashCast4.mp3}} "Cutting through."
+
+====Cast Stationary====
+*{{AC|YoruGatecrashCastStationary1.mp3}}{{AC|YoruGatecrashCastStationary2.mp3}} "Back soon."
+*{{AC|YoruGatecrashCastStationary3.mp3}}{{AC|YoruGatecrashCastStationary4.mp3}} "I'll return."
+
+====Fake Teleport====
+*{{AC|YoruGatecrashFake1.mp3}}{{AC|YoruGatecrashFake2.mp3}} "Fake teleport."
+
+====Teleport====
+*{{AC|YoruGatecrashActivate1.mp3}}{{AC|YoruGatecrashActivate2.mp3}}{{AC|YoruGatecrashActivate3.mp3}} ''Yoru grunts''
+
+====Kill after teleporting====
+*{{AC|YoruGatecrashKill1.mp3}}{{AC|YoruGatecrashKill2.mp3}} "Surprise."
+*{{AC|YoruGatecrashKill3.mp3}}{{AC|YoruGatecrashKill4.mp3}} "Over here."
+
+====Destroyed====
+*{{AC|YoruGatecrashDestroyed1.mp3}}{{AC|YoruGatecrashDestroyed2.mp3}} "My portal broke."
+
+====Timeout====
+*{{AC|YoruGatecrashTimeout1.mp3}}{{AC|YoruGatecrashTimeout2.mp3}} "Portal closed."
+
+==={{abi text|Dimensional Drift}}===
+====Ally Cast====
+*{{AC|YoruUltAllyCast.mp3}} "I'll handle this!"
+
+====Enemy Cast====
+*{{AC|YoruUltEnemyCast.mp3}} "Who's next?"
+
+====Exit====
+*{{AC|YoruUltExit1.mp3}} "I'm back."
+*{{AC|YoruUltExit2.mp3}} "I'm back."
+
+====Kill after exiting====
+*{{AC|YoruUltKill1.mp3}} "Miss me?"
+*{{AC|YoruUltKill2.mp3}} "I'm right here."
+*{{AC|YoruUltKill3.mp3}} "Looking for me?"
+
+==Buy Phase==
+===Match Start===
+*{{AC|YoruMatchStart1.mp3}} "Should I shoot them in the face, or stab them in the back? I'll decide later."
+*{{AC|YoruMatchStart2.mp3}} "So much fuss over nothing. Someone get me a bat, I'll finish this."
+*{{AC|YoruMatchStart3.mp3}} "It's easiest if I sneak in and kill everyone. Don't make this complicated."
+*{{AC|YoruMatchStart4.mp3}} "You're all obsessed with teamwork, so I'll try it. But just this once."
+*{{AC|YoruMatchStart5.mp3}} "Five enemies. Five for me, none for anyone else."
+*{{AC|YoruMatchStart6.mp3}} "A bunch of ざこ want to fight us. They must really want to die."
+**(''ざこ/雑魚'': Minnows, in context meaning: insignificant people)
+*{{AC|YoruMatchStart7.mp3}} "These guys caught me in a mood. Bad luck for them."
+
+====Attacking====
+*{{AC|YoruMatchStartAttack1.mp3}} "Five defenders?! Double that, then we'll call it fair!"
+
+====Defending====
+*{{AC|YoruMatchStartDefense1.mp3}} "If they keep stealing our radianite, I'll have to take it personally."
+
+====[[Icebox]]====
+*{{AC|YoruMatchStartIcebox.mp3}} "There are more answers here. I just have to find them."
+
+====[[Pearl]]====
+*{{AC|YoruMatchStartPearl.mp3}} "An underwater city. Great."
+
+====[[Split]]====
+*{{AC|YoruMatchStartSplit.mp3}} "This neighborhood used to be so much better without this Kingdom shit."
+
+===Round Start===
+*{{AC|YoruRoundStart1.mp3}} "Never show weakness. Ever."
+*{{AC|YoruRoundStart2.mp3}} "Pick something nice to kill them with. it's the least we can do."
+*{{AC|YoruRoundStart3.mp3}} "I don't care if there are five of them or fifty of them. Let's go!"
+*{{AC|YoruRoundStart4.mp3}} "The dimensional fabric here is thin. I'll tear through."
+*{{AC|YoruRoundStart5.mp3}} "ざこ better watch their backs."
+**(''ざこ/雑魚'': Minnows, in context meaning: insignificant people)
+*{{AC|YoruRoundStart6.mp3}} "Don't stop fighting. You must keep going, even if you are the only one."
+*{{AC|YoruRoundStart8.mp3}} "I'll pick them apart. You clean up whatever's left."
+*{{AC|YoruRoundStart10.mp3}} "Move in after I strike. That's when they're weak."
+
+====Last round won====
+*{{AC|YoruRoundWon1.mp3}} "They forgot who they're dealing with."
+*{{AC|YoruRoundWon2.mp3}} "That wasn't terrible."
+*{{AC|YoruRoundWon3.mp3}} "Keep after them!"
+*{{AC|YoruRoundWon4.mp3}} "I like you guys a lot better when we don't lose."
+
+=====While in the lead=====
+*{{AC|YoruLead1.mp3}} "They must have a death wish or something."
+*{{AC|YoruLead2.mp3}} "They should give up now, save us the effort."
+*{{AC|YoruLead3.mp3}} "How did every piece of trash end up on the same team?"
+
+=====Making a comeback=====
+*{{AC|YoruComeback1.mp3}} "That's it. Keep going!"
+*{{AC|YoruComeback2.mp3}} "This isn't over!"
+*{{AC|YoruComeback3.mp3}} "Hm, their luck ran out."
+
+===Last round in the half===
+====Attacking====
+*{{AC|YoruLastRound1.mp3}} "Spend your money now. There's no bank in hell."
+
+====Defending====
+*{{AC|YoruLastRound2.mp3}} "Spend your money now. There's no bank in hell."
+
+===Match Point===
+*{{AC|YoruMatchPoint1.mp3}} "Let's end this."
+*{{AC|YoruMatchPoint2.mp3}} "Let's clean up. We're done here."
+
+===Shop===
+====Let's Buy====
+*{{AC|YoruBuying1.mp3}}{{AC|YoruBuying2.mp3}} "I'm buying."
+
+====Let's Save====
+*{{AC|YoruSaving1.mp3}}{{AC|YoruSaving2.mp3}} "I'm saving."
+
+====I Have Extra Creds====
+*{{AC|YoruOffer1.mp3}}{{AC|YoruOffer2.mp3}} "I can buy for you. What do you want?"
+
+====Requested====
+*{{AC|YoruRequest1.mp3}}{{AC|YoruRequest2.mp3}} "I need a drop."
+
+===Barrier Down===
+*{{AC|YoruBarrierDown1.mp3}} "They want more of me? Fine."
+*{{AC|YoruBarrierDown2.mp3}} "I'll turn this around."
+*{{AC|YoruBarrierDown3.mp3}} "You all have guns. Now use them!"
+*{{AC|YoruBarrierDown4.mp3}} "Get them out of here."
+*{{AC|YoruBarrierDown5.mp3}} "I'm afraid this might get rough."
+*{{AC|YoruBarrierDown6.mp3}} "Don't let them get up."
+*{{AC|YoruBarrierDown7.mp3}} "They're tough. おもしれぇ."
+**(''おもしれぇ'': Interesting)
+*{{AC|YoruBarrierDown8.mp3}} "No more games."
+*{{AC|YoruBarrierDown9.mp3}} "Keep hitting them."
+*{{AC|YoruBarrierDown10.mp3}} "Give them nothing!"
+*{{AC|YoruBarrierDown11.mp3}} "Just try and get past me."
+*{{AC|YoruBarrierDown12.mp3}} "Now they've pissed me off!"
+*{{AC|YoruBarrierDown13.mp3}} "Jump 'em!"
+*{{AC|YoruBarrierDown14.mp3}} "I'll cut through."
+*{{AC|YoruBarrierDown15.mp3}} "Try not to die."
+*{{AC|YoruBarrierDown16.mp3}} "Hit them when they're not looking."
+*{{AC|YoruBarrierDown17.mp3}} "Time to fight back."{{#tag:sup|{{patchv|12.06}}+}}
+
+==Spike==
+===Forgotten in spawn===
+*{{AC|YoruForgotSpike1.mp3}} "Anyone gonna get the spike?"
+*{{AC|YoruForgotSpike2.mp3}} "Hey! You forgot the spike!"
+
+===Ally carrier down===
+*{{AC|YoruSpikeDown1.mp3}}{{AC|YoruSpikeDown2.mp3}} "Our spike carrier is dead."
+
+===Dropped===
+*{{AC|YoruSpikeDropped1.mp3}}{{AC|YoruSpikeDropped2.mp3}} "Spike dropped."
+
+===Retrieved===
+*{{AC|YoruSpikePickedUp1.mp3}}{{AC|YoruSpikePickedUp2.mp3}} "I got the spike."
+
+===Planted===
+*{{AC|YoruSpikePlanted1.mp3}}{{AC|YoruSpikePlanted2.mp3}} "Spike planted."
+
+===Spotted===
+*{{AC|YoruSpikeSpottedA1.mp3}}{{AC|YoruSpikeSpottedA2.mp3}} "Spike is A."
+*{{AC|YoruSpikeSpottedB1.mp3}}{{AC|YoruSpikeSpottedB2.mp3}} "Spike is B."
+*{{AC|YoruSpikeSpottedC1.mp3}}{{AC|YoruSpikeSpottedC2.mp3}} "Spike is C."
+*{{AC|YoruSpikeSpottedASpawn1.mp3}}{{AC|YoruSpikeSpottedASpawn2.mp3}} "Spike's Attacker Spawn."
+*{{AC|YoruSpikeSpottedDSpawn1.mp3}}{{AC|YoruSpikeSpottedDSpawn2.mp3}} "Spike's Defender Spawn."
+*{{AC|YoruSpikeSpottedMid1.mp3}}{{AC|YoruSpikeSpottedMid2.mp3}} "Spike is Mid."
+
+===Defuse resumed===
+*{{AC|YoruDefuseResumed1.mp3}}{{AC|YoruDefuseResumed2.mp3}} "Stop trying."
+
+===Defuse time running out===
+*{{AC|YoruDefuseLate1.mp3}}{{AC|YoruDefuseLate2.mp3}} "くそ!"
+**(Shit!)
+
+===Defuse successful===
+*{{AC|YoruDefuseComplete1.mp3}} "Good try, idiots."
+
+==Kill==
+*{{AC|YoruKill1.mp3}} "Anyone else?"
+*{{AC|YoruKill2.mp3}} "Die."
+*{{AC|YoruKill3.mp3}} "Don't get up."
+*{{AC|YoruKill4.mp3}} "Dead!"
+*{{AC|YoruKill5.mp3}} "Idiot!"
+*{{AC|YoruKill6.mp3}} "Bad luck."
+*{{AC|YoruKill7.mp3}} "Killed them."
+*{{AC|YoruKill8.mp3}} "Lights out."
+*{{AC|YoruKill9.mp3}} "Back off."
+*{{AC|YoruKill10.mp3}} "You're done."
+
+===Headshot===
+*{{AC|YoruHeadshot1.mp3}} "うるせえんだよ."
+**(Annoying.)
+*{{AC|YoruHeadshot2.mp3}} "くたばってろ."
+**(Drop dead!)
+*{{AC|YoruHeadshot3.mp3}} "Ouch!"
+*{{AC|YoruHeadshot4.mp3}} "Don't mess with me."
+*{{AC|YoruHeadshot5.mp3}} "Headshot."
+*{{AC|YoruHeadshot6.mp3}} "ざこが."
+**(This minnow.)
+
+===[[Melee]]===
+*{{AC|YoruMeleeKill1.mp3}} "Pathetic."
+*{{AC|YoruMeleeKill2.mp3}} "Get out of my way!"
+
+===Triple===
+*{{AC|YoruTriple1.mp3}}{{AC|YoruTriple2.mp3}} "Three."
+
+===Quadra===
+*{{AC|YoruQuadra1.mp3}}{{AC|YoruQuadra2.mp3}} "Four."
+
+===One kill remaining (game-mode specific)===
+*{{AC|YoruOneKillLeft1.mp3}}{{AC|YoruOneKillLeft2.mp3}} "One left."
+
+==Round End==
+===Ace===
+*{{AC|YoruAce1.mp3}} "Send five more, we can do this again!"
+
+===Clutch===
+*{{AC|YoruClutch1.mp3}} "Anyone else think they can kill a god?"
+*{{AC|YoruClutch2.mp3}} "So I saved the day. Don't make a big deal about it."
+
+===Flawless or Team Ace===
+*{{AC|YoruFlawless1.mp3}} "Well they sucked."
+*{{AC|YoruFlawless2.mp3}} "Thanks for helping me take out the trash."
+
+===Thrifty===
+*{{AC|YoruThrifty1.mp3}} "If you're gonna buy a gun, then shoot me."
+
+===Last Kill===
+*{{AC|YoruLastKill1.mp3}} "Your biggest mistake was that you pissed me off."
+*{{AC|YoruLastKill2.mp3}} "It's my Earth. Now get out!"
+*{{AC|YoruLastKill3.mp3}} "Dead is a good look for you."
+*{{AC|YoruLastKill4.mp3}} "You died last. Good job."
+*{{AC|YoruLastKill5.mp3}} "Sorry. This world's taken."
+
+====Enemy MVP====
+There are no voice lines at the moment in this section for this Agent.
+
+====Using [[Melee]]====
+*{{AC|YoruLastKillMelee1.mp3}} "Wow. You really suck."
+
+===Low HP===
+*{{AC|YoruLowHP1.mp3}} "Dying is for other people."
+
+==Match End==
+===Match Win===
+*{{AC|YoruMatchWin1.mp3}} "Call me when the world ends again. I'd hate to miss it."
+*{{AC|YoruMatchWin2.mp3}} "I'm leaving now. See you at the next apocalypse."
+*{{AC|YoruMatchWin3.mp3}} "I'm done here."
+
+====[[Icebox]]====
+*{{AC|YoruMatchWinIcebox.mp3}} "Who were you, ancestor? Where the hell did you go?!"
+
+===Runner-up (game-mode specific)===
+*{{AC|YoruRunnerUp1.mp3}} "Fine for now."
+*{{AC|YoruRunnerUp2.mp3}} "Huh, not bad."
+*{{AC|YoruRunnerUp3.mp3}} "I'll show off next time."
+
+==Agent-specific interactions==
+{| class="wikitable sortable"
+!To Agent
+!Scenario
+!width=40%; class=unsortable|Ally
+!width=40%; class=unsortable|Enemy
+|-
+|{{Ai|Astra}}
+|Round Start
+|{{AC|YoruAllyAstraRoundStart.mp3}} "Astra, send the enemies towards me. I'm ready!"
+|
+|-
+|rowspan=5|{{Ai|Breach}}
+|Match Start
+|{{AC|YoruAllyBreachMatchStart.mp3}} "Breach, you keep staring at my hair. If you want tips, just ask."{{#tag:sup|{{patchv|12.06}}+}}
+|{{AC|YoruEnemyBreachMatchStart.mp3}} "I already hear that Breach running his mouth. Don't tell me you'll punch me, just punch me!"
+|-
+|Commend
+|{{AC|YoruAllyBreachCommend.mp3}} "It's impressive what Breach can do when he shuts up for a second."
+|
+|-
+|Barrier Down
+|{{AC|YoruAllyBreachBarrierDown.mp3}} "I'm ready Breach. Let's break things!"{{#tag:sup|{{patchv|12.06}}+}}
+|
+|-
+|Kill
+|
+|{{AC|YoruEnemyBreachKill.mp3}} "Shut up!"
+|-
+|Last Kill
+|
+|{{AC|YoruEnemyBreachLastKill.mp3}} "Have fun in hell!"
+|-
+|rowspan=4|{{Ai|Brimstone}}
+|Chat
+|
+:[[File:Yoru icon.png|20px|link=Yoru]] {{AC|YoruAllyBrimstoneChat.mp3}} "Brimstone, when we're done here, let's grab our bikes."
+:[[File:Brimstone icon.png|20px|link=Brimstone]] {{AC|BrimstoneAllyYoruChat.mp3}} "I like the way you think. We're overdue for a ride, aren't we?"
+|
+|-
+|Round Start
+|
+|{{AC|YoruEnemyBrimstoneRoundStart.mp3}} "Who let that old man out of the nursing home?"
+|-
+|Barrier Down
+|
+|{{AC|YoruEnemyBrimstoneBarrierDown.mp3}} "Help that old man find his grave."
+|-
+|Kill
+|
+|{{AC|YoruEnemyBrimstoneKill.mp3}} "Brimstone's dead."
+|-
+|rowspan=2|{{Ai|Chamber}}
+|Match Start
+|
+|{{AC|YoruEnemyChamberMatchStart.mp3}} "Huh, they dragged Chamber out of his corner office. I can smell his cologne from here."
+|-
+|Barrier Down
+|{{AC|YoruAllyChamberBarrierDown.mp3}} "Chamber, back me up."
+|
+|-
+|rowspan=3|{{Ai|Cypher}}
+|Round Start
+|
+|{{AC|YoruEnemyCypherRoundStart.mp3}} "That Cypher thinks he sees everything. I go invisible, idiot! Come get me!"
+|-
+|Barrier Down
+|
+|{{AC|YoruEnemyCypherBarrierDown.mp3}} "That Cypher is a dead man."
+|-
+|Kill
+|
+|{{AC|YoruEnemyCypherKill.mp3}} "Killed their Cypher."
+|-
+|rowspan=2|{{Ai|Jett}}
+|Match Start
+|{{AC|YoruAllyJettMatchStart.mp3}} "What brand are your knives, Jett? They're not 'Mammoth'. 'Segreto', maybe? I need one for my collection."
+|
+|-
+|Commend
+|{{AC|YoruAllyJettCommend.mp3}} "You made them look like idiots, Jett. You should do that again."
+|
+|-
+|rowspan=2|{{Ai|KAYO}}
+|Round Start
+|
+|{{AC|YoruEnemyKAYORoundStart.mp3}} "Their KAY/O kills radiants, huh? We'll see."
+|-
+|Commend
+|{{AC|YoruAllyKAYOCommend.mp3}} "KAY/O, I'm impressed!"
+|
+|-
+|rowspan=4|{{Ai|Killjoy}}
+|Match Start
+|
+|{{AC|YoruEnemyKilljoyMatchStart.mp3}} "There's a Killjoy and her bots. So annoying."
+|-
+|Round Start
+|
+|{{AC|YoruEnemyKilljoyRoundStart.mp3}} "That Killjoy's tech is everywhere! We're not at a science fair, get rid of that shit!"
+|-
+|Commend
+|{{AC|YoruAllyKilljoyCommend.mp3}} "It seems your science shit has some use after all, Killjoy."
+|
+|-
+|Last Kill
+|
+|{{AC|YoruEnemyKilljoyLastKill.mp3}} "Class dismissed."
+|-
+|rowspan=3|{{Ai|Neon}}
+|Round Start
+|{{AC|YoruAllyNeonRoundStart.mp3}} "Stick with me Neon, we'll run circles around them."
+|
+|-
+|Barrier Down
+|
+|{{AC|YoruEnemyNeonBarrierDown.mp3}} "Don't let their Neon get around you."
+|-
+|Last Kill
+|
+|{{AC|YoruEnemyNeonLastKill.mp3}} "Rest well, Neon. See you in another life."
+|-
+|rowspan=4|{{Ai|Omen}}
+|Match Start
+|
+|{{AC|YoruEnemyOmenMatchStart.mp3}} "The enemy Omen's like me. He'll try to get behind us. Watch your backs."
+|-
+|Round Start
+|{{AC|YoruAllyOmenRoundStart.mp3}} "Omen, let's teleport and spook those guys."
+|
+|-
+|Commend
+|{{AC|YoruAllyOmenCommend.mp3}} "That was good, Omen. Smile."
+|
+|-
+|Barrier Down
+|{{AC|YoruAllyOmenBarrierDown.mp3}} "Omen, let's flank them."
+|
+|-
+|rowspan=5|{{Ai|Phoenix}}
+|Chat
+|
+:[[File:Phoenix icon.png|20px|link=Phoenix]] {{AC|PhoenixAllyYoruChat.mp3}} "Okay Yoru, right here, right now. We'll see who's the better shot."
+:[[File:Yoru icon.png|20px|link=Yoru]] {{AC|YoruAllyPhoenixChat.mp3}} "Fine, but I'll keep score."
+|
+|-
+|Round Start
+|{{AC|YoruAllyPhoenixRoundStart.mp3}} "Phoenix! Don't get blood on that jacket."
+|{{AC|YoruEnemyPhoenixRoundStart.mp3}} "That Phoenix won't be smiling when I'm done with him."
+|-
+|Commend
+|{{AC|YoruAllyPhoenixCommend.mp3}} "Don't look so smug, Phoenix!"
+|
+|-
+|Kill
+|
+|{{AC|YoruEnemyPhoenixKill.mp3}} "Embarrassing."
+|-
+|Last Kill
+|
+|{{AC|YoruEnemyPhoenixLastKill.mp3}} "Show's over."
+|-
+|{{Ai|Raze}}
+|Match Start
+|{{AC|YoruAllyRazeMatchStart.mp3}} "Raze, remember this is a covert mission. At least try not to give us away."
+|
+|-
+|rowspan=4|{{Ai|Reyna}}
+|Match Start
+|{{AC|YoruAllyReynaMatchStart.mp3}} "You're here to take my kills, Reyna? Let's make it a competition."
+|
+|-
+|Round Start
+|{{AC|YoruAllyReynaRoundStart.mp3}} "Reyna, I'll take one side if you take the other. They'll be dead in five seconds."
+|
+|-
+|Commend
+|{{AC|YoruAllyReynaCommend.mp3}} "Nice, Reyna. I don't know why the rest of us are even here."
+|
+|-
+|Barrier Down
+|{{AC|YoruAllyReynaBarrierDown.mp3}} "Reyna, with me."
+|
+|-
+|rowspan=2|{{Ai|Sage}}
+|Match Start
+|
+|{{AC|YoruEnemySageMatchStart.mp3}} "Why did they bring Sage? Now they have to die twice. Idiots."
+|-
+|Last Kill
+|
+|{{AC|YoruEnemySageLastKill.mp3}} "Viper sends her regards."{{#tag:sup|{{patchv|12.06}}+}}
+|-
+|rowspan=5|{{Ai|Skye}}
+|Chat
+|
+:[[File:Yoru icon.png|20px|link=Yoru]] {{AC|YoruAllySkyeChat.mp3}} "Hey, flower girl. I found some leaves. Do you want them?"
+:[[File:Skye icon.png|20px|link=Skye]] {{AC|SkyeAllyYoruChat.mp3}} "I've got enough, thanks. But call me flower girl again, I'll break your nose."
+|
+|-
+|Commend
+|{{AC|YoruAllySkyeCommend2.mp3}} "Skye that was-" ''*clears throat*'' "that was pretty good."{{#tag:sup|-{{patchv|12.06}}}} {{#tag:sup|{{patchv|12.07}}+}}
+|
+|-
+|Match Start
+|
+|{{AC|YoruEnemySkyeMatchStart.mp3}} "The enemy Skye is here. I never liked the zoo."
+|-
+|Barrier Down
+|{{AC|YoruAllySkyeBarrierDown.mp3}} "Good luck, Skye."
+|
+|-
+|Kill
+|
+|{{AC|YoruEnemySkyeKill.mp3}} "Skye killed."
+|-
+|rowspan=4|{{Ai|Sova}}
+|Match Start
+|{{AC|YoruAllySovaMatchStart.mp3}} "Sova, I returned a book to your shelf. Not bad, I'll rate it... 4 out of 5."{{#tag:sup|{{patchv|12.06}}+}}
+|
+|-
+|Round Start
+|{{AC|YoruAllySovaRoundStart.mp3}} "Find them, Sova. I'll do the rest."
+|
+|-
+|rowspan=2|Barrier Down
+|{{AC|YoruAllySovaBarrierDown.mp3}} "Let's see what you've got, Sova."
+|
+|-
+|{{AC|YoruAllySovaBarrierDown2.mp3}} "Okay, Robin Hood, show me targets."{{#tag:sup|{{patchv|12.06}}+}}
+|
+|-
+|rowspan=3|{{Ai|Viper}}
+|Round Start
+|{{AC|YoruAllyViperMatchStart.mp3}} "Viper, tell me how you want this to go. I'll get it done."{{#tag:sup|{{patchv|12.06}}+}}
+|
+|-
+|Round Start
+|
+|{{AC|YoruEnemyViperRoundStart.mp3}} "That Viper really needs to die."
+|-
+|Barrier Down
+|
+|{{AC|YoruEnemyViperBarrierDown.mp3}} "I'll take down their Viper."
+|-
+|rowspan=4|{{Ai|Yoru}}
+|Match Start
+|
+|{{AC|YoruEnemyYoruMatchStart.mp3}} "That's me over there! Great, now I can kick my own ass."
+|-
+|Barrier Down
+|
+|{{AC|YoruEnemyYoruBarrierDown.mp3}} "Last Yoru standing wins."
+|-
+|Kill
+|
+|{{AC|YoruEnemyYoruKill.mp3}} "Double's dead."
+|-
+|Last Kill
+|
+|{{AC|YoruEnemyYoruLastKill.mp3}} "Even I can't beat me."
+|}
+
+==Radio Commands==
+===Menu Index only===
+====Caution here====
+*{{AC|YoruCaution1.mp3}}{{AC|YoruCaution2.mp3}} "Enemies nearby."
+
+====Going Area====
+*{{AC|YoruGoingA1.mp3}}{{AC|YoruGoingA2.mp3}} "Going A."
+*{{AC|YoruGoingB1.mp3}}{{AC|YoruGoingB2.mp3}} "Going B."
+*{{AC|YoruGoingC1.mp3}}{{AC|YoruGoingC2.mp3}} "Going C."
+*{{AC|YoruGoingMid1.mp3}}{{AC|YoruGoingMid2.mp3}} "Going Mid."
+
+====Need Support====
+*{{AC|YoruHelp1.mp3}}{{AC|YoruHelp2.mp3}}{{AC|YoruHelp3.mp3}} "I need backup."
+
+====On my way====
+*{{AC|YoruOnMyWay1.mp3}}{{AC|YoruOnMyWay2.mp3}} "On my way."
+
+====Play for picks====
+*{{AC|YoruPlayForPicks1.mp3}}{{AC|YoruPlayForPicks2.mp3}} "Play for picks."
+
+===Wheel Index only===
+====Encourage====
+*{{AC|YoruEncouraging1.mp3}}{{AC|YoruEncouraging2.mp3}}{{AC|YoruEncouraging3.mp3}} "We can take them."
+
+====I'll lurk====
+Only as Attackers during Buy Phase.
+*{{AC|YoruLurking1.mp3}}{{AC|YoruLurking2.mp3}} "I'm lurking."
+
+====I'll push out====
+Only as Defenders during Buy Phase.
+*{{AC|YoruPushingOut1.mp3}}{{AC|YoruPushingOut2.mp3}} "I'm pushing out."
+
+====I'm holding position====
+Only as Defenders during Buy Phase.
+*{{AC|YoruHoldingPosition1.mp3}}{{AC|YoruHoldingPosition2.mp3}} "Holding position."
+
+====Let's Attack====
+Only during Round Phase.
+*{{AC|YoruLetsAttack1.mp3}}{{AC|YoruLetsAttack2.mp3}} "Let's attack."
+
+====Let's hold positions====
+Only as Defenders during Buy Phase.
+*{{AC|YoruHoldPositions1.mp3}}{{AC|YoruHoldPositions2.mp3}} "Let's hold positions."
+
+====Let's play slow====
+Only as Attackers at anytime.
+*{{AC|YoruPlaySlow1.mp3}}{{AC|YoruPlaySlow2.mp3}} "Let's play slow."
+
+====Let's push out====
+Only as Defenders during Buy Phase.
+*{{AC|YoruPushOut1.mp3}}{{AC|YoruPushOut2.mp3}} "Let's push out."
+
+====Let's spread out====
+*{{AC|YoruSpreadOut1.mp3}}{{AC|YoruSpreadOut2.mp3}} "Let's spread out."
+
+====Nice Try====
+*{{AC|YoruNiceTry1.mp3}}{{AC|YoruNiceTry2.mp3}}{{AC|YoruNiceTry3.mp3}} "Nice try."
+
+====Stick together====
+*{{AC|YoruStickTogether1.mp3}}{{AC|YoruStickTogether2.mp3}} "Stick together."
+
+===Menu and Wheel Index===
+====Commend====
+*{{AC|YoruCommend1.mp3}}{{AC|YoruCommend2.mp3}}{{AC|YoruCommend3.mp3}} "Not bad."
+
+====Fall Back====
+Menu Index at anytime, or Wheel Index only during Round Phase.
+*{{AC|YoruFallBack1.mp3}}{{AC|YoruFallBack2.mp3}} "Fall back!"
+
+====Hello====
+*{{AC|YoruHello1.mp3}}{{AC|YoruHello2.mp3}}{{AC|YoruHello3.mp3}} "Hey."
+
+====I'll take point====
+Wheel Index only as Attackers during Buy Phase, or Menu Index at anytime regardless of Attackers or Defenders.
+*{{AC|YoruTakePoint1.mp3}}{{AC|YoruTakePoint2.mp3}} "I'll take point."
+
+====Let's rush them (Radio Command)====
+*{{AC|YoruRush1.mp3}}{{AC|YoruRush2.mp3}} "Rush them."
+
+====Need healing====
+*{{AC|YoruHealing1.mp3}}{{AC|YoruHealing2.mp3}} "Need healing."
+
+====No====
+*{{AC|YoruNo1.mp3}}{{AC|YoruNo2.mp3}}{{AC|YoruNo3.mp3}} "No."
+
+====Sorry====
+*{{AC|YoruSorry1.mp3}}{{AC|YoruSorry2.mp3}}{{AC|YoruSorry3.mp3}} "Won't happen again."
+
+====Thanks====
+*{{AC|YoruThanks1.mp3}}{{AC|YoruThanks2.mp3}}{{AC|YoruThanks3.mp3}} "Thanks."
+
+====Ultimate Status====
+*{{AC|YoruUltDown1.mp3}}{{AC|YoruUltDown2.mp3}} "My ult's not ready."
+*{{AC|YoruUltAlmost1.mp3}}{{AC|YoruUltAlmost2.mp3}} "Ult's almost ready."
+*{{AC|YoruUltReady1.mp3}}{{AC|YoruUltReady2.mp3}} "My ult's ready."
+
+====Yes====
+*{{AC|YoruYes1.mp3}}{{AC|YoruYes2.mp3}}{{AC|YoruYes3.mp3}} "Yeah."
+
+===Wheel Index requiring Minimap===
+For the following voicelines, the minimap must be open and then open ping wheel and activate strategy.
+====Faking====
+Only as Attackers during Buy Phase.
+*{{AC|YoruFaking1.mp3}}{{AC|YoruFaking2.mp3}} "I'm faking."
+*{{AC|YoruFakingA1.mp3}}{{AC|YoruFakingA2.mp3}} "I'm faking A."
+*{{AC|YoruFakingB1.mp3}}{{AC|YoruFakingB2.mp3}} "I'm faking B."
+*{{AC|YoruFakingC1.mp3}}{{AC|YoruFakingC2.mp3}} "I'm faking C."
+
+====I'm Going Here====
+As Defenders during Buy Phase, or as Attackers at anytime.
+*{{AC|YoruGoingA1.mp3}}{{AC|YoruGoingA2.mp3}} "Going A."
+*{{AC|YoruGoingB1.mp3}}{{AC|YoruGoingB2.mp3}} "Going B."
+*{{AC|YoruGoingC1.mp3}}{{AC|YoruGoingC2.mp3}} "Going C."
+*{{AC|YoruGoingMid1.mp3}}{{AC|YoruGoingMid2.mp3}} "Going Mid."
+
+====Let's Go Here====
+Only as Attackers during Buy Phase.
+*{{AC|YoruLetsGoA1.mp3}}{{AC|YoruLetsGoA2.mp3}} "Let's go A."
+*{{AC|YoruLetsGoB1.mp3}}{{AC|YoruLetsGoB2.mp3}} "Let's go B."
+*{{AC|YoruLetsGoC1.mp3}}{{AC|YoruLetsGoC2.mp3}} "Let's go C."
+*{{AC|YoruLetsGoHere1.mp3}}{{AC|YoruLetsGoHere2.mp3}} "Let's go here."
+
+====Let's rush them (Minimap)====
+Only as Attackers during Buy Phase.
+*{{AC|YoruLetsRush1.mp3}}{{AC|YoruLetsRush2.mp3}} "Let's rush them."
+*{{AC|YoruLetsRushA1.mp3}}{{AC|YoruLetsRushA2.mp3}} "Let's rush A."
+*{{AC|YoruLetsRushB1.mp3}}{{AC|YoruLetsRushB2.mp3}} "Let's rush B."
+*{{AC|YoruLetsRushC1.mp3}}{{AC|YoruLetsRushC2.mp3}} "Let's rush C."
+
+====Let's Sneak Here====
+Only as Attackers during Buy Phase.
+*{{AC|YoruSneakA1.mp3}}{{AC|YoruSneakA2.mp3}} "Let's sneak A."
+*{{AC|YoruSneakB1.mp3}}{{AC|YoruSneakB2.mp3}} "Let's sneak B."
+*{{AC|YoruSneakC1.mp3}}{{AC|YoruSneakC2.mp3}} "Let's sneak C."
+*{{AC|YoruSneakMid1.mp3}}{{AC|YoruSneakMid2.mp3}} "Let's sneak Mid."
+
+====Let's Stack Here====
+Only as Defenders during Buy Phase.
+*{{AC|YoruStack1.mp3}}{{AC|YoruStack2.mp3}} "Let's stack up."
+*{{AC|YoruStackA1.mp3}}{{AC|YoruStackA2.mp3}} "Let's stack A."
+*{{AC|YoruStackB1.mp3}}{{AC|YoruStackB2.mp3}} "Let's stack B."
+*{{AC|YoruStackC1.mp3}}{{AC|YoruStackC2.mp3}} "Let's stack C."
+*{{AC|YoruStackMid1.mp3}}{{AC|YoruStackMid2.mp3}} "Let's stack Mid."
+
+====Someone Go Here====
+As Attackers during Round Phase, or as Defenders at anytime.
+*{{AC|YoruNeedSomeoneA1.mp3}}{{AC|YoruNeedSomeoneA2.mp3}} "Someone go A."
+*{{AC|YoruNeedSomeoneB1.mp3}}{{AC|YoruNeedSomeoneB2.mp3}} "Someone go B."
+*{{AC|YoruNeedSomeoneC1.mp3}}{{AC|YoruNeedSomeoneC2.mp3}} "Someone go C."
+*{{AC|YoruNeedSomeoneMid1.mp3}}{{AC|YoruNeedSomeoneMid2.mp3}} "Someone go Mid."
+
+====Spike's here====
+Only as Defenders during Round Phase.
+*{{AC|YoruSpikeA1.mp3}}{{AC|YoruSpikeA2.mp3}} "Spike's A."
+*{{AC|YoruSpikeB1.mp3}}{{AC|YoruSpikeB2.mp3}} "Spike's B."
+*{{AC|YoruSpikeC1.mp3}}{{AC|YoruSpikeC2.mp3}} "Spike's C."
+*{{AC|YoruSpikeMid1.mp3}}{{AC|YoruSpikeMid2.mp3}} "Spike's Mid."
+*{{AC|YoruSpikeSpottedASpawn1.mp3}}{{AC|YoruSpikeSpottedASpawn2.mp3}} "Spike's Attacker Spawn."
+*{{AC|YoruSpikeSpottedDSpawn1.mp3}}{{AC|YoruSpikeSpottedDSpawn2.mp3}} "Spike's Defender Spawn."
+
+==Pings==
+===General===
+*{{AC|YoruPing1.mp3}}{{AC|YoruPing2.mp3}} "Here."
+
+===Caution===
+*{{AC|YoruPingCaution1.mp3}}{{AC|YoruPingCaution2.mp3}} "Careful here."
+
+===Need support===
+*{{AC|YoruHelp1.mp3}}{{AC|YoruHelp2.mp3}}{{AC|YoruHelp3.mp3}} "I need backup!"
+
+===On my mark===
+*{{AC|YoruOnMyMark1.mp3}}{{AC|YoruOnMyMark2.mp3}} "On my mark."
+
+===Ping gun===
+*{{AC|YoruPingGun1.mp3}}{{AC|YoruPingGun2.mp3}} "Gun here."
+
+===Ping spike===
+*{{AC|YoruPingSpike1.mp3}}{{AC|YoruPingSpike2.mp3}} "Spike's here."
+
+===Ping for spike defuse===
+*{{AC|YoruDefuseSpike1.mp3}}{{AC|YoruDefuseSpike2.mp3}} "Defuse the spike!"
+
+===Ping for spike plant===
+*{{AC|YoruPlantSpike1.mp3}}{{AC|YoruPlantSpike2.mp3}} "Plant the spike!"
+
+===Watching===
+*{{AC|YoruWatching1.mp3}}{{AC|YoruWatching2.mp3}} "Watching here."
+
+==Other lines==
+===Ability unusable===
+====[[Status Effect#Suppress|Suppressed]]====
+*{{AC|YoruCantUse1.mp3}}{{AC|YoruCantUse2.mp3}} "Can't use that."
+
+====On cooldown====
+*{{AC|YoruOnCooldown1.mp3}}{{AC|YoruOnCooldown2.mp3}} "That's not ready."
+
+====No charges====
+*{{AC|YoruNoCharges1.mp3}}{{AC|YoruNoCharges2.mp3}} "Out of charges."
+
+===Enemy spotted===
+*{{AC|YoruEnemyA1.mp3}}{{AC|YoruEnemyA2.mp3}} "Enemy spotted A."
+*{{AC|YoruEnemyB1.mp3}}{{AC|YoruEnemyB2.mp3}} "Enemy spotted B."
+*{{AC|YoruEnemyC1.mp3}}{{AC|YoruEnemyC2.mp3}} "Enemy spotted C."
+*{{AC|YoruEnemyASpawn1.mp3}}{{AC|YoruEnemyASpawn2.mp3}} "Enemy Attacker Spawn."
+*{{AC|YoruEnemyDSpawn1.mp3}}{{AC|YoruEnemyDSpawn2.mp3}} "Enemy Defender Spawn."
+*{{AC|YoruEnemyMid1.mp3}}{{AC|YoruEnemyMid2.mp3}} "Enemy spotted Mid."
+
+====Multiple====
+*{{AC|YoruEnemiesA1.mp3}}{{AC|YoruEnemiesA2.mp3}} "Many enemies A!"
+*{{AC|YoruEnemiesB1.mp3}}{{AC|YoruEnemiesB2.mp3}} "Many enemies B!"
+*{{AC|YoruEnemiesC1.mp3}}{{AC|YoruEnemiesC2.mp3}} "Many enemies C!"
+*{{AC|YoruEnemiesASpawn1.mp3}}{{AC|YoruEnemiesASpawn2.mp3}} "Enemies in Attacker Spawn!"
+*{{AC|YoruEnemiesDSpawn1.mp3}}{{AC|YoruEnemiesDSpawn2.mp3}} "Enemies in Defender Spawn!"
+*{{AC|YoruEnemiesMid1.mp3}}{{AC|YoruEnemiesMid2.mp3}} "Many enemies Mid!"
+
+===Reloading===
+*{{AC|YoruReloading1.mp3}}{{AC|YoruReloading2.mp3}} "Reloading."
+
+===Healed===
+*{{AC|YoruRelief1.mp3}}{{AC|YoruRelief2.mp3}}{{AC|YoruRelief3.mp3}} ''*Yoru sighs*''
+
+===Killed===
+*{{AC|YoruDeath1.mp3}}{{AC|YoruDeath2.mp3}}{{AC|YoruDeath3.mp3}} ''*Yoru groans*''
+
+===Resurrected via {{abi text|Resurrection}}===
+*{{AC|YoruResurrect.mp3}} "Who killed me? They're dead!"
+
+===Wounded===
+====Light damage====
+*{{AC|YoruPainLight1.mp3}}{{AC|YoruPainLight2.mp3}}{{AC|YoruPainLight3.mp3}} ''*Yoru groans*''
+
+====Medium damage====
+*{{AC|YoruPainMedium1.mp3}}{{AC|YoruPainMedium2.mp3}}{{AC|YoruPainMedium3.mp3}} ''*Yoru groans*''
+
+====Heavy damage====
+*{{AC|YoruPainHeavy1.mp3}}{{AC|YoruPainHeavy2.mp3}}{{AC|YoruPainHeavy3.mp3}} ''*Yoru groans*''
+
+====Fall damage====
+*{{AC|YoruPainFall1.mp3}}{{AC|YoruPainFall2.mp3}}{{AC|YoruPainFall3.mp3}} ''*Yoru groans*''
+
+==Unused lines==
+===Match MVP===
+<!--Last kill?-->
+*{{AC|YoruMatchMVP1.mp3}} "I was the best? I'm shocked."
+
+==Removed lines==
+===Ally {{ai|Phoenix}} Match Start===
+*{{AC|YoruAllyPhoenixMatchStart.mp3}} "Phoenix, for once in your life, try waiting for the team. I know you can do it."{{#tag:sup|-{{patchv|12.06}}}}
+*{{AC|YoruAllyPhoenixMatchStart2.mp3}} "Okay Phoenix, don't be upset when you get less kills than me."
+
+===Ally {{ai|Skye}} Commend===
+*{{AC|YoruAllySkyeCommend.mp3}} "Skye, you've been holding back."{{#tag:sup|-{{patchv|12.06}}}}
+
+==={{abi text|Fakeout}}===
+====Destroyed====
+*{{AC|YoruFakeoutDestroyed1.mp3}}{{AC|YoruFakeoutDestroyed2.mp3}} "Decoy destroyed."
+
+====Timeout====
+*{{AC|YoruFakeoutTimeout1.mp3}}{{AC|YoruFakeoutTimeout2.mp3}} "Decoy's gone."
+
+===Flawless or Team Ace===
+*{{AC|YoruFlawless3.mp3}} "I guess working with a team isn't that bad."
+
+===Round Start===
+*{{AC|YoruRoundStart7.mp3}} "Let's strike first. It's better than having to strike back."
+*{{AC|YoruRoundStart9.mp3}} "If I kill all the enemies myself, I apologize. I have trouble sharing."
+
+===Last Kill Enemy MVP===
+*{{AC|YoruLastKillMVP1.mp3}} "You tried to be a hero. Great job."{{#tag:sup|-{{patchv|13.00}}}}
+
+===Wounded Annoyed===
+*{{AC|YoruPainAnnoyed1.mp3}}{{AC|YoruPainAnnoyed2.mp3}}{{AC|YoruPainAnnoyed3.mp3}} ''*Yoru groans*''
+
+===Spike Spotted General===
+*{{AC|YoruSpikeSpotted1.mp3}}{{AC|YoruSpikeSpotted2.mp3}} "Spike spotted."
+
+===Enemy spotted General===
+*{{AC|YoruEnemy1.mp3}}{{AC|YoruEnemy2.mp3}} "Enemy here."
+
+===Multiple Enemies spotted General===
+*{{AC|YoruEnemies1.mp3}}{{AC|YoruEnemies2.mp3}} "Couple enemies here."
+
+===Be Quiet===
+*{{AC|YoruBeQuiet1.mp3}}{{AC|YoruBeQuiet2.mp3}} "Stay quiet."
+
+===Rotate===
+*{{AC|YoruRotating1.mp3}}{{AC|YoruRotating2.mp3}} "Rotating."
+
+===Let's Rotate===
+*{{AC|YoruLetsRotate1.mp3}}{{AC|YoruLetsRotate2.mp3}} "Let's rotate."
+
+===Affirmation===
+*{{AC|YoruAffirmation1.mp3}}{{AC|YoruAffirmation2.mp3}} "Fine."
+
+===Callouts===
+*{{AC|YoruCalloutA1.mp3}}{{AC|YoruCalloutA2.mp3}} "A."
+*{{AC|YoruCalloutB1.mp3}}{{AC|YoruCalloutB2.mp3}} "B."
+*{{AC|YoruCalloutC1.mp3}}{{AC|YoruCalloutC2.mp3}} "C."
+*{{AC|YoruCalloutMid1.mp3}}{{AC|YoruCalloutMid2.mp3}} "Mid."
+
+===Clear Area===
+*{{AC|YoruClearThisArea1.mp3}}{{AC|YoruClearThisArea2.mp3}} "Clear this area."
+
+===Hold===
+*{{AC|YoruHold1.mp3}}{{AC|YoruHold2.mp3}} "Wait."
+
+===Push===
+*{{AC|YoruPush1.mp3}}{{AC|YoruPush2.mp3}} "Push."
+
+===Regroup===
+*{{AC|YoruRegroup1.mp3}}{{AC|YoruRegroup2.mp3}} "Regroup."
+
+===Need disrupt===
+*{{AC|YoruDisrupt1.mp3}}{{AC|YoruDisrupt2.mp3}} "Disrupt here."
+
+===Need scouting===
+*{{AC|YoruScout1.mp3}}{{AC|YoruScout2.mp3}} "Scout here."
+
+===Need vision block===
+*{{AC|YoruBlockVision1.mp3}}{{AC|YoruBlockVision2.mp3}} "Block vision here."
+
+===Ping Go here===
+*{{AC|YoruGoHere1.mp3}}{{AC|YoruGoHere2.mp3}} "Let's go here."
+
+===Ping enemy utility===
+*{{AC|YoruPingUtility1.mp3}}{{AC|YoruPingUtility2.mp3}} "Enemy utility here."
+
+==[[Range/Lore|The Range's lore assets]]==
+===[[Range/Lore/EP4|Episode 4]]===
+*{{AC|VoicemailBrimstone6.mp3}} "It's me. I know you told me to leave [[Icebox|S22]] alone... but I went anyways, shit it's freezing! I searched the warship again and found dimensional scarring on the sides. I'm telling you, this didn't sail here from Japan! And the armor; if [[Kingdom Corporation|Kingdom]] discovered [[radianite]] ten years ago, why is my mask filled with it?! There's more to find here. I know we have other missions, but I won't turn my back on this place. You shouldn't either."
+*{{AC|VoicemailBrimstone10.mp3}} "[[Brimstone]]. Something happened at S22. I was walking the warship again when I felt something... different. The dimensional fabric was weaker there, older. I could feel seams that someone left a long time ago. And then... I fell. Into a space that... wasn't just A to B, it felt more like... now to then. I pushed forward as far as I could... and, Brimstone... I heard someone, calling to me. I didn't have time to answer before the rift closed... but I swear to you... I knew her voice!"
+
+===[[Range/Lore/EP5|Episode 5]]===
+*{{AC|VoicemailBrimstone27.mp3}} "It's me. I need to borrow your socket wrench, 8 mm. I'm changing the oil on my HX20 before I ride, and I left my tools back home. Thanks!"
+
+===[[Range/Lore/EP9|Episode 9]]===
+*{{AC|VoicemailBrimstone89.mp3}} "It's me, I found a cool blade in one of the [[Hourglass]] vaults. I'm taking it. I asked [[Killjoy|KJ]] if it was safe and she said it was. Besides, uh, being, obviously, a knife. Okay? Goodbye."
+
+===[[Range/Lore/V26|Season 2026]]===
+*{{AC|LegionAudioTap3.mp3}} ''(For the entire transcription amongst the agents, see [[Range/Lore/V26#Cypher's Office 6|Range/Lore/V26 → v12.05 → Cypher's Office]].)''
+*{{AC|LegionAudioTap4.mp3}} ''(For the entire transcription amongst the agents, see [[Range/Lore/V26#Cypher's Office 7|Range/Lore/V26 → v12.06 → Cypher's Office]].)''
+*{{AC|LegionAudioTap9.mp3}} "[[Omega Viper|Viper]], you were right. They're headed straight to the coordinates you relayed. So, you gonna tell me how you knew? Anyway, [[Radianite]]'s crazy here, you can feel it. Most of the people at the facility are [[Radiants]] too, lots of them. Team approach will be difficult with the surrounding mountains, they'll see us coming for sure. But I'll keep testing the perimeter. Call me if anything changes."
+*{{AC|file=LegionAudioTap11.mp3}} ''(For the entire transcription amongst the agents, see [[Range/Lore/V26#Cypher's Office 14|Range/Lore/V26 → v13.01 → Cypher's Office]].)''
+*{{AC|file=LegionAudioTap13.mp3}} "Strike team to base, Protocol's VLT/R spotted on approach for shift change, T-40 seconds. Ambush is go. [[Omega Jett|Jett]] and [[Omega KAYO|KAY/O]] have the foothills, [[Omega Iso|Iso]]'s on the river, [[Omega Waylay|Waylay]] takes east bank, I'm west. We're going dark."
+*{{AC|file=LegionAudioTap14.mp3}} ''(For the entire transcription amongst the agents, see [[Range/Lore/V26#Cypher's Office 17|Range/Lore/V26 → v13.05 → Cypher's Office]].)''
+
+==Notes==
+:''To easily see which quotes were added corresponding to the patch, use your browser's Find function and type the patch number (e.g. v12.06).
+*{{ui|Added}} 7 voice lines added from patch {{patchv|12.06}}, documented in the patch notes.
+*{{ui|Removed}} 3 voice lines removed from patch {{patchv|12.06}}, undocumented in the patch notes.
+**{{ui|Added}} 1 voice line re-added from {{patchv|12.07}}, undocumented in the patch notes.
+*Additional radio commands added in patch {{patchv|8.11}} are not mentioned in this page.
+*Other voice lines removed were at an unknown timeframe.
+
+==Navigation==
+{{Navbox agents}}
+[[Category:Quotes]]

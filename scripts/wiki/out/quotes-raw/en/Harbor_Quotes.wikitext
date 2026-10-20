@@ -1,0 +1,887 @@
+{{TOCright}}
+This is a '''list of quotes by {{ai|Harbor}}'''. Harbor is voiced by 
+Sunil Malhotra in English. Necessary quotes translated are from Hindi to English. Harbor has a total of {{PAGESINCATEGORY:Harbor Quotes}} files of quotes including unused and removed lines, and excluding [[#The Range's lore assets|The Range's lore assets]]. 
+
+A downloadable folder containing all the audio files on this page can be found [https://drive.google.com/drive/folders/11i8nKcNQYvQRGIvcPYGW3RzEiT4wXg6w?usp=share_link here].
+
+==Agent Selected/Unlocked==
+*{{AC|HarborPick.mp3}} "Together, we'll crush them."
+
+==Abilities==
+==={{abi text|Storm Surge}}===
+====Cast====
+*{{AC|HarborStormSurgeCast1.mp3}}{{AC|HarborStormSurgeCast2.mp3}} "Drowning sight."{{#tag:sup|{{patchv|11.10}}+}}
+*{{AC|HarborStormSurgeCast3.mp3}}{{AC|HarborStormSurgeCast4.mp3}} "Flooding vision."{{#tag:sup|{{patchv|11.10}}+}}
+
+==={{abi text|High Tide}}===
+====Cast====
+*{{AC|HarborHighTideCast1.mp3}}{{AC|HarborHighTideCast3.mp3}} "Wall's up."
+*{{AC|HarborHighTideCast2.mp3}}{{AC|HarborHighTideCast4.mp3}} "Water rising."
+
+==={{abi text|Cove}}===
+====Cast====
+*{{AC|HarborCoveCast5.mp3}}{{AC|HarborCoveCast6.mp3}} "Dome placed."{{#tag:sup|{{patchv|11.10}}+}}
+*{{AC|HarborCoveCast7.mp3}}{{AC|HarborCoveCast8.mp3}} "Dome set."{{#tag:sup|{{patchv|11.10}}+}}
+
+====Activate====
+*{{AC|HarborCoveActivate1.mp3}}{{AC|HarborCoveActivate2.mp3}} "Adding shield."{{#tag:sup|{{patchv|11.10}}+}}
+*{{AC|HarborCoveActivate3.mp3}}{{AC|HarborCoveActivate4.mp3}} "Blocking fire."{{#tag:sup|{{patchv|11.10}}+}}
+
+====Destroyed====
+*{{AC|HarborCoveDestroyed1.mp3}}{{AC|HarborCoveDestroyed2.mp3}} "Dome destroyed."{{#tag:sup|{{patchv|11.10}}+}}
+
+==={{abi text|Reckoning}}===
+====Ally Cast====
+*{{AC|HarborUltAllyCast.mp3}} "Let's turn the tide!"
+
+====Enemy Cast====
+*{{AC|HarborUltEnemyCast2.mp3}} "Into the deep!"{{#tag:sup|{{patchv|11.10}}+}}
+
+==Buy Phase==
+===Match Start===
+*{{AC|HarborMatchStart1.mp3}} "Well equipped, well rested, and well fed. Couldn't ask for a better start!"
+*{{AC|HarborMatchStart2.mp3}} "Look at us! I've never seen a more beautiful group of heavily armed soldiers."
+*{{AC|HarborMatchStart3.mp3}} "I've done a thousand missions like this before. Today is no different!"
+*{{AC|HarborMatchStart4.mp3}} "Someone showed up to fight us. They're either stupid, or very stupid."
+*{{AC|HarborMatchStart5.mp3}} "चलो, let's see some excitement! It's not everyday you save the world!"
+**(''चलो'': Come on)
+*{{AC|HarborMatchStart6.mp3}} "This artifact is not my only source of strength."
+*{{AC|HarborMatchStart7.mp3}} "Well, this looks dangerous. Good thing we brought guns."
+
+====Attacking====
+*{{AC|HarborMatchStartAttack1.mp3}} "They have radianite, we have a spike. Sounds like a perfect match to me!."
+*{{AC|HarborMatchStartAttack2.mp3}} "Hey, let's keep that spike safe. I'm told it's terribly expensive."
+
+====Defending====
+*{{AC|HarborMatchStartDefense1.mp3}} "History is full of senseless aggression. Some things don't change."
+*{{AC|HarborMatchStartDefense2.mp3}} "Hmph, they're still after our radianite? Ah, they get a gold star for persistence."
+
+====[[Ascent]]====
+*{{AC|HarborMatchStartAscent.mp3}} "The pillars on that domed building are Corinthian, the last of the three classical orders. How are you not excited?!"
+
+====[[Bind]]====
+*{{AC|HarborMatchStartBind.mp3}} "That old wall by the trees was part of a Casbah once. Still majestic after all this time."
+
+====[[Breeze]]====
+*{{AC|HarborMatchStartBreeze.mp3}} "Who builds a neoclassical mansion in the middle of an ocean? Obnoxious."
+
+====[[Haven]]====
+*{{AC|HarborMatchStartHaven.mp3}} "Will you look at those basalt columns?! You know those hexagonal shapes form naturally."
+
+====[[Icebox]]====
+*{{AC|HarborMatchStartIcebox.mp3}} "What is a red seal ship from the Tokugawa Era doing way up here? ज़बरदस्त!"
+**(''ज़बरदस्त'': Tremendous)
+
+====[[Lotus]]====
+*{{AC|HarborMatchStartLotus.mp3}} "अरे, look at that rock-cut architecture! This city was built, um, 5th century शायद, maybe earlier."
+**(''अरे'': Gee)
+**(''शायद'': Maybe/Perhaps)
+
+====[[Pearl]]====
+*{{AC|HarborMatchStartPearl.mp3}} "That castle beyond the dome dates back to 48 BC. Shame it couldn't be saved."
+
+====[[Split]]====
+*{{AC|HarborMatchStartSplit.mp3}} "See that older building? How the roof follows the silver ratio? Ahah, who said math wasn't beautiful?"
+
+===Round Start===
+*{{AC|HarborRoundStart1.mp3}} "Your mind is just as dangerous as your weapon. Use it."
+*{{AC|HarborRoundStart2.mp3}} "How's everyone feeling? Good? Because you look great."
+*{{AC|HarborRoundStart3.mp3}} "Conflict is not my first choice, but that choice was made."
+*{{AC|HarborRoundStart4.mp3}} "Anyone dehydrated? Need a quick rinse? Just checking."
+*{{AC|HarborRoundStart5.mp3}} "Occupational hazards aside, I do love how much we travel."
+*{{AC|HarborRoundStart6.mp3}} "Hey, loosen up. It's only life or death!"
+*{{AC|HarborRoundStart7.mp3}} "Sort out your gear quick, time's more precious than a bullet."
+*{{AC|HarborRoundStart8.mp3}} "They think they're the best until we prove them wrong."
+*{{AC|HarborRoundStart9.mp3}} "Take them out before they even pull the trigger."
+*{{AC|HarborRoundStart10.mp3}} "Move together and overwhelm them."
+*{{AC|HarborRoundStart11.mp3}} "No stopping now. Not until the job is done."
+*{{AC|HarborRoundStart12.mp3}} "Watch their movement. Study their patterns. Exploit whatever you can."
+*{{AC|HarborRoundStart13.mp3}} "Look! My artifact's vibrating! Gah, it stopped. This thing always keeps me on my toes."{{#tag:sup|{{patchv|11.09}}+}}
+
+====Last round won====
+*{{AC|HarborRoundWon1.mp3}} "Haha, now we're warmed up."
+*{{AC|HarborRoundWon2.mp3}} "If you're keeping score, that was a win."
+*{{AC|HarborRoundWon3.mp3}} "I'm not finished until they stop breathing."
+*{{AC|HarborRoundWon4.mp3}} "Excellent my friends, excellent."
+
+=====While in the lead=====
+*{{AC|HarborLead1.mp3}} "Anyone feel bad for the other team? At this point it's only natural."
+*{{AC|HarborLead2.mp3}} "We have a good thing going, keep it up."
+*{{AC|HarborLead3.mp3}} "Wow, we are destroying them!"
+
+=====Making a comeback=====
+*{{AC|HarborComeback1.mp3}} "I knew we were better than that."
+*{{AC|HarborComeback2.mp3}} "We are not so easily beaten."
+*{{AC|HarborComeback3.mp3}} "They didn't think we would give up, did they?"
+
+===Last round in the half===
+====Attacking====
+*{{AC|HarborLastRoundAttack.mp3}} "It's our last chance to attack. Buy out the shop."
+
+====Defending====
+*{{AC|HarborLastRoundDefense.mp3}} "सुनो, treat yourself to something nice while you still can."
+**(''सुनो'': Listen)
+
+===Match Point===
+*{{AC|HarborMatchPoint1.mp3}} "We're so close I can taste it! Come on!"
+*{{AC|HarborMatchPoint2.mp3}} "Now give it everything you have!"
+
+===Shop===
+====Let's Buy====
+*{{AC|HarborBuying1.mp3}}{{AC|HarborBuying2.mp3}} "I'm buying."
+
+====Let's Save====
+*{{AC|HarborSaving1.mp3}}{{AC|HarborSaving2.mp3}} "Saving up."
+
+====I Have Extra Creds====
+*{{AC|HarborOffer1.mp3}}{{AC|HarborOffer2.mp3}} "Speak up if you need a gun."
+
+====Requested====
+*{{AC|HarborRequest1.mp3}}{{AC|HarborRequest2.mp3}} "Can someone spot me?"
+
+===Barrier Down===
+*{{AC|HarborBarrierDown1.mp3}} "Now we tip the scale!"
+*{{AC|HarborBarrierDown2.mp3}} "Now roll over them!"
+*{{AC|HarborBarrierDown3.mp3}} "Their defense needs work."
+*{{AC|HarborBarrierDown4.mp3}} "They're not winning yet."
+*{{AC|HarborBarrierDown5.mp3}} "Don't ease up. Not yet."
+*{{AC|HarborBarrierDown6.mp3}} "I will set things right."
+*{{AC|HarborBarrierDown7.mp3}} "Let's reclaim ground."
+*{{AC|HarborBarrierDown8.mp3}} ''*Harbor scoffs*'' "Maybe they'll surprise us."
+*{{AC|HarborBarrierDown9.mp3}} "Hey! Keep at it."
+*{{AC|HarborBarrierDown10.mp3}} "Huh, they're pretty airtight huh?" 
+*{{AC|HarborBarrierDown11.mp3}} "Are they still trying?"
+*{{AC|HarborBarrierDown12.mp3}} "It's not over."
+*{{AC|HarborBarrierDown13.mp3}} "It's now or never."
+*{{AC|HarborBarrierDown14.mp3}} "Try not to get shot, okay?"
+*{{AC|HarborBarrierDown15.mp3}} "Stay in the moment."
+*{{AC|HarborBarrierDown16.mp3}} "आराम से."
+**''("Take it easy.")''
+*{{AC|HarborBarrierDown17.mp3}} "Show them how we fight!"
+
+==Spike==
+===Forgotten in spawn===
+*{{AC|HarborForgotSpike1.mp3}} ''*Harbor sighs*'' "Someone get the spike, please! We're professionals!"
+*{{AC|HarborForgotSpike2.mp3}} "Can't plant the spike if we leave it here, people!"
+
+===Ally carrier down===
+*{{AC|HarborSpikeDown1.mp3}}{{AC|HarborSpikeDown2.mp3}} "Our spike is down."
+
+===Dropped===
+*{{AC|HarborSpikeDropped1.mp3}}{{AC|HarborSpikeDropped2.mp3}} "Spike dropped."
+
+===Retrieved===
+*{{AC|HarborSpikePickedUp1.mp3}}{{AC|HarborSpikePickedUp2.mp3}} "Carrying spike."
+
+===Planted===
+*{{AC|HarborSpikePlanted1.mp3}}{{AC|HarborSpikePlanted2.mp3}} "Spike planted."
+
+===Spotted===
+*{{AC|HarborSpikeSpotted1.mp3}}{{AC|HarborSpikeSpotted2.mp3}} "Spike spotted."
+*{{AC|HarborSpikeSpottedA1.mp3}}{{AC|HarborSpikeSpottedA2.mp3}} "Spike spotted A."
+*{{AC|HarborSpikeSpottedB1.mp3}}{{AC|HarborSpikeSpottedB2.mp3}} "Spike spotted B."
+*{{AC|HarborSpikeSpottedC1.mp3}}{{AC|HarborSpikeSpottedC2.mp3}} "Spike spotted C."
+*{{AC|HarborSpikeSpottedASpawn1.mp3}}{{AC|HarborSpikeSpottedASpawn2.mp3}} "Spike at Attacker Spawn."
+*{{AC|HarborSpikeSpottedDSpawn1.mp3}}{{AC|HarborSpikeSpottedDSpawn2.mp3}} "Spike at Defender Spawn."
+*{{AC|HarborSpikeSpottedMid1.mp3}}{{AC|HarborSpikeSpottedMid2.mp3}} "Spike spotted Mid."
+
+===Defuse resumed===
+*{{AC|HarborDefuseResumed1.mp3}} "Don't worry. I didn't forget."
+*{{AC|HarborDefuseResumed2.mp3}} "And now, you have my full attention."
+
+===Defuse time running out===
+*{{AC|HarborDefuseLate1.mp3}} "The beeping is a little much."
+*{{AC|HarborDefuseLate2.mp3}} "It could go either way."
+
+===Defuse successful===
+*{{AC|HarborDefuseComplete1.mp3}} "Yes, disaster averted."
+*{{AC|HarborDefuseComplete2.mp3}} "Okay, now we sigh with relief."
+
+==Kill==
+*{{AC|HarborKill1.mp3}}{{AC|HarborKill4.mp3}}{{AC|HarborKill7.mp3}} "Hah."
+*{{AC|HarborKill2.mp3}} "Too slow."
+*{{AC|HarborKill3.mp3}} "चल हट."
+**''("Clear out.")''
+*{{AC|HarborKill5.mp3}} "Target down."
+*{{AC|HarborKill6.mp3}} "Kill confirmed."
+*{{AC|HarborKill8.mp3}} "अलविदा."
+**''("Goodbye.")''
+*{{AC|HarborKill9.mp3}} "Stay down!"
+*{{AC|HarborKill10.mp3}} "Got ya."
+*{{AC|HarborKill11.mp3}} "कल आना!"{{#tag:sup|{{patchv|11.10}}+}}
+**''("Come back tomorrow!")
+*{{AC|HarborKill12.mp3}} "हट्ट!"{{#tag:sup|{{patchv|11.10}}+}}
+**''("Stubborn!")
+
+===Headshot===
+*{{AC|HarborHeadshot1.mp3}} "Dropped one."
+*{{AC|HarborHeadshot2.mp3}} "Oof."
+*{{AC|HarborHeadshot3.mp3}} "Tough luck."
+*{{AC|HarborHeadshot4.mp3}} "Farewell."
+*{{AC|HarborHeadshot5.mp3}} "Headshot."
+*{{AC|HarborHeadshot6.mp3}} "बेचारा."
+**''("Helpless.")''
+*{{AC|HarborHeadshot7.mp3}} "Not today."
+*{{AC|HarborHeadshot8.mp3}} "Huhoo, see that?"
+
+===[[Melee]]===
+*{{AC|HarborMeleeKill1.mp3}} "That sucks."
+*{{AC|HarborMeleeKill2.mp3}} "Not quite."
+
+===Triple===
+*{{AC|HarborTriple1.mp3}}{{AC|HarborTriple2.mp3}} "Got three."
+
+===Quadra===
+*{{AC|HarborQuadra1.mp3}}{{AC|HarborQuadra2.mp3}} "Got four."
+
+===One kill remaining (game-mode specific)===
+*{{AC|HarborOneKillLeft1.mp3}}{{AC|HarborOneKillLeft2.mp3}} "One more, come on!" 
+
+==Round End==
+===Ace===
+*{{AC|HarborAce1.mp3}} "History will forget them!"
+*{{AC|HarborAce2.mp3}} "Looks like I got a little carried away!"
+*{{AC|HarborAce3.mp3}} "What did they expect?!"
+
+===Clutch===
+*{{AC|HarborClutch1.mp3}} "What can I say? I do this for a living."
+*{{AC|HarborClutch2.mp3}} "My proximity to death really added to the fun."
+*{{AC|HarborClutch3.mp3}} "Haha, amateurs."
+
+===Flawless or Team Ace===
+*{{AC|HarborFlawless1.mp3}} "Hey, would you look that? We're all still alive."
+*{{AC|HarborFlawless2.mp3}} "Now, that was something."
+*{{AC|HarborFlawless3.mp3}} "After this, the first round of Chai is on me."
+
+===Thrifty===
+*{{AC|HarborThrifty1.mp3}} ''*Harbor laughs*'' "I'm used to world class tech. But hey, I'm flexible."
+
+===Last Kill===
+*{{AC|HarborLastKill1.mp3}} "See you in the next life."
+*{{AC|HarborLastKill2.mp3}} "All targets cleared."
+*{{AC|HarborLastKill3.mp3}} "And that's the last one."
+*{{AC|HarborLastKill4.mp3}} "Field secured."
+*{{AC|HarborLastKill5.mp3}} "Your journey ends here."
+
+====Enemy MVP====
+There are no voice lines at the moment in this section for this Agent.
+
+====Using [[Melee]]====
+*{{AC|HarborLastKillMelee1.mp3}} "Last target down. Didn't need a gun." 
+
+===Low HP===
+*{{AC|HarborLowHP1.mp3}} "Not my cleanest work. But I'll take it."
+
+==Match End==
+===Match Win===
+*{{AC|HarborMatchWin1.mp3}} "Haha! I told you we'd crush them!"
+*{{AC|HarborMatchWin2.mp3}} "Mission complete. शाबाश, well done!"
+**(''शाबाश'': Well done)
+*{{AC|HarborMatchWin3.mp3}} "What can I say? We're better."
+
+====[[Abyss]]====
+*{{AC|HarborMatchWinAbyss.mp3}} "It would take a lifetime to research every relic in here. Hm, I take it as a challenge."{{#tag:sup|{{patchv|11.10}}+}}
+
+====[[Corrode]]====
+*{{AC|HarborMatchWinCorrode.mp3}} "Cascading tears of romanesque architecture. You don't see that every day, unless you work here of course."{{#tag:sup|{{patchv|11.10}}+}}
+
+===Runner-up (game-mode specific)===
+*{{AC|HarborRunnerUp1.mp3}} "Well fought, people."
+*{{AC|HarborRunnerUp2.mp3}} "All the more reason to go again."
+*{{AC|HarborRunnerUp3.mp3}} "Hey, it was still a good match!"
+
+==Agent-specific interactions==
+{| class="wikitable sortable"
+!To Agent
+!Scenario
+!width=40%; class=unsortable|Ally
+!width=40%; class=unsortable|Enemy
+|-
+|rowspan=7|{{ai|Astra}}
+|Chat
+|
+:[[File:Astra icon.png|20px|link=Astra]] {{AC|AstraAllyHarborChat.mp3}} "Hey, water boy! You and me, let's show them how the scholars get it done."
+:[[File:Harbor icon.png|20px|link=Harbor]] {{AC|HarborAllyAstraChat.mp3}} "Hell yeah! As long as there's no test at the end."
+|
+|-
+|rowspan=2|Match Start
+|{{AC|HarborAllyAstraMatchStart.mp3}} "Hey Astra! Any tips for when you get an itch under the gauntlet? This bracelet is killing me."
+|
+|-
+|{{AC|HarborAllyAstraMatchStart2.mp3}} "Astra, do you see this view? I have our sketchbooks, drawing sesh before we leave."{{#tag:sup|{{patchv|11.10}}+}}
+|
+|-
+|Round Start
+|{{AC|HarborAllyAstraRoundStart.mp3}} "Make them see stars, Astra!"
+|
+|-
+|Commend
+|{{AC|HarborAllyAstraCommend.mp3}} "Astra, thanks for fighting alongside us... mere mortals."
+|
+|-
+|Barrier Down
+|{{AC|HarborAllyAstraBarrierDown.mp3}} "Astra, show them what you got!"
+|
+|-
+|Kill
+|
+|{{AC|HarborEnemyAstraKill.mp3}} "Fly, my friend."
+|-
+|rowspan=2|{{Ai|Breach}}
+|Chat
+|
+:[[File:Harbor icon.png|20px|link=Breach]] {{AC|HarborAllyBreachChat.mp3}} "Breach, you still haven't apologized to me for that job you tried in Bengaluru."
+:[[File:Breach icon.png|20px|link=Breach]] {{AC|BreachAllyHarborChat.mp3}} "Well, you haven't apologized for getting in my way."
+|-
+|Match Start
+|{{AC|HarborAllyBreachMatchStart.mp3}} "Breach, your prosthetics are waterproof, right? Asking for a friend."
+|
+|-
+|rowspan=2|{{Ai|Brimstone}}
+|Commend
+|{{AC|HarborAllyBrimstoneCommend.mp3}} "Round of applause for Mister Top Brass!"
+|
+|-
+|Last Kill
+|
+|{{AC|HarborEnemyBrimstoneLastKill.mp3}} "And down goes the commander."
+|-
+|{{Ai|Chamber}}
+|Match Start
+|
+|{{AC|HarborEnemyChamberMatchStart.mp3}} "There's a Chamber over there. Guy can't go three steps without bringing all his fancy guns."
+|-
+|{{Ai|Deadlock}}
+|Commend
+|{{AC|HarborAllyDeadlockCommend.mp3}} "Deadlock! Save some for us, huh? Or don't? Whatever makes you happy."{{#tag:sup|{{patchv|11.10}}+}}
+|
+|-
+|rowspan=5|{{Ai|Fade}}
+|Match Start
+|{{AC|HarborAllyFadeMatchStart.mp3}} "Fade, I've dealt with a lot of scary people, and you, are definitely my favorite."
+|
+|-
+|Round Start
+|
+|{{AC|HarborEnemyFadeRoundStart.mp3}} "The enemy Fade thinks we are afraid. She's right, that shit is scary!"
+|-
+|Commend
+|{{AC|HarborAllyFadeCommend.mp3}} ''*Harbor laughs*'' "This is what happens when the goth kid gets nightmare powers."
+|
+|-
+|Barrier Down
+|
+|{{AC|HarborEnemyFadeBarrierDown.mp3}} "Fade's mine."
+|-
+|Last Kill
+|
+|{{AC|HarborEnemyFadeLastKill.mp3}} "I prefer you stay out of my head, thank you."
+|-
+|rowspan=4|{{Ai|Harbor}}
+|Match Start
+|
+|{{AC|HarborEnemyHarborMatchStart.mp3}} "Yes, there is another Harbor fighting us. And yes, he also has an artifact. Mine is better."
+|-
+|Barrier Down
+|
+|{{AC|HarborEnemyHarborBarrierDown.mp3}} "Dibs on their Harbor."
+|-
+|Kill
+|
+|{{AC|HarborEnemyHarborKill.mp3}} "Keep your relic."
+|-
+|Last Kill
+|
+|{{AC|HarborEnemyHarborLastKill.mp3}} "When we are at peace, I would meet you again."
+|-
+|{{ai|Jett}}
+|Barrier Down
+|
+|{{AC|HarborEnemyJettBarrierDown.mp3}} "Careful around Jett, she's sharp."
+|-
+|{{Ai|KAYO}}
+|Round Start
+|{{AC|HarborAllyKAYORoundStart.mp3}} "KAY/O, you've got a lot of heart. A metaphorical heart. Unless, do you have a real heart?"
+|
+|-
+|rowspan=3|{{Ai|Neon}}
+|Commend
+|{{AC|HarborAllyNeonCommend.mp3}} "Neon! I blinked and missed that one. Do it again, huh?"
+|
+|-
+|Round Start
+|
+|{{AC|HarborEnemyNeonRoundStart.mp3}} "If Neon ran faster than our bullets, then I'd be worried."
+|-
+|Kill
+|
+|{{AC|HarborEnemyNeonKill.mp3}} "Slow down, kid."
+|-
+|rowspan=9|{{Ai|Phoenix}}
+|Chat
+|
+:[[File:Phoenix icon.png|20px|link=Phoenix]] {{AC|PhoenixAllyHarborChat.mp3}} "I'm feeling myself today, Harbor! Bet we clean them up in twenty minutes!"
+:[[File:Harbor icon.png|20px|link=Harbor]] {{AC|HarborAllyPhoenixChat.mp3}} "You lose your edge, यार? Make it ten."
+:*(''यार'': Buddy)
+|
+|-
+|rowspan=2|Match Start
+|{{AC|HarborAllyPhoenixMatchStart.mp3}} "अरे यार, Phoenix! Let's team up and boil these clowns."
+*(''अरे यार'': Hey/Oh/Come on man)
+|
+|-
+|{{AC|HarborAllyPhoenixMatchStart2.mp3}} "अरे यार, Phoenix! You look taller! Must be the way your carry yourself now. Or I'm shrinking."{{#tag:sup|{{patchv|11.10}}+}}
+*(''अरे यार'': Hey/Oh/Come on man)
+|
+|-
+|Round Start
+|{{AC|HarborAllyPhoenixRoundStart.mp3}} "Phoenix, don't run in and get yourself shot, unless that's the plan."
+|
+|-
+|rowspan=2|Commend
+|{{AC|HarborAllyPhoenixCommend.mp3}} "Phoenix, you're supposed to be all talk! What the hell happened?"
+|
+|-
+|{{AC|HarborAllyPhoenixCommend2.mp3}} "First class, Phoenix!"{{#tag:sup|{{patchv|11.10}}+}}
+|
+|-
+|Barrier Down
+|{{AC|HarborAllyPhoenixBarrierDown.mp3}} "Light them up, Phoenix!"
+|-
+|Kill
+|
+|{{AC|HarborEnemyPhoenixKill.mp3}} "Got their Phoenix!"
+|-
+|Last Kill
+|
+|{{AC|HarborEnemyPhoenixLastKill.mp3}} "You still have a long way to go, यार."
+*''("You still have a long way to go, buddy.")
+|-
+|{{Ai|Raze}}
+|Round Start
+|
+|{{AC|HarborEnemyRazeRoundStart.mp3}} "How much ordnance does that Raze carry around? Give me a break."
+|-
+|rowspan=2|{{Ai|Sage}}
+|Chat
+|
+:[[File:Sage icon.png|20px|link=Sage]] {{AC|SageAllyHarborChat.mp3}} "Harbor, after this, how about a little spicy food-off? I'll prepare a little 胡辣汤."
+:*(''胡辣汤'': Hot pepper soup)
+:[[File:Harbor icon.png|20px|link=Harbor]] {{AC|HarborAllySageChat.mp3}} ''*Harbor laughs*'' "We'll forge our friendship in the fires of {{w|misal pav}}!"
+|
+|-
+|Round Start
+|{{AC|HarborAllySageRoundStart.mp3}} "Stay sharp, you don't get a second chance in combat, unless Sage is involved."
+|
+|-
+|rowspan=5|{{Ai|Skye}}
+|Chat
+|
+:[[File:Skye icon.png|20px|link=Skye]] {{AC|SkyeAllyHarborChat.mp3}} "Harbor, whatever stunts you're planning today, count me in."
+:[[File:Harbor icon.png|20px|link=Harbor]] {{AC|HarborAllySkyeChat.mp3}} "You know I will! Can't pull a गंगा double without the double."
+:*(''गंगा'': Ganges)
+|
+|-
+|Round Start
+|{{AC|HarborAllySkyeRoundStart.mp3}} "Skye, you find their trail, I'll bring them down."
+|
+|-
+|Commend
+|{{AC|HarborAllySkyeCommend.mp3}} "Score one for the world's most dangerous tree hugger!"
+|
+|-
+|Barrier Down
+|{{AC|HarborAllySkyeBarrierDown.mp3}} "Skye, I'm with you."
+|
+|-
+|Kill
+|
+|{{AC|HarborEnemySkyeKill.mp3}} "Hang it up, buddy."
+|-
+|{{Ai|Sova}}
+|Round Start
+|
+|{{AC|HarborEnemySovaRoundStart.mp3}} "That guy really brought a bow and arrow to a gunfight."
+|-
+|rowspan=3|{{Ai|Tejo}}
+|Round Start
+|{{AC|HarborAllyTejoRoundStart}} "Tejo, let's move together. I'm sure we'll be subtle."{{#tag:sup|{{patchv|11.10}}+}}
+|
+|-
+|Commend
+|{{AC|HarborAllyTejoCommend.mp3}} "Tejo, you and that artillery! Like an artist at a canvas."{{#tag:sup|{{patchv|11.10}}+}}
+|
+|-
+|Last Kill
+|
+|{{AC|HarborEnemyTejoLastKill.mp3}} "No one puts us in a corner, not for long anyway."{{#tag:sup|{{patchv|11.10}}+}}
+|-
+|rowspan=2|{{Ai|Veto}}
+|Commend
+|{{AC|HarborAllyVetoCommend}} "Veto, I'd offer a hand but your alien one's far better."{{#tag:sup|{{patchv|11.10}}+}}
+|
+|-
+|Kill
+|
+|{{AC|HarborEnemyVetoKill}} "Enforce that."{{#tag:sup|{{patchv|11.10}}+}}
+|-
+|rowspan=2|{{Ai|Viper}}
+|Commend
+|{{AC|HarborAllyViperCommend.mp3}} "Viper, just checking. You are a scientist, correct?"
+|
+|-
+|Round Start
+|
+|{{AC|HarborEnemyViperRoundStart.mp3}} "Sure, their Viper can put up a big green wall, but you know mine's prettier."
+|-
+|{{Ai|Vyse}}
+|Commend
+|{{AC|HarborAllyVyseCommend.mp3}} "Vyse! I'll just step out of your way then, hm?"{{#tag:sup|{{patchv|11.10}}+}}
+|
+|-
+|rowspan=2|{{ai|Waylay}}
+|Commend
+|{{AC|HarborAllyWaylayCommend.mp3}} "अरे बाप रे Waylay! By the time they realized it was too late!"{{#tag:sup|{{patchv|11.10}}+}}(''अरे बाप रे'': Oh my)
+|
+|-
+|Last Kill
+|
+|{{AC|HarborEnemyWaylayLastKill.mp3}} "You may defy physics, but not me!"{{#tag:sup|{{patchv|11.10}}+}}
+|-
+|rowspan=3|{{Ai|Yoru}}
+|Match Start
+|{{AC|HarborAllyYoruMatchStart.mp3}} "So, Yoru, you painted over the priceless samurai mask? Huh, interesting choice."
+|
+|-
+|Barrier Down
+|
+|{{AC|HarborEnemyYoruBarrierDown.mp3}} "Keep tabs on that Yoru."
+|-
+|Kill
+|
+|{{AC|HarborEnemyYoruKill.mp3}} ''*Harbor scoffs*'' "Lone wolf."
+|}
+
+==Radio Commands==
+===Menu Index only===
+====Caution here====
+*{{AC|HarborCaution1.mp3}}{{AC|HarborCaution2.mp3}} "Target nearby."
+
+====Going Area====
+*{{AC|HarborGoingA1.mp3}}{{AC|HarborGoingA2.mp3}} "Going A."
+*{{AC|HarborGoingB1.mp3}}{{AC|HarborGoingB2.mp3}} "Going B."
+*{{AC|HarborGoingC1.mp3}}{{AC|HarborGoingC2.mp3}} "Going C."
+*{{AC|HarborGoingMid1.mp3}}{{AC|HarborGoingMid2.mp3}} "Going Mid."
+
+====Need Support====
+*{{AC|HarborHelp1.mp3}}{{AC|HarborHelp2.mp3}} "I need help."
+
+====On my way====
+*{{AC|HarborOnMyWay1.mp3}}{{AC|HarborOnMyWay2.mp3}} "On my way."
+
+====Play for picks====
+*{{AC|HarborPlayForPicks1.mp3}}{{AC|HarborPlayForPicks2.mp3}} "Play for picks."
+
+===Wheel Index only===
+====Encourage====
+*{{AC|HarborEncouraging1.mp3}}{{AC|HarborEncouraging2.mp3}}{{AC|HarborEncouraging3.mp3}} "We can do this."
+
+====I'll lurk====
+Only as Attackers during Buy Phase.
+*{{AC|HarborLurking1.mp3}}{{AC|HarborLurking2.mp3}} "I'm lurking."
+
+====I'll push out====
+Only as Defenders during Buy Phase.
+*{{AC|HarborPushingOut1.mp3}}{{AC|HarborPushingOut2.mp3}} "I'm pushing out."
+
+====I'm holding position====
+Only as Defenders during Buy Phase.
+*{{AC|HarborHoldingPosition1.mp3}}{{AC|HarborHoldingPosition2.mp3}} "Holding position."
+
+====Let's Attack====
+Only during Round Phase.
+*{{AC|HarborLetsAttack1.mp3}}{{AC|HarborLetsAttack2.mp3}} "Let's attack."
+
+====Let's hold positions====
+Only as Defenders during Buy Phase.
+*{{AC|HarborHoldPositions1.mp3}}{{AC|HarborHoldPositions2.mp3}} "Let's hold positions."
+
+====Let's play slow====
+Only as Attackers at anytime.
+*{{AC|HarborPlaySlow1.mp3}}{{AC|HarborPlaySlow2.mp3}} "Let's play slow."
+
+====Let's push out====
+Only as Defenders during Buy Phase.
+*{{AC|HarborPushOut1.mp3}}{{AC|HarborPushOut2.mp3}} "Let's push out."
+
+====Let's spread out====
+*{{AC|HarborSpreadOut1.mp3}}{{AC|HarborSpreadOut2.mp3}} "Let's spread out."
+
+====Nice Try====
+*{{AC|HarborNiceTry1.mp3}}{{AC|HarborNiceTry2.mp3}}{{AC|HarborNiceTry3.mp3}} "Excellent try."
+
+====Stick together====
+*{{AC|HarborStickTogether1.mp3}}{{AC|HarborStickTogether2.mp3}} "Stick together."
+
+===Menu and Wheel Index===
+====Commend====
+*{{AC|HarborCommend1.mp3}}{{AC|HarborCommend2.mp3}}{{AC|HarborCommend3.mp3}} "Hah, well done."
+
+====Fall Back====
+Menu Index at anytime, or Wheel Index only during Round Phase.
+*{{AC|HarborFallBack1.mp3}}{{AC|HarborFallBack2.mp3}} "Fall back."
+
+====Hello====
+*{{AC|HarborHello1.mp3}}{{AC|HarborHello2.mp3}}{{AC|HarborHello3.mp3}} "Hello."
+
+====I'll take point====
+Wheel Index only as Attackers during Buy Phase, or Menu Index at anytime regardless of Attackers or Defenders.
+*{{AC|HarborTakePoint1.mp3}}{{AC|HarborTakePoint2.mp3}} "Taking point."
+
+====Let's rush them (Radio Command)====
+*{{AC|HarborRush1.mp3}}{{AC|HarborRush2.mp3}} "Rush them."
+
+====Need healing====
+*{{AC|HarborHealing1.mp3}}{{AC|HarborHealing2.mp3}} "Medic."
+
+====No====
+*{{AC|HarborNo1.mp3}}{{AC|HarborNo2.mp3}}{{AC|HarborNo3.mp3}} "No."
+
+====Sorry====
+*{{AC|HarborSorry1.mp3}}{{AC|HarborSorry2.mp3}}{{AC|HarborSorry3.mp3}} "My mistake."
+
+====Thanks====
+*{{AC|HarborThanks1.mp3}}{{AC|HarborThanks2.mp3}}{{AC|HarborThanks3.mp3}} "शुक्रिया, thank you."
+
+====Ultimate Status====
+*{{AC|HarborUltDown1.mp3}}{{AC|HarborUltDown2.mp3}} "My ult isn't ready."
+*{{AC|HarborUltAlmost1.mp3}}{{AC|HarborUltAlmost2.mp3}} "My ult's almost ready."
+*{{AC|HarborUltReady1.mp3}}{{AC|HarborUltReady2.mp3}} "Ultimate ready."
+
+====Yes====
+*{{AC|HarborYes1.mp3}}{{AC|HarborYes2.mp3}}{{AC|HarborYes3.mp3}} "Yes."
+
+===Wheel Index requiring Minimap===
+For the following voicelines, the minimap must be open and then open ping wheel and activate strategy.
+====Faking====
+Only as Attackers during Buy Phase.
+*{{AC|HarborFaking1.mp3}}{{AC|HarborFaking2.mp3}} "I'm faking."
+*{{AC|HarborFakingA1.mp3}}{{AC|HarborFakingA2.mp3}} "I'm faking A."
+*{{AC|HarborFakingB1.mp3}}{{AC|HarborFakingB2.mp3}} "I'm faking B."
+*{{AC|HarborFakingC1.mp3}}{{AC|HarborFakingC2.mp3}} "I'm faking C."
+
+====I'm Going Here====
+As Defenders during Buy Phase, or as Attackers at anytime.
+*{{AC|HarborGoingA1.mp3}}{{AC|HarborGoingA2.mp3}} "Going A."
+*{{AC|HarborGoingB1.mp3}}{{AC|HarborGoingB2.mp3}} "Going B."
+*{{AC|HarborGoingC1.mp3}}{{AC|HarborGoingC2.mp3}} "Going C."
+*{{AC|HarborGoingMid1.mp3}}{{AC|HarborGoingMid2.mp3}} "Going Mid."
+
+====Let's Go Here====
+Only as Attackers during Buy Phase.
+*{{AC|HarborLetsGoA1.mp3}}{{AC|HarborLetsGoA2.mp3}} "Let's go A."
+*{{AC|HarborLetsGoB1.mp3}}{{AC|HarborLetsGoB2.mp3}} "Let's go B."
+*{{AC|HarborLetsGoC1.mp3}}{{AC|HarborLetsGoC2.mp3}} "Let's go C."
+*{{AC|HarborLetsGoHere1.mp3}}{{AC|HarborLetsGoHere2.mp3}} "Let's go here."
+
+====Let's rush them (Minimap)====
+Only as Attackers during Buy Phase.
+*{{AC|HarborLetsRush1.mp3}}{{AC|HarborLetsRush2.mp3}} "Let's rush them."
+*{{AC|HarborLetsRushA1.mp3}}{{AC|HarborLetsRushA2.mp3}} "Let's rush A."
+*{{AC|HarborLetsRushB1.mp3}}{{AC|HarborLetsRushB2.mp3}} "Let's rush B."
+*{{AC|HarborLetsRushC1.mp3}}{{AC|HarborLetsRushC2.mp3}} "Let's rush C."
+
+====Let's Sneak Here====
+Only as Attackers during Buy Phase.
+*{{AC|HarborSneakA1.mp3}}{{AC|HarborSneakA2.mp3}} "Let's sneak A."
+*{{AC|HarborSneakB1.mp3}}{{AC|HarborSneakB2.mp3}} "Let's sneak B."
+*{{AC|HarborSneakC1.mp3}}{{AC|HarborSneakC2.mp3}} "Let's sneak C."
+*{{AC|HarborSneakMid1.mp3}}{{AC|HarborSneakMid2.mp3}} "Let's sneak Mid."
+
+====Let's Stack Here====
+Only as Defenders during Buy Phase.
+*{{AC|HarborStack1.mp3}}{{AC|HarborStack2.mp3}} "Let's stack up."
+*{{AC|HarborStackA1.mp3}}{{AC|HarborStackA2.mp3}} "Let's stack A."
+*{{AC|HarborStackB1.mp3}}{{AC|HarborStackB2.mp3}} "Let's stack B."
+*{{AC|HarborStackC1.mp3}}{{AC|HarborStackC2.mp3}} "Let's stack C."
+*{{AC|HarborStackMid1.mp3}}{{AC|HarborStackMid2.mp3}} "Let's stack Mid."
+
+====Someone Go Here====
+As Attackers during Round Phase, or as Defenders at anytime.
+*{{AC|HarborNeedSomeoneA1.mp3}}{{AC|HarborNeedSomeoneA2.mp3}} "Someone go A."
+*{{AC|HarborNeedSomeoneB1.mp3}}{{AC|HarborNeedSomeoneB2.mp3}} "Someone go B."
+*{{AC|HarborNeedSomeoneC1.mp3}}{{AC|HarborNeedSomeoneC2.mp3}} "Someone go C."
+*{{AC|HarborNeedSomeoneMid1.mp3}}{{AC|HarborNeedSomeoneMid2.mp3}} "Someone go Mid."
+
+====Spike's here====
+Only as Defenders during Round Phase.
+*{{AC|HarborSpikeA1.mp3}}{{AC|HarborSpikeA2.mp3}} "Spike's A."
+*{{AC|HarborSpikeB1.mp3}}{{AC|HarborSpikeB2.mp3}} "Spike's B."
+*{{AC|HarborSpikeC1.mp3}}{{AC|HarborSpikeC2.mp3}} "Spike's C."
+*{{AC|HarborSpikeMid1.mp3}}{{AC|HarborSpikeMid2.mp3}} "Spike's Mid."
+*{{AC|HarborSpikeSpottedASpawn1.mp3}}{{AC|HarborSpikeSpottedASpawn2.mp3}} "Spike at Attacker Spawn."
+*{{AC|HarborSpikeSpottedDSpawn1.mp3}}{{AC|HarborSpikeSpottedDSpawn2.mp3}} "Spike at Defender Spawn."
+
+==Pings==
+===General===
+*{{AC|HarborPing1.mp3}}{{AC|HarborPing2.mp3}} "Right there."
+
+===Caution===
+*{{AC|HarborPingCaution1.mp3}}{{AC|HarborPingCaution2.mp3}} "Careful here."
+
+===Need support===
+*{{AC|HarborHelp1.mp3}}{{AC|HarborHelp2.mp3}} "I need help!"
+
+===On my mark===
+*{{AC|HarborOnMyMark1.mp3}}{{AC|HarborOnMyMark2.mp3}} "On my mark."
+
+===Ping gun===
+*{{AC|HarborPingGun1.mp3}}{{AC|HarborPingGun2.mp3}} "Weapon here."
+
+===Ping spike===
+*{{AC|HarborPingSpike1.mp3}}{{AC|HarborPingSpike2.mp3}} "Spike here."
+
+===Ping for spike defuse===
+*{{AC|HarborDefuseSpike1.mp3}}{{AC|HarborDefuseSpike2.mp3}} "Defuse the spike!"
+
+===Ping for spike plant===
+*{{AC|HarborPlantSpike1.mp3}}{{AC|HarborPlantSpike2.mp3}} "Plant the spike!"
+
+===Watching===
+*{{AC|HarborWatching1.mp3}}{{AC|HarborWatching2.mp3}} "I got eyes here."
+
+==Other lines==
+===Ability unusable===
+====[[Status Effect#Suppress|Suppressed]]====
+*{{AC|HarborCantUse1.mp3}}{{AC|HarborCantUse2.mp3}} "Can't use that."
+
+====On cooldown====
+*{{AC|HarborOnCooldown1.mp3}}{{AC|HarborOnCooldown2.mp3}} "Not yet."
+
+====No charges====
+*{{AC|HarborNoCharges1.mp3}}{{AC|HarborNoCharges2.mp3}} "No charges."
+
+===Enemy spotted===
+*{{AC|HarborEnemyA1.mp3}}{{AC|HarborEnemyA2.mp3}} "Target A."
+*{{AC|HarborEnemyB1.mp3}}{{AC|HarborEnemyB2.mp3}} "Target B."
+*{{AC|HarborEnemyC1.mp3}}{{AC|HarborEnemyC2.mp3}} "Target C."
+*{{AC|HarborEnemyASpawn1.mp3}}{{AC|HarborEnemyASpawn2.mp3}} "Target Attacker Spawn."
+*{{AC|HarborEnemyDSpawn1.mp3}}{{AC|HarborEnemyDSpawn2.mp3}} "Target Defender Spawn."
+*{{AC|HarborEnemyMid1.mp3}}{{AC|HarborEnemyMid2.mp3}} "Target Mid."
+
+====Multiple====
+*{{AC|HarborEnemiesA1.mp3}}{{AC|HarborEnemiesA2.mp3}} "Multiple targets A!"
+*{{AC|HarborEnemiesB1.mp3}}{{AC|HarborEnemiesB2.mp3}} "Multiple targets B!"
+*{{AC|HarborEnemiesC1.mp3}}{{AC|HarborEnemiesC2.mp3}} "Multiple targets C!"
+{{AC|HarborEnemiesASpawn1.mp3}}{{AC|HarborEnemiesASpawn2.mp3}} "Multiple targets Attacker Spawn!"
+*{{AC|HarborEnemiesDSpawn1.mp3}}{{AC|HarborEnemiesDSpawn2.mp3}} "Multiple targets Defender Spawn!"
+*{{AC|HarborEnemiesMid1.mp3}}{{AC|HarborEnemiesMid2.mp3}} "Multiple targets Mid!"
+
+===Reloading===
+*{{AC|HarborReloading1.mp3}}{{AC|HarborReloading2.mp3}} "Reloading."
+
+===Healed===
+*{{AC|HarborRelief1.mp3}}{{AC|HarborRelief2.mp3}}{{AC|HarborRelief3.mp3}} ''*Harbor sighs*''
+
+===Killed===
+*{{AC|HarborDeath1.mp3}}{{AC|HarborDeath2.mp3}}{{AC|HarborDeath3.mp3}} ''*Harbor groans*''
+
+===Resurrected via {{abi text|Resurrection}}===
+*{{AC|HarborResurrect.mp3}} "Back in business!"
+
+===Wounded===
+====Light damage====
+*{{AC|HarborPainLight1.mp3}}{{AC|HarborPainLight2.mp3}}{{AC|HarborPainLight3.mp3}} ''*Harbor groans*''
+
+====Medium damage====
+*{{AC|HarborPainMedium1.mp3}}{{AC|HarborPainMedium2.mp3}}{{AC|HarborPainMedium3.mp3}} ''*Harbor groans*''
+
+====Heavy damage====
+*{{AC|HarborPainHeavy1.mp3}}{{AC|HarborPainHeavy2.mp3}}{{AC|HarborPainHeavy3.mp3}} ''*Harbor groans*''
+
+====Fall damage====
+*{{AC|HarborPainFall1.mp3}}{{AC|HarborPainFall2.mp3}}{{AC|HarborPainFall3.mp3}} ''*Harbor groans*''
+
+==Unused lines==
+===Need utility here===
+*{{AC|HarborNeedUtilityHere1.mp3}}{{AC|HarborNeedUtilityHere2.mp3}} "Need util here."
+
+==Removed lines==
+===Last Kill Enemy MVP===
+*{{AC|HarborLastKillMVP1.mp3}} "As far as duels go, not bad."{{#tag:sup|-{{patchv|13.00}}}}
+
+==={{abi text|High Tide}} shut down by [[Status Effect#Suppress|Suppression]]===
+These voice lines were never used as suppressing Harbor while High Tide is active does not cause the wall to deactivate.
+*{{AC|HarborHighTideSuppressed1.mp3}}{{AC|HarborHighTideSuppressed2.mp3}} "Wall's dropping!"
+
+==={{abi text|Cascade}} Cast===
+*{{AC|HarborCascadeCast1.mp3}}{{AC|HarborCascadeCast3.mp3}} "Flooding them!"{{#tag:sup|-{{patchv|11.10}}}}
+*{{AC|HarborCascadeCast2.mp3}}{{AC|HarborCascadeCast4.mp3}} "Wave crashing!"{{#tag:sup|-{{patchv|11.10}}}}
+
+==={{abi text|Cove}} Cast===
+*{{AC|HarborCoveCast1.mp3}}{{AC|HarborCoveCast4.mp3}} "Shield going out!"{{#tag:sup|-{{patchv|11.10}}}}
+*{{AC|HarborCoveCast2.mp3}}{{AC|HarborCoveCast3.mp3}} "Blocking fire."{{#tag:sup|-{{patchv|11.10}}}}
+
+==={{abi text|Reckoning}} Enemy Cast===
+*{{AC|HarborUltEnemyCast.mp3}} "I suggest you move!"
+
+===Enemy spotted General===
+*{{AC|HarborEnemy1.mp3}}{{AC|HarborEnemy2.mp3}} "Target spotted."
+
+===Multiple Enemies spotted General===
+*{{AC|HarborEnemies1.mp3}}{{AC|HarborEnemies2.mp3}} "Multiple targets spotted!"
+
+===Be Quiet===
+*{{AC|HarborBeQuiet1.mp3}}{{AC|HarborBeQuiet2.mp3}} "Silence."
+
+===Rotate===
+*{{AC|HarborRotating1.mp3}}{{AC|HarborRotating2.mp3}} "Rotating."
+
+===Let's Rotate===
+*{{AC|HarborLetsRotate1.mp3}}{{AC|HarborLetsRotate2.mp3}} "Let's rotate."
+
+===Clear Area===
+*{{AC|HarborClearThisArea1.mp3}}{{AC|HarborClearThisArea2.mp3}} "Clear this area."
+
+===Hold===
+*{{AC|HarborHold1.mp3}}{{AC|HarborHold2.mp3}} "Hold on."
+
+===Push===
+*{{AC|HarborPush1.mp3}}{{AC|HarborPush2.mp3}} "Push forward."
+
+===Regroup===
+*{{AC|HarborRegroup1.mp3}}{{AC|HarborRegroup2.mp3}} "Regroup."
+
+===Ping Go here===
+*{{AC|HarborGoHere1.mp3}}{{AC|HarborGoHere2.mp3}} "Move here."
+
+==[[Range/Lore|The Range's lore assets]]==
+===[[Range/Lore/EP5|Episode 5]]===
+*{{AC|VoicemailBrimstone37.mp3}} "[[Brimstone]], it's Harbor. That was some 'New Hire' orientation, huh. Is it always that dangerous to join your crew or did I get special treatment, haha... Jokes aside, I owe you my thanks. You put your whole team on the line to save me. That's... not something I'll forget. It's hard to trust anyone after being on the run. But seeing the stunts you pull for a rescue, well... that's a start. But as for the immediate future, I'll keep watching my own back. Just until the nerves settle."
+*{{AC|Research Wing Recording Complete.mp3}} ''(For the entire transcription between Astra and [[Harbor]], see [[Range/Lore/EP5#Cypher's_Office_2|Range/Lore/EP5 → v5.08 → Cypher's Office]].)''
+*{{AC|VoicemailBrimstone38.mp3}} "Brimstone. [[Astra]], [[Killjoy]], and I finished our analysis. We looked at it a dozen different ways, and it always comes back the same. The [[City of Flowers]] on [[Omega]] is a multiverse nexus. If [[Legion]] powers up that nexus with Alpha's version of the city ruined... there's nothing left to absorb the shock... the result... The result would be catastrophic, millions of lives in my home country, lost, that's not a scenario I'm willing to entertain. No one else can stop Legion from pulling the trigger, this is on us! So get a team ready, and make sure I'm at the top of the list!"
+*{{AC|Skye Audio Log Omega Mission Complete.mp3}} ''(For the entire transcription between [[Astra]], Harbor, [[Skye]] and Atlas troops, see [[Range/Lore/EP5#Cypher's_Office_4|Range/Lore/EP5 → v5.12 → Cypher's Office]].)''
+
+===[[Range/Lore/EP8|Episode 8]]===
+*{{AC|VoicemailBrimstone82.mp3}} ''(This voicemail was left by both Harbor and Astra at the same time.)''
+**[[File:Harbor icon.png|25px|link=Harbor]]: "Brimstone, Astra and I are over at the α-[[Lotus]] site, or should I say what's left of it. We wanted to come back and see if there was any pertinent information here now that we know a little about this [[Scions of Hourglass]] group. Suffice to say, while the [[Omega]] site is still bristling with [[radianite]] signatures, this place has been scrubbed clean. We've also been- oh-... yeah yeah yeah... one moment..."
+**[[File:Astra icon.png|25px|link=Astra]]: "Hey, Water Boy! Hand me the phone! Brim, Harbor gave you the deets, hm? Look, Hourglass kills scientists instead of kidnapping them and they tried to leave no witnesses to that journal, huh? And now this with the Nexus?! This is about erasing information, keeping it from the public! That place the journal describes? It will show us how deep this goes! Of this I am certain!"
+
+===[[Range/Lore/V25|Season 2025]]===
+*{{AC|VoicemailBrimstone118.mp3}} "Hi, Brimstone. Just so you know, my artifact's been acting strange lately. Nothing dangerous, just a bit... restless. I can't always interpret these temperamental episodes but it's best not to ignore them. Like wildlife before a storm. We might not know why they're uneasy, but they do. Anyway, [[Astra]] and I will look into it and keep you informed. Wish us luck."
+
+===[[Range/Lore/V26|Season 2026]]===
+*{{AC|VoicemailBrimstone130.mp3}} "Brimstone, I've been thinking about what [[Sage]] mentioned earlier. Huh, I think it's a great idea, especially if she brings a few other healers along, they might learn a thing or two with her up in the mountains. Plus, it could be a nice recentering of sorts. Prioritizing their well-being is prioritizing ours, after all. Just let me talk to [[Waylay]], hm? See if the two of us can cover training here while Sage is away. Shouldn't be a problem."
+
+==Notes==
+:''To easily see which quotes were added corresponding to the patch, use your browser's Find function and type the patch number (e.g. v11.09+).
+*{{ui|Removed}} 1 voice line removed from patch {{patchv|13.00}}, documented in the patch notes.
+*{{ui|Added}} 4 voice lines removed from patch {{patchv|11.10}}, undocumented in the patch notes.
+*{{ui|Added}} 24 voice lines added from patch {{patchv|11.10}}, documented in the patch notes.
+*{{ui|Added}} 1 voice line added from patch {{patchv|11.09}}, undocumented in the patch notes.
+*Additional radio commands added in patch {{patchv|8.11}} are not mentioned in this page.
+*Other voice lines removed were at an unknown timeframe.
+
+==Navigation==
+{{Navbox agents}}
+[[Category:Quotes]]

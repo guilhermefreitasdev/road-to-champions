@@ -1,0 +1,838 @@
+{{TOCright}}
+This is a '''list of quotes by {{ai|Brimstone}}'''. Brimstone is voiced by {{w|Steve Blum}} in English. Brimstone has a total of {{PAGESINCATEGORY:Brimstone Quotes}} files of quotes including unused and removed lines, and excluding [[#The Range's lore assets|The Range's lore assets]]. 
+
+A downloadable folder containing all the audio files on this page can be found [https://drive.google.com/drive/folders/1Fir2ryLbh-wq5pxmTDFP7C3lE3fplr0d?usp=sharing here].
+
+==Agent Selected==
+*{{AC|BrimstonePick.mp3}} "They think I'm an old dog? Heh, I'll show 'em just how many tricks I know."
+
+==Abilities==
+==={{abi text|Stim Beacon}}===
+====Cast====
+*{{AC|BrimstoneStimBeaconCast1.mp3}}{{AC|BrimstoneStimBeaconCast2.mp3}} "Stim Beacon here."
+*{{AC|BrimstoneStimBeaconCast3.mp3}}{{AC|BrimstoneStimBeaconCast4.mp3}} "Stim Beacon down."
+
+==={{abi text|Incendiary}}===
+====Cast====
+*{{AC|BrimstoneIncendiaryCast1.mp3}}{{AC|BrimstoneIncendiaryCast2.mp3}} "Molly!"
+
+====Kill====
+*{{AC|BrimstoneIncendiaryKill.mp3}} "Toasted!"
+
+==={{abi text|Sky Smoke}}===
+====Cast====
+*{{AC|BrimstoneSkySmokeCast1.mp3}}{{AC|BrimstoneSkySmokeCast2.mp3}} "Smokes down."
+*{{AC|BrimstoneSkySmokeCast3.mp3}}{{AC|BrimstoneSkySmokeCast4.mp3}} "Launching smoke."
+
+====Cast all charges====
+*{{AC|BrimstoneSkySmokeAllCharges1.mp3}}{{AC|BrimstoneSkySmokeAllCharges2.mp3}} "Fully smoked!"{{#tag:sup|{{patchv|4.10}}+}}
+
+==={{abi text|Orbital Strike}}===
+====Ally Cast====
+*{{AC|BrimstoneUltAllyCast.mp3}} "Open up the sky!"
+
+====Enemy Cast====
+*{{AC|BrimstoneUltEnemyCast.mp3}} "Prepare for hellfire!"
+
+====Kill====
+*{{AC|BrimstoneUltMultiKill.mp3}} "Deep fried!"
+
+==Buy Phase==
+===Match Start===
+*{{AC|BrimstoneMatchStart1.mp3}} "No one die on me! We're all going home."
+*{{AC|BrimstoneMatchStart2.mp3}} "They can throw the whole playbook at us. I've seen it all before."
+*{{AC|BrimstoneMatchStart3.mp3}} "I can't close the settings menu on my bracer. How do I- oh, got it."
+*{{AC|BrimstoneMatchStart4.mp3}} "Different battlefield, same crap."
+*{{AC|BrimstoneMatchStart5.mp3}} "They've got one ugly lookin' crew. No offense to any of us."
+*{{AC|BrimstoneMatchStart6.mp3}} "Failure is the great teacher. So let's teach 'em somethin'!"
+*{{AC|BrimstoneMatchStart7.mp3}} "Okay kids, we've got company. Pretend you all get along."
+*{{AC|BrimstoneMatchStart8.mp3}} "Alright team, let's go write this war story shall we?"
+
+====Attacking====
+*{{AC|BrimstoneMatchStartAttack1.mp3}} "Let's ready up! We're here for radianite, and we're not leaving 'til it's ours."{{#tag:sup|{{patchv|5.06}}+}}
+
+====Defending====
+*{{AC|BrimstoneMatchStartDefense1.mp3}} "They picked the wrong day to mess with our world."{{#tag:sup|{{patchv|5.06}}+}}
+
+====[[Fracture]]====
+*{{AC|BrimstoneMatchStartFracture.mp3}} "What did Kingdom get itself into this time?"{{#tag:sup|{{patchv|5.06}}+}}
+
+====[[Split]]====
+*{{AC|BrimstoneMatchStartSplit.mp3}} "I would hate working here. You couldn't pay me to sit at a desk."
+
+===Round Start===
+*{{AC|BrimstoneRoundStart1.mp3}} "Pay attention. Might learn something."
+*{{AC|BrimstoneRoundStart2.mp3}} "No more doubts. We're ready."
+*{{AC|BrimstoneRoundStart4.mp3}} "Let's ruin their day."
+*{{AC|BrimstoneRoundStart5.mp3}} "I'll teach 'em to respect their elders."
+*{{AC|BrimstoneRoundStart6.mp3}} "Shoot the bad guys! How's that for a plan?"
+*{{AC|BrimstoneRoundStart7.mp3}} "Stay in range of my stim beacon, and we'll mow them down."
+*{{AC|BrimstoneRoundStart8.mp3}} "Ugh, who am I kiddin'. My knees are gonna kill after this."
+*{{AC|BrimstoneRoundStart9.mp3}} "Remember to talk to each other out there. If we communicate, we win."
+*{{AC|BrimstoneRoundStart10.mp3}} "Drink some water, reload your mags, and let's get back out there."
+*{{AC|BrimstoneRoundStart11.mp3}} "My smokes can block the enemy's line of sight. Once they're blind, we move."
+
+====Last round won====
+*{{AC|BrimstoneRoundWon1.mp3}} "Just like we practiced."
+*{{AC|BrimstoneRoundWon2.mp3}} "That's the way."
+*{{AC|BrimstoneRoundWon3.mp3}} "Good! Again."
+*{{AC|BrimstoneRoundWon4.mp3}} "Damn right we crushed it! Ugh, even as I was saying it- when Jett says it- you know what, forget it."
+
+=====While in the lead=====
+*{{AC|BrimstoneLead1.mp3}} "What do they think this is, a backyard scrimmage?"
+*{{AC|BrimstoneLead2.mp3}} "Keep taking this seriously, even if they aren't."
+*{{AC|BrimstoneLead3.mp3}} "What are they doing over there? When the play's not working, call an audible!"
+
+=====Making a comeback=====
+*{{AC|BrimstoneComeback1.mp3}} "Now we're landing haymakers!"
+*{{AC|BrimstoneComeback2.mp3}} "Punch us in the teeth, we spit back blood."
+*{{AC|BrimstoneComeback3.mp3}} "Finally off the ropes."
+*{{AC|BrimstoneComeback4.mp3}} "Never count out the underdog."
+
+===Last round in the half===
+====Attacking====
+*{{AC|BrimstoneLastRound1.mp3}} "If you saved, spend it."
+
+====Defending====
+*{{AC|BrimstoneLastRound2.mp3}} "Half time! Don't save a thing."
+
+===Match Point===
+*{{AC|BrimstoneMatchPoint1.mp3}} "You've earned this win, let's make it official!"
+*{{AC|BrimstoneMatchPoint2.mp3}} "Finish 'em off!"
+*{{AC|BrimstoneMatchPoint3.mp3}} "The day is almost ours, take it!"
+
+===Shop===
+====Let's Buy====
+*{{AC|BrimstoneBuying1.mp3}}{{AC|BrimstoneBuying2.mp3}} "Grabbing gear."
+
+====Let's Save====
+*{{AC|BrimstoneSaving1.mp3}}{{AC|BrimstoneSaving2.mp3}} "I'm saving."
+
+====I Have Extra Creds====
+*{{AC|BrimstoneOffer1.mp3}}{{AC|BrimstoneOffer2.mp3}} "I've got cash, anyone need something?"
+
+====Requested====
+*{{AC|BrimstoneRequest1.mp3}}{{AC|BrimstoneRequest2.mp3}} "Need equipment."
+
+===Barrier Down===
+*{{AC|BrimstoneBarrierDown1.mp3}} "They've got nerve!"
+*{{AC|BrimstoneBarrierDown2.mp3}} "Who do they think they are?"
+*{{AC|BrimstoneBarrierDown3.mp3}} "Cut 'em down to size!"
+*{{AC|BrimstoneBarrierDown4.mp3}} "This ain't what they signed up for."
+*{{AC|BrimstoneBarrierDown5.mp3}} "Don't get rusty."
+*{{AC|BrimstoneBarrierDown6.mp3}} "Rein 'em in!"
+*{{AC|BrimstoneBarrierDown7.mp3}} "Light 'em up!"
+*{{AC|BrimstoneBarrierDown8.mp3}} "Stay sharp."
+*{{AC|BrimstoneBarrierDown9.mp3}} "Have at 'em."
+*{{AC|BrimstoneBarrierDown10.mp3}} "Steady."
+*{{AC|BrimstoneBarrierDown11.mp3}} "It's our turn."
+*{{AC|BrimstoneBarrierDown12.mp3}} "Time to take this hill."
+*{{AC|BrimstoneBarrierDown13.mp3}} "Together!"
+*{{AC|BrimstoneBarrierDown14.mp3}} "Watch and learn."
+*{{AC|BrimstoneBarrierDown15.mp3}} "You know what to do."
+*{{AC|BrimstoneBarrierDown16.mp3}} "Safeties off."
+
+==Spike==
+===Forgotten in spawn===
+*{{AC|BrimstoneForgotSpike1.mp3}} "I like the enthusiasm, but no one grabbed the spike."
+*{{AC|BrimstoneForgotSpike2.mp3}} "Anyone wanna get the spike?"
+
+===Ally carrier down===
+*{{AC|BrimstoneSpikeDown1.mp3}}{{AC|BrimstoneSpikeDown2.mp3}} "Our carrier's down."
+
+===Dropped===
+*{{AC|BrimstoneSpikeDropped1.mp3}}{{AC|BrimstoneSpikeDropped2.mp3}} "Spike dropped."
+
+===Retrieved===
+*{{AC|BrimstoneSpikePickedUp1.mp3}}{{AC|BrimstoneSpikePickedUp2.mp3}} "Got the spike."
+
+===Planted===
+*{{AC|BrimstoneSpikePlanted1.mp3}}{{AC|BrimstoneSpikePlanted2.mp3}} "Spike planted."
+
+===Spotted===
+*{{AC|BrimstoneSpikeSpottedA1.mp3}}{{AC|BrimstoneSpikeSpottedA2.mp3}} "Spike spotted A."
+*{{AC|BrimstoneSpikeSpottedB1.mp3}}{{AC|BrimstoneSpikeSpottedB2.mp3}} "Spike spotted B."
+*{{AC|BrimstoneSpikeSpottedC1.mp3}}{{AC|BrimstoneSpikeSpottedC2.mp3}} "Spike spotted C."
+*{{AC|BrimstoneSpikeSpottedASpawn1.mp3}}{{AC|BrimstoneSpikeSpottedASpawn2.mp3}} "Spike in Attacker Spawn."
+*{{AC|BrimstoneSpikeSpottedDSpawn1.mp3}}{{AC|BrimstoneSpikeSpottedDSpawn2.mp3}} "Spike in Defender Spawn."
+*{{AC|BrimstoneSpikeSpottedMid1.mp3}}{{AC|BrimstoneSpikeSpottedMid2.mp3}} "Spike spotted Mid."
+
+===Defuse resumed===
+*{{AC|BrimstoneDefuseResumed1.mp3}}{{AC|BrimstoneDefuseResumed2.mp3}} "Nice try, kid."
+
+===Defuse time running out===
+*{{AC|BrimstoneDefuseLate1.mp3}}{{AC|BrimstoneDefuseLate2.mp3}} "Hold on to your hats."
+
+===Defuse successful===
+*{{AC|BrimstoneDefuseComplete1.mp3}} "Not the boom you hoped for."
+*{{AC|BrimstoneDefuseComplete2.mp3}} "Sorry to spoil the party."
+
+==Kill==
+*{{AC|BrimstoneKill1.mp3}} "Taken down."
+*{{AC|BrimstoneKill2.mp3}} "Outta here."
+*{{AC|BrimstoneKill3.mp3}} "Goner."
+*{{AC|BrimstoneKill4.mp3}} "Down you go."
+*{{AC|BrimstoneKill5.mp3}} "Enemy down."
+*{{AC|BrimstoneKill6.mp3}} "Who trained you?"
+*{{AC|BrimstoneKill7.mp3}} "See ya!"
+*{{AC|BrimstoneKill8.mp3}} "Gotcha."
+*{{AC|BrimstoneKill9.mp3}} "Now we're cookin'."
+*{{AC|BrimstoneKill10.mp3}} "Down and out."
+
+===Headshot===
+*{{AC|BrimstoneHeadshot1.mp3}} "Headshot!"
+*{{AC|BrimstoneHeadshot2.mp3}} "Still got it!"
+*{{AC|BrimstoneHeadshot3.mp3}} "On the money."
+*{{AC|BrimstoneHeadshot4.mp3}} "Hotshot."
+*{{AC|BrimstoneHeadshot5.mp3}} "Right between the eyes."
+*{{AC|BrimstoneHeadshot6.mp3}} "Like butter, baby."
+
+===[[Melee]]===
+*{{AC|BrimstoneMeleeKill1.mp3}} "Cut down."
+*{{AC|BrimstoneMeleeKill2.mp3}} "That'll work."
+
+===Triple===
+*{{AC|BrimstoneTriple1.mp3}}{{AC|BrimstoneTriple2.mp3}} "That's three."
+
+===Quadra===
+*{{AC|BrimstoneQuadra1.mp3}}{{AC|BrimstoneQuadra2.mp3}} "And four."
+
+===One kill remaining (game-mode specific)===
+*{{AC|BrimstoneOneKillLeft1.mp3}}{{AC|BrimstoneOneKillLeft2.mp3}} "Finish it up."
+
+==Round End==
+===Ace===
+*{{AC|BrimstoneAce1.mp3}} "Get off my lawn!"
+*{{AC|BrimstoneAce2.mp3}} "I'm king of this hill!"
+*{{AC|BrimstoneAce3.mp3}} "This horse kicks!"
+
+===Clutch===
+*{{AC|BrimstoneClutch1.mp3}} "Who's the old dog now?"{{#tag:sup|{{patchv|2.05}}+}}
+*{{AC|BrimstoneClutch2.mp3}} "That's why they put me in charge."
+*{{AC|BrimstoneClutch3.mp3}} "There's some things you just can't teach."
+
+===Flawless or Team Ace===
+*{{AC|BrimstoneFlawless1.mp3}} "Fish in a barrel."
+*{{AC|BrimstoneFlawless2.mp3}} "Ain't much room for improvement!"
+*{{AC|BrimstoneFlawless3.mp3}} "They're out-thought, outfought!"
+
+===Thrifty===
+*{{AC|BrimstoneThrifty1.mp3}} "Any cheaper, and it'd be just me and a bottle of scotch."
+
+===Last Kill===
+*{{AC|BrimstoneLastKill1.mp3}} "That's the lot of 'em."
+*{{AC|BrimstoneLastKill2.mp3}} "Bagged and tagged."
+*{{AC|BrimstoneLastKill3.mp3}} "Not one left standing."
+*{{AC|BrimstoneLastKill4.mp3}} "Okay, time for a protein shake."
+*{{AC|BrimstoneLastKill5.mp3}} "We got five, that's bingo."
+
+====Enemy MVP====
+*{{AC|BrimstoneLastKillMVP.mp3}} "Not so tough after all."
+
+====Using [[Melee]]====
+*{{AC|BrimstoneLastKillMelee1.mp3}} "Sometimes you gotta get your hands dirty."
+*{{AC|BrimstoneLastKillMelee2.mp3}} "I don't need a gun."
+
+===Low HP===
+*{{AC|BrimstoneLowHP1.mp3}} "It's just a scratch!"
+*{{AC|BrimstoneLowHP2.mp3}} ''*Brimstone winces*'' "I'm too stubborn to die!"
+
+==Match End==
+===Match Win===
+*{{AC|BrimstoneMatchWin1.mp3}} "I'll never retire."
+*{{AC|BrimstoneMatchWin2.mp3}} "Feelin' proud."
+*{{AC|BrimstoneMatchWin3.mp3}} "Never had a doubt!"
+
+====[[Ascent]]====
+*{{AC|BrimstoneMatchWinAscent.mp3}} "Good work! Now, let's evac this rock before it falls out of the sky!"
+
+===Runner-up (game-mode specific)===
+*{{AC|BrimstoneRunnerUp1.mp3}} "I'll win the next one."
+*{{AC|BrimstoneRunnerUp2.mp3}} "I let them win."
+*{{AC|BrimstoneRunnerUp3.mp3}} "Hey, not half bad."
+
+==Agent-specific interactions==
+{| class="wikitable sortable"
+!To Agent
+!Scenario
+!width=40%; class=unsortable|Ally
+!width=40%; class=unsortable|Enemy
+|-
+|{{ai|Astra}}
+|Round Start
+|{{AC|BrimstoneAllyAstraRoundStart.mp3}} "Astra, help me manage the field? A bird's eye view is one thing, then there's whatever the hell you got."
+|{{AC|BrimstoneEnemyAstraRoundStart.mp3}} "Don't let their Astra dictate our battle. Find the angle, take control."
+|
+|-
+|rowspan=6|{{ai|Breach}}
+|Chat
+|
+:[[File:Breach icon.png|20px|link=Breach]] {{AC|BreachAllyBrimstoneChat.mp3}} "Brimstone, the corporate sellout! Here to look out for Kingdom's special interests?"
+:[[File:Brimstone icon.png|20px|link=Brimstone]] {{AC|BrimstoneAllyBreachChat.mp3}} "You don't know what you're talking about, Breach."{{#tag:sup|{{patchv|2.05}}+}}
+|
+|-
+|Commend
+|{{AC|BrimstoneAllyBreachCommend.mp3}} "You did well, Breach. Don't expect a hug."
+|
+|-
+|Match Start
+|
+|{{AC|BrimstoneEnemyBreachMatchStart.mp3}} "An enemy Breach? Ugh, there goes my good day."
+|-
+|Round Start
+|
+|{{AC|BrimstoneEnemyBreachRoundStart.mp3}} "Someone knock that Breach on his ass."
+|-
+|Barrier Down
+|
+|{{AC|BrimstoneEnemyBreachBarrierDown.mp3}} "That Breach is asking for it."
+|-
+|Kill
+|
+|{{AC|BrimstoneEnemyBreachKill.mp3}} "Jackass."
+|-
+|rowspan=4|{{ai|Brimstone}}
+|Match Start
+|
+|{{AC|BrimstoneEnemyBrimstoneMatchStart.mp3}} "If any of you got a problem with me, take it out on my double."
+|-
+|Round Start
+|
+|{{AC|BrimstoneEnemyBrimstoneRoundStart.mp3}} "That Brimstone's a stubborn ass. Heh, reminds me of someone."
+|-
+|Barrier Down
+|
+|{{AC|BrimstoneEnemyBrimstoneBarrierDown.mp3}} "One Brimstone is enough."
+|-
+|Last Kill
+|
+|{{AC|BrimstoneEnemyBrimstoneLastKill.mp3}} "Pour one out." ''*Brimstone sighs*''
+|-
+|rowspan=3|{{ai|Chamber}}
+|Commend
+|{{AC|BrimstoneAllyChamberCommend.mp3}} "Haha, show-off!"{{#tag:sup|{{patchv|5.06}}+}}
+|-
+|Round Start
+|
+|{{AC|BrimstoneEnemyChamberRoundStart.mp3}} "For a straight shooter, that Chamber sure can talk in circles."{{#tag:sup|{{patchv|5.06}}+}}
+|-
+|Barrier Down
+|
+|{{AC|BrimstoneEnemyChamberBarrierDown.mp3}} "Stay out of Chamber's sights."{{#tag:sup|{{patchv|5.06}}+}}
+|-
+|{{ai|Cypher}}
+|Round Start
+|
+|{{AC|BrimstoneEnemyCypherRoundStart.mp3}} "So they got a Cypher. He'll see what we want him to see."
+|-
+|rowspan=2|{{ai|Jett}}
+|Round Start
+|{{AC|BrimstoneAllyJettRoundStart.mp3}} "Jett, remember to stretch. I don't want you to sprain an ankle at 90 miles an hour."
+|
+|-
+|Kill
+|
+|{{AC|BrimstoneEnemyJettKill.mp3}} "Sit still!"
+|-
+|rowspan=4|{{ai|KAYO}}
+|Chat
+|
+:[[File:KAYO icon.png|20px|link=KAYO]] {{AC|KAYOAllyBrimstoneChat.mp3}} "Brimstone, game plan! Let's do what we did at the Battle of Hell's Bridge."
+:[[File:Brimstone icon.png|20px|link=Brimstone]] {{AC|BrimstoneAllyKAYOChat.mp3}} "KAY/O, I have no idea what you're talking about."{{#tag:sup|{{patchv|5.06}}+}}
+|
+|-
+|Match Start
+|{{AC|BrimstoneAllyKAYOMatchStart.mp3}} "There's something about you, KAY/O. Don't know what it is yet, but I like it."{{#tag:sup|{{patchv|5.06}}+}}
+|
+|-
+|Barrier Down
+|{{AC|BrimstoneAllyKAYOBarrierDown.mp3}} "Get a move on, agent."{{#tag:sup|{{patchv|5.06}}+}}
+|
+|-
+|Last Kill
+|
+|{{AC|BrimstoneEnemyKAYOLastKill.mp3}} "Sorry friend, just doing my job."{{#tag:sup|{{patchv|5.06}}+}}
+|-
+|rowspan=6|{{ai|Killjoy}}
+|Match Start
+|{{AC|BrimstoneAllyKilljoyMatchStart.mp3}} "Killjoy, do you control the admin account on my bracer? I... might need you to reset the password."
+|
+|-
+|Chat
+|
+:[[File:Killjoy icon.png|20px|link=Killjoy]] {{AC|KilljoyAllyBrimstoneChat.mp3}} "Brim, have you considered embedding your bracer in your limb? I can do that you know."
+:[[File:Brimstone icon.png|20px|link=Brimstone]] {{AC|BrimstoneAllyKilljoyChat.mp3}} "Killjoy, I say this with love, but stay the hell away from my arm!"
+|
+|-
+|Round Start
+|{{AC|BrimstoneAllyKilljoyRoundStart.mp3}} "Killjoy, control your bots! That turret keeps looking at me funny."
+|
+|-
+|Barrier Down
+|{{AC|BrimstoneAllyKilljoyBarrierDown.mp3}} "Killjoy, I'm counting on that noggin'."
+|
+|-
+|Kill
+|
+|{{AC|BrimstoneEnemyKilljoyKill.mp3}} "Sorry kid."
+|-
+|Last Kill
+|
+|{{AC|BrimstoneEnemyKilljoyLastKill.mp3}} "You left me no choice, kid."
+|-
+|{{ai|Neon}}
+|Round Start
+|{{AC|BrimstoneAllyNeonRoundStart.mp3}} "Let's roll, Neon. Show us what that K-SEC training did for ya."
+|
+|-
+|rowspan=2|{{ai|Omen}}
+|Round Start
+|{{AC|BrimstoneAllyOmenRoundStart.mp3}} "The enemy needs a good scare. Omen! You're up!"
+|{{AC|BrimstoneEnemyOmenRoundStart.mp3}} "Human or not, that Omen can be killed."
+|-
+|Commend
+|{{AC|BrimstoneAllyOmenCommend.mp3}} "Omen! You are a force of nature!"
+|
+|-
+|rowspan=5|{{ai|Phoenix}}
+|Match Start
+|{{AC|BrimstoneAllyPhoenixMatchStart.mp3}} "I wanna see heroes, not heroics. Lookin' at you, Phoenix!"
+|{{AC|BrimstoneEnemyPhoenixMatchStart.mp3}} "We're fighting a Phoenix? Book your vacations now, this is gonna be exhausting."
+|-
+|Commend
+|{{AC|BrimstoneAllyPhoenixCommend.mp3}} "Phoenix, if you keep pulling stunts like that, you can brag as much as you like."
+|
+|-
+|Barrier Down
+|
+|{{AC|BrimstoneEnemyPhoenixBarrierDown.mp3}} "Ugh, shut that Phoenix up!"
+|-
+|Kill
+|
+|{{AC|BrimstoneEnemyPhoenixKill.mp3}} "Fire's out."
+|-
+|Last Kill
+|
+|{{AC|BrimstoneEnemyPhoenixLastKill.mp3}} "That's how the boss does it."
+|-
+|rowspan=3|{{ai|Raze}}
+|Chat
+|
+:[[File:Raze icon.png|20px|link=Raze]] {{AC|RazeAllyBrimstoneChat.mp3}} "Brimstone, chefinho! Thanks for the paint canisters, ha, best gift ever!"
+:*(''Chefinho'': Boss)
+:[[File:Brimstone icon.png|20px|link=Brimstone]] {{AC|BrimstoneAllyRazeChat.mp3}} "You bet, and don't use them all in one day."
+|-
+|Match Start
+|
+|{{AC|BrimstoneEnemyRazeMatchStart.mp3}} "Oh, perfect, a hostile Raze. Kill her before she brings this whole place down on top of us."
+|-
+|Barrier Down
+|{{AC|BrimstoneAllyRazeBarrierDown.mp3}} "Raze, give 'em hell!"
+|
+|-
+|rowspan=2|{{ai|Reyna}}
+|Match Start
+|
+|{{AC|BrimstoneEnemyReynaMatchStart.mp3}} "It's open season on the enemy Reyna. If you get a shot at that heart, take it."
+|-
+|Round Start
+|
+|{{AC|BrimstoneEnemyReynaRoundStart.mp3}} "Let's kill that Reyna! Our team's got soul, I wanna keep it that way."
+|-
+|rowspan=3|{{ai|Sage}}
+|Match Start
+|{{AC|BrimstoneAllySageMatchStart.mp3}} "Sage, if I die out there, you're in charge. Someone has to look after these knuckleheads."
+|
+|-
+|Round Start
+|{{AC|BrimstoneAllySageRoundStart.mp3}} "Sage, remember that you can't save everyone. We save who we can, that's enough."
+|
+|-
+|Commend
+|{{AC|BrimstoneAllySageCommend.mp3}} "Sage, you're working miracles."
+|
+|-
+|{{ai|Skye}}
+|Match Start
+|{{AC|BrimstoneAllySkyeMatchStart.mp3}} "Take us in, Skye! I want you on the front lines. Bring the whole damn zoo."
+|
+|-
+|rowspan=5|{{ai|Sova}}
+|Match Start
+|{{AC|BrimstoneAllySovaMatchStart.mp3}} "Sova, you look after yourself. You already lost an eye for us. One's enough."
+|
+|-
+|rowspan=2|Round Start
+|{{AC|BrimstoneAllySovaRoundStart.mp3}} "Sova, we need eyes. Show us where they are."
+|
+|-
+|{{AC|BrimstoneAllySovaRoundStart2.mp3}} "Sova, we need eyes on the enemy. Tell us where they are."
+|
+|-
+|Barrier Down
+|{{AC|BrimstoneAllySovaBarrierDown.mp3}} "I'm with you Sova."
+|
+|-
+|Kill
+|
+|{{AC|BrimstoneEnemySovaKill.mp3}} "At ease, soldier."
+|-
+|rowspan=6|{{ai|Viper}}
+|Chat
+|
+:[[File:Viper icon.png|20px|link=Viper]] {{AC|ViperAllyBrimstoneChat.mp3}} "Brimstone, we really need to put an age floor on VALORANT. I can't take this... youth."
+:[[File:Brimstone icon.png|20px|link=Viper]] {{AC|BrimstoneAllyViperChat.mp3}} "They're the future Sabine! You know you care about them."
+|
+|-
+|Match Start
+|{{AC|BrimstoneAllyViperMatchStart.mp3}} "Viper, watch those toxins this time. Not breathing in that crap again."
+|
+|-
+|Round Start
+|{{AC|BrimstoneAllyViperRoundStart.mp3}} "You want revenge Viper? Now's your chance."
+|{{AC|BrimstoneEnemyViperRoundStart.mp3}} "That poor Viper, we didn't have to be your enemy."
+|-
+|Commend
+|{{AC|BrimstoneAllyViperCommend.mp3}} "Careful Viper, you'll scare the kids!"
+|
+|-
+|Barrier Down
+|{{AC|BrimstoneAllyViperBarrierDown.mp3}} "Steady Viper."
+|
+|-
+|Last Kill
+|
+|{{AC|BrimstoneEnemyViperLastKill.mp3}} "I hope you find peace."
+|-
+|{{ai|Yoru}}
+|Chat
+|
+:[[File:Yoru icon.png|20px|link=Yoru]] {{AC|YoruAllyBrimstoneChat.mp3}} "Brimstone, when we're done here, let's grab our bikes."
+:[[File:Brimstone icon.png|20px|link=Brimstone]] {{AC|BrimstoneAllyYoruChat.mp3}} "I like the way you think. We're overdue for a ride, aren't we?"
+|
+|}
+
+==Radio Commands==
+===Menu Index only===
+====Caution here====
+*{{AC|BrimstoneCaution1.mp3}}{{AC|BrimstoneCaution2.mp3}} "Enemies are near."
+
+====Going Area====
+*{{AC|BrimstoneGoingA1.mp3}}{{AC|BrimstoneGoingA2.mp3}} "Going A."
+*{{AC|BrimstoneGoingB1.mp3}}{{AC|BrimstoneGoingB2.mp3}} "Going B."
+*{{AC|BrimstoneGoingC1.mp3}}{{AC|BrimstoneGoingC2.mp3}} "Going C."
+*{{AC|BrimstoneGoingMid1.mp3}}{{AC|BrimstoneGoingMid2.mp3}} "Going Mid."
+
+====Need Support====
+*{{AC|BrimstoneHelp1.mp3}}{{AC|BrimstoneHelp2.mp3}}{{AC|BrimstoneHelp3.mp3}} "Need help."
+
+====On my way====
+*{{AC|BrimstoneOnMyWay1.mp3}}{{AC|BrimstoneOnMyWay2.mp3}} "On my way."
+
+====Play for picks====
+*{{AC|BrimstonePlayForPicks1.mp3}}{{AC|BrimstonePlayForPicks2.mp3}} "Play for picks."
+
+===Wheel Index only===
+====Encourage====
+*{{AC|BrimstoneEncouraging1.mp3}}{{AC|BrimstoneEncouraging2.mp3}}{{AC|BrimstoneEncouraging3.mp3}} "We can do this."
+
+====I'll lurk====
+Only as Attackers during Buy Phase.
+*{{AC|BrimstoneLurking1.mp3}}{{AC|BrimstoneLurking2.mp3}} "I'm lurking."
+
+====I'll push out====
+Only as Defenders during Buy Phase.
+*{{AC|BrimstonePushingOut1.mp3}}{{AC|BrimstonePushingOut2.mp3}} "I'm pushing out."
+
+====I'm holding position====
+Only as Defenders during Buy Phase.
+*{{AC|BrimstoneHoldingPosition1.mp3}}{{AC|BrimstoneHoldingPosition2.mp3}} "Holding position."
+
+====Let's Attack====
+Only during Round Phase.
+*{{AC|BrimstoneLetsAttack1.mp3}}{{AC|BrimstoneLetsAttack2.mp3}} "Let's attack."
+
+====Let's hold positions====
+Only as Defenders during Buy Phase.
+*{{AC|BrimstoneHoldPositions1.mp3}}{{AC|BrimstoneHoldPositions2.mp3}} "Let's hold positions."
+
+====Let's play slow====
+Only as Attackers at anytime.
+*{{AC|BrimstonePlaySlow1.mp3}}{{AC|BrimstonePlaySlow2.mp3}} "Let's play slow."
+
+====Let's push out====
+Only as Defenders during Buy Phase.
+*{{AC|BrimstonePushOut1.mp3}}{{AC|BrimstonePushOut2.mp3}} "Let's push out."
+
+====Let's spread out====
+*{{AC|BrimstoneSpreadOut1.mp3}}{{AC|BrimstoneSpreadOut2.mp3}} "Let's spread out."
+
+====Nice Try====
+*{{AC|BrimstoneNiceTry1.mp3}}{{AC|BrimstoneNiceTry2.mp3}}{{AC|BrimstoneNiceTry3.mp3}} "Nice try."
+
+====Stick together====
+*{{AC|BrimstoneStickTogether1.mp3}}{{AC|BrimstoneStickTogether2.mp3}} "Stick together."
+
+===Menu and Wheel Index===
+====Commend====
+*{{AC|BrimstoneCommend1.mp3}}{{AC|BrimstoneCommend2.mp3}}{{AC|BrimstoneCommend3.mp3}} "Good work."
+
+====Fall Back====
+Menu Index at anytime, or Wheel Index only during Round Phase.
+*{{AC|BrimstoneFallBack1.mp3}}{{AC|BrimstoneFallBack2.mp3}} "Fall back!"
+
+====Hello====
+*{{AC|BrimstoneHello1.mp3}}{{AC|BrimstoneHello2.mp3}}{{AC|BrimstoneHello3.mp3}} "Hello."
+
+====I'll take point====
+Wheel Index only as Attackers during Buy Phase, or Menu Index at anytime regardless of Attackers or Defenders.
+*{{AC|BrimstoneTakePoint1.mp3}}{{AC|BrimstoneTakePoint2.mp3}} "Taking point."
+
+====Let's rush them (Radio Command)====
+*{{AC|BrimstoneRush1.mp3}}{{AC|BrimstoneRush2.mp3}} "Rush them."
+
+====Need healing====
+*{{AC|BrimstoneHealing1.mp3}}{{AC|BrimstoneHealing2.mp3}} "Need a medic."
+*{{AC|BrimstoneHealing3.mp3}}{{AC|BrimstoneHealing4.mp3}} "Need healing."
+
+====No====
+*{{AC|BrimstoneNo1.mp3}}{{AC|BrimstoneNo2.mp3}}{{AC|BrimstoneNo3.mp3}} "No."
+
+====Sorry====
+*{{AC|BrimstoneSorry1.mp3}}{{AC|BrimstoneSorry2.mp3}}{{AC|BrimstoneSorry3.mp3}} "Sorry."
+
+====Thanks====
+*{{AC|BrimstoneThanks1.mp3}}{{AC|BrimstoneThanks2.mp3}}{{AC|BrimstoneThanks3.mp3}} "Thanks."
+
+====Ultimate Status====
+*{{AC|BrimstoneUltDown1.mp3}}{{AC|BrimstoneUltDown2.mp3}} "My ult's not ready."
+*{{AC|BrimstoneUltAlmost1.mp3}}{{AC|BrimstoneUltAlmost2.mp3}} "My ult's almost ready."
+*{{AC|BrimstoneUltReady1.mp3}}{{AC|BrimstoneUltReady2.mp3}} "My ult's ready."
+
+====Yes====
+*{{AC|BrimstoneYes1.mp3}}{{AC|BrimstoneYes2.mp3}}{{AC|BrimstoneYes3.mp3}} "Yes."
+
+===Wheel Index requiring Minimap===
+For the following voicelines, the minimap must be open and then open ping wheel and activate strategy.
+====Faking====
+Only as Attackers during Buy Phase.
+*{{AC|BrimstoneFaking1.mp3}}{{AC|BrimstoneFaking2.mp3}} "I'm faking."
+*{{AC|BrimstoneFakingA1.mp3}}{{AC|BrimstoneFakingA2.mp3}} "I'm faking A."
+*{{AC|BrimstoneFakingB1.mp3}}{{AC|BrimstoneFakingB2.mp3}} "I'm faking B."
+*{{AC|BrimstoneFakingC1.mp3}}{{AC|BrimstoneFakingC2.mp3}} "I'm faking C."
+
+====I'm Going Here====
+As Defenders during Buy Phase, or as Attackers at anytime.
+*{{AC|BrimstoneGoingA1.mp3}}{{AC|BrimstoneGoingA2.mp3}} "Going A."
+*{{AC|BrimstoneGoingB1.mp3}}{{AC|BrimstoneGoingB2.mp3}} "Going B."
+*{{AC|BrimstoneGoingC1.mp3}}{{AC|BrimstoneGoingC2.mp3}} "Going C."
+*{{AC|BrimstoneGoingMid1.mp3}}{{AC|BrimstoneGoingMid2.mp3}} "Going Mid."
+
+====Let's Go Here====
+Only as Attackers during Buy Phase.
+*{{AC|BrimstoneLetsGoA1.mp3}}{{AC|BrimstoneLetsGoA2.mp3}} "Let's go A."
+*{{AC|BrimstoneLetsGoB1.mp3}}{{AC|BrimstoneLetsGoB2.mp3}} "Let's go B."
+*{{AC|BrimstoneLetsGoC1.mp3}}{{AC|BrimstoneLetsGoC2.mp3}} "Let's go C."
+*{{AC|BrimstoneLetsGoHere1.mp3}}{{AC|BrimstoneLetsGoHere2.mp3}} "Let's go here."
+
+====Let's rush them (Minimap)====
+Only as Attackers during Buy Phase.
+*{{AC|BrimstoneLetsRush1.mp3}}{{AC|BrimstoneLetsRush2.mp3}} "Let's rush them."
+*{{AC|BrimstoneLetsRushA1.mp3}}{{AC|BrimstoneLetsRushA2.mp3}} "Let's rush A."
+*{{AC|BrimstoneLetsRushB1.mp3}}{{AC|BrimstoneLetsRushB2.mp3}} "Let's rush B."
+*{{AC|BrimstoneLetsRushC1.mp3}}{{AC|BrimstoneLetsRushC2.mp3}} "Let's rush C."
+
+====Let's Sneak Here====
+Only as Attackers during Buy Phase.
+*{{AC|BrimstoneSneakA1.mp3}}{{AC|BrimstoneSneakA2.mp3}} "Let's sneak A."
+*{{AC|BrimstoneSneakB1.mp3}}{{AC|BrimstoneSneakB2.mp3}} "Let's sneak B."
+*{{AC|BrimstoneSneakC1.mp3}}{{AC|BrimstoneSneakC2.mp3}} "Let's sneak C."
+*{{AC|BrimstoneSneakMid1.mp3}}{{AC|BrimstoneSneakMid2.mp3}} "Let's sneak Mid."
+
+====Let's Stack Here====
+Only as Defenders during Buy Phase.
+*{{AC|BrimstoneStack1.mp3}}{{AC|BrimstoneStack2.mp3}} "Let's stack up."
+*{{AC|BrimstoneStackA1.mp3}}{{AC|BrimstoneStackA2.mp3}} "Let's stack A."
+*{{AC|BrimstoneStackB1.mp3}}{{AC|BrimstoneStackB2.mp3}} "Let's stack B."
+*{{AC|BrimstoneStackC1.mp3}}{{AC|BrimstoneStackC2.mp3}} "Let's stack C."
+*{{AC|BrimstoneStackMid1.mp3}}{{AC|BrimstoneStackMid2.mp3}} "Let's stack Mid."
+
+====Someone Go Here====
+As Attackers during Round Phase, or as Defenders at anytime.
+*{{AC|BrimstoneNeedSomeoneA1.mp3}}{{AC|BrimstoneNeedSomeoneA2.mp3}} "Someone go A."
+*{{AC|BrimstoneNeedSomeoneB1.mp3}}{{AC|BrimstoneNeedSomeoneB2.mp3}} "Someone go B."
+*{{AC|BrimstoneNeedSomeoneC1.mp3}}{{AC|BrimstoneNeedSomeoneC2.mp3}} "Someone go C."
+*{{AC|BrimstoneNeedSomeoneMid1.mp3}}{{AC|BrimstoneNeedSomeoneMid2.mp3}} "Someone go Mid."
+
+====Spike's here====
+Only as Defenders during Round Phase.
+*{{AC|BrimstoneSpikeA1.mp3}}{{AC|BrimstoneSpikeA2.mp3}} "Spike's A."
+*{{AC|BrimstoneSpikeB1.mp3}}{{AC|BrimstoneSpikeB2.mp3}} "Spike's B."
+*{{AC|BrimstoneSpikeC1.mp3}}{{AC|BrimstoneSpikeC2.mp3}} "Spike's C."
+*{{AC|BrimstoneSpikeMid1.mp3}}{{AC|BrimstoneSpikeMid2.mp3}} "Spike's Mid."
+*{{AC|BrimstoneSpikeSpottedASpawn1.mp3}}{{AC|BrimstoneSpikeSpottedASpawn2.mp3}} "Spike in Attacker Spawn."
+*{{AC|BrimstoneSpikeSpottedDSpawn1.mp3}}{{AC|BrimstoneSpikeSpottedDSpawn2.mp3}} "Spike in Defender Spawn."
+
+==Pings==
+===General===
+*{{AC|BrimstonePing1.mp3}}{{AC|BrimstonePing2.mp3}} "Right here."
+
+===Caution===
+*{{AC|BrimstonePingCaution1.mp3}}{{AC|BrimstonePingCaution2.mp3}} "Caution here."
+
+===Need support===
+*{{AC|BrimstoneHelp1.mp3}}{{AC|BrimstoneHelp2.mp3}}{{AC|BrimstoneHelp3.mp3}} "Need help!"
+
+===On my mark===
+*{{AC|BrimstoneOnMyMark1.mp3}}{{AC|BrimstoneOnMyMark2.mp3}} "On my mark."
+
+===Ping gun===
+*{{AC|BrimstonePingGun1.mp3}}{{AC|BrimstonePingGun2.mp3}} "Gun here."
+
+===Ping spike===
+*{{AC|BrimstonePingSpike1.mp3}}{{AC|BrimstonePingSpike2.mp3}} "Spike here."
+
+===Ping for spike defuse===
+*{{AC|BrimstoneDefuseSpike1.mp3}}{{AC|BrimstoneDefuseSpike2.mp3}} "Defuse the spike!"
+
+===Ping for spike plant===
+*{{AC|BrimstonePlantSpike1.mp3}}{{AC|BrimstonePlantSpike2.mp3}} "Plant the spike!"
+
+===Watching===
+*{{AC|BrimstoneWatching1.mp3}}{{AC|BrimstoneWatching2.mp3}} "Watching here."
+
+==Other lines==
+===Ability unusable===
+====[[Status Effect#Suppress|Suppressed]]====
+*{{AC|BrimstoneCantUse1.mp3}} "I can't use that."
+
+====On cooldown====
+*{{AC|BrimstoneOnCooldown1.mp3}} "Not ready yet."
+
+====No charges====
+*{{AC|BrimstoneNoCharges1.mp3}} "Out of charges."
+
+===Enemy spotted===
+*{{AC|BrimstoneEnemyA1.mp3}}{{AC|BrimstoneEnemyA2.mp3}} "Enemy spotted A."
+*{{AC|BrimstoneEnemyB1.mp3}}{{AC|BrimstoneEnemyB2.mp3}} "Enemy spotted B."
+*{{AC|BrimstoneEnemyC1.mp3}}{{AC|BrimstoneEnemyC2.mp3}} "Enemy spotted C."
+*{{AC|BrimstoneEnemyASpawn1.mp3}}{{AC|BrimstoneEnemyASpawn2.mp3}} "Enemy in Attacker Spawn."
+*{{AC|BrimstoneEnemyDSpawn1.mp3}}{{AC|BrimstoneEnemyDSpawn2.mp3}} "Enemy in Defender Spawn."
+*{{AC|BrimstoneEnemyMid1.mp3}}{{AC|BrimstoneEnemyMid2.mp3}} "Enemy spotted Mid."
+
+====Multiple====
+*{{AC|BrimstoneEnemiesA1.mp3}}{{AC|BrimstoneEnemiesA2.mp3}} "Multiple enemies A!"
+*{{AC|BrimstoneEnemiesB1.mp3}}{{AC|BrimstoneEnemiesB2.mp3}}"Multiple enemies B!"
+*{{AC|BrimstoneEnemiesC1.mp3}}{{AC|BrimstoneEnemiesC2.mp3}} "Multiple enemies C!"
+*{{AC|BrimstoneEnemiesASpawn1.mp3}}{{AC|BrimstoneEnemiesASpawn2.mp3}} "Enemies in Attacker Spawn!"
+*{{AC|BrimstoneEnemiesDSpawn1.mp3}}{{AC|BrimstoneEnemiesDSpawn2.mp3}} "Enemies in Defender Spawn!"
+*{{AC|BrimstoneEnemiesMid1.mp3}}{{AC|BrimstoneEnemiesMid2.mp3}} "Multiple enemies Mid!"
+
+===Reloading===
+*{{AC|BrimstoneReloading1.mp3}}{{AC|BrimstoneReloading2.mp3}} "Reloading."
+
+===Healed===
+*{{AC|BrimstoneRelief1.mp3}}{{AC|BrimstoneRelief2.mp3}}{{AC|BrimstoneRelief3.mp3}} ''*Brimstone sighs*''
+
+===Killed===
+*{{AC|BrimstoneDeath1.mp3}}{{AC|BrimstoneDeath2.mp3}}{{AC|BrimstoneDeath3.mp3}}{{AC|BrimstoneDeath4.mp3}} ''*Brimstone groans*''
+
+===Resurrected via {{abi text|Resurrection}}===
+*{{AC|BrimstoneResurrect.mp3}} "Ain't my time!"
+
+===Wounded===
+====Light damage====
+*{{AC|BrimstonePainLight1.mp3}}{{AC|BrimstonePainLight2.mp3}}{{AC|BrimstonePainLight3.mp3}} ''*Brimstone groans*''
+
+====Medium damage====
+*{{AC|BrimstonePainMedium1.mp3}}{{AC|BrimstonePainMedium2.mp3}}{{AC|BrimstonePainMedium3.mp3}} ''*Brimstone groans*''
+
+====Heavy damage====
+*{{AC|BrimstonePainHeavy1.mp3}}{{AC|BrimstonePainHeavy2.mp3}}{{AC|BrimstonePainHeavy3.mp3}} ''*Brimstone groans*''
+
+====Fall damage====
+*{{AC|BrimstonePainFall1.mp3}}{{AC|BrimstonePainFall2.mp3}}{{AC|BrimstonePainFall3.mp3}} ''*Brimstone groans*''
+
+==Unused lines==
+===Match MVP===
+*{{AC|BrimstoneMatchMVP1.mp3}} "Who's the old dog now?"
+
+==Removed lines==
+===Round Start===
+*{{AC|BrimstoneRoundStart3.mp3}} "My sky smokes will give us all the cover we need."
+
+===Wounded Annoyed===
+*{{AC|BrimstonePainAnnoyed1.mp3}}{{AC|BrimstonePainAnnoyed2.mp3}}{{AC|BrimstonePainAnnoyed3.mp3}} ''*Brimstone groans*''
+
+===Spike Spotted General===
+*{{AC|BrimstoneSpikeSpotted1.mp3}}{{AC|BrimstoneSpikeSpotted2.mp3}} "I see the spike."
+
+===Enemy spotted General===
+*{{AC|BrimstoneEnemy1.mp3}}{{AC|BrimstoneEnemy2.mp3}} "Enemy spotted."
+
+===Multiple Enemies spotted General===
+*{{AC|BrimstoneEnemies1.mp3}}{{AC|BrimstoneEnemies2.mp3}} "I see multiple enemies!"
+
+===Be Quiet===
+*{{AC|BrimstoneBeQuiet1.mp3}}{{AC|BrimstoneBeQuiet2.mp3}} "Keep quiet."
+
+===Rotate===
+*{{AC|BrimstoneRotating1.mp3}}{{AC|BrimstoneRotating2.mp3}} "Rotating."
+
+===Let's Rotate===
+*{{AC|BrimstoneLetsRotate1.mp3}}{{AC|BrimstoneLetsRotate2.mp3}} "Rotate."
+
+===Affirmation===
+*{{AC|BrimstoneAffirmation1.mp3}}{{AC|BrimstoneAffirmation2.mp3}} "Roger that."
+
+===Callouts===
+*{{AC|BrimstoneCalloutA1.mp3}}{{AC|BrimstoneCalloutA2.mp3}} "A."
+*{{AC|BrimstoneCalloutB1.mp3}}{{AC|BrimstoneCalloutB2.mp3}} "B."
+*{{AC|BrimstoneCalloutC1.mp3}}{{AC|BrimstoneCalloutC2.mp3}} "C."
+*{{AC|BrimstoneCalloutMid1.mp3}}{{AC|BrimstoneCalloutMid2.mp3}} "Mid."
+
+===Clear Area===
+*{{AC|BrimstoneClearThisArea1.mp3}}{{AC|BrimstoneClearThisArea2.mp3}} "Clear this area."
+
+===Hold===
+*{{AC|BrimstoneHold1.mp3}}{{AC|BrimstoneHold2.mp3}} "Hold."
+
+===Need disrupt===
+*{{AC|BrimstoneDisrupt1.mp3}}{{AC|BrimstoneDisrupt2.mp3}} "Disrupt here."
+
+===Need scouting===
+*{{AC|BrimstoneScout1.mp3}}{{AC|BrimstoneScout2.mp3}} "Scout here."
+
+===Need vision block===
+*{{AC|BrimstoneBlockVision1.mp3}}{{AC|BrimstoneBlockVision2.mp3}} "Block vision here."
+
+===Push===
+*{{AC|BrimstonePush1.mp3}}{{AC|BrimstonePush2.mp3}} "Push forward."
+
+===Regroup===
+*{{AC|BrimstoneRegroup1.mp3}}{{AC|BrimstoneRegroup2.mp3}} "Regroup."
+
+===Ping enemy utility===
+*{{AC|BrimstonePingUtility1.mp3}}{{AC|BrimstonePingUtility2.mp3}} "Enemy utility here."
+
+===Ping Go here===
+*{{AC|BrimstoneGoHere1.mp3}}{{AC|BrimstoneGoHere2.mp3}} "Let's go here."
+
+==[[Range/Lore|The Range's lore assets]]==
+There are no voice lines at the moment in this section for this Agent.
+<!--
+===[[Range/Lore/|]]===
+*{{AC|VoicemailBrimstone.mp3}} 
+-->
+
+==Notes==
+:''To easily see which quotes were added corresponding to the patch, use your browser's Find function and type the patch number (e.g. v2.05).
+*{{ui|Added}} 10 voice lines added from patch {{patchv|5.06}}, undocumented in the patch notes.
+*{{ui|Added}} 1 voice line added from patch {{patchv|4.10}}, undocumented in the patch notes.
+*{{ui|Added}} 2 voice lines added from patch {{patchv|2.05}}, undocumented in the patch notes.
+*Additional radio commands added in patch {{patchv|8.11}} are not mentioned in this page.
+*Other voice lines removed were at an unknown timeframe.
+
+==Navigation==
+{{Navbox agents}}
+[[Category:Quotes]]

@@ -1,0 +1,707 @@
+{{TOCright}}
+This is a '''list of quotes by {{ai|Iso}}'''. Iso is voiced by Ye Zichun in English. Necessary quotes translated are from Chinese to English. Iso has a total of {{PAGESINCATEGORY:Iso Quotes}} files of quotes including unused and removed lines, and excluding [[#The Range's lore assets|The Range's lore assets]].
+
+A downloadable folder containing all the audio files on this page can be found [https://drive.google.com/drive/folders/1LFmiTsuM4cyJEQDaTnT_gm_rPD7nGacj?usp=sharing here].
+
+==Agent Selected/Unlocked==
+*{{AC|IsoPick.mp3}} "Enough training, it's time."
+
+==Abilities==
+==={{abi text|Contingency}}===
+====Cast====
+*{{AC|IsoContingencyCast1.mp3}}{{AC|IsoContingencyCast4.mp3}} "Stopping fire!"
+*{{AC|IsoContingencyCast3.mp3}}{{AC|IsoContingencyCast2.mp3}} "Making cover!"
+
+==={{abi text|Undercut}}===
+====Cast====
+*{{AC|IsoUndercutCast1.mp3}}{{AC|IsoUndercutCast3.mp3}} "Destabilizing."
+*{{AC|IsoUndercutCast2.mp3}}{{AC|IsoUndercutCast4.mp3}} "Breaking them."
+
+==={{abi text|Double Tap}}===
+====Cast====
+*{{AC|IsoDoubleTapCast1.mp3}}{{AC|IsoDoubleTapCast2.mp3}} "Focusing."
+*{{AC|IsoDoubleTapCast3.mp3}}{{AC|IsoDoubleTapCast4.mp3}} "Show me a target."
+
+==={{abi text|Kill Contract}}===
+====Ally Cast====
+*{{AC|IsoUltAllyCast.mp3}} "No distractions!"
+
+====Enemy Cast====
+*{{AC|IsoUltEnemyCast.mp3}} "It's you and me!"
+
+====Kill====
+*{{AC|IsoUltKill1.mp3}} "Contract complete."
+*{{AC|IsoUltKill2.mp3}} "Well fought."
+*{{AC|IsoUltKill3.mp3}} "And that's the end."
+
+==Buy Phase==
+===Match Start===
+*{{AC|IsoMatchStart1.mp3}} "Okay, let's win this."
+*{{AC|IsoMatchStart2.mp3}} "One minute, finding a playlist." ''*Iso hums*'' "Ah, perfect."
+*{{AC|IsoMatchStart3.mp3}} "What's the mission? Kill contract? Sorry, I forgot to read the brief."
+*{{AC|IsoMatchStart4.mp3}} "Time to gear up, right? I've got a song for that actually."
+*{{AC|IsoMatchStart5.mp3}} "So, who has to die?"
+*{{AC|IsoMatchStart6.mp3}} "Five on five? I prefer one on one. But don't worry, this is good too."
+*{{AC|IsoMatchStart7.mp3}} "Relax. With a team like ours, very little risk."
+*{{AC|IsoMatchStart8.mp3}} "Less than a minute, let's plan."
+*{{AC|IsoMatchStart9.mp3}} "Once we find the right rhythm, it's over."
+
+====Attacking====
+*{{AC|IsoMatchStartAttack1.mp3}} "To them, we're trespassers. Their fight is justified. But we still have a job to do."
+*{{AC|IsoMatchStartAttack2.mp3}} "They can't defuse a spike if they're dead."
+
+====Defending====
+*{{AC|IsoMatchStartDefense1.mp3}} "Anyone attacking us can answer to me."
+
+===Round Start===
+*{{AC|IsoRoundStart1.mp3}} "Instinct only goes so far, skill covers the rest."
+*{{AC|IsoRoundStart2.mp3}} "I didn't bring a snack. Did anyone bring a snack?"
+*{{AC|IsoRoundStart3.mp3}} "When we go out there, someone dies. Carry that weight."
+*{{AC|IsoRoundStart4.mp3}} "I'm ready."
+*{{AC|IsoRoundStart5.mp3}} "Breathe, then commit."
+*{{AC|IsoRoundStart6.mp3}} "Every fight is a lesson."
+*{{AC|IsoRoundStart7.mp3}} "If I may, I'll go in first. Thin out their numbers."
+*{{AC|IsoRoundStart8.mp3}} "Forgive me if I overextend. Old habit."
+*{{AC|IsoRoundStart9.mp3}} "What do we learn by fighting ourselves? Hm... thinking out loud."
+
+====Last round won====
+*{{AC|IsoRoundWon1.mp3}} "Hm, I'll remember that one."
+*{{AC|IsoRoundWon2.mp3}} "Hold your celebration, we're not done yet."
+*{{AC|IsoRoundWon3.mp3}} "That's what training gets you."
+*{{AC|IsoRoundWon4.mp3}} "嗯，不错, promising!"
+**(''嗯，不错'': Hm, not bad)
+
+=====While in the lead=====
+*{{AC|IsoLead1.mp3}} "Well, this got easy."
+*{{AC|IsoLead2.mp3}} "To be honest, I expected more from them."
+*{{AC|IsoLead3.mp3}} "We're earning our vacation time."
+
+=====Making a comeback=====
+*{{AC|IsoComeback1.mp3}} "If they were easy, we wouldn't improve."
+*{{AC|IsoComeback2.mp3}} "Hey, who has a good song for 'we were losing but now things are looking up'? You know, like uh, redemption arc."
+*{{AC|IsoComeback3.mp3}} "They're challenging us, good."
+*{{AC|IsoComeback4.mp3}} "Exploit their bad choices and they'll question the right ones."
+
+===Last round in the half===
+====Attacking====
+*{{AC|IsoLastRound1.mp3}} "Spend everything on this one."
+
+====Defending====
+*{{AC|IsoLastRound2.mp3}} "Use your credits, they're doing the same."
+
+===Match Point===
+*{{AC|IsoMatchPoint1.mp3}} "Let's close this out."
+*{{AC|IsoMatchPoint2.mp3}} "If you were saving your energy for the end, this is it."
+*{{AC|IsoMatchPoint3.mp3}} "One more."
+
+===Shop===
+====Let's Buy====
+*{{AC|IsoBuying1.mp3}}{{AC|IsoBuying2.mp3}} "I'm buying."
+
+====Let's Save====
+*{{AC|IsoSaving1.mp3}}{{AC|IsoSaving2.mp3}} "I'm saving."
+
+====I Have Extra Creds====
+*{{AC|IsoOffer1.mp3}}{{AC|IsoOffer2.mp3}} "I have credits if you need them."
+
+====Requested====
+*{{AC|IsoRequest1.mp3}}{{AC|IsoRequest2.mp3}} "I need a gun."
+
+===Barrier Down===
+*{{AC|IsoBarrierDown1.mp3}} "This time will be different."
+*{{AC|IsoBarrierDown2.mp3}} "We need a new approach."
+*{{AC|IsoBarrierDown3.mp3}} "This is going pretty well."
+*{{AC|IsoBarrierDown4.mp3}} "They're in our sights."
+*{{AC|IsoBarrierDown5.mp3}} "We're close, hit them hard!"
+*{{AC|IsoBarrierDown6.mp3}} "They'll break with the right pressure."
+*{{AC|IsoBarrierDown7.mp3}} "We've been through worse."
+*{{AC|IsoBarrierDown8.mp3}} "These attacks aren't very professional, huh?"
+*{{AC|IsoBarrierDown9.mp3}} "Did they think this will be easy?"
+*{{AC|IsoBarrierDown10.mp3}} "Get ready, they're coming back."
+*{{AC|IsoBarrierDown11.mp3}} "Eyes open."
+*{{AC|IsoBarrierDown12.mp3}} "是时候进入状态了。"
+**(It's time to get into the zone.)
+*{{AC|IsoBarrierDown13.mp3}} "This is business."
+*{{AC|IsoBarrierDown14.mp3}} "Time's up, let's go."
+*{{AC|IsoBarrierDown15.mp3}} "Zero in."
+*{{AC|IsoBarrierDown16.mp3}} "Good luck."
+*{{AC|IsoBarrierDown17.mp3}} "Every choice matters."
+*{{AC|IsoBarrierDown18.mp3}} "I hope this one's exciting."
+*{{AC|IsoBarrierDown19.mp3}} "Take them one by one."
+*{{AC|IsoBarrierDown20.mp3}} ''*Iso exhales*'' "Okay."
+
+==Spike==
+===Forgotten in spawn===
+*{{AC|IsoForgotSpike1.mp3}} "My grandmother always told me, don't forget the spike."
+*{{AC|IsoForgotSpike2.mp3}} "Hey, who's got the spike?"
+
+===Ally carrier down===
+*{{AC|IsoSpikeDown1.mp3}}{{AC|IsoSpikeDown2.mp3}} "Our spike is down."
+
+===Dropped===
+*{{AC|IsoSpikeDropped1.mp3}}{{AC|IsoSpikeDropped2.mp3}} "Spike dropped."
+
+===Retrieved===
+*{{AC|IsoSpikePickedUp1.mp3}}{{AC|IsoSpikePickedUp2.mp3}} "Got the spike."
+
+===Planted===
+*{{AC|IsoSpikePlanted1.mp3}}{{AC|IsoSpikePlanted2.mp3}} "Spike planted."
+
+===Spotted===
+*{{AC|IsoSpikeSpottedA1.mp3}}{{AC|IsoSpikeSpottedA2.mp3}} "Spike spotted A."
+*{{AC|IsoSpikeSpottedB1.mp3}}{{AC|IsoSpikeSpottedB2.mp3}} "Spike spotted B."
+*{{AC|IsoSpikeSpottedC1.mp3}}{{AC|IsoSpikeSpottedC2.mp3}} "Spike spotted C."
+*{{AC|IsoSpikeSpottedASpawn1.mp3}}{{AC|IsoSpikeSpottedASpawn2.mp3}} "Spike spotted Attacker Spawn."
+*{{AC|IsoSpikeSpottedDSpawn1.mp3}}{{AC|IsoSpikeSpottedDSpawn2.mp3}} "Spike spotted Defender Spawn."
+*{{AC|IsoSpikeSpottedMid1.mp3}}{{AC|IsoSpikeSpottedMid2.mp3}} "Spike spotted Mid."
+
+===Defuse resumed===
+*{{AC|IsoDefuseResumed1.mp3}} "Back to the dangerous part."
+
+===Defuse time running out===
+*{{AC|IsoDefuseLate1.mp3}} "Not here, not yet."
+*{{AC|IsoDefuseLate2.mp3}} "我去, it's close."
+**(''我去'': Damn it)
+
+===Defuse successful===
+*{{AC|IsoDefuseComplete1.mp3}} "Not this time."
+*{{AC|IsoDefuseComplete2.mp3}} ''*Iso sighs*'' "I was sweating."
+*{{AC|IsoDefuseComplete3.mp3}} "Got it, we're clear."
+
+==Kill==
+*{{AC|IsoKill1.mp3}} "Enemy down."
+*{{AC|IsoKill2.mp3}} "Who else?"
+*{{AC|IsoKill3.mp3}} "Try again."
+*{{AC|IsoKill4.mp3}} "You're finished."
+*{{AC|IsoKill5.mp3}} "Not enough."
+*{{AC|IsoKill6.mp3}} "Neutralized."
+*{{AC|IsoKill7.mp3}} "Target down."
+*{{AC|IsoKill8.mp3}} "Next."
+*{{AC|IsoKill9.mp3}} "Stand aside."
+*{{AC|IsoKill10.mp3}} "Got one."
+
+===Headshot===
+*{{AC|IsoHeadshot1.mp3}} "What now?"
+*{{AC|IsoHeadshot2.mp3}} "Leave!"
+*{{AC|IsoHeadshot3.mp3}} "Not bad."
+*{{AC|IsoHeadshot4.mp3}} "Die!"
+*{{AC|IsoHeadshot5.mp3}} "Disappear."
+*{{AC|IsoHeadshot6.mp3}} "Headshot."
+*{{AC|IsoHeadshot7.mp3}} "No chance."
+*{{AC|IsoHeadshot8.mp3}} "Fall."
+*{{AC|IsoHeadshot9.mp3}} "走好。"
+**(''Go well.)
+*{{AC|IsoHeadshot10.mp3}} "平庸。"
+**(''Mediocre.)
+
+===[[Melee]]===
+*{{AC|IsoMeleeKill1.mp3}} "Pay attention."
+*{{AC|IsoMeleeKill2.mp3}} ''*Iso laughs*'' "Sorry."
+
+===Triple===
+*{{AC|IsoTriple1.mp3}}{{AC|IsoTriple2.mp3}} "Got three."
+
+===Quadra===
+*{{AC|IsoQuadra1.mp3}}{{AC|IsoQuadra2.mp3}} "Got four."
+
+===One kill remaining (game-mode specific)===
+*{{AC|IsoOneKillLeft1.mp3}}{{AC|IsoOneKillLeft2.mp3}} "Last kill."
+
+==Round End==
+===Ace===
+*{{AC|IsoAce1.mp3}} "It's over! Accept it."
+*{{AC|IsoAce2.mp3}} "哇靠! Was anyone watching that?"
+**(''哇靠'': Holy shit)
+*{{AC|IsoAce3.mp3}} "Five chances and they missed them all."
+*{{AC|IsoAce4.mp3}} "Hah, alright."
+
+===Clutch===
+*{{AC|IsoClutch1.mp3}} "天啊，now that was a fight!"
+**(''天啊'': Oh my god)
+*{{AC|IsoClutch2.mp3}} "I have a reputation to maintain."
+*{{AC|IsoClutch3.mp3}} "I had a job to do, so I did it."
+*{{AC|IsoClutch4.mp3}} "That was satisfying."{{#tag:sup|{{patchv|13.00}}^}}
+
+===Flawless or Team Ace===
+*{{AC|IsoFlawless1.mp3}} "Oh man, no one at base is going to believe us!"
+*{{AC|IsoFlawless2.mp3}} "This is a very impressive group."
+*{{AC|IsoFlawless3.mp3}} "Nice job. Couldn't have gone better."
+*{{AC|IsoFlawless4.mp3}} "Keep that up and we're gonna have a good day."
+
+===Thrifty===
+*{{AC|IsoThrifty1.mp3}} "When you have good aim, you don't need a good gun."
+*{{AC|IsoThrifty2.mp3}} "Saving money is good."
+
+===Last Kill===
+*{{AC|IsoLastKill1.mp3}} "Let's pack it up."
+*{{AC|IsoLastKill2.mp3}} "I guess that's it."
+*{{AC|IsoLastKill3.mp3}} "Just as my playlist ends."
+*{{AC|IsoLastKill4.mp3}} ''*Iso sighs*'' "Good."
+*{{AC|IsoLastKill5.mp3}} "Hey, 不要往心里去。"
+**(''不要往心里去'': Don't take it personally)
+*{{AC|IsoLastKill6.mp3}} "Don't worry, I got the straggler."
+
+====Enemy MVP====
+There are no voice lines at the moment in this section for this Agent.
+
+====Using [[Melee]]====
+*{{AC|IsoLastKillMelee1.mp3}} "You lost your rhythm."
+*{{AC|IsoLastKillMelee2.mp3}} "Hey, I got the last one."
+*{{AC|IsoLastKillMelee3.mp3}} "You don't need a gun to end a fight."
+
+===Low HP===
+*{{AC|IsoLowHP1.mp3}} "If pain is a lesson, I learned a lot."
+
+==Match End==
+===Match Win===
+*{{AC|IsoMatchWin1.mp3}} "I have time for a selfie before we leave, right? I'll be fast."
+*{{AC|IsoMatchWin2.mp3}} "奶奶，I did this to make you proud!"
+**(''奶奶'': Grandma)
+*{{AC|IsoMatchWin3.mp3}} ''*Iso sighs*'' "Alright, we're finished here."
+*{{AC|IsoMatchWin4.mp3}} "We survived and we're stronger for it. 得罪了!" 
+**(''得罪了'': Excuse me!)
+
+===Runner-up (game-mode specific)===
+*{{AC|IsoRunnerUp1.mp3}} "Back to training."
+*{{AC|IsoRunnerUp2.mp3}} "That was good. Next time I'll do better."
+*{{AC|IsoRunnerUp3.mp3}} "Let's go again, playlist still has some tracks left."
+
+==Agent-specific interactions==
+{| class="wikitable sortable"
+!To Agent
+!Scenario
+!width=40%; class=unsortable|Ally
+!width=40%; class=unsortable|Enemy
+|-
+|rowspan=3|{{ai|Deadlock}}
+|Match Start
+|{{AC|IsoAllyDeadlockMatchStart.mp3}} "Deadlock, remind me later to return the book I borrowed. It's terrifying!"
+|
+|-
+|Commend
+|{{AC|IsoAllyDeadlockCommend.mp3}} "Deadlock, that was textbook. Well done!"
+|
+|-
+|Last Kill
+|
+|{{AC|IsoEnemyDeadlockLastKill.mp3}} "Go, be with your sisters."
+|-
+|{{ai|Gekko}}
+|Kill
+|
+|{{AC|IsoEnemyGekkoKill.mp3}} "Dropped Gekko."
+|-
+|rowspan=5|{{ai|Iso}}
+|Match Start
+|
+|{{AC|IsoEnemyIsoMatchStart.mp3}} "Let me handle Iso. He's my responsibility."
+|-
+|Round Start
+|
+|{{AC|IsoEnemyIsoRoundStart.mp3}} "I hope their Iso fights me. Good self-assessment."
+|-
+|Barrier Down
+|
+|{{AC|IsoEnemyIsoBarrierDown.mp3}} "Make it interesting, Iso."
+|-
+|Kill
+|
+|{{AC|IsoEnemyIsoKill.mp3}} "I got Iso."
+|-
+|Last Kill
+|
+|{{AC|IsoEnemyIsoLastKill.mp3}} "Thanks for the training."
+|-
+|rowspan=7|{{ai|Omen}}
+|Chat
+|
+:[[File:Iso icon.png|20px|link=Iso]] {{AC|IsoAllyOmenChat.mp3}} "Omen, you still remember the code of our former employer, right?"
+:[[File:Omen icon.png|20px|link=Omen]] {{AC|OmenAllyIsoChat.mp3}} "I remember that it always ended in death."
+|
+|-
+|Match Start
+|{{AC|IsoAllyOmenMatchStart.mp3}} "Omen, they say that once you took a contract, their death was inescapable. Anyway, I'm glad we're friends."
+|{{AC|IsoEnemyOmenMatchStart.mp3}} "Omen wishes to be human? Then he can die like one."
+|-
+|Round Start
+|
+|{{AC|IsoEnemyOmenRoundStart.mp3}} "I know what that Omen is capable of, and it's not pretty."
+|-
+|Commend
+|{{AC|IsoAllyOmenCommend.mp3}} "Omen, everything they said about you is true!"
+|
+|-
+|Barrier Down
+|{{AC|IsoAllyOmenBarrierDown.mp3}} "Omen, do what you do."
+|{{AC|IsoEnemyOmenBarrierDown.mp3}} "Their Omen will fall."
+|-
+|Kill
+|
+|{{AC|IsoEnemyOmenKill.mp3}} "Omen's gone."
+|-
+|Last Kill
+|
+|{{AC|IsoEnemyOmenLastKill.mp3}} "Your legacy lives on."
+|-
+|rowspan=4|{{ai|Raze}}
+|Chat
+|
+:[[File:Iso icon.png|20px|link=Iso]] {{AC|IsoAllyRazeChat.mp3}} "Hey Raze, what's on the playlist today?"
+:[[File:Raze icon.png|20px|link=Raze]] {{AC|RazeAllyIsoChat.mp3}} "Anything with a beat, irmão."
+:*(''Irmão'': Brother)
+|
+|-
+|Commend
+|{{AC|IsoAllyRazeCommend.mp3}} "A good fight is like a dance, and no one dances harder than Raze."
+|
+|-
+|Barrier Down
+|{{AC|IsoAllyRazeBarrierDown.mp3}} "Raze, let's go."
+|
+|-
+|Kill
+|
+|{{AC|IsoEnemyRazeKill.mp3}} "I stopped their Raze."
+|-
+|rowspan=7|{{ai|Sage}}
+|Chat
+|
+:[[File:Sage icon.png|20px|link=Sage]] {{AC|SageAllyIsoChat.mp3}} "Iso, what advice would your grandmother have for you today? Give us something good."
+:[[File:Iso icon.png|20px|link=Iso]] {{AC|IsoAllySageChat.mp3}} "Hm. Study hard, become a doctor!"
+|
+|-
+|Round Start
+|{{AC|IsoAllySageRoundStart.mp3}} "Hey Sage, 火锅 after this, right? I'll buy."
+*(''火锅'': Hotpot)
+|{{AC|IsoEnemySageRoundStart.mp3}} "Focus on their Sage. Fewer resurrections."
+|-
+|Commend
+|{{AC|IsoAllySageCommend.mp3}} "Sage showing us how it's done!"
+|
+|-
+|Barrier Down
+|{{AC|IsoAllySageBarrierDown.mp3}} "Lead the way, Sage."
+|
+|-
+|Kill
+|
+|{{AC|IsoEnemySageKill.mp3}} "Sage is down."
+|-
+|rowspan=2|Last Kill
+|
+|{{AC|IsoEnemySageLastKill.mp3}} "原谅我，前辈。"
+*(Forgive me, senior.)
+|-
+|
+|{{AC|IsoEnemySageLastKill2.mp3}} "逼不得已。"
+*(It was necessary.)
+|}
+
+==Radio Commands==
+===Menu Index only===
+====Caution here====
+*{{AC|IsoCaution1.mp3}}{{AC|IsoCaution2.mp3}} "Enemy close."
+
+====Going Area====
+*{{AC|IsoGoingA1.mp3}}{{AC|IsoGoingA2.mp3}} "Going A."
+*{{AC|IsoGoingB1.mp3}}{{AC|IsoGoingB2.mp3}} "Going B."
+*{{AC|IsoGoingC1.mp3}}{{AC|IsoGoingC2.mp3}} "Going C."
+*{{AC|IsoGoingMid1.mp3}}{{AC|IsoGoingMid2.mp3}} "Going Mid."
+
+====Need Support====
+*{{AC|IsoHelp1.mp3}}{{AC|IsoHelp2.mp3}} "I need help."
+
+====On my way====
+*{{AC|IsoOnMyWay1.mp3}}{{AC|IsoOnMyWay2.mp3}} "On my way."
+
+====Play for picks====
+*{{AC|IsoPlayForPicks1.mp3}}{{AC|IsoPlayForPicks2.mp3}} "Play for picks."
+
+===Wheel Index only===
+====Encourage====
+*{{AC|IsoEncouraging1.mp3}}{{AC|IsoEncouraging2.mp3}}{{AC|IsoEncouraging3.mp3}} "We can do this."
+
+====I'll lurk====
+Only as Attackers during Buy Phase.
+*{{AC|IsoLurking1.mp3}}{{AC|IsoLurking2.mp3}} "I'm lurking."
+
+====I'll push out====
+Only as Defenders during Buy Phase.
+*{{AC|IsoPushingOut1.mp3}}{{AC|IsoPushingOut2.mp3}} "I'm pushing out."
+
+====I'm holding position====
+Only as Defenders during Buy Phase.
+*{{AC|IsoHoldingPosition1.mp3}}{{AC|IsoHoldingPosition2.mp3}} "Holding position."
+
+====Let's Attack====
+Only during Round Phase.
+*{{AC|IsoLetsAttack1.mp3}}{{AC|IsoLetsAttack2.mp3}} "Let's attack."
+
+====Let's hold positions====
+Only as Defenders during Buy Phase.
+*{{AC|IsoHoldPositions1.mp3}}{{AC|IsoHoldPositions2.mp3}} "Let's hold positions."
+
+====Let's play slow====
+Only as Attackers at anytime.
+*{{AC|IsoPlaySlow1.mp3}}{{AC|IsoPlaySlow2.mp3}} "Let's play slow."
+
+====Let's push out====
+Only as Defenders during Buy Phase.
+*{{AC|IsoPushOut1.mp3}}{{AC|IsoPushOut2.mp3}} "Let's push out."
+
+====Let's spread out====
+*{{AC|IsoSpreadOut1.mp3}}{{AC|IsoSpreadOut2.mp3}} "Let's spread out."
+
+====Nice Try====
+*{{AC|IsoNiceTry1.mp3}}{{AC|IsoNiceTry2.mp3}}{{AC|IsoNiceTry3.mp3}} "Good effort."
+
+====Stick together====
+*{{AC|IsoStickTogether1.mp3}}{{AC|IsoStickTogether2.mp3}} "Stick together."
+
+===Menu and Wheel Index===
+====Commend====
+*{{AC|IsoCommend1.mp3}}{{AC|IsoCommend2.mp3}}{{AC|IsoCommend3.mp3}} "Nice."
+
+====Fall Back====
+Menu Index at anytime, or Wheel Index only during Round Phase.
+*{{AC|IsoFallBack1.mp3}}{{AC|IsoFallBack2.mp3}} "Fall back."
+
+====Hello====
+*{{AC|IsoHello1.mp3}}{{AC|IsoHello2.mp3}}{{AC|IsoHello3.mp3}} "你好."
+**(Hello.)
+
+====I'll take point====
+Wheel Index only as Attackers during Buy Phase, or Menu Index at anytime regardless of Attackers or Defenders.
+*{{AC|IsoTakePoint1.mp3}}{{AC|IsoTakePoint2.mp3}} "I'll take point."
+
+====Let's rush them (Radio Command)====
+*{{AC|IsoRush1.mp3}}{{AC|IsoRush2.mp3}} "Rush them."
+
+====Need healing====
+*{{AC|IsoHealing1.mp3}}{{AC|IsoHealing2.mp3}} "Need healing."
+
+====No====
+*{{AC|IsoNo1.mp3}}{{AC|IsoNo2.mp3}}{{AC|IsoNo3.mp3}} "No."
+
+====Sorry====
+*{{AC|IsoSorry1.mp3}}{{AC|IsoSorry2.mp3}}{{AC|IsoSorry3.mp3}} "I'm sorry."
+
+====Thanks====
+*{{AC|IsoThanks1.mp3}}{{AC|IsoThanks2.mp3}}{{AC|IsoThanks3.mp3}} "Thank you."
+
+====Ultimate Status====
+*{{AC|IsoUltDown1.mp3}}{{AC|IsoUltDown2.mp3}} "My ult is not ready."
+*{{AC|IsoUltAlmost1.mp3}}{{AC|IsoUltAlmost2.mp3}} "My ult is almost ready."
+*{{AC|IsoUltReady1.mp3}}{{AC|IsoUltReady2.mp3}} "My ult is ready."
+
+====Yes====
+*{{AC|IsoYes1.mp3}}{{AC|IsoYes2.mp3}}{{AC|IsoYes3.mp3}} "Yes."
+
+===Wheel Index requiring Minimap===
+For the following voicelines, the minimap must be open and then open ping wheel and activate strategy.
+====Faking====
+Only as Attackers during Buy Phase.
+*{{AC|IsoFaking1.mp3}}{{AC|IsoFaking2.mp3}} "I'm faking."
+*{{AC|IsoFakingA1.mp3}}{{AC|IsoFakingA2.mp3}} "I'm faking A."
+*{{AC|IsoFakingB1.mp3}}{{AC|IsoFakingB2.mp3}} "I'm faking B."
+*{{AC|IsoFakingC1.mp3}}{{AC|IsoFakingC2.mp3}} "I'm faking C."
+
+====I'm Going Here====
+As Defenders during Buy Phase, or as Attackers at anytime.
+*{{AC|IsoGoingA1.mp3}}{{AC|IsoGoingA2.mp3}} "Going A."
+*{{AC|IsoGoingB1.mp3}}{{AC|IsoGoingB2.mp3}} "Going B."
+*{{AC|IsoGoingC1.mp3}}{{AC|IsoGoingC2.mp3}} "Going C."
+*{{AC|IsoGoingMid1.mp3}}{{AC|IsoGoingMid2.mp3}} "Going Mid."
+
+====Let's Go Here====
+Only as Attackers during Buy Phase.
+*{{AC|IsoLetsGoA1.mp3}}{{AC|IsoLetsGoA2.mp3}} "Let's go A."
+*{{AC|IsoLetsGoB1.mp3}}{{AC|IsoLetsGoB2.mp3}} "Let's go B."
+*{{AC|IsoLetsGoC1.mp3}}{{AC|IsoLetsGoC2.mp3}} "Let's go C."
+*{{AC|IsoLetsGoHere1.mp3}}{{AC|IsoLetsGoHere2.mp3}} "Let's go here."
+
+====Let's rush them (Minimap)====
+Only as Attackers during Buy Phase.
+*{{AC|IsoLetsRush1.mp3}}{{AC|IsoLetsRush2.mp3}} "Let's rush them."
+*{{AC|IsoLetsRushA1.mp3}}{{AC|IsoLetsRushA2.mp3}} "Let's rush A."
+*{{AC|IsoLetsRushB1.mp3}}{{AC|IsoLetsRushB2.mp3}} "Let's rush B."
+*{{AC|IsoLetsRushC1.mp3}}{{AC|IsoLetsRushC2.mp3}} "Let's rush C."
+
+====Let's Sneak Here====
+Only as Attackers during Buy Phase.
+*{{AC|IsoSneakA1.mp3}}{{AC|IsoSneakA2.mp3}} "Let's sneak A."
+*{{AC|IsoSneakB1.mp3}}{{AC|IsoSneakB2.mp3}} "Let's sneak B."
+*{{AC|IsoSneakC1.mp3}}{{AC|IsoSneakC2.mp3}} "Let's sneak C."
+*{{AC|IsoSneakMid1.mp3}}{{AC|IsoSneakMid2.mp3}} "Let's sneak Mid."
+
+====Let's Stack Here====
+Only as Defenders during Buy Phase.
+*{{AC|IsoStack1.mp3}}{{AC|IsoStack2.mp3}} "Let's stack up."
+*{{AC|IsoStackA1.mp3}}{{AC|IsoStackA2.mp3}} "Let's stack A."
+*{{AC|IsoStackB1.mp3}}{{AC|IsoStackB2.mp3}} "Let's stack B."
+*{{AC|IsoStackC1.mp3}}{{AC|IsoStackC2.mp3}} "Let's stack C."
+*{{AC|IsoStackMid1.mp3}}{{AC|IsoStackMid2.mp3}} "Let's stack Mid."
+
+====Someone Go Here====
+As Attackers during Round Phase, or as Defenders at anytime.
+*{{AC|IsoNeedSomeoneA1.mp3}}{{AC|IsoNeedSomeoneA2.mp3}} "Someone go A."
+*{{AC|IsoNeedSomeoneB1.mp3}}{{AC|IsoNeedSomeoneB2.mp3}} "Someone go B."
+*{{AC|IsoNeedSomeoneC1.mp3}}{{AC|IsoNeedSomeoneC2.mp3}} "Someone go C."
+*{{AC|IsoNeedSomeoneMid1.mp3}}{{AC|IsoNeedSomeoneMid2.mp3}} "Someone go Mid."
+
+====Spike's here====
+Only as Defenders during Round Phase.
+*{{AC|IsoSpikeA1.mp3}}{{AC|IsoSpikeA2.mp3}} "Spike's A."
+*{{AC|IsoSpikeB1.mp3}}{{AC|IsoSpikeB2.mp3}} "Spike's B."
+*{{AC|IsoSpikeC1.mp3}}{{AC|IsoSpikeC2.mp3}} "Spike's C."
+*{{AC|IsoSpikeMid1.mp3}}{{AC|IsoSpikeMid2.mp3}} "Spike's Mid."
+*{{AC|IsoSpikeSpottedASpawn1.mp3}}{{AC|IsoSpikeSpottedASpawn2.mp3}} "Spike spotted Attacker Spawn."
+*{{AC|IsoSpikeSpottedDSpawn1.mp3}}{{AC|IsoSpikeSpottedDSpawn2.mp3}} "Spike spotted Defender Spawn."
+
+==Pings==
+===General===
+*{{AC|IsoPing1.mp3}}{{AC|IsoPing2.mp3}} "Over there."
+
+===Caution===
+*{{AC|IsoPingCaution1.mp3}}{{AC|IsoPingCaution2.mp3}} "Careful here."
+
+===Need support===
+*{{AC|IsoHelp1.mp3}}{{AC|IsoHelp2.mp3}} "I need help."
+
+===On my mark===
+*{{AC|IsoOnMyMark1.mp3}}{{AC|IsoOnMyMark2.mp3}} "On my mark."
+
+===Ping gun===
+*{{AC|IsoPingGun1.mp3}}{{AC|IsoPingGun2.mp3}} "Gun here."
+
+===Ping spike===
+*{{AC|IsoPingSpike1.mp3}}{{AC|IsoPingSpike2.mp3}} "Spike's here."
+
+===Ping for spike defuse===
+*{{AC|IsoDefuseSpike1.mp3}}{{AC|IsoDefuseSpike2.mp3}} "Defuse the spike."
+
+===Ping for spike plant===
+*{{AC|IsoPlantSpike1.mp3}}{{AC|IsoPlantSpike2.mp3}} "Plant the spike."
+
+===Watching===
+*{{AC|IsoWatching1.mp3}}{{AC|IsoWatching2.mp3}} "Watching here."
+
+==Other lines==
+===Ability unusable===
+====[[Status Effect#Suppress|Suppressed]]====
+*{{AC|IsoCantUse1.mp3}}{{AC|IsoCantUse2.mp3}} "Can't use that."
+
+====On cooldown====
+*{{AC|IsoOnCooldown1.mp3}}{{AC|IsoOnCooldown2.mp3}} "Not ready yet."
+
+====No charges====
+*{{AC|IsoNoCharges1.mp3}}{{AC|IsoNoCharges2.mp3}} "No charges."
+
+===Enemy spotted===
+*{{AC|IsoEnemyA1.mp3}}{{AC|IsoEnemyA2.mp3}} "Enemy spotted A."
+*{{AC|IsoEnemyB1.mp3}}{{AC|IsoEnemyB2.mp3}} "Enemy spotted B."
+*{{AC|IsoEnemyC1.mp3}}{{AC|IsoEnemyC2.mp3}} "Enemy spotted C."
+*{{AC|IsoEnemyASpawn1.mp3}}{{AC|IsoEnemyASpawn2.mp3}} "Someone's in Attacker Spawn."
+*{{AC|IsoEnemyDSpawn1.mp3}}{{AC|IsoEnemyDSpawn2.mp3}} "Someone's in Defender Spawn."
+*{{AC|IsoEnemyMid1.mp3}}{{AC|IsoEnemyMid2.mp3}} "Enemy spotted Mid."
+
+====Multiple====
+*{{AC|IsoEnemiesA1.mp3}}{{AC|IsoEnemiesA2.mp3}} "Multiple enemies A."
+*{{AC|IsoEnemiesB1.mp3}}{{AC|IsoEnemiesB2.mp3}} "Multiple enemies B."
+*{{AC|IsoEnemiesC1.mp3}}{{AC|IsoEnemiesC2.mp3}} "Multiple enemies C."
+*{{AC|IsoEnemiesASpawn1.mp3}}{{AC|IsoEnemiesASpawn2.mp3}} "Enemies in Attacker Spawn."
+*{{AC|IsoEnemiesDSpawn1.mp3}}{{AC|IsoEnemiesDSpawn2.mp3}} "Enemies in Defender Spawn."
+*{{AC|IsoEnemiesMid1.mp3}}{{AC|IsoEnemiesMid2.mp3}} "Multiple enemies Mid."
+
+===Reloading===
+*{{AC|IsoReloading1.mp3}}{{AC|IsoReloading2.mp3}} "Reloading."
+
+===Healed===
+*{{AC|IsoRelief1.mp3}}{{AC|IsoRelief2.mp3}}{{AC|IsoRelief3.mp3}} ''*Iso sighs*''
+
+===Killed===
+*{{AC|IsoDeath1.mp3}}{{AC|IsoDeath2.mp3}}{{AC|IsoDeath3.mp3}} ''*Iso groans*''
+
+===Resurrected via {{abi text|Resurrection}}===
+*{{AC|IsoResurrect.mp3}} "Sweet, thanks!"
+
+===Wounded===
+====Light damage====
+*{{AC|IsoPainLight1.mp3}}{{AC|IsoPainLight2.mp3}}{{AC|IsoPainLight3.mp3}} ''*Iso groans*''
+
+====Medium damage====
+*{{AC|IsoPainMedium1.mp3}}{{AC|IsoPainMedium2.mp3}}{{AC|IsoPainMedium3.mp3}} ''*Iso groans*''
+
+====Heavy damage====
+*{{AC|IsoPainHeavy1.mp3}}{{AC|IsoPainHeavy2.mp3}}{{AC|IsoPainHeavy3.mp3}} ''*Iso groans*''
+
+====Fall damage====
+*{{AC|IsoPainFall1.mp3}}{{AC|IsoPainFall2.mp3}}{{AC|IsoPainFall3.mp3}} ''*Iso groans*''
+
+==Unused lines==
+===Need utility here===
+*{{AC|IsoNeedUtilityHere1.mp3}}{{AC|IsoNeedUtilityHere2.mp3}} "Need util here."
+
+==Removed lines==
+===Last Kill Enemy MVP===
+*{{AC|IsoLastKillMVP1.mp3}} "I'm used to fighting the best, and killing them."{{#tag:sup|-{{patchv|13.00}}}}
+*{{AC|IsoLastKillMVP3.mp3}} "A target like that keeps you sharp."{{#tag:sup|-{{patchv|13.00}}}}
+
+===Spike Spotted General===
+*{{AC|IsoSpikeSpotted1.mp3}}{{AC|IsoSpikeSpotted2.mp3}} "Spike spotted."
+
+===Enemy spotted General===
+*{{AC|IsoEnemy1.mp3}}{{AC|IsoEnemy2.mp3}} "Enemy spotted."
+
+===Multiple Enemies spotted General===
+*{{AC|IsoEnemies1.mp3}}{{AC|IsoEnemies2.mp3}} "Multiple enemies spotted."
+
+===Be Quiet===
+*{{AC|IsoBeQuiet1.mp3}}{{AC|IsoBeQuiet2.mp3}} "Quiet."
+
+===Rotate===
+*{{AC|IsoRotating1.mp3}}{{AC|IsoRotating2.mp3}} "Rotating."
+
+===Let's Rotate===
+*{{AC|IsoLetsRotate1.mp3}}{{AC|IsoLetsRotate2.mp3}} "Let's rotate."
+
+===Clear Area===
+*{{AC|IsoClearThisArea1.mp3}}{{AC|IsoClearThisArea2.mp3}} "Clear this area."
+
+===Hold===
+*{{AC|IsoHold1.mp3}}{{AC|IsoHold2.mp3}} "Hold on."
+
+===Push===
+*{{AC|IsoPush1.mp3}}{{AC|IsoPush2.mp3}} "Let's push."
+
+===Regroup===
+*{{AC|IsoRegroup1.mp3}}{{AC|IsoRegroup2.mp3}} "Regroup."
+
+===Ping Go here===
+*{{AC|IsoGoHere1.mp3}}{{AC|IsoGoHere2.mp3}} "Go here."
+
+==[[Range/Lore|The Range's lore assets]]==
+===[[Range/Lore/EP7|Episode 7]]===
+*{{AC|VoicemailBrimstone67.mp3}} "[[Brimstone]], it's Iso. I'm settling in now. Still a lot of books in Chongqing I want to ship over. My camera too. I've noticed that [[Cypher]] has watched me very closely since I arrived, is that strange? [[Fade]] said she had it much worse. Anyway, I still need clearance on our mainframe. I'd like to look over the combat records, our team schedules, nothing special. Okay. Thank you for your time."
+*{{AC|VoicemailBrimstone68.mp3}} "Brimstone, [[Cypher]] asked me about the organization... again. He's a persistent man, but I've told him everything I know! The organization doesn't bring young fixers like me into the inner workings of their business, there's nothing more to discuss! Perhaps you could say something to him. Thank you."
+*{{AC|VoicemailBrimstone69.mp3}} "Brimstone, it's Iso. I've been on the team for a while now and, well... what I used to do, my work with the organization, my hands were stained from the violence. It kept me awake at night. But VALORANT is... different. I noticed the others spend time together, there's a brightness to them. When they speak of the mission, they speak with pride. So I wonder, is this what it means to fight for something good? Anyway, that's it."
+
+===[[Range/Lore/EP8|Episode 8]]===
+*{{AC|VoicemailBrimstone73.mp3}} "Brimstone, hello sir. I've noticed something different between [[Omen]] and [[Viper]]. There's an... animosity that wasn't there before. Has something changed? I'm uncertain. But I wanted you to know. Maybe there's something you can do."
+*{{AC|VoicemailBrimstone76.mp3}} "Bad news, Brimstone. Seems like all we did by taking out the [[Hourglass]] operative was piss off people further up the chain. They're going to come looking for us. Let me know if you want me to run drills with the others, okay? We need to be ready."
+*{{AC|VoicemailBrimstone84.mp3}} "Brimstone. I'm over at the [[Hourglass]] [[Abyss|base]] and... I can't believe what I'm seeing. I recognize some of these artifacts from jobs I did, but the scale... I had no idea how big Hourglass was on the world stage... or still is... We should talk when I'm back."
+
+===[[Range/Lore/V25|Season 2025]]===
+*{{AC|VoicemailBrimstone106.mp3}} "你好, Brimstone. The snack cabin near my room is running low again. Can we order a restock? If possible, I'd love more of the chili almond packets, those things are the best! Thank you!"
+
+==Notes==
+:''To easily see which quotes were added corresponding to the patch, use your browser's Find function and type the patch number (e.g. v13.00).
+*{{ui|Removed}} 2 voice lines removed from patch {{patchv|13.00}}, documented in the patch notes.
+*{{ui|Adjustment}} 1 voice line moved (marked ^) from patch {{patchv|13.00}}.
+*Additional radio commands added in patch {{patchv|8.11}} are not mentioned in this page.
+*Other voice lines removed were at an unknown timeframe.
+
+==Navigation==
+{{Navbox agents}}
+
+[[Category:Quotes]]

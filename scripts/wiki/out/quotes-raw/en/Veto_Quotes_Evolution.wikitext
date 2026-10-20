@@ -1,0 +1,481 @@
+{{stub|[Unknown] voice lines}}
+{{TOCright}}
+This is a '''list of quotes by Veto when {{abi text|Evolution}} is activated''', having a filter applied to them. Veto is voiced by Bamar Kane in English. Necessary quotes translated are from French or Wolof to English, unless otherwise stated. There are a few voice lines unique to Evolution (marked with †). The Evolution set contains {{PAGESINCATEGORY:Veto Evolution Quotes}} quotes.
+
+A downloadable folder containing all the audio files on this page can be found [https://drive.google.com/drive/folders/10UhEf9EFxuHEFMMNdjb1k3x-t4mx4Kom?usp=sharing here]. For the standard set, see [[Veto/Quotes]].
+
+==Abilities==
+==={{abi text|Crosscut}}===
+====Cast====
+*{{AC|UltVetoCrosscutCast1.mp3}}{{AC|UltVetoCrosscutCast2.mp3}} "Anchor set."
+*{{AC|UltVetoCrosscutCast3.mp3}}{{AC|UltVetoCrosscutCast4.mp3}} "Transfer ready."
+
+====Destroyed====
+*{{AC|UltVetoCrosscutDestroyed1.mp3}}{{AC|UltVetoCrosscutDestroyed2.mp3}} "Anchor destroyed."
+*{{AC|UltVetoCrosscutDestroyed3.mp3}}{{AC|UltVetoCrosscutDestroyed4.mp3}} "Gateway closed."
+
+==={{abi text|Chokehold}}===
+====Cast====
+*{{AC|UltVetoChokeholdCast1.mp3}}{{AC|UltVetoChokeholdCast2.mp3}} "Snare primed."
+*{{AC|UltVetoChokeholdCast3.mp3}}{{AC|UltVetoChokeholdCast4.mp3}} "Trap set."
+
+====Triggered====
+*{{AC|UltVetoChokeholdTriggered1.mp3}}{{AC|UltVetoChokeholdTriggered2.mp3}} "Snare tripped."
+*{{AC|UltVetoChokeholdTriggered3.mp3}}{{AC|UltVetoChokeholdTriggered4.mp3}} "Trap triggered."
+
+====Destroyed====
+*{{AC|UltVetoChokeholdDestroyed1.mp3}}{{AC|UltVetoChokeholdDestroyed2.mp3}} "Snare destroyed."
+*{{AC|UltVetoChokeholdDestroyed3.mp3}}{{AC|UltVetoChokeholdDestroyed4.mp3}} "Trap destroyed."
+
+==={{abi text|Interceptor}}===
+====Cast====
+*{{AC|UltVetoInterceptorCast1.mp3}}{{AC|UltVetoInterceptorCast2.mp3}} "Negation ready."
+*{{AC|UltVetoInterceptorCast3.mp3}}{{AC|UltVetoInterceptorCast4.mp3}} "Setting watcher."
+
+====Activate====
+*{{AC|UltVetoInterceptorActivate1.mp3}}{{AC|UltVetoInterceptorActivate2.mp3}} "Denial active."
+*{{AC|UltVetoInterceptorActivate3.mp3}}{{AC|UltVetoInterceptorActivate4.mp3}} "Negating."
+
+====Kill====
+*{{AC|UltVetoInterceptorKill1.mp3}} "No nonsense!"
+*{{AC|UltVetoInterceptorKill2.mp3}} "You really tried it?"
+
+====Destroyed====
+*{{AC|UltVetoInterceptorDestroyed1.mp3}}{{AC|UltVetoInterceptorDestroyed2.mp3}} "Counter measure broken."
+
+====Timeout====
+*{{AC|UltVetoInterceptorTimeout1.mp3}}{{AC|UltVetoInterceptorTimeout2.mp3}} "Watcher expired."
+
+==={{abi text|Evolution}}===
+====Ally Cast====
+*{{AC|UltVetoUltAllyCast.mp3}} "Turn it all to dust!"†
+
+====Enemy Cast====
+*{{AC|UltVetoUltEnemyCast.mp3}} "Not another step!"†
+
+==Spike==
+===Forgotten in spawn===
+*{{AC|UltVetoForgotSpike1.mp3}} "No spike, no [[Radianite]]. Let's go pick it up."
+
+===Ally carrier down===
+*{{AC|UltVetoSpikeDown1.mp3}} "Our spike's down."
+*{{AC|UltVetoSpikeDown2.mp3}} "Our spike is down."
+
+===Dropped===
+*{{AC|UltVetoSpikeDropped1.mp3}}{{AC|UltVetoSpikeDropped2.mp3}} "Spike dropped."
+
+===Picked up===
+*{{AC|UltVetoSpikePickedUp1.mp3}}{{AC|UltVetoSpikePickedUp2.mp3}} "I have the spike."
+
+===Planted===
+*{{AC|UltVetoSpikePlanted1.mp3}}{{AC|UltVetoSpikePlanted2.mp3}} "Spike planted."
+
+===Spotted===
+*{{AC|UltVetoSpikeSpottedA1.mp3}}{{AC|UltVetoSpikeSpottedA2.mp3}} "Spike spotted A."
+*{{AC|UltVetoSpikeSpottedB1.mp3}}{{AC|UltVetoSpikeSpottedB2.mp3}} "Spike spotted B."
+*{{AC|UltVetoSpikeSpottedC1.mp3}}{{AC|UltVetoSpikeSpottedC2.mp3}} "Spike spotted C."
+*{{AC|UltVetoSpikeSpottedMid1.mp3}}{{AC|UltVetoSpikeSpottedMid2.mp3}} "Spike spotted Mid."
+*{{AC|UltVetoSpikeSpottedASpawn1.mp3}}{{AC|UltVetoSpikeSpottedASpawn2.mp3}} "Spike spotted Attacker Spawn."
+*{{AC|UltVetoSpikeSpottedDSpawn1.mp3}}{{AC|UltVetoSpikeSpottedDSpawn2.mp3}} "Spike spotted Defender Spawn."
+
+===Defuse resumed===
+*{{AC|UltVetoDefuseResumed1.mp3}} "[Unknown]. Let me handle business."
+
+===Defuse time running out===
+*{{AC|UltVetoDefuseLate1.mp3}} "I will see tomorrow."
+*{{AC|UltVetoDefuseLate2.mp3}} "[Unknown]"
+
+===Defuse successful===
+*{{AC|UltVetoDefuseComplete1.mp3}} "J'te jure, I hate these things."
+**(''J'te jure'': I swear)
+*{{AC|UltVetoDefuseComplete2.mp3}} "Sorry, the Radianite stays with me."
+
+==Kill==
+*{{AC|UltVetoKill1.mp3}} "An afterthought."
+*{{AC|UltVetoKill2.mp3}} "Dead and done."
+*{{AC|UltVetoKill3.mp3}} "Gone cold."
+*{{AC|UltVetoKill4.mp3}} "Gotcha!"
+*{{AC|UltVetoKill5.mp3}} "In the dirt."
+*{{AC|UltVetoKill6.mp3}} "Nuh-uh."
+*{{AC|UltVetoKill7.mp3}} "One less!"
+*{{AC|UltVetoKill8.mp3}} "Threat down."
+*{{AC|UltVetoKill9.mp3}} "[Unknown]"
+*{{AC|UltVetoKill10.mp3}} "[Unknown]"
+*{{AC|UltVetoKill11.mp3}} "Dust!"†
+*{{AC|UltVetoKill12.mp3}} "Dusted!"†
+
+===Headshot===
+*{{AC|UltVetoHeadshot1.mp3}} "All the way down."
+*{{AC|UltVetoHeadshot2.mp3}} "Back up!"
+*{{AC|UltVetoHeadshot3.mp3}} "Move aside."
+*{{AC|UltVetoHeadshot4.mp3}} "Settle down."
+*{{AC|UltVetoHeadshot5.mp3}} ''*Veto laughs*''
+*{{AC|UltVetoHeadshot6.mp3}} "[Unknown]"
+*{{AC|UltVetoHeadshot7.mp3}} "[Unknown]"
+
+===[[Melee]]===
+*{{AC|UltVetoMeleeKill1.mp3}} "Cut down."
+*{{AC|UltVetoMeleeKill2.mp3}} "[Unknown]"
+
+===Triple===
+*{{AC|UltVetoTriple1.mp3}}{{AC|UltVetoTriple2.mp3}} "Three out!"
+
+===Quadra===
+*{{AC|UltVetoQuadra1.mp3}}{{AC|UltVetoQuadra2.mp3}} "Four out!"
+
+==Round End==
+===Ace===
+*{{AC|UltVetoAce1.mp3}} "Do your Earth a favor, hit the range."
+*{{AC|UltVetoAce2.mp3}} "I know my limits, and now I know yours."
+*{{AC|UltVetoAce3.mp3}} "Rule number one: hit your shots."
+*{{AC|UltVetoAce4.mp3}} "Your powers? Your tools? Meaningless."†
+
+===Clutch===
+*{{AC|UltVetoClutch1.mp3}} "And the world keeps turning!"
+*{{AC|UltVetoClutch2.mp3}} "Don't worry, I'll tell them you died like heroes."
+*{{AC|UltVetoClutch3.mp3}} "[Unknown], they were so close."
+*{{AC|UltVetoClutch4.mp3}} "I will die standing up!"†
+
+===Flawless or Team Ace===
+*{{AC|UltVetoFlawless1.mp3}} "C'est bien. Bruises and scrapes we can deal with."
+**(''C'est bien'': That's good)
+*{{AC|UltVetoFlawless2.mp3}} "Not a life out of place."
+
+===Thrifty===
+*{{AC|UltVetoThrifty1.mp3}} "They had better guns, we had better aim."
+
+===Last Kill===
+*{{AC|UltVetoLastKill1.mp3}} "Perimeter secured."
+*{{AC|UltVetoLastKill2.mp3}} "Pick up a new hobby."
+*{{AC|UltVetoLastKill3.mp3}} "Someone grab a mop."
+*{{AC|UltVetoLastKill4.mp3}} "You weren't made for this."
+*{{AC|UltVetoLastKill5.mp3}} "You were warned."†
+*{{AC|UltVetoLastKill6.mp3}} "Baiting your teammates? Shameless."{{#tag:sup|{{patchv|13.00}}^}}
+
+====Using [[Melee]]====
+*{{AC|UltVetoLastKillMelee1.mp3}} "Hold that for me."
+
+===Low HP===
+*{{AC|UltVetoLowHP1.mp3}} "[Unknown]. That hurts."
+
+==Match End==
+===Match Win===
+*{{AC|UltVetoMatchWin1.mp3}} "Haha, you feel that? There's nothing better!"
+*{{AC|UltVetoMatchWin2.mp3}} "Now to find a meal, what's the local speciality?"
+*{{AC|UltVetoMatchWin3.mp3}} "[Unknown]! That is what we are meant for. C'est bien, l'équipe."
+**(''C'est bien, l'équipe'': That's good, team)
+
+====[[Corrode]]====
+*{{AC|UltVetoMatchWinCorrode.mp3}} "Okay. Let's see what [[Atlas]] left behind."
+
+==Agent-specific interactions==
+{| class="wikitable sortable"
+!To Agent
+!Scenario
+!Enemy
+|-
+|{{ai|Astra}}
+|Last Kill
+|{{AC|UltVetoEnemyAstraKill.mp3}} "Even stars can die. [Unknown] [[Astra|Efia]]."
+|-
+|{{ai|Chamber}}
+|Kill
+|{{AC|UltVetoEnemyChamberKill.mp3}} "Enfin."
+*(Finally.)
+|-
+|{{ai|Iso}}
+|Kill
+|{{AC|UltVetoEnemyIsoKill.mp3}} "Nah. Just me."†
+|-
+|{{ai|Tejo}}
+|Kill
+|{{AC|UltVetoEnemyTejoKill.mp3}} "Sorry, T."
+|-
+|{{ai|Veto}}
+|Kill
+|{{AC|UltVetoEnemyVetoKill.mp3}} "Ngaka be."{{#tag:sup|v11.08+}}
+*(Dumbass. (Wolof slang))
+|-
+|{{ai|Waylay}}
+|Last Kill
+|{{AC|UltVetoEnemyWaylayLastKill.mp3}} "Lights out, friend."
+|-
+|{{ai|Yoru}}
+|Last Kill
+|{{AC|UltVetoEnemyYoruLastKill.mp3}} "Smug man, see your way out."
+|}
+
+==Radio Commands==
+===Menu Index only===
+====Caution here====
+*{{AC|UltVetoCaution1.mp3}}{{AC|UltVetoCaution2.mp3}} "Enemy close."
+
+====Going Area====
+*{{AC|UltVetoGoingA1.mp3}}{{AC|UltVetoGoingA2.mp3}} "Going A."
+*{{AC|UltVetoGoingB1.mp3}}{{AC|UltVetoGoingB2.mp3}} "Going B."
+*{{AC|UltVetoGoingC1.mp3}}{{AC|UltVetoGoingC2.mp3}} "Going C."
+*{{AC|UltVetoGoingMid1.mp3}}{{AC|UltVetoGoingMid2.mp3}} "Going Mid."
+
+====Need Support====
+*{{AC|UltVetoHelp1.mp3}}{{AC|UltVetoHelp2.mp3}} "I need backup."
+
+====On my way====
+*{{AC|UltVetoOnMyWay1.mp3}}{{AC|UltVetoOnMyWay2.mp3}} "On my way."
+<!--
+====Play for picks====
+*{{AC|UltVetoPlayForPicks1.mp3}}{{AC|UltVetoPlayForPicks2.mp3}} "Play for picks."
+-->
+
+===Wheel Index only===
+====Encourage====
+*{{AC|UltVetoEncouraging1.mp3}} "We've got this!"
+*{{AC|UltVetoEncouraging2.mp3}} "We can do this!"
+*{{AC|UltVetoEncouraging3.mp3}} "We got this."
+
+====I'll lurk====
+Only as Attackers during Buy Phase.
+*{{AC|UltVetoLurking1.mp3}}{{AC|UltVetoLurking2.mp3}} "I'm lurking."
+
+====I'll push out====
+Only as Defenders during Buy Phase.
+*{{AC|UltVetoPushingOut1.mp3}}{{AC|UltVetoPushingOut2.mp3}} "I'm pushing out."
+
+====I'm holding position====
+Only as Defenders during Buy Phase.
+*{{AC|UltVetoHoldingPosition1.mp3}}{{AC|UltVetoHoldingPosition2.mp3}} "Holding position."
+
+====Let's Attack====
+Only during Round Phase.
+*{{AC|UltVetoLetsAttack1.mp3}}{{AC|UltVetoLetsAttack2.mp3}} "Let's attack."
+
+====Let's hold positions====
+Only as Defenders during Buy Phase.
+*{{AC|UltVetoHoldPositions1.mp3}}{{AC|UltVetoHoldPositions2.mp3}} "Let's hold positions."
+
+====Let's play slow====
+Only as Attackers at anytime.
+*{{AC|UltVetoPlaySlow1.mp3}}{{AC|UltVetoPlaySlow2.mp3}} "Let's play it slow."
+
+====Let's push out====
+Only as Defenders during Buy Phase.
+*{{AC|UltVetoPushOut1.mp3}}{{AC|UltVetoPushOut2.mp3}} "Let's push out."
+
+====Let's spread out====
+*{{AC|UltVetoSpreadOut1.mp3}}{{AC|UltVetoSpreadOut2.mp3}} "Let's spread out."
+
+====Nice Try====
+*{{AC|UltVetoNiceTry1.mp3}} "Good try."
+*{{AC|UltVetoNiceTry2.mp3}}{{AC|UltVetoNiceTry3.mp3}} "Nice try."
+
+====Stick together====
+*{{AC|UltVetoStickTogether1.mp3}}{{AC|UltVetoStickTogether2.mp3}} "Stick together."
+
+===Menu and Wheel Index===
+====Commend====
+*{{AC|UltVetoCommend1.mp3}} "Bien joué, nice."
+**(''Bien joué'': Well done)
+*{{AC|UltVetoCommend2.mp3}} "Impressive."
+*{{AC|UltVetoCommend3.mp3}} "Well done!"
+
+====Fall Back====
+Menu Index at anytime, or Wheel Index only during Round Phase.
+*{{AC|UltVetoFallBack1.mp3}}{{AC|UltVetoFallBack2.mp3}} "Fall back!"
+
+====Hello====
+*{{AC|UltVetoHello1.mp3}} "Hello."
+*{{AC|UltVetoHello2.mp3}} "Hey, [Unknown]?"
+*{{AC|UltVetoHello3.mp3}} "Yo, [Unknown]?"
+
+====I'll take point====
+Wheel Index only as Attackers during Buy Phase, or Menu Index at anytime regardless of Attackers or Defenders.
+*{{AC|UltVetoTakePoint1.mp3}}{{AC|UltVetoTakePoint2.mp3}} "I'll take point."
+
+====Let's rush them (Radio Command)====
+*{{AC|UltVetoRush1.mp3}}{{AC|UltVetoRush2.mp3}} "Rush them."
+
+====Need healing====
+*{{AC|UltVetoHealing1.mp3}}{{AC|UltVetoHealing2.mp3}} "I need some healing."
+
+====No====
+*{{AC|UltVetoNo1.mp3}} "Nah."
+*{{AC|UltVetoNo2.mp3}} "Nope."
+*{{AC|UltVetoNo3.mp3}} "[Unknown]. No."
+
+====Sorry====
+*{{AC|UltVetoSorry1.mp3}}{{AC|UltVetoSorry2.mp3}} "Sorry."
+*{{AC|UltVetoSorry3.mp3}} "[Unknown]. My bad."
+
+====Thanks====
+*{{AC|UltVetoThanks1.mp3}} "Thank you."
+*{{AC|UltVetoThanks2.mp3}} "Thanks."
+*{{AC|UltVetoThanks3.mp3}} "[Unknown], thanks."
+
+====Ultimate Status====
+*{{AC|UltVetoUltDown1.mp3}}{{AC|UltVetoUltDown2.mp3}} "My ult is not ready."
+*{{AC|UltVetoUltAlmost1.mp3}}{{AC|UltVetoUltAlmost2.mp3}} "My ult is almost ready."
+*{{AC|UltVetoUltReady1.mp3}}{{AC|UltVetoUltReady2.mp3}} "My ult is ready."
+
+====Yes====
+*{{AC|UltVetoYes1.mp3}}{{AC|UltVetoYes2.mp3}} "Yes."
+*{{AC|UltVetoYes3.mp3}} "Yup."
+
+===Wheel Index requiring Minimap===
+For the following voicelines, the minimap must be open and then open ping wheel and activate strategy.
+<!--
+====Faking====
+Only as Attackers during Buy Phase.
+*{{AC|UltVetoFaking1.mp3}}{{AC|UltVetoFaking2.mp3}} "I'm faking."
+*{{AC|UltVetoFakingA1.mp3}}{{AC|UltVetoFakingA2.mp3}} "I'm faking A."
+*{{AC|UltVetoFakingB1.mp3}}{{AC|UltVetoFakingB2.mp3}} "I'm faking B."
+*{{AC|UltVetoFakingC1.mp3}}{{AC|UltVetoFakingC2.mp3}} "I'm faking C."
+-->
+====I'm Going Here====
+As Defenders during Buy Phase, or as Attackers at anytime.
+*{{AC|UltVetoGoingA1.mp3}}{{AC|UltVetoGoingA2.mp3}} "Going A."
+*{{AC|UltVetoGoingB1.mp3}}{{AC|UltVetoGoingB2.mp3}} "Going B."
+*{{AC|UltVetoGoingC1.mp3}}{{AC|UltVetoGoingC2.mp3}} "Going C."
+*{{AC|UltVetoGoingMid1.mp3}}{{AC|UltVetoGoingMid2.mp3}} "Going Mid."
+<!--
+====Let's Sneak Here====
+Only as Attackers during Buy Phase.
+*{{AC|UltVetoSneakA1.mp3}}{{AC|UltVetoSneakA2.mp3}} "Let's sneak A."
+*{{AC|UltVetoSneakB1.mp3}}{{AC|UltVetoSneakB2.mp3}} "Let's sneak B."
+*{{AC|UltVetoSneakC1.mp3}}{{AC|UltVetoSneakC2.mp3}} "Let's sneak C."
+*{{AC|UltVetoSneakMid1.mp3}}{{AC|UltVetoSneakMid2.mp3}} "Let's sneak Mid."
+
+====Let's Stack Here====
+Only as Defenders during Buy Phase.
+*{{AC|UltVetoStack1.mp3}}{{AC|UltVetoStack2.mp3}} "Let's stack up."
+*{{AC|UltVetoStackA1.mp3}}{{AC|UltVetoStackA2.mp3}} "Let's stack A."
+*{{AC|UltVetoStackB1.mp3}}{{AC|UltVetoStackB2.mp3}} "Let's stack B."
+*{{AC|UltVetoStackC1.mp3}}{{AC|UltVetoStackC2.mp3}} "Let's stack C."
+*{{AC|UltVetoStackMid1.mp3}}{{AC|UltVetoStackMid2.mp3}} "Let's stack Mid."
+-->
+====Someone Go Here====
+As Attackers during Round Phase, or as Defenders at anytime.
+*{{AC|UltVetoNeedSomeoneA1.mp3}}{{AC|UltVetoNeedSomeoneA2.mp3}} "Someone go A."
+*{{AC|UltVetoNeedSomeoneB1.mp3}}{{AC|UltVetoNeedSomeoneB2.mp3}} "Someone go B."
+*{{AC|UltVetoNeedSomeoneC1.mp3}}{{AC|UltVetoNeedSomeoneC2.mp3}} "Someone go C."
+*{{AC|UltVetoNeedSomeoneMid1.mp3}}{{AC|UltVetoNeedSomeoneMid2.mp3}} "Someone go Mid."
+
+====Spike's here====
+Only as Defenders during Round Phase.
+*{{AC|UltVetoSpikeA1.mp3}}{{AC|UltVetoSpikeA2.mp3}} "Spike is A."
+*{{AC|UltVetoSpikeB1.mp3}}{{AC|UltVetoSpikeB2.mp3}} "Spike is B."
+*{{AC|UltVetoSpikeC1.mp3}}{{AC|UltVetoSpikeC2.mp3}} "Spike is C."
+*{{AC|UltVetoSpikeMid1.mp3}}{{AC|UltVetoSpikeMid2.mp3}} "Spike is Mid."
+*{{AC|UltVetoSpikeSpottedASpawn1.mp3}}{{AC|UltVetoSpikeSpottedASpawn2.mp3}} "Spike spotted Attacker Spawn."
+*{{AC|UltVetoSpikeSpottedDSpawn1.mp3}}{{AC|UltVetoSpikeSpottedDSpawn2.mp3}} "Spike spotted Defender Spawn."
+
+==Pings==
+===General===
+*{{AC|UltVetoPing1.mp3}}{{AC|UltVetoPing2.mp3}} "There."
+
+===Caution===
+*{{AC|UltVetoPingCaution1.mp3}}{{AC|UltVetoPingCaution2.mp3}} "Caution here."
+
+===Need support===
+*{{AC|UltVetoHelp1.mp3}}{{AC|UltVetoHelp2.mp3}} "I need backup."
+
+===On my mark===
+*{{AC|UltVetoOnMyMark1.mp3}}{{AC|UltVetoOnMyMark2.mp3}} "On my mark."
+
+===Ping gun===
+*{{AC|UltVetoPingGun1.mp3}}{{AC|UltVetoPingGun2.mp3}} "Weapon here."
+
+===Ping spike===
+*{{AC|UltVetoPingSpike1.mp3}}{{AC|UltVetoPingSpike2.mp3}} "Spike is here."
+
+===Ping for spike defuse===
+*{{AC|UltVetoDefuseSpike1.mp3}}{{AC|UltVetoDefuseSpike2.mp3}} "Defuse the spike!"
+
+===Ping for spike plant===
+*{{AC|UltVetoPlantSpike1.mp3}}{{AC|UltVetoPlantSpike2.mp3}} "Plant the spike!"
+
+===Watching===
+*{{AC|UltVetoWatching1.mp3}}{{AC|UltVetoWatching2.mp3}} "Watching here."
+
+==Other lines==
+===Ability unusable===
+====[[Status Effect#Suppress|Suppressed]]====
+*{{AC|UltVetoCantUse1.mp3}}{{AC|UltVetoCantUse2.mp3}} "Can't use that."
+
+====On cooldown====
+*{{AC|UltVetoOnCooldown1.mp3}}{{AC|UltVetoOnCooldown2.mp3}} "On cooldown."
+
+====No charges====
+*{{AC|UltVetoNoCharges1.mp3}}{{AC|UltVetoNoCharges2.mp3}} "No charges."
+
+===Enemy spotted===
+*{{AC|UltVetoEnemyA1.mp3}}{{AC|UltVetoEnemyA2.mp3}} "Enemy spotted A."
+*{{AC|UltVetoEnemyB1.mp3}}{{AC|UltVetoEnemyB2.mp3}} "Enemy spotted B."
+*{{AC|UltVetoEnemyC1.mp3}}{{AC|UltVetoEnemyC2.mp3}} "Enemy spotted C."
+*{{AC|UltVetoEnemyASpawn1.mp3}}{{AC|UltVetoEnemyASpawn2.mp3}} "Enemy spotted Attacker Spawn."
+*{{AC|UltVetoEnemyDSpawn1.mp3}}{{AC|UltVetoEnemyDSpawn2.mp3}} "Enemy spotted Defender Spawn."
+*{{AC|UltVetoEnemyMid1.mp3}}{{AC|UltVetoEnemyMid2.mp3}} "Enemy spotted Mid."
+
+====Multiple====
+*{{AC|UltVetoEnemiesA1.mp3}}{{AC|UltVetoEnemiesA2.mp3}} "Multiple enemies A!"
+*{{AC|UltVetoEnemiesB1.mp3}}{{AC|UltVetoEnemiesB2.mp3}} "Multiple enemies B!"
+*{{AC|UltVetoEnemiesC1.mp3}}{{AC|UltVetoEnemiesC2.mp3}} "Multiple enemies C!"
+*{{AC|UltVetoEnemiesASpawn1.mp3}}{{AC|UltVetoEnemiesASpawn2.mp3}} "Multiple enemies Attacker Spawn!"
+*{{AC|UltVetoEnemiesDSpawn1.mp3}}{{AC|UltVetoEnemiesDSpawn2.mp3}} "Multiple enemies Defender Spawn!"
+*{{AC|UltVetoEnemiesMid1.mp3}}{{AC|UltVetoEnemiesMid2.mp3}} "Multiple enemies Mid!"
+
+===Reloading===
+*{{AC|UltVetoReloading1.mp3}}{{AC|UltVetoReloading2.mp3}} "Reloading."
+
+===Healed===
+*{{AC|UltVetoRelief1.mp3}}{{AC|UltVetoRelief2.mp3}}{{AC|UltVetoRelief3.mp3}} ''*Veto sighs*''
+
+===Killed===
+*{{AC|UltVetoDeath1.mp3}}{{AC|UltVetoDeath2.mp3}}{{AC|UltVetoDeath3.mp3}} ''*Veto groans*''
+
+===Wounded===
+====Light damage====
+*{{AC|UltVetoPainLight1.mp3}}{{AC|UltVetoPainLight2.mp3}}{{AC|UltVetoPainLight3.mp3}} ''*Veto groans*''
+
+====Medium damage====
+*{{AC|UltVetoPainMedium1.mp3}}{{AC|UltVetoPainMedium2.mp3}}{{AC|UltVetoPainMedium3.mp3}} ''*Veto groans*''
+
+====Heavy damage====
+*{{AC|UltVetoPainHeavy1.mp3}}{{AC|UltVetoPainHeavy2.mp3}}{{AC|UltVetoPainHeavy3.mp3}} ''*Veto groans*''
+
+====Fall damage====
+*{{AC|UltVetoPainFall1.mp3}}{{AC|UltVetoPainFall2.mp3}}{{AC|UltVetoPainFall3.mp3}} ''*Veto groans*''
+
+==Unused lines==
+===One kill remaining (game-mode specific)===
+*{{AC|UltVetoOneKillLeft1.mp3}} "Who wants it?"
+
+===Runner-up (game-mode specific)===
+*{{AC|UltVetoRunnerUp1.mp3}} "Okay, okay. Next time though, I'll take it."
+*{{AC|UltVetoRunnerUp2.mp3}} "Not bad, but I could go for another."
+
+===Let's Go Here===
+Only as Attackers during Buy Phase.
+*{{AC|UltVetoLetsGoA1.mp3}}{{AC|UltVetoLetsGoA2.mp3}} "Let's go A."
+*{{AC|UltVetoLetsGoB1.mp3}}{{AC|UltVetoLetsGoB2.mp3}} "Let's go B."
+*{{AC|UltVetoLetsGoC1.mp3}}{{AC|UltVetoLetsGoC2.mp3}} "Let's go C."
+*{{AC|UltVetoLetsGoHere1.mp3}}{{AC|UltVetoLetsGoHere2.mp3}} "Let's go here."
+
+===Let's rush them (Minimap)===
+Only as Attackers during Buy Phase.
+*{{AC|UltVetoLetsRush1.mp3}}{{AC|UltVetoLetsRush2.mp3}} "Let's rush them."
+*{{AC|UltVetoLetsRushA1.mp3}}{{AC|UltVetoLetsRushA2.mp3}} "Let's rush A."
+*{{AC|UltVetoLetsRushB1.mp3}}{{AC|UltVetoLetsRushB2.mp3}} "Let's rush B."
+*{{AC|UltVetoLetsRushC1.mp3}}{{AC|UltVetoLetsRushC2.mp3}} "Let's rush C."
+
+===Resurrected via {{abi text|Resurrection}}===
+*{{AC|UltVetoResurrect.mp3}} "Woo! [Unknown]."
+
+==Removed lines==
+There are no voice lines at the moment in this section for this Agent.
+
+==Notes==
+:''To easily see which quotes were added corresponding to the patch, use your browser's Find function and type the patch number (e.g. v11.08).
+*{{ui|Added}} 1 voice line added from patch {{patchv|11.08}}, undocumented in the patch notes.
+
+==Navigation==
+{{Navbox agents}}
+[[Category:Quotes]]

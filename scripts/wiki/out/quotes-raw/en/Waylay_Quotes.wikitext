@@ -1,0 +1,683 @@
+{{TOCright}}
+This is a '''list of quotes by {{ai|Waylay}}'''. Waylay is voiced by Mo Rodvanich in English. Necessary quotes are translated from Thai to English unless otherwise stated. Waylay has a total of {{PAGESINCATEGORY:Waylay Quotes}} files of quotes including unused and removed lines, and excluding [[#The Range's lore assets|The Range's lore assets]].
+
+A downloadable folder containing all the audio files on this page can be found [https://drive.google.com/drive/folders/1mdemswW7rqmQ3nCyFFYH11mXOunX5b1A here].
+
+==Agent Selected/Unlocked==
+*{{AC|WaylayPick.mp3}} "I don't try, I do."
+
+==Abilities==
+==={{abi text|Saturate}}===
+====Cast====
+*{{AC|WaylaySaturateCast1.mp3}}{{AC|WaylaySaturateCast2.mp3}} "Hitting the brakes!"
+*{{AC|WaylaySaturateCast3.mp3}}{{AC|WaylaySaturateCast4.mp3}} "Slow down!"
+*{{AC|WaylaySaturateCast5.mp3}}{{AC|WaylaySaturateCast6.mp3}} "Slowing them down."
+*{{AC|WaylaySaturateCast7.mp3}}{{AC|WaylaySaturateCast8.mp3}} "Nice and slow now."
+
+==={{abi text|Lightspeed}}===
+====Cast====
+*{{AC|WaylayLightspeedCast1.mp3}}{{AC|WaylayLightspeedCast2.mp3}}{{AC|WaylayLightspeedCast3.mp3}}{{AC|WaylayLightspeedCast4.mp3}} ''*Waylay grunts*''
+
+==={{abi text|Refract}}===
+====Cast====
+*{{AC|WaylayRefractCast1.mp3}}{{AC|WaylayRefractCast2.mp3}} "Back in a flash."
+*{{AC|WaylayRefractCast3.mp3}}{{AC|WaylayRefractCast4.mp3}} "Be right back."
+*{{AC|WaylayRefractCast5.mp3}}{{AC|WaylayRefractCast6.mp3}} "Doing a thing."
+*{{AC|WaylayRefractCast7.mp3}}{{AC|WaylayRefractCast8.mp3}} "Don't miss me too much."
+*{{AC|WaylayRefractCast9.mp3}}{{AC|WaylayRefractCast10.mp3}} "Gonna fall back here."
+
+====Activate====
+*{{AC|WaylayRefractActivate1.mp3}}{{AC|WaylayRefractActivate2.mp3}} "Bye-bye."
+*{{AC|WaylayRefractActivate3.mp3}}{{AC|WaylayRefractActivate4.mp3}} "I'm out."
+*{{AC|WaylayRefractActivate5.mp3}}{{AC|WaylayRefractActivate6.mp3}} "Later!"
+*{{AC|WaylayRefractActivate7.mp3}}{{AC|WaylayRefractActivate8.mp3}} "Peace!"
+
+==={{abi text|Convergent Paths}}===
+====Ally Cast====
+*{{AC|WaylayUltAllyCast.mp3}} "Line 'em up, I'm going in!"
+
+====Enemy Cast====
+*{{AC|WaylayUltEnemyCast.mp3}} "One by one!"
+
+==Buy Phase==
+===Match Start===
+*{{AC|WaylayMatchStart1.mp3}} "Another day in paradise!" ''*Waylay sighs*'' "I love this job."
+*{{AC|WaylayMatchStart2.mp3}} "I could have sworn we were about to fight, but you fools all look ready for nap time! Be tired later, yeah? ไป!"
+**(''ไป'': Go)
+*{{AC|WaylayMatchStart3.mp3}} "No need to worry, my หมอดู predicted a big win in my life today, which is a nice way of saying our enemies are screwed."
+**(''หมอดู'': Prophet)
+*{{AC|WaylayMatchStart4.mp3}} "Practice doesn't make perfect, it makes better. It means we're going in today, the best we've ever been."
+*{{AC|WaylayMatchStart5.mp3}} "Remember, if I spot any of you being stupid out there, I will kick your ass when we get back, and I kick hard."
+*{{AC|WaylayMatchStart6.mp3}} "โชคดีทุกคน! ... Means good luck, more or less. Not that we need it."
+**(''โชคดีทุกคน'': Good luck everyone)
+
+====Attacking====
+*{{AC|WaylayMatchStartAttack1.mp3}} "Looks like a smash and grab gig. Hmph, just like old times."
+*{{AC|WaylayMatchStartAttack2.mp3}} "Momentum and pressure, yeah? That's all we need to crack this place open."
+
+====Defending====
+*{{AC|WaylayMatchStartDefense1.mp3}} "Seems like we've got visitors. I'll run point on our little welcoming committee. Unless, any of you feel up to the challenge."
+*{{AC|WaylayMatchStartDefense2.mp3}} "อุ๊ย, another incursion? I'm all for making bad decisions, but at some point they've got to learn, no?"
+**(''อุ๊ย'': Ouch)
+
+====[[Corrode]]====
+*{{AC|WaylayMatchStartCorrode.mp3}} "Watch your gear out here, okay? You mix munitions with enough salt and none of us are gonna have a good day."
+
+===Round Start===
+*{{AC|WaylayRoundStart1.mp3}} "Everyone having fun? If you're not, you're in the wrong line of work."
+*{{AC|WaylayRoundStart2.mp3}} "Everyone good? Take a sec if you need."
+*{{AC|WaylayRoundStart3.mp3}} "Getting tired is optional, keep the energy up."
+*{{AC|WaylayRoundStart4.mp3}} "Hey-hey! Stay focused! Those shits are trying to kill us!"
+*{{AC|WaylayRoundStart5.mp3}} "I know I give you guys a hard time, but you're better off with me kicking your butt than those assholes shooting at you!"
+*{{AC|WaylayRoundStart6.mp3}} "No one's gonna give you what you want. Work for it."
+*{{AC|WaylayRoundStart7.mp3}} "Take a minute, focus on your breathing. Helps with your aim."
+*{{AC|WaylayRoundStart8.mp3}} "We show up now, we live later."
+*{{AC|WaylayRoundStart9.mp3}} "You know the drill, gear up and get back out there! I don't want any sass about it."
+*{{AC|WaylayRoundStart10.mp3}} "ทุกคนโอเคนะ? You all feeling good? We've got this!"
+**(''ทุกคนโอเคนะ'': Everyone okay)
+
+====Last round won====
+*{{AC|WaylayRoundWon1.mp3}} "Let's do more of that, yeah? The winning part, I mean."
+*{{AC|WaylayRoundWon2.mp3}} "Respect the work, the work respects you."
+*{{AC|WaylayRoundWon3.mp3}} "We're working now! What else they've got, huh?" 
+*{{AC|WaylayRoundWon4.mp3}} "Winning's easy when you know what you're doing. It's getting there that's the tough part."
+*{{AC|WaylayRoundWon5.mp3}} "โอ๊ย อ่อนโว้ย! They're just realizing they walked into the wrong end of a shooting range! Anyone need ammo?"
+**(''โอ๊ย อ่อนโว้ย'': Ouch, so weak)
+
+=====While in the lead=====
+*{{AC|WaylayLead1.mp3}} "Normally I'd give a whole pep talk here. But honestly, we're good."
+*{{AC|WaylayLead2.mp3}} "So, turns out these guys aren't the badasses we figured they'd be. Fine by me."
+
+=====Making a comeback=====
+*{{AC|WaylayComeback1.mp3}} "This is what it's about. You want something easy? Leave. You wanna be great? Keep fighting."
+*{{AC|WaylayComeback2.mp3}} "You are capable of anything. We are capable of anything! I know 'cause you've shown me, now show them."
+
+===Last round in the half===
+====Attacking====
+*{{AC|WaylayLastRound1.mp3}} "If you're not spending your cash, at least buy me something fancy."
+
+====Defending====
+*{{AC|WaylayLastRound2.mp3}} "If you're not spending your cash, at least buy me something fancy."
+
+===Match Point===
+*{{AC|WaylayMatchPoint1.mp3}} "Alright, last hurdle. This is the one that counts."
+*{{AC|WaylayMatchPoint2.mp3}} "Take a minute, appreciate the journey, then we wrap this party up."
+
+===Shop===
+====Let's Buy====
+*{{AC|WaylayBuying1.mp3}}{{AC|WaylayBuying2.mp3}} "Buying."
+
+====Let's Save====
+*{{AC|WaylaySaving1.mp3}}{{AC|WaylaySaving2.mp3}} "Saving."
+
+====I Have Extra Creds====
+*{{AC|WaylayOffer1.mp3}}{{AC|WaylayOffer2.mp3}} "I can buy for you."
+
+====Requested====
+*{{AC|WaylayRequest1.mp3}}{{AC|WaylayRequest2.mp3}} "Need a drop."
+
+===Barrier Down===
+*{{AC|WaylayBarrierDown1.mp3}} "Back at it."
+*{{AC|WaylayBarrierDown2.mp3}} "Come on guys, we gotta dig in."
+*{{AC|WaylayBarrierDown3.mp3}} "Energy's good!"
+*{{AC|WaylayBarrierDown4.mp3}} "I need more from us."
+*{{AC|WaylayBarrierDown5.mp3}} "Let's kick it up a gear."
+*{{AC|WaylayBarrierDown6.mp3}} "Let's send them packing!"
+*{{AC|WaylayBarrierDown7.mp3}} "Love a home turf lead."
+*{{AC|WaylayBarrierDown8.mp3}} "Make me proud."
+*{{AC|WaylayBarrierDown9.mp3}} "More of the same, yeah?"
+*{{AC|WaylayBarrierDown10.mp3}} "Show yourself you can."
+*{{AC|WaylayBarrierDown11.mp3}} "Step up!"
+*{{AC|WaylayBarrierDown12.mp3}} "They get cocky, we get better."
+*{{AC|WaylayBarrierDown13.mp3}} "Too close for comfort guys, come on!"
+*{{AC|WaylayBarrierDown14.mp3}} "Watch me."
+
+==Spike==
+===Forgotten in spawn===
+*{{AC|WaylayForgotSpike1.mp3}} "Now I know, we didn't forget the spike!"
+
+===Ally carrier down===
+*{{AC|WaylaySpikeDown1.mp3}}{{AC|WaylaySpikeDown2.mp3}} "Our spike's down."
+
+===Dropped===
+*{{AC|WaylaySpikeDropped1.mp3}}{{AC|WaylaySpikeDropped2.mp3}} "Spike dropped."
+
+===Retrieved===
+*{{AC|WaylaySpikePickedUp1.mp3}}{{AC|WaylaySpikePickedUp2.mp3}} "I have the spike."
+
+===Planted===
+*{{AC|WaylaySpikePlanted1.mp3}}{{AC|WaylaySpikePlanted2.mp3}} "Spike planted."
+
+===Spotted===
+*{{AC|WaylaySpikeSpottedA1.mp3}}{{AC|WaylaySpikeSpottedA2.mp3}} "Spike spotted A."
+*{{AC|WaylaySpikeSpottedB1.mp3}}{{AC|WaylaySpikeSpottedB2.mp3}} "Spike spotted B."
+*{{AC|WaylaySpikeSpottedC1.mp3}}{{AC|WaylaySpikeSpottedC2.mp3}} "Spike spotted C."
+*{{AC|WaylaySpikeSpottedASpawn1.mp3}}{{AC|WaylaySpikeSpottedASpawn2.mp3}} "Spike spotted Attacker Spawn."
+*{{AC|WaylaySpikeSpottedDSpawn1.mp3}}{{AC|WaylaySpikeSpottedDSpawn2.mp3}} "Spike spotted Defender Spawn."
+*{{AC|WaylaySpikeSpottedMid1.mp3}}{{AC|WaylaySpikeSpottedMid2.mp3}} "Spike spotted Mid."
+
+===Defuse resumed===
+*{{AC|WaylayDefuseResumed1.mp3}} "Coming at me like that, tch, thinking you're some kind of hotshot?"
+*{{AC|WaylayDefuseResumed2.mp3}} "เฮ้ย! Almost messed me up."
+**(''เฮ้ย:'' Hey)
+
+===Defuse time running out===
+*{{AC|WaylayDefuseLate1.mp3}} "Are you kidding me?"
+*{{AC|WaylayDefuseLate2.mp3}} "แย่และ. Come on!"
+**(''แย่และ'': This is bad)
+
+===Defuse successful===
+*{{AC|WaylayDefuseComplete1.mp3}} "Maybe let's kill them before they plant next time, okay?"
+*{{AC|WaylayDefuseComplete2.mp3}} "Wasn't worried for a second."
+
+==Kill==
+*{{AC|WaylayKill1.mp3}} "Next!"
+*{{AC|WaylayKill2.mp3}} "There's that."
+*{{AC|WaylayKill3.mp3}} "Too bad."
+*{{AC|WaylayKill4.mp3}} "Too slow."
+*{{AC|WaylayKill5.mp3}} "Uh-huh."
+*{{AC|WaylayKill6.mp3}} "Yep!"
+*{{AC|WaylayKill7.mp3}} "You're done!"
+*{{AC|WaylayKill8.mp3}} "สมน้ำหน้า!"
+**(Deserved!)
+*{{AC|WaylayKill9.mp3}} "โดนไปดิ."
+**(Got you.)
+*{{AC|WaylayKill10.mp3}} "มีเก่งกว่านี้ป่ะ?"
+**(Is there anyone better than this?)
+
+===Headshot===
+*{{AC|WaylayHeadshot1.mp3}} "I'm good!"
+*{{AC|WaylayHeadshot2.mp3}} "Nailed!"
+*{{AC|WaylayHeadshot3.mp3}} "Stay dead!"
+*{{AC|WaylayHeadshot4.mp3}} "Woo!"
+*{{AC|WaylayHeadshot5.mp3}} "ปั้งๆ!"
+**(Bang bang!)
+*{{AC|WaylayHeadshot6.mp3}} "เชดดด!"
+**(Damn!)
+*{{AC|WaylayHeadshot7.mp3}} "เริ่ด!"
+**(Excellent!)
+*{{AC|WaylayHeadshot8.mp3}} "อุ๊ย!"
+**(Ouch!)
+*{{AC|WaylayHeadshot9.mp3}} "สุดยอด!"
+**(Superb!)
+
+===[[Melee]]===
+*{{AC|WaylayMeleeKill1.mp3}} "Knock out!"
+*{{AC|WaylayMeleeKill2.mp3}} "That's a beatdown!"
+
+===Triple===
+*{{AC|WaylayTriple1.mp3}}{{AC|WaylayTriple2.mp3}} "Got three!"
+
+===Quadra===
+*{{AC|WaylayQuadra1.mp3}}{{AC|WaylayQuadra2.mp3}} "Four!"
+
+===One kill remaining (game-mode specific)===
+*{{AC|WaylayOneKillLeft1.mp3}} "Make or break time."
+
+==Round End==
+===Ace===
+*{{AC|WaylayAce1.mp3}} "Rest of you get that down? Need me to do it again?"
+*{{AC|WaylayAce2.mp3}} "Sorry, I couldn't help myself."
+*{{AC|WaylayAce3.mp3}} "There's five reasons!"
+*{{AC|WaylayAce4.mp3}} "Shh, the kids are sleeping!"
+
+===Clutch===
+*{{AC|WaylayClutch1.mp3}} "Guess you didn't know who I am."
+*{{AC|WaylayClutch2.mp3}} "Huh, maybe I work best under pressure."
+*{{AC|WaylayClutch3.mp3}} "Took care of it, as I do."
+
+===Flawless or Team Ace===
+*{{AC|WaylayFlawless1.mp3}} "Absolutely demolished."
+*{{AC|WaylayFlawless2.mp3}} "โห, Look at us!"
+**(''โห'': Wow)
+
+===Thrifty===
+*{{AC|WaylayThrifty1.mp3}} "Heh, I guess their fancy guns didn't come with instructions."
+
+===Last Kill===
+*{{AC|WaylayLastKill1.mp3}} "Didn't wanna join your friends, huh?"
+*{{AC|WaylayLastKill2.mp3}} "How'd you think that was gonna end?"
+*{{AC|WaylayLastKill3.mp3}} "That's a dumb way to die."
+*{{AC|WaylayLastKill4.mp3}} "Yeah, stupid should hurt!"
+
+====Enemy MVP====
+*{{AC|WaylayLastKillMVP1.mp3}} "Not so fancy now, huh?"
+
+====Using [[Melee]]====
+*{{AC|WaylayLastKillMelee1.mp3}} "Ooh, that sounded nasty."
+
+===Low HP===
+*{{AC|WaylayLowHP1.mp3}} "เกือบไปและ, เกือบไปและ."
+**(''เกือบไปและ'': Almost there)
+
+==Match End==
+===Match Win===
+*{{AC|WaylayMatchWin1.mp3}} "Man, I love you guys! So goddamn proud."
+*{{AC|WaylayMatchWin2.mp3}} "That's right! We don't play!"
+*{{AC|WaylayMatchWin3.mp3}} "This team is shaping up into something special, you know that?"
+*{{AC|WaylayMatchWin4.mp3}} "You'll give my team their damn respect."
+
+====[[Corrode]]====
+*{{AC|WaylayMatchWinCorrode.mp3}} "Nice job! Those fools must be all kinds of salty."
+
+===Runner-up (game-mode specific)===
+*{{AC|WaylayRunnerUp1.mp3}} "Alright, let's run it again."
+*{{AC|WaylayRunnerUp2.mp3}} "Keeps me humble, I guess."
+
+==Agent-specific interactions==
+{| class="wikitable sortable"
+!To Agent
+!Scenario
+!width=40%; class=unsortable|Ally
+!width=40%; class=unsortable|Enemy
+|-
+|rowspan=2|{{ai|Breach}}
+|Match Start
+|{{AC|WaylayAllyBreachMatchStart.mp3}} "Alright, looks like the other us-es brought their A-team. So, no dumbass plays today, okay? I am not ''not'' talking to you, Breach."
+|
+|-
+|Round Start
+|{{AC|WaylayAllyBreachRoundStart.mp3}} "Breach, shame we never go to work together before all this, eh? The jobs we could've done."
+|
+|-
+|rowspan=4|{{ai|Brimstone}}
+|Match Start
+|{{AC|WaylayAllyBrimstoneMatchStart.mp3}} "Alright, we've got Brimstone riding shotgun today! Who wants to show him what we've been working on?"
+|
+|-
+|Round Start
+|{{AC|WaylayAllyBrimstoneRoundStart.mp3}} "Hey Brim, need a minute after this. Got an idea for something we can work on back at base."
+|
+|-
+|Commend
+|{{AC|WaylayAllyBrimstoneCommend.mp3}} "ให้ได้อย่างงี้เซ่, Brimstone! I'll just send everybody else home now."
+*(''ให้ได้อย่างงี้เซ่'': That's how it's done)
+|
+|-
+|Barrier Down
+|{{AC|WaylayAllyBrimstoneBarrierDown.mp3}} "Looking to you, Brimstone."
+|
+|-
+|rowspan=5|{{ai|Jett}}
+|Match Start
+|{{AC|WaylayAllyJettMatchStart.mp3}} "เฮ้ย Jett! Little wind and I fighting side by side. Love that for us, hate that for them!"
+*(''เฮ้ย'': Hey)
+|{{AC|WaylayEnemyJettMatchStart.mp3}} "Their Jett wouldn't know experience if it shot her between the eyes, which, it might."
+|-
+|Commend
+|{{AC|WaylayAllyJettCommend.mp3}} "That's what I'm talking about, Jett! Proud of you."
+|
+|-
+|Barrier Down
+|{{AC|WaylayAllyJettBarrierDown.mp3}} "Jett, you and me."
+|
+|-
+|Kill
+|
+|{{AC|WaylayEnemyJettKill.mp3}} "Sorry little wind."
+|-
+|Last Kill
+|
+|{{AC|WaylayEnemyJettLastKill.mp3}} "Jett, Jett, Jett, you should know better."
+|-
+|{{ai|Omen}}
+|Round Start
+|
+|{{AC|WaylayEnemyOmenRoundStart.mp3}} "Gonna have to teach their Omen that there's nothing brave about hiding in the shadows."
+|-
+|{{ai|Phoenix}}
+|Commend
+|{{AC|WaylayAllyPhoenixCommend.mp3}} "That's leadership, Phoenix. That's quality. So good!"
+|
+|-
+|rowspan=2|{{ai|Raze}}
+|Commend
+|{{AC|WaylayAllyRazeCommend.mp3}} "Oh-ho, Raze! Ten out of ten for results, lady, and zero for subtlety!"
+|
+|-
+|Barrier Down
+|{{AC|WaylayAllyRazeBarrierDown.mp3}} "Raze, you're up!"
+|
+|-
+|rowspan=3|{{ai|Sage}}
+|Round Start
+|
+|{{AC|WaylayEnemySageRoundStart.mp3}} "Their Sage is good, but she is so stiff! I just wanna go over there and shake some fun into that girl."
+|-
+|Barrier Down
+|{{AC|WaylayAllySageBarrierDown.mp3}} "Show me what you got, Sage."
+|
+|-
+|Commend
+|{{AC|WaylayAllySageCommend.mp3}} "Uh, hi there, battle Sage! Nice to meet you! Don't let me get in your way."
+|
+|-
+|{{ai|Sova}}
+|Round Start
+|{{AC|WaylayAllySovaRoundStart.mp3}} "You spot them Sova, and I'll kill them."
+|
+|-
+|rowspan=5|{{ai|Tejo}}
+|Round Start
+|
+|{{AC|WaylayEnemyTejoRoundStart.mp3}} "If their Tejo thinks his little rockets can make me move, he's... probably right."
+|-
+|Commend
+|{{AC|WaylayAllyTejoCommend.mp3}} "Still got it, T! เจ๋งว่ะ!"
+*(''เจ๋งว่ะ'': That's cool)
+|
+|-
+|Barrier Down
+|
+|{{AC|WaylayEnemyTejoBarrierDown.mp3}} "Their Tejo is not my Tejo."
+|-
+|Kill
+|
+|{{AC|WaylayEnemyTejoKill.mp3}} "Adios, T."
+*(''Adios'' (in Spanish): Goodbye)
+|-
+|Last Kill
+|
+|{{AC|WaylayEnemyTejoLastKill.mp3}} "You taught a shark to swim, T."
+|-
+|{{ai|Vyse}}
+|Round Start
+|
+|{{AC|WaylayEnemyVyseRoundStart.mp3}} "Their Vyse is one kind of smart, I'm the other."
+|-
+|rowspan=4|{{ai|Waylay}}
+|Match Start
+|
+|{{AC|WaylayEnemyWaylayMatchStart.mp3}} "Huh, they brought me. Well, you gotta be the best some time."
+|-
+|Barrier Down
+|
+|{{AC|WaylayEnemyWaylayBarrierDown.mp3}} "There's only one me."
+|-
+|Kill
+|
+|{{AC|WaylayEnemyWaylayKill.mp3}} "ได้อยู่ได้อยู่."
+*(Not bad, not bad.)
+|-
+|Last Kill
+|
+|{{AC|WaylayEnemyWaylayLastKill.mp3}} "คิดว่าแน่นักหรอ?"
+*(Do you think you're good?)
+|-
+|{{ai|Yoru}}
+|Barrier Down
+|
+|{{AC|WaylayEnemyYoruBarrierDown.mp3}} "Eyes on Yoru."
+|}
+
+==Radio Commands==
+===Menu Index only===
+====Caution here====
+*{{AC|WaylayCaution1.mp3}}{{AC|WaylayCaution2.mp3}} "Enemy close."
+
+====Going Area====
+*{{AC|WaylayGoingA1.mp3}}{{AC|WaylayGoingA2.mp3}} "Going A."
+*{{AC|WaylayGoingB1.mp3}}{{AC|WaylayGoingB2.mp3}} "Going B."
+*{{AC|WaylayGoingC1.mp3}}{{AC|WaylayGoingC2.mp3}} "Going C."
+*{{AC|WaylayGoingMid1.mp3}}{{AC|WaylayGoingMid2.mp3}} "Going Mid."
+
+====Need Support====
+*{{AC|WaylayHelp1.mp3}}{{AC|WaylayHelp2.mp3}} "Need backup."
+
+====On my way====
+*{{AC|WaylayOnMyWay1.mp3}}{{AC|WaylayOnMyWay2.mp3}} "On my way."
+
+====Play for picks====
+*{{AC|WaylayPlayForPicks1.mp3}}{{AC|WaylayPlayForPicks2.mp3}} "Play for picks."
+
+===Wheel Index only===
+====Encourage====
+*{{AC|WaylayEncouraging1.mp3}}{{AC|WaylayEncouraging2.mp3}}{{AC|WaylayEncouraging3.mp3}} "We can do this."
+
+====I'll lurk====
+Only as Attackers during Buy Phase.
+*{{AC|WaylayLurking1.mp3}}{{AC|WaylayLurking2.mp3}} "I'm lurking."
+
+====I'll push out====
+Only as Defenders during Buy Phase.
+*{{AC|WaylayPushingOut1.mp3}}{{AC|WaylayPushingOut2.mp3}} "I'm pushing out."
+
+====I'm holding position====
+Only as Defenders during Buy Phase.
+*{{AC|WaylayHoldingPosition1.mp3}}{{AC|WaylayHoldingPosition2.mp3}} "Holding position."
+
+====Let's Attack====
+Only during Round Phase.
+*{{AC|WaylayLetsAttack1.mp3}}{{AC|WaylayLetsAttack2.mp3}} "Let's attack."
+
+====Let's hold positions====
+Only as Defenders during Buy Phase.
+*{{AC|WaylayHoldPositions1.mp3}}{{AC|WaylayHoldPositions2.mp3}} "Let's hold positions."
+
+====Let's play slow====
+Only as Attackers at anytime.
+*{{AC|WaylayPlaySlow1.mp3}}{{AC|WaylayPlaySlow2.mp3}} "Let's play slow."
+
+====Let's push out====
+Only as Defenders during Buy Phase.
+*{{AC|WaylayPushOut1.mp3}}{{AC|WaylayPushOut2.mp3}} "Let's push out."
+
+====Let's spread out====
+*{{AC|WaylaySpreadOut1.mp3}}{{AC|WaylaySpreadOut2.mp3}} "Let's spread out."
+
+====Nice Try====
+*{{AC|WaylayNiceTry1.mp3}}{{AC|WaylayNiceTry2.mp3}}{{AC|WaylayNiceTry3.mp3}} "Nice try."
+
+====Stick together====
+*{{AC|WaylayStickTogether1.mp3}}{{AC|WaylayStickTogether2.mp3}} "Stick together."
+
+===Menu and Wheel Index===
+====Commend====
+*{{AC|WaylayCommend1.mp3}}{{AC|WaylayCommend3.mp3}}{{AC|WaylayCommend3.mp3}} "Good job."
+
+====Fall Back====
+Menu Index at anytime, or Wheel Index only during Round Phase.
+*{{AC|WaylayFallBack1.mp3}}{{AC|WaylayFallBack2.mp3}} "Fall back!"
+
+====Hello====
+*{{AC|WaylayHello1.mp3}}{{AC|WaylayHello2.mp3}}{{AC|WaylayHello3.mp3}} "Hello."
+
+====I'll take point====
+Wheel Index only as Attackers during Buy Phase, or Menu Index at anytime regardless of Attackers or Defenders.
+*{{AC|WaylayTakePoint1.mp3}}{{AC|WaylayTakePoint2.mp3}} "I'll take point."
+
+====Let's rush them (Radio Command)====
+*{{AC|WaylayRush1.mp3}}{{AC|WaylayRush2.mp3}} "Rush them."
+
+====Need healing====
+*{{AC|WaylayHealing1.mp3}}{{AC|WaylayHealing2.mp3}} "Need healing."
+
+====No====
+*{{AC|WaylayNo1.mp3}}{{AC|WaylayNo2.mp3}}{{AC|WaylayNo3.mp3}} "No."
+
+====Sorry====
+*{{AC|WaylaySorry1.mp3}}{{AC|WaylaySorry2.mp3}}{{AC|WaylaySorry3.mp3}} "Sorry."
+
+====Thanks====
+*{{AC|WaylayThanks1.mp3}}{{AC|WaylayThanks2.mp3}}{{AC|WaylayThanks3.mp3}} "Thanks."
+
+====Ultimate Status====
+*{{AC|WaylayUltDown1.mp3}}{{AC|WaylayUltDown2.mp3}} "My ultimate is not ready."
+*{{AC|WaylayUltAlmost1.mp3}}{{AC|WaylayUltAlmost2.mp3}} "My ultimate's almost ready."
+*{{AC|WaylayUltReady1.mp3}}{{AC|WaylayUltReady2.mp3}} "My ultimate is ready."
+
+====Yes====
+*{{AC|WaylayYes1.mp3}}{{AC|WaylayYes2.mp3}}{{AC|WaylayYes3.mp3}} "Yes."
+
+===Wheel Index requiring Minimap===
+For the following voicelines, the minimap must be open and then open ping wheel and activate strategy.
+====Faking====
+Only as Attackers during Buy Phase.
+*{{AC|WaylayFaking1.mp3}}{{AC|WaylayFaking2.mp3}} "I'm faking."
+*{{AC|WaylayFakingA1.mp3}}{{AC|WaylayFakingA2.mp3}} "I'm faking A."
+*{{AC|WaylayFakingB1.mp3}}{{AC|WaylayFakingB2.mp3}} "I'm faking B."
+*{{AC|WaylayFakingC1.mp3}}{{AC|WaylayFakingC2.mp3}} "I'm faking C."
+
+====I'm Going Here====
+As Defenders during Buy Phase, or as Attackers at anytime.
+*{{AC|WaylayGoingA1.mp3}}{{AC|WaylayGoingA2.mp3}} "Going A."
+*{{AC|WaylayGoingB1.mp3}}{{AC|WaylayGoingB2.mp3}} "Going B."
+*{{AC|WaylayGoingC1.mp3}}{{AC|WaylayGoingC2.mp3}} "Going C."
+*{{AC|WaylayGoingMid1.mp3}}{{AC|WaylayGoingMid2.mp3}} "Going Mid."
+
+====Let's Go Here====
+Only as Attackers during Buy Phase.
+*{{AC|WaylayLetsGoA1.mp3}}{{AC|WaylayLetsGoA2.mp3}} "Let's go A."
+*{{AC|WaylayLetsGoB1.mp3}}{{AC|WaylayLetsGoB2.mp3}} "Let's go B."
+*{{AC|WaylayLetsGoC1.mp3}}{{AC|WaylayLetsGoC2.mp3}} "Let's go C."
+*{{AC|WaylayLetsGoHere1.mp3}}{{AC|WaylayLetsGoHere2.mp3}} "Let's go here."
+
+====Let's rush them (Minimap)====
+Only as Attackers during Buy Phase.
+*{{AC|WaylayLetsRush1.mp3}}{{AC|WaylayLetsRush2.mp3}} "Let's rush them."
+*{{AC|WaylayLetsRushA1.mp3}}{{AC|WaylayLetsRushA2.mp3}} "Let's rush A."
+*{{AC|WaylayLetsRushB1.mp3}}{{AC|WaylayLetsRushB2.mp3}} "Let's rush B."
+*{{AC|WaylayLetsRushC1.mp3}}{{AC|WaylayLetsRushC2.mp3}} "Let's rush C."
+
+====Let's Sneak Here====
+Only as Attackers during Buy Phase.
+*{{AC|WaylaySneakA1.mp3}}{{AC|WaylaySneakA2.mp3}} "Let's sneak A."
+*{{AC|WaylaySneakB1.mp3}}{{AC|WaylaySneakB2.mp3}} "Let's sneak B."
+*{{AC|WaylaySneakC1.mp3}}{{AC|WaylaySneakC2.mp3}} "Let's sneak C."
+*{{AC|WaylaySneakMid1.mp3}}{{AC|WaylaySneakMid2.mp3}} "Let's sneak Mid."
+
+====Let's Stack Here====
+Only as Defenders during Buy Phase.
+*{{AC|WaylayStack1.mp3}}{{AC|WaylayStack2.mp3}} "Let's stack up."
+*{{AC|WaylayStackA1.mp3}}{{AC|WaylayStackA2.mp3}} "Let's stack A."
+*{{AC|WaylayStackB1.mp3}}{{AC|WaylayStackB2.mp3}} "Let's stack B."
+*{{AC|WaylayStackC1.mp3}}{{AC|WaylayStackC2.mp3}} "Let's stack C."
+*{{AC|WaylayStackMid1.mp3}}{{AC|WaylayStackMid2.mp3}} "Let's stack Mid."
+
+====Someone Go Here====
+As Attackers during Round Phase, or as Defenders at anytime.
+*{{AC|WaylayNeedSomeoneA1.mp3}}{{AC|WaylayNeedSomeoneA2.mp3}} "Someone go A."
+*{{AC|WaylayNeedSomeoneB1.mp3}}{{AC|WaylayNeedSomeoneB2.mp3}} "Someone go B."
+*{{AC|WaylayNeedSomeoneC1.mp3}}{{AC|WaylayNeedSomeoneC2.mp3}} "Someone go C."
+*{{AC|WaylayNeedSomeoneMid1.mp3}}{{AC|WaylayNeedSomeoneMid2.mp3}} "Someone go Mid."
+
+====Spike's here====
+Only as Defenders during Round Phase.
+*{{AC|WaylaySpikeA1.mp3}}{{AC|WaylaySpikeA2.mp3}} "Spike's A."
+*{{AC|WaylaySpikeB1.mp3}}{{AC|WaylaySpikeB2.mp3}} "Spike's B."
+*{{AC|WaylaySpikeC1.mp3}}{{AC|WaylaySpikeC2.mp3}} "Spike's C."
+*{{AC|WaylaySpikeMid1.mp3}}{{AC|WaylaySpikeMid2.mp3}} "Spike's Mid."
+*{{AC|WaylaySpikeSpottedASpawn1.mp3}}{{AC|WaylaySpikeSpottedASpawn2.mp3}} "Spike spotted Attacker Spawn."
+*{{AC|WaylaySpikeSpottedDSpawn1.mp3}}{{AC|WaylaySpikeSpottedDSpawn2.mp3}} "Spike spotted Defender Spawn."
+
+==Pings==
+===General===
+*{{AC|WaylayPing1.mp3}}{{AC|WaylayPing2.mp3}} "There."
+
+===Caution===
+*{{AC|WaylayPingCaution1.mp3}}{{AC|WaylayPingCaution2.mp3}} "Caution here."
+
+===Need support===
+*{{AC|WaylayHelp1.mp3}}{{AC|WaylayHelp2.mp3}} "Need backup."
+
+===On my mark===
+*{{AC|WaylayOnMyMark1.mp3}}{{AC|WaylayOnMyMark2.mp3}} "On my mark."
+
+===Ping gun===
+*{{AC|WaylayPingGun1.mp3}}{{AC|WaylayPingGun2.mp3}} "Gun here."
+
+===Ping spike===
+*{{AC|WaylayPingSpike1.mp3}}{{AC|WaylayPingSpike2.mp3}} "Spike's here."
+
+===Ping for spike defuse===
+*{{AC|WaylayDefuseSpike1.mp3}}{{AC|WaylayDefuseSpike2.mp3}} "Defuse the spike!"
+
+===Ping for spike plant===
+*{{AC|WaylayPlantSpike1.mp3}}{{AC|WaylayPlantSpike2.mp3}} "Plant the spike!"
+
+===Watching===
+*{{AC|WaylayWatching1.mp3}}{{AC|WaylayWatching2.mp3}} "Watching here."
+
+==Other lines==
+===Ability unusable===
+====[[Status Effect#Suppress|Suppressed]]====
+*{{AC|WaylayCantUse1.mp3}} "No can do."
+*{{AC|WaylayCantUse2.mp3}} "No can do."
+
+====Cooldown====
+*{{AC|WaylayOnCooldown1.mp3}} "Need a minute." 
+*{{AC|WaylayOnCooldown2.mp3}} "Need a minute."
+
+====No charges====
+*{{AC|WaylayNoCharges1.mp3}} "I'm all out."
+*{{AC|WaylayNoCharges2.mp3}} "I'm all out."
+
+===Enemy spotted===
+*{{AC|WaylayEnemyA1.mp3}}{{AC|WaylayEnemyA2.mp3}} "Enemy spotted A."
+*{{AC|WaylayEnemyB1.mp3}}{{AC|WaylayEnemyB2.mp3}} "Enemy spotted B."
+*{{AC|WaylayEnemyC1.mp3}}{{AC|WaylayEnemyC2.mp3}} "Enemy spotted C."
+*{{AC|WaylayEnemyASpawn1.mp3}}{{AC|WaylayEnemyASpawn2.mp3}} "Enemy spotted Attacker Spawn."
+*{{AC|WaylayEnemyDSpawn1.mp3}}{{AC|WaylayEnemyDSpawn2.mp3}} "Enemy spotted Defender Spawn."
+*{{AC|WaylayEnemyMid1.mp3}}{{AC|WaylayEnemyMid2.mp3}} "Enemy spotted Mid."
+
+====Multiple====
+*{{AC|WaylayEnemiesA1.mp3}}{{AC|WaylayEnemiesA2.mp3}} "Multiple enemies A!"
+*{{AC|WaylayEnemiesB1.mp3}}{{AC|WaylayEnemiesB2.mp3}} "Multiple enemies B!"
+*{{AC|WaylayEnemiesC1.mp3}}{{AC|WaylayEnemiesC2.mp3}} "Multiple enemies C!"
+*{{AC|WaylayEnemiesASpawn1.mp3}}{{AC|WaylayEnemiesASpawn2.mp3}} "Multiple enemies Attacker Spawn!"
+*{{AC|WaylayEnemiesDSpawn1.mp3}}{{AC|WaylayEnemiesDSpawn2.mp3}} "Multiple enemies Defender Spawn!"
+*{{AC|WaylayEnemiesMid1.mp3}}{{AC|WaylayEnemiesMid2.mp3}} "Multiple enemies Mid!"
+
+===Reloading===
+*{{AC|WaylayReloading1.mp3}}{{AC|WaylayReloading2.mp3}} "Reloading."
+
+===Healed===
+*{{AC|WaylayRelief1.mp3}}{{AC|WaylayRelief2.mp3}}{{AC|WaylayRelief3.mp3}} ''*Waylay sighs*''
+
+===Killed===
+*{{AC|WaylayDeath1.mp3}}{{AC|WaylayDeath2.mp3}}{{AC|WaylayDeath3.mp3}} ''*Waylay groans*''
+
+===Resurrected via {{abi text|Resurrection}}===
+*{{AC|WaylayResurrect.mp3}} "Oh, it's on now!"
+
+===Wounded===
+====Light damage====
+*{{AC|WaylayPainLight1.mp3}}{{AC|WaylayPainLight2.mp3}}{{AC|WaylayPainLight3.mp3}} ''*Waylay groans*''
+
+====Medium damage====
+*{{AC|WaylayPainMedium1.mp3}}{{AC|WaylayPainMedium2.mp3}}{{AC|WaylayPainMedium3.mp3}} ''*Waylay groans*''
+
+====Heavy damage====
+*{{AC|WaylayPainHeavy1.mp3}}{{AC|WaylayPainHeavy2.mp3}}{{AC|WaylayPainHeavy3.mp3}} ''*Waylay groans*''
+
+====Fall damage====
+*{{AC|WaylayPainFall1.mp3}}{{AC|WaylayPainFall2.mp3}}{{AC|WaylayPainFall3.mp3}} ''*Waylay groans*''
+
+==Unused lines==
+There are no voice lines at the moment in this section for this Agent.
+
+==Removed lines==
+===Be Quiet===
+*{{AC|WaylayBeQuiet1.mp3}}{{AC|WaylayBeQuiet2.mp3}} "Stay quiet!"
+
+===Rotate===
+*{{AC|WaylayRotating1.mp3}}{{AC|WaylayRotating2.mp3}} "Rotating."
+
+===Let's Rotate===
+*{{AC|WaylayLetsRotate1.mp3}}{{AC|WaylayLetsRotate2.mp3}} "Let's rotate."
+
+==[[Range/Lore|The Range's lore assets]]==
+===[[Range/Lore/V25|Season 2025]]===
+*{{AC|file=VoicemailBrimstone109.mp3}} "Gonna be quick, Brim. Getting word of Kingdom sites getting hit all over the world in the last month with the same radianite fuel getting stolen. I got my hands on some 'kay footage and, yeah, the crew working the gig are in the same getup as the guys we fought in Thailand! Long story short, whatever they're doing, we didn't stop them. Let me know if you need me to take a crew off base to do some digging."
+*{{AC|file=VoicemailBrimstone110.mp3}} "No, you still gotta cover her, Phoenix! Go run it again! Hey Brim, just... just wrapping up training now. Well, T was right. You've got a whole bunch of talented folks here who can move and shoot like pros. Great on their own!... but rusty as anything as a unit, heh. But that's where I come in, right? Yeah, okay. Just give me the time you promised and I'll get you a team ready for war."
+*{{AC|file=VoicemailBrimstone114.mp3}} "Hey, it's me. Just wrapped up the last training session and... yeah, we're looking good! All the big stuff, comms, interplay, trust, they're doing great. Really. Funny to think about how things were looking a few months ago, huh? Bunch of kids running around trying to steal the spotlight from each other. And me, mooching around trying to find a place to call home. Anyways... they're ready now, Brim. Just give them a push. They'll fly."
+
+==Notes==
+<!--:''To easily see which quotes were added corresponding to the patch, use your browser's Find function and type the patch number (e.g. v2.05).
+*{{ui|Added}} 10 voice lines added from patch {{patchv|5.06}}, undocumented in the patch notes.-->
+*Additional radio commands added in patch {{patchv|8.11}} are not mentioned in this page.
+*Other voice lines removed were at an unknown timeframe.
+
+==Navigation==
+{{Navbox agents}}
+[[Category:Quotes]]

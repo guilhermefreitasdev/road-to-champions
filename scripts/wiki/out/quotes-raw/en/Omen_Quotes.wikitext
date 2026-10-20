@@ -1,0 +1,943 @@
+{{TOCright}}
+This is a '''list of quotes by {{ai|Omen}}'''. Omen is voiced by Jason Marnocha in English. Omen has a total of {{PAGESINCATEGORY:Omen Quotes}} files of quotes including unused and removed lines, and excluding [[#The Range's lore assets|The Range's lore assets]].
+
+A downloadable folder containing all the audio files on this page can be found [https://drive.google.com/drive/folders/1ShfudTqJW9Mc7_HyxMnIULo0TKGky47R?usp=sharing here].
+
+==Agent Selected/Unlocked==
+*{{AC|OmenPick.mp3}} "I am the beginning. I am the end."
+
+==Abilities==
+==={{abi text|Shrouded Step}}===
+====Cast====
+*{{AC|OmenShroudedStepCast1.mp3}}{{AC|OmenShroudedStepCast2.mp3}} ''*Omen growls*''
+
+====Unviable target====
+*{{AC|OmenShroudedStepUnviable1.mp3}}{{AC|OmenShroudedStepUnviable2.mp3}} "Can't go there."
+*{{AC|OmenShroudedStepUnviable3.mp3}}{{AC|OmenShroudedStepUnviable4.mp3}} "Not there."
+
+==={{abi text|Paranoia}}===
+====Cast====
+*{{AC|OmenParanoiaCast1.mp3}}{{AC|OmenParanoiaCast2.mp3}} "Stealing sight."
+*{{AC|OmenParanoiaCast3.mp3}}{{AC|OmenParanoiaCast4.mp3}} "Blinding."
+
+====Kill afflicted enemy====
+*{{AC|OmenParanoiaKill1.mp3}}{{AC|OmenParanoiaKill2.mp3}} "Blind and dead."
+*{{AC|OmenParanoiaKill3.mp3}}{{AC|OmenParanoiaKill4.mp3}} "Boo."
+
+==={{abi text|Dark Cover}}===
+====Cast====
+*{{AC|OmenDarkCoverCast1.mp3}}{{AC|OmenDarkCoverCast2.mp3}} "Cover going out."
+*{{AC|OmenDarkCoverCast3.mp3}}{{AC|OmenDarkCoverCast4.mp3}} "Shadows traveling."
+
+==={{abi text|From the Shadows}}===
+====Ally Cast====
+*{{AC|OmenUltAllyCast.mp3}} "Watch them run."
+
+====Enemy Cast====
+*{{AC|OmenUltEnemyCast.mp3}} "Scatter!"
+
+====Kill after casting====
+*{{AC|OmenUltKill1.mp3}}{{AC|OmenUltKill2.mp3}} "Boo!"
+*{{AC|OmenUltKill3.mp3}}{{AC|OmenUltKill4.mp3}} "You thought you were safe!"
+*{{AC|OmenUltKill5.mp3}}{{AC|OmenUltKill6.mp3}} "Behind you!"
+*{{AC|OmenUltKill7.mp3}}{{AC|OmenUltKill8.mp3}} "Look behind you!"
+
+====Interrupted====
+*{{AC|OmenUltInterrupt1.mp3}}{{AC|OmenUltInterrupt2.mp3}} "Damn it!"
+*{{AC|OmenUltInterrupt3.mp3}}{{AC|OmenUltInterrupt4.mp3}} "Teleport stopped!"
+
+==Buy Phase==
+===Match Start===
+*{{AC|OmenMatchStart1.mp3}} "If I must live in this nightmare, my enemies might as well join me."
+*{{AC|OmenMatchStart2.mp3}} "They fear death, they should fear so much more than that."
+*{{AC|OmenMatchStart3.mp3}} "Make the right choice, even if it calls for sacrifice."
+*{{AC|OmenMatchStart4.mp3}} "Who will they cry for, once they know they're going to die?"
+*{{AC|OmenMatchStart5.mp3}} "Do they know what it means to be...truly...afraid? I'll show them."
+*{{AC|OmenMatchStart6.mp3}} "Ugh, how many must I kill before I am restored. More, always more!"
+*{{AC|OmenMatchStart7.mp3}} "I already feel their hope dying and we haven't even begun. This will not take long."
+
+====Attacking====
+*{{AC|OmenMatchStartAttack1.mp3}} "Wherever I go, obliteration follows. It is my legacy."
+*{{AC|OmenMatchStartAttack2.mp3}} "You've brought your monster for monstrous work. Fitting."
+
+====Defending====
+*{{AC|OmenMatchStartDefense1.mp3}} "The enemy brought a spike. Kill them."
+*{{AC|OmenMatchStartDefense2.mp3}} "Do not let them plant that spike. Radianite explosions are... complicated." 
+
+====[[Abyss]]====
+*{{AC|OmenMatchStartAbyss.mp3}} "Millennia of Radiant history stolen from the world and crammed into this cave. How did I not see the wrong in this?"
+
+====[[Lotus]]====
+*{{AC|OmenMatchStartLotus.mp3}} "We should have left this place buried. Nothing good will come of our meddling."
+
+====[[Pearl]]====
+*{{AC|OmenMatchStartPearl.mp3}} "Is that a statue of me? This is unexpected."
+
+====[[Split]]====
+*{{AC|OmenMatchStartSplit.mp3}} "Split. Ah, they don't know the meaning of the word."
+
+===Round Start===
+*{{AC|OmenRoundStart1.mp3}} "I'll make them remember... they're only human."
+*{{AC|OmenRoundStart2.mp3}} "My burden never ends."
+*{{AC|OmenRoundStart3.mp3}} "I feel the strain. Block it out, Omen."
+*{{AC|OmenRoundStart4.mp3}} "Their backs will be towards at least one of us."
+*{{AC|OmenRoundStart5.mp3}} "Look for my shadows, they will hide you."
+*{{AC|OmenRoundStart6.mp3}} "Wait until I blind them to strike."
+*{{AC|OmenRoundStart7.mp3}} "I will take back what is mine."
+*{{AC|OmenRoundStart8.mp3}} "They think they know pain? They can't begin to comprehend it."
+*{{AC|OmenRoundStart9.mp3}} "Strike at their weak points. If one link breaks the rest will follow."
+*{{AC|OmenRoundStart10.mp3}} "I survived obliteration. I will survive them."
+
+====Last round won====
+*{{AC|OmenRoundWon1.mp3}} "Good. Keep your focus."
+*{{AC|OmenRoundWon2.mp3}} "Again. Hurt them again."
+*{{AC|OmenRoundWon3.mp3}} "Kick them when they're down."
+*{{AC|OmenRoundWon4.mp3}} "I can feel their panic rising. Drive it into them."
+
+=====While in the lead=====
+*{{AC|OmenLead1.mp3}} "Their fear blinds them."
+*{{AC|OmenLead2.mp3}} "Sad fools standing in our way."
+*{{AC|OmenLead3.mp3}} "Their nightmare is becoming real."
+
+=====Making a comeback=====
+*{{AC|OmenComeback1.mp3}} "Keep yourself together. You can't fall apart now."
+*{{AC|OmenComeback2.mp3}} "I feel like myself. Catch them. Again."
+*{{AC|OmenComeback3.mp3}} "We are not done."
+
+=====Commend to ally=====
+*{{AC|OmenAllyCommend.mp3}} "That was terrifying."
+
+===Last round in the half===
+====Attacking====
+*{{AC|OmenLastRound1.mp3}} "Spend everything. We keep nothing."
+
+====Defending====
+*{{AC|OmenLastRound2.mp3}} "Spend everything. We keep nothing."
+
+===Match Point===
+*{{AC|OmenMatchPoint1.mp3}} "I know how this will end."
+*{{AC|OmenMatchPoint2.mp3}} "Put them to sleep."
+
+===Shop===
+====Let's Buy====
+*{{AC|OmenBuying1.mp3}}{{AC|OmenBuying2.mp3}} "I'm buying."
+
+====Let's Save====
+*{{AC|OmenSaving1.mp3}}{{AC|OmenSaving2.mp3}} "I'm saving."
+
+====I Have Extra Creds====
+*{{AC|OmenOffer1.mp3}}{{AC|OmenOffer2.mp3}} "I can buy."
+
+====Requested====
+*{{AC|OmenRequest1.mp3}}{{AC|OmenRequest2.mp3}} "I need this."
+
+===Barrier Down===
+*{{AC|OmenBarrierDown1.mp3}} "I must hold together."
+*{{AC|OmenBarrierDown2.mp3}} "Hold our ground."
+*{{AC|OmenBarrierDown3.mp3}} "Watch them falter."
+*{{AC|OmenBarrierDown4.mp3}} "Give them no ground."
+*{{AC|OmenBarrierDown5.mp3}} "Cut their walls down."
+*{{AC|OmenBarrierDown6.mp3}} "Do you smell their panic?"
+*{{AC|OmenBarrierDown7.mp3}} "We can't stumble now."
+*{{AC|OmenBarrierDown8.mp3}} "I will break the balance."
+*{{AC|OmenBarrierDown9.mp3}} "I must endure."
+*{{AC|OmenBarrierDown10.mp3}} "They're weak. Good."
+*{{AC|OmenBarrierDown11.mp3}} "Keep it together."
+*{{AC|OmenBarrierDown12.mp3}} "I am not just a shadow."
+*{{AC|OmenBarrierDown13.mp3}} "I will be their nightmare."
+*{{AC|OmenBarrierDown14.mp3}} "I am everywhere."
+*{{AC|OmenBarrierDown15.mp3}} "Claw through them."
+*{{AC|OmenBarrierDown16.mp3}} "It begins."
+*{{AC|OmenBarrierDown17.mp3}} "I will rip the light from them."
+*{{AC|OmenBarrierDown18.mp3}} "Cower, run."
+*{{AC|OmenBarrierDown19.mp3}} "Snuff them out."
+
+==Spike==
+===Forgotten in spawn===
+*{{AC|OmenForgotSpike1.mp3}} "Can't even remember the spike."
+*{{AC|OmenForgotSpike2.mp3}} "We don't have the spike!"
+
+===Ally carrier down===
+*{{AC|OmenSpikeDown1.mp3}}{{AC|OmenSpikeDown2.mp3}} "Our carrier is dead."
+
+===Dropped===
+*{{AC|OmenSpikeDropped1.mp3}}{{AC|OmenSpikeDropped2.mp3}} "Dropped the spike."
+
+===Retrieved===
+*{{AC|OmenSpikePickedUp1.mp3}}{{AC|OmenSpikePickedUp2.mp3}} "I have the spike."
+
+===Planted===
+*{{AC|OmenSpikePlanted1.mp3}}{{AC|OmenSpikePlanted2.mp3}} "Spike planted."
+
+===Spotted===
+*{{AC|OmenSpikeSpottedA1.mp3}}{{AC|OmenSpikeSpottedA2.mp3}} "Spike is A."
+*{{AC|OmenSpikeSpottedB1.mp3}}{{AC|OmenSpikeSpottedB2.mp3}} "Spike is B."
+*{{AC|OmenSpikeSpottedC1.mp3}}{{AC|OmenSpikeSpottedC2.mp3}} "Spike is C."
+*{{AC|OmenSpikeSpottedASpawn1.mp3}}{{AC|OmenSpikeSpottedASpawn2.mp3}} "Spike's in Attacker Spawn."
+*{{AC|OmenSpikeSpottedDSpawn1.mp3}}{{AC|OmenSpikeSpottedDSpawn2.mp3}} "Spike's in Defender Spawn."
+*{{AC|OmenSpikeSpottedMid1.mp3}}{{AC|OmenSpikeSpottedMid2.mp3}} "Spike is Mid."
+
+===Defuse resumed===
+*{{AC|OmenDefuseResumed1.mp3}}{{AC|OmenDefuseResumed2.mp3}} "Shameful performance."
+
+===Defuse time running out===
+*{{AC|OmenDefuseLate1.mp3}}{{AC|OmenDefuseLate2.mp3}} "What's another death?"
+
+===Defuse successful===
+*{{AC|OmenDefuseComplete1.mp3}} "The spike is defused."
+
+==Kill==
+*{{AC|OmenKill1.mp3}} "Die."
+*{{AC|OmenKill2.mp3}} "Begone."
+*{{AC|OmenKill3.mp3}} "Silence."
+*{{AC|OmenKill4.mp3}} "Killed."
+*{{AC|OmenKill5.mp3}} "Let go."
+*{{AC|OmenKill6.mp3}} "Removed."
+*{{AC|OmenKill7.mp3}} "Disappear."
+*{{AC|OmenKill8.mp3}} "Fool."
+*{{AC|OmenKill9.mp3}} "Give in."
+*{{AC|OmenKill10.mp3}} "No more."
+
+===Headshot===
+*{{AC|OmenHeadshot1.mp3}} "Hush."
+*{{AC|OmenHeadshot2.mp3}} "Unimportant."
+*{{AC|OmenHeadshot3.mp3}} "Pitiful."
+*{{AC|OmenHeadshot4.mp3}} "Annihilated."
+*{{AC|OmenHeadshot5.mp3}} "You were a mistake."
+*{{AC|OmenHeadshot6.mp3}} "To dust."
+
+===[[Melee]]===
+*{{AC|OmenMeleeKill1.mp3}} "Gutted."
+
+===Triple===
+*{{AC|OmenTriple1.mp3}}{{AC|OmenTriple2.mp3}} "Three killed."
+
+===Quadra===
+*{{AC|OmenQuadra1.mp3}}{{AC|OmenQuadra2.mp3}} "Four dead."
+
+===One kill remaining (game-mode specific)===
+*{{AC|OmenOneKillLeft1.mp3}}{{AC|OmenOneKillLeft2.mp3}} "One more."
+
+==Round End==
+===Ace===
+*{{AC|OmenAce1.mp3}} "Worthless dead fools."
+
+===Clutch===
+*{{AC|OmenClutch1.mp3}} "You forget your place."
+*{{AC|OmenClutch2.mp3}} "That was fun."
+*{{AC|OmenClutch3.mp3}} "You thought you could escape my nightmare?!"{{#tag:sup|{{patchv|13.00}}^}}
+
+===Flawless or Team Ace===
+*{{AC|OmenFlawless1.mp3}} "They died underneath our boots."
+*{{AC|OmenFlawless2.mp3}} "Pity the man who dies meaningless."
+*{{AC|OmenFlawless3.mp3}} "History has already forgotten you."
+
+===Thrifty===
+*{{AC|OmenThrifty1.mp3}} "I need nothing to win."
+
+===Last Kill===
+*{{AC|OmenLastKill1.mp3}} "It ends, for now."
+*{{AC|OmenLastKill2.mp3}} "Five dead."
+*{{AC|OmenLastKill3.mp3}} "It is finished."
+*{{AC|OmenLastKill4.mp3}} "Petty things."
+*{{AC|OmenLastKill5.mp3}} "Rest. It is done."
+
+====Enemy MVP====
+There are no voice lines at the moment in this section for this Agent.
+
+====Using [[Melee]]====
+*{{AC|OmenLastKillMelee1.mp3}} "You didn't see that coming."
+
+===Low HP===
+*{{AC|OmenLowHP1.mp3}} "You think you can kill me?"
+
+==Match End==
+===Match Win===
+*{{AC|OmenMatchWin1.mp3}} "Rest now. I will keep watch."
+*{{AC|OmenMatchWin2.mp3}} "Out of my way."
+*{{AC|OmenMatchWin3.mp3}} "Hold on to this moment. We can't stop here."
+
+===Runner-up (game-mode specific)===
+*{{AC|OmenRunnerUp1.mp3}} "This is only the start."
+*{{AC|OmenRunnerUp2.mp3}} "Close, I am so close!"
+*{{AC|OmenRunnerUp3.mp3}} "I can be even more."
+
+==Agent-specific interactions==
+{| class="wikitable sortable"
+!To Agent
+!Scenario
+!width=40%; class=unsortable|Ally
+!width=40%; class=unsortable|Enemy
+|-
+|rowspan=3|{{Ai|Astra}}
+|Round Start
+|{{AC|OmenAllyAstraRoundStart.mp3}} "Astra, your power sends shimmers through the veil, it is mesmerizing. Can no one else see them? Pity."
+|
+|-
+|Barrier Down
+|{{AC|OmenAllyAstraBarrierDown.mp3}} "Shine for us, Astra."
+|
+|-
+|Last Kill
+|
+|{{AC|OmenEnemyAstraLastKill.mp3}} "The Astra is gone, and her mysteries with her."
+|-
+|{{Ai|Breach}}
+|Barrier Down
+|
+|{{AC|OmenEnemyBreachBarrierDown.mp3}} "I'll silence their Breach."
+|-
+|{{Ai|Brimstone}}
+|Round Start
+|
+|{{AC|OmenEnemyBrimstoneRoundStart.mp3}} "Kill their leader and the rest will flee like rats."
+|-
+|rowspan=2|{{Ai|Chamber}}
+|Chat
+|
+:[[File:Omen icon.png|20px|link=Omen]] {{AC|OmenAllyChamberChat.mp3}} "I told you, Chamber, I cannot eat your cooking!"
+:[[File:Chamber icon.png|20px|link=Chamber]] {{AC|ChamberAllyOmenChat.mp3}} "You don't fear the enemy, yet you fear butter. Unbelievable."
+|
+|-
+|Commend
+|{{AC|OmenAllyChamberCommend.mp3}} "Expertly done, Chamber."
+|
+|-
+|rowspan=4|{{ai|Clove}}
+|Match Start
+|
+|{{AC|OmenEnemyCloveMatchStart.mp3}} "Their Clove is fearless in the face of death. I will show them a fate far worse."
+|-
+|Round Start
+|
+|{{AC|OmenEnemyCloveRoundStart.mp3}} "Their Clove returns from death yet natural balance is preserved. How is that possible?"
+|-
+|Barrier Down
+|
+|{{AC|OmenEnemyCloveBarrierDown.mp3}} "Clove's antics stop now."
+|-
+|Last Kill
+|
+|{{AC|OmenEnemyCloveLastKill.mp3}} "A mandatory break for you, Clove." 
+|-
+|rowspan=2|{{Ai|Cypher}}
+|Round Start
+|{{AC|OmenEnemyCypherRoundStart.mp3}} "Do you see under my hood, Cypher? Does it scare you?"
+|
+|-
+|Kill
+|
+|{{AC|OmenEnemyCypherKill.mp3}} "No more meddling."
+|-
+|rowspan=7|{{Ai|Fade}}
+|Chat
+|
+:[[File:Fade icon.png|20px|link=Fade]] {{AC|FadeAllyOmenChat.mp3}} "Omen, I wonder, how quickly can we unravel their will to fight?"
+:[[File:Omen icon.png|20px|link=Omen]] {{AC|OmenAllyFadeChat.mp3}} "With you and I in concert, immediately."
+|
+|-
+|Match Start
+|
+|{{AC|OmenEnemyFadeMatchStart.mp3}} "They have brought Fade, a consciousness as strained as my own. This will be interesting."
+|-
+|Round Start
+|{{AC|OmenAllyFadeRoundStart.mp3}} "Together, Fade. We will show them the true meaning of fear."
+|{{AC|OmenEnemyFadeRoundStart.mp3}} "That Fade spreads terror well. Let me give her a dose of her own medicine."
+|-
+|Barrier Down
+|{{AC|OmenAllyFadeBarrierDown.mp3}} "Fade, we endure."
+|
+|-
+|Commend
+|{{AC|OmenAllyFadeCommend.mp3}} "Fade, that was a work of art."
+|
+|-
+|Kill
+|
+|{{AC|OmenEnemyFadeKill.mp3}} "Let go."
+|-
+|Last Kill
+|
+|{{AC|OmenEnemyFadeLastKill.mp3}} "Be at peace."
+|-
+|rowspan=2|{{Ai|Harbor}}
+|Match Start
+|{{AC|OmenAllyHarborMatchStart.mp3}} "That relic won't work for just anyone, Harbor. Why you? Curious."
+|
+|-
+|Commend
+|{{AC|OmenAllyHarborCommend.mp3}} "Your combat precision, Harbor, I swear I've seen it before. A past life maybe." 
+|
+|-
+|rowspan=5|{{ai|Iso}}
+|Chat
+|
+:[[File:Iso icon.png|20px|link=Iso]] {{AC|IsoAllyOmenChat.mp3}} "Omen, you still remember the code of our former employer, right?"
+:[[File:Omen icon.png|20px|link=Omen]] {{AC|OmenAllyIsoChat.mp3}} "I remember that it always ended in death."
+|
+|-
+|Match Start
+|{{AC|OmenAllyIsoMatchStart.mp3}} "Iso, I owe you a great debt. Um-" ''*clears throat*'' "Would you be opposed to receiving a hand-knit sweater?"
+|{{AC|OmenEnemyIsoMatchStart.mp3}} "Their Iso buried hundreds. Let us not be part of that statistic."
+|-
+|Barrier Down
+|{{AC|OmenAllyIsoBarrierDown.mp3}} "Iso, take them one by one."
+|
+|-
+|Commend
+|{{AC|OmenAllyIsoCommend.mp3}} "Remarkable. Your precision knows no bounds, Iso."
+|
+|-
+|Last Kill
+|
+|{{AC|OmenEnemyIsoLastKill.mp3}} ''*Omen scoffs*'' "Seniority wins."
+|-
+|{{Ai|Jett}}
+|Commend
+|{{AC|OmenAllyJettCommend.mp3}} "Jett, you were a storm. Well done."
+|
+|-
+|{{Ai|Killjoy}}
+|Match Start
+|
+|{{AC|OmenEnemyKilljoyMatchStart.mp3}} "I will get inside their inventor's head. Even brilliant minds will break to madness."
+|-
+|rowspan=8|{{Ai|Omen}}
+|rowspan=2|Match Start
+|
+|{{AC|OmenEnemyOmenMatchStart.mp3}} "There is another of me? How many times did I get ripped apart? How many times did I die?"
+|-
+|
+|{{AC|OmenEnemyOmenMatchStart2.mp3}} "How many truths has their Omen uncovered? Whatever he knows, it will be mine." 
+|-
+|Round Start
+|
+|{{AC|OmenEnemyOmenRoundStart.mp3}} "I'll kill that Omen. I'll take his memories. I will remember."
+|-
+|rowspan=2|Barrier Down
+|
+|{{AC|OmenEnemyOmenBarrierDown.mp3}} "I will kill you, Omen."
+|-
+|
+|{{AC|OmenEnemyOmenBarrierDown2.mp3}} "I will find you, Omen."
+|-
+|rowspan=2|Kill
+|
+|{{AC|OmenEnemyOmenKill.mp3}} "Now rest."
+|-
+|
+|{{AC|OmenEnemyOmenKill2.mp3}} "Let go."
+|-
+|Last Kill 
+|
+|{{AC|OmenEnemyOmenLastKill.mp3}} "You can finally let go."
+|-
+|rowspan=2|{{Ai|Phoenix}}
+|Chat 
+|
+:[[File:Phoenix icon.png|20px|link=Phoenix]] {{AC|PhoenixAllyOmenChat.mp3}} "Hey Omen, I respect a guy who knits. That's pretty cute."
+:[[File:Omen icon.png|20px|link=Omen]] {{AC|OmenAllyPhoenixChat.mp3}} "It helps me focus! Oh, what do you care?"
+|
+|-
+|Round Start
+|
+|{{AC|OmenEnemyPhoenixRoundStart.mp3}} "I will snuff out Phoenix's fire."
+|-
+|rowspan=2|{{Ai|Raze}}
+|Match Start
+|
+|{{AC|OmenEnemyRazeMatchStart.mp3}} "There is a Raze. I sense her laughter. Hmm, to laugh again."
+|-
+|Barrier Down
+|{{AC|OmenAllyRazeBarrierDown.mp3}} "Raze, sow your chaos."
+|
+|-
+|rowspan=4|{{Ai|Reyna}}
+|Match Start
+|{{AC|OmenAllyReynaMatchStart.mp3}} "Reyna, the souls you consume. Do you hear their voices as I do?"
+|
+|-
+|Round Start
+|{{AC|OmenAllyReynaRoundStart.mp3}} "The enemy fears you, Reyna. You can use that."
+|
+|-
+|Commend
+|{{AC|OmenAllyReynaCommend.mp3}} "That was incredible, Reyna. And they call me the monster."
+|
+|-
+|Barrier Down
+|{{AC|OmenAllyReynaBarrierDown.mp3}} "Reyna, unleash your power."
+|
+|-
+|rowspan=5|{{Ai|Sage}}
+|Match Start
+|
+|{{AC|OmenEnemySageMatchStart.mp3}} "A Radiant healer is with them. I can feel her pull against the natural balance."
+|-
+|Round Start
+|{{AC|OmenAllySageRoundStart.mp3}} "Sage, the life you give, do you ever wonder where it's taken from?"
+|{{AC|OmenEnemySageRoundStart.mp3}} "Keep hunting them down! Their Sage cannot protect them all."
+|-
+|Commend
+|{{AC|OmenAllySageCommend.mp3}} "Sage, you are truly limitless."
+|
+|-
+|Kill
+|
+|{{AC|OmenEnemySageKill.mp3}} "Sage killed."
+|-
+|Last Kill
+|
+|{{AC|OmenEnemySageLastKill.mp3}} "I've reset the balance."
+|-
+|rowspan=6|{{Ai|Skye}}
+|Match Start
+|{{AC|OmenAllySkyeMatchStart.mp3}} "Skye the life weaver. The power to create, to destroy. Which path will you embrace, I wonder?"
+|
+|-
+|Round Start
+|{{AC|OmenAllySkyeRoundStart.mp3}} "Oh, there is a terrible beast inside you, Skye. Unleash it."
+|
+|-
+|Commend
+|{{AC|OmenAllySkyeCommend.mp3}} "Well done, Skye! Nature's wrath indeed."
+|
+|-
+|Barrier Down
+|
+|{{AC|OmenEnemySkyeBarrierDown.mp3}} "Erase their Skye."
+|-
+|Kill
+|
+|{{AC|OmenEnemySkyeKill.mp3}} "Killed their Skye."
+|-
+|Last Kill
+|
+|{{AC|OmenEnemySkyeLastKill.mp3}} "What would you have become, Skye? Ugh, it doesn't matter now."
+|-
+|rowspan=2|{{Ai|Sova}}
+|Commend
+|{{AC|OmenAllySovaCommend.mp3}} "There is a fury in you, Sova. It is terrible. Beautiful."
+|
+|-
+|Match Start
+|
+|{{AC|OmenEnemySovaMatchStart.mp3}} "Their Sova thinks himself a hunter. What will he do when he feels me closing in?"
+|-
+|rowspan=12|{{Ai|Viper}}
+|rowspan=2|Chat
+|
+:[[File:Viper icon.png|20px|link=Viper]] {{AC|ViperAllyOmenChat.mp3}} "Joh- I mean, Omen. Keep yourself together, you're still needed."
+:*''This line has a [[Viper/Quotes#Ally Omen Chat|previous version]] that has been intentionally replaced.<ref>[[VALORANT Protocol#The Blackmailer's agent dossiers|Omen's dossier]]</ref>
+:[[File:Omen icon.png|20px|link=Omen]] {{AC|OmenAllyViperChat.mp3}} "Wait, what did you say? I'm hearing so many things."
+|
+|-
+|
+:[[File:Omen icon.png|20px|link=Omen]] {{AC|OmenAllyViperChat2.mp3}} "Sabine?"{{#tag:sup|{{patchv|12.03}}+}}
+:[[File:Viper icon.png|20px|link=Viper]] {{AC|ViperAllyOmenChat3.mp3}} ''*Viper clears throat*'' "Omen?"
+|-
+|rowspan=3|Match Start
+|{{AC|OmenAllyViperMatchStart.mp3}} "Don't die here, Sabine. I need your secrets."
+|{{AC|OmenEnemyViperMatchStart.mp3}} "I've made my peace with our Viper, I cannot say the same for theirs. She will learn to fear me." 
+|-
+|{{AC|OmenAllyViperMatchStart2.mp3}} "Sabine, look at the monsters we've become. At least you have flesh to hide your horror."
+|
+|-
+|{{AC|OmenAllyViperMatchStart3.mp3}} "You can relax, Sabine. I gain nothing from killing you now. Attend to the present, not the past." 
+|
+|-
+|Commend
+|{{AC|OmenAllyViperCommend.mp3}} "Impressive, Sabine. You always knew how to turn the tables on an enemy."
+|
+|-
+|Round Start
+|{{AC|OmenAllyViperRoundStart.mp3}} "Just think, Sabine. You used to heal with your skill. Funny."
+|{{AC|OmenEnemyViperRoundStart.mp3}} "Ordered to kill Sabine again. Does nothing ever change?" 
+|-
+|rowspan=2|Barrier Down
+|{{AC|OmenAllyViperBarrierDown.mp3}} "Stay alive, Sabine."
+|
+|-
+|{{AC|OmenAllyViperBarrierDown2.mp3}} "We go together, Sabine."
+|
+|-
+|Kill
+|
+|{{AC|OmenEnemyViperKill.mp3}} "Experiment complete."
+|-
+|rowspan=2|Last Kill
+|
+|{{AC|OmenEnemyViperLastKill.mp3}} "Goodbye, Sabine."
+|-
+|
+|{{AC|OmenEnemyViperLastKill2.mp3}} "That I kill you now after all this time. Ironic."
+|-
+|rowspan=3|{{ai|Vyse}}
+|Chat
+|
+:[[File:Vyse icon.png|20px|link=Vyse]] {{AC|VyseAllyOmenChat.mp3}} "Omen, the Scions spoke of you often. Is it true you once killed a man with a tree branch?"
+:[[File:Omen icon.png|20px|link=Omen]] {{AC|OmenAllyVyseChat.mp3}} "Anything can be made a weapon. But I am sorry, I don't recall."
+|
+|-
+|Barrier Down
+|
+|{{AC|OmenEnemyVyseBarrierDown.mp3}} "Mind their metal weaver."
+|-
+|Last Kill
+|
+|{{AC|OmenEnemyVyseLastKill.mp3}} "Freed from your prison at last."
+|-
+|rowspan=4|{{Ai|Yoru}}
+|Match Start
+|{{AC|OmenAllyYoruMatchStart.mp3}} "I'm curious, rift walker. When you travel, can you feel the pieces you leave behind?"
+|
+|-
+|Round Start
+|{{AC|OmenAllyYoruRoundStart.mp3}} "Where should we go, rift walker? They cannot watch everywhere at once."
+|
+|-
+|Commend
+|{{AC|OmenAllyYoruCommend.mp3}} "They are no match for you, rift walker. Not even close."
+|
+|-
+|Barrier Down
+|{{AC|OmenAllyYoruBarrierDown.mp3}} "Tear them apart, rift walker."
+|
+|}
+
+==Radio Commands==
+===Menu Index only===
+====Caution here====
+*{{AC|OmenCaution1.mp3}}{{AC|OmenCaution2.mp3}} "Enemies near."
+
+====Going Area====
+*{{AC|OmenGoingA1.mp3}}{{AC|OmenGoingA2.mp3}} "Going A."
+*{{AC|OmenGoingB1.mp3}}{{AC|OmenGoingB2.mp3}} "Going B."
+*{{AC|OmenGoingC1.mp3}}{{AC|OmenGoingC2.mp3}} "Going C."
+*{{AC|OmenGoingMid1.mp3}}{{AC|OmenGoingMid2.mp3}} "Going Mid."
+
+====Need Support====
+*{{AC|OmenHelp1.mp3}}{{AC|OmenHelp2.mp3}}{{AC|OmenHelp3.mp3}} "Help."
+
+====On my way====
+*{{AC|OmenOnMyWay1.mp3}}{{AC|OmenOnMyWay2.mp3}} "On my way."
+
+====Play for picks====
+*{{AC|OmenPlayForPicks1.mp3}}{{AC|OmenPlayForPicks2.mp3}} "Pick 'em off."
+
+===Wheel Index only===
+====Encourage====
+*{{AC|OmenEncouraging1.mp3}}{{AC|OmenEncouraging2.mp3}}{{AC|OmenEncouraging3.mp3}} "We can take them."
+
+====I'll lurk====
+Only as Attackers during Buy Phase.
+*{{AC|OmenLurking1.mp3}}{{AC|OmenLurking2.mp3}} "I'm lurking."
+
+====I'll push out====
+Only as Defenders during Buy Phase.
+*{{AC|OmenPushingOut1.mp3}}{{AC|OmenPushingOut2.mp3}} "I'm pushing out."
+
+====I'm holding position====
+Only as Defenders during Buy Phase.
+*{{AC|OmenHoldingPosition1.mp3}}{{AC|OmenHoldingPosition2.mp3}} "Holding position."
+
+====Let's Attack====
+Only during Round Phase.
+*{{AC|OmenLetsAttack1.mp3}}{{AC|OmenLetsAttack2.mp3}} "Let's attack."
+
+====Let's hold positions====
+Only as Defenders during Buy Phase.
+*{{AC|OmenHoldPositions1.mp3}}{{AC|OmenHoldPositions2.mp3}} "Let's hold positions."
+
+====Let's play slow====
+Only as Attackers at anytime.
+*{{AC|OmenPlaySlow1.mp3}}{{AC|OmenPlaySlow2.mp3}} "Let's play slow."
+
+====Let's push out====
+Only as Defenders during Buy Phase.
+*{{AC|OmenPushOut1.mp3}}{{AC|OmenPushOut2.mp3}} "Let's push out."
+
+====Let's spread out====
+*{{AC|OmenSpreadOut1.mp3}}{{AC|OmenSpreadOut2.mp3}} "Let's spread out."
+
+====Nice Try====
+*{{AC|OmenNiceTry1.mp3}}{{AC|OmenNiceTry2.mp3}}{{AC|OmenNiceTry3.mp3}} "Good effort."
+
+====Stick together====
+*{{AC|OmenStickTogether1.mp3}}{{AC|OmenStickTogether2.mp3}} "Stick together."
+
+===Menu and Wheel Index===
+====Commend====
+*{{AC|OmenCommend1.mp3}}{{AC|OmenCommend2.mp3}}{{AC|OmenCommend3.mp3}} "Well done."
+
+====Fall Back====
+Menu Index at anytime, or Wheel Index only during Round Phase.
+*{{AC|OmenFallBack1.mp3}}{{AC|OmenFallBack2.mp3}} "Fall back."
+
+====Hello====
+*{{AC|OmenHello1.mp3}}{{AC|OmenHello2.mp3}}{{AC|OmenHello3.mp3}} "Greetings."
+
+====I'll take point====
+Wheel Index only as Attackers during Buy Phase, or Menu Index at anytime regardless of Attackers or Defenders.
+*{{AC|OmenTakePoint1.mp3}}{{AC|OmenTakePoint2.mp3}} "I'll lead."
+
+====Let's rush them (Radio Command)====
+*{{AC|OmenRush1.mp3}}{{AC|OmenRush2.mp3}} "Rush them."
+
+====Need healing====
+*{{AC|OmenHealing1.mp3}}{{AC|OmenHealing2.mp3}} "Need healing."
+
+====No====
+*{{AC|OmenNo1.mp3}}{{AC|OmenNo2.mp3}}{{AC|OmenNo3.mp3}} "No."
+
+====Sorry====
+*{{AC|OmenSorry1.mp3}}{{AC|OmenSorry2.mp3}}{{AC|OmenSorry3.mp3}} "Sorry."
+
+====Thanks====
+*{{AC|OmenThanks1.mp3}}{{AC|OmenThanks2.mp3}}{{AC|OmenThanks3.mp3}} "Thank you."
+
+====Ultimate Status====
+*{{AC|OmenUltDown1.mp3}}{{AC|OmenUltDown2.mp3}} "My ultimate is not ready."
+*{{AC|OmenUltAlmost1.mp3}}{{AC|OmenUltAlmost2.mp3}} "My ultimate is almost ready."
+*{{AC|OmenUltReady1.mp3}}{{AC|OmenUltReady2.mp3}} "My ultimate is ready."
+
+====Yes====
+*{{AC|OmenYes1.mp3}}{{AC|OmenYes2.mp3}}{{AC|OmenYes3.mp3}} "Yes."
+
+===Wheel Index requiring Minimap===
+For the following voicelines, the minimap must be open and then open ping wheel and activate strategy.
+====Faking====
+Only as Attackers during Buy Phase.
+*{{AC|OmenFaking1.mp3}}{{AC|OmenFaking2.mp3}} "I'm faking."
+*{{AC|OmenFakingA1.mp3}}{{AC|OmenFakingA2.mp3}} "I'm faking A."
+*{{AC|OmenFakingB1.mp3}}{{AC|OmenFakingB2.mp3}} "I'm faking B."
+*{{AC|OmenFakingC1.mp3}}{{AC|OmenFakingC2.mp3}} "I'm faking C."
+
+====I'm Going Here====
+As Defenders during Buy Phase, or as Attackers at anytime.
+*{{AC|OmenGoingA1.mp3}}{{AC|OmenGoingA2.mp3}} "Going A."
+*{{AC|OmenGoingB1.mp3}}{{AC|OmenGoingB2.mp3}} "Going B."
+*{{AC|OmenGoingC1.mp3}}{{AC|OmenGoingC2.mp3}} "Going C."
+*{{AC|OmenGoingMid1.mp3}}{{AC|OmenGoingMid2.mp3}} "Going Mid."
+
+====Let's Go Here====
+Only as Attackers during Buy Phase.
+*{{AC|OmenLetsGoA1.mp3}}{{AC|OmenLetsGoA2.mp3}} "Let's go A."
+*{{AC|OmenLetsGoB1.mp3}}{{AC|OmenLetsGoB2.mp3}} "Let's go B."
+*{{AC|OmenLetsGoC1.mp3}}{{AC|OmenLetsGoC2.mp3}} "Let's go C."
+*{{AC|OmenLetsGoHere1.mp3}}{{AC|OmenLetsGoHere2.mp3}} "Let's go here."
+
+====Let's rush them (Minimap)====
+Only as Attackers during Buy Phase.
+*{{AC|OmenLetsRush1.mp3}}{{AC|OmenLetsRush2.mp3}} "Let's rush them."
+*{{AC|OmenLetsRushA1.mp3}}{{AC|OmenLetsRushA2.mp3}} "Let's rush A."
+*{{AC|OmenLetsRushB1.mp3}}{{AC|OmenLetsRushB2.mp3}} "Let's rush B."
+*{{AC|OmenLetsRushC1.mp3}}{{AC|OmenLetsRushC2.mp3}} "Let's rush C."
+
+====Let's Sneak Here====
+Only as Attackers during Buy Phase.
+*{{AC|OmenSneakA1.mp3}}{{AC|OmenSneakA2.mp3}} "Let's sneak A."
+*{{AC|OmenSneakB1.mp3}}{{AC|OmenSneakB2.mp3}} "Let's sneak B."
+*{{AC|OmenSneakC1.mp3}}{{AC|OmenSneakC2.mp3}} "Let's sneak C."
+*{{AC|OmenSneakMid1.mp3}}{{AC|OmenSneakMid2.mp3}} "Let's sneak Mid."
+
+====Let's Stack Here====
+Only as Defenders during Buy Phase.
+*{{AC|OmenStack1.mp3}}{{AC|OmenStack2.mp3}} "Let's stack up."
+*{{AC|OmenStackA1.mp3}}{{AC|OmenStackA2.mp3}} "Let's stack A."
+*{{AC|OmenStackB1.mp3}}{{AC|OmenStackB2.mp3}} "Let's stack B."
+*{{AC|OmenStackC1.mp3}}{{AC|OmenStackC2.mp3}} "Let's stack C."
+*{{AC|OmenStackMid1.mp3}}{{AC|OmenStackMid2.mp3}} "Let's stack Mid."
+
+====Someone Go Here====
+As Attackers during Round Phase, or as Defenders at anytime.
+*{{AC|OmenNeedSomeoneA1.mp3}}{{AC|OmenNeedSomeoneA2.mp3}} "Someone go A."
+*{{AC|OmenNeedSomeoneB1.mp3}}{{AC|OmenNeedSomeoneB2.mp3}} "Someone go B."
+*{{AC|OmenNeedSomeoneC1.mp3}}{{AC|OmenNeedSomeoneC2.mp3}} "Someone go C."
+*{{AC|OmenNeedSomeoneMid1.mp3}}{{AC|OmenNeedSomeoneMid2.mp3}} "Someone go Mid."
+
+====Spike's here====
+Only as Defenders during Round Phase.
+*{{AC|OmenSpikeA1.mp3}}{{AC|OmenSpikeA2.mp3}} "Spike's A."
+*{{AC|OmenSpikeB1.mp3}}{{AC|OmenSpikeB2.mp3}} "Spike's B."
+*{{AC|OmenSpikeC1.mp3}}{{AC|OmenSpikeC2.mp3}} "Spike's C."
+*{{AC|OmenSpikeMid1.mp3}}{{AC|OmenSpikeMid2.mp3}} "Spike's Mid."
+*{{AC|OmenSpikeSpottedASpawn1.mp3}}{{AC|OmenSpikeSpottedASpawn2.mp3}} "Spike's in Attacker Spawn."
+*{{AC|OmenSpikeSpottedDSpawn1.mp3}}{{AC|OmenSpikeSpottedDSpawn2.mp3}} "Spike's in Defender Spawn."
+
+==Pings==
+===General===
+*{{AC|OmenPing1.mp3}}{{AC|OmenPing2.mp3}} "Here."
+
+===Caution===
+*{{AC|OmenPingCaution1.mp3}}{{AC|OmenPingCaution2.mp3}} "Careful."
+
+===Need support===
+*{{AC|OmenHelp1.mp3}}{{AC|OmenHelp2.mp3}}{{AC|OmenHelp3.mp3}} "Help!"
+
+===On my mark===
+*{{AC|OmenOnMyMark1.mp3}}{{AC|OmenOnMyMark2.mp3}} "Go on my mark."
+
+===Ping gun===
+*{{AC|OmenPingGun1.mp3}}{{AC|OmenPingGun2.mp3}} "Gun here."
+
+===Ping spike===
+*{{AC|OmenPingSpike1.mp3}}{{AC|OmenPingSpike2.mp3}} "Spike here."
+
+===Ping for spike defuse===
+*{{AC|OmenDefuseSpike1.mp3}}{{AC|OmenDefuseSpike2.mp3}} "Defuse the spike!"
+
+===Ping for spike plant===
+*{{AC|OmenPlantSpike1.mp3}}{{AC|OmenPlantSpike2.mp3}} "Plant the spike!"
+
+===Watching===
+*{{AC|OmenWatching1.mp3}}{{AC|OmenWatching2.mp3}} "Watching here."
+
+==Other lines==
+===Ability unusable===
+====[[Status Effect#Suppress|Suppressed]]====
+*{{AC|OmenCantUse1.mp3}}{{AC|OmenCantUse2.mp3}} "Can't use that."
+
+====On cooldown====
+*{{AC|OmenOnCooldown1.mp3}}{{AC|OmenOnCooldown2.mp3}} "Not ready yet."
+
+====No charges====
+*{{AC|OmenNoCharges1.mp3}}{{AC|OmenNoCharges2.mp3}} "No charges."
+
+===Enemy spotted===
+*{{AC|OmenEnemyA1.mp3}}{{AC|OmenEnemyA2.mp3}} "Enemy spotted A."
+*{{AC|OmenEnemyB1.mp3}}{{AC|OmenEnemyB2.mp3}} "Enemy spotted B."
+*{{AC|OmenEnemyC1.mp3}}{{AC|OmenEnemyC2.mp3}} "Enemy spotted C."
+*{{AC|OmenEnemyASpawn1.mp3}}{{AC|OmenEnemyASpawn2.mp3}} "Enemy in Attacker Spawn."
+*{{AC|OmenEnemyDSpawn1.mp3}}{{AC|OmenEnemyDSpawn2.mp3}} "Enemy in Defender Spawn."
+*{{AC|OmenEnemyMid1.mp3}}{{AC|OmenEnemyMid2.mp3}} "Enemy spotted Mid."
+
+====Multiple====
+*{{AC|OmenEnemiesA1.mp3}}{{AC|OmenEnemiesA2.mp3}} "Multiple enemies A!"
+*{{AC|OmenEnemiesB1.mp3}}{{AC|OmenEnemiesB2.mp3}} "Multiple enemies B!"
+*{{AC|OmenEnemiesC1.mp3}}{{AC|OmenEnemiesC2.mp3}} "Multiple enemies C!"
+*{{AC|OmenEnemiesASpawn1.mp3}}{{AC|OmenEnemiesASpawn2.mp3}} "Enemies in Attacker Spawn!"
+*{{AC|OmenEnemiesDSpawn1.mp3}}{{AC|OmenEnemiesDSpawn2.mp3}} "Enemies in Defender Spawn!"
+*{{AC|OmenEnemiesMid1.mp3}}{{AC|OmenEnemiesMid2.mp3}} "Multiple enemies Mid!"
+
+===Reloading===
+*{{AC|OmenReloading1.mp3}}{{AC|OmenReloading2.mp3}} "Reloading."
+
+===Healed===
+*{{AC|OmenRelief1.mp3}}{{AC|OmenRelief2.mp3}}{{AC|OmenRelief3.mp3}}{{AC|OmenRelief4.mp3}}{{AC|OmenRelief5.mp3}} ''*Omen sighs*''
+
+===Killed===
+*{{AC|OmenDeath1.mp3}}{{AC|OmenDeath2.mp3}}{{AC|OmenDeath3.mp3}} ''*Omen groans*''
+
+===Resurrected via {{abi text|Resurrection}}===
+*{{AC|OmenResurrect.mp3}} "I let go for a second!"
+
+===Wounded===
+====Light damage====
+*{{AC|OmenPainLight1.mp3}}{{AC|OmenPainLight2.mp3}}{{AC|OmenPainLight3.mp3}} ''*Omen groans*''
+
+====Medium damage====
+*{{AC|OmenPainMedium1.mp3}}{{AC|OmenPainMedium2.mp3}}{{AC|OmenPainMedium3.mp3}} ''*Omen groans*''
+
+====Heavy damage====
+*{{AC|OmenPainHeavy1.mp3}}{{AC|OmenPainHeavy2.mp3}}{{AC|OmenPainHeavy3.mp3}} ''*Omen groans*''
+
+====Fall damage====
+*{{AC|OmenPainFall1.mp3}}{{AC|OmenPainFall2.mp3}}{{AC|OmenPainFall3.mp3}} ''*Omen groans*''
+
+==Unused lines==
+===Match MVP===
+*{{AC|OmenMatchMVP1.mp3}} "You thought you could escape my nightmare?!"
+
+==Removed lines==
+===Last Kill Enemy MVP===
+*{{AC|OmenLastKillMVP1.mp3}} "Still just human."{{#tag:sup|-{{patchv|13.00}}}}
+
+===Wounded Annoyed===
+*{{AC|OmenPainAnnoyed1.mp3}}{{AC|OmenPainAnnoyed2.mp3}}{{AC|OmenPainAnnoyed3.mp3}} ''*Omen groans*''
+
+===Spike Spotted General===
+*{{AC|OmenSpikeSpotted1.mp3}}{{AC|OmenSpikeSpotted2.mp3}} "Spike here."
+
+===Enemy spotted General===
+*{{AC|OmenEnemy1.mp3}}{{AC|OmenEnemy2.mp3}} "Enemy spotted."
+
+===Multiple Enemies spotted General===
+*{{AC|OmenEnemies1.mp3}}{{AC|OmenEnemies2.mp3}} "Multiple enemies!"
+
+===Be Quiet===
+*{{AC|OmenBeQuiet1.mp3}}{{AC|OmenBeQuiet2.mp3}} "Quiet."
+
+===Rotate===
+*{{AC|OmenRotating1.mp3}}{{AC|OmenRotating2.mp3}} "Rotating."
+
+===Let's Rotate===
+*{{AC|OmenLetsRotate1.mp3}}{{AC|OmenLetsRotate2.mp3}} "Rotate now."
+
+===Affirmation===
+*{{AC|OmenAffirmation1.mp3}}{{AC|OmenAffirmation2.mp3}} "Agreed."
+
+===Callouts===
+*{{AC|OmenCalloutA1.mp3}}{{AC|OmenCalloutA2.mp3}} "A Site."
+*{{AC|OmenCalloutB1.mp3}}{{AC|OmenCalloutB2.mp3}} "B Site."
+*{{AC|OmenCalloutC1.mp3}}{{AC|OmenCalloutC2.mp3}} "C Site."
+*{{AC|OmenCalloutMid1.mp3}}{{AC|OmenCalloutMid2.mp3}} "Middle."
+
+===Clear Area===
+*{{AC|OmenClearThisArea1.mp3}}{{AC|OmenClearThisArea2.mp3}} "Clear this area."
+
+===Hold===
+*{{AC|OmenHold1.mp3}}{{AC|OmenHold2.mp3}} "Hold on."
+
+===Push===
+*{{AC|OmenPush1.mp3}}{{AC|OmenPush2.mp3}} "Push."
+
+===Regroup===
+*{{AC|OmenRegroup1.mp3}}{{AC|OmenRegroup2.mp3}} "Regroup."
+
+===Need disrupt===
+*{{AC|OmenDisrupt1.mp3}}{{AC|OmenDisrupt2.mp3}} "Disrupt here."
+
+===Need scouting===
+*{{AC|OmenScout1.mp3}}{{AC|OmenScout2.mp3}} "Scout here."
+
+===Need vision block===
+*{{AC|OmenBlockVision1.mp3}}{{AC|OmenBlockVision2.mp3}} "Block sight here."
+
+===Ping enemy utility===
+*{{AC|OmenPingUtility1.mp3}}{{AC|OmenPingUtility2.mp3}} "Enemy utility here."
+
+===Ping Go here===
+*{{AC|OmenGoHere1.mp3}}{{AC|OmenGoHere2.mp3}} "Let's go here."
+
+==[[Range/Lore|The Range's lore assets]]==
+===[[Range/Lore/EP5|Episode 5]]===
+*{{AC|file=VoicemailBrimstone33.mp3}} "The man we hunt is heading west from Bhutan after another scrape with [[REALM]]. I've spied on their camp. The operatives speak of towering walls of water, waves crashing through their ranks. And the fugitive, facing down a dozen men at once. The reports match the evidence at the scene; intense flooding everywhere but no water source nearby. [[Astra]]'s intrigue in this man is well-founded. The chase continues."
+
+===[[Range/Lore/EP6|Episode 6]]===
+*{{AC|file=VoicemailBrimstone45.mp3}} "Oh- sorry [[Brimstone]], I meant to contact [[Fade]]. Goodbye."
+*{{AC|file=VoicemailBrimstone51.mp3}} "Commander, I know this sounds... unusual. But the modified cleaning bot stored in the lab, the one the others call [[Max Bot]], has been acting... strangely. I have witnessed it deviate from its usual pathing, activate on its own. It observes our training, our routines. In the middle of the night, I have watched it... watch me. Whatever [[Raze]] and [[Killjoy]] did to the thing, I suggest they undo it."
+*{{AC|file=VoicemailBrimstone53.mp3}} "Brimstone, the [[Max Bot]] is missing. It has been gone since this morning, I have looked everywhere. No one is taking this seriously, but something is happening. I am not crazy, Brimstone, you must see it. Please."
+
+===[[Range/Lore/EP7|Episode 7]]===
+*{{AC|file=VoicemailBrimstone56.mp3}} "Brimstone, it's Omen. I told you so." 
+
+===[[Range/Lore/EP8|Episode 8]]===
+*{{AC|file=VoicemailBrimstone70.mp3}} "[[Viper|She]] knew who I was this whole time! She knew so much more than me, why didn't she tell me?! Why couldn't she help?! Does she think that I'm some kind of monst-! I will speak with her... soon... but now, I... I need... more time. Brimstone... just know this: I am not my past."
+*{{AC|file=VoicemailBrimstone72.mp3}} "Brimstone, for years the search to understand my own past drove me. I thought I could find peace by knowing who I am, who I was, but no. The truth has only led to more questions, more frustration! I-... I lack focus. I lack clarity. I am no longer an asset to the [[VALORANT Protocol|Protocol]]. I am going to leave for some time. I intend to recover, and I intend to return. I will find my own path along the way. Do not follow me."
+*{{AC|file=VoicemailBrimstone81.mp3}} "Commander. I continue to spend my time contemplating recent events. Our encounters with [[Iso]], [[Hourglass]], and now our [[Clove|newest recruit]]. The event with [[Viper]], our natures, the way our paths have entangled. This must all mean something. There must be something meaningful at the end of this thread. I intend to keep pulling it."
+
+==Notes==
+:''To easily see which quotes were added corresponding to the patch, use your browser's Find function and type the patch number (e.g. v12.03).
+*{{ui|Removed}} 1 voice line removed from patch {{patchv|13.00}}, documented in the patch notes.
+*{{ui|Adjustment}} 1 voice line moved (marked ^) from patch {{patchv|13.00}}.
+*{{ui|Added}} 1 voice line added from patch {{patchv|12.03}}, documented in the patch notes.
+*Additional radio commands added in patch {{patchv|8.11}} are not mentioned in this page.
+*Other voice lines removed were at an unknown timeframe.
+
+==References==
+<references />
+
+==Navigation==
+{{Navbox agents}}
+[[Category:Quotes]]

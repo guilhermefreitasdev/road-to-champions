@@ -1,0 +1,690 @@
+{{stub|[Unknown] voice lines}}
+{{TOCright}}
+This is a '''list of quotes by {{ai|Veto}}'''. Veto is voiced by Bamar Kane in English. Necessary quotes translated are from French or Wolof to English, unless otherwise stated. Veto has two versions of his quotes; his standard set, and Evolution set for when he is empowered by {{abi text|Evolution}} with the latter having a filter applied to them. The standard set contains {{PAGESINCATEGORY:Veto Standard Quotes}} files of quotes and the Evolution set contains {{PAGESINCATEGORY:Veto Evolution Quotes}} files of quotes, giving Veto a grand total of {{PAGESINCATEGORY:Veto Quotes}} files of quotes including unused and removed lines, and excluding [[#The Range's lore assets|The Range's lore assets]].
+
+A downloadable folder containing all the audio files on this page can be found [https://drive.google.com/drive/folders/1chVysy3fdHtURDE8Zk7UTqa9jWsjljaf?usp=sharing here]. For quotes during Evolution, including a few voice lines unique to it, see [[Veto/Quotes/Evolution]].
+
+==Agent Selected/Unlocked==
+*{{AC|VetoPick.mp3}} "Give them nothing."
+
+==Abilities==
+==={{abi text|Crosscut}}===
+====Cast====
+*{{AC|VetoCrosscutCast1.mp3}}{{AC|VetoCrosscutCast2.mp3}} "Anchor set."
+*{{AC|VetoCrosscutCast3.mp3}}{{AC|VetoCrosscutCast4.mp3}} "Transfer ready."
+
+====Destroyed====
+*{{AC|VetoCrosscutDestroyed1.mp3}}{{AC|VetoCrosscutDestroyed2.mp3}} "Anchor destroyed."
+*{{AC|VetoCrosscutDestroyed3.mp3}}{{AC|VetoCrosscutDestroyed4.mp3}} "Gateway closed."
+
+==={{abi text|Chokehold}}===
+====Cast====
+*{{AC|VetoChokeholdCast1.mp3}}{{AC|VetoChokeholdCast2.mp3}} "Snare primed."
+*{{AC|VetoChokeholdCast3.mp3}}{{AC|VetoChokeholdCast4.mp3}} "Trap set."
+
+====Triggered====
+*{{AC|VetoChokeholdTriggered1.mp3}}{{AC|VetoChokeholdTriggered2.mp3}} "Snare tripped."
+*{{AC|VetoChokeholdTriggered3.mp3}}{{AC|VetoChokeholdTriggered4.mp3}} "Trap triggered."
+
+====Destroyed====
+*{{AC|VetoChokeholdDestroyed1.mp3}}{{AC|VetoChokeholdDestroyed2.mp3}} "Snare destroyed."
+*{{AC|VetoChokeholdDestroyed3.mp3}}{{AC|VetoChokeholdDestroyed4.mp3}} "Trap destroyed."
+
+==={{abi text|Interceptor}}===
+====Cast====
+*{{AC|VetoInterceptorCast1.mp3}}{{AC|VetoInterceptorCast2.mp3}} "Negation ready."
+*{{AC|VetoInterceptorCast3.mp3}}{{AC|VetoInterceptorCast4.mp3}} "Setting watcher."
+
+====Activate====
+*{{AC|VetoInterceptorActivate1.mp3}}{{AC|VetoInterceptorActivate2.mp3}} "Denial active."
+*{{AC|VetoInterceptorActivate3.mp3}}{{AC|VetoInterceptorActivate4.mp3}} "Negating."
+
+====Kill====
+*{{AC|VetoInterceptorKill1.mp3}} "No nonsense!"
+*{{AC|VetoInterceptorKill2.mp3}} "You really tried it?"
+
+====Destroyed====
+*{{AC|VetoInterceptorDestroyed1.mp3}}{{AC|VetoInterceptorDestroyed2.mp3}} "Counter measure broken."
+
+====Timeout====
+*{{AC|VetoInterceptorTimeout1.mp3}}{{AC|VetoInterceptorTimeout2.mp3}} "Watcher expired."
+
+==={{abi text|Evolution}}===
+:''Main article: [[Veto/Quotes/Evolution#Evolution|Veto/Quotes/Evolution → Evolution]]
+
+==Buy Phase==
+===Match Start===
+*{{AC|VetoMatchStart1.mp3}} "Alors mes amis, on dit quoi? What madness are we getting into today?"
+**(''Alors mes amis, on dit quoi'': So my friends, what do we say)
+*{{AC|VetoMatchStart2.mp3}} "I'm feeling good about this team. Nothing but greatness."
+*{{AC|VetoMatchStart3.mp3}} "Look at them over there, thinking they're gonna go home with a win. Nah."
+*{{AC|VetoMatchStart4.mp3}} "Sorry mama, I have to kill people today."
+*{{AC|VetoMatchStart5.mp3}} "They don't want this fight, they just don't know it yet."
+
+====Attacking====
+*{{AC|VetoMatchStartAttack1.mp3}} "I'm glad they showed up. It shows they care."
+
+====Defending====
+*{{AC|VetoMatchStartDefense1.mp3}} "Here they come rushing in to die for their planet again. Least we can do is make it quick for them."
+
+====[[Corrode]]====
+*{{AC|VetoMatchStartCorrode.mp3}} "Salt on the floor, salt on the walls and salt in the air, sheu tetet... Let's do this quickly!"
+**(''Sheu tetet'' ({{w|Wolof}} slang): For fuck's sake)
+
+===Round Start===
+*{{AC|VetoRoundStart1.mp3}} "Aim for their heads. They might be organ donors."
+*{{AC|VetoRoundStart2.mp3}} "Check your corners. Their success rides on our carelessness."
+*{{AC|VetoRoundStart3.mp3}} "Find their habits, good and bad. Both can be exploited."
+*{{AC|VetoRoundStart4.mp3}} "Next time they see us, it will be from the hole in the ground that we dig for them."
+*{{AC|VetoRoundStart5.mp3}} "So many ways to win, but we only need one. We will find it together."
+*{{AC|VetoRoundStart6.mp3}} "Speak up out there, but make your words count."
+*{{AC|VetoRoundStart7.mp3}} "Take a moment to collect yourselves. Scattered minds make simple mistakes."
+*{{AC|VetoRoundStart8.mp3}} "Rely on each other. They send us in groups for a reason."
+*{{AC|VetoRoundStart9.mp3}} "Watch them, sooner or later they will make a mistake. Capitalize on it."
+
+====Last round won====
+*{{AC|VetoRoundWon1.mp3}} "Every time we win, they doubt themselves a little more. Keep it up."
+*{{AC|VetoRoundWon2.mp3}} "They are imperfect. That's all the proof we need."
+*{{AC|VetoRoundWon3.mp3}} "They haven't given up yet? Huh, guess we hit them harder."
+*{{AC|VetoRoundWon4.mp3}} "[Unknown]. Let's hope they keep making those same mistakes."
+
+=====While in the lead=====
+*{{AC|VetoLead1.mp3}} "They embarrass themselves."
+*{{AC|VetoLead2.mp3}} "Whatever their plan was, it's not working."
+
+=====Making a comeback=====
+*{{AC|VetoComeback1.mp3}} "Hold them accountable for their actions."
+*{{AC|VetoComeback2.mp3}} "See that? We are worthy of being here. Keep at it."
+
+===Last round in the half===
+====Attacking====
+*{{AC|VetoLastRound1.mp3}} "Find a use for every last credit. They won't go with us."
+
+====Defending====
+*{{AC|VetoLastRound2.mp3}} "Time to spend like there is no tomorrow, which is, kind of why we're here."
+
+===Match Point===
+*{{AC|VetoMatchPoint1.mp3}} "This moment defines the rest. Give it everything."
+*{{AC|VetoMatchPoint2.mp3}} "Saama day. They are slipping. Let them fall."
+*(Saama day: They're weak)
+
+===Shop===
+====Let's Buy====
+*{{AC|VetoBuying1.mp3}}{{AC|VetoBuying2.mp3}} "I'm buying."
+
+====Let's Save====
+*{{AC|VetoSaving1.mp3}}{{AC|VetoSaving2.mp3}} "I'm saving."
+
+====I Have Extra Creds====
+*{{AC|VetoOffer1.mp3}} "Ditch the [[Classic]], I can buy."
+*{{AC|VetoOffer2.mp3}} "I have credits to spare."
+
+====Requested====
+*{{AC|VetoRequest1.mp3}}{{AC|VetoRequest2.mp3}} "I need a drop."
+
+===Barrier Down===
+*{{AC|VetoBarrierDown1.mp3}} "As prepared as I'll ever be."
+*{{AC|VetoBarrierDown2.mp3}} "Brick by brick."
+*{{AC|VetoBarrierDown3.mp3}} "Establishing perimeter."
+*{{AC|VetoBarrierDown4.mp3}} "Find a new angle."
+*{{AC|VetoBarrierDown5.mp3}} "Get it back!"
+*{{AC|VetoBarrierDown6.mp3}} "Keep pressing it."
+*{{AC|VetoBarrierDown7.mp3}} "Kill their confidence."
+*{{AC|VetoBarrierDown8.mp3}} "No ego, no pride."
+*{{AC|VetoBarrierDown9.mp3}} "Salt their wounds."
+*{{AC|VetoBarrierDown10.mp3}} "Security en route."
+*{{AC|VetoBarrierDown11.mp3}} "Stay strong. Stay alive."
+*{{AC|VetoBarrierDown12.mp3}} "Take control."
+*{{AC|VetoBarrierDown13.mp3}} "This back and forth? End it."
+*{{AC|VetoBarrierDown14.mp3}} "Meune na nek, let's go."
+**(''Meune na nek'': I can do it.)
+*{{AC|VetoBarrierDown15.mp3}} "Amul re gàllubay, we go."
+*(Amul re gàllubay: There's nothing left)
+
+==Spike==
+===Forgotten in spawn===
+*{{AC|VetoForgotSpike1.mp3}} "No spike, no [[Radianite]]. Let's go pick it up."
+
+===Ally carrier down===
+*{{AC|VetoSpikeDown1.mp3}} "Our spike's down."
+*{{AC|VetoSpikeDown2.mp3}} "Our spike is down."
+
+===Dropped===
+*{{AC|VetoSpikeDropped1.mp3}}{{AC|VetoSpikeDropped2.mp3}} "Spike dropped."
+
+===Retrieved===
+*{{AC|VetoSpikePickedUp1.mp3}}{{AC|VetoSpikePickedUp2.mp3}} "I have the spike."
+
+===Planted===
+*{{AC|VetoSpikePlanted1.mp3}}{{AC|VetoSpikePlanted2.mp3}} "Spike planted."
+
+===Spotted===
+*{{AC|VetoSpikeSpottedA1.mp3}}{{AC|VetoSpikeSpottedA2.mp3}} "Spike spotted A."
+*{{AC|VetoSpikeSpottedB1.mp3}}{{AC|VetoSpikeSpottedB2.mp3}} "Spike spotted B."
+*{{AC|VetoSpikeSpottedC1.mp3}}{{AC|VetoSpikeSpottedC2.mp3}} "Spike spotted C."
+*{{AC|VetoSpikeSpottedMid1.mp3}}{{AC|VetoSpikeSpottedMid2.mp3}} "Spike spotted Mid."
+*{{AC|VetoSpikeSpottedASpawn1.mp3}}{{AC|VetoSpikeSpottedASpawn2.mp3}} "Spike spotted Attacker Spawn."
+*{{AC|VetoSpikeSpottedDSpawn1.mp3}}{{AC|VetoSpikeSpottedDSpawn2.mp3}} "Spike spotted Defender Spawn."
+
+===Defuse resumed===
+*{{AC|VetoDefuseResumed1.mp3}} "Jëwil fe way. Let me handle business."
+*(Jëwil fe way: I got this.)
+
+===Defuse time running out===
+*{{AC|VetoDefuseLate1.mp3}} "I will see tomorrow."
+*{{AC|VetoDefuseLate2.mp3}} "Li bahul."
+*(Li bahul: It doesn’t matter.)
+
+===Defuse successful===
+*{{AC|VetoDefuseComplete1.mp3}} "J'te jure, I hate these things."
+**(''J'te jure'': I swear)
+*{{AC|VetoDefuseComplete2.mp3}} "Sorry, the Radianite stays with me."
+
+==Kill==
+*{{AC|VetoKill1.mp3}} "An afterthought."
+*{{AC|VetoKill2.mp3}} "Dead and done."
+*{{AC|VetoKill3.mp3}} "Gone cold."
+*{{AC|VetoKill4.mp3}} "Gotcha!"
+*{{AC|VetoKill5.mp3}} "In the dirt."
+*{{AC|VetoKill6.mp3}} "Nuh-uh."
+*{{AC|VetoKill7.mp3}} "One less!"
+*{{AC|VetoKill8.mp3}} "Threat down."
+*{{AC|VetoKill9.mp3}} "Wa che naak!"
+*(Wa che naak: Heads up!)
+*{{AC|VetoKill10.mp3}} "Yo amu darayo!"
+*(Yo amu darayo: Got you!)
+
+===Headshot===
+*{{AC|VetoHeadshot1.mp3}} "All the way down."
+*{{AC|VetoHeadshot2.mp3}} "Back up!"
+*{{AC|VetoHeadshot3.mp3}} "Move aside."
+*{{AC|VetoHeadshot4.mp3}} "Settle down."
+*{{AC|VetoHeadshot5.mp3}} ''*Veto laughs*''
+*{{AC|VetoHeadshot6.mp3}} "Sëdengé!"
+*(Sëdengé: Take it easy!)
+*{{AC|VetoHeadshot7.mp3}} "Dul."
+*(Dul: Nah.)
+
+===[[Melee]]===
+*{{AC|VetoMeleeKill1.mp3}} "Cut down."
+*{{AC|VetoMeleeKill2.mp3}} "Ayche, taleekul."
+*(Ayche, taleekul: Let go.)
+
+===Triple===
+*{{AC|VetoTriple1.mp3}}{{AC|VetoTriple2.mp3}} "Three out!"
+
+===Quadra===
+*{{AC|VetoQuadra1.mp3}}{{AC|VetoQuadra2.mp3}} "Four out!"
+
+===One kill remaining (game-mode specific)===
+*{{AC|VetoOneKillLeft1.mp3}} "Who wants it?"
+
+==Round End==
+===Ace===
+*{{AC|VetoAce1.mp3}} "Do your Earth a favor, hit the range."
+*{{AC|VetoAce2.mp3}} "I know my limits, and now I know yours."
+*{{AC|VetoAce3.mp3}} "Rule number one: hit your shots."
+
+===Clutch===
+*{{AC|VetoClutch1.mp3}} "And the world keeps turning!"
+*{{AC|VetoClutch2.mp3}} "Don't worry, I'll tell them you died like heroes."
+*{{AC|VetoClutch3.mp3}} "Deesaan, they were so close."
+
+===Flawless or Team Ace===
+*{{AC|VetoFlawless1.mp3}} "C'est bien. Bruises and scrapes we can deal with."
+**(''C'est bien'': That's good)
+*{{AC|VetoFlawless2.mp3}} "Not a life out of place."
+
+===Thrifty===
+*{{AC|VetoThrifty1.mp3}} "They had better guns, we had better aim."
+
+===Last Kill===
+*{{AC|VetoLastKill1.mp3}} "Perimeter secured."
+*{{AC|VetoLastKill2.mp3}} "Pick up a new hobby."
+*{{AC|VetoLastKill3.mp3}} "Someone grab a mop."
+*{{AC|VetoLastKill4.mp3}} "You weren't made for this."
+*{{AC|VetoLastKill5.mp3}} "Baiting your teammates? Shameless."{{#tag:sup|{{patchv|13.00}}^}}
+
+====Using [[Melee]]====
+*{{AC|VetoLastKillMelee1.mp3}} "Hold that for me."
+
+===Low HP===
+*{{AC|VetoLowHP1.mp3}} "Doobarami. That hurts."
+
+==Match End==
+===Match Win===
+*{{AC|VetoMatchWin1.mp3}} "Haha, you feel that? There's nothing better!"
+*{{AC|VetoMatchWin2.mp3}} "Now to find a meal, what's the local speciality?"
+*{{AC|VetoMatchWin3.mp3}} "[Unknown]! That is what we are meant for. C'est bien, l'équipe."
+**(''C'est bien, l'équipe'': That's good, team)
+
+====[[Corrode]]====
+*{{AC|VetoMatchWinCorrode.mp3}} "Okay. Let's see what [[Atlas]] left behind."
+
+===Runner-up (game-mode specific)===
+*{{AC|VetoRunnerUp1.mp3}} "Not bad, but I could go for another."
+*{{AC|VetoRunnerUp2.mp3}} "Okay, okay. Next time though, I'll take it."
+
+==Agent-specific interactions==
+{| class="wikitable sortable"
+!To Agent
+!Scenario
+!width=40%; class=unsortable|Ally
+!width=40%; class=unsortable|Enemy
+|-
+|rowspan=3|{{ai|Astra}}
+|Match Start
+|{{AC|VetoAllyAstraMatchStart.mp3}} "Wa asha Astra unu deme? Film club later? I'll bring the attire."
+|
+|-
+|Barrier Down
+|{{AC|VetoAllyAstraBarrierDown.mp3}} "Guide us, Astra."
+|
+|-
+|Last Kill
+|
+|{{AC|VetoEnemyAstraKill.mp3}} "Even stars can die. [Unknown] [[Astra|Efia]]."
+|-
+|{{ai|Brimstone}}
+|Match Start
+|
+|{{AC|VetoEnemyBrimstoneMatchStart.mp3}} "They brought Brimstone. All those years of fighting and he's still standing against us. The mark of a dangerous man."
+|-
+|rowspan=3|{{ai|Chamber}}
+|Match Start
+|
+|{{AC|VetoEnemyChamberMatchStart.mp3}} "Merde, is that Chamber over there? Damn custom bullets. I'll figure them out one day."
+*(''Merde'': Shit)
+|-
+|Barrier Down
+|
+|{{AC|VetoEnemyChamberBarrierDown.mp3}} "Don't step into Chamber's sights."
+|-
+|Kill
+|
+|{{AC|VetoEnemyChamberKill.mp3}} "Enfin."
+*(Finally.)
+|-
+|rowspan=2|{{ai|Clove}}
+|Commend
+|{{AC|VetoAllyCloveCommend.mp3}} "Une dinguerie. Clove! You are bark and bite!"
+*(''Une dinguerie'': Madness)
+|
+|-
+|Barrier Down
+|{{AC|VetoAllyCloveBarrierDown.mp3}} "Make your trouble, Clove."
+|
+|-
+|{{ai|Deadlock}}
+|Round Start
+|
+|{{AC|VetoEnemyDeadlockRoundStart.mp3}} "Deadlock thinks she can contain us. I will not allow it."
+|-
+|{{ai|Fade}}
+|Round Start
+|{{AC|VetoAllyFadeRoundStart.mp3}} "Keep getting their intel, dream seer."
+|
+|-
+|rowspan=2|{{ai|Gekko}}
+|Match Start
+|{{AC|VetoAllyGekkoMatchStart.mp3}} "Gekko! Nanga la my boy. All kinds of Radivore nonsense here today. My arm, your crew. The enemy is not ready."
+(Nanga la: How are you)
+|
+|-
+|Commend
+|{{AC|VetoAllyGekkoCommend.mp3}} "Shi- Doy naa wa. Props to you and your crew, Gekko!"
+(Doy naa wa: You did great)
+|
+|-
+|{{ai|Harbor}}
+|Match Start
+|{{AC|VetoAllyHarborMatchStart.mp3}} "Hey Harbor! You still owe me a Ludo<!--from yapby: like the board game or Ludosport (https://en.wikipedia.org/wiki/Ludosport)?--> rematch. My losing streak ends today."
+|
+|-
+|{{ai|Iso}}
+|Kill
+|
+|''Main article: [[Veto/Quotes/Evolution#Agent-specific interactions|Veto/Quotes/Evolution → Agent-specific interactions]]
+|-
+|{{ai|KAYO}}
+|Round Start
+|{{AC|VetoAllyKAYORoundStart.mp3}} "KAY/O, us both being here is a bit overkill, but I'll take it."
+|
+|-
+|rowspan=2|{{ai|Phoenix}}
+|Round Start
+|{{AC|VetoAllyPhoenixRoundStart.mp3}} "Take their vision, Phoenix. I'll take the rest."
+|
+|-
+|Commend
+|{{AC|VetoAllyPhoenixCommend.mp3}} "Woo! Jàbbal, you are a legend, Phoenix!"
+(Jàbbal: Awesome)
+|
+|-
+|{{ai|Sova}}
+|Round Start
+|
+|{{AC|VetoEnemySovaRoundStart.mp3}} "Let that Sova throws his sticks. I'll handle them."
+|-
+|rowspan=4|{{ai|Tejo}}
+|Match Start
+|
+|{{AC|VetoEnemyTejoMatchStart.mp3}} "Tejo's over there. I know he's not our T but shit, I hate shooting him. Man gave me everything."
+|-
+|Commend
+|{{AC|VetoEnemyTejoCommend.mp3}} "Can't say I'm surprised Tejo, you've never been one to hold back."
+|
+|-
+|Barrier Down
+|{{AC|VetoEnemyTejoBarrierDown.mp3}} "Get them moving, T."
+|
+|-
+|Kill
+|
+|{{AC|VetoEnemyTejoKill.mp3}} "Sorry, T."
+|-
+|{{ai|Veto}}
+|Kill
+|
+|{{AC|VetoEnemyVetoKill.mp3}} "Ngaka be."{{#tag:sup|v11.08+}}
+*(Dumbass. (Wolof slang))
+|-
+|{{ai|Vyse}}
+|Barrier Down
+|
+|{{AC|VetoEnemyVyseBarrierDown.mp3}} "Careful. Vyse is plotting."
+|-
+|rowspan=3|{{ai|Waylay}}
+|Match Start
+|{{AC|VetoAllyWaylayMatchStart.mp3}} "Hey Waylay! I'm making [Unknown] when we get back. You better get to it before [[Tejo|T]] does."
+|
+|-
+|Round Start
+|{{AC|VetoAllyWaylayRoundStart.mp3}} "Keep breaking their ankles, Waylay. It's great entertainment."
+|
+|-
+|Last Kill
+|
+|{{AC|VetoEnemyWaylayLastKill.mp3}} "Lights out, friend."
+|-
+|{{ai|Yoru}}
+|Last Kill
+|
+|{{AC|VetoEnemyYoruLastKill.mp3}} "Smug man, see your way out."
+|}
+
+==Radio Commands==
+===Menu Index only===
+====Caution here====
+*{{AC|VetoCaution1.mp3}}{{AC|VetoCaution2.mp3}} "Enemy close."
+
+====Going Area====
+*{{AC|VetoGoingA1.mp3}}{{AC|VetoGoingA2.mp3}} "Going A."
+*{{AC|VetoGoingB1.mp3}}{{AC|VetoGoingB2.mp3}} "Going B."
+*{{AC|VetoGoingC1.mp3}}{{AC|VetoGoingC2.mp3}} "Going C."
+*{{AC|VetoGoingMid1.mp3}}{{AC|VetoGoingMid2.mp3}} "Going Mid."
+
+====Need Support====
+*{{AC|VetoHelp1.mp3}}{{AC|VetoHelp2.mp3}} "I need backup."
+
+====On my way====
+*{{AC|VetoOnMyWay1.mp3}}{{AC|VetoOnMyWay2.mp3}} "On my way."
+<!--
+====Play for picks====
+*{{AC|VetoPlayForPicks1.mp3}}{{AC|VetoPlayForPicks2.mp3}} "Play for picks."
+-->
+
+===Wheel Index only===
+====Encourage====
+*{{AC|VetoEncouraging1.mp3}} "We've got this!"
+*{{AC|VetoEncouraging2.mp3}} "We can do this!"
+*{{AC|VetoEncouraging3.mp3}} "We got this."
+
+====I'll lurk====
+Only as Attackers during Buy Phase.
+*{{AC|VetoLurking1.mp3}}{{AC|VetoLurking2.mp3}} "I'm lurking."
+
+====I'll push out====
+Only as Defenders during Buy Phase.
+*{{AC|VetoPushingOut1.mp3}}{{AC|VetoPushingOut2.mp3}} "I'm pushing out."
+
+====I'm holding position====
+Only as Defenders during Buy Phase.
+*{{AC|VetoHoldingPosition1.mp3}}{{AC|VetoHoldingPosition2.mp3}} "Holding position."
+
+====Let's Attack====
+Only during Round Phase.
+*{{AC|VetoLetsAttack1.mp3}}{{AC|VetoLetsAttack2.mp3}} "Let's attack."
+
+====Let's hold positions====
+Only as Defenders during Buy Phase.
+*{{AC|VetoHoldPositions1.mp3}}{{AC|VetoHoldPositions2.mp3}} "Let's hold positions."
+
+====Let's play slow====
+Only as Attackers at anytime.
+*{{AC|VetoPlaySlow1.mp3}}{{AC|VetoPlaySlow2.mp3}} "Let's play it slow."
+
+====Let's push out====
+Only as Defenders during Buy Phase.
+*{{AC|VetoPushOut1.mp3}}{{AC|VetoPushOut2.mp3}} "Let's push out."
+
+====Let's spread out====
+*{{AC|VetoSpreadOut1.mp3}}{{AC|VetoSpreadOut2.mp3}} "Let's spread out."
+
+====Nice Try====
+*{{AC|VetoNiceTry1.mp3}} "Good try."
+*{{AC|VetoNiceTry2.mp3}}{{AC|VetoNiceTry3.mp3}} "Nice try."
+
+====Stick together====
+*{{AC|VetoStickTogether1.mp3}}{{AC|VetoStickTogether2.mp3}} "Stick together."
+
+===Menu and Wheel Index===
+====Commend====
+*{{AC|VetoCommend1.mp3}} "Bien joué, nice."
+**(''Bien joué'': Well done)
+*{{AC|VetoCommend2.mp3}} "Impressive."
+*{{AC|VetoCommend3.mp3}} "Well done!"
+
+====Fall Back====
+Menu Index at anytime, or Wheel Index only during Round Phase.
+*{{AC|VetoFallBack1.mp3}}{{AC|VetoFallBack2.mp3}} "Fall back!"
+
+====Hello====
+*{{AC|VetoHello1.mp3}} "Hello."
+*{{AC|VetoHello2.mp3}} "Hey, nanga la?"
+*(N''anga la'': How are you?)
+*{{AC|VetoHello3.mp3}} "Yo, nanga def waay?"
+*(N''anga def waay'': What's up?)
+
+====I'll take point====
+Wheel Index only as Attackers during Buy Phase, or Menu Index at anytime regardless of Attackers or Defenders.
+*{{AC|VetoTakePoint1.mp3}}{{AC|VetoTakePoint2.mp3}} "I'll take point."
+
+====Let's rush them (Radio Command)====
+*{{AC|VetoRush1.mp3}}{{AC|VetoRush2.mp3}} "Rush them."
+
+====Need healing====
+*{{AC|VetoHealing1.mp3}}{{AC|VetoHealing2.mp3}} "I need some healing."
+
+====No====
+*{{AC|VetoNo1.mp3}} "Nah."
+*{{AC|VetoNo2.mp3}} "Nope."
+*{{AC|VetoNo3.mp3}} "Déret. No."
+
+====Sorry====
+*{{AC|VetoSorry1.mp3}}{{AC|VetoSorry2.mp3}} "Sorry."
+*{{AC|VetoSorry3.mp3}} "Jëgulu. My bad."
+
+====Thanks====
+*{{AC|VetoThanks1.mp3}} "Thank you."
+*{{AC|VetoThanks2.mp3}} "Thanks."
+*{{AC|VetoThanks3.mp3}} "Je jef waay, thanks."
+
+====Ultimate Status====
+*{{AC|VetoUltDown1.mp3}}{{AC|VetoUltDown2.mp3}} "My ult is not ready."
+*{{AC|VetoUltAlmost1.mp3}}{{AC|VetoUltAlmost2.mp3}} "My ult is almost ready."
+*{{AC|VetoUltReady1.mp3}}{{AC|VetoUltReady2.mp3}} "My ult is ready."
+
+====Yes====
+*{{AC|VetoYes1.mp3}}{{AC|VetoYes2.mp3}} "Yes."
+*{{AC|VetoYes3.mp3}} "Yup."
+
+===Wheel Index requiring Minimap===
+For the following voicelines, the minimap must be open and then open ping wheel and activate strategy.
+
+====Faking====
+Only as Attackers during Buy Phase.
+*{{AC|VetoFaking1.mp3}}{{AC|VetoFaking2.mp3}} "I'm faking."
+*{{AC|VetoFakingA1.mp3}}{{AC|VetoFakingA2.mp3}} "I'm faking A."
+*{{AC|VetoFakingB1.mp3}}{{AC|VetoFakingB2.mp3}} "I'm faking B."
+*{{AC|VetoFakingC1.mp3}}{{AC|VetoFakingC2.mp3}} "I'm faking C."
+
+====I'm Going Here====
+As Defenders during Buy Phase, or as Attackers at anytime.
+*{{AC|VetoGoingA1.mp3}}{{AC|VetoGoingA2.mp3}} "Going A."
+*{{AC|VetoGoingB1.mp3}}{{AC|VetoGoingB2.mp3}} "Going B."
+*{{AC|VetoGoingC1.mp3}}{{AC|VetoGoingC2.mp3}} "Going C."
+*{{AC|VetoGoingMid1.mp3}}{{AC|VetoGoingMid2.mp3}} "Going Mid."
+
+====Let's Go Here====
+Only as Attackers during Buy Phase.
+*{{AC|VetoLetsGoA1.mp3}}{{AC|VetoLetsGoA2.mp3}} "Let's go A."
+*{{AC|VetoLetsGoB1.mp3}}{{AC|VetoLetsGoB2.mp3}} "Let's go B."
+*{{AC|VetoLetsGoC1.mp3}}{{AC|VetoLetsGoC2.mp3}} "Let's go C."
+
+====Let's rush them (Minimap)====
+Only as Attackers during Buy Phase.
+*{{AC|VetoLetsRush1.mp3}}{{AC|VetoLetsRush2.mp3}} "Let's rush them."
+*{{AC|VetoLetsRushA1.mp3}}{{AC|VetoLetsRushA2.mp3}} "Let's rush A."
+*{{AC|VetoLetsRushB1.mp3}}{{AC|VetoLetsRushB2.mp3}} "Let's rush B."
+*{{AC|VetoLetsRushC1.mp3}}{{AC|VetoLetsRushC2.mp3}} "Let's rush C."
+
+====Let's Sneak Here====
+Only as Attackers during Buy Phase.
+*{{AC|VetoSneakA1.mp3}}{{AC|VetoSneakA2.mp3}} "Let's sneak A."
+*{{AC|VetoSneakB1.mp3}}{{AC|VetoSneakB2.mp3}} "Let's sneak B."
+*{{AC|VetoSneakC1.mp3}}{{AC|VetoSneakC2.mp3}} "Let's sneak C."
+*{{AC|VetoSneakMid1.mp3}}{{AC|VetoSneakMid2.mp3}} "Let's sneak Mid."
+
+====Let's Stack Here====
+Only as Defenders during Buy Phase.
+*{{AC|VetoStack1.mp3}}{{AC|VetoStack2.mp3}} "Let's stack up."
+*{{AC|VetoStackA1.mp3}}{{AC|VetoStackA2.mp3}} "Let's stack A."
+*{{AC|VetoStackB1.mp3}}{{AC|VetoStackB2.mp3}} "Let's stack B."
+*{{AC|VetoStackC1.mp3}}{{AC|VetoStackC2.mp3}} "Let's stack C."
+*{{AC|VetoStackMid1.mp3}}{{AC|VetoStackMid2.mp3}} "Let's stack Mid."
+
+====Someone Go Here====
+As Attackers during Round Phase, or as Defenders at anytime.
+*{{AC|VetoNeedSomeoneA1.mp3}}{{AC|VetoNeedSomeoneA2.mp3}} "Someone go A."
+*{{AC|VetoNeedSomeoneB1.mp3}}{{AC|VetoNeedSomeoneB2.mp3}} "Someone go B."
+*{{AC|VetoNeedSomeoneC1.mp3}}{{AC|VetoNeedSomeoneC2.mp3}} "Someone go C."
+*{{AC|VetoNeedSomeoneMid1.mp3}}{{AC|VetoNeedSomeoneMid2.mp3}} "Someone go Mid."
+
+====Spike's here====
+Only as Defenders during Round Phase.
+*{{AC|VetoSpikeA1.mp3}}{{AC|VetoSpikeA2.mp3}} "Spike is A."
+*{{AC|VetoSpikeB1.mp3}}{{AC|VetoSpikeB2.mp3}} "Spike is B."
+*{{AC|VetoSpikeC1.mp3}}{{AC|VetoSpikeC2.mp3}} "Spike is C."
+*{{AC|VetoSpikeMid1.mp3}}{{AC|VetoSpikeMid2.mp3}} "Spike is Mid."
+*{{AC|VetoSpikeSpottedASpawn1.mp3}}{{AC|VetoSpikeSpottedASpawn2.mp3}} "Spike spotted Attacker Spawn."
+*{{AC|VetoSpikeSpottedDSpawn1.mp3}}{{AC|VetoSpikeSpottedDSpawn2.mp3}} "Spike spotted Defender Spawn."
+
+==Pings==
+===General===
+*{{AC|VetoPing1.mp3}}{{AC|VetoPing2.mp3}} "There."
+
+===Caution===
+*{{AC|VetoPingCaution1.mp3}}{{AC|VetoPingCaution2.mp3}} "Caution here."
+
+===Need support===
+*{{AC|VetoHelp1.mp3}}{{AC|VetoHelp2.mp3}} "I need backup."
+
+===On my mark===
+*{{AC|VetoOnMyMark1.mp3}}{{AC|VetoOnMyMark2.mp3}} "On my mark."
+
+===Ping gun===
+*{{AC|VetoPingGun1.mp3}}{{AC|VetoPingGun2.mp3}} "Weapon here."
+
+===Ping spike===
+*{{AC|VetoPingSpike1.mp3}}{{AC|VetoPingSpike2.mp3}} "Spike is here."
+
+===Ping for spike defuse===
+*{{AC|VetoDefuseSpike1.mp3}}{{AC|VetoDefuseSpike2.mp3}} "Defuse the spike!"
+
+===Ping for spike plant===
+*{{AC|VetoPlantSpike1.mp3}}{{AC|VetoPlantSpike2.mp3}} "Plant the spike!"
+
+===Watching===
+*{{AC|VetoWatching1.mp3}}{{AC|VetoWatching2.mp3}} "Watching here."
+
+==Other lines==
+===Ability unusable===
+====[[Status Effect#Suppress|Suppressed]]====
+*{{AC|VetoCantUse1.mp3}}{{AC|VetoCantUse2.mp3}} "Can't use that."
+
+====On cooldown====
+*{{AC|VetoOnCooldown1.mp3}}{{AC|VetoOnCooldown2.mp3}} "On cooldown."
+
+====No charges====
+*{{AC|VetoNoCharges1.mp3}}{{AC|VetoNoCharges2.mp3}} "No charges."
+
+===Enemy spotted===
+*{{AC|VetoEnemyA1.mp3}}{{AC|VetoEnemyA2.mp3}} "Enemy spotted A."
+*{{AC|VetoEnemyB1.mp3}}{{AC|VetoEnemyB2.mp3}} "Enemy spotted B."
+*{{AC|VetoEnemyC1.mp3}}{{AC|VetoEnemyC2.mp3}} "Enemy spotted C."
+*{{AC|VetoEnemyASpawn1.mp3}}{{AC|VetoEnemyASpawn2.mp3}} "Enemy spotted Attacker Spawn."
+*{{AC|VetoEnemyDSpawn1.mp3}}{{AC|VetoEnemyDSpawn2.mp3}} "Enemy spotted Defender Spawn."
+*{{AC|VetoEnemyMid1.mp3}}{{AC|VetoEnemyMid2.mp3}} "Enemy spotted Mid."
+
+====Multiple====
+*{{AC|VetoEnemiesA1.mp3}}{{AC|VetoEnemiesA2.mp3}} "Multiple enemies A!"
+*{{AC|VetoEnemiesB1.mp3}}{{AC|VetoEnemiesB2.mp3}} "Multiple enemies B!"
+*{{AC|VetoEnemiesC1.mp3}}{{AC|VetoEnemiesC2.mp3}} "Multiple enemies C!"
+*{{AC|VetoEnemiesASpawn1.mp3}}{{AC|VetoEnemiesASpawn2.mp3}} "Multiple enemies Attacker Spawn!"
+*{{AC|VetoEnemiesDSpawn1.mp3}}{{AC|VetoEnemiesDSpawn2.mp3}} "Multiple enemies Defender Spawn!"
+*{{AC|VetoEnemiesMid1.mp3}}{{AC|VetoEnemiesMid2.mp3}} "Multiple enemies Mid!"
+
+===Reloading===
+*{{AC|VetoReloading1.mp3}}{{AC|VetoReloading2.mp3}} "Reloading."
+
+===Healed===
+*{{AC|VetoRelief1.mp3}}{{AC|VetoRelief2.mp3}}{{AC|VetoRelief3.mp3}} ''*Veto sighs*''
+
+===Killed===
+*{{AC|VetoDeath1.mp3}}{{AC|VetoDeath2.mp3}}{{AC|VetoDeath3.mp3}} ''*Veto groans*''
+
+===Resurrected via {{abi text|Resurrection}}===
+*{{AC|VetoResurrect.mp3}} "Woo! [Unknown]."
+
+===Wounded===
+====Light damage====
+*{{AC|VetoPainLight1.mp3}}{{AC|VetoPainLight2.mp3}}{{AC|VetoPainLight3.mp3}} ''*Veto groans*''
+
+====Medium damage====
+*{{AC|VetoPainMedium1.mp3}}{{AC|VetoPainMedium2.mp3}}{{AC|VetoPainMedium3.mp3}} ''*Veto groans*''
+
+====Heavy damage====
+*{{AC|VetoPainHeavy1.mp3}}{{AC|VetoPainHeavy2.mp3}}{{AC|VetoPainHeavy3.mp3}} ''*Veto groans*''
+
+====Fall damage====
+*{{AC|VetoPainFall1.mp3}}{{AC|VetoPainFall2.mp3}}{{AC|VetoPainFall3.mp3}} ''*Veto groans*''
+
+==Unused lines==
+There are no voice lines at the moment in this section for this Agent.
+
+==Removed lines==
+<!--To be unhidden when removed lines are added to this section :''See also: [[Announcer#Veto|Announcer → Standard → Veto]]-->
+There are no voice lines at the moment in this section for this Agent. However, there were voice lines prior to his release as an Announcer which can be found in [[Announcer#Veto|Announcer → Standard → Veto]].
+
+==[[Range/Lore|The Range's lore assets]]==
+===[[Range/Lore/V25|Season 2025]]===
+*{{AC|file=VoicemailBrimstone117.mp3}} "Greetings, Brimstone. I just finalized my reports on the Paris incursion. Despite all the chaos [[Atlas]] created, we narrowly avoided exposing our operation. Although, [[Mary Adeyemi|Miss Adeyemi]] now knows more than she should. A consequence of me protecting her through that madness. I'm working with [[Cypher]] and [[Phoenix]] to minimize the issue, she seems to be cooperative. Long-term, I have some ideas in mind on how we can bolster our operation, keep VALORANT secure. I'll update you soon. Ci kanam."
+
+==Notes==
+:''To easily see which quotes were added corresponding to the patch, use your browser's Find function and type the patch number (e.g. v11.08).
+*{{ui|Added}} 1 voice line added from patch {{patchv|11.08}}, undocumented in the patch notes.
+
+==Navigation==
+{{Navbox agents}}
+[[Category:Quotes]]

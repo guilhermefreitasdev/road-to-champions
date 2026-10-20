@@ -1,0 +1,876 @@
+{{TOCright}}
+This is a '''list of quotes by {{ai|Killjoy}}'''. Killjoy is voiced by 
+Eva Feiler in English. Necessary quotes translated are from German to English. Killjoy has a total of {{PAGESINCATEGORY:Killjoy Quotes}} files of quotes including unused and removed lines, and excluding [[#The Range's lore assets|The Range's lore assets]].
+
+A downloadable folder containing all the audio files on this page can be found [https://drive.google.com/drive/folders/1J3JeI0a1FfckHjttUdj6J5SSddQNvlqg?usp=sharing here].
+
+==Agent Selected/Unlocked==
+*{{AC|KilljoyPick.mp3}} "Relax. I've already thought of everything."
+
+==Abilities==
+==={{abi text|Nanoswarm}}===
+====Cast====
+*{{AC|KilljoyNanoswarmCast1.mp3}}{{AC|KilljoyNanoswarmCast2.mp3}} "Placing swarm grenade."
+
+====Activate====
+*{{AC|KilljoyNanoswarmActivate1.mp3}}{{AC|KilljoyNanoswarmActivate2.mp3}} "Swarm grenade out."
+
+==={{abi text|Alarmbot}}===
+====Cast====
+*{{AC|KilljoyAlarmbotCast1.mp3}}{{AC|KilljoyAlarmbotCast2.mp3}} "Placing alarmbot."
+*{{AC|KilljoyAlarmbotCast3.mp3}}{{AC|KilljoyAlarmbotCast4.mp3}} "Alarmbot out."
+
+====Destroyed====
+*{{AC|KilljoyAlarmbotDestroyed1.mp3}}{{AC|KilljoyAlarmbotDestroyed2.mp3}} "Killed my bot."
+*{{AC|KilljoyAlarmbotDestroyed3.mp3}}{{AC|KilljoyAlarmbotDestroyed4.mp3}} "Alarmbot down."
+
+====Triggered====
+*{{AC|KilljoyAlarmbotTriggered1.mp3}}{{AC|KilljoyAlarmbotTriggered2.mp3}} "Found them."
+
+==={{abi text|Turret}}===
+====Cast====
+*{{AC|KilljoyTurretCast1.mp3}}{{AC|KilljoyTurretCast2.mp3}} "Placing sentry."
+*{{AC|KilljoyTurretCast3.mp3}}{{AC|KilljoyTurretCast4.mp3}} "Turret out."
+
+====Destroyed====
+*{{AC|KilljoyTurretDestroyed1.mp3}}{{AC|KilljoyTurretDestroyed2.mp3}} "Ugh, turret down."
+*{{AC|KilljoyTurretDestroyed3.mp3}}{{AC|KilljoyTurretDestroyed4.mp3}} "Turret destroyed."
+
+====Kill====
+*{{AC|KilljoyTurretKill1.mp3}}{{AC|KilljoyTurretKill2.mp3}} "Hah, turret killed them."
+*{{AC|KilljoyTurretKill3.mp3}}{{AC|KilljoyTurretKill4.mp3}} "Wait, really?!"
+
+===Bots (Alarmbot, Turret)===
+====Recall====
+*{{AC|KilljoyBotRecall1.mp3}}{{AC|KilljoyBotRecall2.mp3}} "Bot coming back."
+*{{AC|KilljoyBotRecall3.mp3}}{{AC|KilljoyBotRecall4.mp3}} "Recalling my bot."
+
+====Kill assist====
+*{{AC|KilljoyBotAssist1.mp3}} "Thanks bot!"
+*{{AC|KilljoyBotAssist2.mp3}} "Alley-oop!"
+*{{AC|KilljoyBotAssist3.mp3}} "Love my bots!"
+*{{AC|KilljoyBotAssist4.mp3}} "Bot assist."
+*{{AC|KilljoyBotAssist5.mp3}} "Tag teamed."
+*{{AC|KilljoyBotAssist6.mp3}} "Thanks botty!" ''*Killjoy laughs*''
+
+==={{abi text|Lockdown}}===
+====Ally Cast====
+*{{AC|KilljoyUltAllyCast.mp3}} "Initiated!"
+
+====Enemy Cast====
+*{{AC|KilljoyUltEnemyCast.mp3}} "You should run."
+
+====Destroyed====
+*{{AC|KilljoyUltDestroyed1.mp3}}{{AC|KilljoyUltDestroyed2.mp3}} "Lockdown destroyed!"
+
+====Detained no enemies====
+*{{AC|KilljoyUltAreaClear1.mp3}}{{AC|KilljoyUltAreaClear2.mp3}} "Area's clear!"
+
+====Detained enemies====
+*{{AC|KilljoyUltCaught1.mp3}} "Caught one."
+*{{AC|KilljoyUltCaught2.mp3}} "Caught two!"
+*{{AC|KilljoyUltCaught3.mp3}} "Caught three!"
+*{{AC|KilljoyUltCaught4.mp3}} "Caught four!"
+*{{AC|KilljoyUltCaught5.mp3}} "Caught five!"
+*{{AC|KilljoyUltFullDetain1.mp3}}{{AC|KilljoyUltFullDetain2.mp3}} "Got them all!"
+
+====Kill detained enemy====
+*{{AC|KilljoyUltKill1.mp3}}{{AC|KilljoyUltKill2.mp3}} "Fish in a barrel."
+*{{AC|KilljoyUltKill3.mp3}}{{AC|KilljoyUltKill4.mp3}} "Trapped and zapped!"
+*{{AC|KilljoyUltKill5.mp3}}{{AC|KilljoyUltKill6.mp3}} "Had some trouble?"
+
+==Buy Phase==
+===Match Start===
+*{{AC|KilljoyMatchStart1.mp3}} "I built literally everything on this battlefield. Ja, even the things that might kill us. What? You want me to say sorry?"
+*{{AC|KilljoyMatchStart2.mp3}} "Okay, I put together some data on our last six combat missions. Did you read it? Did anyone read it? Oh God, can anyone here read?"
+*{{AC|KilljoyMatchStart3.mp3}} "Don't worry team. If you die, I have your memories backed up at base! Heh, just kidding, just kidding. Or am I?"
+*{{AC|KilljoyMatchStart4.mp3}} "Swarm grenades? Check. Killer robots? Check- oh, hah, don't worry, they're only killer when I say so."
+*{{AC|KilljoyMatchStart5.mp3}} "If I'm not stressed, then you should not be stressed. I mean, look at me. Cool as a cucumber." ''*Killjoy laughs*'' "Ja, that's a thing Americans say, right?"
+*{{AC|KilljoyMatchStart6.mp3}} "These imposters actually think they can beat my tech? Ah, let's test that theory."
+*{{AC|KilljoyMatchStart7.mp3}} "Why is no one wearing the pulse monitors I gave you? Honestly, I ask for a few readouts and you think I'm Doctor Frankenstein!"
+
+====Attacking====
+*{{AC|KilljoyMatchStartAttack1.mp3}} "Let's make this extraction quick. After this I'm going clubbing five timezones away, and a girl needs a moment to change."
+*{{AC|KilljoyMatchStartAttack2.mp3}} "Oh! Oh! What if I sabotaged their defuser to speed up the timer instead! Oh man, how funny would that be!"
+
+====Defending====
+*{{AC|KilljoyMatchStartDefense1.mp3}} "Stealing our radianite is one thing, but I swear if they touch my coffee mug collection, I will erase them from existence."
+*{{AC|KilljoyMatchStartDefense2.mp3}} "Meine güte! How many spikes do they have anyway? That tech's not cheap."
+**(''Meine güte'': My goodness)
+
+====[[Bind]]====
+*{{AC|KilljoyMatchStartBind.mp3}} "If this town had let me install my defense matrix, we wouldn't have to be here! Ugh, oh well, I'll clean this up myself."
+
+====[[Fracture]]====
+*{{AC|KilljoyMatchStartFracture.mp3}} "Alpha this, Omega that, scheiße, who named these universes?! A und B would work perfectly well. We would be A, of course."
+**(''Scheiße'': Shit)
+**(''Und'': And)
+
+===Round Start===
+*{{AC|KilljoyRoundStart1.mp3}} "Don't die. If you need help figuring out how, just ask!"
+*{{AC|KilljoyRoundStart2.mp3}} "Where are we going this time? Remember what worked in the past."
+*{{AC|KilljoyRoundStart3.mp3}} "Their tech is only as good as their skill, and there, we have them beat!"
+*{{AC|KilljoyRoundStart4.mp3}} "Everyone makes fun of German efficiency, haha. Just keep laughing as you use all my gear."
+*{{AC|KilljoyRoundStart5.mp3}} "You can trust my bots. They only malfunctioned that one time and, honestly, she won't miss that finger."
+*{{AC|KilljoyRoundStart6.mp3}} "Don't stress if I die. It was great knowing you all. Also, delete my hard drive."
+*{{AC|KilljoyRoundStart7.mp3}} "I can hold an area pretty well myself. Make sure to cover the angles I can't."
+*{{AC|KilljoyRoundStart9.mp3}} "They look like us, but are they us? I have so many questions."
+*{{AC|KilljoyRoundStart10.mp3}} "Everyone note down your observations, then let's run it again."
+*{{AC|KilljoyRoundStart11.mp3}} "Is everyone's tech still working? Double check it please."
+
+====Last round won====
+*{{AC|KilljoyRoundWon1.mp3}} ''*Killjoy laughs*'' "They're thinking so hard, I can smell their circuits frying."
+*{{AC|KilljoyRoundWon2.mp3}} "Good! One step closer to being back in pajamas."
+*{{AC|KilljoyRoundWon3.mp3}} "Good. Analyze, then improve."
+*{{AC|KilljoyRoundWon4.mp3}} "They should probably reevaluate their approach."
+
+=====While in the lead=====
+*{{AC|KilljoyLead1.mp3}} "Let's see. Battles are won by geniuses. And I am a genius. So..."
+*{{AC|KilljoyLead2.mp3}} ''*Killjoy laughs'' "I knew this would be easy but, meine güte!"
+**(''Meine güte'': My goodness)
+*{{AC|KilljoyLead3.mp3}} "I evaluated their strategy. It's a joke!"
+
+=====Making a comeback=====
+*{{AC|KilljoyComeback1.mp3}} "There we go. Finally, cracking their code."
+*{{AC|KilljoyComeback2.mp3}} "Their stale tactics would only work for so long."
+*{{AC|KilljoyComeback3.mp3}} "Oh, this is a much better trajectory!"
+
+===Last round in the half===
+====Attacking====
+*{{AC|KilljoyLastRound1.mp3}} "Last round to use our creds and abilities. Don't waste your firepower!"
+
+====Defending====
+*{{AC|KilljoyLastRound2.mp3}} "Last round to use our creds and abilities. Don't waste your firepower!"
+
+===Match Point===
+*{{AC|KilljoyMatchPoint1.mp3}} "Oh, we're almost done? Cool, hehe, cool cool cool."
+*{{AC|KilljoyMatchPoint2.mp3}} "Once we win, just dump all your tech in my lab. I'll fix it up."
+
+===Shop===
+====Let's Buy====
+*{{AC|KilljoyBuying1.mp3}}{{AC|KilljoyBuying2.mp3}} "I'm buying."
+
+====Let's Save====
+*{{AC|KilljoySaving1.mp3}}{{AC|KilljoySaving2.mp3}} "I'm saving."
+
+====I Have Extra Creds====
+*{{AC|KilljoyOffer1.mp3}}{{AC|KilljoyOffer2.mp3}} "I've got money, need something?"
+
+====Requested====
+*{{AC|KilljoyRequest1.mp3}}{{AC|KilljoyRequest2.mp3}} "Can I get this?"
+
+===Barrier Down===
+*{{AC|KilljoyBarrierDown1.mp3}} "Just cool down, we're good enough to win!"
+*{{AC|KilljoyBarrierDown2.mp3}} "We're not their equal."
+*{{AC|KilljoyBarrierDown3.mp3}} "Their defense? Uh, could be better."
+*{{AC|KilljoyBarrierDown4.mp3}} "Find the leverage, and wedge it open."
+*{{AC|KilljoyBarrierDown5.mp3}} "Nice and easy."
+*{{AC|KilljoyBarrierDown6.mp3}} "Re-evaluate tactics."
+*{{AC|KilljoyBarrierDown7.mp3}} "Keep your heads on."
+*{{AC|KilljoyBarrierDown8.mp3}} "Keep doing what you do best!"
+*{{AC|KilljoyBarrierDown9.mp3}} "We can't keep doing the same things."
+*{{AC|KilljoyBarrierDown10.mp3}} "Tactics beat firepower. Use that."
+*{{AC|KilljoyBarrierDown11.mp3}} "We can keep them out."
+*{{AC|KilljoyBarrierDown12.mp3}} "I anticipated us winning."
+*{{AC|KilljoyBarrierDown13.mp3}} "Keep it cool. That's how you survive."
+*{{AC|KilljoyBarrierDown14.mp3}} "Quick peeks now."
+*{{AC|KilljoyBarrierDown15.mp3}} "Time for a field test."
+*{{AC|KilljoyBarrierDown16.mp3}} "Don't overthink it, that's my job."
+
+==Spike==
+===Forgotten in spawn===
+*{{AC|KilljoyForgotSpike1.mp3}} "Ugh, do I have to attach legs to the spike now?"
+
+===Ally carrier down===
+*{{AC|KilljoySpikeDown1.mp3}}{{AC|KilljoySpikeDown2.mp3}} "Our spike carrier is dead."
+
+===Dropped===
+*{{AC|KilljoySpikeDropped1.mp3}}{{AC|KilljoySpikeDropped2.mp3}} "I dropped the spike."
+
+===Retrieved===
+*{{AC|KilljoySpikePickedUp1.mp3}}{{AC|KilljoySpikePickedUp2.mp3}} "I got the spike."
+
+===Planted===
+*{{AC|KilljoySpikePlanted1.mp3}}{{AC|KilljoySpikePlanted2.mp3}} "Spike's down."
+
+===Spotted===
+*{{AC|KilljoySpikeSpottedA1.mp3}}{{AC|KilljoySpikeSpottedA2.mp3}} "Spike spotted A."
+*{{AC|KilljoySpikeSpottedB1.mp3}}{{AC|KilljoySpikeSpottedB2.mp3}} "Spike spotted B."
+*{{AC|KilljoySpikeSpottedC1.mp3}}{{AC|KilljoySpikeSpottedC2.mp3}} "Spike spotted C."
+*{{AC|KilljoySpikeSpottedASpawn1.mp3}}{{AC|KilljoySpikeSpottedASpawn2.mp3}} "Spike's in Attacker Spawn."
+*{{AC|KilljoySpikeSpottedDSpawn1.mp3}}{{AC|KilljoySpikeSpottedDSpawn2.mp3}} "Spike's in Defender Spawn."
+*{{AC|KilljoySpikeSpottedMid1.mp3}}{{AC|KilljoySpikeSpottedMid2.mp3}} "Spike spotted Mid."
+
+===Defuse resumed===
+*{{AC|KilljoyDefuseResumed1.mp3}} "Don't interrupt my work."
+
+===Defuse time running out===
+*{{AC|KilljoyDefuseLate1.mp3}} "Imagine if I died, right now. So funny."
+
+===Defuse successful===
+*{{AC|KilljoyDefuseComplete1.mp3}} "Oh, no no, you don't deserve my inventions."
+
+==Kill==
+*{{AC|KilljoyKill1.mp3}} "Good."
+*{{AC|KilljoyKill2.mp3}} "Auf Wiedersehen!"
+**(Goodbye!)
+*{{AC|KilljoyKill3.mp3}} "Goodbye!"
+*{{AC|KilljoyKill4.mp3}} "Enemy down."
+*{{AC|KilljoyKill5.mp3}} "One down!"
+*{{AC|KilljoyKill6.mp3}} "Variable removed."
+*{{AC|KilljoyKill7.mp3}} "Terminated."
+*{{AC|KilljoyKill8.mp3}} "That's done."
+*{{AC|KilljoyKill9.mp3}} "Finished."
+*{{AC|KilljoyKill10.mp3}} "Got one!"
+
+===Headshot===
+*{{AC|KilljoyHeadshot1.mp3}} "Impeccable kill."
+*{{AC|KilljoyHeadshot2.mp3}} "Precise."
+*{{AC|KilljoyHeadshot3.mp3}} "Headshot."
+*{{AC|KilljoyHeadshot4.mp3}} "Perfect accuracy."
+*{{AC|KilljoyHeadshot5.mp3}} "Deleted."
+*{{AC|KilljoyHeadshot6.mp3}} "Power's out."
+
+===[[Melee]]===
+*{{AC|KilljoyMeleeKill1.mp3}} ''*Killjoy laughs*'' "Oh, okay."
+*{{AC|KilljoyMeleeKill2.mp3}} "Be smarter."
+
+===Triple===
+*{{AC|KilljoyTriple1.mp3}}{{AC|KilljoyTriple2.mp3}} "Got three!"
+
+===Quadra===
+*{{AC|KilljoyQuadra1.mp3}}{{AC|KilljoyQuadra2.mp3}} "Now four!"
+
+===One kill remaining (game-mode specific)===
+*{{AC|KilljoyOneKillLeft1.mp3}}{{AC|KilljoyOneKillLeft2.mp3}} "Final test!"
+
+==Round End==
+===Ace===
+*{{AC|KilljoyAce1.mp3}} "Go ahead! Call me tech support again!"
+
+===Clutch===
+*{{AC|KilljoyClutch1.mp3}} "I had to focus for a second."
+*{{AC|KilljoyClutch2.mp3}} "Calculated."
+*{{AC|KilljoyClutch3.mp3}} ''*Killjoy laughs*'' "Ah, my genius doesn't stop in the lab."
+
+===Flawless or Team Ace===
+*{{AC|KilljoyFlawless1.mp3}} "Flawless, what did they expect?" ''*Killjoy laughs*''
+*{{AC|KilljoyFlawless2.mp3}} "Aww, they should stop playing checkers."
+*{{AC|KilljoyFlawless3.mp3}} "Like clockwork."
+
+===Thrifty===
+*{{AC|KilljoyThrifty1.mp3}} "How about I only bring a ruler next time?" ''*Killjoy laughs*''
+
+===Last Kill===
+*{{AC|KilljoyLastKill1.mp3}} "Let me just swipe those biometrics."
+*{{AC|KilljoyLastKill2.mp3}} ''*Killjoy tuts*'' "You tried."
+*{{AC|KilljoyLastKill3.mp3}} "Anticipated."
+*{{AC|KilljoyLastKill4.mp3}} "Who could've predicted this? Alright, I did."
+*{{AC|KilljoyLastKill5.mp3}} "They're all dead? I have more tests to run!"
+
+====Enemy MVP====
+There are no voice lines at the moment in this section for this Agent.
+
+====Using [[Melee]]====
+*{{AC|KilljoyLastKillMelee1.mp3}} "Have to keep it fun, you know?"
+
+===Low HP===
+*{{AC|KilljoyLowHP1.mp3}} "Ugh, okay, uh, where's [[Sage]]? This scheiße hurts."
+**(''Scheiße'': Shit)
+
+==Match End==
+===Match Win===
+*{{AC|KilljoyMatchWin1.mp3}} "Who's up, for a debrief!? Anyone? No one?"
+*{{AC|KilljoyMatchWin2.mp3}} "Okay everyone, take a test tube. Thank you. Let's collect samples and get out of here."
+*{{AC|KilljoyMatchWin3.mp3}} "I knew it would all work out. It always does."
+
+====[[Ascent]]====
+*{{AC|KilljoyMatchWinAscent.mp3}} "Okay, that's done, time to lower this place."
+
+===Runner-up (game-mode specific)===
+*{{AC|KilljoyRunnerUp1.mp3}} "Nearly perfect."
+*{{AC|KilljoyRunnerUp2.mp3}} "Strong results. Let's run it again."
+*{{AC|KilljoyRunnerUp3.mp3}} "I'm proud of that."
+
+==Agent-specific interactions==
+{| class="wikitable sortable"
+!To Agent
+!Scenario
+!width=40%; class=unsortable|Ally
+!width=40%; class=unsortable|Enemy
+|-
+|{{ai|Astra}}
+|Round Start
+|{{AC|KilljoyAllyAstraRoundStart.mp3}} "Astra, after this let's grab coffee and talk theoretical physics. Just us girls, ja?"
+|
+|-
+|rowspan=2|{{ai|Breach}}
+|Round Start
+|{{AC|KilljoyAllyBreachRoundStart.mp3}} "Breach, I wish you'd take my extra reactor coolant. Ugh, if your arms overheat out there, don't blame me!"
+|
+|-
+|Barrier Down
+|
+|{{AC|KilljoyEnemyBreachBarrierDown.mp3}} "I'll stop that Breach."
+|-
+|rowspan=5|{{ai|Brimstone}}
+|Chat
+|
+:[[File:Killjoy icon.png|20px|link=Killjoy]] {{AC|KilljoyAllyBrimstoneChat.mp3}} "Brim, have you considered embedding your bracer in your limb? I can do that you know."
+:[[File:Brimstone icon.png|20px|link=Brimstone]] {{AC|BrimstoneAllyKilljoyChat.mp3}} "Killjoy, I say this with love, but stay the hell away from my arm!"
+|
+|-
+|Match Start
+|{{AC|KilljoyAllyBrimstoneMatchStart.mp3}} "Brimstone, remember your screen isn't frozen, it's just locked. And no, the internet isn't down. *''sigh''* It's never down."
+|-
+|Round Start
+|
+|{{AC|KilljoyEnemyBrimstoneRoundStart.mp3}} "It feels bad to kill their Brimstone. I mean I will. Just feels bad."
+|-
+|Commend
+|{{AC|KilljoyAllyBrimstoneCommend.mp3}} "Brimstone, that was wonderful!"
+|
+|-
+|Barrier Down
+|{{AC|KilljoyAllyBrimstoneBarrierDown.mp3}} "Watch over us, Brimstone."
+|
+|-
+|rowspan=2|{{ai|Chamber}}
+|Match Start
+|
+|{{AC|KilljoyEnemyChamberMatchStart.mp3}} "They brought along Chamber?! I've seen his type before, overdresses, underdelivers!"
+|-
+|Round Start
+|{{AC|KilljoyAllyChamberRoundStart.mp3}} "Chamber, about that nanotech for your guns. Do you like, have any extra, or...?"
+|
+|-
+|rowspan=6|{{ai|Cypher}}
+|Chat
+|
+:[[File:Killjoy icon.png|20px|link=Killjoy]] {{AC|KilljoyAllyCypherChat.mp3}} "Cypher, can you show me round the dark web one of these days?"
+:[[File:Cypher icon.png|20px|link=Cypher]] {{AC|CypherAllyKilljoyChat.mp3}} "Oh, oh dear no sweetheart! We must protect you."
+|
+|-
+|Match Start
+|{{AC|KilljoyAllyCypherMatchStart.mp3}} "Cypher, my condenser cables are missing from the lab again. Put them back please, thank you."
+|
+|-
+|rowspan=2|Round Start
+|{{AC|KilljoyAllyCypherRoundStart.mp3}} "Cypher, your homemade gadgets are so cute! Reminds me of some of my work in kindergarten."
+|
+|-
+|{{AC|KilljoyAllyCypherRoundStart2.mp3}} "Cypher, let's keep sharing information. Every data point helps."
+|
+|-
+|Commend
+|{{AC|KilljoyAllyCypherCommend.mp3}} "I didn't realize we had two geniuses on the team!"
+|
+|-
+|Kill
+|
+|{{AC|KilljoyEnemyCypherKill.mp3}} "Their eyes are down."
+|-
+|rowspan=3|{{ai|KAY/O}}
+|Commend
+|{{AC|KilljoyAllyKAYOCommend.mp3}} "KAY/O, you are the best! Now imagine if you let me install those ordnance mods, huh? Huh?! Come on!"
+|
+|-
+|Barrier Down
+|{{AC|KilljoyAllyKAYOBarrierDown.mp3}} "Let's go, buckethead!"
+|
+|-
+|Last Kill
+|
+|{{AC|KilljoyEnemyKAYOLastKill.mp3}} "Okay, he's off. Now, where is the factory reset?"
+|-
+|rowspan=4|{{ai|Killjoy}}
+|Round Start
+|
+|{{AC|KilljoyEnemyKilljoyRoundStart.mp3}} "I know that Killjoy's tricks. Wait, she knows mine! Hah, finally, a challenge!"
+|-
+|Barrier Down
+|
+|{{AC|KilljoyEnemyKilljoyBarrierDown.mp3}} "I'll show her who the real genius is."
+|-
+|Kill
+|
+|{{AC|KilljoyEnemyKilljoyKill.mp3}} "My double's dead."
+|-
+|Last Kill
+|
+|{{AC|KilljoyEnemyKilljoyLastKill.mp3}} "Huh, looks like I was the smarter one."
+|-
+|{{ai|Neon}}
+|Chat
+|
+:[[File:Killjoy icon.png|20px|link=Killjoy]] {{AC|KilljoyAllyNeonChat.mp3}} "Neon, how much power do you generate, exactly? If I could just attach this meter-"
+:[[File:Neon icon.png|20px|link=Neon]] {{AC|NeonAllyKilljoyChat.mp3}} "Killjoy my suit's got, like, a billion volts. Don't touch it."
+|
+|-
+|{{ai|Omen}}
+|Barrier Down
+|
+|{{AC|KilljoyEnemyOmenBarrierDown.mp3}} "I'll get that spooky ghost boy!"
+|-
+|{{ai|Phoenix}}
+|Chat
+|
+:[[File:Phoenix icon.png|20px|link=Phoenix]] {{AC|PhoenixAllyKilljoyChat.mp3}} "Hey KJ, you good on the tech stuff? Need anything, you know, superheated?"
+:[[File:Killjoy icon.png|20px|link=Killjoy]] {{AC|KilljoyAllyPhoenixChat.mp3}} "Okay, that literally happened one time, Phoenix, stop asking."
+|
+|-
+|rowspan=6|{{ai|Raze}}
+|Chat
+|
+:[[File:Raze icon.png|20px|link=Raze]] {{AC|RazeAllyKilljoyChat.mp3}} "Killjoy, after this you wanna do some tinkering?"
+:[[File:Killjoy icon.png|20px|link=Killjoy]] {{AC|KilljoyAllyRazeChat.mp3}} "Sure, but if anything explodes again, you are telling [[Brimstone|Brim]]."
+|
+|-
+|Match Start
+|{{AC|KilljoyAllyRazeMatchStart2.mp3}} "Raze, I found a new album you just have to hear! Maybe you could... come over after the mission? But, only if we survive!"
+|{{AC|KilljoyEnemyRazeMatchStart.mp3}} "The enemy Raze's tech is just spare parts and duct tape. It's a wonder she hasn't blown herself up."
+|-
+|Round Start
+|{{AC|KilljoyAllyRazeRoundStart.mp3}} "Drive them crazy, Raze! You're good at that."
+|
+|-
+|Commend
+|{{AC|KilljoyAllyRazeCommend.mp3}} "Okay Raze, fine, your tinkering may... have made my tech better. Nice work."
+|
+|-
+|Barrier Down
+|{{AC|KilljoyAllyRazeBarrierDown.mp3}} "Be safe, Raze."
+|
+|-
+|Last Kill
+|
+|{{AC|KilljoyEnemyRazeLastKill.mp3}} "Sorry little mouse."
+|-
+|rowspan=4|{{ai|Reyna}}
+|Match Start
+|
+|{{AC|KilljoyEnemyReynaMatchStart.mp3}} "It always feels like Reyna is after me personally. Does anyone else feel that way? Er, no? Just me?"
+|-
+|Commend
+|{{AC|KilljoyAllyReynaCommend.mp3}} "Reyna, I can see why you don't want any of my tech. You're scary enough without it."
+|
+|-
+|Barrier Down
+|{{AC|KilljoyAllyReynaBarrierDown.mp3}} "Get them, Reyna!"
+|
+|-
+|Kill
+|
+|{{AC|KilljoyEnemyReynaKill.mp3}} "Reyna killed."
+|-
+|{{ai|Sage}}
+|Kill
+|
+|{{AC|KilljoyEnemySageKill.mp3}} "Sage killed."
+|-
+|rowspan=6|{{ai|Skye}}
+|Match Start
+|{{AC|KilljoyAllySkyeMatchStart.mp3}} "Skye, with a few genetic modifications, your animal flora could be even stronger. W-wait, was that offensive? Sorry."
+|{{AC|KilljoyEnemySkyeMatchStart.mp3}} "The enemy Skye is here, but don't worry! My robotics will beat her organics every time!"
+|-
+|Round Start
+|{{AC|KilljoyAllySkyeRoundStart.mp3}} "Okay, Skye. Get us to a good position, then I'll lock it down."
+|
+|-
+|Commend
+|{{AC|KilljoyAllySkyeCommend.mp3}} "Skye, you are so cool and collected, I'm almost jealous!"
+|
+|-
+|Barrier Down
+|{{AC|KilljoyAllySkyeBarrierDown.mp3}} "Show us the way, Skye."
+|
+|-
+|Kill
+|
+|{{AC|KilljoyEnemySkyeKill.mp3}} "Nature girl down."
+|-
+|Last Kill
+|
+|{{AC|KilljoyEnemySkyeLastKill.mp3}} "Your creations were too primitive."
+|-
+|rowspan=2|{{ai|Sova}}
+|Match Start
+|
+|{{AC|KilljoyEnemySovaMatchStart.mp3}} "They have Sova over there too? Can someone um, steal his eye? What? I wanna see what it's recorded."
+|-
+|Kill
+|
+|{{AC|KilljoyEnemySovaKill.mp3}} "No more Sova."
+|-
+|rowspan=4|{{ai|Viper}}
+|Match Start
+|{{AC|KilljoyAllyViperMatchStart.mp3}} "Viper, do you mind if I run today's tests. You're a little too biased, no offense."
+|{{AC|KilljoyEnemyViperMatchStart.mp3}} "There's a Viper over there. What a shame to rid the world of that mind. But I think she needs to rest."
+|-
+|Round Start
+|
+|{{AC|KilljoyEnemyViperRoundStart.mp3}} "That Viper is so hateful, how could she even think straight?"
+|-
+|Commend
+|{{AC|KilljoyAllyViperCommend.mp3}} "Viper, I'm speechless, and I always have something to say."
+|
+|-
+|Last Kill
+|
+|{{AC|KilljoyEnemyViperLastKill.mp3}} "You stopped thinking clearly. This is for the best."
+|-
+|rowspan=3|{{ai|Yoru}}
+|Round Start
+|
+|{{AC|KilljoyEnemyYoruRoundStart.mp3}} "That rift boy is going to teleport himself right into one of my traps."
+|-
+|Commend
+|{{AC|KilljoyAllyYoruCommend.mp3}} "Aha, the cool kid in class has some brains too! Impressive!"
+|
+|-
+|Barrier Down
+|
+|{{AC|KilljoyEnemyYoruBarrierDown.mp3}} "Look out for their rift walker."
+|}
+
+==Radio Commands==
+===Menu Index only===
+====Caution here====
+*{{AC|KilljoyCaution1.mp3}}{{AC|KilljoyCaution2.mp3}} "Enemies are close."
+
+====Going Area====
+*{{AC|KilljoyGoingA1.mp3}}{{AC|KilljoyGoingA2.mp3}} "Going A."
+*{{AC|KilljoyGoingB1.mp3}}{{AC|KilljoyGoingB2.mp3}} "Going B."
+*{{AC|KilljoyGoingC1.mp3}}{{AC|KilljoyGoingC2.mp3}} "Going C."
+*{{AC|KilljoyGoingMid1.mp3}}{{AC|KilljoyGoingMid2.mp3}} "Going Mid."
+
+====Need Support====
+*{{AC|KilljoyHelp1.mp3}}{{AC|KilljoyHelp2.mp3}}{{AC|KilljoyHelp3.mp3}} "Help."
+
+====On my way====
+*{{AC|KilljoyOnMyWay1.mp3}}{{AC|KilljoyOnMyWay2.mp3}} "On my way."
+
+====Play for picks====
+*{{AC|KilljoyPlayForPicks1.mp3}}{{AC|KilljoyPlayForPicks2.mp3}} "Let's play for picks."
+
+===Wheel Index only===
+====Encourage====
+*{{AC|KilljoyEncouraging1.mp3}}{{AC|KilljoyEncouraging2.mp3}}{{AC|KilljoyEncouraging3.mp3}} "We can do this."
+
+====I'll lurk====
+Only as Attackers during Buy Phase.
+*{{AC|KilljoyLurking1.mp3}}{{AC|KilljoyLurking2.mp3}} "I'm lurking."
+
+====I'll push out====
+Only as Defenders during Buy Phase.
+*{{AC|KilljoyPushingOut1.mp3}}{{AC|KilljoyPushingOut2.mp3}} "I'm pushing out."
+
+====I'm holding position====
+Only as Defenders during Buy Phase.
+*{{AC|KilljoyHoldingPosition1.mp3}}{{AC|KilljoyHoldingPosition2.mp3}} "Holding position."
+
+====Let's Attack====
+Only during Round Phase.
+*{{AC|KilljoyLetsAttack1.mp3}}{{AC|KilljoyLetsAttack2.mp3}} "Let's attack."
+
+====Let's hold positions====
+Only as Defenders during Buy Phase.
+*{{AC|KilljoyHoldPositions1.mp3}}{{AC|KilljoyHoldPositions2.mp3}} "Let's hold positions."
+
+====Let's play slow====
+Only as Attackers at anytime.
+*{{AC|KilljoyPlaySlow1.mp3}}{{AC|KilljoyPlaySlow2.mp3}} "Let's play slow."
+
+====Let's push out====
+Only as Defenders during Buy Phase.
+*{{AC|KilljoyPushOut1.mp3}}{{AC|KilljoyPushOut2.mp3}} "Let's push out."
+
+====Let's spread out====
+*{{AC|KilljoySpreadOut1.mp3}}{{AC|KilljoySpreadOut2.mp3}} "Let's spread out."
+
+====Nice Try====
+*{{AC|KilljoyNiceTry1.mp3}}{{AC|KilljoyNiceTry2.mp3}}{{AC|KilljoyNiceTry3.mp3}} "Good try."
+
+====Stick together====
+*{{AC|KilljoyStickTogether1.mp3}}{{AC|KilljoyStickTogether2.mp3}} "Stick together."
+
+===Menu and Wheel Index===
+====Commend====
+*{{AC|KilljoyCommend1.mp3}}{{AC|KilljoyCommend2.mp3}}{{AC|KilljoyCommend3.mp3}} "You did well."
+
+====Fall Back====
+Menu Index at anytime, or Wheel Index only during Round Phase.
+*{{AC|KilljoyFallBack1.mp3}}{{AC|KilljoyFallBack2.mp3}} "Fall back."
+
+====Hello====
+*{{AC|KilljoyHello1.mp3}}{{AC|KilljoyHello2.mp3}}{{AC|KilljoyHello3.mp3}} "Hello."
+
+====I'll take point====
+Wheel Index only as Attackers during Buy Phase, or Menu Index at anytime regardless of Attackers or Defenders.
+*{{AC|KilljoyTakePoint1.mp3}}{{AC|KilljoyTakePoint2.mp3}} "I'll take point."
+
+====Let's rush them (Radio Command)====
+*{{AC|KilljoyRush1.mp3}}{{AC|KilljoyRush2.mp3}} "Let's rush them."
+
+====Need healing====
+*{{AC|KilljoyHealing1.mp3}}{{AC|KilljoyHealing2.mp3}} "Need healing."
+
+====No====
+*{{AC|KilljoyNo1.mp3}}{{AC|KilljoyNo2.mp3}}{{AC|KilljoyNo3.mp3}} "No."
+
+====Sorry====
+*{{AC|KilljoySorry1.mp3}}{{AC|KilljoySorry2.mp3}}{{AC|KilljoySorry3.mp3}} "Oh, sorry."
+
+====Thanks====
+*{{AC|KilljoyThanks1.mp3}}{{AC|KilljoyThanks2.mp3}}{{AC|KilljoyThanks3.mp3}} "Thanks."
+
+====Ultimate Status====
+*{{AC|KilljoyUltDown1.mp3}}{{AC|KilljoyUltDown2.mp3}} "My ult's not ready."
+*{{AC|KilljoyUltAlmost1.mp3}}{{AC|KilljoyUltAlmost2.mp3}} "My ult's almost ready."
+*{{AC|KilljoyUltReady1.mp3}}{{AC|KilljoyUltReady2.mp3}} "My ultimate is ready."
+
+====Yes====
+*{{AC|KilljoyYes1.mp3}}{{AC|KilljoyYes2.mp3}}{{AC|KilljoyYes3.mp3}} "Ja."
+
+===Wheel Index requiring Minimap===
+For the following voicelines, the minimap must be open and then open ping wheel and activate strategy.
+====Faking====
+Only as Attackers during Buy Phase.
+*{{AC|KilljoyFaking1.mp3}}{{AC|KilljoyFaking2.mp3}} "I'm faking."
+*{{AC|KilljoyFakingA1.mp3}}{{AC|KilljoyFakingA2.mp3}} "I'm faking A."
+*{{AC|KilljoyFakingB1.mp3}}{{AC|KilljoyFakingB2.mp3}} "I'm faking B."
+*{{AC|KilljoyFakingC1.mp3}}{{AC|KilljoyFakingC2.mp3}} "I'm faking C."
+
+====I'm Going Here====
+As Defenders during Buy Phase, or as Attackers at anytime.
+*{{AC|KilljoyGoingA1.mp3}}{{AC|KilljoyGoingA2.mp3}} "Going A."
+*{{AC|KilljoyGoingB1.mp3}}{{AC|KilljoyGoingB2.mp3}} "Going B."
+*{{AC|KilljoyGoingC1.mp3}}{{AC|KilljoyGoingC2.mp3}} "Going C."
+*{{AC|KilljoyGoingMid1.mp3}}{{AC|KilljoyGoingMid2.mp3}} "Going Mid."
+
+====Let's Go Here====
+Only as Attackers during Buy Phase.
+*{{AC|KilljoyLetsGoA1.mp3}}{{AC|KilljoyLetsGoA2.mp3}} "Let's go A."
+*{{AC|KilljoyLetsGoB1.mp3}}{{AC|KilljoyLetsGoB2.mp3}} "Let's go B."
+*{{AC|KilljoyLetsGoC1.mp3}}{{AC|KilljoyLetsGoC2.mp3}} "Let's go C."
+*{{AC|KilljoyLetsGoHere1.mp3}}{{AC|KilljoyLetsGoHere2.mp3}} "Let's go here."
+
+====Let's rush them (Minimap)====
+Only as Attackers during Buy Phase.
+*{{AC|KilljoyLetsRush1.mp3}}{{AC|KilljoyLetsRush2.mp3}} "Let's rush them."
+*{{AC|KilljoyLetsRushA1.mp3}}{{AC|KilljoyLetsRushA2.mp3}} "Let's rush A."
+*{{AC|KilljoyLetsRushB1.mp3}}{{AC|KilljoyLetsRushB2.mp3}} "Let's rush B."
+*{{AC|KilljoyLetsRushC1.mp3}}{{AC|KilljoyLetsRushC2.mp3}} "Let's rush C."
+
+====Let's Sneak Here====
+Only as Attackers during Buy Phase.
+*{{AC|KilljoySneakA1.mp3}}{{AC|KilljoySneakA2.mp3}} "Let's sneak A."
+*{{AC|KilljoySneakB1.mp3}}{{AC|KilljoySneakB2.mp3}} "Let's sneak B."
+*{{AC|KilljoySneakC1.mp3}}{{AC|KilljoySneakC2.mp3}} "Let's sneak C."
+*{{AC|KilljoySneakMid1.mp3}}{{AC|KilljoySneakMid2.mp3}} "Let's sneak Mid."
+
+====Let's Stack Here====
+Only as Defenders during Buy Phase.
+*{{AC|KilljoyStack1.mp3}}{{AC|KilljoyStack2.mp3}} "Let's stack up."
+*{{AC|KilljoyStackA1.mp3}}{{AC|KilljoyStackA2.mp3}} "Let's stack A."
+*{{AC|KilljoyStackB1.mp3}}{{AC|KilljoyStackB2.mp3}} "Let's stack B."
+*{{AC|KilljoyStackC1.mp3}}{{AC|KilljoyStackC2.mp3}} "Let's stack C."
+*{{AC|KilljoyStackMid1.mp3}}{{AC|KilljoyStackMid2.mp3}} "Let's stack Mid."
+
+====Someone Go Here====
+As Attackers during Round Phase, or as Defenders at anytime.
+*{{AC|KilljoyNeedSomeoneA1.mp3}}{{AC|KilljoyNeedSomeoneA2.mp3}} "Someone go A."
+*{{AC|KilljoyNeedSomeoneB1.mp3}}{{AC|KilljoyNeedSomeoneB2.mp3}} "Someone go B."
+*{{AC|KilljoyNeedSomeoneC1.mp3}}{{AC|KilljoyNeedSomeoneC2.mp3}} "Someone go C."
+*{{AC|KilljoyNeedSomeoneMid1.mp3}}{{AC|KilljoyNeedSomeoneMid2.mp3}} "Someone go Mid."
+
+====Spike's here====
+Only as Defenders during Round Phase.
+*{{AC|KilljoySpikeA1.mp3}}{{AC|KilljoySpikeA2.mp3}} "Spike's A."
+*{{AC|KilljoySpikeB1.mp3}}{{AC|KilljoySpikeB2.mp3}} "Spike's B."
+*{{AC|KilljoySpikeC1.mp3}}{{AC|KilljoySpikeC2.mp3}} "Spike's C."
+*{{AC|KilljoySpikeMid1.mp3}}{{AC|KilljoySpikeMid2.mp3}} "Spike's Mid."
+*{{AC|KilljoySpikeSpottedASpawn1.mp3}}{{AC|KilljoySpikeSpottedASpawn2.mp3}} "Spike's in Attacker Spawn."
+*{{AC|KilljoySpikeSpottedDSpawn1.mp3}}{{AC|KilljoySpikeSpottedDSpawn2.mp3}} "Spike's in Defender Spawn."
+
+==Killjoy==
+===General===
+*{{AC|KilljoyPing1.mp3}}{{AC|KilljoyPing2.mp3}} "Here."
+
+===Caution===
+*{{AC|KilljoyPingCaution1.mp3}}{{AC|KilljoyPingCaution2.mp3}} "Careful."
+
+===Need support===
+*{{AC|KilljoyHelp1.mp3}}{{AC|KilljoyHelp2.mp3}}{{AC|KilljoyHelp3.mp3}} "Help!"
+
+===On my mark===
+*{{AC|KilljoyOnMyMark1.mp3}}{{AC|KilljoyOnMyMark2.mp3}} "Go on my mark."
+
+===Ping gun===
+*{{AC|KilljoyPingGun1.mp3}}{{AC|KilljoyPingGun2.mp3}} "Gun here."
+
+===Ping spike===
+*{{AC|KilljoyPingSpike1.mp3}}{{AC|KilljoyPingSpike2.mp3}} "Spike's here."
+
+===Ping for spike defuse===
+*{{AC|KilljoyDefuseSpike1.mp3}}{{AC|KilljoyDefuseSpike2.mp3}} "Defuse the spike!"
+
+===Ping for spike plant===
+*{{AC|KilljoyPlantSpike1.mp3}}{{AC|KilljoyPlantSpike2.mp3}} "Plant the spike!"
+
+===Watching===
+*{{AC|KilljoyWatching1.mp3}}{{AC|KilljoyWatching2.mp3}} "Watching this."
+
+==Other lines==
+===Ability unusable===
+====[[Status Effect#Suppress|Suppressed]]====
+*{{AC|KilljoyCantUse1.mp3}}{{AC|KilljoyCantUse2.mp3}} "Can't use that."
+
+====On cooldown====
+*{{AC|KilljoyOnCooldown1.mp3}}{{AC|KilljoyOnCooldown2.mp3}} "Can't use that yet"
+
+====No charges====
+*{{AC|KilljoyNoCharges1.mp3}} "Out of charges."
+*{{AC|KilljoyNoCharges2.mp3}} "Out of charges."
+
+===Enemy spotted===
+*{{AC|KilljoyEnemyA1.mp3}}{{AC|KilljoyEnemyA2.mp3}} "Enemy spotted A."
+*{{AC|KilljoyEnemyB1.mp3}}{{AC|KilljoyEnemyB2.mp3}} "Enemy spotted B."
+*{{AC|KilljoyEnemyC1.mp3}}{{AC|KilljoyEnemyC2.mp3}} "Enemy spotted C."
+*{{AC|KilljoyEnemyASpawn1.mp3}}{{AC|KilljoyEnemyASpawn2.mp3}} "Enemy in Attacker Spawn."
+*{{AC|KilljoyEnemyDSpawn1.mp3}}{{AC|KilljoyEnemyDSpawn2.mp3}} "Enemy in Defender Spawn."
+*{{AC|KilljoyEnemyMid1.mp3}}{{AC|KilljoyEnemyMid2.mp3}} "Enemy spotted Mid."
+
+====Multiple====
+*{{AC|KilljoyEnemiesA1.mp3}}{{AC|KilljoyEnemiesA2.mp3}} "Multiple enemies A!"
+*{{AC|KilljoyEnemiesB1.mp3}}{{AC|KilljoyEnemiesB2.mp3}} "Multiple enemies B!"
+*{{AC|KilljoyEnemiesC1.mp3}}{{AC|KilljoyEnemiesC2.mp3}} "Multiple enemies C!"
+*{{AC|KilljoyEnemiesASpawn1.mp3}}{{AC|KilljoyEnemiesASpawn2.mp3}} "Enemies in Attacker Spawn!"
+*{{AC|KilljoyEnemiesDSpawn1.mp3}}{{AC|KilljoyEnemiesDSpawn2.mp3}} "Enemies in Defender Spawn!"
+*{{AC|KilljoyEnemiesMid1.mp3}}{{AC|KilljoyEnemiesMid2.mp3}} "Multiple enemies Mid!"
+
+===Reloading===
+*{{AC|KilljoyReloading1.mp3}}{{AC|KilljoyReloading2.mp3}} "Reloading."
+
+===Healed===
+*{{AC|KilljoyRelief1.mp3}}{{AC|KilljoyRelief2.mp3}}{{AC|KilljoyRelief3.mp3}} ''*Killjoy sighs*''
+
+===Killed===
+*{{AC|KilljoyDeath1.mp3}}{{AC|KilljoyDeath2.mp3}}{{AC|KilljoyDeath3.mp3}} ''*Killjoy groans*''
+
+===Resurrected via {{abi text|Resurrection}}===
+*{{AC|KilljoyResurrect.mp3}} "Fwoof! Heiliger strohsack, this is crazy!"
+**(''Heiliger strohsack'': Holy crap)
+
+===Wounded===
+====Light damage====
+*{{AC|KilljoyPainLight1.mp3}}{{AC|KilljoyPainLight2.mp3}}{{AC|KilljoyPainLight3.mp3}} ''*Killjoy groans*''
+
+====Medium damage====
+*{{AC|KilljoyPainMedium1.mp3}}{{AC|KilljoyPainMedium2.mp3}}{{AC|KilljoyPainMedium3.mp3}} ''*Killjoy groans*''
+
+====Heavy damage====
+*{{AC|KilljoyPainHeavy1.mp3}}{{AC|KilljoyPainHeavy2.mp3}}{{AC|KilljoyPainHeavy3.mp3}} ''*Killjoy groans*''
+
+====Fall damage====
+*{{AC|KilljoyPainFall1.mp3}}{{AC|KilljoyPainFall2.mp3}}{{AC|KilljoyPainFall3.mp3}} ''*Killjoy groans*''
+
+==Unused lines==
+===Match MVP===
+*{{AC|KilljoyMatchMVP1.mp3}} ''*Killjoy laughs*'' "Ah, my genius doesn't stop in the lab."
+
+==Removed lines==
+===Match Start===
+*{{AC|KilljoyMatchStart8.mp3}} "Can I just say how much I love the new recruit? I know I like anyone that doesn't break my stuff but, come on, their sense of fashion! Inspirational."
+
+===Round Start===
+*{{AC|KilljoyRoundStart8.mp3}} "Remember, your weapon is only a tool. You can't just shoot, you have to think!"{{#tag:sup|-{{patchv|13.00}}}}
+
+===Ally {{ai|Raze}} Match Start===
+*{{AC|KilljoyAllyRazeMatchStart.mp3}} "Raze, freundin, if I see even a gyro out of place, I'm locking you out of my lab. My poor sentry bot..."
+**(''Freundin'': Girlfriend)
+
+===Last Kill Match MVP===
+*{{AC|KilljoyLastKillMVP.mp3}} ''*Killjoy laughs*'' "Is this their best?!"{{#tag:sup|-{{patchv|13.00}}}}
+
+===Spike Spotted General===
+*{{AC|KilljoySpikeSpotted1.mp3}}{{AC|KilljoySpikeSpotted2.mp3}} "Spike spotted."
+
+===Enemy spotted General===
+*{{AC|KilljoyEnemy1.mp3}}{{AC|KilljoyEnemy2.mp3}} "Enemy spotted."
+
+===Multiple Enemies spotted General===
+*{{AC|KilljoyEnemies1.mp3}}{{AC|KilljoyEnemies2.mp3}} "Multiple enemies spotted!"
+
+===Wounded Annoyed===
+*{{AC|KilljoyPainAnnoyed1.mp3}}{{AC|KilljoyPainAnnoyed2.mp3}}{{AC|KilljoyPainAnnoyed3.mp3}} ''*Killjoy groans*''
+
+===Be Quiet===
+*{{AC|KilljoyBeQuiet1.mp3}}{{AC|KilljoyBeQuiet2.mp3}} "Be quiet."
+
+===Rotate===
+*{{AC|KilljoyRotating1.mp3}}{{AC|KilljoyRotating2.mp3}} "I'm rotating."
+
+===Let's Rotate===
+*{{AC|KilljoyLetsRotate1.mp3}}{{AC|KilljoyLetsRotate2.mp3}} "Let's rotate."
+
+===Affirmation===
+*{{AC|KilljoyAffirmation1.mp3}}{{AC|KilljoyAffirmation2.mp3}} "Sounds good."
+
+===Callouts===
+*{{AC|KilljoyCalloutA1.mp3}}{{AC|KilljoyCalloutA2.mp3}} "A Site."
+*{{AC|KilljoyCalloutB1.mp3}}{{AC|KilljoyCalloutB2.mp3}} "B Site."
+*{{AC|KilljoyCalloutC1.mp3}}{{AC|KilljoyCalloutC2.mp3}} "C Site."
+*{{AC|KilljoyCalloutMid1.mp3}}{{AC|KilljoyCalloutMid2.mp3}} "Mid."
+
+===Clear Area===
+*{{AC|KilljoyClearThisArea1.mp3}}{{AC|KilljoyClearThisArea2.mp3}} "Flush this area out."
+
+===Hold===
+*{{AC|KilljoyHold1.mp3}}{{AC|KilljoyHold2.mp3}} "Hold on."
+
+===Push===
+*{{AC|KilljoyPush1.mp3}}{{AC|KilljoyPush2.mp3}} "Push."
+
+===Regroup===
+*{{AC|KilljoyRegroup1.mp3}}{{AC|KilljoyRegroup2.mp3}} "Let's regroup."
+
+===Need disrupt===
+*{{AC|KilljoyDisrupt1.mp3}}{{AC|KilljoyDisrupt2.mp3}} "Disrupt here."
+
+===Need scouting===
+*{{AC|KilljoyScout1.mp3}}{{AC|KilljoyScout2.mp3}} "Scout here."
+
+===Need vision block===
+*{{AC|KilljoyBlockVision1.mp3}}{{AC|KilljoyBlockVision2.mp3}} "Block vision here."
+
+===Ping enemy utility===
+*{{AC|KilljoyPingUtility1.mp3}}{{AC|KilljoyPingUtility2.mp3}} "Enemy utility here."
+
+===Ping Go here===
+*{{AC|KilljoyGoHere1.mp3}}{{AC|KilljoyGoHere2.mp3}} "Let's go here."
+
+==[[Range/Lore|The Range's lore assets]]==
+===[[Range/Lore/EP3|Episode 3]]===
+*{{AC|VoicemailBrimstone1.mp3}} "Hello [[Brimstone|Brim]]! Uh, sorry about the power outage last night, it won't happen again... probably. It's this [[Fracture|Everett-Linde]] portal, it's- it's going fine, I- I think, it's going fine, but finding a viable energy source is proving... problematic. Standard electrical currents just won't work, but you know what could help? More lab funding. Now, I know what you're thinking: "Killjoy! Are you exploiting the urgent nature of this very fine mission to weasel more money out of the quarterly budget?!" The answer is yes, but seriously this portal won't power itself, thank you!"
+*{{AC|VoicemailBrimstone4.mp3}} "Brim, hey. It's me. Sorry, I-... I keep thinking about [[Fracture|Everett-Linde]]. They were light years ahead of us with their LRC program. It was sublime. The data on [[radianite]] exposure, the biome acceleration. Even in its failure it can teach us so much. And yet... seeing the husk of the facility... it's the people. All those... people. Brim they weren't even soldiers. They were scientists. They didn't have a chance to... sorry, I, I have to go, call me back please!"
+
+===[[Range/Lore/EP4|Episode 4]]===
+*{{AC|VoicemailBrimstone5.mp3}} "Brim, hi! [[Neon]] and I started our work on rebooting the portal. So far so good! She seems nervous? But I like her, and her power is more than I could have hoped for. The bio-electricity inside her body is literally enlaced with Earth's radianite mesh. Do you know how crazy that is?! It shouldn't even be possible! Haha! Looks like [[Chamber]] was right this time but don't tell him I said that. We're still working on stabilizing the connection between [[Alpha Earth|our side]] and [[Omega]] but we'll get it done. Maybe it's time to start planning the mission for after we break through. Sounds like a Brimstone thing, ja? Good luck with that!"
+
+===[[Range/Lore/EP5|Episode 5]]===
+*{{AC|VoicemailBrimstone34.mp3}} "Brim, hey! It's Killjoy, just calling to check in, see how things are! Hope you're doing good, are you doing good? Anyway, funny story actually. We're still in Berlin, and it's great, the concert was great, we ended up at a few afterparties, lots of fun. Uh, but now, we, uh... we don't know where [[Raze]] is. But don't worry, I'm on it! I'm running scans across our communication arrays, should have her location in a few hours... maybe a day... maybe more. But I- I'm sure she's fine! Are you good, by the way? Did I ask that? Huh, I'm sweating. I should adjust the, uh, climate control in here, ha."
+
+===[[Range/Lore/EP9|Episode 9]]===
+*{{AC|VoicemailBrimstone90.mp3}} "Brimstone! Oh Brimstone, I just completed a preliminary scan of the [[Hourglass]] archives and, without putting too fine a point on it, this database is extraordinary! I see artifacts and dates that span the entire length of human history, carbon-dated technology that completely upends our understanding of material science, biological readings that have significant repercussions for evolutionary- Listen, I've barely scratched the surface. I, uh... I need more time. I know you're going to say no but I also want you to know that if you want me to leave, you'll have to send [[KAYO|KAY/O]] to drag me away or some such! Okay, that's it, back to my- oh! Please tell [[Raze]] that I saw her missed calls and that I'm fine. I'm just having such a good-"
+
+==Notes==
+<!--:''To easily see which quotes were added corresponding to the patch, use your browser's Find function and type the patch number (e.g. v2.05).
+*{{ui|Added}} 10 voice lines added from patch {{patchv|5.06}}, undocumented in the patch notes.-->
+*{{ui|Removed}} 2 voice lines removed from patch {{patchv|13.00}}, documented in the patch notes.
+*Additional radio commands added in patch {{patchv|8.11}} are not mentioned in this page.
+*Other voice lines removed were at an unknown timeframe.
+
+==Navigation==
+{{Navbox agents}}
+[[Category:Quotes]]

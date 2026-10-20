@@ -1,0 +1,909 @@
+{{TOCright}}
+This is a '''list of quotes by {{ai|Raze}}'''. Raze is voiced by Carolina Ravassa in English. Necessary quotes are translated from Portuguese to English. Raze has a total of {{PAGESINCATEGORY:Raze Quotes}} files of quotes including unused and removed lines, and excluding [[#The Range's lore assets|The Range's lore assets]].
+
+A downloadable folder containing all the audio files on this page can be found [https://drive.google.com/drive/folders/1ocBq3213VuJG1PSxidPTDAapBBgl2ESo?usp=sharing here].
+
+==Agent Selected/Unlocked==
+*{{AC|RazePick.mp3}} "Yes, I'm pumped!"
+
+==Abilities==
+==={{abi text|Boom Bot}}===
+====Cast====
+*{{AC|RazeBoomBotCast1.mp3}}{{AC|RazeBoomBotCast2.mp3}} "Bomb buddy out."
+*{{AC|RazeBoomBotCast3.mp3}}{{AC|RazeBoomBotCast4.mp3}} "Go get 'em."
+
+====Kill====
+*{{AC|RazeBoomBotKill1.mp3}} "Too slow."
+*{{AC|RazeBoomBotKill2.mp3}} "Ha! Too slow."
+*{{AC|RazeBoomBotKill3.mp3}}{{AC|RazeBoomBotKill4.mp3}} ''*Raze winces*'' "Ouch."
+
+====Multikill====
+*{{AC|RazeBoomBotMultiKill1.mp3}}{{AC|RazeBoomBotMultiKill2.mp3}} "They didn't move?!"
+*{{AC|RazeBoomBotMultiKill3.mp3}}{{AC|RazeBoomBotMultiKill4.mp3}} ''*Raze laughs*'' "I didn't expect that!"
+
+==={{abi text|Blast Pack}}===
+====Cast====
+*{{AC|RazeBlastPackCast1.mp3}}{{AC|RazeBlastPackCast2.mp3}} "Satchel out."
+
+====Kill====
+*{{AC|RazeBlastPackKill1.mp3}}{{AC|RazeBlastPackKill2.mp3}} "Surprise!"
+
+==={{abi text|Paint Shells}}===
+
+====Cast====
+*{{AC|RazePaintShellsCast1.mp3}}{{AC|RazePaintShellsCast2.mp3}}{{AC|RazePaintShellsCast3.mp3}} "Grenade!"
+
+====Kill====
+*{{AC|RazePaintShellsKill1.mp3}}{{AC|RazePaintShellsKill2.mp3}} "Colorful kill!"
+*{{AC|RazePaintShellsKill3.mp3}}{{AC|RazePaintShellsKill4.mp3}} "Boom!"
+
+====Multikill====
+*{{AC|RazePaintShellsMultiKill1.mp3}}{{AC|RazePaintShellsMultiKill2.mp3}} "Money, baby! This is money!"
+*{{AC|RazePaintShellsMultiKill3.mp3}}{{AC|RazePaintShellsMultiKill4.mp3}} "Holy shit!"
+
+==={{abi text|Showstopper}}===
+====Ally Cast====
+*{{AC|RazeUltAllyCast.mp3}} "Here comes the party!"
+
+====Enemy Cast====
+*{{AC|RazeUltEnemyCast.mp3}} "Fire in the hole!"
+
+====Fire rocket====
+*{{AC|RazeUltFire1.mp3}}{{AC|RazeUltFire2.mp3}}{{AC|RazeUltFire3.mp3}} ''*Raze grunts*''
+
+====Kill====
+*{{AC|RazeUltKill1.mp3}} "I blew you up!"
+*{{AC|RazeUltKill2.mp3}} "Obliterated!"
+*{{AC|RazeUltKill3.mp3}}{{AC|RazeUltKill4.mp3}} "Boom!"
+
+====Multikill====
+*{{AC|RazeUltMultiKill1.mp3}} "You see that?!"
+*{{AC|RazeUltMultiKill2.mp3}} "Ha, you see that?"
+*{{AC|RazeUltMultiKill3.mp3}}{{AC|RazeUltMultiKill4.mp3}} "Hoh, that worked great!"
+
+==Buy Phase==
+===Match Start===
+*{{AC|RazeMatchStart1.mp3}} "Finally back out in the field! Let's go, there's so many new toys I want to try out!"
+*{{AC|RazeMatchStart2.mp3}} "You can take the girl out of Salvador, but you'll never take the girl out of Salvador. Wait..."
+*{{AC|RazeMatchStart3.mp3}} "I promise I'll get 'em. Might take down a city block along the way but hey, a win's a win."
+*{{AC|RazeMatchStart4.mp3}} "Okay, minha família. Leave the fireworks to me. Should be plenty loud for you to have some fun."
+**(''Minha família'': My family)
+*{{AC|RazeMatchStart5.mp3}} "Just me, my squad-zinho, and a few tons of dynamite. There's nothing we can't do!"
+**(''Squad-zinho'': Little squad)
+*{{AC|RazeMatchStart6.mp3}} "Even if I go out, I'll go out with a bang! Just promise you'll dance at my funeral, okay?"
+*{{AC|RazeMatchStart7.mp3}} "I shouldn't have to say this because, you know, my vibe, but, stay clear of my explosions, okay?"
+
+====Attacking====
+*{{AC|RazeMatchStartAttack1.mp3}} "Oxe, are we in their world now, or they in ours? No, it's theirs. I got it. This universe stuff, it's complicated."
+**(''Oxe'': An expression of surprise)
+*{{AC|RazeMatchStartAttack2.mp3}} "Once we get their radianite, can I keep a little extra for my boom bot-i? Would that be cool? Honestly, I don't think anybody minds!"
+
+====Defending====
+*{{AC|RazeMatchStartDefense1.mp3}} "They think they can walk all over my turf?! I've got a grenade that says otherwise."
+
+====[[Haven]]====
+*{{AC|RazeMatchStartHaven.mp3}} "This poor place. You used to be so beautiful. Don't worry. I'll send you off with a bang."
+
+====[[Pearl]]====
+*{{AC|RazeMatchStartPearl.mp3}} "Hey, uh, that glass is shatter-proof, né? Anyone test grenades on it yet? I'm just thinking out loud."
+**(''Né'': Right)
+
+====[[Split]]====
+*{{AC|RazeMatchStartSplit.mp3}} "Ugh, another Kingdom infestation. Well fine. I'll just make sure to be extra collateral with my collateral damage."
+
+===Round Start===
+*{{AC|RazeRoundStart1.mp3}} "You- you say something? Ha, sorry. Ears still ringing."
+*{{AC|RazeRoundStart2.mp3}} "Ah, surrounded by minha família. We won't lose!"
+**(''Minha família'': My family)
+*{{AC|RazeRoundStart3.mp3}} "We're here, because we're the best! Don't any of you forget that!"
+*{{AC|RazeRoundStart4.mp3}} "No one beats my firepower, I got this!"
+*{{AC|RazeRoundStart5.mp3}} "Gear up, stay safe, we're going back in."
+*{{AC|RazeRoundStart6.mp3}} "Paint? Check. Charges? Check. Brakes? *''chuckles''* Nowhere in sight."
+*{{AC|RazeRoundStart7.mp3}} "None of my stuff has malfunctioned yet! Can we celebrate that?"
+*{{AC|RazeRoundStart8.mp3}} "They want to dance? Ha! I'll lead."
+*{{AC|RazeRoundStart9.mp3}} "Anyone have any splints? I may have jammed my fingers, multiple fingers."
+*{{AC|RazeRoundStart10.mp3}} "They're going to scatter from my stuff. Super easy to pick off."
+*{{AC|RazeRoundStart11.mp3}} "Okay, I only have, like, seventy-eight grenades left? Hopefully that's enough."
+
+====Last round won====
+*{{AC|RazeRoundWon1.mp3}} "And that's how we do it."
+*{{AC|RazeRoundWon2.mp3}} "Ha, they think we wouldn't fight back? Dead wrong."
+*{{AC|RazeRoundWon3.mp3}} "Let's do it again!"
+*{{AC|RazeRoundWon4.mp3}} "Ha! We dancing now! Let's keep it up!"
+
+=====While in the lead=====
+*{{AC|RazeLead1.mp3}} "Never had a doubt. Let's keep it going!"
+*{{AC|RazeLead2.mp3}} "Who said this wouldn't be fun. I'm having a blast!"
+*{{AC|RazeLead3.mp3}} "Ha! I try to stay serious here, but this is just so much fun."
+
+=====Making a comeback=====
+*{{AC|RazeComeback1.mp3}} "This party's just begun."
+*{{AC|RazeComeback2.mp3}} "See? They're stubborn, but they'll break."
+*{{AC|RazeComeback3.mp3}} "Okay, they tried. Now it's our turn."
+
+===Last round in the half===
+====Attacking====
+*{{AC|RazeLastRound1.mp3}} "Spend those creds before we lose them."
+
+====Defending====
+*{{AC|RazeLastRound2.mp3}} "Spend those creds before we lose them."
+
+===Match Point===
+*{{AC|RazeMatchPoint1.mp3}} "Party's over. Let's show them out!"
+*{{AC|RazeMatchPoint2.mp3}} "One last fight, everyone. We can do it!"
+
+===Shop===
+====Let's Buy====
+*{{AC|RazeBuying1.mp3}}{{AC|RazeBuying2.mp3}} "I'm buying."
+
+====Let's Save====
+*{{AC|RazeSaving1.mp3}}{{AC|RazeSaving2.mp3}} "I'm saving."
+
+====I Have Extra Creds====
+*{{AC|RazeOffer1.mp3}}{{AC|RazeOffer2.mp3}} "Anyone need something?"
+
+====Requested====
+*{{AC|RazeRequest1.mp3}}{{AC|RazeRequest2.mp3}} "Can I get a drop?"
+
+===Barrier Down===
+*{{AC|RazeBarrierDown1.mp3}} "They can't even make a dent!"
+*{{AC|RazeBarrierDown2.mp3}} "Tear them down."
+*{{AC|RazeBarrierDown3.mp3}} "Stay out of my home."
+*{{AC|RazeBarrierDown4.mp3}} "We set the tempo, not them."
+*{{AC|RazeBarrierDown5.mp3}} "Just let loose."
+*{{AC|RazeBarrierDown6.mp3}} "Let's go, keep it up!"
+*{{AC|RazeBarrierDown7.mp3}} "We'll come back. I can feel it."
+*{{AC|RazeBarrierDown8.mp3}} "We'll bring it back."
+*{{AC|RazeBarrierDown9.mp3}} "Gotta find that rhythm."
+*{{AC|RazeBarrierDown10.mp3}} "Shake them up."
+*{{AC|RazeBarrierDown11.mp3}} "Vamos, gente!"
+**(Let's go, people!)
+*{{AC|RazeBarrierDown12.mp3}} "Ha! They don't have a chance."
+*{{AC|RazeBarrierDown13.mp3}} "Let's start this party."
+*{{AC|RazeBarrierDown14.mp3}} "I need to blow something up."
+*{{AC|RazeBarrierDown15.mp3}} "Time to explode."
+*{{AC|RazeBarrierDown16.mp3}} "Let's flush them out."
+*{{AC|RazeBarrierDown17.mp3}} "Let's make 'em dance!"
+*{{AC|RazeBarrierDown18.mp3}} "Let's make some chaos."
+*{{AC|RazeBarrierDown19.mp3}} "Come on, let's go!"
+
+==Spike==
+===Forgotten in spawn===
+*{{AC|RazeForgotSpike1.mp3}} "Uh, where's the spike?"
+*{{AC|RazeForgotSpike2.mp3}} "I think we need the spike."
+
+===Ally carrier down===
+*{{AC|RazeSpikeDown1.mp3}}{{AC|RazeSpikeDown2.mp3}} "Spike carrier's down."
+
+===Dropped===
+*{{AC|RazeSpikeDropped1.mp3}}{{AC|RazeSpikeDropped2.mp3}} "I dropped the spike."
+
+===Retrieved===
+*{{AC|RazeSpikePickedUp1.mp3}}{{AC|RazeSpikePickedUp2.mp3}} "I have the spike."
+
+===Planted===
+*{{AC|RazeSpikePlanted1.mp3}}{{AC|RazeSpikePlanted2.mp3}} "Spike planted."
+
+===Spotted===
+*{{AC|RazeSpikeSpottedA1.mp3}}{{AC|RazeSpikeSpottedA2.mp3}} "Spike spotted A."
+*{{AC|RazeSpikeSpottedB1.mp3}}{{AC|RazeSpikeSpottedB2.mp3}} "Spike spotted B."
+*{{AC|RazeSpikeSpottedC1.mp3}}{{AC|RazeSpikeSpottedC2.mp3}} "Spike spotted C."
+*{{AC|RazeSpikeSpottedASpawn1.mp3}}{{AC|RazeSpikeSpottedASpawn2.mp3}} "Spike's in Attacker Spawn."
+*{{AC|RazeSpikeSpottedDSpawn1.mp3}}{{AC|RazeSpikeSpottedDSpawn2.mp3}} "Spike's in Defender Spawn."
+*{{AC|RazeSpikeSpottedMid1.mp3}}{{AC|RazeSpikeSpottedMid2.mp3}} "Spike spotted Mid."
+
+===Defuse resumed===
+*{{AC|RazeDefuseResumed1.mp3}} "Pfft, like you could stop me."
+
+===Defuse time running out===
+*{{AC|RazeDefuseLate1.mp3}}{{AC|RazeDefuseLate2.mp3}} "I defuse things in my sleep."
+*{{AC|RazeDefuseLate3.mp3}}{{AC|RazeDefuseLate4.mp3}} "Impressive wiring."
+
+===Defuse successful===
+*{{AC|RazeDefuseComplete1.mp3}} "Ah, shame, I love explosions."
+
+==Kill==
+*{{AC|RazeKill1.mp3}} "Ha! Got one!"
+*{{AC|RazeKill2.mp3}} "Boom!"
+*{{AC|RazeKill3.mp3}} "Next."
+*{{AC|RazeKill4.mp3}} "Get out of here!"
+*{{AC|RazeKill5.mp3}} "Woo!"
+*{{AC|RazeKill6.mp3}} "One down."
+*{{AC|RazeKill7.mp3}} "Snuffed out."
+*{{AC|RazeKill8.mp3}} "Tchau!"
+**(Bye!)
+*{{AC|RazeKill9.mp3}} "See ya!"
+*{{AC|RazeKill10.mp3}} "Got 'em."
+
+===Headshot===
+*{{AC|RazeHeadshot1.mp3}} "Nailed it."
+*{{AC|RazeHeadshot2.mp3}} "Precision kill."
+*{{AC|RazeHeadshot3.mp3}} "Headshot."
+*{{AC|RazeHeadshot4.mp3}} "Loosen up!"
+*{{AC|RazeHeadshot5.mp3}} "Dropped."
+*{{AC|RazeHeadshot6.mp3}} "Ouch!"
+
+===[[Melee]]===
+*{{AC|RazeMeleeKill1.mp3}} "Didn't waste my ammo."
+*{{AC|RazeMeleeKill2.mp3}} "Take a nap."
+
+===Triple===
+*{{AC|RazeTriple1.mp3}}{{AC|RazeTriple2.mp3}} "Three for me."
+
+===Quadra===
+*{{AC|RazeQuadra1.mp3}}{{AC|RazeQuadra2.mp3}} "Ha, four."
+
+===One kill remaining (game-mode specific)===
+*{{AC|RazeOneKillLeft1.mp3}}{{AC|RazeOneKillLeft2.mp3}} "Let's dance!"
+
+==Round End==
+===Ace===
+*{{AC|RazeAce1.mp3}} "Talk about collateral damage! Ha!"
+*{{AC|RazeAce2.mp3}} "Bring it! Me against the world!"
+
+===Clutch===
+*{{AC|RazeClutch1.mp3}} "Don't mess with this Baiana."
+**(''Baiana'': A woman from Bahia)
+*{{AC|RazeClutch2.mp3}} "Woohoo! I'm the pride of Bahia!"
+*{{AC|RazeClutch3.mp3}} "Ha! I could've beaten twice the number!"
+*{{AC|RazeClutch4.mp3}} "Haha! Let's keep it going!"
+
+===Flawless or Team Ace===
+*{{AC|RazeFlawless1.mp3}} "Ah, now that was a work of art!"
+*{{AC|RazeFlawless2.mp3}} "Ah, meus amores, we live another day!"
+**(''Meus amores'': My loves)
+*{{AC|RazeFlawless3.mp3}} "Ah, that was fun! Do you think they had fun?"
+
+===Thrifty===
+*{{AC|RazeThrifty1.mp3}} "All I need is spare parts."
+
+===Last Kill===
+*{{AC|RazeLastKill1.mp3}} "Woo! Okay, take a break guys!"
+*{{AC|RazeLastKill2.mp3}} "Last bogey killed."
+*{{AC|RazeLastKill3.mp3}} "I think that's it."
+*{{AC|RazeLastKill4.mp3}} "Okay, done!"
+*{{AC|RazeLastKill5.mp3}} "Okay! Who's got the snacks?"
+
+====Enemy MVP====
+*{{AC|RazeLastKillMVP1.mp3}} "The bigger they are, the harder they fall."
+
+====Using [[Melee]]====
+*{{AC|RazeLastKillMelee1.mp3}} "I'm as quiet as a mouse."
+
+===Low HP===
+*{{AC|RazeLowHP1.mp3}} "Ugh, I'm still here, amigo."
+**(''Amigo'': Friend)
+
+==Match End==
+===Match Win===
+*{{AC|RazeMatchWin1.mp3}} "Ah, smells like victory, and gunpowder."
+*{{AC|RazeMatchWin2.mp3}} "There we go! Nice work, everyone!"
+*{{AC|RazeMatchWin3.mp3}} "Gente! As colorful as Carnaval!"
+**(''Gente'': Gosh)
+*{{AC|RazeMatchWin4.mp3}} "Ha! Look at this wreckage! I'm so proud!"
+
+====[[Pearl]]====
+*{{AC|RazeMatchWinPearl.mp3}} "Aí sim, we rock! But seriously, when can we hit up the club here?"
+**(''Aí sim'': Oh yeah)
+
+====[[Split]]====
+*{{AC|RazeMatchWinSplit.mp3}} "The city is safe! Or, you know, what's left of it. Never said I was perfect."
+
+===Runner-up (game-mode specific)===
+*{{AC|RazeRunnerUp1.mp3}} "Hey, I'll take it."
+*{{AC|RazeRunnerUp2.mp3}} "Next time, número um."
+**(''Número um'': Number one)
+*{{AC|RazeRunnerUp3.mp3}} "I still get a trophy, right?"
+
+==Agent-specific interactions==
+{| class="wikitable sortable"
+!To Agent
+!Scenario
+!width=40%; class=unsortable|Ally
+!width=40%; class=unsortable|Enemy
+|-
+|rowspan=2|{{Ai|Astra}}
+|Match Start
+|
+|{{AC|RazeEnemyAstraMatchStart.mp3}} "That enemy Astra thinks she knows everything. Let's bring her back down to Earth."
+|-
+|Commend
+|{{AC|RazeAllyAstraCommend.mp3}} "Astra, how did you even do that?! Man, where do I sign up for lessons?"
+|
+|-
+|rowspan=7|{{Ai|Breach}}
+|Chat
+|
+:[[File:Raze icon.png|20px|link=Raze]] {{AC|RazeAllyBreachChat.mp3}} "You know, Breachy, in all this chaos it would be terrible if some equipment just, got lost, you know?"
+:[[File:Breach icon.png|20px|link=Breach]] {{AC|BreachAllyRazeChat.mp3}} "Oh man, just awful. A tragedy."
+|
+|-
+|Match Start
+|{{AC|RazeAllyBreachMatchStart.mp3}} "Breach! Lindo! Your arms are looking great! You need a tuneup?"
+*(''Lindo'': Beautiful)
+|{{AC|RazeEnemyBreachMatchStart.mp3}} "I don't have any history with that fake Breachy. Screw him. I'll put him down."
+|-
+|Round Start
+|{{AC|RazeAllyBreachRoundStart.mp3}} "Breach, you're practically dancing! You ready to go, lindo?"
+*(''Lindo'': Beautiful)
+|
+|-
+|rowspan=2|Commend
+|{{AC|RazeAllyBreachCommend.mp3}} "Did you see Breach back there? That's how it's done."
+|
+|-
+|{{AC|RazeAllyBreachCommend2.mp3}} "Breach! Bra jobbatch! Did I say that right?" ''*Raze mumbles mispronunciations*''
+*("''Bra jobbatch''": Raze is mispronouncing "bra jobbat", meaning "good work" in Swedish)
+|
+|-
+|Barrier Down
+|{{AC|RazeAllyBreachBarrierDown.mp3}} "Vamos, Breach. Let's go!"
+*(''Vamos'': Come on)
+|
+|-
+|Last Kill
+|
+|{{AC|RazeEnemyBreachLastKill.mp3}} "Huh, sorry mano."
+*(''Mano'': Bro)
+|-
+|rowspan=4|{{Ai|Brimstone}}
+|Chat
+|
+:[[File:Raze icon.png|20px|link=Raze]]{{AC|RazeAllyBrimstoneChat.mp3}} "Brimstone, chefinho! Thanks for the paint canisters, ha, best gift ever!"
+:*(''Chefinho'': Boss)
+:[[File:Brimstone icon.png|20px|link=Brimstone]] {{AC|BrimstoneAllyRazeChat.mp3}} "You bet, and don't use them all in one day."
+|
+|-
+|Match Start
+|{{AC|RazeAllyBrimstoneMatchStart.mp3}} "Brimstone, that bracer has access to the Kingdom mainframe, yeah? Just asking for a friend."
+|
+|-
+|Round Start
+|{{AC|RazeAllyBrimstoneRoundStart.mp3}} "Brimstone-zinho, you sure I can't listen to music? You're really bringing me down here, man!"
+*(''Brimstone-zinho'': Little Brimstone)
+|{{AC|RazeEnemyBrimstoneRoundStart.mp3}} "Someone track down their Brimstone. Cut off the head of the snake."
+|-
+|Barrier Down
+|
+|{{AC|RazeEnemyBrimstoneBarrierDown.mp3}} "That Brimstone's just sparks!"
+|-
+|rowspan=2|{{Ai|Chamber}}
+|Round Start
+|{{AC|RazeAllyChamberRoundStart.mp3}} "Chamber, let me borrow one of your guns! Please? Ah, come on man, please? I said please."
+|
+|-
+|Last Kill
+|
+|{{AC|RazeEnemyChamberLastKill.mp3}} "Come back with a bigger gun."
+|-
+|{{Ai|Cypher}}
+|Round Start
+|
+|{{AC|RazeEnemyCypherRoundStart.mp3}} "That Cypher wants to watch us? Let him, we don't hide!"
+|-
+|{{ai|Iso}}
+|Chat
+|
+:[[File:Iso icon.png|20px|link=Iso]] {{AC|IsoAllyRazeChat.mp3}} "Hey Raze, what's on the playlist today?"
+:[[File:Raze icon.png|20px|link=Raze]] {{AC|RazeAllyIsoChat.mp3}} "Anything with a beat, irmão."
+:*(''Irmão'': Brother)
+|
+|-
+|rowspan=4|{{Ai|Jett}}
+|Match Start
+|{{AC|RazeAllyJettMatchStart.mp3}} "Jett! My sister from another mister. Let's have some fun, yeah?"
+|{{AC|RazeEnemyJettMatchStart.mp3}} "Their Jett is nothing compared to ours. Let's crush that copy."
+|-
+|Round Start
+|{{AC|RazeAllyJettRoundStart.mp3}} "Olha, Jett, I can't wait for you to run circles around them!"
+*(''Olha'': Look)
+|
+|-
+|Commend
+|{{AC|RazeAllyJettCommend.mp3}} "Damn Jett! You're kicking ass!"
+|
+|-
+|Kill
+|
+|{{AC|RazeEnemyJettKill.mp3}} "Jett's grounded."
+|-
+|rowspan=2|{{Ai|KAYO}}
+|Chat
+|
+:[[File:Raze icon.png|20px|link=Raze]] {{AC|RazeAllyKAYOChat.mp3}} "KAY/O, level with me. Is there anything you can't do out here?"
+:[[File:KAYO icon.png|20px|link=KAYO]] {{AC|KAYOAllyRazeChat.mp3}} "Uh, sneak past a metal detector. First thing that comes to mind."
+|
+|-
+|Round Start
+|
+|{{AC|RazeEnemyKAYORoundStart.mp3}} "Hey, other KAY/O, put a shirt on!"
+|-
+|rowspan=6|{{Ai|Killjoy}}
+|Chat
+|
+:[[File:Raze icon.png|20px|link=Raze]] {{AC|RazeAllyKilljoyChat.mp3}} "Killjoy, after this you wanna do some tinkering?"
+:[[File:Killjoy icon.png|20px|link=Killjoy]] {{AC|KilljoyAllyRazeChat.mp3}} "Sure, but if anything explodes again, you are telling Brim."
+|
+|-
+|rowspan=2|Match Start
+|{{AC|RazeAllyKilljoyMatchStart.mp3}} "Killjoy! Thanks for letting me borrow your Alarmbot. It's so much better with explosions! Why did you never try that?"
+|
+|-
+|{{AC|RazeAllyKilljoyMatchStart2.mp3}} "Killjoy, gatinha, there's no one else I'd rather fight beside, or dance with."
+*(''Gatinha'': Sexy lady)
+|
+|-
+|Round Start
+|{{AC|RazeAllyKilljoyRoundStart.mp3}} "Killjoy, don't overthink it! Sometimes, you just need to hit them with explosives."
+|
+|-
+|Barrier Down
+|{{AC|RazeAllyKilljoyBarrierDown.mp3}} "Killjoy. You and me until the end."
+|
+|-
+|Kill
+|
+|{{AC|RazeEnemyKilljoyKill.mp3}} "Engineer killed."
+|-
+|rowspan=3|{{Ai|Neon}}
+|Chat
+|
+:[[File:Neon icon.png|20px|link=Neon]] {{AC|NeonAllyRazeChat.mp3}} "Hoy, Raze? Raze! Ugh, 'di bale na."
+:*(''Hoy'': Hey)
+:*(''<nowiki>'</nowiki>di bale na'': Never mind)
+:[[File:Raze icon.png|20px|link=Raze]] {{AC|RazeAllyNeonChat.mp3}} "Wait, what? I'm listening to music, let me just- you say something? What did she say?"
+|
+|-
+|Commend
+|{{AC|RazeAllyNeonCommend.mp3}} "Neon, holy shit, you guys see that?! Gata can move!"
+*(''Gata'': Girl)
+|
+|-
+|Barrier Down
+|{{AC|RazeAllyNeonBarrierDown.mp3}} "Neon, let's go, go, go!"
+|
+|-
+|rowspan=4|{{Ai|Omen}}
+|Commend
+|{{AC|RazeAllyOmenCommend.mp3}} "Omen, thank goodness you're on our side! Ai, great work, amigo!"
+*(''Ai'': Man)
+*(''Amigo'': Friend)
+|
+|-
+|Barrier Down
+|
+|{{AC|RazeEnemyOmenBarrierDown.mp3}} "I got their Omen."
+|-
+|rowspan=2|Kill
+|
+|{{AC|RazeEnemyOmenKill.mp3}} "Got their Omen."
+|-
+|
+|{{AC|RazeEnemyOmenKill2.mp3}} "Nightmare's over."
+|-
+|rowspan=2|{{Ai|Phoenix}}
+|Commend
+|{{AC|RazeAllyPhoenixCommend.mp3}} "Phoenix, you're a star! Get it? Haha! ... Okay, I'm sorry."
+|
+|-
+|Round Start
+|
+|{{AC|RazeEnemyPhoenixRoundStart.mp3}} "I'll burn brighter than their Phoenix. Just watch me."
+|-
+|rowspan=6|{{Ai|Raze}}
+|Match Start
+|
+|{{AC|RazeEnemyRazeMatchStart.mp3}} "Another Raze?! Ha! I bet she's fun! I mean, I'll still kill her, obviously."
+|-
+|Round Start
+|
+|{{AC|RazeEnemyRazeRoundStart.mp3}} "That Raze has some good invenções. Would love to pick them apart."
+*(''Invenções'': Inventions)
+|-
+|Barrier Down
+|
+|{{AC|RazeEnemyRazeBarrierDown.mp3}} "That Raze sucks!"
+|-
+|Kill
+|
+|{{AC|RazeEnemyRazeKill.mp3}} "Killed my copy."
+|-
+|rowspan=2|Last Kill
+|
+|{{AC|RazeEnemyRazeLastKill.mp3}} "Am I really that loud?"
+|-
+|
+|{{AC|RazeEnemyRazeLastKill2.mp3}} "Sleep well, meu amorzinho."
+*(''Meu amorzinho'': My little love)
+|-
+|rowspan=2|{{Ai|Reyna}}
+|Commend
+|{{AC|RazeAllyReynaCommend.mp3}} "Reyna, meu amor. What happened? Who hurt you?"
+*(''Meu amor'': My love)
+|
+|-
+|Round Start
+|
+|{{AC|RazeEnemyReynaRoundStart.mp3}} "When Reyna gets started it's hard to stop her. I'd like to avoid that, please."
+|-
+|rowspan=3|{{Ai|Sage}}
+|Match Start
+|
+|{{AC|RazeEnemySageMatchStart.mp3}} "I got their Sage. She builds walls, I tear them down. No problem."
+|-
+|Commend
+|{{AC|RazeAllySageCommend.mp3}} "Damn, Sage, you do everything. Why are the rest of us even here?"
+|
+|-
+|Barrier Down
+|
+|{{AC|RazeEnemySageBarrierDown.mp3}} "Sage's walls are coming down!"
+|-
+|{{Ai|Skye}}
+|Kill
+|
+|{{AC|RazeEnemySkyeKill.mp3}} "Skye's out."
+|-
+|rowspan=2|{{Ai|Sova}}
+|Match Start
+|{{AC|RazeAllySovaMatchStart.mp3}} "Sova, you listen to the weirdest music. Lots of duntz-duntz-duntz-duntz-duntz. How do you dance to it?"
+|
+|-
+|Last Kill
+|
+|{{AC|RazeEnemySovaLastKill.mp3}} "Hunter hunted! Ha!"
+|-
+|rowspan=3|{{Ai|Viper}}
+|Match Start
+|
+|{{AC|RazeEnemyViperMatchStart.mp3}} "That snake lady is a joke. Brazil has real vipers. She's dumb."
+|-
+|Round Start
+|{{AC|RazeAllyViperRoundStart.mp3}} "Viper, you gotta let loose! Let's go out after this! Girls night, woop-woop!"
+|
+|-
+|Barrier Down
+|{{AC|RazeAllyViperBarrierDown.mp3}} "Let's go, Viper."
+|
+|-
+|{{Ai|Yoru}}
+|Barrier Down
+|
+|{{AC|RazeEnemyYoruBarrierDown.mp3}} "Time to blow up that Yoru's ego!"
+|}
+
+==Radio Commands==
+===Menu Index only===
+====Caution here====
+*{{AC|RazeCaution1.mp3}}{{AC|RazeCaution2.mp3}} "Enemies nearby."
+
+====Going Area====
+*{{AC|RazeGoingA1.mp3}}{{AC|RazeGoingA2.mp3}} "Going A."
+*{{AC|RazeGoingB1.mp3}}{{AC|RazeGoingB2.mp3}} "Going B."
+*{{AC|RazeGoingC1.mp3}}{{AC|RazeGoingC2.mp3}} "Going C."
+*{{AC|RazeGoingMid1.mp3}}{{AC|RazeGoingMid2.mp3}} "Going Mid."
+
+====Need Support====
+*{{AC|RazeHelp1.mp3}}{{AC|RazeHelp2.mp3}}{{AC|RazeHelp3.mp3}} "Need help."
+
+====On my way====
+*{{AC|RazeOnMyWay1.mp3}}{{AC|RazeOnMyWay2.mp3}} "On my way."
+
+====Play for picks====
+*{{AC|RazePlayForPicks1.mp3}}{{AC|RazePlayForPicks2.mp3}} "Play for picks."
+
+===Wheel Index only===
+====Encourage====
+*{{AC|RazeEncouraging1.mp3}}{{AC|RazeEncouraging2.mp3}}{{AC|RazeEncouraging3.mp3}} "We've got this."
+
+====I'll lurk====
+Only as Attackers during Buy Phase.
+*{{AC|RazeLurking1.mp3}}{{AC|RazeLurking2.mp3}} "I'm lurking."
+
+====I'll push out====
+Only as Defenders during Buy Phase.
+*{{AC|RazePushingOut1.mp3}}{{AC|RazePushingOut2.mp3}} "I'm pushing out."
+
+====I'm holding position====
+Only as Defenders during Buy Phase.
+*{{AC|RazeHoldingPosition1.mp3}}{{AC|RazeHoldingPosition2.mp3}} "Holding position."
+
+====Let's Attack====
+Only during Round Phase.
+*{{AC|RazeLetsAttack1.mp3}}{{AC|RazeLetsAttack2.mp3}} "Let's attack."
+
+====Let's hold positions====
+Only as Defenders during Buy Phase.
+*{{AC|RazeHoldPositions1.mp3}}{{AC|RazeHoldPositions2.mp3}} "Let's hold positions."
+
+====Let's play slow====
+Only as Attackers at anytime.
+*{{AC|RazePlaySlow1.mp3}}{{AC|RazePlaySlow2.mp3}} "Let's play slow."
+
+====Let's push out====
+Only as Defenders during Buy Phase.
+*{{AC|RazePushOut1.mp3}}{{AC|RazePushOut2.mp3}} "Let's push out."
+
+====Let's spread out====
+*{{AC|RazeSpreadOut1.mp3}}{{AC|RazeSpreadOut2.mp3}} "Let's spread out."
+
+====Nice Try====
+*{{AC|RazeNiceTry1.mp3}}{{AC|RazeNiceTry2.mp3}}{{AC|RazeNiceTry3.mp3}} "Nice try."
+
+====Stick together====
+*{{AC|RazeStickTogether1.mp3}}{{AC|RazeStickTogether2.mp3}} "Stick together."
+
+===Menu and Wheel Index===
+====Commend====
+*{{AC|RazeCommend1.mp3}}{{AC|RazeCommend2.mp3}}{{AC|RazeCommend3.mp3}} "Hey, nice work!"
+
+====Fall Back====
+Menu Index at anytime, or Wheel Index only during Round Phase.
+*{{AC|RazeFallBack1.mp3}}{{AC|RazeFallBack2.mp3}} "Fall back."
+
+====Hello====
+*{{AC|RazeHello1.mp3}}{{AC|RazeHello2.mp3}}{{AC|RazeHello3.mp3}} "Hello."
+
+====I'll take point====
+Wheel Index only as Attackers during Buy Phase, or Menu Index at anytime regardless of Attackers or Defenders.
+*{{AC|RazeTakePoint1.mp3}}{{AC|RazeTakePoint2.mp3}} "Taking point."
+
+====Let's rush them (Radio Command)====
+*{{AC|RazeRush1.mp3}}{{AC|RazeRush2.mp3}} "Let's rush."
+
+====Need healing====
+*{{AC|RazeHealing1.mp3}}{{AC|RazeHealing2.mp3}} "Medic!"
+
+====No====
+*{{AC|RazeNo1.mp3}}{{AC|RazeNo2.mp3}}{{AC|RazeNo3.mp3}} "No."
+
+====Sorry====
+*{{AC|RazeSorry1.mp3}}{{AC|RazeSorry2.mp3}}{{AC|RazeSorry3.mp3}} "My bad."
+
+====Thanks====
+*{{AC|RazeThanks1.mp3}}{{AC|RazeThanks2.mp3}}{{AC|RazeThanks3.mp3}} "Thanks."
+
+====Ultimate Status====
+*{{AC|RazeUltDown1.mp3}}{{AC|RazeUltDown2.mp3}} "My ult's not ready."
+*{{AC|RazeUltAlmost1.mp3}}{{AC|RazeUltAlmost2.mp3}} "My ult's almost ready."
+*{{AC|RazeUltReady1.mp3}}{{AC|RazeUltReady2.mp3}} "My ult's ready."
+
+====Yes====
+*{{AC|RazeYes1.mp3}}{{AC|RazeYes2.mp3}}{{AC|RazeYes3.mp3}} "Yes."
+
+===Wheel Index requiring Minimap===
+For the following voicelines, the minimap must be open and then open ping wheel and activate strategy.
+====Faking====
+Only as Attackers during Buy Phase.
+*{{AC|RazeFaking1.mp3}}{{AC|RazeFaking2.mp3}} "I'm faking."
+*{{AC|RazeFakingA1.mp3}}{{AC|RazeFakingA2.mp3}} "I'm faking A."
+*{{AC|RazeFakingB1.mp3}}{{AC|RazeFakingB2.mp3}} "I'm faking B."
+*{{AC|RazeFakingC1.mp3}}{{AC|RazeFakingC2.mp3}} "I'm faking C."
+
+====I'm Going Here====
+As Defenders during Buy Phase, or as Attackers at anytime.
+*{{AC|RazeGoingA1.mp3}}{{AC|RazeGoingA2.mp3}} "Going A."
+*{{AC|RazeGoingB1.mp3}}{{AC|RazeGoingB2.mp3}} "Going B."
+*{{AC|RazeGoingC1.mp3}}{{AC|RazeGoingC2.mp3}} "Going C."
+*{{AC|RazeGoingMid1.mp3}}{{AC|RazeGoingMid2.mp3}} "Going Mid."
+
+====Let's Go Here====
+Only as Attackers during Buy Phase.
+*{{AC|RazeLetsGoA1.mp3}}{{AC|RazeLetsGoA2.mp3}} "Let's go A."
+*{{AC|RazeLetsGoB1.mp3}}{{AC|RazeLetsGoB2.mp3}} "Let's go B."
+*{{AC|RazeLetsGoC1.mp3}}{{AC|RazeLetsGoC2.mp3}} "Let's go C."
+*{{AC|RazeLetsGoHere1.mp3}}{{AC|RazeLetsGoHere2.mp3}} "Let's go here."
+
+====Let's rush them (Minimap)====
+Only as Attackers during Buy Phase.
+*{{AC|RazeLetsRush1.mp3}}{{AC|RazeLetsRush2.mp3}} "Let's rush them."
+*{{AC|RazeLetsRushA1.mp3}}{{AC|RazeLetsRushA2.mp3}} "Let's rush A."
+*{{AC|RazeLetsRushB1.mp3}}{{AC|RazeLetsRushB2.mp3}} "Let's rush B."
+*{{AC|RazeLetsRushC1.mp3}}{{AC|RazeLetsRushC2.mp3}} "Let's rush C."
+
+====Let's Sneak Here====
+Only as Attackers during Buy Phase.
+*{{AC|RazeSneakA1.mp3}}{{AC|RazeSneakA2.mp3}} "Let's sneak A."
+*{{AC|RazeSneakB1.mp3}}{{AC|RazeSneakB2.mp3}} "Let's sneak B."
+*{{AC|RazeSneakC1.mp3}}{{AC|RazeSneakC2.mp3}} "Let's sneak C."
+*{{AC|RazeSneakMid1.mp3}}{{AC|RazeSneakMid2.mp3}} "Let's sneak Mid."
+
+====Let's Stack Here====
+Only as Defenders during Buy Phase.
+*{{AC|RazeStack1.mp3}}{{AC|RazeStack2.mp3}} "Let's stack up."
+*{{AC|RazeStackA1.mp3}}{{AC|RazeStackA2.mp3}} "Let's stack A."
+*{{AC|RazeStackB1.mp3}}{{AC|RazeStackB2.mp3}} "Let's stack B."
+*{{AC|RazeStackC1.mp3}}{{AC|RazeStackC2.mp3}} "Let's stack C."
+*{{AC|RazeStackMid1.mp3}}{{AC|RazeStackMid2.mp3}} "Let's stack Mid."
+
+====Someone Go Here====
+As Attackers during Round Phase, or as Defenders at anytime.
+*{{AC|RazeNeedSomeoneA1.mp3}}{{AC|RazeNeedSomeoneA2.mp3}} "Someone go A."
+*{{AC|RazeNeedSomeoneB1.mp3}}{{AC|RazeNeedSomeoneB2.mp3}} "Someone go B."
+*{{AC|RazeNeedSomeoneC1.mp3}}{{AC|RazeNeedSomeoneC2.mp3}} "Someone go C."
+*{{AC|RazeNeedSomeoneMid1.mp3}}{{AC|RazeNeedSomeoneMid2.mp3}} "Someone go Mid."
+
+====Spike's here====
+Only as Defenders during Round Phase.
+*{{AC|RazeSpikeA1.mp3}}{{AC|RazeSpikeA2.mp3}} "Spike's A."
+*{{AC|RazeSpikeB1.mp3}}{{AC|RazeSpikeB2.mp3}} "Spike's B."
+*{{AC|RazeSpikeC1.mp3}}{{AC|RazeSpikeC2.mp3}} "Spike's C."
+*{{AC|RazeSpikeMid1.mp3}}{{AC|RazeSpikeMid2.mp3}} "Spike's Mid."
+*{{AC|RazeSpikeSpottedASpawn1.mp3}}{{AC|RazeSpikeSpottedASpawn2.mp3}} "Spike's in Attacker Spawn."
+*{{AC|RazeSpikeSpottedDSpawn1.mp3}}{{AC|RazeSpikeSpottedDSpawn2.mp3}} "Spike's in Defender Spawn."
+
+==Pings==
+===General===
+*{{AC|RazePing1.mp3}}{{AC|RazePing2.mp3}} "There."
+
+===Caution===
+*{{AC|RazePingCaution1.mp3}}{{AC|RazePingCaution2.mp3}} "Caution here."
+
+===Need support===
+*{{AC|RazeHelp1.mp3}}{{AC|RazeHelp2.mp3}}{{AC|RazeHelp3.mp3}} "Need help!"
+
+===On my mark===
+*{{AC|RazeOnMyMark1.mp3}}{{AC|RazeOnMyMark2.mp3}} "On my mark."
+
+===Ping gun===
+*{{AC|RazePingGun1.mp3}}{{AC|RazePingGun2.mp3}} "Gun here."
+
+===Ping spike===
+*{{AC|RazePingSpike1.mp3}}{{AC|RazePingSpike2.mp3}} "Spike's there."
+
+===Ping for spike defuse===
+*{{AC|RazeDefuseSpike1.mp3}}{{AC|RazeDefuseSpike2.mp3}} "Defuse it!"
+
+===Ping for spike plant===
+*{{AC|RazePlantSpike1.mp3}}{{AC|RazePlantSpike2.mp3}} "Plant the spike!"
+
+===Watching===
+*{{AC|RazeWatching1.mp3}}{{AC|RazeWatching2.mp3}} "Watching here."
+
+==Other lines==
+===Ability unusable===
+====[[Status Effect#Suppress|Suppressed]]====
+*{{AC|RazeCantUse1.mp3}}{{AC|RazeCantUse2.mp3}} "Can't use that."
+
+====On cooldown====
+*{{AC|RazeOnCooldown1.mp3}}{{AC|RazeOnCooldown2.mp3}} "Not ready yet."
+
+====No charges====
+*{{AC|RazeNoCharges1.mp3}}{{AC|RazeNoCharges2.mp3}} "Out of charges."
+
+===Enemy spotted===
+*{{AC|RazeEnemyA1.mp3}}{{AC|RazeEnemyA2.mp3}} "Enemy spotted A."
+*{{AC|RazeEnemyB1.mp3}}{{AC|RazeEnemyB2.mp3}} "Enemy spotted B."
+*{{AC|RazeEnemyC1.mp3}}{{AC|RazeEnemyC2.mp3}} "Enemy spotted C."
+*{{AC|RazeEnemyASpawn1.mp3}}{{AC|RazeEnemyASpawn2.mp3}} "Someone's in Attacker Spawn."
+*{{AC|RazeEnemyDSpawn1.mp3}}{{AC|RazeEnemyDSpawn2.mp3}} "Someone's in Defender Spawn."
+*{{AC|RazeEnemyMid1.mp3}}{{AC|RazeEnemyMid2.mp3}} "Enemy spotted Mid."
+
+====Multiple====
+*{{AC|RazeEnemiesA1.mp3}}{{AC|RazeEnemiesA2.mp3}} "Multiple enemies A!"
+*{{AC|RazeEnemiesB1.mp3}}{{AC|RazeEnemiesB2.mp3}} "Multiple enemies B!"
+*{{AC|RazeEnemiesC1.mp3}}{{AC|RazeEnemiesC2.mp3}} "Multiple enemies C!"
+*{{AC|RazeEnemiesASpawn1.mp3}}{{AC|RazeEnemiesASpawn2.mp3}} "Enemies in Attacker Spawn!"
+*{{AC|RazeEnemiesDSpawn1.mp3}}{{AC|RazeEnemiesDSpawn2.mp3}} "Enemies in Defender Spawn!"
+*{{AC|RazeEnemiesMid1.mp3}}{{AC|RazeEnemiesMid2.mp3}} "Multiple enemies Mid!"
+
+===Reloading===
+*{{AC|RazeReloading1.mp3}}{{AC|RazeReloading2.mp3}} "Reloading."
+
+===Healed===
+*{{AC|RazeRelief1.mp3}}{{AC|RazeRelief2.mp3}}{{AC|RazeRelief3.mp3}} ''*Raze sighs*''
+
+===Killed===
+*{{AC|RazeDeath1.mp3}}{{AC|RazeDeath2.mp3}}{{AC|RazeDeath3.mp3}} ''*Raze groans*''
+
+===Resurrected via {{abi text|Resurrection}}===
+*{{AC|RazeResurrect.mp3}} "Ah, so what'd I miss?"
+
+===Wounded===
+====Light damage====
+*{{AC|RazePainLight1.mp3}}{{AC|RazePainLight2.mp3}}{{AC|RazePainLight3.mp3}} ''*Raze groans*''
+
+====Medium damage====
+*{{AC|RazePainMedium1.mp3}}{{AC|RazePainMedium2.mp3}}{{AC|RazePainMedium3.mp3}} ''*Raze groans*''
+
+====Heavy damage====
+*{{AC|RazePainHeavy1.mp3}}{{AC|RazePainHeavy2.mp3}}{{AC|RazePainHeavy3.mp3}} ''*Raze groans*''
+
+====Fall damage====
+*{{AC|RazePainFall1.mp3}}{{AC|RazePainFall2.mp3}}{{AC|RazePainFall3.mp3}} ''*Raze groans*''
+
+==Unused lines==
+===Match MVP===
+<!--Last Kill Enemy MVP?-->
+*{{AC|RazeMatchMVP1.mp3}} "Gente! As colorful as Carnaval!"
+**(''Gente'': Gosh)
+*{{AC|RazeMatchMVP2.mp3}} "Woohoo! I'm the pride of Bahia!"
+
+==Removed lines==
+==={{abi text|Paint Shells}} Cast===
+*{{AC|RazePaintShellsCast4.mp3}}{{AC|RazePaintShellsCast5.mp3}} ''*Raze grunts*''
+
+===Ally {{Ai|Cypher}} Round Start===
+*{{AC|RazeAllyCypherRoundStart.mp3}} "Cypher, I'm so sorry about breaking all your stuff. I mean, I won't stop, but I am sorry."
+
+===Ally {{ai|Jett}} Barrier Down===
+*{{AC|RazeAllyJettBarrierDown.mp3}} "Joon-Hee, let's do what we do."
+
+===Wounded Annoyed===
+*{{AC|RazePainAnnoyed1.mp3}}{{AC|RazePainAnnoyed2.mp3}}{{AC|RazePainAnnoyed3.mp3}} ''*Raze groans*''
+
+===Spike Spotted General===
+*{{AC|RazeSpikeSpotted1.mp3}}{{AC|RazeSpikeSpotted2.mp3}} "Spike spotted."
+
+===Enemy spotted General===
+*{{AC|RazeEnemy1.mp3}}{{AC|RazeEnemy2.mp3}} "Enemy spotted."
+
+===Multiple Enemies spotted General===
+*{{AC|RazeEnemies1.mp3}}{{AC|RazeEnemies2.mp3}} "I see multiple enemies!"
+
+===Be Quiet===
+*{{AC|RazeBeQuiet1.mp3}}{{AC|RazeBeQuiet2.mp3}} "Be quiet."
+
+===Rotate===
+*{{AC|RazeRotating1.mp3}}{{AC|RazeRotating2.mp3}} "Rotating."
+
+===Let's Rotate===
+*{{AC|RazeLetsRotate1.mp3}}{{AC|RazeLetsRotate2.mp3}} "Let's rotate."
+
+===Affirmation===
+*{{AC|RazeAffirmation1.mp3}}{{AC|RazeAffirmation2.mp3}} "Okay."
+
+===Callouts===
+*{{AC|RazeCalloutA1.mp3}}{{AC|RazeCalloutA2.mp3}} "A Site."
+*{{AC|RazeCalloutB1.mp3}}{{AC|RazeCalloutB2.mp3}} "B Site."
+*{{AC|RazeCalloutC1.mp3}}{{AC|RazeCalloutC2.mp3}} "C Site."
+*{{AC|RazeCalloutMid1.mp3}}{{AC|RazeCalloutMid2.mp3}} "Mid."
+
+===Clear Area===
+*{{AC|RazeClearThisArea1.mp3}}{{AC|RazeClearThisArea2.mp3}} "Clear this area."
+
+===Hold===
+*{{AC|RazeHold1.mp3}}{{AC|RazeHold2.mp3}} "Hold on."
+
+===Push===
+*{{AC|RazePush1.mp3}}{{AC|RazePush2.mp3}} "Push."
+
+===Regroup===
+*{{AC|RazeRegroup1.mp3}}{{AC|RazeRegroup2.mp3}} "Regroup."
+
+===Need disrupt===
+*{{AC|RazeDisrupt1.mp3}}{{AC|RazeDisrupt2.mp3}} "Disrupt here."
+
+===Need scouting===
+*{{AC|RazeScout1.mp3}}{{AC|RazeScout2.mp3}} "Scout here."
+
+===Need vision block===
+*{{AC|RazeBlockVision1.mp3}}{{AC|RazeBlockVision2.mp3}} "Block vision here."
+
+===Ping enemy utility===
+*{{AC|RazePingUtility1.mp3}}{{AC|RazePingUtility2.mp3}} "Got utility here."
+*{{AC|RazePingUtility3.mp3}}{{AC|RazePingUtility4.mp3}} "Got stuff here."
+
+===Ping Go here===
+*{{AC|RazeGoHere1.mp3}}{{AC|RazeGoHere2.mp3}} "Let's go here."
+
+==[[Range/Lore|The Range's lore assets]]==
+===[[Range/Lore/EP4|Episode 4]]===
+*{{AC|file=VoicemailBrimstone20.mp3}} "Hey, [[Brimstone|chefinho]], it's Raze! Do me a favor, go easy on [[Breach]] for me, okay? I know you two butt heads, like, all the time. I mean, not every room in headquarters is sound-proof, you know that, né? We can all hear you. Look, everybody has bad habits, and those are really hard to break! And then he actually breaks things too, cause of the arms, but he's got a heart of gold, man, he looks out for me! And I know at the end of the day, he would look out for you too... I think. And hey, there's so much worse out there, sabe? We need him on our side, ponytail and all! I know you understand. But think about it for me, okay? Thanks boss."
+
+===[[Range/Lore/EP5|Episode 5]]===
+*{{AC|file=VoicemailBrimstone36.mp3}} "Test, test... oh shit, is this broadcasting?! Heh, sweet. Chefinho, it's Raze! Wow! You are not going to believe where I am, man! You remember [[Breeze|that island]] where we found [[KAYO|KAY/O]]? The deserted one? Huh, yeah! I'm stranded! Like, there is nobody here! What is up with that? I- I know what you're thinking: "how did Raze get on a deserted island?". Great question. I was at the concert in Berlin, with [[Killjoy]] and [[Phoenix]], and things got a little wild and, then things got really wild and, ha, then it's all a blur after that! Aw man, you should have been there, honestly! I know it's not really your scene, but they had a killer setup, and free food, and holograms- I mean, I know you love holograms!... Anyway, so... yeah, I uh, need your help. If you could send the VLT/R that would be amazing. I realize this all seems pretty unprofessional but, in my defense, I did survive! And it's kinda miraculous I rigged up this junk satellite dish to make this call! Oh, if you see Killjoy, can you tell her I'm okay? I bet she's freaking out, isn't she? She's so sweet. Totally not her fault, by the way. Blame Phoenix! Anyway... I owe you one boss! Tchau!"
+
+===[[Range/Lore/EP9|Episode 9]]===
+*{{AC|file=VoicemailBrimstone91.mp3}} "Well chefinho, I found her. [[Killjoy]]! Hello! She's more obsessed with these archives than she was with that geo-dome on [[Pearl]]! I'll leave the gatinha with her toys as long as she's safe. Heading back to base. My turn to cook, no? Maybe I'll make some moqueca. Yeah, Killjoy loves moqueca! Seriously, nothing?! I give up. She'll come back, eventually. Tchau cara."
+**(''Tchau cara'': Bye man)
+
+==Notes==
+<!--:''To easily see which quotes were added corresponding to the patch, use your browser's Find function and type the patch number (e.g. v2.05).
+*{{ui|Added}} 10 voice lines added from patch {{patchv|5.06}}, undocumented in the patch notes.-->
+*Additional radio commands added in patch {{patchv|8.11}} are not mentioned in this page.
+*Other voice lines removed were at an unknown timeframe.
+
+==Navigation==
+{{Navbox agents}}
+[[Category:Quotes]]

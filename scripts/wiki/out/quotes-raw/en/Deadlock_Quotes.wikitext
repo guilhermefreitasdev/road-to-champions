@@ -1,0 +1,738 @@
+{{TOCright}}
+This is a '''list of quotes by {{ai|Deadlock}}'''. Deadlock is voiced by Nora Gjestvang in English. Necessary quotes translated are from Norwegian to English. Deadlock has a total of {{PAGESINCATEGORY:Deadlock Quotes}} files of quotes including unused and removed lines, and excluding [[#The Range's lore assets|The Range's lore assets]]. 
+
+A downloadable folder containing all the audio files on this page can be found [https://drive.google.com/drive/folders/1-rFwQohREjJfQNdjkXQZ0O8EDJ9btm8_?usp=sharing here].
+
+==Agent Selected/Unlocked==
+*{{AC|DeadlockPick.mp3}} "Death is not an option."
+
+==Abilities==
+==={{abi text|GravNet}}===
+====Cast====
+*{{AC|DeadlockGravNetCast1.mp3}}{{AC|DeadlockGravNetCast4.mp3}} "No escape."
+*{{AC|DeadlockGravNetCast2.mp3}}{{AC|DeadlockGravNetCast3.mp3}} "Throwing net."
+
+====Kill afflicted enemy====
+*{{AC|DeadlockGravNetKill4.mp3}}{{AC|DeadlockGravNetKill6.mp3}} "And stay down."
+*{{AC|DeadlockGravNetKill3.mp3}}{{AC|DeadlockGravNetKill1.mp3}} "Quarry killed."
+*{{AC|DeadlockGravNetKill5.mp3}}{{AC|DeadlockGravNetKill2.mp3}} "Gotchu!"
+
+==={{abi text|Sonic Sensor}}===
+====Cast====
+*{{AC|DeadlockSonicSensorCast2.mp3}}{{AC|DeadlockSonicSensorCast4.mp3}} "Sound sensor up."
+*{{AC|DeadlockSonicSensorCast1.mp3}}{{AC|DeadlockSonicSensorCast3.mp3}} "Listening."
+
+====Triggered====
+*{{AC|DeadlockSonicSensorTriggered1.mp3}}{{AC|DeadlockSonicSensorTriggered4.mp3}} "No surprises."
+*{{AC|DeadlockSonicSensorTriggered2.mp3}}{{AC|DeadlockSonicSensorTriggered3.mp3}} "Sensor tripped."
+
+====Destroyed====
+*{{AC|DeadlockSonicSensorDestroyed1.mp3}}{{AC|DeadlockSonicSensorDestroyed4.mp3}} "Sensor destroyed."
+*{{AC|DeadlockSonicSensorDestroyed2.mp3}}{{AC|DeadlockSonicSensorDestroyed3.mp3}} "Sensor down."
+
+==={{abi text|Barrier Mesh}}===
+====Cast====
+*{{AC|DeadlockBarrierMeshCast2.mp3}}{{AC|DeadlockBarrierMeshCast4.mp3}} "Barrier deployed."
+*{{AC|DeadlockBarrierMeshCast1.mp3}}{{AC|DeadlockBarrierMeshCast3.mp3}} "Blocking movement."
+
+====Unviable cast====
+*{{AC|DeadlockBarrierMeshUnviable1.mp3}}{{AC|DeadlockBarrierMeshUnviable2.mp3}} "Deployment failed."
+
+==={{abi text|Annihilation}}===
+====Ally Cast====
+*{{AC|DeadlockUltAllyCast.mp3}} "Pull them to their grave!"
+
+====Enemy Cast====
+*{{AC|DeadlockUltEnemyCast.mp3}} "My territory, my rules!"
+
+====Missed====
+*{{AC|DeadlockUltMissed1.mp3}}{{AC|DeadlockUltMissed2.mp3}} "Nothing there."
+
+====Enemy Captured====
+*{{AC|DeadlockUltAllyCapture1.mp3}}{{AC|DeadlockUltAllyCapture2.mp3}} "Reeling them in!" ''(for allies)
+*{{AC|DeadlockUltEnemyCapture1.mp3}}{{AC|DeadlockUltEnemyCapture2.mp3}} "I have them now!" ''(for enemies)
+
+====Kill====
+*{{AC|DeadlockUltKill1.mp3}} "They couldn't save you!"
+*{{AC|DeadlockUltKill2.mp3}} "Struggle no longer!"
+*{{AC|DeadlockUltKill3.mp3}} "You are unmade!"
+*{{AC|DeadlockUltKill4.mp3}} "Your story ends here!"
+
+====Destroyed====
+*{{AC|DeadlockUltDestroyed1.mp3}}{{AC|DeadlockUltDestroyed2.mp3}} "Target escaped!"
+
+==Buy Phase==
+===Match Start===
+*{{AC|DeadlockMatchStart1.mp3}} "Nanowire armed and ready, kom igjen dere."
+**(''Kom igjen dere'': Come on guys)
+*{{AC|DeadlockMatchStart2.mp3}} "Trust me, we can get this job done."
+*{{AC|DeadlockMatchStart3.mp3}} "The greatest battles ever fought are written in storybooks. May they write about this one."
+*{{AC|DeadlockMatchStart4.mp3}} "As long as I live, so does every Ståljeger before me. To battle, my sisters."
+*{{AC|DeadlockMatchStart5.mp3}} "Ammunition, time, life. These are all resources; spend them wisely."
+*{{AC|DeadlockMatchStart6.mp3}} "Oh, there's only five of them? Kjedelig."
+**(''Kjedelig'': Boring)
+*{{AC|DeadlockMatchStart7.mp3}} "Here again, we face our death. And again, we will defy it."
+*{{AC|DeadlockMatchStart8.mp3}} "The weight of our mission is upon us now."
+
+====Attacking====
+*{{AC|DeadlockMatchStartAttack1.mp3}} "Ready up! First, we put them on their heels, then, we put them in the ground."
+
+====Defending====
+*{{AC|DeadlockMatchStartDefense1.mp3}} "Let them come, eagerness will undo them."
+
+====[[Icebox]]====
+*{{AC|DeadlockMatchStartIcebox.mp3}} ''*Deadlock sighs*'' "The crisp air, the crunch of ice, reminds me of home."
+
+===Round Start===
+*{{AC|DeadlockRoundStart1.mp3}} "Make them regret their choice of profession."
+*{{AC|DeadlockRoundStart2.mp3}} "Their death demands our attention."
+*{{AC|DeadlockRoundStart3.mp3}} "There's no need for the enemy to suffer. Kill them fast."
+*{{AC|DeadlockRoundStart4.mp3}} "You're all more important than words on the brief. Look out for each other."
+*{{AC|DeadlockRoundStart5.mp3}} "Vær forsiktig, the battlefield changes with every play."
+**(''Vær forsiktig'': Be careful)
+*{{AC|DeadlockRoundStart6.mp3}} "They think themselves our equals? They are mistaken."
+*{{AC|DeadlockRoundStart7.mp3}} "Combat is a means to an end. And we are the means."
+
+====Last round won====
+*{{AC|DeadlockRoundWon1.mp3}} "Add a tally to the board."
+*{{AC|DeadlockRoundWon2.mp3}} "Remember what worked and test them again."
+*{{AC|DeadlockRoundWon3.mp3}} "A momentary win, let us make it permanent."
+
+=====While in the lead=====
+*{{AC|DeadlockLead1.mp3}} "Huh, I was told this was a challenging mission."
+*{{AC|DeadlockLead2.mp3}} "Da var vi midt i smørøyet, good stuff."
+**(''Da var vi midt i smørøyet'': We were right on the bullseye)
+*{{AC|DeadlockLead3.mp3}} "I've taken walks more dangerous than this!"
+*{{AC|DeadlockLead4.mp3}} "Okay, we're doing well but keep focused. Adrenaline is a dangerous thing."
+
+=====Making a comeback=====
+*{{AC|DeadlockComeback1.mp3}} "They have not won yet."
+*{{AC|DeadlockComeback2.mp3}} "And so the battlefield changes."
+*{{AC|DeadlockComeback3.mp3}} "Now they have a reason to be afraid."
+
+===Last round in the half===
+====Attacking====
+*{{AC|DeadlockLastRound1.mp3}} "Spend wisely or spend foolishly, just spend."
+
+====Defending====
+*{{AC|DeadlockLastRound2.mp3}} "Buy the best gear before it's too late."
+
+===Match Point===
+*{{AC|DeadlockMatchPoint1.mp3}} "Careful now. Their desperation will be dangerous."
+*{{AC|DeadlockMatchPoint2.mp3}} "Dritbra, that was good. Now, we end this."
+**(''Dritbra'': Incredible)
+
+===Shop===
+====Let's Buy====
+*{{AC|DeadlockBuying1.mp3}}{{AC|DeadlockBuying2.mp3}} "Spending credits."
+
+====Let's Save====
+*{{AC|DeadlockSaving1.mp3}}{{AC|DeadlockSaving2.mp3}} "Saving credits."
+
+====I Have Extra Creds====
+*{{AC|DeadlockOffer1.mp3}}{{AC|DeadlockOffer2.mp3}} "Who needs equipment?"
+
+====Requested====
+*{{AC|DeadlockRequest1.mp3}}{{AC|DeadlockRequest2.mp3}} "I could use a drop."
+
+===Barrier Down===
+*{{AC|DeadlockBarrierDown1.mp3}} "No mercy this time."
+*{{AC|DeadlockBarrierDown2.mp3}} "Do they think we yield? Åh nei da."
+**(''Åh nei da'': Absolutely not)
+*{{AC|DeadlockBarrierDown3.mp3}} "Push through any doubt."
+*{{AC|DeadlockBarrierDown4.mp3}} "Kom igjen, cut them down!"
+**(''Kom igjen'': Come on)
+*{{AC|DeadlockBarrierDown5.mp3}} "Look for an opening."
+*{{AC|DeadlockBarrierDown6.mp3}} "They'll learn, eventually."
+*{{AC|DeadlockBarrierDown7.mp3}} "Funnel them to me."
+*{{AC|DeadlockBarrierDown8.mp3}} "Their will is broken."
+*{{AC|DeadlockBarrierDown9.mp3}} "Watch every angle."
+*{{AC|DeadlockBarrierDown10.mp3}} "I will not be beaten."
+*{{AC|DeadlockBarrierDown11.mp3}} "We must adapt."
+*{{AC|DeadlockBarrierDown12.mp3}} "Stay strong."
+*{{AC|DeadlockBarrierDown13.mp3}} "Bring your best."
+*{{AC|DeadlockBarrierDown14.mp3}} "I will not die today."
+*{{AC|DeadlockBarrierDown15.mp3}} "Ut på tur, aldri sur"
+**(Out and about, never pout.)
+*{{AC|DeadlockBarrierDown16.mp3}} "It begins."
+*{{AC|DeadlockBarrierDown17.mp3}} "With me."
+*{{AC|DeadlockBarrierDown18.mp3}} "No heroics, follow protocol."
+*{{AC|DeadlockBarrierDown19.mp3}} "Focus."
+
+==Spike==
+===Forgotten in spawn===
+*{{AC|DeadlockForgotSpike1.mp3}} "Of all the stuff we need, the spike is pretty high on the list, er den ikke?"
+**(''Er den ikke'': Is it not)
+*{{AC|DeadlockForgotSpike2.mp3}} "Spike. We forgot the spike."
+
+===Ally carrier down===
+*{{AC|DeadlockSpikeDown1.mp3}}{{AC|DeadlockSpikeDown2.mp3}} "Spike carrier down."
+
+===Dropped===
+*{{AC|DeadlockSpikeDropped1.mp3}}{{AC|DeadlockSpikeDropped2.mp3}} "Spike dropped."
+
+===Retrieved===
+*{{AC|DeadlockSpikePickedUp1.mp3}}{{AC|DeadlockSpikePickedUp2.mp3}} "I have the spike."
+
+===Planted===
+*{{AC|DeadlockSpikePlanted1.mp3}}{{AC|DeadlockSpikePlanted2.mp3}} "Spike planted."
+
+===Spotted===
+*{{AC|DeadlockSpikeSpottedA1.mp3}}{{AC|DeadlockSpikeSpottedA2.mp3}} "Spike spotted A."
+*{{AC|DeadlockSpikeSpottedB1.mp3}}{{AC|DeadlockSpikeSpottedB2.mp3}} "Spike spotted B."
+*{{AC|DeadlockSpikeSpottedC1.mp3}}{{AC|DeadlockSpikeSpottedC2.mp3}} "Spike spotted C."
+*{{AC|DeadlockSpikeSpottedASpawn1.mp3}}{{AC|DeadlockSpikeSpottedASpawn2.mp3}} "Spike spotted Attacker Spawn."
+*{{AC|DeadlockSpikeSpottedDSpawn1.mp3}}{{AC|DeadlockSpikeSpottedDSpawn2.mp3}} "Spike spotted Defender Spawn."
+*{{AC|DeadlockSpikeSpottedMid1.mp3}}{{AC|DeadlockSpikeSpottedMid2.mp3}} "Spike spotted Mid."
+
+===Defuse resumed===
+*{{AC|DeadlockDefuseResumed1.mp3}} "Back to the important part."
+*{{AC|DeadlockDefuseResumed2.mp3}} "Now I can focus."
+
+===Defuse time running out===
+*{{AC|DeadlockDefuseLate1.mp3}} "Iselin, dette får du til."
+**(''Dette får du til'': You can do this)
+*{{AC|DeadlockDefuseLate2.mp3}} "Not today, come on!"
+
+===Defuse successful===
+*{{AC|DeadlockDefuseComplete1.mp3}} "Phew. Det var nære på! All is well."
+**(''Det var nære på'': That was close)
+*{{AC|DeadlockDefuseComplete2.mp3}} "Spike defused. Returning to post."
+
+==Kill==
+*{{AC|DeadlockKill1.mp3}} "One less."
+*{{AC|DeadlockKill2.mp3}} "Okay!"
+*{{AC|DeadlockKill3.mp3}}{{AC|DeadlockKill11.mp3}} "Hmph!"
+*{{AC|DeadlockKill4.mp3}} "Kill confirmed."
+*{{AC|DeadlockKill5.mp3}} "Target down."
+*{{AC|DeadlockKill6.mp3}} "Scratch one."
+*{{AC|DeadlockKill7.mp3}} "Hostile down."
+*{{AC|DeadlockKill8.mp3}} "Problem solved."
+*{{AC|DeadlockKill9.mp3}} "So long."
+*{{AC|DeadlockKill10.mp3}} "Ha det bra."
+**''(Farewell.)''
+
+===Headshot===
+*{{AC|DeadlockHeadshot1.mp3}} "It's a kindness."
+*{{AC|DeadlockHeadshot2.mp3}} "Good riddance."
+*{{AC|DeadlockHeadshot3.mp3}} "Clean kill."
+*{{AC|DeadlockHeadshot4.mp3}} "Die and be done!"
+*{{AC|DeadlockHeadshot5.mp3}} "Midt i smørøyet."
+**(Bullseye.)
+*{{AC|DeadlockHeadshot6.mp3}} "Headshot!"
+
+===[[Melee]]===
+*{{AC|DeadlockMeleeKill1.mp3}} "Keep your distance."
+*{{AC|DeadlockMeleeKill2.mp3}} "Struck down."
+
+===Triple===
+*{{AC|DeadlockTriple1.mp3}}{{AC|DeadlockTriple2.mp3}} "Three down."
+
+===Quadra===
+*{{AC|DeadlockQuadra1.mp3}}{{AC|DeadlockQuadra2.mp3}} "Four down."
+
+===One kill remaining (game-mode specific)===
+*{{AC|DeadlockOneKillLeft1.mp3}}{{AC|DeadlockOneKillLeft4.mp3}} "Final quarry."
+*{{AC|DeadlockOneKillLeft2.mp3}}{{AC|DeadlockOneKillLeft3.mp3}} "One more."
+
+==Round End==
+===Ace===
+*{{AC|DeadlockAce1.mp3}} "A jotun couldn't kill me, what chance did they have?"
+**(''Jotun'': Monster)
+*{{AC|DeadlockAce2.mp3}} "Try it again, the end will be the same!"
+*{{AC|DeadlockAce3.mp3}} "There is no hiding from a Ståljeger!"
+*{{AC|DeadlockAce4.mp3}} "Is there no one else?"
+
+===Clutch===
+*{{AC|DeadlockClutch1.mp3}} "I do not break!"
+*{{AC|DeadlockClutch2.mp3}} "Whoa! That was quite fun!"
+*{{AC|DeadlockClutch3.mp3}} "I know how to fend for myself."
+*{{AC|DeadlockClutch4.mp3}} "I have seen death and I am not impressed."
+
+===Flawless or Team Ace===
+*{{AC|DeadlockFlawless1.mp3}} "Perfectly done."
+*{{AC|DeadlockFlawless2.mp3}} "Jada! And you're all safe! Very good."
+**(''Jada'': Yes)
+*{{AC|DeadlockFlawless3.mp3}} "Five in, five out
+
+===Thrifty===
+*{{AC|DeadlockThrifty1.mp3}} "Jeg prøvde ikke engang. Imagine if we had good weapons!"
+**(''Jeg prøvde ikke engang'': I didn't even try)
+
+===Last Kill===
+*{{AC|DeadlockLastKill1.mp3}} "All enemies accounted for."
+*{{AC|DeadlockLastKill2.mp3}} "They're done."
+*{{AC|DeadlockLastKill3.mp3}} "Dra til helvete."
+**(Go to hell.)
+*{{AC|DeadlockLastKill4.mp3}} "Go and meet your maker."
+
+====Enemy MVP====
+There are no voice lines at the moment in this section for this Agent.
+
+====Using [[Melee]]====
+*{{AC|DeadlockLastKillMelee1.mp3}} "Let me get that close, and you're already dead."
+
+===Low HP===
+*{{AC|DeadlockLowHP1.mp3}} "I told you I would not die today!"
+*{{AC|DeadlockLowHP2.mp3}} "I'm keeping my grave empty, tusen takk."
+**(''Tusen takk'': Thank you very much)
+
+==Match End==
+===Match Win===
+*{{AC|DeadlockMatchWin1.mp3}} "This is our victory."
+*{{AC|DeadlockMatchWin2.mp3}} "Pack your bags, tally your kills. We're heading home."
+*{{AC|DeadlockMatchWin3.mp3}} "Åh fy faen! Well done."
+**(''Åh fy faen'': Holy fuck)
+
+===Runner-up (game-mode specific)===
+*{{AC|DeadlockRunnerUp1.mp3}} "There's room for improvement. Why not start now?"
+*{{AC|DeadlockRunnerUp2.mp3}} "Again, while my blood is still pumping."
+
+==Agent-specific interactions==
+{| class="wikitable sortable"
+!To Agent
+!Scenario
+!width=40%; class=unsortable|Ally
+!width=40%; class=unsortable|Enemy
+|-
+|rowspan=6|{{ai|Breach}}
+|Chat
+|
+:[[File:Breach icon.png|20px|link=Breach]] {{AC|BreachAllyDeadlockChat.mp3}} "Hey, Deadlock, listen, what do you get when you cross two Norwegians?" ''*Breach wheezes*''
+:[[File:Deadlock icon.png|20px|link=Deadlock]] {{AC|DeadlockAllyBreachChat.mp3}} "Breach, shut up. If you were funny, I'd come to your open mic nights."
+|
+|-
+|Match Start
+|{{AC|DeadlockAllyBreachMatchStart.mp3}} "Hi Breach. Nothing too crazy this time, yeah? I prefer writing a simple mission report."
+|{{AC|DeadlockEnemyBreachMatchStart.mp3}} "They brought Breach? Åh herregud, I feel the headache already." 
+*(''Åh herregud'': Oh my god)
+|-
+|Round Start
+|{{AC|DeadlockAllyBreachRoundStart.mp3}} "Breach, between us, we have three very strong arms, don't we?"
+|{{AC|DeadlockEnemyBreachRoundStart.mp3}} "Make no mistake. Their Breach hides behind the chaos."
+|-
+|Commend
+|{{AC|DeadlockAllyBreachCommend.mp3}} "Not bad, Breach. A little messy, but, not bad." 
+|
+|-
+|Barrier Down
+|{{AC|DeadlockAllyBreachBarrierDown.mp3}} "Knock them senseless, Breach."
+|{{AC|DeadlockEnemyBreachBarrierDown.mp3}} "Leave Breach to me."
+|-
+|Last Kill
+|
+|{{AC|DeadlockEnemyBreachLastKill.mp3}} "Maybe next time, ponytail."
+|-
+|rowspan=2|{{ai|Deadlock}}
+|Match Start
+|
+|{{AC|DeadlockEnemyDeadlockMatchStart.mp3}} "Leave Deadlock to me. I know how she thinks. I know her weaknesses."
+|-
+|Last Kill
+|
+|{{AC|DeadlockEnemyDeadlockLastKill.mp3}} "Jeg er lei for det, one of us had to fall."
+*(''Jeg er lei for det'': I am sorry for that)
+|-
+|rowspan=3|{{ai|Fade}}
+|Match Start
+|{{AC|DeadlockAllyFadeMatchStart.mp3}} "Fade, if you run short on nightmares, seek me out. I will gladly share mine."
+|
+|-
+|Commend
+|{{AC|DeadlockAllyFadeCommend.mp3}} "Fade, now you're just showing off."
+|
+|-
+|Kill
+|
+|{{AC|DeadlockEnemyFadeKill.mp3}} "Take a nap."
+|-
+|rowspan=5|{{ai|Gekko}}
+|Match Start
+|{{AC|DeadlockAllyGekkoMatchStart.mp3}} "Gekko, keep a tight leash on those creatures, for their sake."
+|{{AC|DeadlockEnemyGekkoMatchStart.mp3}} "That Gekko gambles his own life for those creatures. He couldn't make the hard choice, I will."
+|-
+|Round Start
+|
+|{{AC|DeadlockEnemyGekkoRoundStart.mp3}} "Neutralize the enemy Gekko and you neutralize his creatures."
+|-
+|Barrier Down
+|
+|{{AC|DeadlockEnemyGekkoBarrierDown.mp3}} "Their Gekko is mine."
+|-
+|Kill
+|
+|{{AC|DeadlockEnemyGekkoKill.mp3}} "Gekko down."
+|-
+|Last Kill
+|
+|{{AC|DeadlockEnemyGekkoLastKill.mp3}} "I warned you."
+|-
+|rowspan=2|{{ai|Harbor}}
+|Round Start
+|
+|{{AC|DeadlockEnemyHarborRoundStart.mp3}} "Harbor can splash about all he wants, it won't shield them forever." 
+|-
+|Commend
+|{{AC|DeadlockAllyHarborCommend.mp3}} "Harbor, where the hell did you train?"
+|
+|-
+|rowspan=4|{{ai|KAY/O}}
+|Match Start
+|{{AC|DeadlockAllyKAYOMatchStart.mp3}} "KAY/O, join me on the line. We do not flinch in the face of death."
+|
+|-
+|Round Start
+|
+|{{AC|DeadlockEnemyKAYORoundStart.mp3}} "I will disassemble their war machine."
+|-
+|Commend
+|{{AC|DeadlockAllyKAYOCommend.mp3}} "Technology at its finest, well done KAY/O."
+|
+|-
+|Kill
+|
+|{{AC|DeadlockEnemyKAYOKill.mp3}} "Scrap metal."
+|-
+|rowspan=6|{{ai|Skye}}
+|Chat
+|
+:[[File:Skye icon.png|20px|link=Skye]] {{AC|SkyeAllyDeadlockChat.mp3}} "Deadlock, you promised to loosen up, mate. I can see the tension from here."
+:[[File:Deadlock icon.png|20px|link=Deadlock]] {{AC|DeadlockAllySkyeChat.mp3}} "But this is the most relaxed I've been all day."
+|
+|-
+|Match Start
+|{{AC|DeadlockAllySkyeMatchStart.mp3}} "Skye, no matter where you start the fight, we finish it together." 
+|
+|-
+|Round Start
+|{{AC|DeadlockAllySkyeRoundStart.mp3}} "Skye, don't get shot. I need my hiking buddy in tip-top shape."
+|
+|-
+|Barrier Down
+|{{AC|DeadlockAllySkyeBarrierDown.mp3}} "Skye, let's hunt."
+|
+|-
+|Commend
+|{{AC|DeadlockAllySkyeCommend.mp3}} "Skye, you would have made a fine Ståljeger."
+|
+|-
+|Kill
+|
+|{{AC|DeadlockEnemySkyeKill.mp3}} "Got Skye."
+|-
+|{{ai|Sova}}
+|Barrier Down
+|{{AC|DeadlockAllySovaBarrierDown.mp3}} "Sova, with me."
+|
+|-
+|{{ai|Viper}}
+|Match Start
+|
+|{{AC|DeadlockEnemyViperMatchStart.mp3}} "Their Viper will try to separate us. Stay focused, stay together."
+|}
+
+==Radio Commands==
+===Menu Index only===
+====Caution here====
+*{{AC|DeadlockCaution1.mp3}}{{AC|DeadlockCaution2.mp3}} "Target nearby."
+
+====Going Area====
+*{{AC|DeadlockGoingA1.mp3}}{{AC|DeadlockGoingA2.mp3}} "Going A."
+*{{AC|DeadlockGoingB1.mp3}}{{AC|DeadlockGoingB2.mp3}} "Going B."
+*{{AC|DeadlockGoingC1.mp3}}{{AC|DeadlockGoingC2.mp3}} "Going C."
+*{{AC|DeadlockGoingMid1.mp3}}{{AC|DeadlockGoingMid2.mp3}} "Going Mid."
+
+====Need Support====
+*{{AC|DeadlockHelp1.mp3}}{{AC|DeadlockHelp2.mp3}} "I need help."
+
+====On my way====
+*{{AC|DeadlockOnMyWay1.mp3}}{{AC|DeadlockOnMyWay2.mp3}} "En route."
+
+====Play for picks====
+*{{AC|DeadlockPlayForPicks1.mp3}}{{AC|DeadlockPlayForPicks2.mp3}} "Play for picks."
+
+===Wheel Index only===
+====Encourage====
+*{{AC|DeadlockEncouraging1.mp3}}{{AC|DeadlockEncouraging2.mp3}}{{AC|DeadlockEncouraging3.mp3}} "We can do this."
+
+====I'll lurk====
+Only as Attackers during Buy Phase.
+*{{AC|DeadlockLurking1.mp3}}{{AC|DeadlockLurking2.mp3}} "I'm lurking."
+
+====I'll push out====
+Only as Defenders during Buy Phase.
+*{{AC|DeadlockPushingOut1.mp3}}{{AC|DeadlockPushingOut2.mp3}} "I'm pushing out."
+
+====I'm holding position====
+Only as Defenders during Buy Phase.
+*{{AC|DeadlockHoldingPosition1.mp3}}{{AC|DeadlockHoldingPosition2.mp3}} "Holding position."
+
+====Let's Attack====
+Only during Round Phase.
+*{{AC|DeadlockLetsAttack1.mp3}}{{AC|DeadlockLetsAttack2.mp3}} "Let's attack."
+
+====Let's hold positions====
+Only as Defenders during Buy Phase.
+*{{AC|DeadlockHoldPositions1.mp3}}{{AC|DeadlockHoldPositions2.mp3}} "Let's hold positions."
+
+====Let's play slow====
+Only as Attackers at anytime.
+*{{AC|DeadlockPlaySlow1.mp3}}{{AC|DeadlockPlaySlow2.mp3}} "Let's play slow."
+
+====Let's push out====
+Only as Defenders during Buy Phase.
+*{{AC|DeadlockPushOut1.mp3}}{{AC|DeadlockPushOut2.mp3}} "Let's push out."
+
+====Let's spread out====
+*{{AC|DeadlockSpreadOut1.mp3}}{{AC|DeadlockSpreadOut2.mp3}} "Let's spread out."
+
+====Nice Try====
+*{{AC|DeadlockNiceTry1.mp3}}{{AC|DeadlockNiceTry2.mp3}}{{AC|DeadlockNiceTry3.mp3}} "Nice try."
+
+====Stick together====
+*{{AC|DeadlockStickTogether1.mp3}}{{AC|DeadlockStickTogether2.mp3}} "Stick together."
+
+===Menu and Wheel Index===
+====Commend====
+*{{AC|DeadlockCommend1.mp3}}{{AC|DeadlockCommend2.mp3}}{{AC|DeadlockCommend3.mp3}} "Nicely done."
+
+====Fall Back====
+Menu Index at anytime, or Wheel Index only during Round Phase.
+*{{AC|DeadlockFallBack1.mp3}}{{AC|DeadlockFallBack2.mp3}} "Fall back."
+
+====Hello====
+*{{AC|DeadlockHello1.mp3}}{{AC|DeadlockHello2.mp3}}{{AC|DeadlockHello3.mp3}} "Hi."
+
+====I'll take point====
+Wheel Index only as Attackers during Buy Phase, or Menu Index at anytime regardless of Attackers or Defenders.
+*{{AC|DeadlockTakePoint1.mp3}}{{AC|DeadlockTakePoint2.mp3}} "Taking point."
+
+====Let's rush them (Radio Command)====
+*{{AC|DeadlockRush1.mp3}}{{AC|DeadlockRush2.mp3}} "Rush them."
+
+====Need healing====
+*{{AC|DeadlockHealing1.mp3}}{{AC|DeadlockHealing2.mp3}} "I need healing."
+
+====No====
+*{{AC|DeadlockNo1.mp3}}{{AC|DeadlockNo2.mp3}}{{AC|DeadlockNo3.mp3}} "Negative."
+
+====Sorry====
+*{{AC|DeadlockSorry1.mp3}}{{AC|DeadlockSorry2.mp3}}{{AC|DeadlockSorry3.mp3}} "Sorry."
+
+====Thanks====
+*{{AC|DeadlockThanks1.mp3}}{{AC|DeadlockThanks2.mp3}}{{AC|DeadlockThanks3.mp3}} "Thank you."
+
+====Ultimate Status====
+*{{AC|DeadlockUltDown1.mp3}}{{AC|DeadlockUltDown2.mp3}} "My ult is not ready."
+*{{AC|DeadlockUltAlmost1.mp3}}{{AC|DeadlockUltAlmost2.mp3}} "My ult is almost ready."
+*{{AC|DeadlockUltReady1.mp3}}{{AC|DeadlockUltReady2.mp3}} "Ultimate ready."
+
+====Yes====
+*{{AC|DeadlockYes1.mp3}}{{AC|DeadlockYes2.mp3}}{{AC|DeadlockYes3.mp3}} "Affirmative."
+
+===Wheel Index requiring Minimap===
+For the following voicelines, the minimap must be open and then open ping wheel and activate strategy.
+====Faking====
+Only as Attackers during Buy Phase.
+*{{AC|DeadlockFaking1.mp3}}{{AC|DeadlockFaking2.mp3}} "I'm faking."
+*{{AC|DeadlockFakingA1.mp3}}{{AC|DeadlockFakingA2.mp3}} "I'm faking A."
+*{{AC|DeadlockFakingB1.mp3}}{{AC|DeadlockFakingB2.mp3}} "I'm faking B."
+*{{AC|DeadlockFakingC1.mp3}}{{AC|DeadlockFakingC2.mp3}} "I'm faking C."
+
+====I'm Going Here====
+As Defenders during Buy Phase, or as Attackers at anytime.
+*{{AC|DeadlockGoingA1.mp3}}{{AC|DeadlockGoingA2.mp3}} "Going A."
+*{{AC|DeadlockGoingB1.mp3}}{{AC|DeadlockGoingB2.mp3}} "Going B."
+*{{AC|DeadlockGoingC1.mp3}}{{AC|DeadlockGoingC2.mp3}} "Going C."
+*{{AC|DeadlockGoingMid1.mp3}}{{AC|DeadlockGoingMid2.mp3}} "Going Mid."
+
+====Let's Go Here====
+Only as Attackers during Buy Phase.
+*{{AC|DeadlockLetsGoA1.mp3}}{{AC|DeadlockLetsGoA2.mp3}} "Let's go A."
+*{{AC|DeadlockLetsGoB1.mp3}}{{AC|DeadlockLetsGoB2.mp3}} "Let's go B."
+*{{AC|DeadlockLetsGoC1.mp3}}{{AC|DeadlockLetsGoC2.mp3}} "Let's go C."
+*{{AC|DeadlockLetsGoHere1.mp3}}{{AC|DeadlockLetsGoHere2.mp3}} "Let's go here."
+
+====Let's rush them (Minimap)====
+Only as Attackers during Buy Phase.
+*{{AC|DeadlockLetsRush1.mp3}}{{AC|DeadlockLetsRush2.mp3}} "Let's rush them."
+*{{AC|DeadlockLetsRushA1.mp3}}{{AC|DeadlockLetsRushA2.mp3}} "Let's rush A."
+*{{AC|DeadlockLetsRushB1.mp3}}{{AC|DeadlockLetsRushB2.mp3}} "Let's rush B."
+*{{AC|DeadlockLetsRushC1.mp3}}{{AC|DeadlockLetsRushC2.mp3}} "Let's rush C."
+
+====Let's Sneak Here====
+Only as Attackers during Buy Phase.
+*{{AC|DeadlockSneakA1.mp3}}{{AC|DeadlockSneakA2.mp3}} "Let's sneak A."
+*{{AC|DeadlockSneakB1.mp3}}{{AC|DeadlockSneakB2.mp3}} "Let's sneak B."
+*{{AC|DeadlockSneakC1.mp3}}{{AC|DeadlockSneakC2.mp3}} "Let's sneak C."
+*{{AC|DeadlockSneakMid1.mp3}}{{AC|DeadlockSneakMid2.mp3}} "Let's sneak Mid."
+
+====Let's Stack Here====
+Only as Defenders during Buy Phase.
+*{{AC|DeadlockStack1.mp3}}{{AC|DeadlockStack2.mp3}} "Let's stack up."
+*{{AC|DeadlockStackA1.mp3}}{{AC|DeadlockStackA2.mp3}} "Let's stack A."
+*{{AC|DeadlockStackB1.mp3}}{{AC|DeadlockStackB2.mp3}} "Let's stack B."
+*{{AC|DeadlockStackC1.mp3}}{{AC|DeadlockStackC2.mp3}} "Let's stack C."
+*{{AC|DeadlockStackMid1.mp3}}{{AC|DeadlockStackMid2.mp3}} "Let's stack Mid."
+
+====Someone Go Here====
+As Attackers during Round Phase, or as Defenders at anytime.
+*{{AC|DeadlockNeedSomeoneA1.mp3}}{{AC|DeadlockNeedSomeoneA2.mp3}} "Someone go A."
+*{{AC|DeadlockNeedSomeoneB1.mp3}}{{AC|DeadlockNeedSomeoneB2.mp3}} "Someone go B."
+*{{AC|DeadlockNeedSomeoneC1.mp3}}{{AC|DeadlockNeedSomeoneC2.mp3}} "Someone go C."
+*{{AC|DeadlockNeedSomeoneMid1.mp3}}{{AC|DeadlockNeedSomeoneMid2.mp3}} "Someone go Mid."
+
+====Spike's here====
+Only as Defenders during Round Phase.
+*{{AC|DeadlockSpikeA1.mp3}}{{AC|DeadlockSpikeA2.mp3}} "Spike's A."
+*{{AC|DeadlockSpikeB1.mp3}}{{AC|DeadlockSpikeB2.mp3}} "Spike's B."
+*{{AC|DeadlockSpikeC1.mp3}}{{AC|DeadlockSpikeC2.mp3}} "Spike's C."
+*{{AC|DeadlockSpikeMid1.mp3}}{{AC|DeadlockSpikeMid2.mp3}} "Spike's Mid."
+*{{AC|DeadlockSpikeSpottedASpawn1.mp3}}{{AC|DeadlockSpikeSpottedASpawn2.mp3}} "Spike spotted Attacker Spawn."
+*{{AC|DeadlockSpikeSpottedDSpawn1.mp3}}{{AC|DeadlockSpikeSpottedDSpawn2.mp3}} "Spike spotted Defender Spawn."
+
+==Pings==
+===General===
+*{{AC|DeadlockPing1.mp3}}{{AC|DeadlockPing2.mp3}} "Over there."
+
+===Caution===
+*{{AC|DeadlockPingCaution1.mp3}}{{AC|DeadlockPingCaution2.mp3}} "Caution here."
+
+===Need support===
+*{{AC|DeadlockHelp1.mp3}}{{AC|DeadlockHelp2.mp3}} "I need help!"
+
+===On my mark===
+*{{AC|DeadlockOnMyMark1.mp3}}{{AC|DeadlockOnMyMark2.mp3}} "On my mark."
+
+===Ping gun===
+*{{AC|DeadlockPingGun1.mp3}}{{AC|DeadlockPingGun2.mp3}} "Gun here."
+
+===Ping spike===
+*{{AC|DeadlockPingSpike1.mp3}}{{AC|DeadlockPingSpike2.mp3}} "Spike here."
+
+===Ping for spike defuse===
+*{{AC|DeadlockDefuseSpike1.mp3}}{{AC|DeadlockDefuseSpike2.mp3}} "Defuse the spike!"
+
+===Ping for spike plant===
+*{{AC|DeadlockPlantSpike1.mp3}}{{AC|DeadlockPlantSpike2.mp3}} "Plant the spike!"
+
+===Watching===
+*{{AC|DeadlockWatching1.mp3}}{{AC|DeadlockWatching2.mp3}} "Watching here."
+
+==Other lines==
+===Ability unusable===
+====[[Status Effect#Suppress|Suppressed]] or on cooldown====
+*{{AC|DeadlockCantUse1.mp3}} "Can't use that."
+*{{AC|DeadlockCantUse2.mp3}} "Can't use that."
+
+====No charges====
+*{{AC|DeadlockNoCharges1.mp3}}{{AC|DeadlockNoCharges2.mp3}} "No charges."
+
+===Enemy spotted===
+*{{AC|DeadlockEnemyA1.mp3}}{{AC|DeadlockEnemyA2.mp3}} "Target spotted A."
+*{{AC|DeadlockEnemyB1.mp3}}{{AC|DeadlockEnemyB2.mp3}} "Target spotted B."
+*{{AC|DeadlockEnemyC1.mp3}}{{AC|DeadlockEnemyC2.mp3}} "Target spotted C."
+*{{AC|DeadlockEnemyASpawn1.mp3}}{{AC|DeadlockEnemyASpawn2.mp3}} "Target spotted Attacker Spawn."
+*{{AC|DeadlockEnemyDSpawn1.mp3}}{{AC|DeadlockEnemyDSpawn2.mp3}} "Target spotted Defender Spawn."
+*{{AC|DeadlockEnemyMid1.mp3}}{{AC|DeadlockEnemyMid2.mp3}} "Target spotted Mid."
+
+====Multiple====
+*{{AC|DeadlockEnemiesA1.mp3}}{{AC|DeadlockEnemiesA2.mp3}} "Multiple targets A!"
+*{{AC|DeadlockEnemiesB1.mp3}}{{AC|DeadlockEnemiesB2.mp3}} "Multiple targets B!"
+*{{AC|DeadlockEnemiesC1.mp3}}{{AC|DeadlockEnemiesC2.mp3}} "Multiple targets C!"
+*{{AC|DeadlockEnemiesASpawn1.mp3}}{{AC|DeadlockEnemiesASpawn2.mp3}} "Multiple targets Attacker Spawn!"
+*{{AC|DeadlockEnemiesDSpawn1.mp3}}{{AC|DeadlockEnemiesDSpawn2.mp3}} "Multiple targets Defender Spawn!"
+*{{AC|DeadlockEnemiesMid1.mp3}}{{AC|DeadlockEnemiesMid2.mp3}} "Multiple targets Mid!"
+
+===Reloading===
+*{{AC|DeadlockReloading1.mp3}}{{AC|DeadlockReloading2.mp3}} "Reloading."
+
+===Healed===
+*{{AC|DeadlockRelief1.mp3}}{{AC|DeadlockRelief2.mp3}}{{AC|DeadlockRelief3.mp3}} ''*Deadlock sighs*''
+
+===Killed===
+*{{AC|DeadlockDeath1.mp3}}{{AC|DeadlockDeath2.mp3}}{{AC|DeadlockDeath3.mp3}} ''*Deadlock groans*''
+
+===Resurrected via {{abi text|Resurrection}}===
+*{{AC|DeadlockResurrect.mp3}} "Hva i helvete? Where was I?"
+**(''Hva i helvete'': What the hell)
+
+===Wounded===
+====Light damage====
+*{{AC|DeadlockPainLight1.mp3}}{{AC|DeadlockPainLight2.mp3}}{{AC|DeadlockPainLight3.mp3}} ''*Deadlock groans*''
+
+====Medium damage====
+*{{AC|DeadlockPainMedium1.mp3}}{{AC|DeadlockPainMedium2.mp3}}{{AC|DeadlockPainMedium3.mp3}} ''*Deadlock groans*''
+
+====Heavy damage====
+*{{AC|DeadlockPainHeavy1.mp3}}{{AC|DeadlockPainHeavy2.mp3}}{{AC|DeadlockPainHeavy3.mp3}} ''*Deadlock groans*''
+
+====Fall damage====
+*{{AC|DeadlockPainFall1.mp3}}{{AC|DeadlockPainFall2.mp3}}{{AC|DeadlockPainFall3.mp3}} ''*Deadlock groans*''
+
+==Unused lines==
+There are no voice lines at the moment in this section for this Agent.
+
+==Removed lines==
+===={{abi text|GravNet}} Combo with [[Sonic Sensor]]====
+*{{AC|DeadlockGravNetSonicSensorCombo1.mp3}}{{AC|DeadlockGravNetSonicSensorCombo2.mp3}} "I hear you, I catch you."{{#tag:sup|-{{patchv|13.00}}}}
+
+===Last Kill Enemy MVP===
+*{{AC|DeadlockLastKillMVP1.mp3}} "And that was your best one, huh?"{{#tag:sup|-{{patchv|13.00}}}}
+*{{AC|DeadlockLastKillMVP2.mp3}} "Your strongest was not enough."{{#tag:sup|-{{patchv|13.00}}}}
+
+===Spike Spotted General===
+*{{AC|DeadlockSpikeSpotted1.mp3}}{{AC|DeadlockSpikeSpotted2.mp3}} "Spike spotted."
+
+===Enemy spotted General===
+*{{AC|DeadlockEnemy1.mp3}}{{AC|DeadlockEnemy2.mp3}} "Target spotted."
+
+===Multiple Enemies spotted General===
+*{{AC|DeadlockEnemies1.mp3}}{{AC|DeadlockEnemies2.mp3}} "Multiple targets spotted!"
+
+===Be Quiet===
+*{{AC|DeadlockBeQuiet1.mp3}}{{AC|DeadlockBeQuiet2.mp3}} "Quiet down."
+
+===Rotate===
+*{{AC|DeadlockRotating1.mp3}}{{AC|DeadlockRotating2.mp3}} "Rotating."
+
+===Let's Rotate===
+*{{AC|DeadlockLetsRotate1.mp3}}{{AC|DeadlockLetsRotate2.mp3}} "Let's rotate."
+
+===Clear Area===
+*{{AC|DeadlockClearThisArea1.mp3}}{{AC|DeadlockClearThisArea2.mp3}} "Sweep this area."
+
+===Hold===
+*{{AC|DeadlockHold1.mp3}}{{AC|DeadlockHold2.mp3}} "Hold."
+
+===Push===
+*{{AC|DeadlockPush1.mp3}}{{AC|DeadlockPush2.mp3}} "Push them."
+
+===Regroup===
+*{{AC|DeadlockRegroup1.mp3}}{{AC|DeadlockRegroup2.mp3}} "Regroup."
+
+===Ping Go here===
+*{{AC|DeadlockGoHere1.mp3}}{{AC|DeadlockGoHere2.mp3}} "Rally here."
+
+==[[Range/Lore|The Range's lore assets]]==
+===[[Range/Lore/EP7|Episode 7]]===
+*{{AC|file=VoicemailBrimstone55.mp3}} "[[Brimstone]], it's Deadlock. Training on the prosthetic is coming along. I'm adjusting to the, uh, added weight. The recoil compensation is very nice also. Once it's dialed in, my... my aim will be even better than it was before. I... I know the restoration, the arm, the new nanowire spooling, it was an investment. In me. I wish things turned out differently but... well, thank you."
+*{{AC|file=VoicemailBrimstone57.mp3}} "Brimstone, the radivore response project continues. Just like at The Vault, the technology will sunder them from within, no extraction chamber needed. Until then, the [[Kingdom Corporation|Kingdom]] site is in danger. Without a proper remedy, the wound they've opened will fester. That's all."
+*{{AC|file=VoicemailBrimstone61.mp3}} "I saw you rejected my latest proposal, but I must insist you reconsider. Does VALORANT store unsecured warheads in the barracks? Do we leave mines scattered around the hallway, hmm? No! Those things are far worse. I fabricated four crates for this specific purpose. It is safe. You must authorize their detainment!"
+
+===[[Range/Lore/EP8|Episode 8]]===
+*{{AC|file=VoicemailBrimstone85.mp3}} "Brimstone, it's Deadlock. This Hourglass facility is astonishing. The surface level security is all in place. 3-factor biometric entry, dual-encrypted transmission hardware, but you need to see the containment areas deeper in the facility. The materials here make Svalbard look almost... amateur! I don't know what they were keeping here, but to warrant this many layers of security... it must have been something special. I'll bring back samples for further analysis."
+
+===[[Range/Lore/EP9|Episode 9]]===
+*{{AC|file=VoicemailBrimstone99.mp3}} "Brimstone, I'm requesting a leave of absence. I received word that the memorial to Ståljegerne now is completed. I've been invited to its opening ceremony and was asked to prepare... and-... and I was asked to prepare a speech for my sisters, and, uh... If I may go? Please?"
+*{{AC|file=VoicemailBrimstone102.mp3}} "Brimstone, I know this is highly unusual but do you know [[Skye]]'s exact shoe size? It's not listed in her personal records. Her hiking boots are in dire need of replacement. Something must be done. Oh, and please don't mention I asked. It's a surprise."
+
+==Notes==
+:''To easily see which quotes were added corresponding to the patch, use your browser's Find function and type the patch number (e.g. v13.00).
+*{{ui|Removed}} 4 voice lines removed from patch {{patchv|13.00}}, documented in the patch notes.
+*Additional radio commands added in patch {{patchv|8.11}} are not mentioned in this page.
+*Other voice lines removed were at an unknown timeframe.
+
+==Navigation==
+{{Navbox agents}}
+[[Category:Quotes]]

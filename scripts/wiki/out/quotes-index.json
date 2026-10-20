@@ -1,0 +1,337 @@
+{
+  "credit": "VALORANT Wiki (wiki.playvalorant.com); imagens e sons da Riot Games",
+  "generatedAt": "2026-10-20",
+  "en": "https://wiki.playvalorant.com/api.php",
+  "pt": null,
+  "agents": {
+    "Astra": {
+      "en": [
+        {
+          "title": "Astra/Quotes",
+          "file": "scripts/wiki/out/quotes-raw/en/Astra_Quotes.wikitext",
+          "ptTitle": null,
+          "ptUrl": null
+        }
+      ],
+      "pt": []
+    },
+    "Breach": {
+      "en": [
+        {
+          "title": "Breach/Quotes",
+          "file": "scripts/wiki/out/quotes-raw/en/Breach_Quotes.wikitext",
+          "ptTitle": null,
+          "ptUrl": null
+        }
+      ],
+      "pt": []
+    },
+    "Brimstone": {
+      "en": [
+        {
+          "title": "Brimstone/Quotes",
+          "file": "scripts/wiki/out/quotes-raw/en/Brimstone_Quotes.wikitext",
+          "ptTitle": null,
+          "ptUrl": null
+        }
+      ],
+      "pt": []
+    },
+    "Chamber": {
+      "en": [
+        {
+          "title": "Chamber/Quotes",
+          "file": "scripts/wiki/out/quotes-raw/en/Chamber_Quotes.wikitext",
+          "ptTitle": null,
+          "ptUrl": null
+        }
+      ],
+      "pt": []
+    },
+    "Clove": {
+      "en": [
+        {
+          "title": "Clove/Quotes",
+          "file": "scripts/wiki/out/quotes-raw/en/Clove_Quotes.wikitext",
+          "ptTitle": null,
+          "ptUrl": null
+        }
+      ],
+      "pt": []
+    },
+    "Cypher": {
+      "en": [
+        {
+          "title": "Cypher/Quotes",
+          "file": "scripts/wiki/out/quotes-raw/en/Cypher_Quotes.wikitext",
+          "ptTitle": null,
+          "ptUrl": null
+        }
+      ],
+      "pt": []
+    },
+    "Deadlock": {
+      "en": [
+        {
+          "title": "Deadlock/Quotes",
+          "file": "scripts/wiki/out/quotes-raw/en/Deadlock_Quotes.wikitext",
+          "ptTitle": null,
+          "ptUrl": null
+        }
+      ],
+      "pt": []
+    },
+    "Fade": {
+      "en": [
+        {
+          "title": "Fade/Quotes",
+          "file": "scripts/wiki/out/quotes-raw/en/Fade_Quotes.wikitext",
+          "ptTitle": null,
+          "ptUrl": null
+        }
+      ],
+      "pt": []
+    },
+    "Gekko": {
+      "en": [
+        {
+          "title": "Gekko/Quotes",
+          "file": "scripts/wiki/out/quotes-raw/en/Gekko_Quotes.wikitext",
+          "ptTitle": null,
+          "ptUrl": null
+        }
+      ],
+      "pt": []
+    },
+    "Harbor": {
+      "en": [
+        {
+          "title": "Harbor/Quotes",
+          "file": "scripts/wiki/out/quotes-raw/en/Harbor_Quotes.wikitext",
+          "ptTitle": null,
+          "ptUrl": null
+        }
+      ],
+      "pt": []
+    },
+    "Iso": {
+      "en": [
+        {
+          "title": "Iso/Quotes",
+          "file": "scripts/wiki/out/quotes-raw/en/Iso_Quotes.wikitext",
+          "ptTitle": null,
+          "ptUrl": null
+        }
+      ],
+      "pt": []
+    },
+    "Jett": {
+      "en": [
+        {
+          "title": "Jett/Quotes",
+          "file": "scripts/wiki/out/quotes-raw/en/Jett_Quotes.wikitext",
+          "ptTitle": null,
+          "ptUrl": null
+        }
+      ],
+      "pt": []
+    },
+    "KAY/O": {
+      "en": [
+        {
+          "title": "KAY/O/Quotes",
+          "error": "API error missingtitle: The page you specified doesn't exist."
+        }
+      ],
+      "pt": []
+    },
+    "Killjoy": {
+      "en": [
+        {
+          "title": "Killjoy/Quotes",
+          "file": "scripts/wiki/out/quotes-raw/en/Killjoy_Quotes.wikitext",
+          "ptTitle": null,
+          "ptUrl": null
+        }
+      ],
+      "pt": []
+    },
+    "Miks": {
+      "en": [
+        {
+          "title": "Miks/Quotes",
+          "file": "scripts/wiki/out/quotes-raw/en/Miks_Quotes.wikitext",
+          "ptTitle": null,
+          "ptUrl": null
+        }
+      ],
+      "pt": []
+    },
+    "Neon": {
+      "en": [
+        {
+          "title": "Neon/Quotes",
+          "file": "scripts/wiki/out/quotes-raw/en/Neon_Quotes.wikitext",
+          "ptTitle": null,
+          "ptUrl": null
+        }
+      ],
+      "pt": []
+    },
+    "Omen": {
+      "en": [
+        {
+          "title": "Omen/Quotes",
+          "file": "scripts/wiki/out/quotes-raw/en/Omen_Quotes.wikitext",
+          "ptTitle": null,
+          "ptUrl": null
+        }
+      ],
+      "pt": []
+    },
+    "Phoenix": {
+      "en": [
+        {
+          "title": "Phoenix/Quotes",
+          "file": "scripts/wiki/out/quotes-raw/en/Phoenix_Quotes.wikitext",
+          "ptTitle": null,
+          "ptUrl": null
+        }
+      ],
+      "pt": []
+    },
+    "Raze": {
+      "en": [
+        {
+          "title": "Raze/Quotes",
+          "file": "scripts/wiki/out/quotes-raw/en/Raze_Quotes.wikitext",
+          "ptTitle": null,
+          "ptUrl": null
+        }
+      ],
+      "pt": []
+    },
+    "Reyna": {
+      "en": [
+        {
+          "title": "Reyna/Quotes",
+          "file": "scripts/wiki/out/quotes-raw/en/Reyna_Quotes.wikitext",
+          "ptTitle": null,
+          "ptUrl": null
+        },
+        {
+          "title": "Reyna/Quotes/Empress",
+          "file": "scripts/wiki/out/quotes-raw/en/Reyna_Quotes_Empress.wikitext",
+          "ptTitle": null,
+          "ptUrl": null
+        }
+      ],
+      "pt": []
+    },
+    "Sage": {
+      "en": [
+        {
+          "title": "Sage/Quotes",
+          "file": "scripts/wiki/out/quotes-raw/en/Sage_Quotes.wikitext",
+          "ptTitle": null,
+          "ptUrl": null
+        }
+      ],
+      "pt": []
+    },
+    "Skye": {
+      "en": [
+        {
+          "title": "Skye/Quotes",
+          "file": "scripts/wiki/out/quotes-raw/en/Skye_Quotes.wikitext",
+          "ptTitle": null,
+          "ptUrl": null
+        }
+      ],
+      "pt": []
+    },
+    "Sova": {
+      "en": [
+        {
+          "title": "Sova/Quotes",
+          "file": "scripts/wiki/out/quotes-raw/en/Sova_Quotes.wikitext",
+          "ptTitle": null,
+          "ptUrl": null
+        }
+      ],
+      "pt": []
+    },
+    "Tejo": {
+      "en": [
+        {
+          "title": "Tejo/Quotes",
+          "file": "scripts/wiki/out/quotes-raw/en/Tejo_Quotes.wikitext",
+          "ptTitle": null,
+          "ptUrl": null
+        }
+      ],
+      "pt": []
+    },
+    "Veto": {
+      "en": [
+        {
+          "title": "Veto/Quotes",
+          "file": "scripts/wiki/out/quotes-raw/en/Veto_Quotes.wikitext",
+          "ptTitle": null,
+          "ptUrl": null
+        },
+        {
+          "title": "Veto/Quotes/Evolution",
+          "file": "scripts/wiki/out/quotes-raw/en/Veto_Quotes_Evolution.wikitext",
+          "ptTitle": null,
+          "ptUrl": null
+        }
+      ],
+      "pt": []
+    },
+    "Viper": {
+      "en": [
+        {
+          "title": "Viper/Quotes",
+          "file": "scripts/wiki/out/quotes-raw/en/Viper_Quotes.wikitext",
+          "ptTitle": null,
+          "ptUrl": null
+        }
+      ],
+      "pt": []
+    },
+    "Vyse": {
+      "en": [
+        {
+          "title": "Vyse/Quotes",
+          "file": "scripts/wiki/out/quotes-raw/en/Vyse_Quotes.wikitext",
+          "ptTitle": null,
+          "ptUrl": null
+        }
+      ],
+      "pt": []
+    },
+    "Waylay": {
+      "en": [
+        {
+          "title": "Waylay/Quotes",
+          "file": "scripts/wiki/out/quotes-raw/en/Waylay_Quotes.wikitext",
+          "ptTitle": null,
+          "ptUrl": null
+        }
+      ],
+      "pt": []
+    },
+    "Yoru": {
+      "en": [
+        {
+          "title": "Yoru/Quotes",
+          "file": "scripts/wiki/out/quotes-raw/en/Yoru_Quotes.wikitext",
+          "ptTitle": null,
+          "ptUrl": null
+        }
+      ],
+      "pt": []
+    }
+  }
+}

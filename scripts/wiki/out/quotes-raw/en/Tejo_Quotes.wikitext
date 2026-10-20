@@ -1,0 +1,655 @@
+{{TOCright}}
+This is a '''list of quotes by {{ai|Tejo}}'''. Tejo is voiced by Victor Turpin in English. Necessary quotes are translated from Spanish to English. Tejo has a total of {{PAGESINCATEGORY:Tejo Quotes}} files of quotes including unused and removed lines, and excluding [[#The Range's lore assets|The Range's lore assets]].
+
+A downloadable folder containing all the audio files on this page can be found [https://drive.google.com/drive/folders/1-6k-dMQ9HtPF0H01Ri6RVw2xxiEFvvuZ?usp=sharing here].
+==Agent Selected/Unlocked==
+*{{AC|TejoPick.mp3}} "New weapons, same war."
+
+==Abilities==
+==={{abi text|Stealth Drone}}===
+====Cast====
+*{{AC|TejoStealthDroneCast1.mp3}}{{AC|TejoStealthDroneCast2.mp3}} "Drone going out."
+*{{AC|TejoStealthDroneCast3.mp3}}{{AC|TejoStealthDroneCast4.mp3}} "Locating targets."
+
+====Afflict enemy====
+*{{AC|TejoStealthDroneHitOne1.mp3}}{{AC|TejoStealthDroneHitOne2.mp3}} "One suppressed."
+*{{AC|TejoStealthDroneHitTwo1.mp3}}{{AC|TejoStealthDroneHitTwo2.mp3}} "Two suppressed."
+*{{AC|TejoStealthDroneHitThree1.mp3}}{{AC|TejoStealthDroneHitThree2.mp3}} "Three suppressed."
+*{{AC|TejoStealthDroneHitFour1.mp3}}{{AC|TejoStealthDroneHitFour2.mp3}} "Four suppressed."
+*{{AC|TejoStealthDroneHitFive1.mp3}}{{AC|TejoStealthDroneHitFive2.mp3}} "Five suppressed."
+
+====Destroyed====
+*{{AC|TejoStealthDroneDestroyed1.mp3}}{{AC|TejoStealthDroneDestroyed2.mp3}} "Drone is down."
+
+==={{abi text|Special Delivery}}===
+====Cast====
+*{{AC|TejoSpecialDeliveryCast1.mp3}}{{AC|TejoSpecialDeliveryCast2.mp3}} "Grenade is live."
+*{{AC|TejoSpecialDeliveryCast3.mp3}}{{AC|TejoSpecialDeliveryCast4.mp3}} "Live munition."
+
+==={{abi text|Guided Salvo}}===
+====Cast====
+*{{AC|TejoGuidedSalvoCast1.mp3}}{{AC|TejoGuidedSalvoCast2.mp3}} "Launching missile."
+*{{AC|TejoGuidedSalvoCast3.mp3}}{{AC|TejoGuidedSalvoCast4.mp3}} "Missile deployed."
+
+====Cast all charges====
+*{{AC|TejoGuidedSalvoCastTwice1.mp3}}{{AC|TejoGuidedSalvoCastTwice2.mp3}} "All missiles away."
+
+==={{abi text|Armageddon}}===
+====Ally Cast====
+*{{AC|TejoUltAllyCast.mp3}} "This is how it ends!"
+
+====Enemy Cast====
+*{{AC|TejoUltEnemyCast.mp3}} "Go ahead, stand your ground!"
+
+==Buy Phase==
+===Match Start===
+*{{AC|TejoMatchStart1.mp3}} "Dropships, artillery, SOPs. Just your typical retirement."
+*{{AC|TejoMatchStart2.mp3}} "If they get in my way, I shoot them. If they die, well, they have only themselves to blame."
+*{{AC|TejoMatchStart3.mp3}} "My father used to say: the fight is won before the first punch is thrown. We've trained, we are ready, and now, we win."
+*{{AC|TejoMatchStart4.mp3}} "This is no little game of banquitas. Focus, or we carry you home in a body bag."
+**(''Banquitas'': Benches)
+*{{AC|TejoMatchStart5.mp3}} "You know, I had a dream last night. We killed all of them and none of us died. I take it as a sign."
+
+====Attacking====
+*{{AC|TejoMatchStartAttack1.mp3}} "If they came here to steal from us, I'd be upset too. I'm still going to kill them, but I understand."
+*{{AC|TejoMatchStartAttack2.mp3}} "We take their radianite one way or another."
+
+====Defending====
+*{{AC|TejoMatchStartDefense1.mp3}} "The nerve, they come here acting like they own the place. Cómo Pedro por su casa.
+**(''Cómo Pedro por su casa'': Like Pedro in his own house (literal), meaning as if they own the place.)
+*{{AC|TejoMatchStartDefense2.mp3}} "You think they came here peacefully? No. Let that clear your conscience."
+
+====[[Sunset]]====
+*{{AC|TejoMatchStartSunset.mp3}} "Ole, you hear the radio? If anyone finds it, change the station. My team is playing."
+
+===Round Start===
+*{{AC|TejoRoundStart1.mp3}} "Do what you're here to do and we won't have a problem."
+*{{AC|TejoRoundStart2.mp3}} "If they think it is more honorable to resist death, they're welcome to try."
+*{{AC|TejoRoundStart3.mp3}} "Killing them is easier than all this radianite business."
+*{{AC|TejoRoundStart4.mp3}} "Make peace with yourself before you pull the trigger. No one else can judge you."
+*{{AC|TejoRoundStart5.mp3}} "My ballistic set up easy kills, and if they don't, pues, you can't complain if you're dead."
+**(''Pues'': Well)
+*{{AC|TejoRoundStart6.mp3}} "No den papaya. If you compromise your position, you hand them a free kill. Don't."
+**(''No den papaya'': Don't give away your papaya (literal), meaning to not put yourself in a vulnerable situation.)
+*{{AC|TejoRoundStart7.mp3}} "Remember, I hit them with explosives, then you go in. No la vayan a cagar."
+**(''No la vayan a cagar'': Don't go screw it up)
+*{{AC|TejoRoundStart8.mp3}} "Remember, no one wants to die out here, but you don't always get what you want."
+*{{AC|TejoRoundStart9.mp3}} "This should be simple enough. I flush them out, you finish them."
+*{{AC|TejoRoundStart10.mp3}} "We can stand around all day talking about killing them, or we just do it."
+
+====Last round won====
+*{{AC|TejoRoundWon1.mp3}} "Don't let a good fight go to your head, sure is way to lose it."
+*{{AC|TejoRoundWon2.mp3}} "If they don't like losing, they should do something about it."
+*{{AC|TejoRoundWon3.mp3}} "Keep it up, hermanos."
+**(''Hermanos'': Siblings)
+*{{AC|TejoRoundWon4.mp3}} "Okay! Now we do that some more."
+
+=====While in the lead=====
+*{{AC|TejoLead1.mp3}} "I'm used to difficult work, this is not so difficult."
+*{{AC|TejoLead2.mp3}} "Nothing is guaranteed in war, but I like our odds."
+*{{AC|TejoLead3.mp3}} "You think they're worried? I think they're worried."
+
+=====Making a comeback=====
+*{{AC|TejoComeback1.mp3}} "Keep pushing. Tenemos mucho camello."
+**(''Tenemos mucho camello'': We have a lot of work)
+*{{AC|TejoComeback2.mp3}} "That shook their confidence."
+
+===Last round in the half===
+====Attacking====
+*{{AC|TejoLastRound1.mp3}} "Hey hermanos, spend everything you have."
+**(''Hermanos'': Siblings)
+
+====Defending====
+*{{AC|TejoLastRound2.mp3}} "You want to survive? Bring the right gun."
+
+===Match Point===
+*{{AC|TejoMatchPoint1.mp3}} "Now, they draw their very last breath."
+*{{AC|TejoMatchPoint2.mp3}} "This is it."
+
+===Shop===
+====Let's Buy====
+*{{AC|TejoBuying1.mp3}}{{AC|TejoBuying2.mp3}} "I'm buying."
+
+====Let's Save====
+*{{AC|TejoSaving1.mp3}}{{AC|TejoSaving2.mp3}} "I will save."
+
+====I Have Extra Creds====
+*{{AC|TejoOffer1.mp3}}{{AC|TejoOffer2.mp3}} "Who needs a gun?"
+
+====Requested====
+*{{AC|TejoRequest1.mp3}}{{AC|TejoRequest2.mp3}} "I need a drop."
+
+===Barrier Down===
+*{{AC|TejoBarrierDown1.mp3}} "By any means necessary."
+*{{AC|TejoBarrierDown2.mp3}} "Don't they know stealing is wrong?"
+*{{AC|TejoBarrierDown3.mp3}} "I'll clear the path."
+*{{AC|TejoBarrierDown4.mp3}} "Let's turn up the pressure."
+*{{AC|TejoBarrierDown5.mp3}} "Lo tenemos, hermanos."
+**(We got it, brothers.)
+*{{AC|TejoBarrierDown6.mp3}} "No excuses, get what we came for."
+*{{AC|TejoBarrierDown7.mp3}} "No time for regret."
+*{{AC|TejoBarrierDown8.mp3}} "Our radianite is not theirs to take."
+*{{AC|TejoBarrierDown9.mp3}} "Push them into the ground."
+*{{AC|TejoBarrierDown10.mp3}} "Standby to infiltrate."
+*{{AC|TejoBarrierDown11.mp3}} "Stay alert."
+*{{AC|TejoBarrierDown12.mp3}} "So we move to plan D?"
+*{{AC|TejoBarrierDown13.mp3}} "There's no fight left in them now."
+*{{AC|TejoBarrierDown14.mp3}} ''*Tejo whistles*'' "Vamos."
+**(Let's go.)
+*{{AC|TejoBarrierDown15.mp3}} "Watch your step."
+*{{AC|TejoBarrierDown16.mp3}} "Weapons up, comms open."
+*{{AC|TejoBarrierDown17.mp3}} "Whatever they get paid, it's too much."
+
+==Spike==
+===Forgotten in spawn===
+*{{AC|TejoForgotSpike1.mp3}} "Por dios, someone get the spike."
+
+===Ally carrier down===
+*{{AC|TejoSpikeDown1.mp3}}{{AC|TejoSpikeDown2.mp3}} "Spike carrier is down."
+
+===Dropped===
+*{{AC|TejoSpikeDropped1.mp3}}{{AC|TejoSpikeDropped2.mp3}} "Spike dropped."
+
+===Retrieved===
+*{{AC|TejoSpikePickedUp1.mp3}}{{AC|TejoSpikePickedUp2.mp3}} "I got the spike."
+
+===Planted===
+*{{AC|TejoSpikePlanted1.mp3}}{{AC|TejoSpikePlanted2.mp3}} "Spike planted."
+
+===Spotted===
+*{{AC|TejoSpikeSpottedA1.mp3}}{{AC|TejoSpikeSpottedA2.mp3}} "Spike spotted A."
+*{{AC|TejoSpikeSpottedB1.mp3}}{{AC|TejoSpikeSpottedB2.mp3}} "Spike spotted B."
+*{{AC|TejoSpikeSpottedC1.mp3}}{{AC|TejoSpikeSpottedC2.mp3}} "Spike spotted C."
+*{{AC|TejoSpikeSpottedASpawn1.mp3}}{{AC|TejoSpikeSpottedASpawn2.mp3}} "Spike spotted Attacker Spawn."
+*{{AC|TejoSpikeSpottedDSpawn1.mp3}}{{AC|TejoSpikeSpottedDSpawn2.mp3}} "Spike spotted Defender Spawn."
+*{{AC|TejoSpikeSpottedMid1.mp3}}{{AC|TejoSpikeSpottedMid2.mp3}} "Spike spotted Mid."
+
+===Defuse resumed===
+*{{AC|TejoDefuseResumed1.mp3}} "Anyway."
+*{{AC|TejoDefuseResumed2.mp3}} "Don't interrupt me again."
+
+===Defuse time running out===
+*{{AC|TejoDefuseLate1.mp3}} "Mierda."
+**(Shit.)
+*{{AC|TejoDefuseLate2.mp3}} "Well, I lived a good life."
+
+===Defuse successful===
+*{{AC|TejoDefuseComplete1.mp3}} "Did you think I'd let this thing go off?"
+*{{AC|TejoDefuseComplete2.mp3}} "You see? I can play by the book from time to time."
+
+==Kill==
+*{{AC|TejoKill1.mp3}} "Adiós."
+**(Goodbye.)
+*{{AC|TejoKill2.mp3}} "Alright."
+*{{AC|TejoKill3.mp3}} "Bueno."
+**(Good.)
+*{{AC|TejoKill4.mp3}} "Colgó los guayos."
+**(Hang the soccer shoes (literal), meaning dead.)
+*{{AC|TejoKill5.mp3}} "Confirmed kill."
+*{{AC|TejoKill6.mp3}} "Got them."
+*{{AC|TejoKill7.mp3}} "I'll take it."
+*{{AC|TejoKill8.mp3}} "Mm-hmm."
+*{{AC|TejoKill9.mp3}} "One down."
+*{{AC|TejoKill10.mp3}} "Qué huevonada."
+**(What a boring crap.)
+*{{AC|TejoKill11.mp3}} "Target down."
+*{{AC|TejoKill12.mp3}} "That's a kill."
+
+===Headshot===
+*{{AC|TejoHeadshot1.mp3}} "Dead and buried."
+*{{AC|TejoHeadshot2.mp3}} "Executed."
+*{{AC|TejoHeadshot3.mp3}} "Headshot."
+*{{AC|TejoHeadshot4.mp3}} "Make it interesting."
+*{{AC|TejoHeadshot5.mp3}} "Perfection."
+*{{AC|TejoHeadshot6.mp3}} "Sentate."
+**(Sit down.)
+*{{AC|TejoHeadshot7.mp3}} "That was clean."
+
+===[[Melee]]===
+*{{AC|TejoMeleeKill1.mp3}} ''*Tejo laughs*''
+*{{AC|TejoMeleeKill2.mp3}} "You made this easy."
+
+===Triple===
+*{{AC|TejoTriple1.mp3}}{{AC|TejoTriple2.mp3}} "That's three."
+
+===Quadra===
+*{{AC|TejoQuadra1.mp3}}{{AC|TejoQuadra2.mp3}} "That's four."
+
+===One kill remaining (game-mode specific)===
+*{{AC|TejoOneKillLeft1.mp3}} "One last kill."
+
+==Round End==
+===Ace===
+*{{AC|TejoAce1.mp3}} "Don't mess with an old soldier."
+*{{AC|TejoAce2.mp3}} "Now that brings back memories."
+
+===Clutch===
+*{{AC|TejoClutch1.mp3}} "Back me into a corner? That's what happens."
+*{{AC|TejoClutch2.mp3}} "They gave me no choice."
+
+===Flawless or Team Ace===
+*{{AC|TejoFlawless1.mp3}} "Expect nothing less."
+*{{AC|TejoFlawless2.mp3}} "Huh, not bad."
+*{{AC|TejoFlawless3.mp3}} "Is this a joke to them?"
+
+===Thrifty===
+*{{AC|TejoThrifty1.mp3}} "Where I come from, we call that being resourceful."
+
+===Last Kill===
+*{{AC|TejoLastKill1.mp3}} "Complacency kills."
+*{{AC|TejoLastKill2.mp3}} "I took care of it."
+*{{AC|TejoLastKill3.mp3}} "It was their life or mine."
+
+====Enemy MVP====
+There are no voice lines at the moment in this section for this Agent.
+
+====Using [[Melee]]====
+*{{AC|TejoLastKillMelee1.mp3}} "Ah, qué pendejada."
+**(''Qué pendejada:'' What nonsense)
+*{{AC|TejoLastKillMelee2.mp3}} "Qué boleta."
+**(How embarrassing.)
+
+===Low HP===
+*{{AC|TejoLowHP1.mp3}} "Not killing me was a mistake."
+
+==Match End==
+===Match Win===
+*{{AC|TejoMatchWin1.mp3}} "Are we done? Good."
+*{{AC|TejoMatchWin2.mp3}} "Qué nota! Now let's get something to eat."
+**(''Qué nota'': What a note (literal), meaning amazing)
+*{{AC|TejoMatchWin3.mp3}} "Wepa! Well done!"
+**(''Wepa'': Wow)
+*{{AC|TejoMatchWin4.mp3}} "You want a fairy tale ending? They lost, end of story."
+
+===Runner-up (game-mode specific)===
+*{{AC|TejoRunnerUp1.mp3}} "Honestly? I'll take it."
+*{{AC|TejoRunnerUp2.mp3}} "Not bad for an old man."
+
+==Agent-specific interactions==
+{| class="wikitable sortable"
+!To Agent
+!Scenario
+!width=40%; class=unsortable|Ally
+!width=40%; class=unsortable|Enemy
+|-
+|rowspan=6|{{ai|Brimstone}}
+|Match Start
+|{{AC|TejoAllyBrimstoneMatchStart.mp3}} "Brimstone, mi hermano, no disagreements today. We have to show everyone how well we get along now."
+*(''Mi hermano'': My brother)
+|
+|-
+|Round Start
+|
+|{{AC|TejoEnemyBrimstoneRoundStart.mp3}} "Let me take care of their Brimstone, it's therapy for me. Don't ask why."
+|-
+|Commend
+|{{AC|TejoAllyBrimstoneCommend.mp3}} "Brimstone, not bad cucho."
+*(''Cucho'': Old man)
+|
+|-
+|Barrier Down
+|{{AC|TejoAllyBrimstoneBarrierDown.mp3}} "Brimstone, don't die."
+|
+|-
+|Kill
+|
+|{{AC|TejoEnemyBrimstoneKill.mp3}} "Goodbye, [[Brimstone|Liam]]."
+|-
+|Last Kill
+|
+|{{AC|TejoEnemyBrimstoneLastKill.mp3}} "That's what following the rules get you."
+|-
+|{{ai|Clove}}
+|Round Start
+|{{AC|TejoAllyCloveRoundStart.mp3}} "Clove, if you ever go freelance, do not mention the immortality. Your clients will take advantage. I certainly would."
+|
+|-
+|rowspan=3|{{ai|Gekko}}
+|Match Start
+|{{AC|TejoAllyGekkoMatchStart.mp3}} "Gekko, how about we keep the strategic comms to human languages today? No entiendo radivore."
+*(''No entiendo'': I don't understand)
+|
+|-
+|Round Start
+|
+|{{AC|TejoEnemyGekkoRoundStart.mp3}} "Their Gekko's creatures will survive without him."
+|-
+|Last Kill
+|
+|{{AC|TejoEnemyGekkoLastKill.mp3}} "Rest in peace, [[Gekko|Mateo]]."
+|-
+|{{ai|Iso}}
+|Commend
+|{{AC|TejoAllyIsoCommend.mp3}} "Iso, that is the work of a professional."
+|-
+|{{ai|Raze}}
+|Round Start
+|{{AC|TejoAllyRazeRoundStart.mp3}} "Señora [[Raze|Alves]], don't get too eager out there with explosives. You'll put me out of a job."
+*(''Señora'': Madam)
+|
+|-
+|rowspan=3|{{ai|Reyna}}
+|Match Start
+|{{AC|TejoAllyReynaMatchStart.mp3}} "Señora [[Reyna|Mondragón]], me alegro de verle. I have a gift for the children of the sanctuary. Remind me after this."
+*(''Señora'': Madam)
+*(''Me alegro de verle'': I'm glad to see you)
+|
+|-
+|Barrier Down
+|{{AC|TejoAllyReynaBarrierDown.mp3}} "Show them death, Reyna."
+|
+|-
+|Kill
+|
+|{{AC|TejoEnemyReynaKill.mp3}} "Señora."
+|-
+|rowspan=4|{{ai|Tejo}}
+|Match Start
+|
+|{{AC|TejoEnemyTejoMatchStart.mp3}} "They brought the other me along, huh? I'm not supposed to be the target of these weapons."
+|-
+|Barrier Down
+|
+|{{AC|TejoEnemyTejoBarrierDown.mp3}} "Time to kill the handsome Colombian."
+|-
+|Kill
+|
+|{{AC|TejoEnemyTejoKill.mp3}} "Such is life."
+|-
+|Last Kill
+|
+|{{AC|TejoEnemyTejoLastKill.mp3}} "Seems like I'm the better one."
+|-
+|rowspan=4|{{ai|Vyse}}
+|Round Start
+|{{AC|TejoAllyVyseRoundStart.mp3}} "You know, Vyse? You should lay flowers on the graves of your enemies. It's very poetic, and saves money on flowers."
+|
+|-
+|Commend
+|{{AC|TejoAllyVyseCommend.mp3}} "Vyse, you are just as scary as you look."
+|
+|-
+|Barrier Down
+|
+|{{AC|TejoAllyVyseBarrierDown.mp3}} "Watch out for Vyse."
+|-
+|Kill
+|
+|{{AC|TejoAllyVyseKill.mp3}} "Got their Vyse."
+|}
+
+==Radio Commands==
+===Menu Index only===
+====Caution here====
+*{{AC|TejoCaution1.mp3}}{{AC|TejoCaution2.mp3}} "Enemy close."
+
+====Going Area====
+*{{AC|TejoGoingA1.mp3}}{{AC|TejoGoingA2.mp3}} "I'm going A."
+*{{AC|TejoGoingB1.mp3}}{{AC|TejoGoingB2.mp3}} "I'm going B."
+*{{AC|TejoGoingC1.mp3}}{{AC|TejoGoingC2.mp3}} "I'm going C."
+*{{AC|TejoGoingMid1.mp3}}{{AC|TejoGoingMid2.mp3}} "I'm going Mid."
+
+====Need Support====
+*{{AC|TejoHelp1.mp3}}{{AC|TejoHelp2.mp3}} "A little help."
+
+====On my way====
+*{{AC|TejoOnMyWay1.mp3}}{{AC|TejoOnMyWay2.mp3}} "On my way."
+
+====Play for picks====
+*{{AC|TejoPlayForPicks1.mp3}}{{AC|TejoPlayForPicks2.mp3}} "Play for picks."
+
+===Wheel Index only===
+====Encourage====
+*{{AC|TejoEncouraging1.mp3}}{{AC|TejoEncouraging2.mp3}}{{AC|TejoEncouraging3.mp3}} "We got this."
+
+====I'll lurk====
+Only as Attackers during Buy Phase.
+*{{AC|TejoLurking1.mp3}}{{AC|TejoLurking2.mp3}} "I'm lurking."
+
+====I'll push out====
+Only as Defenders during Buy Phase.
+*{{AC|TejoPushingOut1.mp3}}{{AC|TejoPushingOut2.mp3}} "I'm pushing out."
+
+====I'm holding position====
+Only as Defenders during Buy Phase.
+*{{AC|TejoHoldingPosition1.mp3}}{{AC|TejoHoldingPosition2.mp3}} "Holding position."
+
+====Let's Attack====
+Only during Round Phase.
+*{{AC|TejoLetsAttack1.mp3}}{{AC|TejoLetsAttack2.mp3}} "Let's attack."
+
+====Let's hold positions====
+Only as Defenders during Buy Phase.
+*{{AC|TejoHoldPositions1.mp3}}{{AC|TejoHoldPositions2.mp3}} "Let's hold positions."
+
+====Let's play slow====
+Only as Attackers at anytime.
+*{{AC|TejoPlaySlow1.mp3}}{{AC|TejoPlaySlow2.mp3}} "Let's play this slow."
+
+====Let's push out====
+Only as Defenders during Buy Phase.
+*{{AC|TejoPushOut1.mp3}}{{AC|TejoPushOut2.mp3}} "Let's push out."
+
+====Let's spread out====
+*{{AC|TejoSpreadOut1.mp3}}{{AC|TejoSpreadOut2.mp3}} "Let's spread out."
+
+====Nice Try====
+*{{AC|TejoNiceTry1.mp3}}{{AC|TejoNiceTry2.mp3}}{{AC|TejoNiceTry3.mp3}} "Good effort."
+
+====Stick together====
+*{{AC|TejoStickTogether1.mp3}}{{AC|TejoStickTogether2.mp3}} "Let's stick together."
+
+===Menu and Wheel Index===
+====Commend====
+*{{AC|TejoCommend1.mp3}}{{AC|TejoCommend3.mp3}}{{AC|TejoCommend3.mp3}} "Very nice."
+
+====Fall Back====
+Menu Index at anytime, or Wheel Index only during Round Phase.
+*{{AC|TejoFallBack1.mp3}}{{AC|TejoFallBack2.mp3}} "Fall back!"
+
+====Hello====
+*{{AC|TejoHello1.mp3}}{{AC|TejoHello2.mp3}}{{AC|TejoHello3.mp3}} "Hola."
+**(Hello.)
+
+====I'll take point====
+Wheel Index only as Attackers during Buy Phase, or Menu Index at anytime regardless of Attackers or Defenders.
+*{{AC|TejoTakePoint1.mp3}}{{AC|TejoTakePoint2.mp3}} "I'll take point."
+
+====Let's rush them (Radio Command)====
+*{{AC|TejoRush1.mp3}}{{AC|TejoRush2.mp3}} "Rush them."
+
+====Need healing====
+*{{AC|TejoHealing1.mp3}}{{AC|TejoHealing2.mp3}} "Need some healing."
+
+====No====
+*{{AC|TejoNo1.mp3}}{{AC|TejoNo2.mp3}}{{AC|TejoNo3.mp3}} "No."
+
+====Sorry====
+*{{AC|TejoSorry1.mp3}}{{AC|TejoSorry2.mp3}}{{AC|TejoSorry3.mp3}} "Lo siento."
+**(Sorry.)
+
+====Thanks====
+*{{AC|TejoThanks1.mp3}}{{AC|TejoThanks2.mp3}}{{AC|TejoThanks3.mp3}} "Gracias."
+**(Thanks.)
+
+====Ultimate Status====
+*{{AC|TejoUltDown1.mp3}}{{AC|TejoUltDown2.mp3}} "My ultimate is not ready."
+*{{AC|TejoUltAlmost1.mp3}}{{AC|TejoUltAlmost2.mp3}} "My ultimate is almost ready."
+*{{AC|TejoUltReady1.mp3}}{{AC|TejoUltReady2.mp3}} "My ultimate is ready."
+
+====Yes====
+*{{AC|TejoYes1.mp3}}{{AC|TejoYes2.mp3}}{{AC|TejoYes3.mp3}} "Yes."
+
+===Wheel Index requiring Minimap===
+For the following voicelines, the minimap must be open and then open ping wheel and activate strategy.
+====Faking====
+====Faking====
+Only as Attackers during Buy Phase.
+*{{AC|TejoFaking1.mp3}}{{AC|TejoFaking2.mp3}} "I'm faking."
+*{{AC|TejoFakingA1.mp3}}{{AC|TejoFakingA2.mp3}} "I'm faking A."
+*{{AC|TejoFakingB1.mp3}}{{AC|TejoFakingB2.mp3}} "I'm faking B."
+*{{AC|TejoFakingC1.mp3}}{{AC|TejoFakingC2.mp3}} "I'm faking C."
+
+====I'm Going Here====
+As Defenders during Buy Phase, or as Attackers at anytime.
+*{{AC|TejoGoingA1.mp3}}{{AC|TejoGoingA2.mp3}} "Going A."
+*{{AC|TejoGoingB1.mp3}}{{AC|TejoGoingB2.mp3}} "Going B."
+*{{AC|TejoGoingC1.mp3}}{{AC|TejoGoingC2.mp3}} "Going C."
+*{{AC|TejoGoingMid1.mp3}}{{AC|TejoGoingMid2.mp3}} "Going Mid."
+
+====Let's Go Here====
+Only as Attackers during Buy Phase.
+*{{AC|TejoLetsGoA1.mp3}}{{AC|TejoLetsGoA2.mp3}} "Let's go A."
+*{{AC|TejoLetsGoB1.mp3}}{{AC|TejoLetsGoB2.mp3}} "Let's go B."
+*{{AC|TejoLetsGoC1.mp3}}{{AC|TejoLetsGoC2.mp3}} "Let's go C."
+
+====Let's rush them (Minimap)====
+Only as Attackers during Buy Phase.
+*{{AC|TejoLetsRush1.mp3}}{{AC|TejoLetsRush2.mp3}} "Let's rush them."
+*{{AC|TejoLetsRushA1.mp3}}{{AC|TejoLetsRushA2.mp3}} "Let's rush A."
+*{{AC|TejoLetsRushB1.mp3}}{{AC|TejoLetsRushB2.mp3}} "Let's rush B."
+*{{AC|TejoLetsRushC1.mp3}}{{AC|TejoLetsRushC2.mp3}} "Let's rush C."
+
+====Let's Sneak Here====
+Only as Attackers during Buy Phase.
+*{{AC|TejoSneakA1.mp3}}{{AC|TejoSneakA2.mp3}} "Let's sneak A."
+*{{AC|TejoSneakB1.mp3}}{{AC|TejoSneakB2.mp3}} "Let's sneak B."
+*{{AC|TejoSneakC1.mp3}}{{AC|TejoSneakC2.mp3}} "Let's sneak C."
+*{{AC|TejoSneakMid1.mp3}}{{AC|TejoSneakMid2.mp3}} "Let's sneak Mid."
+
+====Let's Stack Here====
+Only as Defenders during Buy Phase.
+*{{AC|TejoStack1.mp3}}{{AC|TejoStack2.mp3}} "Let's stack up."
+*{{AC|TejoStackA1.mp3}}{{AC|TejoStackA2.mp3}} "Let's stack A."
+*{{AC|TejoStackB1.mp3}}{{AC|TejoStackB2.mp3}} "Let's stack B."
+*{{AC|TejoStackC1.mp3}}{{AC|TejoStackC2.mp3}} "Let's stack C."
+*{{AC|TejoStackMid1.mp3}}{{AC|TejoStackMid2.mp3}} "Let's stack Mid."
+
+====Someone Go Here====
+As Attackers during Round Phase, or as Defenders at anytime.
+*{{AC|TejoNeedSomeoneA1.mp3}}{{AC|TejoNeedSomeoneA2.mp3}} "Someone go A."
+*{{AC|TejoNeedSomeoneB1.mp3}}{{AC|TejoNeedSomeoneB2.mp3}} "Someone go B."
+*{{AC|TejoNeedSomeoneC1.mp3}}{{AC|TejoNeedSomeoneC2.mp3}} "Someone go C."
+*{{AC|TejoNeedSomeoneMid1.mp3}}{{AC|TejoNeedSomeoneMid2.mp3}} "Someone go Mid."
+
+====Spike's here====
+Only as Defenders during Round Phase.
+*{{AC|TejoSpikeA1.mp3}}{{AC|TejoSpikeA2.mp3}} "Spike is A."
+*{{AC|TejoSpikeB1.mp3}}{{AC|TejoSpikeB2.mp3}} "Spike is B."
+*{{AC|TejoSpikeC1.mp3}}{{AC|TejoSpikeC2.mp3}} "Spike is C."
+*{{AC|TejoSpikeMid1.mp3}}{{AC|TejoSpikeMid2.mp3}} "Spike is Mid."
+*{{AC|TejoSpikeSpottedASpawn1.mp3}}{{AC|TejoSpikeSpottedASpawn2.mp3}} "Spike spotted Attacker Spawn."
+*{{AC|TejoSpikeSpottedDSpawn1.mp3}}{{AC|TejoSpikeSpottedDSpawn2.mp3}} "Spike spotted Defender Spawn."
+
+==Pings==
+===General===
+*{{AC|TejoPing1.mp3}}{{AC|TejoPing2.mp3}} "There."
+
+===Caution===
+*{{AC|TejoPingCaution1.mp3}}{{AC|TejoPingCaution2.mp3}} "Caution here."
+
+===Need support===
+*{{AC|TejoHelp1.mp3}}{{AC|TejoHelp2.mp3}} "A little help."
+
+===On my mark===
+*{{AC|TejoOnMyMark1.mp3}}{{AC|TejoOnMyMark2.mp3}} "On my mark."
+
+===Ping gun===
+*{{AC|TejoPingGun1.mp3}}{{AC|TejoPingGun2.mp3}} "Weapon here."
+
+===Ping spike===
+*{{AC|TejoPingSpike1.mp3}}{{AC|TejoPingSpike2.mp3}} "Spike here."
+
+===Ping for spike defuse===
+*{{AC|TejoDefuseSpike1.mp3}}{{AC|TejoDefuseSpike2.mp3}} "Defuse the spike!"
+
+===Ping for spike plant===
+*{{AC|TejoPlantSpike1.mp3}}{{AC|TejoPlantSpike2.mp3}} "Plant the spike!"
+
+===Watching===
+*{{AC|TejoWatching1.mp3}}{{AC|TejoWatching2.mp3}} "I got eyes here."
+
+==Other lines==
+===Ability unusable===
+====[[Status Effect#Suppress|Suppressed]]====
+*{{AC|TejoCantUse1.mp3}}{{AC|TejoCantUse2.mp3}} "I can't use that."
+
+====On cooldown====
+*{{AC|TejoOnCooldown1.mp3}}{{AC|TejoOnCooldown2.mp3}} "On cooldown."
+
+====No charges====
+*{{AC|TejoNoCharges1.mp3}}{{AC|TejoNoCharges2.mp3}} "I'm all out."
+
+===Enemy spotted===
+*{{AC|TejoEnemyA1.mp3}}{{AC|TejoEnemyA2.mp3}} "Enemy spotted A."
+*{{AC|TejoEnemyB1.mp3}}{{AC|TejoEnemyB2.mp3}} "Enemy spotted B."
+*{{AC|TejoEnemyC1.mp3}}{{AC|TejoEnemyC2.mp3}} "Enemy spotted C."
+*{{AC|TejoEnemyASpawn1.mp3}}{{AC|TejoEnemyASpawn2.mp3}} "Enemy spotted Attacker Spawn."
+*{{AC|TejoEnemyDSpawn1.mp3}}{{AC|TejoEnemyDSpawn2.mp3}} "Enemy spotted Defender Spawn."
+*{{AC|TejoEnemyMid1.mp3}}{{AC|TejoEnemyMid2.mp3}} "Enemy spotted Mid."
+
+====Multiple====
+*{{AC|TejoEnemiesA1.mp3}}{{AC|TejoEnemiesA2.mp3}} "Multiple enemies A!"
+*{{AC|TejoEnemiesB1.mp3}}{{AC|TejoEnemiesB2.mp3}} "Multiple enemies B!"
+*{{AC|TejoEnemiesC1.mp3}}{{AC|TejoEnemiesC2.mp3}} "Multiple enemies C!"
+*{{AC|TejoEnemiesASpawn1.mp3}}{{AC|TejoEnemiesASpawn2.mp3}} "Multiple enemies Attacker Spawn!"
+*{{AC|TejoEnemiesDSpawn1.mp3}}{{AC|TejoEnemiesDSpawn2.mp3}} "Multiple enemies Defender Spawn!"
+*{{AC|TejoEnemiesMid1.mp3}}{{AC|TejoEnemiesMid2.mp3}} "Multiple enemies Mid!"
+
+===Reloading===
+*{{AC|TejoReloading1.mp3}} "Reloading."
+*{{AC|TejoReloading2.mp3}} "Reloading."
+
+===Healed===
+*{{AC|TejoRelief1.mp3}}{{AC|TejoRelief2.mp3}}{{AC|TejoRelief3.mp3}} ''*Tejo sighs*''
+
+===Killed===
+*{{AC|TejoDeath1.mp3}}{{AC|TejoDeath2.mp3}}{{AC|TejoDeath3.mp3}} ''*Tejo groans*''
+
+===Resurrected via {{abi text|Resurrection}}===
+*{{AC|TejoResurrect.mp3}} "No mistakes this time."
+
+===Wounded===
+====Light damage====
+*{{AC|TejoPainLight1.mp3}}{{AC|TejoPainLight2.mp3}}{{AC|TejoPainLight3.mp3}} ''*Tejo groans*''
+
+====Medium damage====
+*{{AC|TejoPainMedium1.mp3}}{{AC|TejoPainMedium2.mp3}}{{AC|TejoPainMedium3.mp3}} ''*Tejo groans*''
+
+====Heavy damage====
+*{{AC|TejoPainHeavy1.mp3}}{{AC|TejoPainHeavy2.mp3}}{{AC|TejoPainHeavy3.mp3}} ''*Tejo groans*''
+
+====Fall damage====
+*{{AC|TejoPainFall1.mp3}}{{AC|TejoPainFall2.mp3}}{{AC|TejoPainFall3.mp3}} ''*Tejo groans*''
+
+==Unused lines==
+There are no voice lines at the moment in this section for this Agent.
+
+==Removed lines==
+===Last Kill Enemy MVP===
+*{{AC|TejoLastKillMVP1.mp3}} "I do prefer when they put up a fight."{{#tag:sup|-{{patchv|13.00}}}}
+
+===Be Quiet===
+*{{AC|TejoBeQuiet1.mp3}}{{AC|TejoBeQuiet2.mp3}} "Quiet."
+
+===Rotate===
+*{{AC|TejoRotating1.mp3}}{{AC|TejoRotating2.mp3}} "Rotating."
+
+===Let's Rotate===
+*{{AC|TejoLetsRotate1.mp3}}{{AC|TejoLetsRotate2.mp3}} "Let's rotate."
+
+==[[Range/Lore|The Range's lore assets]]==
+===[[Range/Lore/V25|Season 2025]]===
+*{{AC|file=VoicemailBrimstone105.mp3}} "Cucho, listen. If you expect me to apologize for what happened all those years ago, you don't remember me very well. We cannot bring back the dead, mi hermano. How many more will die unless we focus on the fight at hand? What comes next will not be easy... but if your team is as trustworthy as you say, we may just survive."
+*{{AC|file=VoicemailBrimstone107.mp3}} "Qué hubo Brimstone, perhaps I did not make myself clear. We are facing a serious threat. As of now, these kids you've trained aren't going to cut it. You need someone who can keep the younger ones in line; talk shit with them, talk business with us. I have someone in mind. Lucky for you, she's been working with me for a long time. I'll make the introduction. Adiós, cucho."
+*{{AC|file=VoicemailBrimstone111.mp3}} "Brimstone, I reviewed the team's routine report on Omega activity, something caught my eye. There is an increase in military-grade energy production and transport. It is behavior I have seen before when my old clients in weapons R&D would bring a project into full production. The Omega markets are different than ours, it is true, but... I don't like the smell of it. Someone is building something, hermano, something big. It behooves us to find out what."
+*{{AC|file=VoicemailBrimstone113.mp3}} "Brimstone, hermano. I'm told you're not joining us later to watch the game. All these years and you're still sticking with your hijueputa "I only watch baseball". Why watch people just stand around for five hours?! Let me tell you something; this is how you lose the respect of the young people on your team. Football is everything, cucho. We'll talk more when we see you. Tonight."
+*{{AC|file=VoicemailBrimstone116.mp3}} "What did I tell you? You should listen to me more often, hermano. Would save us time. Paris is safe and Atlas is bleeding. They're going to be on bed rest for a while, which gives us time to do the same. You know how it is, another apocalypse is just around the corner. But now, we relax! We're overdue for a few drinks. I'll bring over a bottle I've been saving, okay? Adiós, my friend."
+
+==Notes==
+:''To easily see which quotes were added corresponding to the patch, use your browser's Find function and type the patch number (e.g. v13.00).
+*{{ui|Removed}} 1 voice line removed from patch {{patchv|13.00}}, documented in the patch notes.
+
+==Navigation==
+{{Navbox agents}}
+[[Category:Quotes]]

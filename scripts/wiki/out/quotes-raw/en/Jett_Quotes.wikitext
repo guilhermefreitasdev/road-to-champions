@@ -1,0 +1,889 @@
+{{TOCright}}
+This is a '''list of quotes by {{ai|Jett}}'''. Jett is voiced by 
+Shannon Williams in English. Necessary quotes translated are from Korean to English. Jett has a total of {{PAGESINCATEGORY:Jett Quotes}} files of quotes including unused and removed lines, and excluding [[#The Range's lore assets|The Range's lore assets]].
+
+A downloadable folder containing all the audio files on this page can be found [https://drive.google.com/drive/folders/1ueBHt-x8hEQW2sKy5bX26DFywKfahhkp?usp=sharing here].
+
+==Agent Selected==
+*{{AC|JettPick.mp3}} "Cool. Let's go."
+
+==Abilities==
+==={{abi text|Cloudburst}}===
+====Cast====
+*{{AC|JettCloudburstCast1.mp3}}{{AC|JettCloudburstCast3.mp3}}{{AC|JettCloudburstCast6.mp3}} ''*Jett grunts*''
+*{{AC|JettCloudburstCast2.mp3}}{{AC|JettCloudburstCast4.mp3}}{{AC|JettCloudburstCast5.mp3}} "Blocking sight."
+
+==={{abi text|Updraft}}===
+====Cast====
+*{{AC|JettUpdraftCast1.mp3}}{{AC|JettUpdraftCast2.mp3}}{{AC|JettUpdraftCast3.mp3}} ''*Jett grunts*''
+
+==={{abi text|Tailwind}}===
+====Cast====
+*{{AC|JettTailwindCast1.mp3}}{{AC|JettTailwindCast2.mp3}}{{AC|JettTailwindCast3.mp3}} ''*Jett grunts*''
+
+==={{abi text|Blade Storm}}===
+====Ally Cast====
+*{{AC|JettUltAllyCast.mp3}} "Watch this!"
+
+====Enemy Cast====
+*{{AC|JettUltEnemyCast.mp3}} "Get out of my way!"
+
+====Throw knives====
+*{{AC|JettUltFire1.mp3}}{{AC|JettUltFire2.mp3}}{{AC|JettUltFire3.mp3}} ''*Jett grunts*''
+
+====Kill====
+*{{AC|JettUltKill.mp3}} "Give me those back."
+
+==Buy Phase==
+===Match Start===
+*{{AC|JettMatchStart1.mp3}} "Think you can keep up? Who am I kidding? You know you can't keep up."
+*{{AC|JettMatchStart2.mp3}} "Huh! Who are you all? The cleanup crew?"
+*{{AC|JettMatchStart3.mp3}} "I would make fun of their dumb faces, but they're us! Huh, we look stupid."
+*{{AC|JettMatchStart4.mp3}} "Feels like just yesterday I was chopping 달래 at the store. Wonder if that place is still standing."
+**(''달래'': Korean wild chive)
+*{{AC|JettMatchStart5.mp3}} "Oh, I'm hungry. Anyone hungry? Lunch on Brimstone after this!"
+*{{AC|JettMatchStart6.mp3}} "I know I dash around a lot, but I promise I'm looking out for y'all. Take them out while they're busy with me."
+*{{AC|JettMatchStart7.mp3}} "Ayy, the gang's all here! This is great, they don't stand a chance!"
+
+====Attacking====
+*{{AC|JettMatchStartAttack1.mp3}} "Alright, get on site, plant spike, protect spike, go home. Easy peasy."
+
+====Defending====
+*{{AC|JettMatchStartDefense1.mp3}} "Maybe if we kick their asses hard enough, they'll stop bothering us."
+
+====[[Ascent]]====
+*{{AC|JettMatchStartAscent.mp3}} "Careful of the edges! Not sure if I could catch you in time if you fell off. I mean, I'd try of course."
+
+====[[Lotus]]====
+*{{AC|JettMatchStartLotus.mp3}} "This place gives me the creeps. Feels like we're being watched."
+
+====[[Sunset]]====
+*{{AC|JettMatchStartSunset.mp3}} "Oh, there's a phở place here I've been dying to try! Let's get this over with quick."
+
+===Round Start===
+*{{AC|JettRoundStart1.mp3}} "Woo! We got this."
+*{{AC|JettRoundStart2.mp3}} "I got your backs. Just, y'know, from the front."
+*{{AC|JettRoundStart3.mp3}} "Wind, show me where to go."
+*{{AC|JettRoundStart4.mp3}} "We get a pick, we move in. Got it?"
+*{{AC|JettRoundStart7.mp3}} "This place is nice, but not nice enough to die in. Let's win and get outta here."
+*{{AC|JettRoundStart8.mp3}} "Just let them try to catch me."
+*{{AC|JettRoundStart9.mp3}} "Woo, okay, we know the drill. Stick to your roles and we'll crush it."
+*{{AC|JettRoundStart10.mp3}} "Race you to the spike sites!"
+*{{AC|JettRoundStart11.mp3}} "I'm amped! Let's go! I got things to do."
+*{{AC|JettRoundStart12.mp3}} "Snack time! Sorry, I only brought enough for me."
+
+====Last round won====
+*{{AC|JettRoundWon1.mp3}} "Keep it up. Screw up, and they're on us!"
+*{{AC|JettRoundWon2.mp3}} "Let's blow them over."
+*{{AC|JettRoundWon3.mp3}} "Sweet, that went well! Alright, same thing this time."
+*{{AC|JettRoundWon4.mp3}} "Nice, killed it! And them. We definitely killed them."
+
+=====While in the lead=====
+*{{AC|JettLead1.mp3}} "They're supposed to be fighting back, right?"
+*{{AC|JettLead2.mp3}} "Damn right we're crushing it!"
+*{{AC|JettLead3.mp3}} "This is fun. Who needs training dummies when you have real dummies!"
+*{{AC|JettLead4.mp3}} "Love it when they make it easy for us."
+
+=====Making a comeback=====
+*{{AC|JettComeback1.mp3}} "Yeah! Let's bring it back."
+*{{AC|JettComeback2.mp3}} "Finally. This is how I like to win."
+*{{AC|JettComeback3.mp3}} "We're gonna win. No other option. Let's go."
+*{{AC|JettComeback4.mp3}} "Okay, 가자! Keep this momentum!
+**(''가자'': Let's go)
+
+===Last round in the half===
+====Attacking====
+*{{AC|JettLastRound1.mp3}} "We lose everything after this. Spend it."
+
+====Defending====
+*{{AC|JettLastRound2.mp3}} "Use everything you have, we lose it anyway."
+
+===Match Point===
+*{{AC|JettMatchPoint1.mp3}} "Oh look! They're desperate."
+*{{AC|JettMatchPoint2.mp3}} "Let's end this."
+
+===Shop===
+====Let's Buy====
+*{{AC|JettBuying1.mp3}}{{AC|JettBuying2.mp3}} "I'm buying."
+
+====Let's Save====
+*{{AC|JettSaving1.mp3}}{{AC|JettSaving2.mp3}} "I'm gonna save."
+
+====I Have Extra Creds====
+*{{AC|JettOffer1.mp3}}{{AC|JettOffer2.mp3}} "I have extra money if anyone needs."
+
+====Requested====
+*{{AC|JettRequest1.mp3}}{{AC|JettRequest2.mp3}} "Need a drop."
+
+===Barrier Down===
+*{{AC|JettBarrierDown1.mp3}} "Keep it up!"
+*{{AC|JettBarrierDown2.mp3}} "Let's take at least one down with us!"
+*{{AC|JettBarrierDown3.mp3}} "Time to mix things up."
+*{{AC|JettBarrierDown4.mp3}} "Even fight? That's fun."
+*{{AC|JettBarrierDown5.mp3}} "They're not better than me."
+*{{AC|JettBarrierDown6.mp3}} "You can't catch us!"
+*{{AC|JettBarrierDown7.mp3}} "Do it again!"
+*{{AC|JettBarrierDown8.mp3}} "Good work! Don't screw it up."
+*{{AC|JettBarrierDown9.mp3}} "Let's take what they have."
+*{{AC|JettBarrierDown10.mp3}} "Hold those angles!"
+*{{AC|JettBarrierDown11.mp3}} "This is our home. Keep them out!"
+*{{AC|JettBarrierDown12.mp3}} "Are they asleep?"
+*{{AC|JettBarrierDown13.mp3}} "Let's crack them open."
+*{{AC|JettBarrierDown14.mp3}}{{AC|JettBarrierDown15.mp3}} "Keep up."
+*{{AC|JettBarrierDown16.mp3}}{{AC|JettBarrierDown17.mp3}} "Let's go!"
+*{{AC|JettBarrierDown18.mp3}} "Let's fly."
+*{{AC|JettBarrierDown19.mp3}} "Stay safe."
+*{{AC|JettBarrierDown20.mp3}} "This is gonna be fun!"
+*{{AC|JettBarrierDown21.mp3}} "We can come back from this."
+
+==Spike==
+===Forgotten in spawn===
+*{{AC|JettForgotSpike1.mp3}} "Guys, come on. The spike!"
+*{{AC|JettForgotSpike2.mp3}} "And the spike's still in base."
+
+===Ally carrier down===
+*{{AC|JettSpikeDown1.mp3}}{{AC|JettSpikeDown2.mp3}} "Our spike carrier is killed."
+
+===Dropped===
+*{{AC|JettSpikeDropped1.mp3}}{{AC|JettSpikeDropped2.mp3}} "Spike dropped."
+
+===Retrieved===
+*{{AC|JettSpikePickedUp1.mp3}}{{AC|JettSpikePickedUp2.mp3}} "I got the spike."
+
+===Planted===
+*{{AC|JettSpikePlanted1.mp3}}{{AC|JettSpikePlanted2.mp3}} "Spike planted."
+
+===Spotted===
+*{{AC|JettSpikeSpottedA1.mp3}}{{AC|JettSpikeSpottedA2.mp3}} "Spike spotted A."
+*{{AC|JettSpikeSpottedB1.mp3}}{{AC|JettSpikeSpottedB2.mp3}} "Spike spotted B."
+*{{AC|JettSpikeSpottedC1.mp3}}{{AC|JettSpikeSpottedC2.mp3}} "Spike spotted C."
+*{{AC|JettSpikeSpottedASpawn1.mp3}}{{AC|JettSpikeSpottedASpawn2.mp3}} "Spike's in Attacker Spawn."
+*{{AC|JettSpikeSpottedDSpawn1.mp3}}{{AC|JettSpikeSpottedDSpawn2.mp3}} "Spike's in Defender Spawn."
+*{{AC|JettSpikeSpottedMid1.mp3}}{{AC|JettSpikeSpottedMid2.mp3}} "Spike spotted Mid."
+
+===Defuse resumed===
+*{{AC|JettDefuseResumed1.mp3}} "Aww, at least they tried."
+*{{AC|JettDefuseResumed2.mp3}} "Aww, they tried."
+
+===Defuse time running out===
+*{{AC|JettDefuseLate1.mp3}}{{AC|JettDefuseLate2.mp3}} "This, is nothing."
+
+===Defuse successful===
+*{{AC|JettDefuseComplete1.mp3}} "Aww. Was that important?"
+
+==Kill==
+*{{AC|JettKill1.mp3}} "Bye!"
+*{{AC|JettKill2.mp3}} "Stay down!"
+*{{AC|JettKill3.mp3}} "One down."
+*{{AC|JettKill4.mp3}} "See ya!"
+*{{AC|JettKill5.mp3}} "Yikes!"
+*{{AC|JettKill6.mp3}} ''*Jett scoffs*''
+*{{AC|JettKill7.mp3}} "Oof!"
+*{{AC|JettKill8.mp3}} "Enemy killed."
+*{{AC|JettKill9.mp3}} "Night night!"
+*{{AC|JettKill10.mp3}} "Oops!"
+
+===Headshot===
+*{{AC|JettHeadshot1.mp3}} "Be faster."
+*{{AC|JettHeadshot2.mp3}} "Headshot."
+*{{AC|JettHeadshot3.mp3}} "Your fault!"
+*{{AC|JettHeadshot4.mp3}} "Duck!"
+*{{AC|JettHeadshot5.mp3}} "Nailed them."
+*{{AC|JettHeadshot6.mp3}} "Ha, gottem!"
+
+===[[Melee]]===
+*{{AC|JettMeleeKill1.mp3}} "Oh no!"
+*{{AC|JettMeleeKill2.mp3}} "Embarrassing!"
+
+===Triple===
+*{{AC|JettTriple1.mp3}}{{AC|JettTriple2.mp3}} "Three."
+
+===Quadra===
+*{{AC|JettQuadra1.mp3}}{{AC|JettQuadra2.mp3}} "Four."
+
+===One kill remaining (game-mode specific)===
+*{{AC|JettOneKillLeft1.mp3}}{{AC|JettOneKillLeft2.mp3}} "Okay, where's the straggler?"
+
+==Round End==
+===Ace===
+*{{AC|JettAce1.mp3}} "Ha! You should've seen your faces!"
+*{{AC|JettAce2.mp3}} "Woohoo!" ''*Jett sings fanfare*''
+
+===Clutch===
+*{{AC|JettClutch1.mp3}} "Easy."
+*{{AC|JettClutch2.mp3}} "Get out."
+*{{AC|JettClutch4.mp3}} "What would you all do without me?"
+*{{AC|JettClutch5.mp3}} "Oh, my back hurts! Everyone's so heavy!"
+*{{AC|JettClutch6.mp3}} ''*Jett yawns*'' "And I wasn't even trying." 
+
+===Flawless or Team Ace===
+*{{AC|JettFlawless1.mp3}} "Wow, so embarrassing!"
+*{{AC|JettFlawless2.mp3}} "Ha! We crushed them!"
+
+===Thrifty===
+*{{AC|JettThrifty1.mp3}} "I could not have made that easier!"
+
+===Last Kill===
+*{{AC|JettLastKill1.mp3}} "Last one down."
+*{{AC|JettLastKill2.mp3}} "There you are, you little shit."
+*{{AC|JettLastKill3.mp3}} "There you are."
+*{{AC|JettLastKill4.mp3}} "You? Outrun me?"
+*{{AC|JettLastKill5.mp3}} "Aww, thought you'd try harder!"
+*{{AC|JettLastKill6.mp3}} "Yikes, that sucks!"
+
+====Enemy MVP====
+There are no voice lines at the moment in this section for this Agent.
+
+====Using [[Melee]]====
+*{{AC|JettLastKillMelee.mp3}} "Don't stress. I'm super quiet."
+
+===Low HP===
+*{{AC|JettLowHP1.mp3}} "Dying, would've sucked."
+
+==Match End==
+===Match Win===
+*{{AC|JettMatchWin1.mp3}} "Too easy."
+*{{AC|JettMatchWin2.mp3}} "I'm bored. Let's go."
+*{{AC|JettMatchWin3.mp3}} "Was that supposed to be a fight?"
+
+====[[Icebox]]====
+*{{AC|JettMatchWinIcebox.mp3}} "Woo, okay! Sauna time!"
+
+===Runner-up (game-mode specific)===
+*{{AC|JettRunnerUp1.mp3}} "Alright, I'll take it, I'll take it."
+*{{AC|JettRunnerUp2.mp3}} "Could've been first if I tried."
+*{{AC|JettRunnerUp3.mp3}} "Whatever. Good for now."
+
+==Agent-specific interactions==
+{| class="wikitable sortable"
+!To Agent
+!Scenario
+!width=40%; class=unsortable|Ally
+!width=40%; class=unsortable|Enemy
+|-
+|rowspan=2|{{Ai|Astra}}
+|Commend
+|{{AC|JettAllyAstraCommend.mp3}} "우와! 장난 아니다, Astra, you're amazing!"
+*(''우와'': Wow)
+*(''장난 아니다'': No kidding)
+|
+|-
+|Last Kill
+|
+|{{AC|JettEnemyAstraLastKill.mp3}} "Guardian?" ''*Jett scoffs*'' "Of what? The ground?"
+|-
+|rowspan=3|{{Ai|Breach}}
+|Round Start
+|
+|{{AC|JettEnemyBreachRoundStart.mp3}} "Watch out for Breach's impacts. It's hard to move after that."
+|-
+|Commend
+|{{AC|JettAllyBreachCommend.mp3}} "Breach, my man!"
+|
+|-
+|Barrier Down
+|{{AC|JettAllyBreachBarrierDown.mp3}} "Knock 'em down, Breach."
+|
+|-
+|rowspan=4|{{ai|Brimstone}}
+|Match Start
+|{{AC|JettAllyBrimstoneMatchStart.mp3}} "Yo, Brimstone! You know the drill. Just show me where to go."
+|
+|-
+|Commend 
+|{{AC|JettAllyBrimstoneCommend.mp3}} "Hell yeah, Brimstone! The best defense, is a good offense."
+|
+|-
+|Barrier Down
+|
+|{{AC|JettEnemyBrimstoneBarrierDown.mp3}} "You better hide, old man!"
+|-
+|Last Kill
+|
+|{{AC|JettEnemyBrimstoneLastKill.mp3}} "You gotta retire sometime."
+|-
+|rowspan=2|{{ai|Chamber}}
+|Barrier Down
+|{{AC|JettAllyChamberBarrierDown.mp3}} "Chamber, I make space, you hold it down."
+|
+|-
+|Last Kill
+|
+|{{AC|JettEnemyChamberLastKill.mp3}} "Huh, we played, you lost."
+|-
+|rowspan=3|{{Ai|Cypher}}
+|Round Start
+|{{AC|JettAllyCypherRoundStart.mp3}} "Cypher, just tell me where they are. I'll do the rest."
+|
+|-
+|Barrier Down
+|
+|{{AC|JettEnemyCypherBarrierDown.mp3}} "I'll find their Cypher."
+|-
+|Kill
+|
+|{{AC|JettEnemyCypherKill.mp3}} "Eyes down."
+|-
+|{{Ai|Deadlock}}
+|Round Start
+|
+|{{AC|JettEnemyDeadlockRoundStart.mp3}} "Ugh, Deadlock's wires are obnoxious! Shoot them for me, yeah?" 
+|-
+|{{ai|Fade}}
+|Last Kill
+|
+|{{AC|JettEnemyFadeLastKill.mp3}} "Stay out of my head, weirdo."
+|-
+|rowspan=5|{{Ai|Gekko}}
+|Chat
+|
+:[[File:Jett icon.png|20px|link=Jett]] {{AC|JettAllyGekkoChat.mp3}} "Hey Gekko, still good to get food later, that new place?"
+:[[File:Gekko icon.png|20px|link=Gekko]] {{AC|GekkoAllyJettChat.mp3}} "Chica, you know I am! Let the foodies unite!"
+:*(''Chica'': Girl)
+|-
+|Match Start
+|{{AC|JettAllyGekkoMatchStart.mp3}} "Ugh, Gekko, do you really need all four of your little cuties? Come on, let me borrow Dizzy."
+|
+|-
+|Round Start
+|{{AC|JettAllyGekkoRoundStart.mp3}} "Gekko, I'll protect Wingman with my life. No one will harm our little hero."
+|
+|-
+|Barrier Down
+|{{AC|JettAllyGekkoBarrierDown.mp3}} "Come on, Gekko. Let's get it!" 
+|
+|-
+|Commend
+|{{AC|JettAllyGekkoCommend.mp3}} "쩐다 쩔어! Pop off, Gekko!"
+*(''쩐다 쩔어'': Sick)
+|
+|-
+|{{ai|Harbor}}
+|Barrier Down
+|
+|{{AC|JettEnemyHarborBarrierDown.mp3}} "Don't let Harbor slow you down."
+|-
+|rowspan=7|{{Ai|Jett}}
+|rowspan=2|Match Start
+|
+|{{AC|JettEnemyJettMatchStart.mp3}} "I know your tricks, wind girl. You're not faster than me!"
+|-
+|
+|{{AC|JettEnemyJettMatchStart2.mp3}} "Ew, is that me over there? 저리 꺼져."
+*(''저리 꺼져'': Go away)
+|-
+|Round Start
+|
+|{{AC|JettEnemyJettRoundStart.mp3}} "Their Jett has nothin' on me. I got her."
+|-
+|rowspan=2|Kill
+|
+|{{AC|JettEnemyJettKill.mp3}} "Clone killed."
+|-
+|
+|{{AC|JettEnemyJettKill2.mp3}} "Grounded."
+|-
+|rowspan=2|Last Kill
+|
+|{{AC|JettEnemyJettLastKill.mp3}} "No way, we're the same!"
+|-
+|
+|{{AC|JettEnemyJettLastKill2.mp3}} "Looks like I was the stronger one."
+|-
+|{{Ai|KAY/O}}
+|Match Start
+|{{AC|JettAllyKAYOMatchStart.mp3}} "KAY/O, alright! Go hit 'em with some zeros and ones big guy!" 
+|
+|-
+|rowspan=2|{{Ai|Killjoy}}
+|Match Start 
+|{{AC|JettAllyKilljoyMatchStart.mp3}} "Yo, Killjoy? Think you could enhance my knives at some point? Maybe some lasers, homing tech. I-I'm just spitballing here."
+|{{AC|JettEnemyKilljoyMatchStart.mp3}} "Maybe their Killjoy isn't as smart as ours. I don't wanna deal with her if she is."
+|-
+|Commend 
+|{{AC|JettAllyKilljoyCommend.mp3}} "Alright, I take back what I said about those bots. They're pretty good. And, so are you."
+|
+|-
+|rowspan=3|{{Ai|Neon}}
+|Chat
+|
+:[[File:Jett icon.png|20px|link=Jett]] {{AC|JettAllyNeonChat.mp3}} "Hey Neon, just saying, wind, lightning, we could make a storm!"
+:[[File:Neon icon.png|20px|link=Neon]] {{AC|NeonAllyJettChat.mp3}} "Sounds reckless. Sure, why not?"
+|-
+|Match Start
+|
+|{{AC|JettEnemyNeonMatchStart.mp3}} "They brought Neon? Huh, she's fast, but can she fly? Nope."
+|-
+|Commend
+|{{AC|JettAllyNeonCommend.mp3}} "폼 미쳤는데? Neon! Leave some for me, yeah?" 
+*(''폼 미쳤는데'': Are you insane)
+|
+|-
+|{{Ai|Omen}}
+|Barrier Down
+|
+|{{AC|JettEnemyOmenBarrierDown.mp3}} "I'll show you scary, Omen."
+|-
+|rowspan=7|{{Ai|Phoenix}}
+|rowspan=2|Chat
+|
+:[[File:Jett icon.png|20px|link=Jett]] {{AC|JettAllyPhoenixChat.mp3}} "Hey Phoenix, if you die, I call dibs on your jacket."
+:[[File:Phoenix icon.png|20px|link=Phoenix]] {{AC|PhoenixAllyJettChat.mp3}} "Ah don't be like that, you know you'd also want my shoes."
+|
+|-
+|
+:[[File:Jett icon.png|20px|link=Jett]] {{AC|JettAllyPhoenixChat2.mp3}} "Hey Phoenix, if I die out there, you get dibs on my secret cookbook."{{#tag:sup|{{patchv|13.00}}+}}
+:[[File:Phoenix icon.png|20px|link=Phoenix]] {{AC|PhoenixAllyJettChat2.mp3}} "Don't be joking like that! You have me in tears for real, Jett."
+|
+|-
+|Match Start
+|{{AC|JettAllyPhoenixMatchStart.mp3}} "Hey Phoenix! If I die? Viking funeral, all the way."
+|
+|-
+|rowspan=2|Round Start
+|{{AC|JettAllyPhoenixRoundStart.mp3}} "Don't mess up that pretty face, Phoenix."
+|
+|-
+|{{AC|JettAllyPhoenixRoundStart2.mp3}} "Where's that smile, Phoenix?"
+|
+|-
+|Commend 
+|{{AC|JettAllyPhoenixCommend.mp3}} "Phoenix, yo! That was insane!"
+|
+|-
+|Last Kill
+|
+|{{AC|JettEnemyPhoenixLastKill.mp3}} "Aww, sorry pretty boy!"
+|-
+|rowspan=2|{{Ai|Raze}}
+|Commend 
+|{{AC|JettAllyRazeCommend.mp3}} "There's my bombshell! Crushed it, girl."
+|
+|-
+|Kill
+|
+|{{AC|JettEnemyRazeKill.mp3}} "Party's over."
+|-
+|rowspan=2|{{Ai|Reyna}}
+|Commend 
+|{{AC|JettAllyReynaCommend.mp3}} "Reyna, damn! Even I couldn't keep up!"
+|
+|-
+|Barrier Down
+|{{AC|JettAllyReynaBarrierDown.mp3}} "Do what you gotta do, Reyna."
+|
+|-
+|rowspan=9|{{Ai|Sage}}
+|Chat
+|
+:[[File:Jett icon.png|20px|link=Jett]] {{AC|JettAllySageChat.mp3}} "So Sage, when are you going to teach me how to revive people, huh?" 
+:[[File:Sage icon.png|20px|link=Sage]] {{AC|SageAllyJettChat.mp3}} "Jett, you- that's not how radiants work-. Oh I see, you're joking. Hilarious."
+|
+|-
+|Match Start 
+|{{AC|JettAllySageMatchStart.mp3}} "Sage, you lock 'em down, and I'll take them out. Just like we practiced."
+|-
+|rowspan=3|Round Start
+|
+|{{AC|JettEnemySageRoundStart.mp3}} "C'mon guys, take out their healer! It's super annoying to kill people twice."
+|-
+|
+|{{AC|JettEnemySageRoundStart2.mp3}} "Her slow fields are so annoying!"
+|-
+|
+|{{AC|JettEnemySageRoundStart3.mp3}} "Just gotta play around the slow fields, and we're fine."
+|-
+|Commend 
+|{{AC|JettAllySageCommend.mp3}} "Wow, Sage! When you turn it on, you turn it on! Great work!"
+|
+|-
+|Barrier Down
+|{{AC|JettAllySageBarrierDown.mp3}} "Keep those heals comin'!"
+|
+|-
+|Kill
+|
+|{{AC|JettEnemySageKill.mp3}} "Healer down."
+|-
+|Last Kill
+|
+|{{AC|JettEnemySageLastKill.mp3}} "Aww, can't res yourself?"
+|-
+|rowspan=3|{{Ai|Skye}}
+|Chat
+|
+:[[File:Jett icon.png|20px|link=Jett]] {{AC|JettAllySkyeChat.mp3}} "Skye. Ever though thought about making other summons? Like, uh, lions. Or, ooh, dragons!"
+:[[File:Skye icon.png|20px|link=Skye]] {{AC|SkyeAllyJettChat.mp3}} "Tried once. It was not pretty."
+|
+|-
+|Match Start
+|
+|{{AC|JettEnemySkyeMatchStart.mp3}} "Owls, hawks. What the hell? The sky's crowded nowadays."
+|-
+|Round Start 
+|{{AC|JettAllySkyeRoundStart.mp3}} "Forge us a path, Skye. I'll be right behind ya."
+|{{AC|JettEnemySkyeRoundStart.mp3}} "I'm faster than Skye's wolves."
+|-
+|rowspan=3|{{Ai|Sova}}
+|Round Start 
+|{{AC|JettAllySovaRoundStart.mp3}} "I still can't get over that owl, Sova. It's too cute. Why is it so cute?"
+|
+|-
+|Match Start
+|
+|{{AC|JettEnemySovaMatchStart.mp3}} "Let that Sova find me, whatever. It'll help him look death in face."
+|-
+|Barrier Down
+|
+|{{AC|JettEnemySovaBarrierDown.mp3}} "You better run, Sova."
+|-
+|rowspan=2|{{Ai|Viper}}
+|Barrier Down
+|{{AC|JettAllyViperBarrierDown.mp3}} "Viper, be careful with that gas!"
+|
+|-
+|Kill
+|
+|{{AC|JettEnemyViperKill.mp3}} "Poison's gone."
+|-
+|{{Ai|Yoru}}
+|Match Start
+|{{AC|JettAllyYoruMatchStart.mp3}} "Yoru, come on! You gotta let me borrow some hair product. Nothing can handle my whole whoosh whoosh thing. I'm desperate!"
+|
+|}
+
+==Radio Commands==
+===Menu Index only===
+====Caution here====
+*{{AC|JettCaution1.mp3}}{{AC|JettCaution2.mp3}} "Enemies nearby."
+
+====Going Area====
+*{{AC|JettGoingA1.mp3}}{{AC|JettGoingA2.mp3}} "Going A."
+*{{AC|JettGoingB1.mp3}}{{AC|JettGoingB2.mp3}} "Going B."
+*{{AC|JettGoingC1.mp3}}{{AC|JettGoingC2.mp3}} "Going C."
+*{{AC|JettGoingMid1.mp3}}{{AC|JettGoingMid2.mp3}} "Going Mid."
+
+====Need Support====
+*{{AC|JettHelp1.mp3}}{{AC|JettHelp2.mp3}}{{AC|JettHelp3.mp3}} "Help."
+
+====On my way====
+*{{AC|JettOnMyWay1.mp3}}{{AC|JettOnMyWay2.mp3}} "On my way."
+
+====Play for picks====
+*{{AC|JettPlayForPicks1.mp3}}{{AC|JettPlayForPicks2.mp3}} "Pick 'em off."
+
+===Wheel Index only===
+====Encourage====
+*{{AC|JettEncouraging1.mp3}}{{AC|JettEncouraging2.mp3}}{{AC|JettEncouraging3.mp3}} "We got this."
+
+====I'll lurk====
+Only as Attackers during Buy Phase.
+*{{AC|JettLurking1.mp3}}{{AC|JettLurking2.mp3}} "I'm lurking."
+
+====I'll push out====
+Only as Defenders during Buy Phase.
+*{{AC|JettPushingOut1.mp3}}{{AC|JettPushingOut2.mp3}} "I'm pushing out."
+
+====I'm holding position====
+Only as Defenders during Buy Phase.
+*{{AC|JettHoldingPosition1.mp3}}{{AC|JettHoldingPosition2.mp3}} "Holding position."
+
+====Let's Attack====
+Only during Round Phase.
+*{{AC|JettLetsAttack1.mp3}}{{AC|JettLetsAttack2.mp3}} "Let's attack."
+
+====Let's hold positions====
+Only as Defenders during Buy Phase.
+*{{AC|JettHoldPositions1.mp3}}{{AC|JettHoldPositions2.mp3}} "Let's hold positions."
+
+====Let's play slow====
+Only as Attackers at anytime.
+*{{AC|JettPlaySlow1.mp3}}{{AC|JettPlaySlow2.mp3}} "Let's play slow."
+
+====Let's push out====
+Only as Defenders during Buy Phase.
+*{{AC|JettPushOut1.mp3}}{{AC|JettPushOut2.mp3}} "Let's push out."
+
+====Let's spread out====
+*{{AC|JettSpreadOut1.mp3}}{{AC|JettSpreadOut2.mp3}} "Let's spread out."
+
+====Nice Try====
+*{{AC|JettNiceTry1.mp3}}{{AC|JettNiceTry2.mp3}}{{AC|JettNiceTry3.mp3}} "Nice try."
+
+====Stick together====
+*{{AC|JettStickTogether1.mp3}}{{AC|JettStickTogether2.mp3}} "Stick together."
+
+===Menu and Wheel Index===
+====Commend====
+*{{AC|JettCommend1.mp3}}{{AC|JettCommend2.mp3}}{{AC|JettCommend3.mp3}} "Good work."
+
+====Fall Back====
+Menu Index at anytime, or Wheel Index only during Round Phase.
+*{{AC|JettFallBack1.mp3}}{{AC|JettFallBack2.mp3}} "Fall back."
+
+====Hello====
+*{{AC|JettHello1.mp3}}{{AC|JettHello2.mp3}}{{AC|JettHello3.mp3}} "Hey."
+
+====I'll take point====
+Wheel Index only as Attackers during Buy Phase, or Menu Index at anytime regardless of Attackers or Defenders.
+*{{AC|JettTakePoint1.mp3}}{{AC|JettTakePoint2.mp3}} "I'll take point."
+
+====Let's rush them (Radio Command)====
+*{{AC|JettRush1.mp3}}{{AC|JettRush2.mp3}} "Rush them."
+
+====Need healing====
+*{{AC|JettHealing1.mp3}}{{AC|JettHealing2.mp3}} "Need healing."
+
+====No====
+*{{AC|JettNo1.mp3}}{{AC|JettNo2.mp3}}{{AC|JettNo3.mp3}} "No."
+
+====Sorry====
+*{{AC|JettSorry1.mp3}}{{AC|JettSorry2.mp3}}{{AC|JettSorry3.mp3}} "Sorry."
+
+====Thanks====
+*{{AC|JettThanks1.mp3}}{{AC|JettThanks2.mp3}}{{AC|JettThanks3.mp3}} "Thanks."
+
+====Ultimate Status====
+*{{AC|JettUltDown1.mp3}}{{AC|JettUltDown2.mp3}} "My ult's not ready."
+*{{AC|JettUltAlmost1.mp3}}{{AC|JettUltAlmost2.mp3}} "My ult's almost ready."
+*{{AC|JettUltReady1.mp3}}{{AC|JettUltReady2.mp3}} "My ult's ready."
+
+====Yes====
+*{{AC|JettYes1.mp3}}{{AC|JettYes2.mp3}}{{AC|JettYes3.mp3}} "Yes."
+
+===Wheel Index requiring Minimap===
+For the following voicelines, the minimap must be open and then open ping wheel and activate strategy.
+====Faking====
+Only as Attackers during Buy Phase.
+*{{AC|JettFaking1.mp3}}{{AC|JettFaking2.mp3}} "I'm faking."
+*{{AC|JettFakingA1.mp3}}{{AC|JettFakingA2.mp3}} "I'm faking A."
+*{{AC|JettFakingB1.mp3}}{{AC|JettFakingB2.mp3}} "I'm faking B."
+*{{AC|JettFakingC1.mp3}}{{AC|JettFakingC2.mp3}} "I'm faking C."
+
+====I'm Going Here====
+As Defenders during Buy Phase, or as Attackers at anytime.
+*{{AC|JettGoingA1.mp3}}{{AC|JettGoingA2.mp3}} "Going A."
+*{{AC|JettGoingB1.mp3}}{{AC|JettGoingB2.mp3}} "Going B."
+*{{AC|JettGoingC1.mp3}}{{AC|JettGoingC2.mp3}} "Going C."
+*{{AC|JettGoingMid1.mp3}}{{AC|JettGoingMid2.mp3}} "Going Mid."
+
+====Let's Go Here====
+Only as Attackers during Buy Phase.
+*{{AC|JettLetsGoA1.mp3}}{{AC|JettLetsGoA2.mp3}} "Let's go A."
+*{{AC|JettLetsGoB1.mp3}}{{AC|JettLetsGoB2.mp3}} "Let's go B."
+*{{AC|JettLetsGoC1.mp3}}{{AC|JettLetsGoC2.mp3}} "Let's go C."
+*{{AC|JettLetsGoHere1.mp3}}{{AC|JettLetsGoHere2.mp3}} "Let's go here."
+
+====Let's rush them (Minimap)====
+Only as Attackers during Buy Phase.
+*{{AC|JettLetsRush1.mp3}}{{AC|JettLetsRush2.mp3}} "Let's rush them."
+*{{AC|JettLetsRushA1.mp3}}{{AC|JettLetsRushA2.mp3}} "Let's rush A."
+*{{AC|JettLetsRushB1.mp3}}{{AC|JettLetsRushB2.mp3}} "Let's rush B."
+*{{AC|JettLetsRushC1.mp3}}{{AC|JettLetsRushC2.mp3}} "Let's rush C."
+
+====Let's Sneak Here====
+Only as Attackers during Buy Phase.
+*{{AC|JettSneakA1.mp3}}{{AC|JettSneakA2.mp3}} "Let's sneak A."
+*{{AC|JettSneakB1.mp3}}{{AC|JettSneakB2.mp3}} "Let's sneak B."
+*{{AC|JettSneakC1.mp3}}{{AC|JettSneakC2.mp3}} "Let's sneak C."
+*{{AC|JettSneakMid1.mp3}}{{AC|JettSneakMid2.mp3}} "Let's sneak Mid."
+
+====Let's Stack Here====
+Only as Defenders during Buy Phase.
+*{{AC|JettStack1.mp3}}{{AC|JettStack2.mp3}} "Let's stack up."
+*{{AC|JettStackA1.mp3}}{{AC|JettStackA2.mp3}} "Let's stack A."
+*{{AC|JettStackB1.mp3}}{{AC|JettStackB2.mp3}} "Let's stack B."
+*{{AC|JettStackC1.mp3}}{{AC|JettStackC2.mp3}} "Let's stack C."
+*{{AC|JettStackMid1.mp3}}{{AC|JettStackMid2.mp3}} "Let's stack Mid."
+
+====Someone Go Here====
+As Attackers during Round Phase, or as Defenders at anytime.
+*{{AC|JettNeedSomeoneA1.mp3}}{{AC|JettNeedSomeoneA2.mp3}} "Someone go A."
+*{{AC|JettNeedSomeoneB1.mp3}}{{AC|JettNeedSomeoneB2.mp3}} "Someone go B."
+*{{AC|JettNeedSomeoneC1.mp3}}{{AC|JettNeedSomeoneC2.mp3}} "Someone go C."
+*{{AC|JettNeedSomeoneMid1.mp3}}{{AC|JettNeedSomeoneMid2.mp3}} "Someone go Mid."
+
+====Spike's here====
+Only as Defenders during Round Phase.
+*{{AC|JettSpikeA1.mp3}}{{AC|JettSpikeA2.mp3}} "Spike's A."
+*{{AC|JettSpikeB1.mp3}}{{AC|JettSpikeB2.mp3}} "Spike's B."
+*{{AC|JettSpikeC1.mp3}}{{AC|JettSpikeC2.mp3}} "Spike's C."
+*{{AC|JettSpikeMid1.mp3}}{{AC|JettSpikeMid2.mp3}} "Spike's Mid."
+*{{AC|JettSpikeSpottedASpawn1.mp3}}{{AC|JettSpikeSpottedASpawn2.mp3}} "Spike's in Attacker Spawn."
+*{{AC|JettSpikeSpottedDSpawn1.mp3}}{{AC|JettSpikeSpottedDSpawn2.mp3}} "Spike's in Defender Spawn."
+
+==Pings==
+===General===
+*{{AC|JettPing1.mp3}}{{AC|JettPing2.mp3}} "Here."
+
+===Caution===
+*{{AC|JettPingCaution1.mp3}}{{AC|JettPingCaution2.mp3}} "Careful."
+
+===Need support===
+*{{AC|JettHelp1.mp3}}{{AC|JettHelp2.mp3}}{{AC|JettHelp3.mp3}} "Help!"
+
+===On my mark===
+*{{AC|JettOnMyMark1.mp3}}{{AC|JettOnMyMark2.mp3}} "On my mark."
+
+===Ping gun===
+*{{AC|JettPingGun1.mp3}}{{AC|JettPingGun2.mp3}} "Gun here."
+
+===Ping spike===
+*{{AC|JettPingSpike1.mp3}}{{AC|JettPingSpike2.mp3}} "Spike's here."
+
+===Ping for spike defuse===
+*{{AC|JettDefuseSpike1.mp3}}{{AC|JettDefuseSpike2.mp3}} "Defuse the spike!"
+
+===Ping for spike plant===
+*{{AC|JettPlantSpike1.mp3}}{{AC|JettPlantSpike2.mp3}} "Plant the spike!"
+
+===Watching===
+*{{AC|JettWatching1.mp3}}{{AC|JettWatching2.mp3}} "Watching here."
+
+==Other lines==
+===Ability unusable===
+====[[Status Effect#Suppress|Suppressed]]====
+*{{AC|JettCantUse1.mp3}} "I can't use that."
+
+====On cooldown====
+*{{AC|JettOnCooldown1.mp3}} "I gotta wait."
+
+====No charges====
+*{{AC|JettNoCharges1.mp3}} "No charges left."
+
+===Enemy spotted===
+*{{AC|JettEnemyA1.mp3}}{{AC|JettEnemyA2.mp3}} "Enemy spotted A."
+*{{AC|JettEnemyB1.mp3}}{{AC|JettEnemyB2.mp3}} "Enemy spotted B."
+*{{AC|JettEnemyC1.mp3}}{{AC|JettEnemyC2.mp3}} "Enemy spotted C."
+*{{AC|JettEnemyASpawn1.mp3}}{{AC|JettEnemyASpawn2.mp3}} "Someone's in Attacker Spawn."
+*{{AC|JettEnemyDSpawn1.mp3}}{{AC|JettEnemyDSpawn2.mp3}} "Someone's in Defender Spawn."
+*{{AC|JettEnemyMid1.mp3}}{{AC|JettEnemyMid2.mp3}} "Enemy spotted Mid."
+
+====Multiple====
+*{{AC|JettEnemiesA1.mp3}}{{AC|JettEnemiesA2.mp3}} "Multiple enemies A!"
+*{{AC|JettEnemiesB1.mp3}}{{AC|JettEnemiesB2.mp3}} "Multiple enemies B!"
+*{{AC|JettEnemiesC1.mp3}}{{AC|JettEnemiesC2.mp3}} "Multiple enemies C!"
+*{{AC|JettEnemiesASpawn1.mp3}}{{AC|JettEnemiesASpawn2.mp3}} "Enemies in Attacker Spawn!"
+*{{AC|JettEnemiesDSpawn1.mp3}}{{AC|JettEnemiesDSpawn2.mp3}} "Enemies in Defender Spawn!"
+*{{AC|JettEnemiesMid1.mp3}}{{AC|JettEnemiesMid2.mp3}} "Multiple enemies Mid!"
+
+===Reloading===
+*{{AC|JettReloading1.mp3}}{{AC|JettReloading2.mp3}} "Reloading."
+
+===Healed===
+*{{AC|JettRelief1.mp3}}{{AC|JettRelief2.mp3}}{{AC|JettRelief3.mp3}} ''*Jett sighs*''
+
+===Killed===
+*{{AC|JettDeath1.mp3}}{{AC|JettDeath2.mp3}}{{AC|JettDeath3.mp3}} ''*Jett groans*''
+
+===Resurrected via {{abi text|Resurrection}}===
+*{{AC|JettResurrect.mp3}} ''*Jett sighs*'' "Cool."
+
+===Wounded===
+====Light damage====
+*{{AC|JettPainLight1.mp3}}{{AC|JettPainLight2.mp3}}{{AC|JettPainLight3.mp3}} ''*Jett groans*''
+
+====Medium damage====
+*{{AC|JettPainMedium1.mp3}}{{AC|JettPainMedium2.mp3}}{{AC|JettPainMedium3.mp3}} ''*Jett groans*''
+
+====Heavy damage====
+*{{AC|JettPainHeavy1.mp3}}{{AC|JettPainHeavy2.mp3}}{{AC|JettPainHeavy3.mp3}} ''*Jett groans*''
+
+====Fall damage====
+*{{AC|JettPainFall1.mp3}}{{AC|JettPainFall2.mp3}}{{AC|JettPainFall3.mp3}} ''*Jett groans*''
+
+==Unused lines==
+===Match MVP===
+*{{AC|JettMatchMVP1.mp3}} "Oh, my back hurts! Everyone's so heavy!"
+*{{AC|JettMatchMVP2.mp3}} "What would you all do without me?"
+
+==Removed lines==
+===Round Start===
+*{{AC|JettRoundStart5.mp3}} "Let's get these idiots."{{#tag:sup|-{{patchv|13.00}}}}
+*{{AC|JettRoundStart6.mp3}} "I hate to say it but-" ''*Jett sighs*'' "-probably best to play as a team. So, uh, what's the plan?"{{#tag:sup|-{{patchv|13.00}}}}
+
+===Clutch===
+*{{AC|JettClutch3.mp3}} "Huh, oh wow. You guys suck."
+
+===Last Kill Enemy MVP===
+*{{AC|JettLastKillMVP.mp3}} "Looks like I was the stronger one."{{#tag:sup|-{{patchv|13.02}}}}
+
+===Flawless or Team Ace===
+*{{AC|JettFlawless3.mp3}} ''*Jett laughs*'' "You're terrible!"
+
+===Spike Spotted General===
+*{{AC|JettSpikeSpotted1.mp3}}{{AC|JettSpikeSpotted2.mp3}} "Spike spotted."
+
+===Enemy spotted General===
+*{{AC|JettEnemy1.mp3}}{{AC|JettEnemy2.mp3}} "Enemy spotted."
+
+===Multiple Enemies spotted General===
+*{{AC|JettEnemies1.mp3}}{{AC|JettEnemies2.mp3}} "Multiple enemies spotted!"
+
+===Wounded Annoyed===
+*{{AC|JettPainAnnoyed1.mp3}}{{AC|JettPainAnnoyed2.mp3}}{{AC|JettPainAnnoyed3.mp3}} ''*Jett groans*''
+
+===Be Quiet===
+*{{AC|JettBeQuiet1.mp3}}{{AC|JettBeQuiet2.mp3}} "Quiet."
+
+===Rotate===
+*{{AC|JettRotating1.mp3}}{{AC|JettRotating2.mp3}} "Rotating."
+
+===Let's Rotate===
+*{{AC|JettLetsRotate1.mp3}}{{AC|JettLetsRotate2.mp3}} "Let's rotate."
+
+===Affirmation===
+*{{AC|JettAffirmation1.mp3}}{{AC|JettAffirmation2.mp3}} "Sure."
+
+===Callouts===
+*{{AC|JettCalloutA1.mp3}}{{AC|JettCalloutA2.mp3}} "A Site."
+*{{AC|JettCalloutB1.mp3}}{{AC|JettCalloutB2.mp3}} "B Site."
+*{{AC|JettCalloutC1.mp3}}{{AC|JettCalloutC2.mp3}} "C Site."
+*{{AC|JettCalloutMid1.mp3}}{{AC|JettCalloutMid2.mp3}} "Middle."
+
+===Clear Area===
+*{{AC|JettClearThisArea1.mp3}}{{AC|JettClearThisArea2.mp3}} "Clear this area."
+
+===Hold===
+*{{AC|JettHold1.mp3}}{{AC|JettHold2.mp3}} "Hold on."
+
+===Push===
+*{{AC|JettPush1.mp3}}{{AC|JettPush2.mp3}} "Push."
+
+===Regroup===
+*{{AC|JettRegroup1.mp3}}{{AC|JettRegroup2.mp3}} "Regroup."
+
+===Need disrupt===
+*{{AC|JettDisrupt1.mp3}}{{AC|JettDisrupt2.mp3}} "Disrupt here."
+
+===Need scouting===
+*{{AC|JettScout1.mp3}}{{AC|JettScout2.mp3}} "Scout here."
+
+===Need vision block===
+*{{AC|JettBlockVision1.mp3}}{{AC|JettBlockVision2.mp3}} "Block vision here."
+
+===Ping enemy utility===
+*{{AC|JettPingUtility1.mp3}}{{AC|JettPingUtility2.mp3}} "Enemy stuff here."
+
+===Ping Go here===
+*{{AC|JettGoHere1.mp3}}{{AC|JettGoHere2.mp3}} "Let's go here."
+
+==[[Range/Lore|The Range's lore assets]]==
+===[[Range/Lore/EP7|Episode 7]]===
+*{{AC|VoicemailBrimstone59.mp3}} "Ugh, [[Brimstone|Brim]], I have no issue with being the cover-up chef for the surveillance truck, but [[Cypher]] is driving me crazy! That guy thinks every interaction is an opportunity for a life lesson. Look, I know for a fact you can flip a mean burger. With a little training, I think you could cover me for a couple of days. Please!"
+*{{AC|VoicemailBrimstone63.mp3}} "Yo, Brim! Uh, I got your message about the meal I expensed. [[Gekko]] and I might have gone a bit overboard but, guess what? I brought back an A5 wagyu steak just for you! I'll even cook it tonight any way you want! So, uh, can we just let this slide?"
+*{{AC|VoicemailBrimstone65.mp3}} "Brim. [[Breach]] is on me about laying low again. I can't do this anymore! I don't care how many times [[Cypher]] needs to scrub my face off the web! I'm going out like everyone else! I know for a fact he can make it happen if you fund it! Look, I get why [[Omen]] and [[KAYO|KAY/O]] can't leave. I feel bad, I do! But... they're unique cases! I'm young! I should be out there, living my life! I just wanna eat inside of a restaurant, or enjoy a morning run without a stupid disguise! Why should I act like a criminal in hiding when I did nothing wrong?! Seoul? Italy? None of that was my fault! If that little shit from [[Omega]] had just left me alone... If she gets to go out in her world, I'm going out in mine."
+
+===[[Range/Lore/EP9|Episode 9]]===
+*{{AC|VoicemailBrimstone93.mp3}} "Hey, good news. We've been able to track the [[Vyse|escapee]]. It led us straight through two more Hourglass hideouts. I'm at the latest one now... or, what's left of it. Damn, these Scions didn't stand a chance! What this prisoner did to Hourglass, it's... vicious. And she's getting better at it, mastering her powers as she goes. I don't know if this is revenge, or a vendetta, or she's just a monster, or what! I'm gonna send over some videos of the handiwork. You should... brace yourself."
+
+==Notes==
+:''To easily see which quotes were added corresponding to the patch, use your browser's Find function and type the patch number (e.g. v13.00).
+*{{ui|Removed}} 1 voice line removed from patch {{patchv|13.02}}, undocumented in the patch notes.
+*{{ui|Added}} 1 voice line added from patch {{patchv|13.00}}, documented in the patch notes.
+*Additional radio commands added in patch {{patchv|8.11}} are not mentioned in this page.
+*Other voice lines removed were at an unknown timeframe.
+
+== Navigation ==
+{{Navbox agents}}
+[[Category:Quotes]]

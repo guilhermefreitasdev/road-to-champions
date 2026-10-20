@@ -1,0 +1,923 @@
+{{TOCright}}
+This is a '''list of quotes by {{ai|Viper}}'''. Viper is voiced by {{w|Ashly Burch}} in English. Viper has a total of {{PAGESINCATEGORY:Viper Quotes}} files of quotes including unused and removed lines, and excluding [[#The Range's lore assets|The Range's lore assets]].
+
+A downloadable folder containing all the audio files on this page can be found [https://drive.google.com/drive/folders/1gmmzHUydmGhdHo6u-7gCMsG0X9ir4nBL?usp=sharing here].
+==Agent Selected/Unlocked==
+*{{AC|ViperPick.mp3}} "No one can hold their breath forever."
+
+==Abilities==
+===[[Fuel]]===
+====Out of fuel====
+*{{AC|ViperNoFuel1.mp3}}{{AC|ViperNoFuel2.mp3}} "Not enough fuel."
+*{{AC|ViperNoFuel3.mp3}}{{AC|ViperNoFuel4.mp3}} "No fuel."
+
+====Consumption shut down by [[Status Effect#Suppress|Suppression]]====
+*{{AC|ViperFuelSuppressed1.mp3}}{{AC|ViperFuelSuppressed2.mp3}} "Toxins failing!"
+
+==={{abi text|Snake Bite}}===
+====Cast====
+*{{AC|ViperSnakeBiteCast1.mp3}}{{AC|ViperSnakeBiteCast2.mp3}}{{AC|ViperSnakeBiteCast3.mp3}} ''*Viper grunts*''
+
+==={{abi text|Poison Cloud}}===
+====Activate====
+*{{AC|ViperPoisonCloudActivate1.mp3}} "Poison orb emitting."
+
+====Deactivate====
+*{{AC|ViperPoisonCloudDeactivate1.mp3}}{{AC|ViperPoisonCloudDeactivate2.mp3}} "Poison's off."
+
+==={{abi text|Toxic Screen}}===
+====Activate====
+*{{AC|ViperToxicScreenActivate1.mp3}} "Toxins going up."
+
+====Deactivate====
+*{{AC|ViperToxicScreenDeactivate1.mp3}} "Toxin screen down."
+
+==={{abi text|Viper's Pit}}===
+====Ally Cast====
+*{{AC|ViperUltAllyCast.mp3}} "Don't get in my way!"
+
+====Enemy Cast====
+*{{AC|ViperUltEnemyCast.mp3}} "Welcome to my world!
+
+==Buy Phase==
+===Match Start===
+*{{AC|ViperMatchStart1.mp3}} "Only five of them? Pity I brought enough poison for fifty. You can't say I'm not prepared."
+*{{AC|ViperMatchStart2.mp3}} "Use my poison to your advantage, I don't deploy it for kicks."
+*{{AC|ViperMatchStart3.mp3}} "I wonder if these ones will beg. They all do after a while."
+*{{AC|ViperMatchStart4.mp3}} "They call me a monster. Shall I prove them right?"
+*{{AC|ViperMatchStart5.mp3}} "Bodies decompose after twelve hours in acid. There's no reason I know that."
+*{{AC|ViperMatchStart6.mp3}} "Let's take from them what they took from me - everything!"
+*{{AC|ViperMatchStart7.mp3}} "They are not important. Let's move through them, like smoke through lungs."
+
+====Defending====
+* {{AC|ViperMatchStartDefense1.mp3}} "I was saving my best poison for a special occasion but our guests came all this way. It's the least I can do."
+
+====[[Bind]]====
+*{{AC|ViperMatchStartBind.mp3}} "The lies we've told this city. Just to pry it open and suck it dry."
+
+====[[Fracture]]====
+*{{AC|ViperMatchStartFracture.mp3}} "I knew some of them, the people here. Good scientists."
+
+====[[Pearl]]====
+*{{AC|ViperMatchStartPearl.mp3}} "This dome won't protect the city forever. They wanna survive? Stop hiding!"
+
+====[[Summit]]====
+*{{AC|ViperMatchStartSummit.mp3}} "False hope and grief, that's all this valley offers. Everything else is a lie."{{#tag:sup|{{patchv|13.00}}+}}
+
+===Round Start===
+*{{AC|ViperRoundStart1.mp3}} "My priority is their suffering."
+*{{AC|ViperRoundStart2.mp3}} "I'll choke their sight."
+*{{AC|ViperRoundStart3.mp3}} "Make them beg."
+*{{AC|ViperRoundStart4.mp3}} "I hear them scream."
+*{{AC|ViperRoundStart5.mp3}} "Who to smother first?"
+*{{AC|ViperRoundStart6.mp3}} "Look them in the eyes when you kill them."
+*{{AC|ViperRoundStart7.mp3}} "They will die. Hopeless and afraid."
+*{{AC|ViperRoundStart8.mp3}} "Remember, nobody's a hero when they're crying for air."
+*{{AC|ViperRoundStart9.mp3}} "If any of you die I lose a bet with Brimstone, so don't embarrass me like that, please."
+*{{AC|ViperRoundStart10.mp3}} "They're nothing but flies."
+*{{AC|ViperRoundStart11.mp3}} "No one will remember them."
+*{{AC|ViperRoundStart12.mp3}} "If you lose focus, you die. Breathe when it's over."
+
+====Last round won====
+*{{AC|ViperRoundWon1.mp3}} "Good work, keep going."
+*{{AC|ViperRoundWon2.mp3}} "Ah, this is what I live for."
+*{{AC|ViperRoundWon3.mp3}} "Keep kicking them down."
+*{{AC|ViperRoundWon4.mp3}} "Some vermin are born to die, like rats in a lab."
+
+=====While in the lead=====
+*{{AC|ViperLead1.mp3}} "It's hard not to play with my food."
+*{{AC|ViperLead2.mp3}} ''*Viper laughs*'' "Oh, if only I could always feel like this."
+*{{AC|ViperLead3.mp3}} "Again. Don't stop! I want them in pieces!"
+
+=====Making a comeback=====
+*{{AC|ViperComeback1.mp3}} "Oh it's personal now."
+*{{AC|ViperComeback2.mp3}} "They had their fun. Now it's my turn."
+*{{AC|ViperComeback3.mp3}} "Time to kneel."
+
+===Last round in the half===
+====Attacking====
+*{{AC|ViperLastRound1.mp3}} "Can't take anything with us after this. Go for broke."
+
+====Defending====
+*{{AC|ViperLastRound2.mp3}} "We can't take anything with us after this."
+
+===Match Point===
+*{{AC|ViperMatchPoint1.mp3}} "They're in the coffin. Time to bury them."
+*{{AC|ViperMatchPoint2.mp3}} "One last push. Let's make them hurt."
+*{{AC|ViperMatchPoint3.mp3}} "We end them here, we end them forever."
+
+===Shop===
+====Let's Buy====
+*{{AC|ViperBuying1.mp3}}{{AC|ViperBuying2.mp3}} "Buying."
+
+====Let's Save====
+*{{AC|ViperSaving1.mp3}} "Saving."
+*{{AC|ViperSaving2.mp3}} "I'm saving."
+
+====I Have Extra Creds====
+*{{AC|ViperOffer1.mp3}} "Funds to spare."
+*{{AC|ViperOffer2.mp3}} "Need a loan?"
+
+====Requested====
+*{{AC|ViperRequest1.mp3}}{{AC|ViperRequest2.mp3}} "Anyone have funds to spare?"
+
+===Barrier Down===
+*{{AC|ViperBarrierDown1.mp3}} "We will hurt them."
+*{{AC|ViperBarrierDown2.mp3}} "Hurt those who hurt us."
+*{{AC|ViperBarrierDown3.mp3}} "Enough playing with our food."
+*{{AC|ViperBarrierDown4.mp3}} "Keep them back."
+*{{AC|ViperBarrierDown5.mp3}} "They keep clawing at our wall. Pathetic."
+*{{AC|ViperBarrierDown6.mp3}} "Bury them."
+*{{AC|ViperBarrierDown7.mp3}} "Leave no trace of them."
+*{{AC|ViperBarrierDown8.mp3}} "Stop their advance."
+*{{AC|ViperBarrierDown9.mp3}} "Their hope is their poison."
+*{{AC|ViperBarrierDown10.mp3}} "Hopeless mice."
+*{{AC|ViperBarrierDown11.mp3}} "Hold them under."
+*{{AC|ViperBarrierDown12.mp3}} "I will not lose my home again!"
+*{{AC|ViperBarrierDown13.mp3}} "Let's go."
+*{{AC|ViperBarrierDown14.mp3}} "I want to see you crawl."
+*{{AC|ViperBarrierDown15.mp3}} "Breathe deep."
+*{{AC|ViperBarrierDown16.mp3}} "Isolate them, and kill them."
+*{{AC|ViperBarrierDown17.mp3}} "Isolate and exterminate."
+*{{AC|ViperBarrierDown18.mp3}} "Kill them."
+*{{AC|ViperBarrierDown19.mp3}} "Let's choke them."
+*{{AC|ViperBarrierDown20.mp3}} "I'll take everything from them."
+*{{AC|ViperBarrierDown21.mp3}} "Breathe deep."
+
+==Spike==
+===Forgotten in spawn===
+*{{AC|ViperForgotSpike1.mp3}} "Idiots, the spike! Now!"
+*{{AC|ViperForgotSpike2.mp3}} "Someone get the spike!"
+
+===Ally carrier down===
+*{{AC|ViperSpikeDown1.mp3}}{{AC|ViperSpikeDown2.mp3}} "Spike carrier killed."
+
+===Dropped===
+*{{AC|ViperSpikeDropped1.mp3}}{{AC|ViperSpikeDropped2.mp3}} "I've dropped the spike."
+
+===Retrieved===
+*{{AC|ViperSpikePickedUp1.mp3}}{{AC|ViperSpikePickedUp2.mp3}} "I have the spike."
+
+===Planted===
+*{{AC|ViperSpikePlanted1.mp3}}{{AC|ViperSpikePlanted2.mp3}} "Spike planted."
+
+===Spotted===
+*{{AC|ViperSpikeSpottedA1.mp3}}{{AC|ViperSpikeSpottedA2.mp3}} "Spike spotted A."
+*{{AC|ViperSpikeSpottedB1.mp3}}{{AC|ViperSpikeSpottedB2.mp3}} "Spike spotted B."
+*{{AC|ViperSpikeSpottedC1.mp3}}{{AC|ViperSpikeSpottedC2.mp3}} "Spike spotted C."
+*{{AC|ViperSpikeSpottedASpawn1.mp3}}{{AC|ViperSpikeSpottedASpawn2.mp3}} "Spike's in Attacker Spawn."
+*{{AC|ViperSpikeSpottedDSpawn1.mp3}}{{AC|ViperSpikeSpottedDSpawn2.mp3}} "Spike's in Defender Spawn."
+*{{AC|ViperSpikeSpottedMid1.mp3}}{{AC|ViperSpikeSpottedMid2.mp3}} "Spike spotted Mid."
+
+===Defuse resumed===
+*{{AC|ViperDefuseResumed1.mp3}}{{AC|ViperDefuseResumed3.mp3}} "Annoying fly."
+*{{AC|ViperDefuseResumed2.mp3}} "Now, where was I?"
+
+===Defuse time running out===
+*{{AC|ViperDefuseLate1.mp3}} "I can't die here."
+*{{AC|ViperDefuseLate2.mp3}} "Oh shit, shit, come on."
+*{{AC|ViperDefuseLate3.mp3}} "Dying here would be unfortunate."
+
+===Defuse successful===
+*{{AC|ViperDefuseComplete1.mp3}} "Spike defused."
+*{{AC|ViperDefuseComplete2.mp3}} "No need for this."
+
+==Kill==
+*{{AC|ViperKill1.mp3}} "Ended."
+*{{AC|ViperKill2.mp3}} "Put down."
+*{{AC|ViperKill3.mp3}}{{AC|ViperKill4.mp3}} "Enemy down."
+*{{AC|ViperKill5.mp3}} "Goodbye."
+*{{AC|ViperKill6.mp3}} "Killed."
+*{{AC|ViperKill7.mp3}} "Dead."
+*{{AC|ViperKill8.mp3}}{{AC|ViperKill9.mp3}} "Get out of my way."
+*{{AC|ViperKill10.mp3}}{{AC|ViperKill11.mp3}} "One down."
+*{{AC|ViperKill12.mp3}} "Leave us."
+*{{AC|ViperKill13.mp3}} "They're dead."
+
+===Headshot===
+*{{AC|ViperHeadshot1.mp3}} ''*Viper winces*'' "Ouch."
+*{{AC|ViperHeadshot2.mp3}} "What a way to die."
+*{{AC|ViperHeadshot3.mp3}} "Dead fool."
+*{{AC|ViperHeadshot4.mp3}} "Ouch."
+*{{AC|ViperHeadshot5.mp3}} "Dead fool."
+*{{AC|ViperHeadshot6.mp3}} "Squashed."
+*{{AC|ViperHeadshot7.mp3}} "Exterminated."
+*{{AC|ViperHeadshot8.mp3}} "Erased."
+
+===[[Melee]]===
+*{{AC|ViperMeleeKill1.mp3}} "Not worth the bullets."
+*{{AC|ViperMeleeKill2.mp3}} "Shh..."
+
+===Triple===
+*{{AC|ViperTriple1.mp3}}{{AC|ViperTriple2.mp3}} "Three down."
+
+===Quadra===
+*{{AC|ViperQuadra1.mp3}}{{AC|ViperQuadra2.mp3}} "Four down."
+
+===One kill remaining (game-mode specific)===
+*{{AC|ViperOneKillLeft1.mp3}}{{AC|ViperOneKillLeft2.mp3}} "One left."
+
+==Round End==
+===Ace===
+*{{AC|ViperAce1.mp3}} "You wanted a villain? I gave you a villain!"
+
+===Clutch===
+*{{AC|ViperClutch1.mp3}} "If you want something done right, do it yourself."
+*{{AC|ViperClutch2.mp3}} "You only thought that was close."
+*{{AC|ViperClutch3.mp3}} "I almost broke a sweat."
+
+===Flawless or Team Ace===
+*{{AC|ViperFlawless1.mp3}} "It's sad really."
+*{{AC|ViperFlawless2.mp3}} "Poor things."
+*{{AC|ViperFlawless3.mp3}} "How demoralizing."
+
+===Thrifty===
+*{{AC|ViperThrifty1.mp3}} "I can't make this easier for them."
+*{{AC|ViperThrifty2.mp3}} "Should I use a stick next time?"
+
+===Last Kill===
+*{{AC|ViperLastKill1.mp3}}{{AC|ViperLastKill3.mp3}} "What a way to die."
+*{{AC|ViperLastKill2.mp3}} "We're done here."
+*{{AC|ViperLastKill4.mp3}}{{AC|ViperLastKill5.mp3}} "You wanted to be a hero, didn't you?"
+*{{AC|ViperLastKill6.mp3}} "Well, you tried."
+*{{AC|ViperLastKill7.mp3}} "Back where you belong: in the dirt."
+* {{AC|ViperLastKill8.mp3}} "This is everything I wanted, wasn't it?"
+
+====Enemy MVP====
+There are no voice lines at the moment in this section for this Agent.
+
+====Using [[Melee]]====
+*{{AC|ViperLastKillMelee1.mp3}} "Didn't need a gun for that one."
+*{{AC|ViperLastKillMelee2.mp3}} "Shh..."
+
+===Low HP===
+*{{AC|ViperLowHP1.mp3}} ''*Viper winces*'' "They think they can kill me?"
+*{{AC|ViperLowHP2.mp3}} "I won't be stopped."
+
+==Match End==
+===Match Win===
+*{{AC|ViperMatchWin1.mp3}} "Hide the bodies, we weren't here."
+*{{AC|ViperMatchWin2.mp3}} "I am your monster. You made me this way! Never forget that."
+*{{AC|ViperMatchWin3.mp3}} "You should've begged sooner."
+*{{AC|ViperMatchWin4.mp3}} "You were only in my way."
+*{{AC|ViperMatchWin5.mp3}} "Anticipated."
+
+====[[Ascent]]====
+*{{AC|ViperMatchWinAscent.mp3}} "Well the town is gone, but our world stays afloat. I'll take that trade."
+
+===Runner-up (game-mode specific)===
+*{{AC|ViperRunnerUp1.mp3}} "Next time I'll take their heads- I mean, first place."
+*{{AC|ViperRunnerUp2.mp3}} "This'll do, for now."
+*{{AC|ViperRunnerUp3.mp3}} "I guess this is fine."
+
+==Agent-specific interactions==
+{| class="wikitable sortable"
+!To Agent
+!Scenario
+!width=40%; class=unsortable|Ally
+!width=40%; class=unsortable|Enemy
+|-
+|rowspan=4|{{Ai|Breach}}
+|rowspan=2|Match Start
+|{{AC|ViperAllyBreachMatchStart.mp3}} "Do me a favor Breach and, uh, open them up. Toxin works best when directly injected."
+|
+|-
+|{{AC|ViperAllyBreachMatchStart2.mp3}} "We need a hard job done right, call Breach. It's good you're here."{{#tag:sup|{{patchv|12.03}}+}}
+|
+|-
+|Commend
+|{{AC|ViperAllyBreachCommend.mp3}} "Well done, Breach! I knew hiring you was a good idea."
+|
+|-
+|Kill
+|
+|{{AC|ViperEnemyBreachKill.mp3}} "Breach killed."
+|-
+|rowspan=5|{{Ai|Brimstone}}
+|Chat
+|
+:[[File:Viper icon.png|20px|link=Viper]] {{AC|ViperAllyBrimstoneChat.mp3}} "Brimstone, we really need to put an age floor on VALORANT. I can't take this youth."
+:[[File:Brimstone icon.png|20px|link=Brimstone]] {{AC|BrimstoneAllyViperChat.mp3}} "They're the future, Sabine! You know you care about them."
+|
+|-
+|Match Start
+|{{AC|ViperAllyBrimstoneMatchStart.mp3}} "Don't tell me what to do, old man. Someone will die, no matter how fancy our strategy."
+|
+|-
+|Commend
+|{{AC|ViperAllyBrimstoneCommend.mp3}} "I'm impressed, Brimstone! Looks like the fire is still lit."
+|
+|-
+|rowspan=2|Last Kill
+|
+|{{AC|ViperEnemyBrimstoneLastKill.mp3}} "Get some sleep, old man."
+|-
+|
+|{{AC|ViperEnemyBrimstoneLastKill2.mp3}} "Don't look at me like that, Liam."{{#tag:sup|{{patchv|12.03}}+}}
+|-
+|{{Ai|Clove}}
+|Chat
+|
+:[[File:Viper icon.png|20px|link=Viper]] {{AC|ViperAllyCloveChat.mp3}} "I look forward to watching the light leave their eyes!"
+:[[File:Clove icon.png|20px|link=Clove]] {{AC|CloveAllyViperChat.mp3}} "Whoa, Viper. You know what? I love your attitude."
+|
+|-
+|rowspan=2|{{ai|Chamber}}
+|Commend
+|{{AC|ViperAllyChamberCommend.mp3}} "You want my approval, Chamber? Do that again."
+|
+|-
+|Last Kill
+|
+|{{AC|ViperEnemyChamberLastKill.mp3}} "You were charming, but not as clever as you think."
+|-
+|rowspan=5|{{Ai|Cypher}}
+|Match Start 
+|{{AC|ViperAllyCypherMatchStart.mp3}} "Cypher, you collect information. Tell me, what are their dreams? What do they fear?"
+|
+|-
+|Chat
+|
+:[[File:Cypher icon.png|20px|link=Cypher]] {{AC|CypherAllyViperChat.mp3}} "You know, Viper? The name Sabine really fits you."
+:[[File:Viper icon.png|20px|link=Viper]] {{AC|ViperAllyCypherChat.mp3}} "Never call me that again! If you do though it's Doctor Sabine, get it right."
+|
+|-
+|Round Start
+|{{AC|ViperAllyCypherRoundStart.mp3}} "Tell me where they are, Cypher. I'll take care of the rest."
+|{{AC|ViperEnemyCypherRoundStart.mp3}} "Their Cypher might find us. Good. Bring them to me."
+|-
+|Barrier Down
+|{{AC|ViperAllyCypherBarrierDown.mp3}} "Hunt them down, Cypher."
+|{{AC|ViperEnemyCypherBarrierDown.mp3}} "I'll find their Cypher."
+|-
+|Kill
+|
+|{{AC|ViperEnemyCypherKill.mp3}} "Cypher killed."
+|-
+|rowspan=2|{{Ai|Jett}}
+|Match Start
+|
+|{{AC|ViperEnemyJettMatchStart.mp3}} "What a shame to take Jett's young life. Truly, a pity."
+|-
+|Commend
+|{{AC|ViperAllyJettCommend.mp3}} "To be young and have reflexes again. Good work, Jett."
+|
+|-
+|{{ai|KAYO}}
+|Match Start
+|{{AC|ViperAllyKAYOMatchStart.mp3}} "Something wrong, KAY/O? Death's on your conscience? We're not so different after all."
+|
+|-
+|{{Ai|Killjoy}}
+|Round Start
+|{{AC|ViperAllyKilljoyRoundStart.mp3}} "You did well, little mouse. Keep it up."
+|{{AC|ViperEnemyKilljoyRoundStart.mp3}} "Their Killjoy is too smart for her own good. I'll reprimand her."
+|-
+|rowspan=4|{{Ai|Neon}}
+|Chat
+|
+:[[File:Viper icon.png|20px|link=Viper]] {{AC|ViperAllyNeonChat.mp3}} "Neon? What was that meal you made earlier, it was... good."
+:[[File:Neon icon.png|20px|link=Neon]] {{AC|NeonAllyViperChat.mp3}} "Oh, my nanay's adobo? You're, uh, welcome."
+:*(''Nanay'': Mom)
+|
+|-
+|Match Start
+|{{AC|ViperAllyNeonMatchStart.mp3}} "Neon, you can practice restraint later. You're at war now. I need the storm."
+|
+|-
+|Commend
+|{{AC|ViperAllyNeonCommend.mp3}} "Neon? You know I'm supposed to be the scary one, right?"
+|
+|-
+|Barrier Down
+|{{AC|ViperAllyNeonBarrierDown.mp3}} "Neon, strike them down."
+|
+|-
+|rowspan=5|{{Ai|Omen}}
+|rowspan=2|Chat 
+|
+:[[File:Viper icon.png|20px|link=Viper]] {{AC|ViperAllyOmenChat.mp3}} "Joh- I mean, Omen. Keep yourself together, you're still needed."
+:*''This line has a [[#Ally Omen Chat|previous version]] that has been intentionally replaced.<ref name="Viper Omen Chat">[[VALORANT Protocol#The Blackmailer's agent dossiers|Omen's dossier]]</ref>''
+:[[File:Omen icon.png|20px|link=Omen]] {{AC|OmenAllyViperChat.mp3}} "Wait, what did you say? I'm hearing so many things."
+|
+|-
+|
+:[[File:Omen icon.png|20px|link=Omen]] {{AC|OmenAllyViperChat2.mp3}} "Sabine?"
+:[[File:Viper icon.png|20px|link=Viper]] {{AC|ViperAllyOmenChat3.mp3}} ''*Viper clears throat*'' "Omen?"{{#tag:sup|{{patchv|12.03}}+}}
+|-
+|Match Start
+|
+|{{AC|ViperEnemyOmenMatchStart.mp3}} "I wonder what's inside of their Omen. What truth is he keeping from ours?"
+|-
+|Round Start
+|{{AC|ViperAllyOmenRoundStart.mp3}} "One more time, Omen." ''*Viper giggles*'' "How many times have you heard that now?"
+|
+|-
+|Commend
+|{{AC|ViperAllyOmenCommend.mp3}} "Keep being their nightmare, old friend."
+|
+|-
+|rowspan=3|{{Ai|Phoenix}}
+|Round Start
+|{{AC|ViperAllyPhoenixRoundStart.mp3}} "Keep your fire going, Phoenix."
+|{{AC|ViperEnemyPhoenixRoundStart.mp3}} "Fire needs oxygen. Let me replace this Phoenix's air."
+|-
+|Barrier Down
+|{{AC|ViperAllyPhoenixBarrierDown.mp3}} "Burn them, Phoenix!"
+|
+|-
+|Kill
+|
+|{{AC|ViperEnemyPhoenixKill.mp3}} "Phoenix down."
+|-
+|rowspan=2|{{Ai|Raze}}
+|Round Start
+|{{AC|ViperAllyRazeRoundStart.mp3}} "Raze, I will deny that I said this but your inventions are... valuable. Keep tinkering."
+|
+|-
+|Barrier Down
+|
+|{{AC|ViperEnemyRazeBarrierDown.mp3}} "I'll shut that Raze up."
+|-
+|rowspan=5|{{Ai|Reyna}}
+|Match Start
+|{{AC|ViperAllyReynaMatchStart.mp3}} "What's it like, Reyna, fighting to keep a loved one alive? No, please. Tell me."
+|{{AC|ViperEnemyReynaMatchStart.mp3}} "I respect the predation of their Reyna. It's almost inspiring."
+|-
+|Round Start
+|{{AC|ViperAllyReynaRoundStart.mp3}} "Fill your heart, Reyna. If you want results, I need those souls."
+|
+|-
+|Commend
+|{{AC|ViperAllyReynaCommend.mp3}} "Reyna, a woman after my own heart. You can't have it though."
+|
+|-
+|Barrier Down
+|
+|{{AC|ViperEnemyReynaBarrierDown.mp3}} "Eat your own heart out, Reyna."
+|-
+|Kill 
+|
+|{{AC|ViperEnemyReynaKill.mp3}} "Reyna's gone."
+|-
+|rowspan=7|{{Ai|Sage}}
+|Chat
+|
+:[[File:Sage icon.png|20px|link=Sage]] {{AC|SageAllyViperChat.mp3}} "Viper, have you thought about my offer? You don't have to-"
+:[[File:Viper icon.png|20px|link=Viper]] {{AC|ViperAllySageChat.mp3}} "Never, ever assume you can help me. You can't help me, you can't help them!"
+|
+|-
+|Match Start
+|{{AC|ViperAllySageMatchStart.mp3}} "Sage, you're the only one who can keep us alive. Don't fail us now like you failed me then."
+|
+|-
+|Round Start
+|
+|{{AC|ViperEnemySageRoundStart.mp3}} "Keep pushing their Sage until she breaks."{{#tag:sup|{{patchv|12.03}}+}}
+|-
+|Barrier Down
+|{{AC|ViperAllySageBarrierDown.mp3}} "Stand strong, Sage."
+|{{AC|ViperEnemySageBarrierDown.mp3}} "Sage is mine!"{{#tag:sup|{{patchv|12.03}}+}}
+|-
+|rowspan=3|Last Kill
+|
+|{{AC|ViperEnemySageLastKill.mp3}} "That's payback, Sage!"
+|-
+|
+|{{AC|ViperEnemySageLastKill2.mp3}} "I hope those crystals suffocate you."{{#tag:sup|{{patchv|12.03}}+}}
+|-
+|
+|{{AC|ViperEnemySageLastKill3.mp3}} "A mountain? Please, you're a pebble."{{#tag:sup|{{patchv|12.03}}+}}
+|-
+|rowspan=3|{{Ai|Skye}}
+|Match Start
+|
+|{{AC|ViperEnemySkyeMatchStart.mp3}} "Skye, you have no clue the forces you're playing with. Eh, don't worry, you'll be dead before you figure it out."
+|-
+|Round Start
+|{{AC|ViperAllySkyeRoundStart.mp3}} "Guide us, Skye. Find your strength along the way."
+|
+|-
+|Kill
+|
+|{{AC|ViperEnemySkyeKill.mp3}} "Skye's dead."
+|-
+|rowspan=3|{{Ai|Sova}}
+|Match Start
+|{{AC|ViperAllySovaMatchStart.mp3}} "Sova, follow me and you'll get to finish what you started. No more eye for an eye nonsense."{{#tag:sup|{{patchv|12.03}}+}}
+|
+|-
+|Round Start
+|
+|{{AC|ViperEnemySovaRoundStart.mp3}} "I'll crush their Sova's spirit."
+|-
+|Commend
+|{{AC|ViperAllySovaCommend.mp3}} "Well done, Sova. You truly are a hunter."
+|
+|-
+|rowspan=6|{{Ai|Viper}}
+|Match Start
+|
+|{{AC|ViperEnemyViperMatchStart.mp3}} "Sabine, Sabine, what have you been working on over there? I'm curious, but you don't need to be alive for me to find out."
+|-
+|Round Start
+|
+|{{AC|ViperEnemyViperRoundStart.mp3}} "Ugh, my air filters don't work on her poison. Why? I'll figure it out."
+|-
+|Barrier Down
+|
+|{{AC|ViperEnemyViperBarrierDown.mp3}} "I'm coming for you, Sabine!"
+|-
+|Kill
+|
+|{{AC|ViperEnemyViperKill.mp3}} "Copy killed."
+|-
+|rowspan=2|Last Kill
+|
+|{{AC|ViperEnemyViperLastKill.mp3}} "Rest, you tired woman."
+|-
+|
+|{{AC|ViperEnemyViperLastKill2.mp3}} "You choked on your own poison! Tragic."
+|-
+|{{Ai|Vyse}}
+|Chat
+|
+:[[File:Viper icon.png|20px|link=Viper]] {{AC|ViperAllyVyseChat.mp3}} "Vyse, I've been comparing your recent DNA samples to irradiated nucleotides and-"{{#tag:sup|{{patchv|12.03}}+}}
+:[[File:Vyse icon.png|20px|link=Vyse]] {{AC|VyseAllyViperChat.mp3}} "No need, Sabine. The Scions ran their tests. I know what I am. I know it can't be undone."
+|
+|-
+|rowspan=2|{{Ai|Yoru}}
+|rowspan=2|Match Start
+|{{AC|ViperAllyYoruMatchStart.mp3}} "You have the ability to rift-walk and you stay here? What a shame, there are so many better worlds out there."
+|
+|-
+|{{AC|ViperAllyYoruMatchStart2.mp3}} "Yoru, so few I can rely on these days. If you would be so kind, tear me a path straight to their heart."{{#tag:sup|{{patchv|12.03}}+}}
+|
+|}
+
+==Radio Commands==
+===Menu Index only===
+====Caution here====
+*{{AC|ViperCaution1.mp3}}{{AC|ViperCaution2.mp3}} "Enemies close."
+
+====Going Area====
+*{{AC|ViperGoingA1.mp3}}{{AC|ViperGoingA2.mp3}} "Going A."
+*{{AC|ViperGoingB1.mp3}}{{AC|ViperGoingB2.mp3}} "Going B."
+*{{AC|ViperGoingC1.mp3}}{{AC|ViperGoingC2.mp3}} "Going C."
+*{{AC|ViperGoingMid1.mp3}} "Heading Mid."
+*{{AC|ViperGoingMid2.mp3}} "Going Mid."
+
+====Need Support====
+*{{AC|ViperHelp1.mp3}}{{AC|ViperHelp2.mp3}}{{AC|ViperHelp3.mp3}} "Help!"
+
+====On my way====
+*{{AC|ViperOnMyWay1.mp3}}{{AC|ViperOnMyWay2.mp3}} "On my way."
+
+====Play for picks====
+*{{AC|ViperPlayForPicks1.mp3}}{{AC|ViperPlayForPicks2.mp3}} "Try to pick them off."
+
+===Wheel Index only===
+====Encourage====
+*{{AC|ViperEncouraging1.mp3}}{{AC|ViperEncouraging2.mp3}}{{AC|ViperEncouraging3.mp3}} "We can do this."
+
+====I'll lurk====
+Only as Attackers during Buy Phase.
+*{{AC|ViperLurking1.mp3}}{{AC|ViperLurking2.mp3}} "I'm lurking."
+
+====I'll push out====
+Only as Defenders during Buy Phase.
+*{{AC|ViperPushingOut1.mp3}}{{AC|ViperPushingOut2.mp3}} "I'm pushing out."
+
+====I'm holding position====
+Only as Defenders during Buy Phase.
+*{{AC|ViperHoldingPosition1.mp3}}{{AC|ViperHoldingPosition2.mp3}} "Holding position."
+
+====Let's Attack====
+Only during Round Phase.
+*{{AC|ViperLetsAttack1.mp3}}{{AC|ViperLetsAttack2.mp3}} "Let's attack."
+
+====Let's hold positions====
+Only as Defenders during Buy Phase.
+*{{AC|ViperHoldPositions1.mp3}}{{AC|ViperHoldPositions2.mp3}} "Let's hold positions."
+
+====Let's play slow====
+Only as Attackers at anytime.
+*{{AC|ViperPlaySlow1.mp3}}{{AC|ViperPlaySlow2.mp3}} "Let's play slow."
+
+====Let's push out====
+Only as Defenders during Buy Phase.
+*{{AC|ViperPushOut1.mp3}}{{AC|ViperPushOut2.mp3}} "Let's push out."
+
+====Let's spread out====
+*{{AC|ViperSpreadOut1.mp3}}{{AC|ViperSpreadOut2.mp3}} "Let's spread out."
+
+====Nice Try====
+*{{AC|ViperNiceTry1.mp3}}{{AC|ViperNiceTry2.mp3}}{{AC|ViperNiceTry3.mp3}} "Nice try."
+
+====Stick together====
+*{{AC|ViperStickTogether1.mp3}}{{AC|ViperStickTogether2.mp3}} "Stick together."
+
+===Menu and Wheel Index===
+====Commend====
+*{{AC|ViperCommend1.mp3}}{{AC|ViperCommend2.mp3}}{{AC|ViperCommend3.mp3}} "I'm impressed!"
+
+====Fall Back====
+Menu Index at anytime, or Wheel Index only during Round Phase.
+*{{AC|ViperFallBack1.mp3}}{{AC|ViperFallBack2.mp3}}{{AC|ViperFallBack3.mp3}} "Get back!"
+
+====Hello====
+*{{AC|ViperHello1.mp3}}{{AC|ViperHello2.mp3}}{{AC|ViperHello3.mp3}} "Hi."
+
+====I'll take point====
+Wheel Index only as Attackers during Buy Phase, or Menu Index at anytime regardless of Attackers or Defenders.
+*{{AC|ViperTakePoint1.mp3}} "Taking this point."
+*{{AC|ViperTakePoint2.mp3}}{{AC|ViperTakePoint3.mp3}} "Taking point."
+
+====Let's rush them (Radio Command)====
+*{{AC|ViperRush1.mp3}}{{AC|ViperRush2.mp3}} "Rush them."
+
+====Need healing====
+*{{AC|ViperHealing1.mp3}}{{AC|ViperHealing2.mp3}} "I need aid."
+
+====No====
+*{{AC|ViperNo1.mp3}}{{AC|ViperNo2.mp3}}{{AC|ViperNo3.mp3}} "No."
+
+====Sorry====
+*{{AC|ViperSorry1.mp3}}{{AC|ViperSorry2.mp3}} "Apologies."
+
+====Thanks====
+*{{AC|ViperThanks1.mp3}}{{AC|ViperThanks2.mp3}}{{AC|ViperThanks3.mp3}} "Thank you."
+
+====Ultimate Status====
+*{{AC|ViperUltDown1.mp3}}{{AC|ViperUltDown2.mp3}} "My ultimate isn't ready."
+*{{AC|ViperUltAlmost1.mp3}}{{AC|ViperUltAlmost2.mp3}} "My ultimate is almost ready."
+*{{AC|ViperUltReady1.mp3}}{{AC|ViperUltReady2.mp3}} "My ultimate is ready."
+
+====Yes====
+*{{AC|ViperYes1.mp3}}{{AC|ViperYes2.mp3}}{{AC|ViperYes3.mp3}} "Yes."
+
+===Wheel Index requiring Minimap===
+For the following voicelines, the minimap must be open and then open ping wheel and activate strategy.
+====Faking====
+Only as Attackers during Buy Phase.
+*{{AC|ViperFaking1.mp3}}{{AC|ViperFaking2.mp3}} "I'm faking."
+*{{AC|ViperFakingA1.mp3}}{{AC|ViperFakingA2.mp3}} "I'm faking A."
+*{{AC|ViperFakingB1.mp3}}{{AC|ViperFakingB2.mp3}} "I'm faking B."
+*{{AC|ViperFakingC1.mp3}}{{AC|ViperFakingC2.mp3}} "I'm faking C."
+
+====I'm Going Here====
+As Defenders during Buy Phase, or as Attackers at anytime.
+*{{AC|ViperGoingA1.mp3}}{{AC|ViperGoingA2.mp3}} "Going A."
+*{{AC|ViperGoingB1.mp3}}{{AC|ViperGoingB2.mp3}} "Going B."
+*{{AC|ViperGoingC1.mp3}}{{AC|ViperGoingC2.mp3}} "Going C."
+*{{AC|ViperGoingMid1.mp3}} "Heading Mid."
+*{{AC|ViperGoingMid2.mp3}} "Going Mid."
+
+====Let's Go Here====
+Only as Attackers during Buy Phase.
+*{{AC|ViperLetsGoA1.mp3}}{{AC|ViperLetsGoA2.mp3}} "Let's go A."
+*{{AC|ViperLetsGoB1.mp3}}{{AC|ViperLetsGoB2.mp3}} "Let's go B."
+*{{AC|ViperLetsGoC1.mp3}}{{AC|ViperLetsGoC2.mp3}} "Let's go C."
+*{{AC|ViperLetsGoHere1.mp3}}{{AC|ViperLetsGoHere2.mp3}} "Let's go here."
+
+====Let's rush them (Minimap)====
+Only as Attackers during Buy Phase.
+*{{AC|ViperLetsRush1.mp3}}{{AC|ViperLetsRush2.mp3}} "Let's rush them."
+*{{AC|ViperLetsRushA1.mp3}}{{AC|ViperLetsRushA2.mp3}} "Let's rush A."
+*{{AC|ViperLetsRushB1.mp3}}{{AC|ViperLetsRushB2.mp3}} "Let's rush B."
+*{{AC|ViperLetsRushC1.mp3}}{{AC|ViperLetsRushC2.mp3}} "Let's rush C."
+
+====Let's Sneak Here====
+Only as Attackers during Buy Phase.
+*{{AC|ViperSneakA1.mp3}}{{AC|ViperSneakA2.mp3}} "Let's sneak A."
+*{{AC|ViperSneakB1.mp3}}{{AC|ViperSneakB2.mp3}} "Let's sneak B."
+*{{AC|ViperSneakC1.mp3}}{{AC|ViperSneakC2.mp3}} "Let's sneak C."
+*{{AC|ViperSneakMid1.mp3}}{{AC|ViperSneakMid2.mp3}} "Let's sneak Mid."
+
+====Let's Stack Here====
+Only as Defenders during Buy Phase.
+*{{AC|ViperStack1.mp3}}{{AC|ViperStack2.mp3}} "Let's stack up."
+*{{AC|ViperStackA1.mp3}}{{AC|ViperStackA2.mp3}} "Let's stack A."
+*{{AC|ViperStackB1.mp3}}{{AC|ViperStackB2.mp3}} "Let's stack B."
+*{{AC|ViperStackC1.mp3}}{{AC|ViperStackC2.mp3}} "Let's stack C."
+*{{AC|ViperStackMid1.mp3}}{{AC|ViperStackMid2.mp3}} "Let's stack Mid."
+
+====Someone Go Here====
+As Attackers during Round Phase, or as Defenders at anytime.
+*{{AC|ViperNeedSomeoneA1.mp3}}{{AC|ViperNeedSomeoneA2.mp3}} "Someone go A."
+*{{AC|ViperNeedSomeoneB1.mp3}}{{AC|ViperNeedSomeoneB2.mp3}} "Someone go B."
+*{{AC|ViperNeedSomeoneC1.mp3}}{{AC|ViperNeedSomeoneC2.mp3}} "Someone go C."
+*{{AC|ViperNeedSomeoneMid1.mp3}}{{AC|ViperNeedSomeoneMid2.mp3}} "Someone go Mid."
+
+====Spike's here====
+Only as Defenders during Round Phase.
+*{{AC|ViperSpikeA1.mp3}}{{AC|ViperSpikeA2.mp3}} "Spike's A."
+*{{AC|ViperSpikeB1.mp3}}{{AC|ViperSpikeB2.mp3}} "Spike's B."
+*{{AC|ViperSpikeC1.mp3}}{{AC|ViperSpikeC2.mp3}} "Spike's C."
+*{{AC|ViperSpikeMid1.mp3}}{{AC|ViperSpikeMid2.mp3}} "Spike's Mid."
+*{{AC|ViperSpikeSpottedASpawn1.mp3}}{{AC|ViperSpikeSpottedASpawn2.mp3}} "Spike's in Attacker Spawn."
+*{{AC|ViperSpikeSpottedDSpawn1.mp3}}{{AC|ViperSpikeSpottedDSpawn2.mp3}} "Spike's in Defender Spawn."
+
+==Pings==
+===General===
+*{{AC|ViperPing1.mp3}}{{AC|ViperPing2.mp3}} "Here."
+
+===Caution===
+*{{AC|ViperPingCaution1.mp3}}{{AC|ViperPingCaution2.mp3}} "Careful."
+
+===Need support===
+*{{AC|ViperHelp1.mp3}}{{AC|ViperHelp2.mp3}}{{AC|ViperHelp3.mp3}} "Help!"
+
+===On my mark===
+*{{AC|ViperOnMyMark1.mp3}}{{AC|ViperOnMyMark2.mp3}} "On my mark."
+
+===Ping gun===
+*{{AC|ViperPingGun1.mp3}}{{AC|ViperPingGun2.mp3}} "Gun here."
+
+===Ping spike===
+*{{AC|ViperPingSpike1.mp3}}{{AC|ViperPingSpike2.mp3}} "Spike is here."
+
+===Ping for spike defuse===
+*{{AC|ViperDefuseSpike1.mp3}}{{AC|ViperDefuseSpike2.mp3}} "Defuse the spike!"
+
+===Ping for spike plant===
+*{{AC|ViperPlantSpike1.mp3}}{{AC|ViperPlantSpike2.mp3}} "Plant the spike!"
+
+===Watching===
+*{{AC|ViperWatching1.mp3}}{{AC|ViperWatching2.mp3}} "Watching this location."
+
+==Other lines==
+===Ability unusable===
+====[[Status Effect#Suppress|Suppressed]]====
+*{{AC|ViperCantUse1.mp3}}{{AC|ViperCantUse2.mp3}}{{AC|ViperCantUse3.mp3}} "Can't use this."
+
+====On cooldown====
+*{{AC|ViperOnCooldown1.mp3}}{{AC|ViperOnCooldown2.mp3}} "Not recharged yet"
+
+====No charges====
+*{{AC|ViperNoCharges1.mp3}}{{AC|ViperNoCharges2.mp3}} "No charges left."
+
+===Enemy spotted===
+*{{AC|ViperEnemyA1.mp3}}{{AC|ViperEnemyA2.mp3}} "Enemy spotted A."
+*{{AC|ViperEnemyB1.mp3}}{{AC|ViperEnemyB2.mp3}} "Enemy spotted B."
+*{{AC|ViperEnemyC1.mp3}}{{AC|ViperEnemyC2.mp3}} "Enemy spotted C."
+*{{AC|ViperEnemyASpawn1.mp3}}{{AC|ViperEnemyASpawn2.mp3}} "Enemy in Attacker Spawn."
+*{{AC|ViperEnemyDSpawn1.mp3}}{{AC|ViperEnemyDSpawn2.mp3}} "Enemy in Defender Spawn."
+*{{AC|ViperEnemyMid1.mp3}}{{AC|ViperEnemyMid2.mp3}} "Enemy spotted Mid."
+
+====Multiple====
+*{{AC|ViperEnemiesA1.mp3}}{{AC|ViperEnemiesA2.mp3}} "Multiple enemies A!"
+*{{AC|ViperEnemiesB1.mp3}}{{AC|ViperEnemiesB2.mp3}} "Multiple enemies B!"
+*{{AC|ViperEnemiesC1.mp3}}{{AC|ViperEnemiesC2.mp3}} "Multiple enemies C!"
+*{{AC|ViperEnemiesASpawn1.mp3}}{{AC|ViperEnemiesASpawn2.mp3}} "Enemies in Attacker Spawn!"
+*{{AC|ViperEnemiesDSpawn1.mp3}}{{AC|ViperEnemiesDSpawn2.mp3}} "Enemies in Defender Spawn!"
+*{{AC|ViperEnemiesMid1.mp3}}{{AC|ViperEnemiesMid2.mp3}} "Multiple enemies Mid!"
+
+===Reloading===
+*{{AC|ViperReloading1.mp3}}{{AC|ViperReloading2.mp3}} "Reloading."
+
+===Healed===
+*{{AC|ViperRelief1.mp3}}{{AC|ViperRelief2.mp3}} ''*Viper sighs*''
+
+===Killed===
+*{{AC|ViperDeath1.mp3}}{{AC|ViperDeath2.mp3}}{{AC|ViperDeath3.mp3}} ''*Viper groans*''
+
+===Resurrected via {{abi text|Resurrection}}===
+*{{AC|ViperResurrect.mp3}} "Fascinating, I must record this feeling."
+
+===Wounded===
+====Light damage====
+*{{AC|ViperPainLight1.mp3}}{{AC|ViperPainLight2.mp3}}{{AC|ViperPainLight3.mp3}} ''*Viper groans*''
+
+====Medium damage====
+*{{AC|ViperPainMedium1.mp3}}{{AC|ViperPainMedium2.mp3}}{{AC|ViperPainMedium3.mp3}} ''*Viper groans*''
+
+====Heavy damage====
+*{{AC|ViperPainHeavy1.mp3}}{{AC|ViperPainHeavy2.mp3}}{{AC|ViperPainHeavy3.mp3}} ''*Viper groans*''
+
+====Fall damage====
+*{{AC|ViperPainFall1.mp3}}{{AC|ViperPainFall2.mp3}}{{AC|ViperPainFall3.mp3}} ''*Viper groans*''
+
+==Unused lines==
+==={{abi text|Poison Cloud}} Cast===
+*{{AC|ViperPoisonCloudCast1.mp3}}{{AC|ViperPoisonCloudCast2.mp3}} ''*Viper grunts*''
+
+==={{abi text|Toxic Screen}} Cast===
+*{{AC|ViperToxicScreenCast1.mp3}} ''*Viper grunts*''
+
+===Match MVP===
+*{{AC|ViperMatchMVP1.mp3}} "I am your monster. You made me this way! Never forget that."
+*{{AC|ViperMatchMVP2.mp3}} "You should've begged sooner."
+
+==Removed lines==
+===Ally {{ai|Omen}} Chat===
+*{{AC|ViperAllyOmenChat2.mp3}} "Fre- I mean, Omen. Keep yourself together, you're still needed."<ref name="Viper Omen Chat"/>
+
+===Ally {{ai|Chamber}}===
+====Chat====
+:[[File:Chamber icon.png|20px|link=Chamber]] {{AC|ChamberAllyViperChat.mp3}} "Viper, you must let me take you out some time. Dinner, dancing, I know the perfect place."
+:[[File:Viper icon.png|20px|link=Viper]] {{AC|ViperAllyChamberChat.mp3}} "Chamber, I would rather drink my own poison."{{#tag:sup|-{{patchv|12.03}}}}
+
+====Round Start====
+*{{AC|ViperAllyChamberRoundStart.mp3}} "Chamber, you've made promises we expect you to keep. Less flirting, more focus. Thank you."{{#tag:sup|-{{patchv|12.03}}}}
+
+===Barrier Down===
+*{{AC|ViperBarrierDown22.mp3}} "Come."
+
+===Last Kill Enemy MVP===
+*{{AC|ViperLastKillMVP.mp3}} "That was their best? Pathetic."{{#tag:sup|-{{patchv|13.00}}}}
+
+===Wounded Annoyed===
+*{{AC|ViperPainAnnoyed1.mp3}}{{AC|ViperPainAnnoyed2.mp3}}{{AC|ViperPainAnnoyed3.mp3}}{{AC|ViperPainAnnoyed4.mp3}} ''Viper groans''
+
+===Spike Spotted General===
+*{{AC|ViperSpikeSpotted1.mp3}}{{AC|ViperSpikeSpotted2.mp3}} "Spike found."
+
+===Enemy spotted General===
+*{{AC|ViperEnemy1.mp3}}{{AC|ViperEnemy2.mp3}} "Enemy spotted."
+
+===Multiple Enemies spotted General===
+*{{AC|ViperEnemies1.mp3}}{{AC|ViperEnemies2.mp3}} "Multiple enemies spotted!"
+
+===Be Quiet===
+*{{AC|ViperBeQuiet1.mp3}}{{AC|ViperBeQuiet2.mp3}} "Stay quiet."
+
+===Rotate===
+*{{AC|ViperRotating1.mp3}}{{AC|ViperRotating2.mp3}} "Rotating."
+
+===Let's Rotate===
+*{{AC|ViperLetsRotate1.mp3}}{{AC|ViperLetsRotate2.mp3}} "Let's rotate."
+
+===Affirmation===
+*{{AC|ViperAffirmation1.mp3}}{{AC|ViperAffirmation2.mp3}} "Agreed."
+
+===Callouts===
+*{{AC|ViperCalloutA1.mp3}}{{AC|ViperCalloutA2.mp3}} "A Site."
+*{{AC|ViperCalloutB1.mp3}}{{AC|ViperCalloutB2.mp3}} "B Site."
+*{{AC|ViperCalloutC1.mp3}}{{AC|ViperCalloutC2.mp3}} "C Site."
+*{{AC|ViperCalloutMid1.mp3}}{{AC|ViperCalloutMid2.mp3}} "Middle."
+
+===Clear Area===
+*{{AC|ViperClearThisArea1.mp3}}{{AC|ViperClearThisArea2.mp3}}{{AC|ViperClearThisArea3.mp3}} "Clear this area."
+
+===Hold===
+*{{AC|ViperHold1.mp3}}{{AC|ViperHold2.mp3}} "Wait."
+
+===Push===
+*{{AC|ViperPush1.mp3}}{{AC|ViperPush2.mp3}} "Push, now."
+
+===Regroup===
+*{{AC|ViperRegroup1.mp3}}{{AC|ViperRegroup2.mp3}} "Regroup!"
+
+===Need disrupt===
+*{{AC|ViperDisrupt1.mp3}}{{AC|ViperDisrupt2.mp3}} "Disrupt here."
+
+===Need scouting===
+*{{AC|ViperScout1.mp3}}{{AC|ViperScout2.mp3}} "Scout here."
+
+===Need vision block===
+*{{AC|ViperBlockVision1.mp3}}{{AC|ViperBlockVision2.mp3}} "Block vision here."
+
+===Ping Go here===
+*{{AC|ViperGoHere1.mp3}}{{AC|ViperGoHere2.mp3}} "Move here."
+
+===Ping enemy utility===
+*{{AC|ViperPingUtility1.mp3}}{{AC|ViperPingUtility2.mp3}} "Enemy utility here."
+
+==[[Range/Lore|The Range's lore assets]]==
+===[[Range/Lore/EP4|Episode 4]]===
+*{{AC|file=VoicemailBrimstone7.mp3}} "I've been keeping an eye on [[Chamber]] for you. He's playing games but nothing you need to be concerned about... for now, at least. I know you don't trust him but we don't have that luxury. Chamber's made himself necessary and we need to accept that. And he's followed through so far, as long as he keeps delivering it's worth the risk. Our team will never be perfect. If it were, you'd only have [[Sova]] and [[Sage]] on the payroll. Hell, you made it work with [[Breach]]. I don't know how, but you did. If you can handle him, you can handle Chamber. I'll keep watching. The second his goals contradict ours... I'll take care of it"
+*{{AC|file=VoicemailBrimstone14.mp3}} "[[Brimstone|Brim]], we can't pull this off any longer. We need more scouts. You have to stop relying on [[Sova]]. I know you trust him, he's capable, but he's one man and he's exhausted. Not that he admits it, heaven forbid your golden boy ever let you down... [[Cypher]]'s network is invaluable but it's a crutch. It doesn't replace our need for agents in the field. We're losing, Brim. You know that, right? If we're going to survive we need more information. We need more eyes."
+*{{AC|file=VoicemailBrimstone21.mp3}} "Brim, I need you to increase [[Reyna]]'s mission assignments. She has to collect more souls. We're already pushing the boundaries of the equipment but I need more. It's the transfer process, I'm losing too much in the conversion, for every unit infused another two are lost... life energy isn't exactly my area of expertise. I know this has... dragged on. I thought I'd have a... solution by now, a way to stabilize the chemical-radian equilibrium but... but we owe it to Reyna. Collecting enough life for the both of them... it can't be easy. As long as the child lives I have to keep trying. Because if we fail... I don't know what Reyna will do."
+
+===[[Range/Lore/EP8|Episode 8]]===
+*{{AC|file=VoicemailBrimstone71.mp3}} "Liam, we need to talk. When [[Omen]] didn't know about his past, he was contained, a known entity. We kept him in the dark to protect both him and us. I had to lie to him. He-... he tried to kill me! Now, he's starting to piece things together and I—... I can't anticipate his actions now! Will he retaliate? Maybe leave the [[VALORANT Protocol|Protocol]], there are too many variables out of my control-... Keep an eye on him."
+*{{AC|file=VoicemailBrimstone83.mp3}} "Follow me here, I'm working a problem, just wanted a sounding board but your voicemail will do. [[Hourglass]] tried to kill me. Why? Logically there's only one answer: my research, they wanted to prevent humanity from discovering [[radianite]]. So they send [[Omen]] to kill me, he fails, [[First Light]] happens, and... everything changes. That all tracks, Hourglass has failed, but!... they keep working. They send operatives around the world to recover radianite artifacts. Why? What are they still hiding? There must be something, Brimstone, there has to be more, for Omen's sake, for mine... ugh, call me back."
+
+===[[Range/Lore/V26|Season 2026]]===
+*{{AC|file=VoicemailBrimstone121.mp3}} "Liam, your question earlier... the one I dodged. You deserve an answer. Of course I've thought about it. You're an idiot sometimes. That bleeding heart of yours is going to get more than just you killed. At some point, you'll stand in the way of a needed sacrifice and I will act. But despite the appearance of present circumstances, it's not today. There's no plot to overthrow you, old friend. You've nothing to fear from me."
+*{{AC|file=LegionAudioTap1.mp3}} "...All of you listen up. You want clarity? Here it is. [[Omega Brimstone|Brimstone]] is out. I am in command. I understand this makes some of you uncomfortable, you're fond of the old man. But before you scream "betrayal", answer me this: What is our purpose? [[Legion]], why are we here? To be soldiers? Symbols? No. Our purpose is to end the Alpha threat, not fight them, end them. [[Alpha Earth]] is killing us. And what have we, the beloved and celebrated VALORANT Legion done about it? Nothing. Less than nothing. Our [[spike]] extractions have plummeted. We were miles ahead technologically, now those miscreants invade our world. We've grown so incompetent even [[Atlas]] tries to do our job. You think this is about loyalty to Brimstone? No. This is about doing what is necessary. [[Omega Sova|Sova]] sees what I see. You doubt my intentions, do you doubt his? And [[Omega Yoru|Yoru]]? And [[Omega Breach|Breach]]? Have you all forgotten [[Omega Sage|Sage]], soaking in a chem-bath right now just to keep herself alive! We're done shedding tears for a leader who could not do his job. We are done doing things his way. No more rules, no more fighting fair. The only thing that matters is finishing this. We will cross the line, pursue their pain, and break them by any means necessary. You have your orders. Go."
+*{{AC|file=LegionAudioTap2.mp3}} ''(For the entire transcription amongst the agents, see [[Range/Lore/V26#Cypher's Office 5|Range/Lore/V26 → v12.04 → Cypher's Office]].)''
+*{{AC|file=LegionAudioTap3.mp3}} ''(For the entire transcription amongst the agents, see [[Range/Lore/V26#Cypher's Office 6|Range/Lore/V26 → v12.05 → Cypher's Office]].)''
+*{{AC|file=LegionAudioTap5.mp3}} "Agents of Legion. I am pleased to report that our attacks are yielding the desired results. The pressure on α-[[Sage]] is unprecedented, her crystallization is rapidly advancing. You've given her a taste of what she's put us through. But we won't stop, not until we put her down! Destroy their capacity to revive and we destroy their capacity to resist, ending the Alpha threat. That is the goal, and you are doing it. Stay the course."
+*{{AC|file=LegionAudioTap6.mp3}} ''(For the entire transcription amongst the agents, see [[Range/Lore/V26#Cypher's Office 9|Range/Lore/V26 → v12.08 → Cypher's Office]].)''
+*{{AC|file=VoicemailBrimstone131.mp3}} "Liam, I want out of these meetings. You need the team to hear these recordings, fine, but I am done sitting there like... some specimen to dissect for everyone's entertainment! Listening to [[Omega Viper|her]]-... to me, I-... I don't need this mirror shoved in my face!"
+*{{AC|file=LegionAudioTap10.mp3}} "<!--...they won't be the issue, look to your own [...]-->...the gully's a kill box and our [[Sage|target]] can't leave, not without answers to her problem that I know she won't find. You think I didn't check? That I didn't scour our own mountains a second time once again searching for a miracle before dumping [[Omega Sage|Sage]] in a vat?! That's twice those peaks have failed me! Their power, the [[Summit|academy]], it means nothing. Our Sage will recover through the treatment I am providing and her misprint will die chasing pure delusion. So while the target wastes her time meditating, we set the trap. Don't argue or judge me!"
+*{{AC|file=LegionAudioTap14.mp3}} ''(For the entire transcription amongst the agents, see [[Range/Lore/V26#Cypher's Office 17|Range/Lore/V26 → v13.05 → Cypher's Office]].)''
+*{{AC|file=LegionAudioTap15.mp3}} "I can't believe I have to call a meeting for this idiocy! Is everyone here? Where's [[Omega Sova|Sova]]? Never mind, forget him. What is wrong with all of you? I swear, [[Omega Phoenix|Phoenix]] must have burnt out your eyes because none of you have any damn vision! Can't you see? Our hands are around [[Sage|her]] neck, she's gasping for breath, all we have to do is squeeze! So I don't have time for your twenty questions, your hand wringing, your indecision, I don't care if you like me, you don't have to agree! All you have to do is your job! If you can't do that, then leave. Get in line or get out of my way! Meeting over."
+
+==Notes==
+:''To easily see which quotes were added corresponding to the patch, use your browser's Find function and type the patch number (e.g. v12.03).
+*{{ui|Removed}} 1 voice line removed from patch {{patchv|13.00}}, documented in the patch notes.
+*{{ui|Added}} 1 voice line added from patch {{patchv|13.00}}, documented in the patch notes.
+*{{ui|Added}} 10 voice lines added from patch {{patchv|12.03}}, documented in the patch notes.
+*{{ui|Removed}} 2 voice lines removed from patch {{patchv|12.03}}, undocumented in the patch notes.
+*Additional radio commands added in patch {{patchv|8.11}} are not mentioned in this page.
+*Other voice lines removed were at an unknown timeframe.
+
+==References==
+<references />
+
+==Navigation==
+{{Navbox agents}}
+[[Category:Quotes]]

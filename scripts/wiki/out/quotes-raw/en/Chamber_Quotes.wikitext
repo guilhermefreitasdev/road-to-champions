@@ -1,0 +1,844 @@
+{{TOCright}}
+This is a '''list of quotes by {{ai|Chamber}}'''. Chamber is voiced by Hugo Pierre Martin in English. Necessary quotes translated are from French to English. Chamber has a total of {{PAGESINCATEGORY:Chamber Quotes}} files of quotes including unused and removed lines, and excluding [[#The Range's lore assets|The Range's lore assets]]. 
+
+A downloadable folder containing all the audio files on this page can be found [https://drive.google.com/drive/folders/1TeEdWxNCEa-FrqE-qanCutJPM0cVeuO_?usp=sharing here].
+==Agent Selected/Unlocked==
+*{{AC|ChamberPick.mp3}} "You have good taste, my friend."
+
+==Abilities==
+==={{abi text|Trademark}}===
+====Cast====
+*{{AC|ChamberTrademarkCast1.mp3}} "That's a good spot."
+*{{AC|ChamberTrademarkCast2.mp3}} "A gift."
+*{{AC|ChamberTrademarkCast3.mp3}} "That works."
+
+====Tagged====
+*{{AC|ChamberTrademarkTag1.mp3}} "I have them."
+*{{AC|ChamberTrademarkTag2.mp3}} "There they are!"
+
+====Destroyed====
+*{{AC|ChamberTrademarkDestroyed1.mp3}} "They found my trap."
+*{{AC|ChamberTrademarkDestroyed2.mp3}} "Trap destroyed."
+
+==={{abi text|Headhunter}}===
+====Kill====
+*{{AC|ChamberHeadhunterKill1.mp3}} "Adieu."
+**(Farewell.)
+*{{AC|ChamberHeadhunterKill2.mp3}} "Parfait!"
+**(Perfect!)
+*{{AC|ChamberHeadhunterKill3.mp3}} "Excusez-moi!"
+**(Excuse me!)
+
+==={{abi text|Rendezvous}}===
+====Recharged====
+*{{AC|ChamberRendezvousPlaceSecond1.mp3}}{{AC|ChamberRendezvousPlaceSecond2.mp3}} "Teleport's ready."
+
+====Can't place anchor====
+*{{AC|ChamberRendezvousCantPlace1.mp3}}{{AC|ChamberRendezvousCantPlace2.mp3}} "Out of range."
+
+====Attempt cast when out of range====
+*{{AC|ChamberRendezvousCantCast1.mp3}}{{AC|ChamberRendezvousCantCast2.mp3}} "I'm too far."
+
+====Cast immediately after kill====
+*{{AC|ChamberRendezvousKill1.mp3}} "Farewell."
+*{{AC|ChamberRendezvousKill2.mp3}} "Away!"
+*{{AC|ChamberRendezvousKill3.mp3}} "Goodbye!"
+
+====Destroyed====
+*{{AC|ChamberRendezvousDestroyed1.mp3}} "Teleport's gone."
+*{{AC|ChamberRendezvousDestroyed2.mp3}} "Teleport's broken."
+
+==={{abi text|Tour De Force}}===
+====Ally Cast====
+*{{AC|ChamberUltAllyCast.mp3}} "They are so dead!"
+
+====Enemy Cast====
+*{{AC|ChamberUltEnemyCast.mp3}} "You want to play? Let's play."
+
+====Kill====
+*{{AC|ChamberUltKill1.mp3}} "Oh I like it!"
+*{{AC|ChamberUltKill2.mp3}} "Oh I'm enjoying this!"
+*{{AC|ChamberUltKill3.mp3}} "Beautiful!"
+*{{AC|ChamberUltKill4.mp3}} "I love this gun!"
+*{{AC|ChamberUltKill5.mp3}} "This is too fun!"
+
+==Buy Phase==
+===Match Start===
+*{{AC|ChamberMatchStart1.mp3}} "Do not worry, with me this will be easy. C'est simple comme bonjour."
+**(''C'est simple comme bonjour'': It's easy as hello)
+*{{AC|ChamberMatchStart2.mp3}} "Okay, last looks. You all look wonderful. Me, I always look good, we are ready."
+*{{AC|ChamberMatchStart3.mp3}} "If you die today, I will remember you forever. It has been an honor."
+*{{AC|ChamberMatchStart4.mp3}} "None of this "a win is a win" nonsense. We should win big and look good doing it."
+*{{AC|ChamberMatchStart5.mp3}} "This killing is terrible business but I always say if I must do something, be the best."
+
+====Attacking====
+*{{AC|ChamberMatchStartAttack1.mp3}} "Ah, we've been noticed! Follow my lead, I know how to make an entrance."
+*{{AC|ChamberMatchStartAttack2.mp3}} "I must say I like what they have done with the place."
+*{{AC|ChamberMatchStartAttack3.mp3}} "Which site shall we choose? I'll swing any way that feels good."
+
+====Defending====
+*{{AC|ChamberMatchStartDefense1.mp3}} "Our guests have arrived. Let's make a good first impression, shall we?"
+*{{AC|ChamberMatchStartDefense2.mp3}} "Oh no, invaders here to take our radianite!" *''laughs''* "I'm sorry, let's go shoot them."
+*{{AC|ChamberMatchStartDefense3.mp3}} "They actually think they can plant the spike?" ''*laughs*'' "Impossible."
+
+====[[Breeze]]====
+*{{AC|ChamberMatchStartBreeze.mp3}} "Be careful near the ship, that portal does not work as intended. Such a bad investment."
+
+====[[Fracture]]====
+*{{AC|ChamberMatchStartFracture.mp3}} "It is sad what happened here, such a terrible accident, one that I had nothing to do with."
+
+====[[Lotus]]====
+*{{AC|ChamberMatchStartLotus.mp3}} "A multiverse Nexus. Enfin."
+**(''Enfin'': Finally)
+
+===Round Start===
+*{{AC|ChamberRoundStart1.mp3}} "It seems these strangers want me dead. Eh bien, they're not the first."
+**(''Eh bien'': Well)
+*{{AC|ChamberRoundStart2.mp3}} "Trust me, they will make mistakes. When they do, take advantage."
+*{{AC|ChamberRoundStart3.mp3}} "If you're not doing well, keep trying. We must keep up appearances."
+*{{AC|ChamberRoundStart4.mp3}} "Okay, which gun to pick this time?"
+*{{AC|ChamberRoundStart5.mp3}} "One bullet per enemy, that should be enough, yes?"
+*{{AC|ChamberRoundStart6.mp3}} "Weapon choice, it is so personal, non? You pick a gun and it tells me who you are."
+**(''Non'': No)
+*{{AC|ChamberRoundStart7.mp3}} "Take aim, then fire, let's not complicate it."
+*{{AC|ChamberRoundStart8.mp3}} "Let us see what they have planned for us this time."
+*{{AC|ChamberRoundStart9.mp3}} "These guns we use are okay but I will also bring my own. No offense."
+*{{AC|ChamberRoundStart10.mp3}} "These new friends of ours are not too friendly."
+*{{AC|ChamberRoundStart11.mp3}} "Please do not mistake my smile. I take this all very seriously."
+
+====Last round won====
+*{{AC|ChamberRoundWon1.mp3}} "I do like winning."
+*{{AC|ChamberRoundWon2.mp3}} "They revealed their weaknesses. Not smart."
+*{{AC|ChamberRoundWon3.mp3}} "One step closer."
+*{{AC|ChamberRoundWon4.mp3}} "That was good! Another round, yes?"
+
+=====While in the lead=====
+*{{AC|ChamberLead1.mp3}} "Surely they can do better."
+*{{AC|ChamberLead2.mp3}} "They are no match, though I cannot say I'm surprised."
+*{{AC|ChamberLead3.mp3}} "I thought I would have to work today. Clearly not."
+
+=====Making a comeback=====
+*{{AC|ChamberComeback1.mp3}} "This is just the beginning."
+*{{AC|ChamberComeback2.mp3}} "That was good but there is more to do. On n'est pas sorti de l'auberge."
+**(''On n'est pas sorti de l'auberge'': "We haven't left the inn", meaning "we're not yet out of this")
+*{{AC|ChamberComeback3.mp3}} "Now they are nervous."
+
+===Last round in the half===
+====Attacking====
+*{{AC|ChamberLastRound1.mp3}} "Buy the best guns you can."
+
+====Defending====
+*{{AC|ChamberLastRound2.mp3}} "Spend everything, don't be cheap."
+
+===Match Point===
+*{{AC|ChamberMatchPoint1.mp3}} "This has gone on long enough I think."
+*{{AC|ChamberMatchPoint2.mp3}} "Time to say goodbye."
+
+===Shop===
+====Let's Buy====
+*{{AC|ChamberBuying1.mp3}}{{AC|ChamberBuying2.mp3}} "I'm buying."
+
+====Let's Save====
+*{{AC|ChamberSaving1.mp3}}{{AC|ChamberSaving2.mp3}} "I'm going to save."
+
+====I Have Extra Creds====
+*{{AC|ChamberOffer1.mp3}}{{AC|ChamberOffer2.mp3}} "I can buy for you, my treat."
+
+====Requested====
+*{{AC|ChamberRequest1.mp3}}{{AC|ChamberRequest2.mp3}} "Does anyone have funds?"
+
+===Barrier Down===
+*{{AC|ChamberBarrierDown1.mp3}} "Keep your eye on target."
+*{{AC|ChamberBarrierDown2.mp3}} "Kick them out."
+*{{AC|ChamberBarrierDown3.mp3}} "Find a way through them."
+*{{AC|ChamberBarrierDown4.mp3}} "Get them out of here."
+*{{AC|ChamberBarrierDown5.mp3}} "Okay, start fresh."
+*{{AC|ChamberBarrierDown6.mp3}} "I've done more with less, keep fighting."
+*{{AC|ChamberBarrierDown7.mp3}} "It feels like we've won already."
+*{{AC|ChamberBarrierDown8.mp3}} "They should give up now."
+*{{AC|ChamberBarrierDown9.mp3}} "Now, they have my attention."
+*{{AC|ChamberBarrierDown10.mp3}} "Have a good time out there."
+*{{AC|ChamberBarrierDown11.mp3}} "They are making this simple."
+*{{AC|ChamberBarrierDown12.mp3}} "Let's dance."
+*{{AC|ChamberBarrierDown13.mp3}} "Focus now, eyes off me."
+*{{AC|ChamberBarrierDown14.mp3}} "Bonne chance, mes amis."
+**(Good luck, my friends.)
+*{{AC|ChamberBarrierDown15.mp3}} "Who will I spot first?"
+*{{AC|ChamberBarrierDown16.mp3}} "In we go."
+
+==Spike==
+===Forgotten in spawn===
+*{{AC|ChamberForgotSpike1.mp3}} "I think we should also bring the spike."
+*{{AC|ChamberForgotSpike2.mp3}} "Mesdames, messieurs, the spike!"
+**(''Mesdames, messieurs'': Ladies, gentlemen)
+
+===Ally carrier down===
+*{{AC|ChamberSpikeDown1.mp3}}{{AC|ChamberSpikeDown2.mp3}} "Spike is down."
+
+===Dropped===
+*{{AC|ChamberSpikeDropped1.mp3}}{{AC|ChamberSpikeDropped2.mp3}} "Spike dropped."
+
+===Retrieved===
+*{{AC|ChamberSpikePickedUp1.mp3}}{{AC|ChamberSpikePickedUp2.mp3}} "I have the spike."
+
+===Planted===
+*{{AC|ChamberSpikePlanted1.mp3}}{{AC|ChamberSpikePlanted2.mp3}} "Spike planted."
+
+===Spotted===
+*{{AC|ChamberSpikeSpottedA1.mp3}}{{AC|ChamberSpikeSpottedA2.mp3}} "Spike is A."
+*{{AC|ChamberSpikeSpottedB1.mp3}}{{AC|ChamberSpikeSpottedB2.mp3}} "Spike is B."
+*{{AC|ChamberSpikeSpottedC1.mp3}}{{AC|ChamberSpikeSpottedC2.mp3}} "Spike is C."
+*{{AC|ChamberSpikeSpottedASpawn1.mp3}}{{AC|ChamberSpikeSpottedASpawn2.mp3}} "Spike in Attacker Spawn."
+*{{AC|ChamberSpikeSpottedDSpawn1.mp3}}{{AC|ChamberSpikeSpottedDSpawn2.mp3}} "Spike in Defender Spawn."
+*{{AC|ChamberSpikeSpottedMid1.mp3}}{{AC|ChamberSpikeSpottedMid2.mp3}} "Spike is Mid."
+
+===Defuse resumed===
+*{{AC|ChamberDefuseResumed1.mp3}} "Excuse me I'm working."
+
+===Defuse time running out===
+*{{AC|ChamberDefuseLate1.mp3}} "No one else could do this?"
+*{{AC|ChamberDefuseLate2.mp3}} "This is less than ideal."
+
+===Defuse successful===
+*{{AC|ChamberDefuseComplete1.mp3}} "They didn't actually think that would work."
+*{{AC|ChamberDefuseComplete2.mp3}} "No fireworks today I'm afraid."
+
+==Kill==
+*{{AC|ChamberKill1.mp3}} "Too slow!"
+*{{AC|ChamberKill2.mp3}} "Not your best!"
+*{{AC|ChamberKill3.mp3}} "Next!"
+*{{AC|ChamberKill4.mp3}} "One less!"
+*{{AC|ChamberKill5.mp3}} "So close!"
+*{{AC|ChamberKill6.mp3}} "Do better!"
+*{{AC|ChamberKill7.mp3}} "I don't think so!"
+*{{AC|ChamberKill8.mp3}} "You lose!"
+*{{AC|ChamberKill9.mp3}} "Away with you!"
+*{{AC|ChamberKill10.mp3}} "I win again!"
+
+===Headshot===
+*{{AC|ChamberHeadshot1.mp3}} "That one's dead."
+*{{AC|ChamberHeadshot2.mp3}} "Terminus."
+*{{AC|ChamberHeadshot3.mp3}} "Aïe!"
+**(Ouch!)
+*{{AC|ChamberHeadshot4.mp3}} "I can't miss!"
+*{{AC|ChamberHeadshot5.mp3}} "I'm a good shot!"
+*{{AC|ChamberHeadshot6.mp3}} "So long!"
+
+===[[Melee]]===
+*{{AC|ChamberMeleeKill1.mp3}} "Embarrassing!"
+*{{AC|ChamberMeleeKill2.mp3}} "Stand aside!"
+
+===Triple===
+*{{AC|ChamberTriple1.mp3}} "That's three."
+
+===Quadra===
+*{{AC|ChamberQuadra1.mp3}} "And four!"
+
+===One kill remaining (game-mode specific)===
+*{{AC|ChamberOneKillLeft1.mp3}} "One more!"
+*{{AC|ChamberOneKillLeft2.mp3}} "One more!"
+
+==Round End==
+===Ace===
+*{{AC|ChamberAce1.mp3}} "Oh thank you, thank you, you are too kind."
+*{{AC|ChamberAce2.mp3}} "I really am fantastic."
+*{{AC|ChamberAce3.mp3}} "Did you enjoy the show?" ''*Chamber laughs*'' "Of course you did."
+*{{AC|ChamberAce4.mp3}} "À votre santé!"
+**(''Cheers!'')
+
+===Clutch===
+*{{AC|ChamberClutch1.mp3}} "How do I get away with these things?"
+*{{AC|ChamberClutch2.mp3}} "Did everyone see that?"
+*{{AC|ChamberClutch3.mp3}} "Did you see their faces? Sorry, I should not laugh."
+*{{AC|ChamberClutch4.mp3}} "Ce sera tout."
+**(''That will be all.'')
+
+===Flawless or Team Ace===
+*{{AC|ChamberFlawless1.mp3}} "Bravo, you all did beautifully!"
+*{{AC|ChamberFlawless2.mp3}} "How did they think this would end?"
+
+===Thrifty===
+*{{AC|ChamberThrifty1.mp3}} "Take their guns, vite!"
+**(''Vite'': Quick)
+
+===Last Kill===
+*{{AC|ChamberLastKill1.mp3}} "It's a shame you had to die, but you are not part of my bigger picture."
+*{{AC|ChamberLastKill2.mp3}} "I would apologize to them but alas, they are dead."
+*{{AC|ChamberLastKill3.mp3}} "Oh, I am not cleaning this up."
+*{{AC|ChamberLastKill4.mp3}} "Okay, quick break."
+*{{AC|ChamberLastKill5.mp3}} "I am sorry we could not work out our differences."
+
+====Enemy MVP====
+There are no voice lines at the moment in this section for this Agent.
+
+====Using [[Melee]]====
+*{{AC|ChamberLastKillMelee1.mp3}} ''*Chamber laughs*'' "I'm sorry, but I could not help myself."
+
+===Low HP===
+*{{AC|ChamberLowHP1.mp3}} "Well, this suit is ruined."
+
+==Match End==
+===Match Win===
+*{{AC|ChamberMatchWin1.mp3}} "This was fun! We should do it again."
+*{{AC|ChamberMatchWin2.mp3}} "You were in my way so this was inevitable."
+*{{AC|ChamberMatchWin3.mp3}} "It has been a pleasure, my friends. Au revoir!"
+**(''Au revoir'': Goodbye)
+
+====[[Breeze]]====
+*{{AC|ChamberMatchWinBreeze.mp3}} "Goodbye paradise, and good riddance."
+
+====[[Fracture]]====
+*{{AC|ChamberMatchWinFracture.mp3}} "I should go, before someone recognizes me."
+
+===Runner-up (game-mode specific)===
+*{{AC|ChamberRunnerUp1.mp3}} "Okay, they win this round."
+*{{AC|ChamberRunnerUp2.mp3}} "Pretty good."
+*{{AC|ChamberRunnerUp3.mp3}} "I was right there."
+
+==Agent-specific interactions==
+{| class="wikitable sortable"
+!To Agent
+!Scenario
+!width=40%; class=unsortable|Ally
+!width=40%; class=unsortable|Enemy
+|-
+|Any male [[Agent]]
+|Kill
+|
+|{{AC|ChamberEnemyMaleKill.mp3}} "Pardon, monsieur."
+*(Sorry, sir.)
+|-
+|rowspan=4|{{ai|Astra}}
+|Match Start
+|{{AC|ChamberAllyAstraMatchStart.mp3}} "Astra, it is delightful to see you. I am at your service, mademoiselle."
+*(''Mademoiselle'': Miss)
+|
+|-
+|Commend
+|{{AC|ChamberAllyAstraCommend.mp3}} "Astra, what can I say? Je reste sans voix, I am speechless!"
+*(''Je reste sans voix'': I am speechless)
+|
+|-
+|Barrier Down
+|{{AC|ChamberAllyAstraBarrierDown.mp3}} "Good luck, Astra."
+|{{AC|ChamberEnemyAstraBarrierDown.mp3}} "Let's see what their Astra can do."
+|-
+|Kill
+|
+|{{AC|ChamberEnemyAstraKill.mp3}} "Astra's gone."
+|-
+|rowspan=2|{{ai|Brimstone}}
+|Match Start
+|{{AC|ChamberAllyBrimstoneMatchStart.mp3}} "Please Brimstone, I am your key to the other side, you should at least pretend to like me."
+|
+|-
+|Barrier Down
+|{{AC|ChamberAllyBrimstoneBarrierDown.mp3}} "Time to trust me, Brimstone!"
+|
+|-
+|rowspan=7|{{ai|Chamber}}
+|Match Start
+|
+|{{AC|ChamberEnemyChamberMatchStart.mp3}} "Who is that well-dressed man on the other side? Ah, the other me. Of course."
+|-
+|rowspan=2|Round Start
+|
+|{{AC|ChamberEnemyChamberRoundStart.mp3}} "Do not let my double shoot you, you will die."
+|-
+|
+|{{AC|ChamberEnemyChamberRoundStart2.mp3}} "So, we have to kill my double? So be it."
+|-
+|Barrier Down
+|
+|{{AC|ChamberEnemyChamberBarrierDown.mp3}} "No loose ends."
+|-
+|Kill
+|
+|{{AC|ChamberEnemyChamberKill.mp3}} "Au revoir, frérot."
+*(Goodbye, bro.)
+|-
+|rowspan=2|Last Kill
+|
+|{{AC|ChamberEnemyChamberLastKill.mp3}} "You knew not to trust me."
+|-
+|
+|{{AC|ChamberEnemyChamberLastKill2.mp3}} "Oh our deal? It's over. Sorry for the late notice."
+|-
+|rowspan=4|{{ai|Cypher}}
+|Match Start
+|{{AC|ChamberAllyCypherMatchStart.mp3}} "Be careful with my secrets, Cypher. It is better I think if we stay friends."
+|{{AC|ChamberEnemyCypherMatchStart.mp3}} "Does that Cypher know how valuable his secrets are? I should be careful."
+|-
+|Round Start
+|{{AC|ChamberAllyCypherRoundStart.mp3}} "Tell me what you have learned, Cypher- oh sorry, I meant us, please tell us."
+|{{AC|ChamberEnemyCypherRoundStart.mp3}} "Their Cypher knows too much."
+|-
+|Commend
+|{{AC|ChamberAllyCypherCommend.mp3}} "Cypher, incroyable, you never cease to impress!"
+*(''Incroyable'': Incredible)
+|
+|-
+|Last Kill
+|
+|{{AC|ChamberEnemyCypherLastKill.mp3}} "Cypher, I'm sorry it has come to this."
+|-
+|{{ai|Deadlock}}
+|Commend
+|{{AC|ChamberAllyDeadlockCommend.mp3}} "They say efficiency is beauty and Deadlock, you prove it."
+|
+|-
+|{{ai|Fade}}
+|Match Start
+|{{AC|ChamberAllyFadeMatchStart.mp3}} "Shed your demons, Fade. We all have a past, but it doesn't define us. One can only hope."
+|
+|-
+|rowspan=2|{{ai|Harbor}}
+|Match Start
+|{{AC|ChamberAllyHarborMatchStart.mp3}} "I never expected to be fighting ourselves, but we must embrace new experiences. Wouldn't you agree, Harbor?"
+|
+|-
+|Round Start
+|{{AC|ChamberAllyHarborRoundStart.mp3}} "Glad you can trust in a team again, Harbor. Let's get to work."
+|
+|-
+|{{ai|Iso}}
+|Commend
+|{{AC|ChamberAllyIsoCommend.mp3}} "Handsome and a weapons connoisseur! Iso, you tempt me!"
+|
+|-
+|rowspan=6|{{ai|KAYO}}
+|Round Start
+|{{AC|ChamberAllyKAYORoundStart.mp3}} "KAY/O, you are so industrial, it's a good look, but if you need something more upscale I have many ideas."
+|
+|-
+|Commend
+|{{AC|ChamberAllyKAYOCommend.mp3}} "Bien joué KAY/O, you are unstoppable my friend."
+*(''Bien joué'': Well played)
+|
+|-
+|Barrier Down
+|{{AC|ChamberAllyKAYOBarrierDown.mp3}} "KAY/O, take them out."
+|
+|-
+|Round Start
+|
+|{{AC|ChamberEnemyKAYORoundStart.mp3}} "Do not worry my radiant friends. I will unplug their talking toaster."
+|-
+|Kill
+|
+|{{AC|ChamberEnemyKAYOKill.mp3}} "Toaster is broken!"
+|-
+|Last Kill
+|
+|{{AC|ChamberEnemyKAYOLastKill.mp3}} "I create weapons of war and I destroy them." 
+|-
+|{{ai|Killjoy}}
+|Round Start
+|{{AC|ChamberAllyKilljoyRoundStart.mp3}} "Killjoy, I could never wear that jacket but on you, superb."
+|
+|-
+|{{ai|Neon}}
+|Last Kill
+|
+|{{AC|ChamberEnemyNeonLastKill.mp3}} "Terribly sorry, Neon, but you didn't like me anyway."
+|-
+|{{ai|Omen}}
+|Chat
+|
+:[[File:Omen icon.png|20px|link=Omen]] {{AC|OmenAllyChamberChat.mp3}} "I told you, Chamber, I cannot eat your cooking!"
+:[[File:Chamber icon.png|20px|link=Chamber]] {{AC|ChamberAllyOmenChat.mp3}} "You don't fear the enemy, yet you fear butter. Unbelievable."
+|
+|-
+|{{ai|Phoenix}}
+|Chat
+|
+:[[File:Phoenix icon.png|20px|link=Phoenix]] {{AC|PhoenixAllyChamberChat.mp3}} "Chamber! I'm ready for some custom guns. You'll hook me up, yeah?"
+:[[File:Chamber icon.png|20px|link=Chamber]] {{AC|ChamberAllyPhoenixChat.mp3}} ''*Chamber chuckles*'' "I am sorry, Phoenix, you cannot afford me."
+|
+|-
+|rowspan=4|{{ai|Reyna}}
+|Chat
+|
+:[[File:Reyna icon.png|20px|link=Reyna]] {{AC|ReynaAllyChamberChat.mp3}} "The Sanctuary is grateful for your support, Chamber, but do not expect any favors."
+:[[File:Chamber icon.png|20px|link=Chamber]] {{AC|ChamberAllyReynaChat.mp3}} "Of course, I only wish to help a friend, nothing more."
+|-
+|Round Start
+|{{AC|ChamberAllyReynaRoundStart.mp3}} "Reyna, I must say how nice it is to work with you. It is so hard to find partners with your...experience."
+|
+|-
+|Commend
+|{{AC|ChamberAllyReynaCommend.mp3}} "Reyna, what you just did, je n'en reviens pas, I cannot believe it!"
+*(''Je n'en reviens pas'': I can't get over it)
+|
+|-
+|Barrier Down
+|{{AC|ChamberAllyReynaBarrierDown.mp3}} "After you, Reyna."
+|
+|-
+|rowspan=2|{{ai|Sova}}
+|Match Start
+|{{AC|ChamberAllySovaMatchStart.mp3}} "Sova, now here is a man of principle! But you have broken rules before, yes? Ah, of course you have."
+|
+|-
+|Commend
+|{{AC|ChamberAllySovaCommend.mp3}} "Did you all see Sova?! Impressionnant, this man knows what he's doing!"
+*(''Impressionnant'': Impressive)
+|
+|-
+|{{ai|Viper}}
+|Round Start
+|{{AC|ChamberAllyViperRoundStart.mp3}} "And Viper, how are you? ... Ah, sorry everyone, I have again left her speechless."
+|
+|-
+|rowspan=2|{{ai|Yoru}}
+|Match Start
+|{{AC|ChamberAllyYoruMatchStart.mp3}} "Bonjour, Yoru. Your sunny demeanor is blinding as always."
+|
+|-
+|Commend
+|{{AC|ChamberAllyYoruCommend.mp3}} "Beau travail, Yoru! You humble me."
+*(''Beau travail'': Good work)
+|
+|}
+
+==Radio Commands==
+===Menu Index only===
+====Caution here====
+*{{AC|ChamberCaution1.mp3}}{{AC|ChamberCaution2.mp3}} "Someone's close."
+
+====Going Area====
+*{{AC|ChamberGoingA1.mp3}}{{AC|ChamberGoingA2.mp3}} "Going A."
+*{{AC|ChamberGoingB1.mp3}}{{AC|ChamberGoingB2.mp3}} "Going B."
+*{{AC|ChamberGoingC1.mp3}}{{AC|ChamberGoingC2.mp3}} "Going C."
+*{{AC|ChamberGoingMid1.mp3}}{{AC|ChamberGoingMid2.mp3}} "Going Mid."
+
+====Need Support====
+*{{AC|ChamberHelp1.mp3}}{{AC|ChamberHelp2.mp3}} "Need backup."
+
+====On my way====
+*{{AC|ChamberOnMyWay1.mp3}}{{AC|ChamberOnMyWay2.mp3}} "On my way."
+
+====Play for picks====
+*{{AC|ChamberPlayForPicks1.mp3}}{{AC|ChamberPlayForPicks2.mp3}} "Play for picks."
+
+===Wheel Index only===
+====Encourage====
+*{{AC|ChamberEncouraging1.mp3}}{{AC|ChamberEncouraging2.mp3}}{{AC|ChamberEncouraging3.mp3}} "We can do this."
+
+====I'll lurk====
+Only as Attackers during Buy Phase.
+*{{AC|ChamberLurking1.mp3}}{{AC|ChamberLurking2.mp3}} "I'm lurking."
+
+====I'll push out====
+Only as Defenders during Buy Phase.
+*{{AC|ChamberPushingOut1.mp3}}{{AC|ChamberPushingOut2.mp3}} "I'm pushing out."
+
+====I'm holding position====
+Only as Defenders during Buy Phase.
+*{{AC|ChamberHoldingPosition1.mp3}}{{AC|ChamberHoldingPosition2.mp3}} "Holding position."
+
+====Let's Attack====
+Only during Round Phase.
+*{{AC|ChamberLetsAttack1.mp3}}{{AC|ChamberLetsAttack2.mp3}} "Let's attack."
+
+====Let's hold positions====
+Only as Defenders during Buy Phase.
+*{{AC|ChamberHoldPositions1.mp3}}{{AC|ChamberHoldPositions2.mp3}} "Let's hold positions."
+
+====Let's play slow====
+Only as Attackers at anytime.
+*{{AC|ChamberPlaySlow1.mp3}}{{AC|ChamberPlaySlow2.mp3}} "Let's play slow."
+
+====Let's push out====
+Only as Defenders during Buy Phase.
+*{{AC|ChamberPushOut1.mp3}}{{AC|ChamberPushOut2.mp3}} "Let's push out."
+
+====Let's spread out====
+*{{AC|ChamberSpreadOut1.mp3}}{{AC|ChamberSpreadOut2.mp3}} "Let's spread out."
+
+====Nice Try====
+*{{AC|ChamberNiceTry1.mp3}}{{AC|ChamberNiceTry2.mp3}}{{AC|ChamberNiceTry3.mp3}} "Excellent try."
+
+====Stick together====
+*{{AC|ChamberStickTogether1.mp3}}{{AC|ChamberStickTogether2.mp3}} "Stick together."
+
+===Menu and Wheel Index===
+====Commend====
+*{{AC|ChamberCommend1.mp3}}{{AC|ChamberCommend2.mp3}}{{AC|ChamberCommend3.mp3}} "Bravo."
+
+====Fall Back====
+Menu Index at anytime, or Wheel Index only during Round Phase.
+*{{AC|ChamberFallBack1.mp3}}{{AC|ChamberFallBack2.mp3}} "Fall back."
+
+====Hello====
+*{{AC|ChamberHello1.mp3}}{{AC|ChamberHello2.mp3}}{{AC|ChamberHello3.mp3}} "Bonjour."
+**(Hello.)
+
+====I'll take point====
+Wheel Index only as Attackers during Buy Phase, or Menu Index at anytime regardless of Attackers or Defenders.
+*{{AC|ChamberTakePoint1.mp3}}{{AC|ChamberTakePoint2.mp3}} "Taking point."
+
+====Let's rush them (Radio Command)====
+*{{AC|ChamberRush1.mp3}}{{AC|ChamberRush2.mp3}} "Rush them."
+
+====Need healing====
+*{{AC|ChamberHealing1.mp3}}{{AC|ChamberHealing2.mp3}} "Need healing."
+
+====No====
+*{{AC|ChamberNo1.mp3}}{{AC|ChamberNo2.mp3}}{{AC|ChamberNo3.mp3}} "No."
+
+====Sorry====
+*{{AC|ChamberSorry1.mp3}}{{AC|ChamberSorry2.mp3}}{{AC|ChamberSorry3.mp3}} "My apologies."
+
+====Thanks====
+*{{AC|ChamberThanks1.mp3}}{{AC|ChamberThanks2.mp3}}{{AC|ChamberThanks3.mp3}} "Merci."
+**(Thank you.)
+
+====Ultimate Status====
+*{{AC|ChamberUltDown1.mp3}}{{AC|ChamberUltDown2.mp3}} "My ult's not ready."
+*{{AC|ChamberUltAlmost1.mp3}}{{AC|ChamberUltAlmost2.mp3}} "My ult is almost ready."
+*{{AC|ChamberUltReady1.mp3}}{{AC|ChamberUltReady2.mp3}} "My ult is ready."
+
+====Yes====
+*{{AC|ChamberYes1.mp3}}{{AC|ChamberYes2.mp3}}{{AC|ChamberYes3.mp3}} "Yes."
+
+===Wheel Index requiring Minimap===
+For the following voicelines, the minimap must be open and then open ping wheel and activate strategy.
+====Faking====
+Only as Attackers during Buy Phase.
+*{{AC|ChamberFaking1.mp3}}{{AC|ChamberFaking2.mp3}} "I'm faking."
+*{{AC|ChamberFakingA1.mp3}}{{AC|ChamberFakingA2.mp3}} "I'm faking A."
+*{{AC|ChamberFakingB1.mp3}}{{AC|ChamberFakingB2.mp3}} "I'm faking B."
+*{{AC|ChamberFakingC1.mp3}}{{AC|ChamberFakingC2.mp3}} "I'm faking C."
+
+====I'm Going Here====
+As Defenders during Buy Phase, or as Attackers at anytime.
+*{{AC|ChamberGoingA1.mp3}}{{AC|ChamberGoingA2.mp3}} "Going A."
+*{{AC|ChamberGoingB1.mp3}}{{AC|ChamberGoingB2.mp3}} "Going B."
+*{{AC|ChamberGoingC1.mp3}}{{AC|ChamberGoingC2.mp3}} "Going C."
+*{{AC|ChamberGoingMid1.mp3}}{{AC|ChamberGoingMid2.mp3}} "Going Mid."
+
+====Let's Go Here====
+Only as Attackers during Buy Phase.
+*{{AC|ChamberLetsGoA1.mp3}}{{AC|ChamberLetsGoA2.mp3}} "Let's go A."
+*{{AC|ChamberLetsGoB1.mp3}}{{AC|ChamberLetsGoB2.mp3}} "Let's go B."
+*{{AC|ChamberLetsGoC1.mp3}}{{AC|ChamberLetsGoC2.mp3}} "Let's go C."
+*{{AC|ChamberLetsGoHere1.mp3}}{{AC|ChamberLetsGoHere2.mp3}} "Let's go here."
+
+====Let's rush them (Minimap)====
+Only as Attackers during Buy Phase.
+*{{AC|ChamberLetsRush1.mp3}}{{AC|ChamberLetsRush2.mp3}} "Let's rush them."
+*{{AC|ChamberLetsRushA1.mp3}}{{AC|ChamberLetsRushA2.mp3}} "Let's rush A."
+*{{AC|ChamberLetsRushB1.mp3}}{{AC|ChamberLetsRushB2.mp3}} "Let's rush B."
+*{{AC|ChamberLetsRushC1.mp3}}{{AC|ChamberLetsRushC2.mp3}} "Let's rush C."
+
+====Let's Sneak Here====
+Only as Attackers during Buy Phase.
+*{{AC|ChamberSneakA1.mp3}}{{AC|ChamberSneakA2.mp3}} "Let's sneak A."
+*{{AC|ChamberSneakB1.mp3}}{{AC|ChamberSneakB2.mp3}} "Let's sneak B."
+*{{AC|ChamberSneakC1.mp3}}{{AC|ChamberSneakC2.mp3}} "Let's sneak C."
+*{{AC|ChamberSneakMid1.mp3}}{{AC|ChamberSneakMid2.mp3}} "Let's sneak Mid."
+
+====Let's Stack Here====
+Only as Defenders during Buy Phase.
+*{{AC|ChamberStack1.mp3}}{{AC|ChamberStack2.mp3}} "Let's stack up."
+*{{AC|ChamberStackA1.mp3}}{{AC|ChamberStackA2.mp3}} "Let's stack A."
+*{{AC|ChamberStackB1.mp3}}{{AC|ChamberStackB2.mp3}} "Let's stack B."
+*{{AC|ChamberStackC1.mp3}}{{AC|ChamberStackC2.mp3}} "Let's stack C."
+*{{AC|ChamberStackMid1.mp3}}{{AC|ChamberStackMid2.mp3}} "Let's stack Mid."
+
+====Someone Go Here====
+As Attackers during Round Phase, or as Defenders at anytime.
+*{{AC|ChamberNeedSomeoneA1.mp3}}{{AC|ChamberNeedSomeoneA2.mp3}} "Someone go A."
+*{{AC|ChamberNeedSomeoneB1.mp3}}{{AC|ChamberNeedSomeoneB2.mp3}} "Someone go B."
+*{{AC|ChamberNeedSomeoneC1.mp3}}{{AC|ChamberNeedSomeoneC2.mp3}} "Someone go C."
+*{{AC|ChamberNeedSomeoneMid1.mp3}}{{AC|ChamberNeedSomeoneMid2.mp3}} "Someone go Mid."
+
+====Spike's here====
+Only as Defenders during Round Phase.
+*{{AC|ChamberSpikeA1.mp3}}{{AC|ChamberSpikeA2.mp3}} "Spike's A."
+*{{AC|ChamberSpikeB1.mp3}}{{AC|ChamberSpikeB2.mp3}} "Spike's B."
+*{{AC|ChamberSpikeC1.mp3}}{{AC|ChamberSpikeC2.mp3}} "Spike's C."
+*{{AC|ChamberSpikeMid1.mp3}}{{AC|ChamberSpikeMid2.mp3}} "Spike's Mid."
+*{{AC|ChamberSpikeSpottedASpawn1.mp3}}{{AC|ChamberSpikeSpottedASpawn2.mp3}} "Spike in Attacker Spawn."
+*{{AC|ChamberSpikeSpottedDSpawn1.mp3}}{{AC|ChamberSpikeSpottedDSpawn2.mp3}} "Spike in Defender Spawn."
+
+==Pings==
+===General===
+*{{AC|ChamberPing1.mp3}}{{AC|ChamberPing2.mp3}} "Here."
+
+===Caution===
+*{{AC|ChamberPingCaution1.mp3}}{{AC|ChamberPingCaution2.mp3}} "Careful there."
+
+===Need support===
+*{{AC|ChamberHelp1.mp3}}{{AC|ChamberHelp2.mp3}} "Need backup!"
+
+===On my mark===
+*{{AC|ChamberOnMyMark1.mp3}}{{AC|ChamberOnMyMark2.mp3}} "On my mark."
+
+===Ping gun===
+*{{AC|ChamberPingGun1.mp3}}{{AC|ChamberPingGun2.mp3}} "Gun here."
+
+===Ping spike===
+*{{AC|ChamberPingSpike1.mp3}}{{AC|ChamberPingSpike2.mp3}} "Spike's here."
+
+===Ping for spike defuse===
+*{{AC|ChamberDefuseSpike1.mp3}}{{AC|ChamberDefuseSpike2.mp3}} "Defuse the spike!"
+
+===Ping for spike plant===
+*{{AC|ChamberPlantSpike1.mp3}}{{AC|ChamberPlantSpike2.mp3}} "Plant the spike!"
+
+===Watching===
+*{{AC|ChamberWatching1.mp3}}{{AC|ChamberWatching2.mp3}} "Watching here."
+
+==Other lines==
+===Ability unusable===
+====[[Status Effect#Suppress|Suppressed]]====
+*{{AC|ChamberCantUse1.mp3}}{{AC|ChamberCantUse2.mp3}} "I can't use that."
+
+====On cooldown====
+*{{AC|ChamberOnCooldown1.mp3}}{{AC|ChamberOnCooldown2.mp3}} "That's not ready."
+
+====No charges====
+*{{AC|ChamberNoCharges1.mp3}}{{AC|ChamberNoCharges2.mp3}} "Out of charges."
+
+===Enemy spotted===
+*{{AC|ChamberEnemyA1.mp3}}{{AC|ChamberEnemyA2.mp3}} "Enemy A."
+*{{AC|ChamberEnemyB1.mp3}}{{AC|ChamberEnemyB2.mp3}} "Enemy B."
+*{{AC|ChamberEnemyC1.mp3}}{{AC|ChamberEnemyC2.mp3}} "Enemy C."
+*{{AC|ChamberEnemyASpawn1.mp3}}{{AC|ChamberEnemyASpawn2.mp3}} "Enemy Attacker Spawn."
+*{{AC|ChamberEnemyDSpawn1.mp3}}{{AC|ChamberEnemyDSpawn2.mp3}} "Enemy Defender Spawn."
+*{{AC|ChamberEnemyMid1.mp3}}{{AC|ChamberEnemyMid2.mp3}} "Enemy Mid."
+
+====Multiple====
+*{{AC|ChamberEnemiesA1.mp3}}{{AC|ChamberEnemiesA2.mp3}} "Enemies A!"
+*{{AC|ChamberEnemiesB1.mp3}}{{AC|ChamberEnemiesB2.mp3}} "Enemies B!"
+*{{AC|ChamberEnemiesC1.mp3}}{{AC|ChamberEnemiesC2.mp3}} "Enemies C!"
+*{{AC|ChamberEnemiesASpawn1.mp3}}{{AC|ChamberEnemiesASpawn2.mp3}} "Enemies Attacker Spawn!"
+*{{AC|ChamberEnemiesDSpawn1.mp3}}{{AC|ChamberEnemiesDSpawn2.mp3}} "Enemies Defender Spawn!"
+*{{AC|ChamberEnemiesMid1.mp3}}{{AC|ChamberEnemiesMid2.mp3}} "Enemies Mid!"
+
+===Reloading===
+*{{AC|ChamberReloading1.mp3}}{{AC|ChamberReloading2.mp3}} "Reloading."
+
+===Healed===
+*{{AC|ChamberRelief1.mp3}}{{AC|ChamberRelief2.mp3}}{{AC|ChamberRelief3.mp3}} ''*Chamber sighs*''
+
+===Killed===
+*{{AC|ChamberDeath1.mp3}}{{AC|ChamberDeath2.mp3}}{{AC|ChamberDeath3.mp3}} ''*Chamber groans*''
+
+===Resurrected via {{abi text|Resurrection}}===
+*{{AC|ChamberResurrect.mp3}} "That was unpleasant."
+
+===Wounded===
+====Light damage====
+*{{AC|ChamberPainLight1.mp3}}{{AC|ChamberPainLight2.mp3}}{{AC|ChamberPainLight3.mp3}} ''*Chamber groans*''
+
+====Medium damage====
+*{{AC|ChamberPainMedium1.mp3}}{{AC|ChamberPainMedium2.mp3}}{{AC|ChamberPainMedium3.mp3}} ''*Chamber groans*''
+
+====Heavy damage====
+*{{AC|ChamberPainHeavy1.mp3}}{{AC|ChamberPainHeavy2.mp3}}{{AC|ChamberPainHeavy3.mp3}} ''*Chamber groans*''
+
+====Fall damage====
+*{{AC|ChamberPainFall1.mp3}}{{AC|ChamberPainFall2.mp3}}{{AC|ChamberPainFall3.mp3}} ''*Chamber groans*''
+
+==Unused lines==
+===Place {{abi text|Rendezvous}} anchor===
+*{{AC|ChamberRendezvousPlaceFirst1.mp3}} "This should do."
+*{{AC|ChamberRendezvousPlaceFirst2.mp3}} "Perfect."
+*{{AC|ChamberRendezvousPlaceFirst3.mp3}} "All set up."
+
+==Removed lines==
+===Last Kill Enemy MVP===
+*{{AC|ChamberLastKillMVP1.mp3}} "Was that their best? How embarrassing."{{#tag:sup|-{{patchv|13.00}}}}
+
+===Enemy {{ai|Astra}}===
+====Match Start====
+*{{AC|ChamberEnemyAstraMatchStart.mp3}} "Ah, the other Astra. If she dies, take that metal arm for me would you? Merci."
+**(''Merci'': Thank you)
+
+====Last Kill====
+*{{AC|ChamberEnemyAstraLastKill.mp3}} "Now, let's take a look at this hand of yours."
+
+===Ally {{ai|Viper}}===
+====Chat====
+:[[File:Chamber icon.png|20px|link=Chamber]] {{AC|ChamberAllyViperChat.mp3}} "Viper, you must let me take you out some time. Dinner, dancing, I know the perfect place."{{#tag:sup|-{{patchv|12.03}}}}
+:[[File:Viper icon.png|20px|link=Viper]] {{AC|ViperAllyChamberChat.mp3}} "Chamber, I would rather drink my own poison."
+
+====Match Start====
+*{{AC|ChamberAllyViperMatchStart.mp3}} "Viper, don't pretend you're not happy to see me. You're smiling on the inside, I know it."{{#tag:sup|-{{patchv|12.03}}}}
+
+===Ally {{ai|Brimstone}} Match Start===
+*{{AC|ChamberAllyBrimstoneMatchStart2.mp3}} "Monsieur Brimstone, as promised I have found your next recruit. You are off the hook, as they say. Forgive me for doing your job!"
+
+===Ally {{ai|Jett}} Match Start===
+*{{AC|ChamberAllyJettMatchStart.mp3}} "Zippy Jett needs some competition I think. I know just the person."
+
+===Ally {{ai|Killjoy}} Match Start===
+*{{AC|ChamberAllyKilljoyMatchStart.mp3}} "Killjoy, I hear your latest project lacks a power source. Do not be embarrassed, I have a solution."
+
+===Ally {{ai|Reyna}} Match Start===
+*{{AC|ChamberAllyReynaMatchStart.mp3}} "Reyna, radiant as always. Speaking of which, I have an impressionable young mind for you to corrupt. A gift from me to you."
+
+===Ally {{ai|Sage}} Match Start===
+*{{AC|ChamberAllySageMatchStart.mp3}} "Sage, I am told you are something of a radiant mentor? Expect a new student soon. I should warn you that this one is a bit...prickly."
+
+===Ally {{ai|Viper}} Match Start===
+*{{AC|ChamberAllyViperMatchStart2.mp3}} "Viper, your suit is a little stifling, no? When you go meet the new agent, maybe pack something light, Manila is quite warm this time of year."
+
+===Spike Spotted General===
+*{{AC|ChamberSpikeSpotted1.mp3}}{{AC|ChamberSpikeSpotted2.mp3}} "Spike spotted."
+
+===Enemy spotted General===
+*{{AC|ChamberEnemy1.mp3}}{{AC|ChamberEnemy2.mp3}} "There's one."
+
+===Multiple Enemies spotted General===
+*{{AC|ChamberEnemies1.mp3}}{{AC|ChamberEnemies2.mp3}} "There they are!"
+
+===Be Quiet===
+*{{AC|ChamberBeQuiet1.mp3}}{{AC|ChamberBeQuiet2.mp3}} "Quiet now."
+
+===Rotate===
+*{{AC|ChamberRotating1.mp3}}{{AC|ChamberRotating2.mp3}} "Rotating."
+
+===Let's Rotate===
+*{{AC|ChamberLetsRotate1.mp3}}{{AC|ChamberLetsRotate2.mp3}} "Let's rotate."
+
+===Need utility here===
+*{{AC|ChamberNeedUtilityHere1.mp3}}{{AC|ChamberNeedUtilityHere2.mp3}} "Need util here."
+
+===Clear Area===
+*{{AC|ChamberClearThisArea1.mp3}}{{AC|ChamberClearThisArea2.mp3}} "Clear here."
+
+===Hold===
+*{{AC|ChamberHold1.mp3}}{{AC|ChamberHold2.mp3}} "Hold."
+
+===Push===
+*{{AC|ChamberPush1.mp3}}{{AC|ChamberPush2.mp3}} "Push."
+
+===Regroup===
+*{{AC|ChamberRegroup1.mp3}}{{AC|ChamberRegroup2.mp3}} "Regroup."
+
+===Ping Go here===
+*{{AC|ChamberGoHere1.mp3}}{{AC|ChamberGoHere2.mp3}} "Let's go here."
+
+==[[Range/Lore|The Range's lore assets]]==
+===[[Range/Lore/EP3|Episode 3]]===
+*{{AC|file=VoicemailBrimstone2.mp3}} "Monsieur [[Brimstone]], I must say again how wise it is that you have embraced our partnership. Trust me, I understand your reluctance, I'm new, unknown, and it is unfortunate that we found each other in such unpleasant circumstances but... we will get to know each other! Look into me if you must, I am an open book. In the end, we want the same thing, non? And I am in the unique position to deliver it. There is only benefit. You will not be disappointed."
+*{{AC|file=VoicemailBrimstone3.mp3}} "Bonjour Brimstone, I have sent you my intelligence for [[Neon|number Nineteen]]. The file is quite comprehensive, [[Kingdom Corporation|Kingdom]] keeps far too much data on its employees. As you'll see, her abilities are uniquely suited to help with the... special project. She is a perfect fit, I think. Unfortunately, I cannot reach out to her directly, there is a past... misunderstanding that... may make her less receptive. But as a fellow K-SEC veteran, I'm sure she'll meet with you! Appeal to her sense of service, she gets that from her family. This is exciting, non? Good progress!"
+
+===[[Range/Lore/EP4|Episode 4]]===
+*{{AC|file=VoicemailBrimstone11.mp3}} "Brimstone, the day is close at hand, oui? Soon our dear lady of lightning will shock the portal back to life and open the gate to a glorious new world! Which is why I call... have you confirmed the limiter release protocol for her suit? I understand it includes certain voltage caps that we must... remove for the desired power output. It is safe, no? I'm sure the suit's inventor was just being... overcautious. Anyway, good luck to us and our star! We are all rooting for her!"
+*{{AC|file=KAYO Audio Log Istanbul Mission Complete.mp3}} ''(For the entire transcription amongst the agents, see [[Range/Lore/EP4#Cypher's_Office|Range/Lore/EP4 → v4.07 → Cypher's Office]].)''
+
+==Notes==
+:''To easily see which quotes were added or removed corresponding to the patch, use your browser's Find function and type the patch number (e.g. v12.03).
+*{{ui|Removed}} 1 voice line removed from patch {{patchv|13.00}}, documented in the patch notes.
+*{{ui|Removed}} 2 voice lines removed from patch {{patchv|12.03}}, undocumented in the patch notes.
+*Additional radio commands added in patch {{patchv|8.11}} are not mentioned in this page.
+*Other voice lines removed were at an unknown timeframe.
+
+==Navigation==
+{{Navbox agents}}
+[[Category:Quotes]]
