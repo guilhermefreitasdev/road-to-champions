@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { mediaUrl, playerMedia } from '../../data/media';
-import { flagEmoji } from '../../game/explain';
 
 /**
  * Player photo in a fixed square (taken at the event when Liquipedia has one, else the current photo).
@@ -32,7 +31,7 @@ export function PlayerPhoto({
     >
       <span className="player-photo-fallback" aria-hidden="true">
         <span>{handle.replace(/[^\p{L}\p{N}]/gu, '').slice(0, 2).toUpperCase()}</span>
-        {country && <span className="player-photo-flag">{flagEmoji(country)}</span>}
+        {country && <span className="player-photo-flag">{country}</span>}
       </span>
       {show && (
         <img src={mediaUrl(media.photo)} alt="" width={size} height={size} loading="lazy" decoding="async" onError={() => setFailed(true)} />

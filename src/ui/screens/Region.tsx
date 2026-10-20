@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { REGIONS, type Region as RegionKey } from '../../engine/types';
 import { FIELD_MODES, FIELD_MODE_LABELS, FIELD_MODE_TEXT, regionPreview, type FieldMode } from '../../game/season';
+import { Icon } from '../components/Icon';
 import { TeamLogo } from '../components/TeamLogo';
 
 interface Props {
@@ -71,7 +72,7 @@ export function Region({ field: initial, onChoose }: Props) {
                 ))}
               </span>
               <span className="mode-go" aria-hidden="true">
-                Jogar aqui →
+                Jogar aqui <Icon name="chevron" />
               </span>
             </button>
           );

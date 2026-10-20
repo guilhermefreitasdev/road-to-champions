@@ -23,6 +23,30 @@ async function copyText(text: string): Promise<boolean> {
   }
 }
 
+const TOKENS = /(\u{1F7E9}|\u{1F7E5}|\u{1F3C6})/u;
+
+/**
+ * The share text as shown on the page: the result squares and the trophy are drawn (SVG/CSS), not emoji; the copied
+ * text keeps them, since that is what chat apps render.
+ */
+function SharePreview({ text }: { text: string }) {
+  return (
+    <>
+      {text.split(TOKENS).map((part, i) =>
+        part === '\u{1F7E9}' ? (
+          <span key={i} className="share-sq w" role="img" aria-label="vitória" />
+        ) : part === '\u{1F7E5}' ? (
+          <span key={i} className="share-sq l" role="img" aria-label="derrota" />
+        ) : part === '\u{1F3C6}' ? (
+          <Icon key={i} name="trophy" label="título" className="share-trophy" />
+        ) : (
+          part
+        ),
+      )}
+    </>
+  );
+}
+
 /** Spoiler-free share box: the text, copy and (when available) the native share sheet. */
 export function SharePanel({ text }: { text: string }) {
   const [copied, setCopied] = useState<'idle' | 'ok' | 'fail'>('idle');
@@ -31,7 +55,9 @@ export function SharePanel({ text }: { text: string }) {
     <section className="panel share-panel" aria-labelledby="share-title">
       <h2 id="share-title">Compartilhe sua run</h2>
       <p className="small muted">Sem spoiler: só o caminho, sem nomes de time ou jogador.</p>
-      <pre className="share">{text}</pre>
+      <pre className="share">
+        <SharePreview text={text} />
+      </pre>
       <div className="share-actions">
         <button
           type="button"

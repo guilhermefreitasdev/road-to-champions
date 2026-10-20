@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { roleFit } from '../../engine/team';
 import {
   ANCHOR_HELP,
   AURA_LABELS,
@@ -9,7 +8,6 @@ import {
   SLOT_LABELS,
   auraTitle,
   explainStrength,
-  fitLabel,
   formatDecimal,
   formatPoints,
   lineupNotes,
@@ -17,6 +15,9 @@ import {
 import type { Lineup, RosterEntry } from '../../engine/types';
 import { DEFAULT_TEAM_NAME, TEAM_NAME_MAX } from '../../game/run';
 import { AgentIcon } from '../components/GameImage';
+import { Icon } from '../components/Icon';
+import { NO_IGL_TEXT } from '../components/IglNotice';
+import { flexRolesText, isNaturalFlex, slotFit, slotFitLabel } from '../fit';
 import { PlayerPhoto } from '../components/PlayerPhoto';
 import { TeamLogo } from '../components/TeamLogo';
 
@@ -38,6 +39,7 @@ export function Team({ lineup, pool, initialName, context, cta, onStart }: Props
   const { breakdown, parts, dimensions, warnings } = explainStrength(lineup);
   const points = parts.filter((p) => p.key === 'base' || p.key === 'composition');
   const notes = lineupNotes(lineup);
+  const noIgl = breakdown.igl === 'none';
 
   return (
     <div className="screen team-screen">
@@ -45,6 +47,21 @@ export function Team({ lineup, pool, initialName, context, cta, onStart }: Props
         <h1>Seu time</h1>
         <p className="context">{context ?? 'Draft concluído'}</p>
       </header>
+
+      {noIgl && (
+        <section className="igl-alert" aria-labelledby="igl-alert-title">
+          <Icon name="warning" className="igl-alert-icon" />
+          <div>
+            <h2 id="igl-alert-title">Seu time não tem IGL</h2>
+            <p>
+              Ninguém dos cinco foi o IGL do time no evento do card: {NO_IGL_TEXT}, e quem tiver a melhor decisão faz as calls. Na
+              força, isso custa{' '}
+              <strong>{formatPoints(breakdown.points.decision)}</strong> em Tomada de decisão. Dá para começar assim, mas o time compra
+              pior depois de perder e se adapta menos ao longo da série.
+            </p>
+          </div>
+        </section>
+      )}
 
       <div className="team-grid">
         <section className="team-roster" aria-label="Escalação">
@@ -58,7 +75,16 @@ export function Team({ lineup, pool, initialName, context, cta, onStart }: Props
                 <span className="lineup-player">
                   <strong>
                     {card.handle}
-                    {card.isIGL && <span className="badge igl">IGL</span>}
+                    {card.isIGL && (
+                      <span className="badge igl" title="IGL: faz as calls do time">
+                        <Icon name="mic" /> IGL
+                      </span>
+                    )}
+                    {isNaturalFlex(card) && (
+                      <span className="badge flex-nato" title={`Flex nato: jogou ${flexRolesText(card)}`}>
+                        <Icon name="swap" /> Flex nato
+                      </span>
+                    )}
                     {card.prodigy ? (
                       <span className="badge aura prodigy" title={PRODIGY_HELP}>
                         Prodígio
@@ -78,7 +104,7 @@ export function Team({ lineup, pool, initialName, context, cta, onStart }: Props
                   </strong>
                   <span className="small muted lineup-origin">
                     <TeamLogo teamId={card.teamId} eventId={card.eventId} name={rosterOf(card.teamId, card.eventId)?.teamName ?? card.teamId} size={14} />
-                    {ROLE_LABELS[card.role]} · {fitLabel(card.role, slot)}
+                    {ROLE_LABELS[card.role]} · {slotFitLabel(card, slot)}
                   </span>
                 </span>
                 <span className="agents">
@@ -87,7 +113,7 @@ export function Team({ lineup, pool, initialName, context, cta, onStart }: Props
                   ))}
                 </span>
                 <span className="lineup-ovr" title="OVR × encaixe (com a fase do torneio)">
-                  {Math.round(card.ovr * roleFit(card.role, slot))}
+                  {Math.round(card.ovr * slotFit(card, slot))}
                 </span>
               </li>
               );
@@ -171,7 +197,13 @@ export function Team({ lineup, pool, initialName, context, cta, onStart }: Props
                 spellCheck={false}
               />
             </label>
-            <button type="submit" className="primary wide">
+            {noIgl && (
+              <p className="igl-notice warn small" id="cta-igl">
+                <Icon name="warning" />
+                <span>Começando sem IGL: {NO_IGL_TEXT}.</span>
+              </p>
+            )}
+            <button type="submit" className="primary wide" aria-describedby={noIgl ? 'cta-igl' : undefined}>
               {cta}
             </button>
           </form>

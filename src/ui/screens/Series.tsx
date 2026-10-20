@@ -14,9 +14,11 @@ interface Props {
   side: TeamIndex;
   names: [string, string];
   onContinue: () => void;
+  /** Watch the series again "ao vivo". */
+  onReplay?: () => void;
 }
 
-export function Series({ label, bestOf, series, side, names, onContinue }: Props) {
+export function Series({ label, bestOf, series, side, names, onContinue, onReplay }: Props) {
   const won = series.winner === side;
   const order = playedMaps(series.veto);
 
@@ -62,9 +64,16 @@ export function Series({ label, bestOf, series, side, names, onContinue }: Props
         })}
       </div>
 
-      <button type="button" className="primary wide" onClick={onContinue}>
-        Continuar
-      </button>
+      <div className="series-actions">
+        {onReplay && (
+          <button type="button" className="secondary" onClick={onReplay}>
+            <Icon name="play" /> Assistir replay
+          </button>
+        )}
+        <button type="button" className="primary" onClick={onContinue}>
+          Continuar
+        </button>
+      </div>
     </div>
   );
 }

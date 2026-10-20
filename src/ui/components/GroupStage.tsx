@@ -56,8 +56,8 @@ export function GroupStage({ views, team, onView }: Props) {
   );
 }
 
-const UPPER_HEADS = ['Abertura', 'Vencedores', 'Classificado ✔'];
-const LOWER_HEADS = ['Eliminação', 'Decisiva', 'Classificado ✔'];
+const UPPER_HEADS = ['Abertura', 'Vencedores', 'Classificado'];
+const LOWER_HEADS = ['Eliminação', 'Decisiva', 'Classificado'];
 
 function GroupCard({
   view,

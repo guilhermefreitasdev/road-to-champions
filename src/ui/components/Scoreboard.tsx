@@ -1,8 +1,8 @@
 import { isCold, isInspired, type MapResult, type PlayerLine } from '../../engine/match';
 import type { TeamIndex } from '../../engine/types';
-import { FORM_HELP, formatDecimal } from '../../game/explain';
-import { mapLabel } from './GameImage';
-import { YouTag } from './Icon';
+import { AGENT_HELP, FORM_HELP, agentEdgeLabel, formatDecimal } from '../../game/explain';
+import { AgentIcon, mapLabel } from './GameImage';
+import { Icon, YouTag } from './Icon';
 
 interface Props {
   result: MapResult;
@@ -32,7 +32,7 @@ function TeamTable({
       <h4 className={won ? 'won' : undefined}>
         {name}
         {mine && <YouTag />} <span className="muted">· força {formatDecimal(strength)}</span>
-        {won && <span className="sr-only"> (venceu)</span>}
+        {won && <Icon name="check" className="won-check" label="venceu o mapa" />}
       </h4>
       <div className="table-wrap">
         <table>
@@ -71,7 +71,10 @@ function TeamTable({
             {sorted.map((p) => (
               <tr key={p.cardId} className={p.mvp ? 'mvp-row' : undefined}>
                 <td>
-                  {p.handle}
+                  <span className="line-player" title={p.agent ? [agentEdgeLabel(p.agentEdge ?? 0), AGENT_HELP].filter(Boolean).join(' · ') : undefined}>
+                    {p.agent ? <AgentIcon name={p.agent} /> : <span className="agent-icon empty" aria-hidden="true" />}
+                    <span className="line-handle">{p.handle}</span>
+                  </span>
                   <span className="line-tags">
                   {p.mvp && (
                     <span className="tag mvp" title="MVP do mapa: melhor rating estimado dos 10">
@@ -80,12 +83,12 @@ function TeamTable({
                   )}
                   {isInspired(p) && (
                     <span className="tag form-hot" title={`Mapa inspirado: rating estimado ${formatDecimal(p.rating, 2)}. ${FORM_HELP}`}>
-                      <span aria-hidden="true">🔥</span> Inspirado
+                      <Icon name="flame" /> Inspirado
                     </span>
                   )}
                   {isCold(p) && (
                     <span className="tag form-cold" title={`Mapa apagado: rating estimado ${formatDecimal(p.rating, 2)}. ${FORM_HELP}`}>
-                      <span aria-hidden="true">❄️</span> Apagado
+                      <Icon name="snow" /> Apagado
                     </span>
                   )}
                   </span>

@@ -14,16 +14,17 @@ import {
 } from '../../game/run';
 import { Bracket } from '../components/Bracket';
 import { GroupStage } from '../components/GroupStage';
-import { YouTag } from '../components/Icon';
+import { Icon, YouTag } from '../components/Icon';
 import { Results } from '../components/Results';
 
 interface Props {
   run: RunState;
   onVeto: () => void;
   onViewSeries: (matchId: string) => void;
+  onStats: () => void;
 }
 
-export function Hub({ run, onVeto, onViewSeries }: Props) {
+export function Hub({ run, onVeto, onViewSeries, onStats }: Props) {
   const t = run.tournament!;
   const inPlayoffs = t.phase !== 'groups';
   const [tab, setTab] = useState<TabKey>(inPlayoffs ? 'playoffs' : 'groups');
@@ -71,6 +72,16 @@ export function Hub({ run, onVeto, onViewSeries }: Props) {
             </div>
           )}
         </dl>
+        <div className="hub-actions">
+          <button type="button" className="secondary" onClick={onStats} disabled={played.length === 0} aria-describedby={played.length === 0 ? 'stats-hint' : undefined}>
+            <Icon name="stats" /> Estatísticas
+          </button>
+          {played.length === 0 && (
+            <span id="stats-hint" className="small muted">
+              Disponível depois da primeira série.
+            </span>
+          )}
+        </div>
       </header>
 
       <div className="hub-grid">

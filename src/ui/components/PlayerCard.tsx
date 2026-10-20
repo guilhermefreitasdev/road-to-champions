@@ -3,15 +3,18 @@ import {
   ATTRIBUTE_KEYS,
   ATTRIBUTE_LABELS,
   AURA_LABELS,
+  FLEX_HELP,
   IGL_SOURCE_LABELS,
   PRODIGY_HELP,
   ROLE_LABELS,
   auraTitle,
-  flagEmoji,
   formatStat,
 } from '../../game/explain';
 import { rosterOf } from '../../game/run';
 import type { Card } from '../../engine/types';
+import { flexRolesText, isNaturalFlex } from '../fit';
+import { AgentPoolChips } from './AgentPool';
+import { CountryChip } from './CountryChip';
 import { AgentIcon } from './GameImage';
 import { Icon } from './Icon';
 import { PlayerPhoto } from './PlayerPhoto';
@@ -39,10 +42,10 @@ export function PlayerCard({ card, selected = false, onSelect, index = 0 }: Prop
         <span className="card-name">
           <strong>{card.handle}</strong>
           {card.country && (
-            <span className="muted">
+            <>
               {' '}
-              {flagEmoji(card.country)} {card.country}
-            </span>
+              <CountryChip code={card.country} />
+            </>
           )}
         </span>
         <span className="ovr" aria-label={`OVR ${card.ovr}`}>
@@ -58,8 +61,13 @@ export function PlayerCard({ card, selected = false, onSelect, index = 0 }: Prop
           {ROLE_LABELS[card.role]}
         </span>
         {card.isIGL && (
-          <span className="badge igl" title={`IGL: ${IGL_SOURCE_LABELS[card.iglSource ?? ''] ?? 'Liquipedia'}`}>
-            IGL
+          <span className="badge igl" title={`IGL: faz as calls do time (fonte: ${IGL_SOURCE_LABELS[card.iglSource ?? ''] ?? 'Liquipedia'})`}>
+            <Icon name="mic" /> IGL
+          </span>
+        )}
+        {isNaturalFlex(card) && (
+          <span className="badge flex-nato" title={`Jogou ${flexRolesText(card)}. ${FLEX_HELP}`}>
+            <Icon name="swap" /> Flex nato
           </span>
         )}
         {card.prodigy ? (
@@ -99,11 +107,15 @@ export function PlayerCard({ card, selected = false, onSelect, index = 0 }: Prop
           </span>
         ))}
       </span>
-      <span className="agents">
-        {card.agents.map((a) => (
-          <AgentIcon key={a} name={a} />
-        ))}
-      </span>
+      {card.agentPool && card.agentPool.length > 0 ? (
+        <AgentPoolChips pool={card.agentPool} />
+      ) : (
+        <span className="agents">
+          {card.agents.map((a) => (
+            <AgentIcon key={a} name={a} />
+          ))}
+        </span>
+      )}
     </>
   );
 

@@ -25,7 +25,7 @@ import {
 } from '../../game/season';
 import { Bracket } from '../components/Bracket';
 import { GroupStage } from '../components/GroupStage';
-import { YouTag } from '../components/Icon';
+import { Icon, YouTag } from '../components/Icon';
 import { LeagueBracket } from '../components/LeagueBracket';
 import { LeagueTable } from '../components/LeagueTable';
 import { Results } from '../components/Results';
@@ -35,6 +35,7 @@ interface Props {
   season: SeasonState;
   onVeto: () => void;
   onViewSeries: (key: string) => void;
+  onStats: () => void;
 }
 
 const STAGE_CONTEXT: Record<CompStage, (s: SeasonState) => string> = {
@@ -43,7 +44,7 @@ const STAGE_CONTEXT: Record<CompStage, (s: SeasonState) => string> = {
   champions: (s) => `Champions · ${s.champions?.phase === 'groups' ? 'Fase de grupos' : 'Playoffs'}`,
 };
 
-export function SeasonHub({ season, onVeto, onViewSeries }: Props) {
+export function SeasonHub({ season, onVeto, onViewSeries, onStats }: Props) {
   const current = season.stage as CompStage;
   const [tab, setTab] = useState<CompStage>(current);
   const pending = userPendingMatch(season);
@@ -83,6 +84,16 @@ export function SeasonHub({ season, onVeto, onViewSeries }: Props) {
             <dd>{FIELD_MODE_LABELS[season.field]}</dd>
           </div>
         </dl>
+        <div className="hub-actions">
+          <button type="button" className="secondary" onClick={onStats} disabled={results.length === 0} aria-describedby={results.length === 0 ? 'stats-hint' : undefined}>
+            <Icon name="stats" /> Estatísticas
+          </button>
+          {results.length === 0 && (
+            <span id="stats-hint" className="small muted">
+              Disponível depois da primeira série.
+            </span>
+          )}
+        </div>
       </header>
 
       <div className="hub-grid">
@@ -232,6 +243,7 @@ function Tabs({ season, tab, onChange }: { season: SeasonState; tab: CompStage; 
           onClick={() => onChange(key)}
         >
           {STAGE_LABELS[key]}
+          {!enabled.includes(key) && <Icon name="lock" label="bloqueado: ainda não chegou" />}
         </button>
       ))}
     </div>

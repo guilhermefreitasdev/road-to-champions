@@ -18,10 +18,11 @@ import { TrialsPath } from '../components/TrialsPath';
 interface Props {
   season: SeasonState;
   onNewRun: () => void;
+  onStats: () => void;
   onViewSeries: (key: string) => void;
 }
 
-export function SeasonEnd({ season, onNewRun, onViewSeries }: Props) {
+export function SeasonEnd({ season, onNewRun, onViewSeries, onStats }: Props) {
   const s = seasonSummary(season);
   const text = seasonShareText(season);
   const last = s.outcomes[s.outcomes.length - 1];
@@ -114,9 +115,14 @@ export function SeasonEnd({ season, onNewRun, onViewSeries }: Props) {
         </section>
       </div>
 
-      <button type="button" className="secondary wide" onClick={onNewRun}>
-        Nova run
-      </button>
+      <div className="end-actions">
+        <button type="button" className="secondary" onClick={onStats}>
+          <Icon name="stats" /> Estatísticas da run
+        </button>
+        <button type="button" className="primary" onClick={onNewRun}>
+          Nova run
+        </button>
+      </div>
     </div>
   );
 }

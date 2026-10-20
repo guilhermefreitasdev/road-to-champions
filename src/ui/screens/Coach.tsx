@@ -1,7 +1,8 @@
 import type { DraftState } from '../../engine/draft';
-import { findCoach } from '../../engine/roster';
+import { findCard, findCoach } from '../../engine/roster';
 import type { Coach as CoachType, RosterEntry } from '../../engine/types';
 import { placementLabel } from '../../game/explain';
+import { IglNotice } from '../components/IglNotice';
 import { TeamLogo } from '../components/TeamLogo';
 
 const SCOUT_TEXT = [
@@ -28,6 +29,7 @@ export function Coach({ draft, pool, onPick }: Props) {
           O coach não joga, mas soma força em todo mapa e ajuda você a ler o veto. A tática vem da colocação do time
           dele naquele evento; o veto, da experiência em eventos internacionais.
         </p>
+        <IglNotice picked={draft.picks.map((p) => findCard(pool, p.cardId))} left={0} />
       </header>
       <div className="coach-list">
         {options.map((c) => {

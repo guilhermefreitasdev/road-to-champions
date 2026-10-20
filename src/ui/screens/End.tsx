@@ -7,6 +7,7 @@ import { SharePanel } from '../components/SharePanel';
 interface Props {
   run: RunState;
   onNewRun: () => void;
+  onStats: () => void;
   onViewSeries: (matchId: string) => void;
 }
 
@@ -18,7 +19,7 @@ const STAGE_LABELS: Record<FinishStage, string> = {
   champion: 'Título',
 };
 
-export function End({ run, onNewRun, onViewSeries }: Props) {
+export function End({ run, onNewRun, onViewSeries, onStats }: Props) {
   const s = runSummary(run);
   const text = shareText(run);
   const nameOf = (id: string) => run.tournament!.entrants.find((e) => e.id === id)?.name ?? id;
@@ -107,9 +108,14 @@ export function End({ run, onNewRun, onViewSeries }: Props) {
         </section>
       </div>
 
-      <button type="button" className="secondary wide" onClick={onNewRun}>
-        Nova run
-      </button>
+      <div className="end-actions">
+        <button type="button" className="secondary" onClick={onStats}>
+          <Icon name="stats" /> Estatísticas da run
+        </button>
+        <button type="button" className="primary" onClick={onNewRun}>
+          Nova run
+        </button>
+      </div>
     </div>
   );
 }
