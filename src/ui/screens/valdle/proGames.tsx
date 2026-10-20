@@ -1,8 +1,10 @@
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
+import { mediaUrl } from '../../../data/media';
 import { agentByName } from '../../../data/game';
 import { ROLE_LABELS } from '../../../game/explain';
 import { REGION_NAMES, seriesStageLabel } from '../../../game/daily/labels';
 import type { DailyPlayer } from '../../../game/daily/data';
+import { CABELO_HINT_AT, cabeloHints, cabeloReveal } from '../../../game/valdle/cabelo';
 import { compareAll } from '../../../game/valdle/feedback';
 import { VALDLE_GAMES } from '../../../game/valdle/games';
 import {
@@ -25,9 +27,10 @@ import { PlayerPhoto } from '../../components/PlayerPhoto';
 import { PlayerSearch } from '../../components/PlayerSearch';
 import { TeamLogo } from '../../components/TeamLogo';
 import { Reveal } from './classicGames';
+import { useHiddenPhoto, type DecodedPhoto } from './media';
 import { AttrCell, AttrRow, GiveUp, MarkLegend, MissList, OptionSearch, TryCounter } from './parts';
 
-export interface ProGameProps<G extends 'pro' | 'grade' | 'conexoes' | 'comp'> {
+export interface ProGameProps<G extends 'pro' | 'cabelo' | 'grade' | 'conexoes' | 'comp'> {
   puzzle: ValdlePuzzle<G>;
   progress: ValdleProgress;
   done: boolean;
@@ -175,6 +178,195 @@ export function ProGame(props: ProGameProps<'pro'>) {
       <p className="small muted vd-source">
         Parcial (amarelo): último time = o palpite jogou por um time da carreira da resposta; função = a resposta já jogou nessa função; estreia e eventos =
         diferença de 1; agente = mesma função de agente. Dados: VLR.gg e Liquipedia.
+      </p>
+    </div>
+  );
+}
+
+// --- Pelo cabelo ----------------------------------------------------------------------------------------------------
+
+const REDUCED_MOTION = () => typeof window !== 'undefined' && !!window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
+
+/**
+ * The photo drawn on a canvas down to `frac` of its height (from the top): the hidden rows are never painted, so the
+ * page holds only what is shown. A thin red line marks the edge; the band grows with a short animation.
+ */
+function PhotoBand({ image, frac, label }: { image: DecodedPhoto; frac: number; label: string }) {
+  const ref = useRef<HTMLCanvasElement>(null);
+  const shown = useRef(0);
+  useEffect(() => {
+    const canvas = ref.current;
+    const ctx = canvas?.getContext('2d');
+    if (!canvas || !ctx) return;
+    const { width: w, height: h } = image;
+    const draw = (f: number) => {
+      const rows = Math.max(1, Math.min(h, Math.round(h * f)));
+      ctx.clearRect(0, 0, w, h);
+      ctx.drawImage(image.source, 0, 0, w, rows, 0, 0, w, rows);
+      if (rows < h) {
+        ctx.fillStyle = '#ff4655';
+        ctx.fillRect(0, rows - 1, w, 1);
+      }
+      shown.current = f;
+    };
+    const from = shown.current;
+    if (from <= 0 || from >= frac || REDUCED_MOTION()) {
+      draw(frac);
+      return;
+    }
+    let raf = 0;
+    const start = performance.now();
+    const step = (t: number) => {
+      const k = Math.min(1, (t - start) / 420);
+      draw(from + (frac - from) * (1 - (1 - k) ** 3));
+      if (k < 1) raf = requestAnimationFrame(step);
+    };
+    raf = requestAnimationFrame(step);
+    return () => {
+      cancelAnimationFrame(raf);
+      draw(frac);
+    };
+  }, [image, frac]);
+  return <canvas ref={ref} className="vd-hair-canvas" width={image.width} height={image.height} role="img" aria-label={label} />;
+}
+
+export function CabeloGame(props: ProGameProps<'cabelo'>) {
+  const { puzzle, progress, done, index } = props;
+  const [note, setNote] = useState<string | null>(null);
+  const answer = index.facts.get(puzzle.answer)!;
+  const hints = useMemo(() => cabeloHints(index, answer), [index, answer]);
+  const photoUrl = useMemo(() => mediaUrl(puzzle.photo.path), [puzzle.photo.path]);
+  const photo = useHiddenPhoto(photoUrl);
+  const miss = misses(puzzle, progress);
+  const max = VALDLE_GAMES.cabelo.maxTries;
+  const result = resultOf(puzzle, progress);
+  const frac = cabeloReveal(miss, done);
+  const shownFrom = photo.status === 'failed' ? 1 : 0; // without the photo, the first hint opens at once
+  const clues = [
+    { at: CABELO_HINT_AT.intlTitle, title: 'Já ganhou título internacional?', body: hints.intlTitle ? 'Sim' : 'Não' },
+    { at: CABELO_HINT_AT.titles, title: 'Quais títulos', body: hints.titles.length ? hints.titles.map((t) => t.label).join(', ') : 'Nenhum' },
+    { at: CABELO_HINT_AT.roleRegion, title: 'Função principal e região', body: `${ROLE_LABELS[hints.role]} · ${hints.region ? REGION_NAMES[hints.region] : '—'}` },
+    {
+      at: CABELO_HINT_AT.country,
+      title: 'País',
+      body: hints.country ? (
+        <>
+          <CountryChip code={hints.country} /> {countryName(hints.country)}
+        </>
+      ) : (
+        '—'
+      ),
+    },
+    { at: CABELO_HINT_AT.team, title: 'Último time na base', body: hints.lastTeamName ? <span translate="no">{hints.lastTeamName}</span> : '—' },
+  ];
+  const pick = (p: DailyPlayer) => {
+    const r = guess(puzzle, progress, p.playerId);
+    setNote(r.outcome === 'repeat' ? `Você já tentou ${p.handle}.` : null);
+    if (r.outcome === 'hit' || r.outcome === 'miss') props.onMove(() => r.progress);
+  };
+  // Where the photo was taken (only at the end): the event and the team the player had there, from the pool.
+  const photoEvent = puzzle.photo.eventId ? index.data.events.get(puzzle.photo.eventId) : undefined;
+  const photoTeam = puzzle.photo.eventId
+    ? (index.data.players.get(answer.id)?.cards.find((c) => c.entry.eventId === puzzle.photo.eventId)?.entry.teamName ??
+      (() => {
+        const m = index.data.byPlayer.get(answer.id)?.find((x) => x.eventId === puzzle.photo.eventId);
+        return m ? index.data.teamName(m.teamId) : null;
+      })())
+    : null;
+  const pct = Math.round(frac * 100);
+  return (
+    <div className="vd-game">
+      <p className="daily-rule">
+        Quem é o pro? A foto começa só com o topo (o cabelo) e desce a cada erro; as pistas também abrem a cada erro. Títulos contam só os internacionais
+        (Masters e Champions) da nossa base, desde 2021.
+      </p>
+      {/* No name, file or link until the end: the canvas holds only the rows shown and the label is neutral. */}
+      <div className={`vd-hair-stage${done ? ' done' : ''}`}>
+        {photo.status === 'ready' ? (
+          <PhotoBand image={photo.image} frac={frac} label={done ? `Foto de ${answer.handle}` : `Foto de um pro: ${pct}% de cima à mostra`} />
+        ) : photo.status === 'failed' ? (
+          <span className="vd-hair-missing small muted">Foto indisponível agora: jogue pelas pistas.</span>
+        ) : (
+          <span className="vd-hair-missing small muted">Carregando a foto…</span>
+        )}
+        {!done && photo.status === 'ready' && (
+          <span className="vd-hair-meter" aria-hidden="true">
+            {pct}%
+          </span>
+        )}
+      </div>
+      <ol className="daily-clues vd-clues">
+        {clues.map((c) => {
+          const open = done || miss + shownFrom >= c.at;
+          return (
+            <li key={c.title} className={`daily-clue${open ? ' open' : ''}`}>
+              <span className="daily-clue-head">{c.title}</span>
+              <span className="daily-clue-body">
+                {open ? (
+                  c.body
+                ) : (
+                  <span className="muted small">
+                    <Icon name="lock" /> Abre após o {c.at}º erro
+                  </span>
+                )}
+              </span>
+            </li>
+          );
+        })}
+      </ol>
+      <MissList
+        items={progress.guesses.map((id) => ({ id, label: <span translate="no">{index.facts.get(id)?.handle ?? id}</span>, hit: id === answer.id }))}
+      />
+      {!done && (
+        <>
+          <TryCounter used={progress.guesses.length} max={max} />
+          <PlayerSearch players={index.data.playerList} onPick={pick} label="Quem é o pro da foto?" placeholder="Digite o nome do jogador" />
+          <Note text={note} />
+          <GiveUp onGiveUp={() => props.onMove(giveUp)} />
+        </>
+      )}
+      {done && (
+        <Reveal won={result.won} kicker="O pro era">
+          <span>
+            <span className="daily-reveal-name" translate="no">
+              {answer.handle}
+            </span>
+            <span className="small muted">
+              {photoEvent ? (
+                <>
+                  Foto no {photoEvent.name}
+                  {photoTeam && (
+                    <>
+                      {' '}
+                      · <span translate="no">{photoTeam}</span>
+                    </>
+                  )}
+                </>
+              ) : (
+                'Foto atual do jogador na Liquipedia'
+              )}
+              {' '}
+              · último time na base: <span translate="no">{answer.lastTeamName}</span>
+            </span>
+            <span className="small muted vd-hair-credit">
+              Foto: Liquipedia (CC-BY-SA 3.0)
+              {puzzle.photo.sourceUrl && (
+                <>
+                  {' '}
+                  ·{' '}
+                  <a href={puzzle.photo.sourceUrl} target="_blank" rel="noreferrer">
+                    página do arquivo
+                  </a>
+                </>
+              )}
+            </span>
+          </span>
+        </Reveal>
+      )}
+      <p className="small muted vd-source">
+        {done
+          ? 'Fotos: Liquipedia (CC-BY-SA 3.0). Pistas: VLR.gg e Liquipedia.'
+          : 'Fotos: Liquipedia (CC-BY-SA 3.0); o crédito completo aparece no fim, para não entregar o nome. Pistas: VLR.gg e Liquipedia.'}
       </p>
     </div>
   );

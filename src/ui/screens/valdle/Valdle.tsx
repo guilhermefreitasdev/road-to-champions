@@ -22,7 +22,7 @@ import { Icon, type IconName } from '../../components/Icon';
 import { SharePanel } from '../../components/SharePanel';
 import { loadValdleStore, saveValdleStore } from '../../valdleStorage';
 import { AgenteGame, ArmaGame, CalloutGame, HabilidadeGame, MapaGame } from './classicGames';
-import { CompGame, ConexoesGame, GradeGame, ProGame } from './proGames';
+import { CabeloGame, CompGame, ConexoesGame, GradeGame, ProGame } from './proGames';
 
 /**
  * "Valdle" (Outros modos), in two versions: "Cena pro" (the real pool) and "Jogo clássico" (the game itself). Each
@@ -37,6 +37,7 @@ export const GAME_ICONS: Record<ValdleGameId, IconName> = {
   callout: 'target',
   arma: 'kill',
   pro: 'search',
+  cabelo: 'portrait',
   grade: 'grid',
   conexoes: 'link',
   comp: 'cards',
@@ -293,6 +294,8 @@ function GameView({
         return <ArmaGame {...common} puzzle={puzzle as ValdlePuzzle<'arma'>} data={classicData()} />;
       case 'pro':
         return <ProGame {...common} puzzle={puzzle as ValdlePuzzle<'pro'>} index={proIndex()} />;
+      case 'cabelo':
+        return <CabeloGame {...common} puzzle={puzzle as ValdlePuzzle<'cabelo'>} index={proIndex()} />;
       case 'grade':
         return <GradeGame {...common} puzzle={puzzle as ValdlePuzzle<'grade'>} index={proIndex()} />;
       case 'conexoes':

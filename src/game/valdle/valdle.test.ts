@@ -48,7 +48,9 @@ import {
   type ValdlePuzzle,
 } from './play';
 import { CONEXOES_KINDS, GRADE_MIN_ANSWERS, PRO_GAPS, countPartitions, criterionKey, matches, proColumns, type Criterion } from './pro';
-import { proDaily, proIndex } from './proIndex';
+import { cabeloAnswers, cabeloPhotoOf, proDaily, proIndex } from './proIndex';
+import { CABELO_GAP, CABELO_HINT_AT, CABELO_MIN_PHOTO_PX, CABELO_REVEAL, cabeloHints, cabeloReveal } from './cabelo';
+import realMediaJson from '../../data/real/media.json';
 
 const DAYS = 365;
 const dates = Array.from({ length: DAYS }, (_, i) => addDays(VALDLE_LAUNCH, i));
@@ -58,7 +60,27 @@ const EMOJI = /[\u{1F000}-\u{1FAFF}\u{2600}-\u{27BF}\u{2B00}-\u{2BFF}\u{FE0F}]/u
 
 // Node built-ins without @types/node (tsconfig types are vite/client only): vitest runs on Node >= 22.
 const proc = (globalThis as { process?: { getBuiltinModule(id: string): unknown; cwd(): string } }).process!;
-const fs = proc.getBuiltinModule('node:fs') as { existsSync(p: string): boolean; statSync(p: string): { size: number } };
+const fs = proc.getBuiltinModule('node:fs') as {
+  existsSync(p: string): boolean;
+  statSync(p: string): { size: number };
+  readFileSync(p: string): Uint8Array;
+};
+
+/** Width and height of a WebP file (VP8, VP8L or VP8X header). */
+function webpSize(path: string): [number, number] | null {
+  const b = fs.readFileSync(path);
+  const at = (i: number) => b[i]!;
+  const u16 = (i: number) => at(i) | (at(i + 1) << 8);
+  const u24 = (i: number) => at(i) | (at(i + 1) << 8) | (at(i + 2) << 16);
+  const tag = String.fromCharCode(at(12), at(13), at(14), at(15));
+  if (tag === 'VP8X') return [1 + u24(24), 1 + u24(27)];
+  if (tag === 'VP8 ') return [u16(26) & 0x3fff, u16(28) & 0x3fff];
+  if (tag === 'VP8L') {
+    const bits = at(21) | (at(22) << 8) | (at(23) << 16) | (at(24) << 24);
+    return [1 + (bits & 0x3fff), 1 + ((bits >>> 14) & 0x3fff)];
+  }
+  return null;
+}
 const PUBLIC = `${proc.cwd()}/public`;
 
 describe('feedback', () => {
@@ -136,7 +158,7 @@ describe('jogo clássico data', () => {
   });
 });
 
-describe.each(['agente', 'habilidade', 'mapa', 'callout', 'arma', 'pro', 'grade', 'conexoes', 'comp'] as ValdleGameId[])('%s daily puzzles', (game) => {
+describe.each(['agente', 'habilidade', 'mapa', 'callout', 'arma', 'pro', 'cabelo', 'grade', 'conexoes', 'comp'] as ValdleGameId[])('%s daily puzzles', (game) => {
   const puzzles = dates.map((d) => daily(game, d));
 
   it('are numbered from the launch and deterministic', () => {
@@ -176,6 +198,7 @@ const GAPS: Record<ValdleGameId, number> = {
   callout: 60,
   arma: CLASSIC_GAPS.arma,
   pro: 120,
+  cabelo: CABELO_GAP,
   grade: 120,
   conexoes: 120,
   comp: 120,
@@ -187,6 +210,7 @@ const KEYS: Record<ValdleGameId, (p: ValdlePuzzle) => string> = {
   callout: (p) => `${(p as ValdlePuzzle<'callout'>).map}:${answerOf(p)}`,
   arma: answerOf,
   pro: answerOf,
+  cabelo: answerOf,
   grade: (p) => [...(p as ValdlePuzzle<'grade'>).rows, ...(p as ValdlePuzzle<'grade'>).cols].map(criterionKey).sort().join('|'),
   conexoes: (p) => (p as ValdlePuzzle<'conexoes'>).groups.map((g) => conexoesKey(g.players)).sort().join('|'),
   comp: (p) => String((p as ValdlePuzzle<'comp'>).seriesId),
@@ -235,6 +259,27 @@ function problemsOf(p: ValdlePuzzle): string[] {
         if (proIndex().data.dupNorms.has(f.norm)) out.push('answer shares its handle');
         if (!f.country || !f.region || !f.topAgent || f.intlFirstYear === null) out.push('a column is unknown');
       }
+      break;
+    }
+    case 'cabelo': {
+      const k = p as ValdlePuzzle<'cabelo'>;
+      const f = proIndex().facts.get(k.answer);
+      if (!f) {
+        out.push('unknown player');
+        break;
+      }
+      if (proIndex().data.dupNorms.has(f.norm)) out.push('answer shares its handle');
+      if (!f.country || !f.region) out.push('a hint is unknown');
+      if (JSON.stringify(cabeloPhotoOf(f)) !== JSON.stringify(k.photo)) out.push('not the chosen photo of the player');
+      const file = `${PUBLIC}/${k.photo.path}`;
+      if (!fs.existsSync(file)) out.push('photo file missing');
+      else {
+        const size = webpSize(file);
+        if (!size || Math.min(...size) < CABELO_MIN_PHOTO_PX) out.push(`photo too small (${size?.join('x')})`);
+      }
+      const key = k.photo.eventId ? `${k.answer}@${k.photo.eventId}` : k.answer;
+      const media = (realMediaJson as { players: Record<string, { photo: string; sourceUrl: string }> }).players[key];
+      if (!media || media.photo !== k.photo.path || media.sourceUrl !== k.photo.sourceUrl) out.push('photo not in the media manifest');
       break;
     }
     case 'grade': {
@@ -310,6 +355,87 @@ function problemsOf(p: ValdlePuzzle): string[] {
   }
   return out;
 }
+
+describe('pelo cabelo', () => {
+  const idx = proIndex();
+  const byHandle = (h: string) => [...idx.facts.values()].find((f) => f.handle === h && !idx.data.dupNorms.has(f.norm))!;
+
+  it('draws from the players with a local photo, most famous first', () => {
+    const pool = cabeloAnswers();
+    expect(pool.length).toBeGreaterThan(2 * CABELO_GAP);
+    for (let i = 1; i < pool.length; i++) expect(pool[i - 1]!.facts.fame).toBeGreaterThanOrEqual(pool[i]!.facts.fame);
+    const media = (realMediaJson as { players: Record<string, unknown> }).players;
+    const withPhoto = new Set(Object.keys(media).map((k) => k.split('@')[0]));
+    expect(pool.every((p) => withPhoto.has(p.facts.id))).toBe(true);
+  });
+
+  it('prefers famous players early in the week', () => {
+    const pool = cabeloAnswers();
+    const rank = new Map(pool.map((p, i) => [p.facts.id, i]));
+    const mondays = dates.filter((d) => new Date(`${d}T12:00:00Z`).getUTCDay() === 1).slice(0, 8);
+    const ranks = mondays.map((d) => rank.get(answerOf(daily('cabelo', d))) ?? 999);
+    expect(Math.max(...ranks)).toBeLessThan(pool.length / 2);
+  });
+
+  it('reveals more of the photo with every miss, all of it at the end', () => {
+    expect(CABELO_REVEAL.length).toBe(VALDLE_GAMES.cabelo.maxTries);
+    for (let m = 1; m < CABELO_REVEAL.length; m++) expect(cabeloReveal(m, false)).toBeGreaterThan(cabeloReveal(m - 1, false));
+    expect(cabeloReveal(0, false)).toBeLessThanOrEqual(0.25);
+    expect(cabeloReveal(99, false)).toBeLessThan(1);
+    expect(cabeloReveal(0, true)).toBe(1);
+    expect(Object.values(CABELO_HINT_AT)).toEqual([1, 2, 3, 4, 5]);
+  });
+
+  it('derives the hints from the pool facts', () => {
+    const aspas = cabeloHints(idx, byHandle('aspas'));
+    expect(aspas.intlTitle).toBe(true);
+    expect(aspas.titles.map((t) => t.label)).toContain('Champions 2022');
+    expect(aspas.country).toBe('BR');
+    expect(aspas.role).toBe('duelist');
+    expect(aspas.region).toBe('americas');
+
+    const boaster = cabeloHints(idx, byHandle('Boaster'));
+    expect(boaster.titles.map((t) => t.eventId)).toEqual(expect.arrayContaining(['lock-in-sao-paulo-2023', 'masters-tokyo-2023']));
+    expect(boaster.country).toBe('GB');
+
+    // Every listed title is an international event the player won (a card on the 1st-place roster), and the count
+    // matches the Diário's index; players without one say "Não".
+    for (const { facts } of cabeloAnswers()) {
+      const h = cabeloHints(idx, facts);
+      expect(h.titles.length).toBe(facts.intlTitles);
+      expect(h.intlTitle).toBe(facts.intlTitles > 0);
+      for (const t of h.titles) {
+        expect(idx.data.events.get(t.eventId)?.tier).not.toBe('regional');
+        expect(facts.wins.has(t.eventId)).toBe(true);
+      }
+      expect(h.lastTeamName).toBe(facts.lastTeamName);
+    }
+    const none = cabeloAnswers().find((p) => p.facts.intlTitles === 0)!;
+    expect(cabeloHints(idx, none.facts)).toMatchObject({ intlTitle: false, titles: [] });
+  });
+
+  it('picks the photo of the most recent card when there is one', () => {
+    for (const { facts, photo } of cabeloAnswers()) {
+      const keys = Object.keys((realMediaJson as { players: Record<string, unknown> }).players);
+      if (keys.includes(`${facts.id}@${facts.lastEventId}`)) expect(photo.eventId).toBe(facts.lastEventId);
+      else if (keys.includes(facts.id)) expect(photo.eventId).toBeNull();
+    }
+  });
+
+  it('shares without names', () => {
+    const p = daily('cabelo', VALDLE_LAUNCH) as ValdlePuzzle<'cabelo'>;
+    const f = idx.facts.get(p.answer)!;
+    const wrong = cabeloAnswers().find((x) => x.facts.id !== p.answer)!.facts;
+    let prog = guess(p, emptyProgress(), wrong.id).progress;
+    prog = guess(p, prog, p.answer).progress;
+    expect(isDone('cabelo', p, prog)).toBe(true);
+    const text = shareText(p, prog);
+    expect(text.split('\n')).toEqual([`Road to Champions · Valdle Pelo cabelo #1`, 'Acertei em 2/6', '- V']);
+    expect(text).not.toContain(f.handle);
+    expect(text).not.toContain(wrong.handle);
+    expect(EMOJI.test(text)).toBe(false);
+  });
+});
 
 describe('pro index', () => {
   it('builds the Pro Clássico columns from the pool facts', () => {

@@ -10675,6 +10675,59 @@ button.vd-bonus-option.wrong {
   text-align: center;
 }
 
+/* Pelo cabelo: the photo is painted on a canvas only down to the band shown; the rest is hatching, not a cover. */
+.vd-hair-stage {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: min(232px, 100%);
+  aspect-ratio: 1;
+  margin: 0 auto;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--glass-line);
+  background:
+    repeating-linear-gradient(135deg, rgba(255, 255, 255, 0.04) 0 8px, transparent 8px 16px),
+    radial-gradient(circle at 50% 30%, rgba(255, 70, 85, 0.16), transparent 65%),
+    #0b131b;
+  overflow: hidden;
+}
+
+.vd-hair-stage.done {
+  border-color: var(--line-strong);
+}
+
+.vd-hair-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.vd-hair-meter {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: rgba(11, 19, 27, 0.85);
+  border: 1px solid var(--line);
+  font-size: 0.75rem;
+  font-variant-numeric: tabular-nums;
+  color: var(--muted);
+}
+
+.vd-hair-credit a {
+  color: var(--text);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.vd-hair-missing {
+  max-width: 24ch;
+  padding: var(--sp-3);
+  text-align: center;
+}
+
 .vd-map-stage {
   position: relative;
   aspect-ratio: 16 / 9;

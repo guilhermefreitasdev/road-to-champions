@@ -24,10 +24,10 @@ export const OTHER_MODES: readonly OtherModeEntry[] = [
   {
     id: 'valdle-cena',
     title: 'Valdle — Cena pro',
-    blurb: 'Adivinhe pros, preencha a grade, ache as conexões e descubra o time pela comp. Tudo da cena real.',
+    blurb: 'Adivinhe pros (até pelo cabelo), preencha a grade, ache as conexões e descubra o time pela comp. Tudo da cena real.',
     icon: 'search',
     status: 'live',
-    tags: ['Pro Clássico', 'Grade 3x3', 'Conexões', 'Comp Misteriosa'],
+    tags: ['Pro Clássico', 'Pelo cabelo', 'Grade 3x3', 'Conexões', 'Comp Misteriosa'],
     screen: ValdleCena,
   },
   {

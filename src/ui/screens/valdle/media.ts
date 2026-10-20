@@ -72,3 +72,60 @@ export function useMinimap(remote: string): MinimapState {
   if (src && ready === src) return { status: 'ready', src };
   return { status: 'loading' };
 }
+
+/** How long a hidden photo may take before the game plays on without it. */
+const PHOTO_TIMEOUT_MS = 8000;
+
+export interface DecodedPhoto {
+  source: CanvasImageSource;
+  width: number;
+  height: number;
+}
+
+export type HiddenPhotoState = { status: 'loading' } | { status: 'ready'; image: DecodedPhoto } | { status: 'failed' };
+
+/**
+ * A photo the page must not name before the end ("Pelo cabelo"): fetched (from public/, or the inlined data URL of
+ * the preview build) into a blob and decoded off-DOM (an ImageBitmap; else an Image on a blob URL revoked at once). The caller draws only part of it
+ * on a canvas, so no element of the page carries its file name (which names the player) or its hidden part.
+ */
+export function useHiddenPhoto(url: string | null): HiddenPhotoState {
+  const [state, setState] = useState<{ url: string | null; s: HiddenPhotoState }>({ url, s: { status: 'loading' } });
+  useEffect(() => {
+    if (!url) return;
+    let live = true;
+    const timer = window.setTimeout(() => live && setState({ url, s: { status: 'failed' } }), PHOTO_TIMEOUT_MS);
+    const done = (s: HiddenPhotoState) => {
+      window.clearTimeout(timer);
+      if (live) setState({ url, s });
+    };
+    void (async () => {
+      let objectUrl: string | null = null;
+      try {
+        const res = await fetch(url);
+        if (!res.ok) throw new Error(String(res.status));
+        const blob = await res.blob();
+        if (typeof createImageBitmap === 'function') {
+          const bmp = await createImageBitmap(blob);
+          done({ status: 'ready', image: { source: bmp, width: bmp.width, height: bmp.height } });
+          return;
+        }
+        objectUrl = URL.createObjectURL(blob);
+        const img = new Image();
+        img.src = objectUrl;
+        await img.decode();
+        done({ status: 'ready', image: { source: img, width: img.naturalWidth, height: img.naturalHeight } });
+      } catch {
+        done({ status: 'failed' });
+      } finally {
+        if (objectUrl) URL.revokeObjectURL(objectUrl);
+      }
+    })();
+    return () => {
+      live = false;
+      window.clearTimeout(timer);
+    };
+  }, [url]);
+  if (!url) return { status: 'failed' };
+  return state.url === url ? state.s : { status: 'loading' };
+}

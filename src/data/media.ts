@@ -76,6 +76,23 @@ export function playerMedia(playerId: string, eventId?: string): PlayerMedia | u
   return (eventId ? REAL_MEDIA.players[`${playerId}@${eventId}`] : undefined) ?? REAL_MEDIA.players[playerId];
 }
 
+let photosByPlayer: Map<string, { eventId: string | null; media: PlayerMedia }[]> | null = null;
+
+/** Every photo of a player: one per event it was taken at (`eventId`), and the current one (`eventId` null). */
+export function playerPhotos(playerId: string): readonly { eventId: string | null; media: PlayerMedia }[] {
+  if (!photosByPlayer) {
+    photosByPlayer = new Map();
+    for (const [key, media] of Object.entries(REAL_MEDIA.players)) {
+      const at = key.indexOf('@');
+      const id = at < 0 ? key : key.slice(0, at);
+      const list = photosByPlayer.get(id) ?? [];
+      list.push({ eventId: at < 0 ? null : key.slice(at + 1), media });
+      photosByPlayer.set(id, list);
+    }
+  }
+  return photosByPlayer.get(playerId) ?? [];
+}
+
 export const MEDIA_COUNTS = {
   maps: Object.keys(GAME_MEDIA.maps).length,
   agents: Object.keys(GAME_MEDIA.agents).length,

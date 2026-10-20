@@ -40,6 +40,7 @@ export type IconName =
   | 'grid'
   | 'link'
   | 'target'
+  | 'portrait'
   | 'puzzle'
   | 'tilde'
   | 'role-duelist'
@@ -90,6 +91,7 @@ const PATHS: Record<IconName, string> = {
   grid: 'M4 4h16v16H4zM4 9.3h16M4 14.7h16M9.3 4v16M14.7 4v16',
   link: 'M10 14a4.5 4.5 0 006.4 0l3-3a4.5 4.5 0 00-6.4-6.4l-1.2 1.2M14 10a4.5 4.5 0 00-6.4 0l-3 3a4.5 4.5 0 006.4 6.4l1.2-1.2',
   target: 'M12 3a9 9 0 100 18 9 9 0 000-18zM12 8a4 4 0 100 8 4 4 0 000-8zM12 11.5v1',
+  portrait: 'M8 10.5a4 4 0 108 0 4 4 0 00-8 0zM4.5 21c.8-3.6 3.8-5.8 7.5-5.8s6.7 2.2 7.5 5.8M7.6 9.5C7.4 5.8 9.4 3.5 12 3.5s4.6 2.3 4.4 6c-1.2-1.3-2.9-2-4.4-2s-3.2.7-4.4 2z',
   puzzle: 'M4 8h4a2 2 0 114 0h4v4a2 2 0 110 4v4H4v-4a2 2 0 100-4z',
   tilde: 'M5 13.5c1.5-2.5 3.5-3 5.5-1.5s4 1 5.5-1.5',
   'role-duelist': 'M13 2L5 14h6l-1 8 8-12h-6z',

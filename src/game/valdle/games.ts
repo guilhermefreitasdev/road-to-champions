@@ -7,7 +7,7 @@ import { dayNumber } from '../daily/calendar';
 /** "Cena pro" plays on the real pool (players, teams, series); "Jogo clássico" on the game itself (valorant-api.com). */
 export type ValdleGroup = 'classico' | 'cena';
 
-export type ValdleGameId = 'agente' | 'habilidade' | 'mapa' | 'callout' | 'arma' | 'pro' | 'grade' | 'conexoes' | 'comp';
+export type ValdleGameId = 'agente' | 'habilidade' | 'mapa' | 'callout' | 'arma' | 'pro' | 'cabelo' | 'grade' | 'conexoes' | 'comp';
 
 export interface ValdleGameInfo {
   id: ValdleGameId;
@@ -25,13 +25,20 @@ export const VALDLE_GAMES: Record<ValdleGameId, ValdleGameInfo> = {
   callout: { id: 'callout', group: 'classico', label: 'Callout', blurb: 'Um ponto destacado no mapa: qual é o callout?', maxTries: 5 },
   arma: { id: 'arma', group: 'classico', label: 'Arma', blurb: 'Adivinhe a arma por categoria, preço, dano, cadência e pente.', maxTries: 6 },
   pro: { id: 'pro', group: 'cena', label: 'Pro Clássico', blurb: 'Adivinhe o pro: cada palpite compara time, país, região, função, títulos e mais.', maxTries: 8 },
+  cabelo: {
+    id: 'cabelo',
+    group: 'cena',
+    label: 'Pelo cabelo',
+    blurb: 'Só o cabelo de um pro: quem é? Cada erro mostra mais da foto e abre uma pista.',
+    maxTries: 6,
+  },
   grade: { id: 'grade', group: 'cena', label: 'Grade 3x3', blurb: 'Preencha cada casa com um pro que cumpra a linha e a coluna.', maxTries: 12 },
   conexoes: { id: 'conexoes', group: 'cena', label: 'Conexões', blurb: '16 pros, 4 grupos de 4 ligados por um fato escondido.', maxTries: 4 },
   comp: { id: 'comp', group: 'cena', label: 'Comp Misteriosa', blurb: 'Uma composição real num mapa real: qual time jogou com ela?', maxTries: 6 },
 };
 
 export const GROUP_GAMES: Record<ValdleGroup, readonly ValdleGameId[]> = {
-  cena: ['pro', 'grade', 'conexoes', 'comp'],
+  cena: ['pro', 'cabelo', 'grade', 'conexoes', 'comp'],
   classico: ['agente', 'habilidade', 'mapa', 'callout', 'arma'],
 };
 

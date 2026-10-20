@@ -4,7 +4,7 @@
  * Daily only (the free mode was removed on 2026-10-20; the `free` part of older saves is ignored). Pure: no storage,
  * no clock (the day key of "today" is passed in), no data beyond the puzzle.
  *
- * - Guess games (Agente Clássico, Habilidade, Mapa, Callout, Arma, Pro Clássico, Comp Misteriosa): `guesses` are
+ * - Guess games (Agente Clássico, Habilidade, Mapa, Callout, Arma, Pro Clássico, Pelo cabelo, Comp Misteriosa): `guesses` are
  *   ids; won when the answer is guessed within VALDLE_GAMES[game].maxTries. Habilidade adds a bonus question (which
  *   ability: C, Q, E or X) once the agent part is over. Mapa adds step 2, "Onde é?": once the map part is over (hit
  *   or out of tries), `spots` are callout ids of the screenshot's map, MAPA_SPOT_TRIES of them; the puzzle ends when
@@ -18,6 +18,7 @@ import type { Mark } from './feedback';
 import { VALDLE_GAMES, VALDLE_GAME_IDS, isValdleGame, type ValdleGameId } from './games';
 import type { PuzzleMeta } from './planner';
 import type { AbilitySlot, AgentePuzzle, ArmaPuzzle, CalloutPuzzle, HabilidadePuzzle, MapaPuzzle } from './classic';
+import type { CabeloPuzzle } from './cabelo';
 import type { CompPuzzle, ConexoesPuzzle, GradePuzzle, ProPuzzle } from './pro';
 
 export interface PuzzleByGame {
@@ -27,6 +28,7 @@ export interface PuzzleByGame {
   callout: CalloutPuzzle;
   arma: ArmaPuzzle;
   pro: ProPuzzle;
+  cabelo: CabeloPuzzle;
   grade: GradePuzzle;
   conexoes: ConexoesPuzzle;
   comp: CompPuzzle;
@@ -83,6 +85,7 @@ export function answerOf(p: ValdlePuzzle): string {
     case 'agente':
     case 'arma':
     case 'pro':
+    case 'cabelo':
       return (p as ValdlePuzzle<'agente'>).answer;
     case 'habilidade':
       return (p as ValdlePuzzle<'habilidade'>).agent;
