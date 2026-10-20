@@ -5,7 +5,8 @@ import { rosterKey } from '../engine/roster';
 import { teamStrength } from '../engine/team';
 import { REGIONS, type Region, type RosterEntry } from '../engine/types';
 import { isVetoComplete, remainingMaps } from '../engine/veto';
-import { seasonPlayerStats } from './stats';
+import { seasonAllPlayerStats, seasonPlayerStats } from './stats';
+import { prodigyGrowth } from '../engine/form';
 import {
   CHAMPIONS_PER_REGION,
   LEAGUE_OPPONENTS,
@@ -33,6 +34,7 @@ import {
   playUserMatch,
   regionOf,
   regionPool,
+  seasonLineup,
   regionPreview,
   rerollSeasonDraft,
   rollSeasonDraft,
@@ -54,6 +56,7 @@ import {
   signFreeAgent,
   signingPreview,
   userLineup,
+  userStagesReached,
   type FieldMode,
   type SeasonState,
 } from './season';
@@ -399,5 +402,42 @@ describe('map familiarity across the season', () => {
     delete old.mapsPlayed;
     expect(parseSeason(old)).toBeNull();
     expect(parseSeason({ ...s, version: 3 })).toBeNull();
+  });
+});
+
+describe('the Team screen and the stats show the lineup as it played', () => {
+  it('userLineup matches the strength the hub shows and the matches use', () => {
+    for (let i = 0; i < 8; i++) {
+      const team = autoDraft(chooseRegion(createSeason(`tf-${i}`), REGIONS[i % 4]!));
+      const league = startLeague(team, 'Forma');
+      for (const s of [team, league]) {
+        expect(teamStrength(userLineup(s)).total).toBeCloseTo(seasonTeamInfo(s, USER_ID).strength, 9);
+      }
+      expect(userLineup(league).players.every((p) => !p.card.id.includes('#'))).toBe(true);
+    }
+  });
+
+  it('a prodigy’s league OVR in the stats stays what he played at, after he grew at the Masters and Champions', () => {
+    let checked = false;
+    for (let i = 0; i < 40 && !checked; i++) {
+      let s = autoDraft(chooseRegion(createSeason(`prod-${i}`, 'easy'), 'americas'));
+      // Put a prodigy in the lineup (a card of the region, a player not already there).
+      const picks = s.draft!.picks;
+      const have = new Set(seasonLineup(s).players.map((p) => p.card.playerId));
+      const prodigy = regionPool('americas').flatMap((e) => e.cards).find((c) => c.prodigy && !have.has(c.playerId));
+      if (!prodigy) throw new Error('No prodigy in the region');
+      s = { ...s, draft: { ...s.draft!, picks: picks.map((p, j) => (j === 0 ? { ...p, cardId: prodigy.id } : p)) } };
+      s = startLeague(s, 'Prodígio');
+      while (s.stage === 'league') s = playOne(s);
+      if (s.stage !== 'market') continue;
+      const ovrAt = (x: SeasonState) => seasonAllPlayerStats(x, 'league').find((r) => r.cardId === `${prodigy.id}#user`)!.ovr;
+      const atLeagueEnd = ovrAt(s);
+      while (s.stage !== 'done' && s.stage !== 'champions') s = s.stage === 'market' ? closeMarket(s) : playOne(s);
+      if (s.stage !== 'champions') continue;
+      expect(prodigyGrowth(userStagesReached(s))).toBeGreaterThan(prodigyGrowth(1));
+      expect(ovrAt(s)).toBe(atLeagueEnd);
+      checked = true;
+    }
+    expect(checked).toBe(true);
   });
 });

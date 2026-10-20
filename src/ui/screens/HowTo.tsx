@@ -1,12 +1,15 @@
-import { CLASSIC_REROLLS } from '../../engine/draft';
+import { DIFFICULTIES, DIFFICULTY_LABELS, DIFFICULTY_SETTINGS } from '../../game/difficulty';
 import { NO_IGL_CAP, NO_IGL_FACTOR } from '../../engine/team';
 import { Icon, type IconName } from '../components/Icon';
+
+/** "Fácil 4, Normal 3, Difícil 2, Lendário 1" (classic draft rerolls by difficulty). */
+const REROLLS_BY_DIFFICULTY = DIFFICULTIES.map((d) => `${DIFFICULTY_LABELS[d].name} ${DIFFICULTY_SETTINGS[d].rerolls}`).join(', ');
 
 const STEPS: { icon: IconName; title: string; text: string }[] = [
   {
     icon: 'cards',
     title: 'Draft',
-    text: `Cada card é um jogador num evento real ("aspas @ LOUD, Champions 2022"), com OVR e atributos calculados dos números do VLR.gg. No Draft clássico a roleta sorteia um time e um evento e você leva 1 jogador desse elenco (${CLASSIC_REROLLS} rerolls); no Ultimate Draft são 5 opções fixas por pick, sem reroll.`,
+    text: `Cada card é um jogador num evento real ("aspas @ LOUD, Champions 2022"), com OVR e atributos calculados dos números do VLR.gg. No Draft clássico a roleta sorteia um time e um evento e você leva 1 jogador desse elenco (rerolls pela dificuldade: ${REROLLS_BY_DIFFICULTY}); no Ultimate Draft são 5 opções fixas por pick, sem reroll.`,
   },
   {
     icon: 'swap',

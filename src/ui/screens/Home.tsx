@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react';
 import type { DraftMode } from '../../engine/draft';
 import { MODE_LABELS } from '../../game/labels';
-import type { Difficulty } from '../../game/difficulty';
+import { DIFFICULTY_LABELS, DIFFICULTY_SETTINGS, type Difficulty } from '../../game/difficulty';
 import { DifficultyPicker } from '../components/Difficulty';
 import { Emblem } from '../components/Emblem';
 import { Icon } from '../components/Icon';
@@ -101,7 +101,7 @@ export function Home({
           <ModeCard
             id="classic"
             name={MODE_LABELS.classic}
-            text={`Roleta de time + evento: escolha 1 jogador por giro. 3 rerolls.`}
+            text={`Roleta de time + evento: escolha 1 jogador por giro. ${rerollsText(difficulty)}.`}
             art={fanArt ?? <BlankFan />}
             replaces={hasRun}
             ready={ready}
@@ -269,4 +269,10 @@ function GlobeArt() {
       ))}
     </svg>
   );
+}
+
+/** "3 rerolls no Normal": the classic draft's rerolls at the chosen difficulty. */
+function rerollsText(d: Difficulty): string {
+  const n = DIFFICULTY_SETTINGS[d].rerolls;
+  return `${n} reroll${n === 1 ? '' : 's'} no ${DIFFICULTY_LABELS[d].name}`;
 }
