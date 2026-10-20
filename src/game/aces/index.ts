@@ -1,15 +1,15 @@
 /**
- * "Acerte o ace" (docs/aces.md): video first. The player opens a YouTube link to a real pro ace, watches it and
- * guesses whose it is. Nothing that names the pro is shown before the round ends: the puzzle is only a neutral link
- * ("Assistir ao ace", with t= when verified) and the Daily number; title, channel, description and the facts come
- * out of `reveal` once it is over.
+ * "Acerte o ace" (docs/aces.md): video first. The player plays a real pro ace in a click-to-load YouTube embed
+ * (`embedSrc`, youtube-nocookie) and guesses whose it is. Nothing that names the pro is shown before the round ends:
+ * the puzzle is only a neutral id and the embed (video id, start, end) plus the Daily number; title, channel,
+ * description and the facts come out of `reveal` once it is over.
  *
  * API (all pure over the snapshot; the UI keeps the save in localStorage under `rtc:aces:v1`):
  * - Data: `ACES` (src/data/real/aces.ts, every curated ace with its VLR-checked facts), `playableAces()`.
- * - Daily: `acesDailyPuzzle(date)` → { aceId, link, date, number } (São Paulo day, #N as the Daily; no repeat until
+ * - Daily: `acesDailyPuzzle(date)` → { aceId, embed, date, number } (São Paulo day, #N as the Daily; no repeat until
  *   the pool cycles; prefers clips whose title does not name the pro, `dailyPool`).
- * - Free: `freeAcePuzzle(seed, filter)` → { aceId, link } | null (seeded; filters by year, tier, neutral titles;
- *   avoids `filter.exclude`, e.g. save.free.recent).
+ * - Free: `freeAcePuzzle(seed, filter)` → { aceId, embed } | null (seeded; filters by year, tier, neutral titles;
+ *   avoids `filter.exclude`, e.g. save.free.recent); `puzzleOf(aceId)` resumes a saved free round.
  * - Playing a puzzle (by aceId, so the UI never holds the answer): `guess(aceId, state, guess)` → { state, outcome },
  *   `feedback(aceId, state)` (país, região, função, estreia, colega de time of each wrong guess), `hints(aceId, state)`
  *   (event after 2 misses, team after 4), `result(aceId, state)` (points 5-4-3-2-1 by try), `giveUp`, `settle`,

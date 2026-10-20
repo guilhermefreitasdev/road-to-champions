@@ -19,6 +19,7 @@ export interface OtherModeEntry {
 
 const ValdleCena = lazyScreen(() => import('../valdle/Valdle').then((m) => m.ValdleCena));
 const ValdleClassico = lazyScreen(() => import('../valdle/Valdle').then((m) => m.ValdleClassico));
+const Ace = lazyScreen(() => import('../ace/Ace').then((m) => m.Ace));
 
 export const OTHER_MODES: readonly OtherModeEntry[] = [
   {
@@ -42,8 +43,10 @@ export const OTHER_MODES: readonly OtherModeEntry[] = [
   {
     id: 'ace',
     title: 'Acerte o ace',
-    blurb: 'Aces famosos de pros: adivinhe de quem é pelo contexto, depois assista no YouTube.',
+    blurb: 'Assista a um ace famoso e descubra de quem é.',
     icon: 'kill',
-    status: 'soon',
+    status: 'live',
+    tags: ['Vídeo do ace', '5 tentativas', 'Diário', 'Modo livre'],
+    screen: Ace,
   },
 ];

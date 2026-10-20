@@ -28,7 +28,7 @@ Status: decidido em 2026-10-19 deixar para depois. MVP usa snapshot estático ge
 2. Se animarem: atualização agendada + Daily de partidas reais.
 3. Se virar negócio: GRID + plano comercial da Liquipedia → modo ao vivo de verdade.
 
-## Aba "Outros modos" (Valdle IMPLEMENTADO em 2026-10-20; "Acerte o ace" em andamento)
+## Aba "Outros modos" (Valdle e "Acerte o ace" IMPLEMENTADOS em 2026-10-20)
 
 Decisão do dono (20/10/2026): o Valdle sai do jogo principal e vira uma aba "Outros modos", em duas versões
 criativas e separadas:
@@ -40,9 +40,11 @@ criativas e separadas:
 **Status (2026-10-20): o Valdle está implementado** — ver "Outros modos" em `docs/design.md`. Cena pro: Pro Clássico,
 Grade 3x3, Conexões e Comp Misteriosa. Jogo clássico: Agente Clássico, Habilidade, Mapa, Callout e Arma. Ficaram de fora:
 Fala (o valorant-api.com não tem falas: `voiceLine` nulo), Quem jogou de…, Linha do Tempo e Veto Quiz (ideias ainda
-abertas). "Acerte o ace" aparece no hub como "em breve" e é a próxima entrada de `src/ui/screens/outros/modes.ts`.
+abertas). "Acerte o ace" também está implementado (2026-10-20), com o vídeo embutido: ver "Acerte o ace" em `docs/design.md`.
 
-### "Acerte o ace" (ideia do dono)
+### "Acerte o ace" (ideia do dono; IMPLEMENTADO em 2026-10-20)
+**Feito, com outro desenho**: o dono decidiu depois por **vídeo primeiro, dentro da página** (YouTube embutido só no clique,
+sem nada que revele o pro antes do fim). Regras e dados em `docs/aces.md` e "Outros modos" em `docs/design.md`. A ideia original:
 - Aces famosos de pros, **sem vídeo embutido**: a interface mostra o contexto (evento, mapa, round, agente, placar)
   e um **link para o YouTube**, para não pesar.
 - Desafio: o jogador tenta adivinhar **de quem é o ace** (e/ou mapa, agente, evento) a partir das pistas; o link

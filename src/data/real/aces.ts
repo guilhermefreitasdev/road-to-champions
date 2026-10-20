@@ -1,9 +1,9 @@
 /**
  * Real aces (5Ks) for the "Acerte o ace" mode: aces.json, written by scripts/aces/build.mjs (see docs/aces.md).
  * Every fact comes from VLR.gg match pages (Performance tab: the 5K, its round, the victims and the agent; overview:
- * map, teams, event, side and score before the round). Curated rows add a YouTube link (link only, never embedded),
- * a pt-BR description and, when a cited source names it, the weapon. Here each row is resolved to the pool's team
- * ids (same resolver as the cards and the series, ./regions.ts).
+ * map, teams, event, side and score before the round). Curated rows add a YouTube video (embedded only after the
+ * player's click, credited in the reveal), a pt-BR description and, when a cited source names it, the weapon. Here
+ * each row is resolved to the pool's team ids (same resolver as the cards and the series, ./regions.ts).
  */
 import type { VlrEventData } from './cards';
 import { teamIdResolver } from './regions';

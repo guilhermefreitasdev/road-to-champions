@@ -3,7 +3,8 @@
 Modo "Acerte o ace" (ideia em `docs/ideias-futuras.md`): **vídeo primeiro**. O jogador dá play num ace real de um pro,
 dentro da nossa página (YouTube embutido só depois do clique), e tenta adivinhar **de quem é**. Este documento cobre a
 base de dados (como os aces são escolhidos e conferidos), as regras do jogo, o uso do YouTube e a política de remoção.
-A interface vem depois, em cima da API de `src/game/aces/`.
+A interface (`src/ui/screens/ace/`, regras de tela e de embed em "Outros modos" no `docs/design.md`) usa só a API de
+`src/game/aces/`.
 
 ## Arquivos
 
@@ -20,11 +21,11 @@ A interface vem depois, em cima da API de `src/game/aces/`.
 ## Como gerar
 
 ```bash
-NODE_USE_ENV_PROXY=1 node scripts/aces/build.mjs            # só do cache (sem rede), lê só as partidas curadas
+NODE_USE_ENV_PROXY=1 node scripts/aces/build.mjs            # = npm run data:aces; só do cache (sem rede), lê só as partidas curadas
 NODE_USE_ENV_PROXY=1 node scripts/aces/build.mjs --plan     # mostra o que --fetch baixaria
 NODE_USE_ENV_PROXY=1 node scripts/aces/build.mjs --fetch    # baixa as páginas que faltam e gera
 NODE_USE_ENV_PROXY=1 node scripts/aces/build.mjs --list     # lista todos os 5Ks internacionais em .cache/aces/vlr-5ks.tsv
-NODE_USE_ENV_PROXY=1 node scripts/aces/check-videos.mjs --write   # oEmbed do YouTube (máquina com acesso ao YouTube)
+NODE_USE_ENV_PROXY=1 node scripts/aces/check-videos.mjs --write   # = npm run data:aces-check; oEmbed do YouTube (máquina com acesso ao YouTube)
 ```
 
 O `--fetch` usa o cliente educado de `scripts/vlr/fetch.mjs`: uma requisição por vez, no mínimo 2,5 s entre elas,
@@ -115,7 +116,7 @@ Nunca se chuta link, round, agente, arma ou minuto. O que não foi conferido fic
   evitando os últimos 30 vistos.
 - **Compartilhar** (sem emoji, sem spoiler):
   `Road to Champions · Acerte o ace #12 · 4/5 pts` e `acertei na 2ª tentativa · erro, acerto`.
-- **Save** (`AcesSave`, versão 1, para a chave `rtc:aces:v1` que a interface vai criar): progresso por dia do Diário,
+- **Save** (`AcesSave`, versão 1, na chave `rtc:aces:v1` da interface, `src/ui/acesStorage.ts`, junto com os aces que o player recusou neste navegador): progresso por dia do Diário,
   totais do modo livre, os ids recentes e a rodada livre em andamento. `parseAcesSave` descarta o que estiver
   malformado; outra versão começa vazia. Estatísticas: jogados, acertos, média, sequência de dias acertados no próprio
   dia (zera quando o dia de hoje é perdido), melhor sequência e distribuição por tentativa.

@@ -59,3 +59,9 @@ export function clearCareer(): void {
  * rtc:daily:v1 it is progress, not a saved game: "Recomeçar" and the crash reset never clear it.
  */
 export const VALDLE_KEY = 'rtc:valdle:v1';
+
+/**
+ * "Acerte o ace" (Outros modos): the AcesSave of src/game/aces (daily results, streak, free-mode totals and round)
+ * plus the videos this browser could not embed. Progress, not a saved game: never cleared by "Recomeçar".
+ */
+export const ACES_KEY = 'rtc:aces:v1';
