@@ -6,7 +6,916 @@
     "note": "Cópias locais (WebP) das imagens que o Valdle mostrava direto da CDN; cada entrada guarda a URL de origem. Sem entrada, o jogo usa a URL remota.",
     "generator": "scripts/fetch-game-data.mjs --media"
   },
-  "minimaps": {},
-  "abilities": {},
-  "weapons": {}
+  "minimaps": {
+    "https://media.valorant-api.com/maps/1c18ab1f-420d-0d8b-71d0-77ad3c439115/displayicon.png": {
+      "file": "media/minimaps/1c18ab1f-420d-0d8b-71d0-77ad3c439115.webp",
+      "label": "Corrode",
+      "width": 1024,
+      "height": 1024
+    },
+    "https://media.valorant-api.com/maps/224b0a95-48b9-f703-1bd8-67aca101a61f/displayicon.png": {
+      "file": "media/minimaps/224b0a95-48b9-f703-1bd8-67aca101a61f.webp",
+      "label": "Abyss",
+      "width": 1024,
+      "height": 1024
+    },
+    "https://media.valorant-api.com/maps/2bee0dc9-4ffe-519b-1cbd-7fbe763a6047/displayicon.png": {
+      "file": "media/minimaps/2bee0dc9-4ffe-519b-1cbd-7fbe763a6047.webp",
+      "label": "Haven",
+      "width": 1024,
+      "height": 1024
+    },
+    "https://media.valorant-api.com/maps/2c9d57ec-4431-9c5e-2939-8f9ef6dd5cba/displayicon.png": {
+      "file": "media/minimaps/2c9d57ec-4431-9c5e-2939-8f9ef6dd5cba.webp",
+      "label": "Bind",
+      "width": 1024,
+      "height": 1024
+    },
+    "https://media.valorant-api.com/maps/2fb9a4fd-47b8-4e7d-a969-74b4046ebd53/displayicon.png": {
+      "file": "media/minimaps/2fb9a4fd-47b8-4e7d-a969-74b4046ebd53.webp",
+      "label": "Breeze",
+      "width": 1024,
+      "height": 1024
+    },
+    "https://media.valorant-api.com/maps/2fe4ed3a-450a-948b-6d6b-e89a78e680a9/displayicon.png": {
+      "file": "media/minimaps/2fe4ed3a-450a-948b-6d6b-e89a78e680a9.webp",
+      "label": "Lotus",
+      "width": 1024,
+      "height": 1024
+    },
+    "https://media.valorant-api.com/maps/756da597-416b-c0f2-f47b-afbdf28670bc/displayicon.png": {
+      "file": "media/minimaps/756da597-416b-c0f2-f47b-afbdf28670bc.webp",
+      "label": "Summit",
+      "width": 1024,
+      "height": 1024
+    },
+    "https://media.valorant-api.com/maps/7eaecc1b-4337-bbf6-6ab9-04b8f06b3319/displayicon.png": {
+      "file": "media/minimaps/7eaecc1b-4337-bbf6-6ab9-04b8f06b3319.webp",
+      "label": "Ascent",
+      "width": 1024,
+      "height": 1024
+    },
+    "https://media.valorant-api.com/maps/92584fbe-486a-b1b2-9faa-39b0f486b498/displayicon.png": {
+      "file": "media/minimaps/92584fbe-486a-b1b2-9faa-39b0f486b498.webp",
+      "label": "Sunset",
+      "width": 1024,
+      "height": 1024
+    },
+    "https://media.valorant-api.com/maps/b529448b-4d60-346e-e89e-00a4c527a405/displayicon.png": {
+      "file": "media/minimaps/b529448b-4d60-346e-e89e-00a4c527a405.webp",
+      "label": "Fracture",
+      "width": 1024,
+      "height": 1024
+    },
+    "https://media.valorant-api.com/maps/d960549e-485c-e861-8d71-aa9d1aed12a2/displayicon.png": {
+      "file": "media/minimaps/d960549e-485c-e861-8d71-aa9d1aed12a2.webp",
+      "label": "Split",
+      "width": 1024,
+      "height": 1024
+    },
+    "https://media.valorant-api.com/maps/e2ad5c54-4114-a870-9641-8ea21279579a/displayicon.png": {
+      "file": "media/minimaps/e2ad5c54-4114-a870-9641-8ea21279579a.webp",
+      "label": "Icebox",
+      "width": 1024,
+      "height": 1024
+    },
+    "https://media.valorant-api.com/maps/fd267378-4d1d-484f-ff52-77821ed10dc2/displayicon.png": {
+      "file": "media/minimaps/fd267378-4d1d-484f-ff52-77821ed10dc2.webp",
+      "label": "Pearl",
+      "width": 1024,
+      "height": 1024
+    }
+  },
+  "abilities": {
+    "https://media.valorant-api.com/agents/0e38b510-41a8-5780-5e8f-568b2a4f2d6c/abilities/ability1/displayicon.png": {
+      "file": "media/abilities/5c6dc96bfcf0.webp",
+      "label": "Iso Ability1",
+      "width": 128,
+      "height": 128
+    },
+    "https://media.valorant-api.com/agents/0e38b510-41a8-5780-5e8f-568b2a4f2d6c/abilities/ability2/displayicon.png": {
+      "file": "media/abilities/dbe032046ede.webp",
+      "label": "Iso Ability2",
+      "width": 128,
+      "height": 128
+    },
+    "https://media.valorant-api.com/agents/0e38b510-41a8-5780-5e8f-568b2a4f2d6c/abilities/grenade/displayicon.png": {
+      "file": "media/abilities/dd70e0d29a3f.webp",
+      "label": "Iso Grenade",
+      "width": 128,
+      "height": 128
+    },
+    "https://media.valorant-api.com/agents/0e38b510-41a8-5780-5e8f-568b2a4f2d6c/abilities/ultimate/displayicon.png": {
+      "file": "media/abilities/6a912501b2d1.webp",
+      "label": "Iso Ultimate",
+      "width": 128,
+      "height": 128
+    },
+    "https://media.valorant-api.com/agents/117ed9e3-49f3-6512-3ccf-0cada7e3823b/abilities/ability1/displayicon.png": {
+      "file": "media/abilities/3b906a4ed3ae.webp",
+      "label": "Cypher Ability1",
+      "width": 128,
+      "height": 128
+    },
+    "https://media.valorant-api.com/agents/117ed9e3-49f3-6512-3ccf-0cada7e3823b/abilities/ability2/displayicon.png": {
+      "file": "media/abilities/9d65fe3c80ba.webp",
+      "label": "Cypher Ability2",
+      "width": 128,
+      "height": 128
+    },
+    "https://media.valorant-api.com/agents/117ed9e3-49f3-6512-3ccf-0cada7e3823b/abilities/grenade/displayicon.png": {
+      "file": "media/abilities/dcc403b7710f.webp",
+      "label": "Cypher Grenade",
+      "width": 128,
+      "height": 128
+    },
+    "https://media.valorant-api.com/agents/117ed9e3-49f3-6512-3ccf-0cada7e3823b/abilities/ultimate/displayicon.png": {
+      "file": "media/abilities/4eefb674998c.webp",
+      "label": "Cypher Ultimate",
+      "width": 128,
+      "height": 128
+    },
+    "https://media.valorant-api.com/agents/1dbf2edd-4729-0984-3115-daa5eed44993/abilities/ability1/displayicon.png": {
+      "file": "media/abilities/de55ab2a58f2.webp",
+      "label": "Clove Ability1",
+      "width": 128,
+      "height": 128
+    },
+    "https://media.valorant-api.com/agents/1dbf2edd-4729-0984-3115-daa5eed44993/abilities/ability2/displayicon.png": {
+      "file": "media/abilities/ffb3b6f856f9.webp",
+      "label": "Clove Ability2",
+      "width": 128,
+      "height": 128
+    },
+    "https://media.valorant-api.com/agents/1dbf2edd-4729-0984-3115-daa5eed44993/abilities/grenade/displayicon.png": {
+      "file": "media/abilities/2993b9cc0026.webp",
+      "label": "Clove Grenade",
+      "width": 128,
+      "height": 128
+    },
+    "https://media.valorant-api.com/agents/1dbf2edd-4729-0984-3115-daa5eed44993/abilities/ultimate/displayicon.png": {
+      "file": "media/abilities/19ad9194bc77.webp",
+      "label": "Clove Ultimate",
+      "width": 128,
+      "height": 128
+    },
+    "https://media.valorant-api.com/agents/1e58de9c-4950-5125-93e9-a0aee9f98746/abilities/ability1/displayicon.png": {
+      "file": "media/abilities/d6a982788e37.webp",
+      "label": "Killjoy Ability1",
+      "width": 128,
+      "height": 128
+    },
+    "https://media.valorant-api.com/agents/1e58de9c-4950-5125-93e9-a0aee9f98746/abilities/ability2/displayicon.png": {
+      "file": "media/abilities/b920ffcbc357.webp",
+      "label": "Killjoy Ability2",
+      "width": 128,
+      "height": 128
+    },
+    "https://media.valorant-api.com/agents/1e58de9c-4950-5125-93e9-a0aee9f98746/abilities/grenade/displayicon.png": {
+      "file": "media/abilities/99e91adc76e0.webp",
+      "label": "Killjoy Grenade",
+      "width": 128,
+      "height": 128
+    },
+    "https://media.valorant-api.com/agents/1e58de9c-4950-5125-93e9-a0aee9f98746/abilities/ultimate/displayicon.png": {
+      "file": "media/abilities/622fc1ff827b.webp",
+      "label": "Killjoy Ultimate",
+      "width": 128,
+      "height": 128
+    },
+    "https://media.valorant-api.com/agents/22697a3d-45bf-8dd7-4fec-84a9e28c69d7/abilities/ability1/displayicon.png": {
+      "file": "media/abilities/501374e48484.webp",
+      "label": "Chamber Ability1",
+      "width": 128,
+      "height": 128
+    },
+    "https://media.valorant-api.com/agents/22697a3d-45bf-8dd7-4fec-84a9e28c69d7/abilities/ability2/displayicon.png": {
+      "file": "media/abilities/8ad37fe5cc49.webp",
+      "label": "Chamber Ability2",
+      "width": 128,
+      "height": 128
+    },
+    "https://media.valorant-api.com/agents/22697a3d-45bf-8dd7-4fec-84a9e28c69d7/abilities/grenade/displayicon.png": {
+      "file": "media/abilities/3c077c14c658.webp",
+      "label": "Chamber Grenade",
+      "width": 128,
+      "height": 128
+    },
+    "https://media.valorant-api.com/agents/22697a3d-45bf-8dd7-4fec-84a9e28c69d7/abilities/ultimate/displayicon.png": {
+      "file": "media/abilities/9d027f4956d4.webp",
+      "label": "Chamber Ultimate",
+      "width": 128,
+      "height": 128
+    },
+    "https://media.valorant-api.com/agents/320b2a48-4d9b-a075-30f1-1f93a9b638fa/abilities/ability1/displayicon.png": {
+      "file": "media/abilities/68874129ec84.webp",
+      "label": "Sova Ability1",
+      "width": 128,
+      "height": 128
+    },
+    "https://media.valorant-api.com/agents/320b2a48-4d9b-a075-30f1-1f93a9b638fa/abilities/ability2/displayicon.png": {
+      "file": "media/abilities/1fe185cbd28b.webp",
+      "label": "Sova Ability2",
+      "width": 128,
+      "height": 128
+    },
+    "https://media.valorant-api.com/agents/320b2a48-4d9b-a075-30f1-1f93a9b638fa/abilities/grenade/displayicon.png": {
+      "file": "media/abilities/182a72fa2171.webp",
+      "label": "Sova Grenade",
+      "width": 128,
+      "height": 128
+    },
+    "https://media.valorant-api.com/agents/320b2a48-4d9b-a075-30f1-1f93a9b638fa/abilities/ultimate/displayicon.png": {
+      "file": "media/abilities/eec0d09e07dd.webp",
+      "label": "Sova Ultimate",
+      "width": 128,
+      "height": 128
+    },
+    "https://media.valorant-api.com/agents/41fb69c1-4189-7b37-f117-bcaf1e96f1bf/abilities/ability1/displayicon.png": {
+      "file": "media/abilities/2cdd1f9cddea.webp",
+      "label": "Astra Ability1",
+      "width": 128,
+      "height": 128
+    },
+    "https://media.valorant-api.com/agents/41fb69c1-4189-7b37-f117-bcaf1e96f1bf/abilities/ability2/displayicon.png": {
+      "file": "media/abilities/ebf695a14fb6.webp",
+      "label": "Astra Ability2",
+      "width": 128,
+      "height": 128
+    },
+    "https://media.valorant-api.com/agents/41fb69c1-4189-7b37-f117-bcaf1e96f1bf/abilities/grenade/displayicon.png": {
+      "file": "media/abilities/9cc6d1e08db0.webp",
+      "label": "Astra Grenade",
+      "width": 128,
+      "height": 128
+    },
+    "https://media.valorant-api.com/agents/41fb69c1-4189-7b37-f117-bcaf1e96f1bf/abilities/passive/displayicon.png": {
+      "file": "media/abilities/107fbd45d73d.webp",
+      "label": "Astra Passive",
+      "width": 128,
+      "height": 128
+    },
+    "https://media.valorant-api.com/agents/41fb69c1-4189-7b37-f117-bcaf1e96f1bf/abilities/ultimate/displayicon.png": {
+      "file": "media/abilities/c9e6ddf06d08.webp",
+      "label": "Astra Ultimate",
+      "width": 128,
+      "height": 128
+    },
+    "https://media.valorant-api.com/agents/569fdd95-4d10-43ab-ca70-79becc718b46/abilities/ability1/displayicon.png": {
+      "file": "media/abilities/53cc8df3f382.webp",
+      "label": "Sage Ability1",
+      "width": 128,
+      "height": 128
+    },
+    "https://media.valorant-api.com/agents/569fdd95-4d10-43ab-ca70-79becc718b46/abilities/ability2/displayicon.png": {
+      "file": "media/abilities/72acfe4f99e6.webp",
+      "label": "Sage Ability2",
+      "width": 128,
+      "height": 128
+    },
+    "https://media.valorant-api.com/agents/569fdd95-4d10-43ab-ca70-79becc718b46/abilities/grenade/displayicon.png": {
+      "file": "media/abilities/f0b3be40efff.webp",
+      "label": "Sage Grenade",
+      "width": 128,
+      "height": 128
+    },
+    "https://media.valorant-api.com/agents/569fdd95-4d10-43ab-ca70-79becc718b46/abilities/ultimate/displayicon.png": {
+      "file": "media/abilities/860d5f8569b9.webp",
+      "label": "Sage Ultimate",
+      "width": 128,
+      "height": 128
+    },
+    "https://media.valorant-api.com/agents/5f8d3a7f-467b-97f3-062c-13acf203c006/abilities/ability1/displayicon.png": {
+      "file": "media/abilities/d76701532cc5.webp",
+      "label": "Breach Ability1",
+      "width": 128,
+      "height": 128
+    },
+    "https://media.valorant-api.com/agents/5f8d3a7f-467b-97f3-062c-13acf203c006/abilities/ability2/displayicon.png": {
+      "file": "media/abilities/aaf84291e52b.webp",
+      "label": "Breach Ability2",
+      "width": 128,
+      "height": 128
+    },
+    "https://media.valorant-api.com/agents/5f8d3a7f-467b-97f3-062c-13acf203c006/abilities/grenade/displayicon.png": {
+      "file": "media/abilities/af15ba80af2b.webp",
+      "label": "Breach Grenade",
+      "width": 128,
+      "height": 128
+    },
+    "https://media.valorant-api.com/agents/5f8d3a7f-467b-97f3-062c-13acf203c006/abilities/ultimate/displayicon.png": {
+      "file": "media/abilities/1e8a1eb5c4c3.webp",
+      "label": "Breach Ultimate",
+      "width": 128,
+      "height": 128
+    },
+    "https://media.valorant-api.com/agents/601dbbe7-43ce-be57-2a40-4abd24953621/abilities/ability1/displayicon.png": {
+      "file": "media/abilities/477206486088.webp",
+      "label": "KAY/O Ability1",
+      "width": 128,
+      "height": 128
+    },
+    "https://media.valorant-api.com/agents/601dbbe7-43ce-be57-2a40-4abd24953621/abilities/ability2/displayicon.png": {
+      "file": "media/abilities/ae21fb0d4a03.webp",
+      "label": "KAY/O Ability2",
+      "width": 128,
+      "height": 128
+    },
+    "https://media.valorant-api.com/agents/601dbbe7-43ce-be57-2a40-4abd24953621/abilities/grenade/displayicon.png": {
+      "file": "media/abilities/ca85dae937db.webp",
+      "label": "KAY/O Grenade",
+      "width": 128,
+      "height": 128
+    },
+    "https://media.valorant-api.com/agents/601dbbe7-43ce-be57-2a40-4abd24953621/abilities/ultimate/displayicon.png": {
+      "file": "media/abilities/0106aa0a51d6.webp",
+      "label": "KAY/O Ultimate",
+      "width": 128,
+      "height": 128
+    },
+    "https://media.valorant-api.com/agents/6f2a04ca-43e0-be17-7f36-b3908627744d/abilities/ability1/displayicon.png": {
+      "file": "media/abilities/c4bb59035e78.webp",
+      "label": "Skye Ability1",
+      "width": 128,
+      "height": 128
+    },
+    "https://media.valorant-api.com/agents/6f2a04ca-43e0-be17-7f36-b3908627744d/abilities/ability2/displayicon.png": {
+      "file": "media/abilities/41d364ef38dd.webp",
+      "label": "Skye Ability2",
+      "width": 128,
+      "height": 128
+    },
+    "https://media.valorant-api.com/agents/6f2a04ca-43e0-be17-7f36-b3908627744d/abilities/grenade/displayicon.png": {
+      "file": "media/abilities/f70293dd729e.webp",
+      "label": "Skye Grenade",
+      "width": 128,
+      "height": 128
+    },
+    "https://media.valorant-api.com/agents/6f2a04ca-43e0-be17-7f36-b3908627744d/abilities/ultimate/displayicon.png": {
+      "file": "media/abilities/a30b19f7e03d.webp",
+      "label": "Skye Ultimate",
+      "width": 128,
+      "height": 128
+    },
+    "https://media.valorant-api.com/agents/707eab51-4836-f488-046a-cda6bf494859/abilities/ability1/displayicon.png": {
+      "file": "media/abilities/6898b8dc698b.webp",
+      "label": "Viper Ability1",
+      "width": 128,
+      "height": 128
+    },
+    "https://media.valorant-api.com/agents/707eab51-4836-f488-046a-cda6bf494859/abilities/ability2/displayicon.png": {
+      "file": "media/abilities/3b13268b1386.webp",
+      "label": "Viper Ability2",
+      "width": 128,
+      "height": 128
+    },
+    "https://media.valorant-api.com/agents/707eab51-4836-f488-046a-cda6bf494859/abilities/grenade/displayicon.png": {
+      "file": "media/abilities/f9615796b762.webp",
+      "label": "Viper Grenade",
+      "width": 128,
+      "height": 128
+    },
+    "https://media.valorant-api.com/agents/707eab51-4836-f488-046a-cda6bf494859/abilities/ultimate/displayicon.png": {
+      "file": "media/abilities/40ef5524b7e4.webp",
+      "label": "Viper Ultimate",
+      "width": 128,
+      "height": 128
+    },
+    "https://media.valorant-api.com/agents/7c8a4701-4de6-9355-b254-e09bc2a34b72/abilities/ability1/displayicon.png": {
+      "file": "media/abilities/c34a9b0beaf3.webp",
+      "label": "Miks Ability1",
+      "width": 128,
+      "height": 128
+    },
+    "https://media.valorant-api.com/agents/7c8a4701-4de6-9355-b254-e09bc2a34b72/abilities/ability2/displayicon.png": {
+      "file": "media/abilities/fc5cb490ba8a.webp",
+      "label": "Miks Ability2",
+      "width": 128,
+      "height": 128
+    },
+    "https://media.valorant-api.com/agents/7c8a4701-4de6-9355-b254-e09bc2a34b72/abilities/grenade/displayicon.png": {
+      "file": "media/abilities/7797dc6adfa3.webp",
+      "label": "Miks Grenade",
+      "width": 128,
+      "height": 128
+    },
+    "https://media.valorant-api.com/agents/7c8a4701-4de6-9355-b254-e09bc2a34b72/abilities/ultimate/displayicon.png": {
+      "file": "media/abilities/816b2cda48a7.webp",
+      "label": "Miks Ultimate",
+      "width": 128,
+      "height": 128
+    },
+    "https://media.valorant-api.com/agents/7f94d92c-4234-0a36-9646-3a87eb8b5c89/abilities/ability1/displayicon.png": {
+      "file": "media/abilities/02a119803da8.webp",
+      "label": "Yoru Ability1",
+      "width": 128,
+      "height": 128
+    },
+    "https://media.valorant-api.com/agents/7f94d92c-4234-0a36-9646-3a87eb8b5c89/abilities/ability2/displayicon.png": {
+      "file": "media/abilities/29aceedc08e5.webp",
+      "label": "Yoru Ability2",
+      "width": 128,
+      "height": 128
+    },
+    "https://media.valorant-api.com/agents/7f94d92c-4234-0a36-9646-3a87eb8b5c89/abilities/grenade/displayicon.png": {
+      "file": "media/abilities/f37b1cfcd036.webp",
+      "label": "Yoru Grenade",
+      "width": 128,
+      "height": 128
+    },
+    "https://media.valorant-api.com/agents/7f94d92c-4234-0a36-9646-3a87eb8b5c89/abilities/ultimate/displayicon.png": {
+      "file": "media/abilities/bc7da90fad25.webp",
+      "label": "Yoru Ultimate",
+      "width": 128,
+      "height": 128
+    },
+    "https://media.valorant-api.com/agents/8e253930-4c05-31dd-1b6c-968525494517/abilities/ability1/displayicon.png": {
+      "file": "media/abilities/f253920762ae.webp",
+      "label": "Omen Ability1",
+      "width": 128,
+      "height": 128
+    },
+    "https://media.valorant-api.com/agents/8e253930-4c05-31dd-1b6c-968525494517/abilities/ability2/displayicon.png": {
+      "file": "media/abilities/fd8711a17c2b.webp",
+      "label": "Omen Ability2",
+      "width": 128,
+      "height": 128
+    },
+    "https://media.valorant-api.com/agents/8e253930-4c05-31dd-1b6c-968525494517/abilities/grenade/displayicon.png": {
+      "file": "media/abilities/0f5b2a403c9e.webp",
+      "label": "Omen Grenade",
+      "width": 128,
+      "height": 128
+    },
+    "https://media.valorant-api.com/agents/8e253930-4c05-31dd-1b6c-968525494517/abilities/ultimate/displayicon.png": {
+      "file": "media/abilities/cc39a6c24f37.webp",
+      "label": "Omen Ultimate",
+      "width": 128,
+      "height": 128
+    },
+    "https://media.valorant-api.com/agents/92eeef5d-43b5-1d4a-8d03-b3927a09034b/abilities/ability1/displayicon.png": {
+      "file": "media/abilities/b902ef5d3bd1.webp",
+      "label": "Veto Ability1",
+      "width": 256,
+      "height": 256
+    },
+    "https://media.valorant-api.com/agents/92eeef5d-43b5-1d4a-8d03-b3927a09034b/abilities/ability2/displayicon.png": {
+      "file": "media/abilities/9d57d1f554b1.webp",
+      "label": "Veto Ability2",
+      "width": 256,
+      "height": 256
+    },
+    "https://media.valorant-api.com/agents/92eeef5d-43b5-1d4a-8d03-b3927a09034b/abilities/grenade/displayicon.png": {
+      "file": "media/abilities/da0a05d62dcf.webp",
+      "label": "Veto Grenade",
+      "width": 256,
+      "height": 256
+    },
+    "https://media.valorant-api.com/agents/92eeef5d-43b5-1d4a-8d03-b3927a09034b/abilities/ultimate/displayicon.png": {
+      "file": "media/abilities/2c40bd9b2e2d.webp",
+      "label": "Veto Ultimate",
+      "width": 256,
+      "height": 256
+    },
+    "https://media.valorant-api.com/agents/95b78ed7-4637-86d9-7e41-71ba8c293152/abilities/ability1/displayicon.png": {
+      "file": "media/abilities/15a91065bff9.webp",
+      "label": "Harbor Ability1",
+      "width": 128,
+      "height": 128
+    },
+    "https://media.valorant-api.com/agents/95b78ed7-4637-86d9-7e41-71ba8c293152/abilities/ability2/displayicon.png": {
+      "file": "media/abilities/4f35fd42d24d.webp",
+      "label": "Harbor Ability2",
+      "width": 128,
+      "height": 128
+    },
+    "https://media.valorant-api.com/agents/95b78ed7-4637-86d9-7e41-71ba8c293152/abilities/grenade/displayicon.png": {
+      "file": "media/abilities/625ab3043be5.webp",
+      "label": "Harbor Grenade",
+      "width": 128,
+      "height": 128
+    },
+    "https://media.valorant-api.com/agents/95b78ed7-4637-86d9-7e41-71ba8c293152/abilities/ultimate/displayicon.png": {
+      "file": "media/abilities/7242a51f5ede.webp",
+      "label": "Harbor Ultimate",
+      "width": 128,
+      "height": 128
+    },
+    "https://media.valorant-api.com/agents/9f0d8ba9-4140-b941-57d3-a7ad57c6b417/abilities/ability1/displayicon.png": {
+      "file": "media/abilities/2bf29b90ef0c.webp",
+      "label": "Brimstone Ability1",
+      "width": 128,
+      "height": 128
+    },
+    "https://media.valorant-api.com/agents/9f0d8ba9-4140-b941-57d3-a7ad57c6b417/abilities/ability2/displayicon.png": {
+      "file": "media/abilities/baa541153c2b.webp",
+      "label": "Brimstone Ability2",
+      "width": 128,
+      "height": 128
+    },
+    "https://media.valorant-api.com/agents/9f0d8ba9-4140-b941-57d3-a7ad57c6b417/abilities/grenade/displayicon.png": {
+      "file": "media/abilities/d9a7def5bd66.webp",
+      "label": "Brimstone Grenade",
+      "width": 128,
+      "height": 128
+    },
+    "https://media.valorant-api.com/agents/9f0d8ba9-4140-b941-57d3-a7ad57c6b417/abilities/ultimate/displayicon.png": {
+      "file": "media/abilities/aa8e4a720772.webp",
+      "label": "Brimstone Ultimate",
+      "width": 128,
+      "height": 128
+    },
+    "https://media.valorant-api.com/agents/a3bfb853-43b2-7238-a4f1-ad90e9e46bcc/abilities/ability1/displayicon.png": {
+      "file": "media/abilities/90024a041af9.webp",
+      "label": "Reyna Ability1",
+      "width": 128,
+      "height": 128
+    },
+    "https://media.valorant-api.com/agents/a3bfb853-43b2-7238-a4f1-ad90e9e46bcc/abilities/ability2/displayicon.png": {
+      "file": "media/abilities/92e795720a9a.webp",
+      "label": "Reyna Ability2",
+      "width": 128,
+      "height": 128
+    },
+    "https://media.valorant-api.com/agents/a3bfb853-43b2-7238-a4f1-ad90e9e46bcc/abilities/grenade/displayicon.png": {
+      "file": "media/abilities/45a0a6c0a8b8.webp",
+      "label": "Reyna Grenade",
+      "width": 128,
+      "height": 128
+    },
+    "https://media.valorant-api.com/agents/a3bfb853-43b2-7238-a4f1-ad90e9e46bcc/abilities/ultimate/displayicon.png": {
+      "file": "media/abilities/d017b1c208f6.webp",
+      "label": "Reyna Ultimate",
+      "width": 128,
+      "height": 128
+    },
+    "https://media.valorant-api.com/agents/add6443a-41bd-e414-f6ad-e58d267f4e95/abilities/ability1/displayicon.png": {
+      "file": "media/abilities/4753975fe0ed.webp",
+      "label": "Jett Ability1",
+      "width": 128,
+      "height": 128
+    },
+    "https://media.valorant-api.com/agents/add6443a-41bd-e414-f6ad-e58d267f4e95/abilities/ability2/displayicon.png": {
+      "file": "media/abilities/58ef3e4fea73.webp",
+      "label": "Jett Ability2",
+      "width": 128,
+      "height": 128
+    },
+    "https://media.valorant-api.com/agents/add6443a-41bd-e414-f6ad-e58d267f4e95/abilities/grenade/displayicon.png": {
+      "file": "media/abilities/1e80978e9864.webp",
+      "label": "Jett Grenade",
+      "width": 128,
+      "height": 128
+    },
+    "https://media.valorant-api.com/agents/add6443a-41bd-e414-f6ad-e58d267f4e95/abilities/passive/displayicon.png": {
+      "file": "media/abilities/597daa678542.webp",
+      "label": "Jett Passive",
+      "width": 256,
+      "height": 256
+    },
+    "https://media.valorant-api.com/agents/add6443a-41bd-e414-f6ad-e58d267f4e95/abilities/ultimate/displayicon.png": {
+      "file": "media/abilities/80959ccccde9.webp",
+      "label": "Jett Ultimate",
+      "width": 128,
+      "height": 128
+    },
+    "https://media.valorant-api.com/agents/b444168c-4e35-8076-db47-ef9bf368f384/abilities/ability1/displayicon.png": {
+      "file": "media/abilities/6d434c1f9813.webp",
+      "label": "Tejo Ability1",
+      "width": 128,
+      "height": 128
+    },
+    "https://media.valorant-api.com/agents/b444168c-4e35-8076-db47-ef9bf368f384/abilities/ability2/displayicon.png": {
+      "file": "media/abilities/9136f7dcb370.webp",
+      "label": "Tejo Ability2",
+      "width": 128,
+      "height": 128
+    },
+    "https://media.valorant-api.com/agents/b444168c-4e35-8076-db47-ef9bf368f384/abilities/grenade/displayicon.png": {
+      "file": "media/abilities/aeeaa4b04e5d.webp",
+      "label": "Tejo Grenade",
+      "width": 128,
+      "height": 128
+    },
+    "https://media.valorant-api.com/agents/b444168c-4e35-8076-db47-ef9bf368f384/abilities/ultimate/displayicon.png": {
+      "file": "media/abilities/dc3590ce05ee.webp",
+      "label": "Tejo Ultimate",
+      "width": 128,
+      "height": 128
+    },
+    "https://media.valorant-api.com/agents/bb2a4828-46eb-8cd1-e765-15848195d751/abilities/ability1/displayicon.png": {
+      "file": "media/abilities/65086a5e9fda.webp",
+      "label": "Neon Ability1",
+      "width": 128,
+      "height": 128
+    },
+    "https://media.valorant-api.com/agents/bb2a4828-46eb-8cd1-e765-15848195d751/abilities/ability2/displayicon.png": {
+      "file": "media/abilities/b315a47c982d.webp",
+      "label": "Neon Ability2",
+      "width": 128,
+      "height": 128
+    },
+    "https://media.valorant-api.com/agents/bb2a4828-46eb-8cd1-e765-15848195d751/abilities/grenade/displayicon.png": {
+      "file": "media/abilities/e19ddc5908be.webp",
+      "label": "Neon Grenade",
+      "width": 128,
+      "height": 128
+    },
+    "https://media.valorant-api.com/agents/bb2a4828-46eb-8cd1-e765-15848195d751/abilities/ultimate/displayicon.png": {
+      "file": "media/abilities/497fe1b2380b.webp",
+      "label": "Neon Ultimate",
+      "width": 128,
+      "height": 128
+    },
+    "https://media.valorant-api.com/agents/cc8b64c8-4b25-4ff9-6e7f-37b4da43d235/abilities/ability1/displayicon.png": {
+      "file": "media/abilities/837a2abdb040.webp",
+      "label": "Deadlock Ability1",
+      "width": 128,
+      "height": 128
+    },
+    "https://media.valorant-api.com/agents/cc8b64c8-4b25-4ff9-6e7f-37b4da43d235/abilities/ability2/displayicon.png": {
+      "file": "media/abilities/fada5f58ada4.webp",
+      "label": "Deadlock Ability2",
+      "width": 128,
+      "height": 128
+    },
+    "https://media.valorant-api.com/agents/cc8b64c8-4b25-4ff9-6e7f-37b4da43d235/abilities/grenade/displayicon.png": {
+      "file": "media/abilities/21513909f021.webp",
+      "label": "Deadlock Grenade",
+      "width": 128,
+      "height": 128
+    },
+    "https://media.valorant-api.com/agents/cc8b64c8-4b25-4ff9-6e7f-37b4da43d235/abilities/ultimate/displayicon.png": {
+      "file": "media/abilities/31d9a89fe48c.webp",
+      "label": "Deadlock Ultimate",
+      "width": 128,
+      "height": 128
+    },
+    "https://media.valorant-api.com/agents/dade69b4-4f5a-8528-247b-219e5a1facd6/abilities/ability1/displayicon.png": {
+      "file": "media/abilities/af62e42dcdb1.webp",
+      "label": "Fade Ability1",
+      "width": 128,
+      "height": 128
+    },
+    "https://media.valorant-api.com/agents/dade69b4-4f5a-8528-247b-219e5a1facd6/abilities/ability2/displayicon.png": {
+      "file": "media/abilities/c10b6bcdaa58.webp",
+      "label": "Fade Ability2",
+      "width": 128,
+      "height": 128
+    },
+    "https://media.valorant-api.com/agents/dade69b4-4f5a-8528-247b-219e5a1facd6/abilities/grenade/displayicon.png": {
+      "file": "media/abilities/d0a2c40ef0f4.webp",
+      "label": "Fade Grenade",
+      "width": 128,
+      "height": 128
+    },
+    "https://media.valorant-api.com/agents/dade69b4-4f5a-8528-247b-219e5a1facd6/abilities/ultimate/displayicon.png": {
+      "file": "media/abilities/6557fce9ae57.webp",
+      "label": "Fade Ultimate",
+      "width": 128,
+      "height": 128
+    },
+    "https://media.valorant-api.com/agents/df1cb487-4902-002e-5c17-d28e83e78588/abilities/ability1/displayicon.png": {
+      "file": "media/abilities/67bb9743901f.webp",
+      "label": "Waylay Ability1",
+      "width": 128,
+      "height": 128
+    },
+    "https://media.valorant-api.com/agents/df1cb487-4902-002e-5c17-d28e83e78588/abilities/ability2/displayicon.png": {
+      "file": "media/abilities/9e8b6cfff717.webp",
+      "label": "Waylay Ability2",
+      "width": 128,
+      "height": 128
+    },
+    "https://media.valorant-api.com/agents/df1cb487-4902-002e-5c17-d28e83e78588/abilities/grenade/displayicon.png": {
+      "file": "media/abilities/0b63a13cd15e.webp",
+      "label": "Waylay Grenade",
+      "width": 128,
+      "height": 128
+    },
+    "https://media.valorant-api.com/agents/df1cb487-4902-002e-5c17-d28e83e78588/abilities/ultimate/displayicon.png": {
+      "file": "media/abilities/842be3f80337.webp",
+      "label": "Waylay Ultimate",
+      "width": 128,
+      "height": 128
+    },
+    "https://media.valorant-api.com/agents/e370fa57-4757-3604-3648-499e1f642d3f/abilities/ability1/displayicon.png": {
+      "file": "media/abilities/0db2693bd83f.webp",
+      "label": "Gekko Ability1",
+      "width": 128,
+      "height": 128
+    },
+    "https://media.valorant-api.com/agents/e370fa57-4757-3604-3648-499e1f642d3f/abilities/ability2/displayicon.png": {
+      "file": "media/abilities/8082ef150466.webp",
+      "label": "Gekko Ability2",
+      "width": 128,
+      "height": 128
+    },
+    "https://media.valorant-api.com/agents/e370fa57-4757-3604-3648-499e1f642d3f/abilities/grenade/displayicon.png": {
+      "file": "media/abilities/371a36a2feab.webp",
+      "label": "Gekko Grenade",
+      "width": 128,
+      "height": 128
+    },
+    "https://media.valorant-api.com/agents/e370fa57-4757-3604-3648-499e1f642d3f/abilities/ultimate/displayicon.png": {
+      "file": "media/abilities/87ccfac5efba.webp",
+      "label": "Gekko Ultimate",
+      "width": 128,
+      "height": 128
+    },
+    "https://media.valorant-api.com/agents/eb93336a-449b-9c1b-0a54-a891f7921d69/abilities/ability1/displayicon.png": {
+      "file": "media/abilities/e943946b204d.webp",
+      "label": "Phoenix Ability1",
+      "width": 128,
+      "height": 128
+    },
+    "https://media.valorant-api.com/agents/eb93336a-449b-9c1b-0a54-a891f7921d69/abilities/ability2/displayicon.png": {
+      "file": "media/abilities/25c3fb1c4dd4.webp",
+      "label": "Phoenix Ability2",
+      "width": 128,
+      "height": 128
+    },
+    "https://media.valorant-api.com/agents/eb93336a-449b-9c1b-0a54-a891f7921d69/abilities/grenade/displayicon.png": {
+      "file": "media/abilities/80849a6654fe.webp",
+      "label": "Phoenix Grenade",
+      "width": 128,
+      "height": 128
+    },
+    "https://media.valorant-api.com/agents/eb93336a-449b-9c1b-0a54-a891f7921d69/abilities/ultimate/displayicon.png": {
+      "file": "media/abilities/2bc07da0a549.webp",
+      "label": "Phoenix Ultimate",
+      "width": 128,
+      "height": 128
+    },
+    "https://media.valorant-api.com/agents/efba5359-4016-a1e5-7626-b1ae76895940/abilities/ability1/displayicon.png": {
+      "file": "media/abilities/f0b2b10831f5.webp",
+      "label": "Vyse Ability1",
+      "width": 128,
+      "height": 128
+    },
+    "https://media.valorant-api.com/agents/efba5359-4016-a1e5-7626-b1ae76895940/abilities/ability2/displayicon.png": {
+      "file": "media/abilities/20d7191ab5eb.webp",
+      "label": "Vyse Ability2",
+      "width": 128,
+      "height": 128
+    },
+    "https://media.valorant-api.com/agents/efba5359-4016-a1e5-7626-b1ae76895940/abilities/grenade/displayicon.png": {
+      "file": "media/abilities/4dbdf75085ef.webp",
+      "label": "Vyse Grenade",
+      "width": 128,
+      "height": 128
+    },
+    "https://media.valorant-api.com/agents/efba5359-4016-a1e5-7626-b1ae76895940/abilities/ultimate/displayicon.png": {
+      "file": "media/abilities/945ec3c410dd.webp",
+      "label": "Vyse Ultimate",
+      "width": 128,
+      "height": 128
+    },
+    "https://media.valorant-api.com/agents/f94c3b30-42be-e959-889c-5aa313dba261/abilities/ability1/displayicon.png": {
+      "file": "media/abilities/3537560cd95a.webp",
+      "label": "Raze Ability1",
+      "width": 128,
+      "height": 128
+    },
+    "https://media.valorant-api.com/agents/f94c3b30-42be-e959-889c-5aa313dba261/abilities/ability2/displayicon.png": {
+      "file": "media/abilities/8079d750e213.webp",
+      "label": "Raze Ability2",
+      "width": 128,
+      "height": 128
+    },
+    "https://media.valorant-api.com/agents/f94c3b30-42be-e959-889c-5aa313dba261/abilities/grenade/displayicon.png": {
+      "file": "media/abilities/1e359e007b71.webp",
+      "label": "Raze Grenade",
+      "width": 128,
+      "height": 128
+    },
+    "https://media.valorant-api.com/agents/f94c3b30-42be-e959-889c-5aa313dba261/abilities/ultimate/displayicon.png": {
+      "file": "media/abilities/3080cbe8ec73.webp",
+      "label": "Raze Ultimate",
+      "width": 128,
+      "height": 128
+    }
+  },
+  "weapons": {
+    "https://media.valorant-api.com/weapons/1baa85b4-4c70-1284-64bb-6481dfc3bb4e/displayicon.png": {
+      "file": "media/weapons/e122b82d1bde.webp",
+      "label": "Ghost",
+      "width": 300,
+      "height": 100
+    },
+    "https://media.valorant-api.com/weapons/29a0cfab-485b-f5d5-779a-b59f85e204a8/displayicon.png": {
+      "file": "media/weapons/5b1959dbf41f.webp",
+      "label": "Classic",
+      "width": 188,
+      "height": 128
+    },
+    "https://media.valorant-api.com/weapons/410b2e0b-4ceb-1321-1727-20858f7f3477/displayicon.png": {
+      "file": "media/weapons/70eedeadaf0c.webp",
+      "label": "Bandit",
+      "width": 256,
+      "height": 140
+    },
+    "https://media.valorant-api.com/weapons/42da8ccc-40d5-affc-beec-15aa47b42eda/displayicon.png": {
+      "file": "media/weapons/e1a677ed3ad7.webp",
+      "label": "Shorty",
+      "width": 308,
+      "height": 100
+    },
+    "https://media.valorant-api.com/weapons/44d4e95c-4157-0037-81b2-17841bf2e8e3/displayicon.png": {
+      "file": "media/weapons/ef56cd1af198.webp",
+      "label": "Frenzy",
+      "width": 168,
+      "height": 128
+    },
+    "https://media.valorant-api.com/weapons/462080d1-4035-2937-7c09-27aa2a5c27a7/displayicon.png": {
+      "file": "media/weapons/c1e74d71f886.webp",
+      "label": "Spectre",
+      "width": 352,
+      "height": 128
+    },
+    "https://media.valorant-api.com/weapons/4ade7faa-4cf1-8376-95ef-39884480959b/displayicon.png": {
+      "file": "media/weapons/ec125a4c85c3.webp",
+      "label": "Guardian",
+      "width": 508,
+      "height": 108
+    },
+    "https://media.valorant-api.com/weapons/55d8a0f4-4274-ca67-fe2c-06ab45efdf58/displayicon.png": {
+      "file": "media/weapons/0e97dab558d5.webp",
+      "label": "Ares",
+      "width": 484,
+      "height": 100
+    },
+    "https://media.valorant-api.com/weapons/5f0aaf7a-4289-3998-d5ff-eb9a5cf7ef5c/displayicon.png": {
+      "file": "media/weapons/d781a10600e5.webp",
+      "label": "Outlaw",
+      "width": 512,
+      "height": 108
+    },
+    "https://media.valorant-api.com/weapons/63e6c2b6-4a8e-869c-3d4c-e38355226584/displayicon.png": {
+      "file": "media/weapons/11863b492a97.webp",
+      "label": "Odin",
+      "width": 444,
+      "height": 124
+    },
+    "https://media.valorant-api.com/weapons/8db0a1bf-4a50-832a-4566-faaaa6d250ca/displayicon.png": {
+      "file": "media/weapons/19f13787caf9.webp",
+      "label": "Warden",
+      "width": 512,
+      "height": 140
+    },
+    "https://media.valorant-api.com/weapons/910be174-449b-c412-ab22-d0873436b21b/displayicon.png": {
+      "file": "media/weapons/e6af66159dd5.webp",
+      "label": "Bucky",
+      "width": 508,
+      "height": 100
+    },
+    "https://media.valorant-api.com/weapons/9c82e19d-4575-0200-1a81-3eacf00cf872/displayicon.png": {
+      "file": "media/weapons/6154258389ae.webp",
+      "label": "Vandal",
+      "width": 420,
+      "height": 128
+    },
+    "https://media.valorant-api.com/weapons/a03b24d3-4319-996d-0f8c-94bbfba1dfc7/displayicon.png": {
+      "file": "media/weapons/96aff0eb5e02.webp",
+      "label": "Operator",
+      "width": 504,
+      "height": 104
+    },
+    "https://media.valorant-api.com/weapons/ae3de142-4d85-2547-dd26-4e90bed35cf7/displayicon.png": {
+      "file": "media/weapons/0c4d2612e7a4.webp",
+      "label": "Bulldog",
+      "width": 400,
+      "height": 124
+    },
+    "https://media.valorant-api.com/weapons/c4883e50-4494-202c-3ec3-6b8a9284f00b/displayicon.png": {
+      "file": "media/weapons/c47ceeeb3358.webp",
+      "label": "Marshal",
+      "width": 508,
+      "height": 92
+    },
+    "https://media.valorant-api.com/weapons/e336c6b8-418d-9340-d77f-7a9e4cfe0702/displayicon.png": {
+      "file": "media/weapons/25a31aa1cd38.webp",
+      "label": "Sheriff",
+      "width": 248,
+      "height": 128
+    },
+    "https://media.valorant-api.com/weapons/ec845bf4-4f79-ddda-a3da-0db3774b2794/displayicon.png": {
+      "file": "media/weapons/2ae308d31701.webp",
+      "label": "Judge",
+      "width": 412,
+      "height": 128
+    },
+    "https://media.valorant-api.com/weapons/ee8e8d15-496b-07ac-e5f6-8fae5d4c7b1a/displayicon.png": {
+      "file": "media/weapons/2f6624b7b9f6.webp",
+      "label": "Phantom",
+      "width": 508,
+      "height": 120
+    },
+    "https://media.valorant-api.com/weapons/f7e1b454-4ad4-1063-ec0a-159e56b58941/displayicon.png": {
+      "file": "media/weapons/4647e769b807.webp",
+      "label": "Stinger",
+      "width": 328,
+      "height": 128
+    }
+  }
 }
