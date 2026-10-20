@@ -1,19 +1,8 @@
 /**
- * Career mode helpers for the screens: the hub's tabs, the phase tracker, sponsor progress, short labels and the
- * "simular" shortcut. Pure functions over the career API (src/game/career), tested in careerView.test.ts.
+ * Career mode helpers for the screens: the hub's tabs, the phase tracker, short labels and the "simular" shortcut
+ * (sponsor progress is the engine's: sponsorProgress in src/game/career/views.ts). Pure functions over the career API (src/game/career), tested in careerView.test.ts.
  */
-import {
-  CAREER_STAGE_LABELS,
-  autoPlayMatch,
-  careerStageOutcome,
-  seasonRanking,
-  userPendingMatch,
-  type CareerPhase,
-  type CareerStage,
-  type CareerState,
-  type Contract,
-  type SponsorObjective,
-} from '../game/career';
+import { autoPlayMatch, careerStageOutcome, userPendingMatch, type CareerPhase, type CareerStage, type CareerState, type Contract } from '../game/career';
 
 export type CareerTab = 'roster' | 'market' | 'academy' | 'sponsors' | 'scrims' | 'competition' | 'stats' | 'history';
 
@@ -95,57 +84,6 @@ export function careerPhaseSteps(c: CareerState): PhaseStep[] {
     else if (s.key === 'report' && c.phase === 'over') detail = 'falência';
     return { key: s.key, label: s.label, state, detail, window: s.window };
   });
-}
-
-// ---------------------------------------------------------------------------
-// Sponsors
-// ---------------------------------------------------------------------------
-
-export type ObjectiveState = 'met' | 'missed' | 'on-track' | 'open';
-
-export interface ObjectiveProgress {
-  state: ObjectiveState;
-  text: string;
-}
-
-const LEAGUE_SPOTS = { masters: 3, champions: 4 } as const;
-
-/** How a sponsor's objective stands now (the season report has the final word). */
-export function sponsorProgress(c: CareerState, objective: SponsorObjective): ObjectiveProgress {
-  const league = careerStageOutcome(c, 'league');
-  const ended = c.phase === 'report' || c.phase === 'over';
-  switch (objective) {
-    case 'league-top6':
-    case 'league-top4': {
-      const n = objective === 'league-top6' ? 6 : 4;
-      if (league.place) return league.place.rank <= n ? { state: 'met', text: `Cumprido: liga ${league.place.label}` } : { state: 'missed', text: `Não cumprido: liga ${league.place.label}` };
-      return league.status === 'playing' ? { state: 'open', text: `Liga em andamento (${league.wins}-${league.losses})` } : { state: 'open', text: 'Começa com a liga' };
-    }
-    case 'masters':
-    case 'champions': {
-      const o = careerStageOutcome(c, objective);
-      const label = CAREER_STAGE_LABELS[objective];
-      if (o.status === 'playing' || o.status === 'done') return { state: 'met', text: `Cumprido: no ${label}` };
-      if (o.status === 'out' || (league.place && league.place.rank > LEAGUE_SPOTS[objective]) || ended) return { state: 'missed', text: `Não cumprido: fora do ${label}` };
-      if (league.place) return { state: 'on-track', text: `Classificado pela liga (${league.place.label})` };
-      return { state: 'open', text: `Top ${LEAGUE_SPOTS[objective]} da liga classifica` };
-    }
-    case 'title': {
-      const won = (['league', 'masters', 'champions'] as const).filter((s) => careerStageOutcome(c, s).place?.rank === 1);
-      if (won.length > 0) return { state: 'met', text: `Cumprido: ${won.map((s) => CAREER_STAGE_LABELS[s]).join(', ')}` };
-      return ended ? { state: 'missed', text: 'Não cumprido: nenhum título' } : { state: 'open', text: 'Nenhum título ainda' };
-    }
-    case 'top5-rating': {
-      const ranking = seasonRanking(c);
-      const i = ranking.findIndex((r) => r.isUser);
-      if (i >= 0 && i < 5) {
-        const r = ranking[i]!;
-        return ended ? { state: 'met', text: `Cumprido: ${r.handle} ${i + 1}º` } : { state: 'on-track', text: `Hoje: ${r.handle} é o ${i + 1}º do ranking` };
-      }
-      if (ended) return { state: 'missed', text: 'Não cumprido: ninguém no top 5' };
-      return { state: 'open', text: ranking.length > 0 ? 'Ninguém seu no top 5 ainda' : 'Ranking com 8+ mapas por jogador' };
-    }
-  }
 }
 
 // ---------------------------------------------------------------------------

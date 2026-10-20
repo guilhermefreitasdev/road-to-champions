@@ -185,10 +185,11 @@ export function CareerCreate({ difficulty: initialDifficulty, replaces, onCreate
       </fieldset>
 
       <div className="cc-difficulty">
-        <DifficultyPicker value={difficulty} onChange={setDifficulty} />
+        <DifficultyPicker value={difficulty} onChange={setDifficulty} mode="career" />
         <p className="small muted cc-start">
           {DIFFICULTY_LABELS[difficulty].name}: caixa inicial <strong>{formatMoney(start.money)}</strong> e reputação{' '}
-          <strong>{start.reputation}</strong>. A reputação decide quem aceita jogar por você e quais patrocinadores aparecem.
+          <strong>{start.reputation}</strong>. A reputação decide quem aceita jogar por você, a faixa e as vagas de patrocínio e
+          quais coaches aceitam. Preços, salários e premiações são os mesmos em todos os níveis.
         </p>
       </div>
 

@@ -65,7 +65,7 @@ export function AcademyPanel({ c, act }: PanelProps) {
                   <span className="cr-ovr">{p.ovr}</span>
                   <span className="small muted">POT {p.potential}</span>
                 </span>
-                <button type="button" className="secondary cr-offer-btn" disabled={!!p.block} aria-describedby={p.block ? id : undefined} onClick={() => act((x) => signProspect(x, p.playerId))}>
+                <button type="button" className="secondary cr-offer-btn" disabled={!!p.block} aria-describedby={p.block ? id : undefined} onClick={() => act((x) => signProspect(x, p.playerId), `${p.handle} entrou na base`)}>
                   Levar para a base
                 </button>
                 {p.block && <BlockNote id={id}>{p.block}</BlockNote>}

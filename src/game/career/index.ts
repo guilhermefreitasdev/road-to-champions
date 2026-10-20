@@ -29,12 +29,16 @@
  *   careerVetoScouting(c, opponentId) · careerMapFamiliarity(c, teamId) · findCareerMatch(c, key) (userSeries keys)
  * Season end
  *   seasonReport(c) · advanceToNextSeason(c) · careerHistory(c) · careerShareText(c)
+ *   seasonTransfers(c, record?)            every signing, academy move and departure of a season (state.transfers →
+ *                                          SeasonRecord.transfers; optional: saves from before the log fall back)
  * Selectors
  *   careerSummary · careerFinances · careerRoster · rosterLimits · careerLineup · careerStrength · careerCoach
  *   marketOffers · signingPreview · signingBlock · prospectOffers · coachOffers · sponsorsView · renewalBlock
  *   leagueTeams · careerTeamInfo · careerEntrantTeam · careerLeagueViews · careerLeaguePlayoffCells
  *   careerMastersCells · careerChampionsGroupViews · careerChampionsBracket · careerStageOutcome · careerUserResults
  *   careerAllPlayerStats(c, stage?) · careerPlayerStats · seasonRanking · scrimInfo · scrimReport · scrimOpponents
+ *   sponsorProgress(c, objective)          live objective progress; 'met'/'missed' come from objectiveStanding, the
+ *                                          same function the season report settles the bonuses with
  * Auto (the balance test's greedy manager; usable as "auto" buttons)
  *   autoOffseason · autoMidseason · autoPlayMatch · autoSeason
  */
@@ -45,8 +49,12 @@ export {
   CAREER_STAGES,
   CAREER_STAGE_LABELS,
   LEAGUE_AI_TEAMS,
+  LEAGUE_QUALIFY,
   LEDGER_LABELS,
   OFFER_KIND_LABELS,
+  TRANSFER_MOVES_IN,
+  TRANSFER_MOVES_OUT,
+  TRANSFER_MOVE_LABELS,
   USER_ID,
   acceptSponsor,
   advanceToNextSeason,
@@ -72,6 +80,7 @@ export {
   lineupOf,
   moraleShift,
   nameOf,
+  objectiveStanding,
   offerTerms,
   parseCareer,
   payroll,
@@ -123,6 +132,7 @@ export {
   type CreateCareerInput,
   type LedgerEntry,
   type LedgerKind,
+  type ObjectiveStanding,
   type OfferKind,
   type OfferRef,
   type OfferTerms,
@@ -135,6 +145,8 @@ export {
   type SeasonRecord,
   type SponsorOffer,
   type SponsorResult,
+  type TransferMove,
+  type TransferRecord,
 } from './career';
 export * from './views';
 export { autoMidseason, autoOffseason, autoPlayMatch, autoSeason, type AutopilotOptions } from './autopilot';

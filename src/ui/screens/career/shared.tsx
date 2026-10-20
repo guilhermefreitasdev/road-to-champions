@@ -2,10 +2,13 @@ import type { ReactNode } from 'react';
 import type { CareerState } from '../../../game/career';
 import { Icon } from '../../components/Icon';
 
-/** What every career panel gets: the career and the action runner (saves, shows the engine's error, false on refusal). */
+/**
+ * What every career panel gets: the career and the action runner (saves; shows the engine's error, or `success`, in
+ * the toast fixed in the viewport; false on refusal).
+ */
 export interface PanelProps {
   c: CareerState;
-  act: (fn: (c: CareerState) => CareerState) => boolean;
+  act: (fn: (c: CareerState) => CareerState, success?: string | ((next: CareerState) => string)) => boolean;
 }
 
 /** Why an action is not available now: lock icon + the engine's pt-BR reason (never color alone). */

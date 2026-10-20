@@ -26,6 +26,7 @@ import * as season from '../game/season';
 import * as career from '../game/career';
 import { MODE_LABELS, USER_ID } from '../game/run';
 import { ConfirmBar } from './components/ConfirmBar';
+import { Toast, type ToastMessage } from './components/Toast';
 import { Frame, ScreenLoading, type NavItem } from './Frame';
 import { Home } from './screens/Home';
 import { ContinueCards, FanArt, featuredCards } from './screens/HomeExtras';
@@ -223,7 +224,11 @@ export function Game() {
   const [history, setHistory] = useState<HistoryEntry[]>(() => loadHistory());
   const [difficulty, setDifficultyState] = useState<Difficulty>(() => loadDifficulty());
   const [view, setViewState] = useState<View>({ kind: 'home' });
-  const [error, setError] = useState<string | null>(null);
+  /** Feedback of the last action (errors in every mode; successes of the career's actions), fixed in the viewport. */
+  const [toast, setToast] = useState<ToastMessage | null>(null);
+  const toastId = useRef(0);
+  const notify = (kind: ToastMessage['kind'], text: string) => setToast({ id: ++toastId.current, kind, text });
+  const setError = (text: string | null) => (text === null ? setToast((t) => (t?.kind === 'error' ? null : t)) : notify('error', text));
   const [confirmReset, setConfirmReset] = useState(false);
   const reducedMotion = usePrefersReducedMotion();
   const { screen, game } = screenOf(run, s, c, view);
@@ -248,9 +253,9 @@ export function Game() {
 
   useEffect(prefetchScreens, []);
 
-  /** Changing screens dismisses the error of a previous action and any open confirmation. */
+  /** Changing screens dismisses the feedback of a previous action and any open confirmation. */
   const setView = (next: View) => {
-    setError(null);
+    setToast(null);
     setConfirmReset(false);
     setViewState(next);
   };
@@ -289,14 +294,18 @@ export function Game() {
     }
   };
 
-  /** Same for the career (it has no history entry: its seasons are its history). */
-  const actCareer = (fn: (x: CareerState) => CareerState): boolean => {
+  /**
+   * Same for the career (it has no history entry: its seasons are its history). `success`, when given, is shown in
+   * the toast (a text, or one built from the new state).
+   */
+  const actCareer = (fn: (x: CareerState) => CareerState, success?: string | ((next: CareerState) => string)): boolean => {
     if (!c) return false;
     try {
       const next = fn(c);
       setCareer(next);
       saveCareer(next);
-      setError(null);
+      if (success) notify('success', typeof success === 'string' ? success : success(next));
+      else setError(null);
       return true;
     } catch (e) {
       fail(e);
@@ -398,11 +407,7 @@ export function Game() {
           onCancel={() => setConfirmReset(false)}
         />
       )}
-      {error && (
-        <p className="error" role="alert">
-          Algo deu errado: {error}
-        </p>
-      )}
+      <Toast toast={toast} onClose={() => setToast(null)} />
       {screen === 'home' && (
         <Home
           ready
@@ -724,7 +729,7 @@ interface CareerScreensProps {
   screen: ScreenKey;
   view: View;
   tab: CareerTab;
-  act: (fn: (x: CareerState) => CareerState) => boolean;
+  act: (fn: (x: CareerState) => CareerState, success?: string | ((next: CareerState) => string)) => boolean;
   setView: (v: View) => void;
   reducedMotion: boolean;
 }

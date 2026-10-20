@@ -33,7 +33,7 @@ import { findCoach, rosterKey, shuffled } from '../../engine/roster';
 import { simulateSeries, type SeriesResult } from '../../engine/series';
 import { cardFit, teamStrength } from '../../engine/team';
 import { TEAM_COUNT, createTournament, pendingMatches, reportResult, type Entrant, type TMatch, type TournamentState } from '../../engine/tournament';
-import { REGIONS, type Card, type Coach, type Lineup, type LineupPlayer, type MapName, type Region, type Slot, type TeamIndex } from '../../engine/types';
+import { REGIONS, type Card, type Coach, type Lineup, type LineupPlayer, type MapName, type Region, type Role, type Slot, type TeamIndex } from '../../engine/types';
 import { aiChooseMap, applyVeto, createVeto, isVetoComplete, nextTurn, type VetoState } from '../../engine/veto';
 import { ALL_ROSTERS } from '../../data/real';
 import { compactSeries, type CompactSeries } from '../boxscore';
@@ -323,6 +323,41 @@ export interface SponsorResult {
   met: boolean;
 }
 
+/**
+ * One move of the season's transfer log: signings (buyout, free agent, import), academy prospects, promotions from the
+ * academy, and departures (sale, release of an expired contract, contract ended when the league starts).
+ */
+export type TransferMove = 'team' | 'free' | 'import' | 'prospect' | 'promotion' | 'sale' | 'release' | 'expired';
+export const TRANSFER_MOVES_IN: readonly TransferMove[] = ['team', 'free', 'import', 'prospect'];
+export const TRANSFER_MOVES_OUT: readonly TransferMove[] = ['sale', 'release', 'expired'];
+export const TRANSFER_MOVE_LABELS: Record<TransferMove, string> = {
+  team: 'Multa rescisória',
+  free: 'Agente livre',
+  import: 'Importação',
+  prospect: 'Base (prospecto)',
+  promotion: 'Promovido da base',
+  sale: 'Venda',
+  release: 'Dispensa',
+  expired: 'Fim de contrato',
+};
+
+export interface TransferRecord {
+  move: TransferMove;
+  playerId: string;
+  cardId: string;
+  handle: string;
+  role: Role;
+  ovr: number;
+  /** US$ thousand: the fee paid for a signing (0 for a prospect or a promotion), the credit received for a sale. */
+  amount: number;
+  /** The contract signed (signings, prospects, promotions). */
+  contract?: Contract;
+  /** A buyout: the league team he came from. */
+  from?: string;
+  /** Window of the move (a contract that ends leaves as the league starts: 'offseason'). */
+  window: CareerWindow['kind'];
+}
+
 export interface SeasonRecord {
   season: number;
   year: number;
@@ -341,6 +376,8 @@ export interface SeasonRecord {
   reputation: { start: number; end: number };
   /** "Liga 2º → Masters 3º → Champions 9º–12º". */
   path: string;
+  /** Every transfer of the season, in order (absent in records from saves made before the log existed). */
+  transfers?: TransferRecord[];
   bankrupt?: boolean;
 }
 
@@ -399,6 +436,8 @@ export interface CareerState {
   scrims: ScrimRecord[];
   /** Money moves of the current season. */
   ledger: LedgerEntry[];
+  /** Transfers of the current season, in order (absent in saves made before the log existed). */
+  transfers?: TransferRecord[];
   seasonStart: { money: number; reputation: number };
   /** Every player id that has played the league in this career (the rookie award). */
   leaguePlayers: string[];
@@ -461,6 +500,7 @@ export function createCareer(input: CreateCareerInput): CareerState {
     mapsPlayed: {},
     scrims: [],
     ledger: [],
+    transfers: [],
     seasonStart: { money: start.money, reputation: start.reputation },
     leaguePlayers: [],
     history: [],
@@ -703,6 +743,16 @@ function book(c: CareerState, kind: LedgerKind, amount: number, label: string): 
   return { ...c, money: c.money + amount, ledger: [...c.ledger, { kind, amount, label }] };
 }
 
+/** Appends a move to the season's transfer log (a save from before the log keeps none: its report falls back). */
+function logTransfer(c: CareerState, p: Pick<CareerPlayer, 'id' | 'cardId' | 'ovr'>, move: TransferMove, amount: number, extra: { contract?: Contract; from?: string } = {}): CareerState {
+  if (!c.transfers) return c;
+  const card = cardById(p.cardId);
+  const t: TransferRecord = { move, playerId: p.id, cardId: p.cardId, handle: card.handle, role: card.role, ovr: p.ovr, amount, window: c.window?.kind ?? 'offseason' };
+  if (extra.contract) t.contract = { ...extra.contract };
+  if (extra.from) t.from = extra.from;
+  return { ...c, transfers: [...c.transfers, t] };
+}
+
 // ---------------------------------------------------------------------------
 // Windows: market, sponsors, academy, coaches
 // ---------------------------------------------------------------------------
@@ -898,6 +948,7 @@ export function signPlayer(c: CareerState, playerId: string, years: number = DEF
   if (slot) player.slot = slot;
   if (offer.kind === 'import') player.import = true;
   let next: CareerState = { ...c, players: [...c.players, player], window: { ...w, signings: w.signings + 1 } };
+  next = logTransfer(next, player, offer.kind, t.fee, { contract: player.contract, ...(offer.kind === 'team' ? { from: nameOf(c, offer.from!) } : {}) });
   if (offer.kind === 'team') next = replaceOnTeam(next, offer.from!, playerId);
   else {
     const freeAgents = { ...next.freeAgents };
@@ -939,7 +990,7 @@ export function releasePlayer(c: CareerState, playerId: string): CareerState {
   if (!p) throw new Error('Jogador não está no seu elenco');
   const credit = saleCredit(p);
   const freeAgents = { ...c.freeAgents, [playerId]: p.ovr };
-  const next: CareerState = { ...c, players: c.players.filter((x) => x.id !== playerId), freeAgents };
+  const next = logTransfer({ ...c, players: c.players.filter((x) => x.id !== playerId), freeAgents }, p, credit > 0 ? 'sale' : 'release', credit);
   return book(next, 'sale', credit, `Venda de ${cardById(p.cardId).handle}`);
 }
 
@@ -1086,7 +1137,7 @@ export function signProspect(c: CareerState, playerId: string): CareerState {
   };
   const freeAgents = { ...c.freeAgents };
   delete freeAgents[playerId];
-  return { ...c, freeAgents, players: [...c.players, player] };
+  return logTransfer({ ...c, freeAgents, players: [...c.players, player] }, player, 'prospect', 0, { contract: player.contract });
 }
 
 /**
@@ -1102,7 +1153,7 @@ export function promoteAcademy(c: CareerState, playerId: string): CareerState {
   const promoted: CareerPlayer = { ...p, status: slot ? 'starter' : 'bench' };
   if (slot) promoted.slot = slot;
   promoted.contract = { salary: salaryFor(careerPlayerValue(promoted)), years: DEFAULT_CONTRACT_YEARS };
-  const next = mapPlayer(c, playerId, () => promoted);
+  const next = logTransfer(mapPlayer(c, playerId, () => promoted), promoted, 'promotion', 0, { contract: promoted.contract });
   if (w.kind !== 'midseason') return next;
   const extra = round5(Math.max(0, promoted.contract.salary - p.contract.salary) * MIDSEASON_SALARY_SHARE);
   return book(next, 'salaries', -extra, `Promoção de ${cardById(p.cardId).handle}`);
@@ -1259,6 +1310,7 @@ function startLeague(c0: CareerState): CareerState {
   const freeAgents = { ...c0.freeAgents };
   for (const p of leaving) freeAgents[p.id] = p.ovr;
   let c: CareerState = { ...c0, players: c0.players.filter((p) => p.contract.years > 0), freeAgents };
+  for (const p of leaving) c = logTransfer(c, p, 'expired', 0);
   delete c.window;
   const pay = payroll(c);
   c = book(c, 'salaries', -pay.players, 'Folha salarial da temporada');
@@ -1522,21 +1574,45 @@ const toAward = (r: StatRow): Award => ({
   maps: r.maps,
 });
 
-function objectiveMet(c: CareerState, objective: SponsorObjective, ranking: readonly StatRow[]): boolean {
+/** League places that qualify for the Masters (mastersQualified) and the Champions (startChampions). */
+export const LEAGUE_QUALIFY: Record<'masters' | 'champions', number> = { masters: 3, champions: 4 };
+
+/** Can the org still win this stage: it is in it without a final place, or it can still qualify for it. */
+function canStillWin(c: CareerState, stage: CareerStage): boolean {
+  const league = userPlacement(c, 'league');
+  if (stage === 'league') return !!c.league ? !league : true;
+  const built = stage === 'masters' ? !!c.masters : !!c.champions;
+  if (built) return inStage(c, stage) && !userPlacement(c, stage);
+  return !league || league.rank <= LEAGUE_QUALIFY[stage];
+}
+
+export type ObjectiveStanding = 'met' | 'missed' | 'open';
+
+/**
+ * Where a sponsor objective stands. 'met' and 'missed' never change afterwards; 'open' can still go either way. With
+ * `final` (the season is over: finishSeason, or a report) nothing stays open: an open objective is missed. The season
+ * report settles the bonuses with exactly this function, and the progress selector (views.ts) reads it too.
+ */
+export function objectiveStanding(c: CareerState, objective: SponsorObjective, ranking: readonly StatRow[] = seasonRanking(c), final = c.phase === 'report' || c.phase === 'over'): ObjectiveStanding {
+  const settle = (s: ObjectiveStanding): ObjectiveStanding => (s === 'open' && final ? 'missed' : s);
   const league = userPlacement(c, 'league');
   switch (objective) {
     case 'league-top6':
-      return !!league && league.rank <= 6;
-    case 'league-top4':
-      return !!league && league.rank <= 4;
+    case 'league-top4': {
+      const n = objective === 'league-top6' ? 6 : 4;
+      return settle(league ? (league.rank <= n ? 'met' : 'missed') : 'open');
+    }
     case 'masters':
-      return inStage(c, 'masters');
     case 'champions':
-      return inStage(c, 'champions');
-    case 'title':
-      return league?.rank === 1 || c.masters?.champion === USER_ID || c.champions?.champion === USER_ID;
+      if (inStage(c, objective)) return 'met';
+      return settle(canStillWin(c, objective) && !(objective === 'masters' ? c.masters : c.champions) ? 'open' : 'missed');
+    case 'title': {
+      if (league?.rank === 1 || c.masters?.champion === USER_ID || c.champions?.champion === USER_ID) return 'met';
+      return settle(CAREER_STAGES.some((s) => canStillWin(c, s)) ? 'open' : 'missed');
+    }
     case 'top5-rating':
-      return ranking.slice(0, 5).some((r) => r.isUser);
+      // The ranking moves until the last match: only the season's end settles it.
+      return final ? (ranking.slice(0, 5).some((r) => r.isUser) ? 'met' : 'missed') : 'open';
   }
 }
 
@@ -1573,7 +1649,7 @@ function finishSeason(c0: CareerState): CareerState {
   const sponsors: SponsorResult[] = [];
   let rep = c.reputation;
   for (const s of c.sponsors) {
-    const met = objectiveMet(c, s.objective, ranking);
+    const met = objectiveStanding(c, s.objective, ranking, true) === 'met';
     sponsors.push({ name: s.name, objective: s.objective, base: s.base, bonus: met ? s.bonus : 0, met });
     if (met) c = book(c, 'bonus', s.bonus, `Bônus: ${s.name}`);
     else rep += REP_SPONSOR_FAIL;
@@ -1648,6 +1724,7 @@ function finishSeason(c0: CareerState): CareerState {
     reputation: { start: c.seasonStart.reputation, end: reputation },
     path: seasonPath(c),
   };
+  if (c.transfers) record.transfers = c.transfers;
   if (bankrupt) record.bankrupt = true;
   const leaguePlayers = new Set(c.leaguePlayers);
   for (const b of stageBoxes(c, 'league')) for (const side of b.ids) for (const id of side) leaguePlayers.add(cardById(baseCardId(id)).playerId);
@@ -1710,6 +1787,7 @@ export function advanceToNextSeason(c: CareerState): CareerState {
     mapsPlayed: {},
     scrims: [],
     ledger: [],
+    transfers: [],
     seasonStart: { money: c.money, reputation: c.reputation },
   };
   delete next.league;
@@ -1862,6 +1940,8 @@ export function parseCareer(data: unknown): CareerState | null {
     if (!Array.isArray(c.players) || !Array.isArray(c.aiTeams) || c.aiTeams.length !== LEAGUE_AI_TEAMS) return null;
     for (const key of ['userSeries', 'boxScores', 'mapsPlayed', 'freeAgents'] as const) if (!c[key] || typeof c[key] !== 'object') return null;
     if (!Array.isArray(c.history) || !Array.isArray(c.ledger) || !Array.isArray(c.scrims) || !Array.isArray(c.sponsors)) return null;
+    // The transfer log came after v1 shipped: optional, but an array when present.
+    if (c.transfers !== undefined && !Array.isArray(c.transfers)) return null;
     for (const p of c.players) {
       cardById(p.cardId);
       if (!p.contract || typeof p.contract.salary !== 'number') return null;

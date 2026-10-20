@@ -22,6 +22,7 @@ import {
   REP_SEASON_MVP,
   REP_SPONSOR_FAIL,
   SCRIMS_PER_STAGE,
+  type SponsorObjective,
 } from './constants';
 import {
   USER_ID,
@@ -51,8 +52,9 @@ import {
   starters,
   userPendingMatch,
   type CareerState,
+  type TransferMove,
 } from './career';
-import { autoOffseason, autoPlayMatch, autoSeason } from './autopilot';
+import { autoMidseason, autoOffseason, autoPlayMatch, autoSeason } from './autopilot';
 import {
   careerFinances,
   careerLeagueViews,
@@ -62,8 +64,11 @@ import {
   prospectOffers,
   scrimReport,
   seasonReport,
+  seasonTransfers,
   signingPreview,
+  sponsorProgress,
   sponsorsView,
+  type ObjectiveState,
 } from './views';
 import { CAREER_START_YEAR, agingStep, experience, playerInfo, potentialOf } from './world';
 import { nextTurn } from '../../engine/veto';
@@ -459,4 +464,116 @@ describe('offer terms', () => {
       expect(t.salary).toBeGreaterThan(0);
     }
   });
+});
+
+describe('transfer log', () => {
+  it('records every signing, academy move and departure of the season, also of players gone since', () => {
+    let c: CareerState = { ...fresh('career-transfers'), money: 100_000, reputation: 100 };
+    const moves: TransferMove[] = [];
+    const signed: string[] = [];
+    for (const kind of ['team', 'free', 'import'] as const) {
+      const o = marketOffers(c).find((x) => x.kind === kind && !signingBlock(c, x.playerId));
+      if (!o) continue;
+      c = signPlayer(c, o.playerId, 3);
+      signed.push(o.playerId);
+      moves.push(kind);
+    }
+    expect(signed.length).toBeGreaterThanOrEqual(2);
+    const prospect = prospectOffers(c)[0]!;
+    c = promoteAcademy(signProspect(c, prospect.playerId), prospect.playerId);
+    const sold = signed[0]!;
+    c = releasePlayer(c, sold);
+    moves.push('prospect', 'promotion', 'sale');
+    expect(c.transfers!.map((t) => t.move)).toEqual(moves);
+    const first = c.transfers![0]!;
+    expect(first.playerId).toBe(sold);
+    expect(first.contract?.years).toBe(3);
+    expect(first.amount).toBeGreaterThan(0);
+    if (first.move === 'team') expect(first.from).toBeTruthy();
+    expect(c.transfers!.at(-1)).toMatchObject({ move: 'sale', playerId: sold, window: 'offseason' });
+    expect(c.transfers!.at(-1)!.amount).toBe(c.ledger.at(-1)!.amount);
+
+    // The season's report keeps the whole log, the sold signing included.
+    const s = autoSeason(c, { scrims: false });
+    expect(['report', 'over']).toContain(s.phase);
+    const record = seasonReport(s)!;
+    expect(record.transfers!.slice(0, moves.length).map((t) => t.move)).toEqual(moves);
+    expect(record.transfers).toEqual(s.transfers);
+    const view = seasonTransfers(s, record);
+    expect(view.complete).toBe(true);
+    expect(view.in.some((t) => t.playerId === sold)).toBe(true);
+    expect(s.players.some((p) => p.id === sold)).toBe(false);
+    expect(view.promotions.map((t) => t.playerId)).toContain(prospect.playerId);
+    expect(view.out.some((t) => t.playerId === sold && t.moveLabel === 'Venda')).toBe(true);
+    // Every signing in the log, and only signings: the 'fee' entries of the ledger match the incoming amounts.
+    const fees = s.ledger.filter((e) => e.kind === 'fee').reduce((a, e) => a + e.amount, 0);
+    expect(-fees).toBe(view.in.reduce((a, t) => a + t.amount, 0));
+    if (s.phase === 'over') return;
+
+    // The next season starts a new log; contracts that end leave as 'expired' when the league starts.
+    let next = advanceToNextSeason(s);
+    expect(next.transfers).toEqual([]);
+    expect(next.history[0]!.transfers).toEqual(record.transfers);
+    next = autoOffseason(next, { scrims: false });
+    const extra = next.players.find((p) => !starters(next).some((x) => x.id === p.id));
+    if (extra) {
+      next = { ...next, players: next.players.map((p) => (p.id === extra.id ? { ...p, contract: { ...p.contract, years: 0 } } : p)) };
+      if (startBlocks(next).length === 0) {
+        const started = startStage(next);
+        expect(started.transfers!.at(-1)).toMatchObject({ move: 'expired', playerId: extra.id, amount: 0 });
+      }
+    }
+  });
+
+  it('loads saves from before the log and falls back to the players still in the org', () => {
+    const s = oneSeason();
+    const old = JSON.parse(JSON.stringify(s)) as CareerState;
+    delete old.transfers;
+    for (const r of old.history) delete r.transfers;
+    const loaded = deserializeCareer(JSON.stringify(old))!;
+    expect(loaded).not.toBeNull();
+    expect(loaded.transfers).toBeUndefined();
+    const view = seasonTransfers(loaded, loaded.history[0]!);
+    expect(view.complete).toBe(false);
+    expect(view.in.map((t) => t.playerId).sort()).toEqual(loaded.players.filter((p) => p.joined.year === s.year).map((p) => p.id).sort());
+    // The log starts with the next season.
+    expect(advanceToNextSeason(loaded).transfers).toEqual([]);
+    expect(deserializeCareer(JSON.stringify({ ...s, transfers: 'x' }))).toBeNull();
+  });
+});
+
+describe('sponsor progress', () => {
+  const OBJECTIVES: SponsorObjective[] = ['league-top6', 'league-top4', 'masters', 'champions', 'title', 'top5-rating'];
+
+  // A mid-table season (misses the Masters) and a rich org that goes deep (Masters, Champions, a title).
+  for (const [seed, rich] of [['career-sponsors', false], ['career-sponsors-3', true]] as const) {
+    it(`a settled objective never changes and the report pays exactly what the progress said (${rich ? 'deep run' : 'mid-table'})`, () => {
+      const start = fresh(seed, rich ? 'easy' : 'normal');
+      let c = autoOffseason(rich ? { ...start, money: 100_000, reputation: 100 } : start, { scrims: false });
+      // Every objective at once (more than the slots allow: the season report settles them all the same).
+      c = { ...c, sponsors: OBJECTIVES.map((objective, i) => ({ id: `t-${i}`, name: `Teste ${i}`, tier: 0, base: 0, objective, bonus: 10 })) };
+      const seen = new Map<SponsorObjective, ObjectiveState>();
+      const check = (x: CareerState) => {
+        for (const o of OBJECTIVES) {
+          const st = sponsorProgress(x, o).state;
+          if (st !== 'met' && st !== 'missed') continue;
+          if (seen.has(o)) expect([o, st]).toEqual([o, seen.get(o)]);
+          else seen.set(o, st);
+        }
+      };
+      c = startStage(c);
+      for (let guard = 0; guard < 200 && c.phase !== 'report' && c.phase !== 'over'; guard++) {
+        check(c);
+        if (c.phase === 'midseason') c = startStage(autoMidseason(c));
+        else c = autoPlayMatch(c);
+      }
+      expect(['report', 'over']).toContain(c.phase);
+      check(c);
+      const record = seasonReport(c)!;
+      expect(record.sponsors).toHaveLength(OBJECTIVES.length);
+      for (const r of record.sponsors) expect([r.objective, sponsorProgress(c, r.objective).state]).toEqual([r.objective, r.met ? 'met' : 'missed']);
+      // The views carry the same progress.
+      for (const row of sponsorsView(c).accepted) expect(row.progress).toEqual(sponsorProgress(c, row.offer.objective));
+    });
+  }
 });

@@ -67,7 +67,7 @@ export function RosterPanel({ c, act }: PanelProps) {
             </dd>
           </div>
         </dl>
-        <button type="button" className="secondary" disabled={!editable || main.length === 0} onClick={() => act(autoLineup)}>
+        <button type="button" className="secondary" disabled={!editable || main.length === 0} onClick={() => act(autoLineup, 'Escalação montada: o time mais forte do elenco')}>
           <Icon name="swap" /> Auto-escalar
         </button>
       </div>
@@ -226,7 +226,7 @@ export function PlayerItem({ row, c, act, editable, selling, onSell }: ItemProps
           aria-pressed={row.focus}
           disabled={!!focusBlock || c.phase === 'over'}
           aria-describedby={focusBlock ? `${id}-focus` : undefined}
-          onClick={() => act((x) => setTrainingFocus(x, p.id, !row.focus))}
+          onClick={() => act((x) => setTrainingFocus(x, p.id, !row.focus), row.focus ? `${row.handle} saiu do foco de treino` : `${row.handle} no foco de treino`)}
         >
           <Icon name="flame" /> Foco de treino
         </button>
@@ -247,14 +247,14 @@ export function PlayerItem({ row, c, act, editable, selling, onSell }: ItemProps
               className="secondary"
               disabled={!!row.renewal.block}
               aria-describedby={row.renewal.block ? `${id}-renew` : undefined}
-              onClick={() => act((x) => renewContract(x, p.id, years))}
+              onClick={() => act((x) => renewContract(x, p.id, years), `${row.handle} renovou por mais ${years} temporada${years === 1 ? '' : 's'}`)}
             >
               Renovar · {formatMoney(row.renewal.salary)}/temp.
             </button>
           </span>
         )}
         {academy && (
-          <button type="button" className="secondary" disabled={!!promoteBlock} aria-describedby={promoteBlock ? `${id}-promote` : undefined} onClick={() => act((x) => promoteAcademy(x, p.id))}>
+          <button type="button" className="secondary" disabled={!!promoteBlock} aria-describedby={promoteBlock ? `${id}-promote` : undefined} onClick={() => act((x) => promoteAcademy(x, p.id), (next) => `${row.handle} promovido: ${next.players.find((x) => x.id === p.id)?.status === 'starter' ? 'titular' : 'reserva'}`)}>
             <Icon name="chevron" /> Promover ao elenco
           </button>
         )}
@@ -278,7 +278,7 @@ export function PlayerItem({ row, c, act, editable, selling, onSell }: ItemProps
           }
           confirmLabel={row.saleCredit > 0 ? `Vender ${row.handle}` : `Dispensar ${row.handle}`}
           onConfirm={() => {
-            if (act((x) => releasePlayer(x, p.id))) onSell(null);
+            if (act((x) => releasePlayer(x, p.id), row.saleCredit > 0 ? `${row.handle} vendido: +${formatMoney(row.saleCredit)}` : `${row.handle} dispensado`)) onSell(null);
           }}
           onCancel={() => onSell(null)}
         />
@@ -375,7 +375,7 @@ function CoachSection({ c, act }: { c: CareerState; act: PanelProps['act'] }) {
           text="Ele sai sem custo e sem reembolso. Você pode contratar outro da lista desta pré-temporada."
           confirmLabel="Dispensar coach"
           onConfirm={() => {
-            if (act(releaseCoach)) setReleasing(false);
+            if (act(releaseCoach, 'Coach dispensado')) setReleasing(false);
           }}
           onCancel={() => setReleasing(false)}
         />
@@ -396,7 +396,7 @@ function CoachSection({ c, act }: { c: CareerState; act: PanelProps['act'] }) {
                     {formatMoney(o.salary)}/temp. · reputação {o.requiredRep}
                   </span>
                 </span>
-                <button type="button" className="secondary" disabled={!!o.block} aria-describedby={o.block ? `cr-coach-${o.coach.id}` : undefined} onClick={() => act((x) => hireCoach(x, o.coach.id))}>
+                <button type="button" className="secondary" disabled={!!o.block} aria-describedby={o.block ? `cr-coach-${o.coach.id}` : undefined} onClick={() => act((x) => hireCoach(x, o.coach.id), `${o.coach.name} contratado como coach`)}>
                   {coach ? 'Trocar' : 'Contratar'}
                 </button>
                 {o.block && <BlockNote id={`cr-coach-${o.coach.id}`}>{o.block}</BlockNote>}

@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
-import { autoMidseason, autoOffseason, createCareer, startStage, userPendingMatch, type CareerState } from '../game/career';
-import { careerPhaseSteps, contractText, defaultCareerTab, moraleText, signed, simulateUntilBreak, sponsorProgress } from './careerView';
+import { autoMidseason, autoOffseason, createCareer, sponsorProgress, startStage, userPendingMatch, type CareerState } from '../game/career';
+import { careerPhaseSteps, contractText, defaultCareerTab, moraleText, signed, simulateUntilBreak } from './careerView';
 
 const fresh = (): CareerState => createCareer({ name: 'Org Teste', region: 'americas', seed: 'ui-test' });
 
