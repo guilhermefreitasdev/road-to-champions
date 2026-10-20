@@ -12,6 +12,7 @@
     "test:watch": "vitest",
     "typecheck": "tsc --noEmit",
     "data:game": "NODE_USE_ENV_PROXY=1 node scripts/fetch-game-data.mjs",
+    "data:game-media": "NODE_USE_ENV_PROXY=1 node scripts/fetch-game-data.mjs --media-only",
     "data:vlr-comps": "node scripts/vlr/comps.mjs",
     "data:vlr": "NODE_USE_ENV_PROXY=1 node scripts/vlr/run.mjs",
     "data:vlr-agents": "NODE_USE_ENV_PROXY=1 node scripts/vlr/agents.mjs",

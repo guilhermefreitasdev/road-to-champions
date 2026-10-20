@@ -24,11 +24,30 @@ O script (`scripts/fetch-game-data.mjs`, Node 22, sem dependências) faz seis re
 
 Depois de regenerar, rode `npx vitest run src/data/game` para validar o snapshot.
 
+### Imagens do Valdle (opcional: minimapas, ícones de habilidades e de armas)
+
+```bash
+npm run data:game-media          # só as imagens, a partir dos JSON já commitados (sem tocar no snapshot)
+npm run data:game -- --media     # snapshot novo e, em seguida, as imagens
+```
+
+Passo opcional do mesmo script (precisa do `sharp`, que já é devDependency). Baixa de `media.valorant-api.com` o `displayIcon` de cada mapa (minimapa), de cada habilidade e de cada arma, **uma requisição por vez, com pelo menos 1,1 s entre elas**, com o User-Agent do projeto e novas tentativas educadas em 429/5xx (respeita `Retry-After`). Os originais ficam em `.cache/game-media/` (fora do git): rodar de novo não baixa nada que já esteja lá (`--refresh` força), então dá para interromper e continuar. Se o host não responder 5 vezes seguidas, o resto é pulado e o resumo avisa; o que já existia continua valendo. Opções: `--offline` (só o cache), `--only=minimaps,abilities,weapons`.
+
+Saída (WebP **com transparência**, via `sharp`):
+
+- `public/media/minimaps/<uuid do mapa>.webp`: o minimapa em até 1024 px, **sem corte** (só redimensionado; as coordenadas dos callouts são frações da imagem inteira), sem perdas (cores chapadas: ~4 KB cada).
+- `public/media/abilities/<hash>.webp` (até 256 px) e `public/media/weapons/<hash>.webp` (até 512 px de largura). O nome é um hash curto da URL de origem, para o endereço do ícone não entregar o agente no jogo Habilidade.
+- `src/data/game/game-media.json`: o manifesto, por tipo, indexado pela URL de origem, com `file`, `label` (mapa, "Agente Slot" ou arma), `width` e `height`. Só entra o que existe em disco; arquivos nossos que nenhuma entrada usa são apagados. No fim o script imprime um resumo (locais/total, baixados, do cache, falhas agrupadas) e os caminhos a commitar: `public/media/minimaps public/media/abilities public/media/weapons src/data/game/game-media.json`.
+
+O jogo usa o arquivo local quando o manifesto o lista e cai na URL remota quando não lista ou quando o arquivo falha (`src/data/gameMedia.ts`; ganchos em `src/ui/screens/valdle/media.ts`). O service worker não pré-carrega essas imagens: elas vão para o cache de mídia (`rtc-media-v1`) quando usadas. No build de preview do claude.ai (`VITE_INLINE_PLACES=1`) entram como data URLs menores (minimapas 512 px, habilidades 96 px, armas 240 px), um chunk preguiçoso por tipo (`scripts/places-inline-plugin.mjs`), e as pastas saem do `dist/`.
+
+Conferência do enquadramento (2026-10-20): o `media.valorant-api.com` estava bloqueado no ambiente de geração, então o caminho do minimapa foi testado com um substituto, o arquivo "Ascent Top Down View.png" da Liquipedia (1024×1024, baixado só para o teste e nunca commitado). Os 22 callouts do Ascent, projetados com `xMultiplier`/`yMultiplier`/`xScalarToAdd`/`yScalarToAdd`, caíram todos no piso do mapa e nos lugares certos (A Site e B Site sobre as áreas de plant), o que indica o mesmo enquadramento do `displayIcon`. `game.test.ts` confere o manifesto (entrada = imagem do snapshot, arquivo existe, minimapa quadrado e com o uuid do mapa, ícones com nome de hash).
+
 ## Fonte e licença
 
 - Fonte: [valorant-api.com](https://valorant-api.com), uma API **comunitária e não oficial**, gratuita e sem chave. Não é afiliada à Riot Games.
 - Os nomes, textos e imagens são da Riot Games. Usamos esse material sob a política de conteúdo de fãs da Riot ("Legal Jibber Jabber"), em um projeto gratuito e com aviso de não afiliação.
-- As imagens de habilidades, os minimapas e as silhuetas de armas **não são copiadas** para o repositório: guardamos só as URLs servidas por `media.valorant-api.com`, que o navegador carrega (o Valdle funciona sem elas: pistas de texto e o esquema dos callouts). Em 2026-10-20 o host `media.valorant-api.com` estava bloqueado no ambiente de geração, então não houve como copiá-las. Os ícones de agentes e as imagens de mapa que o jogo mostra ficam locais (seção "Mídia" abaixo); a URL do valorant-api.com continua no JSON como reserva.
+- As imagens de habilidades, os minimapas e as silhuetas de armas vêm de `media.valorant-api.com`. O passo opcional `npm run data:game-media` (acima) as copia para `public/media/` e o jogo passa a usar as cópias; sem elas, o navegador carrega as URLs do JSON (e o Valdle funciona mesmo sem nenhuma: pistas de texto e o esquema dos callouts). Em 2026-10-20 o host estava bloqueado no ambiente de geração, então as cópias ainda dependem de alguém rodar o passo numa máquina com acesso. Os ícones de agentes e as imagens de mapa que o jogo mostra ficam locais (seção "Mídia" abaixo); a URL do valorant-api.com continua no JSON como reserva.
 
 # Stats de eventos do VCT (VLR.gg)
 

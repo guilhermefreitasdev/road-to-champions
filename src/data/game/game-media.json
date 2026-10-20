@@ -1,0 +1,12 @@
+{
+  "source": {
+    "site": "valorant-api.com",
+    "host": "media.valorant-api.com",
+    "credit": "valorant-api.com (imagens da Riot Games)",
+    "note": "Cópias locais (WebP) das imagens que o Valdle mostrava direto da CDN; cada entrada guarda a URL de origem. Sem entrada, o jogo usa a URL remota.",
+    "generator": "scripts/fetch-game-data.mjs --media"
+  },
+  "minimaps": {},
+  "abilities": {},
+  "weapons": {}
+}

@@ -9,7 +9,7 @@
  * - rtc-shell-<version>: the app shell and every built asset of this version (precached on install). Hashed
  *   assets are cache-first; the page itself (navigations) is network-first, falling back to the cached shell
  *   offline or after NAV_TIMEOUT_MS without an answer.
- * - rtc-media-v1: maps, agents, team logos and player photos (public/media/), cached on demand,
+ * - rtc-media-v1: maps, agents, team logos, player photos and the Valdle's minimaps and icons (public/media/), cached on demand,
  *   stale-while-revalidate, trimmed to MEDIA_MAX entries.
  * - rtc-fonts-v1: the Google Fonts stylesheet and font files, stale-while-revalidate.
  *

@@ -10779,7 +10779,67 @@ button.vd-bonus-option.wrong {
   }
 }
 
-/* Mapa: the screenshot, then "Onde é?" on the unlabeled schema */
+/* Callout and "Onde é?" on the real minimap (CalloutBoard.tsx): the image is the map; the areas are invisible
+   Voronoi cells clipped to its walkable part (SVG mask), drawn only when hovered, picked, missed or revealed. */
+
+.vd-mm-stage {
+  background:
+    radial-gradient(circle at 50% 45%, rgba(62, 201, 167, 0.06), transparent 65%),
+    #0b131b;
+}
+
+.vd-mm-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1;
+  padding: var(--sp-3);
+  text-align: center;
+}
+
+.vd-mm-area path {
+  pointer-events: none;
+}
+
+.vd-mm-area.answer path {
+  fill: var(--accent);
+  fill-opacity: 0.5;
+}
+
+.vd-mm-area.selected path {
+  fill: var(--accent);
+  fill-opacity: 0.32;
+}
+
+.vd-mm-area.hover path {
+  fill: #ffffff;
+  fill-opacity: 0.16;
+}
+
+.vd-mm-area.missed path {
+  fill: #05080c;
+  fill-opacity: 0.35;
+}
+
+.vd-mm-miss {
+  fill: none;
+  stroke: var(--loss-text);
+  stroke-width: 5;
+  stroke-linecap: round;
+  pointer-events: none;
+}
+
+.vd-mm-hit {
+  fill: transparent;
+  pointer-events: all;
+  cursor: pointer;
+}
+
+.vd-mm-hit:focus {
+  outline: none;
+}
+
+/* Mapa: the screenshot, then "Onde é?" on the unlabeled minimap (or schema) */
 
 .vd-mapa-board {
   display: grid;

@@ -1,8 +1,9 @@
 // Vite plugin for the PWA (used by vite.config.ts). Plain JS so the app's tsconfig needs no Node types.
 //
 // Emits dist/sw.js from the template src/pwa/sw.js with this build's precache list (every emitted chunk and asset,
-// the shell, and the manifest/icons from public/; not public/media, which the worker caches on demand, nor the
-// inlined Mapa screenshots of a VITE_INLINE_PLACES build, a multi-megabyte chunk only that game loads) and a version
+// the shell, and the manifest/icons from public/; not public/media (minimaps and Valdle icons included), which the
+// worker caches on demand, nor the inlined images of a VITE_INLINE_PLACES build: the Mapa screenshots, a
+// multi-megabyte chunk only that game loads, and the game media chunks of src/data/gameMedia.ts) and a version
 // hash of that list. Skipped in the claude.ai preview build (VITE_INLINE_PLAYER_PHOTOS=1), whose sandbox does not
 // allow service workers; that build also drops the manifest link. Registration: src/ui/sw-register.ts.
 import { createHash } from 'node:crypto';
@@ -12,8 +13,9 @@ import { fileURLToPath } from 'node:url';
 
 const template = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../src/pwa/sw.js');
 
-/** The chunk of the inlined Mapa screenshots (scripts/places-inline-plugin.mjs): never precached. */
-const isPlacesChunk = (out) => out.type === 'chunk' && out.moduleIds.some((id) => id.includes('virtual:rtc-places-inline'));
+/** The chunks of inlined images (scripts/places-inline-plugin.mjs: Mapa screenshots, game media): never precached. */
+const INLINE_IDS = ['virtual:rtc-places-inline', 'virtual:rtc-game-media-inline/'];
+const isPlacesChunk = (out) => out.type === 'chunk' && out.moduleIds.some((id) => INLINE_IDS.some((v) => id.includes(v)));
 
 /** @param {boolean} inline @returns {import('vite').Plugin} */
 export function pwa(inline) {

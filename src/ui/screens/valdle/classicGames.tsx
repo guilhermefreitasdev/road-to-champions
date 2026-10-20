@@ -16,7 +16,6 @@ import {
   type ClassicWeapon,
 } from '../../../game/valdle/classic';
 import { compareAll } from '../../../game/valdle/feedback';
-import { centroid, voronoiCells } from '../../../game/valdle/geometry';
 import { VALDLE_GAMES } from '../../../game/valdle/games';
 import {
   MAPA_SPOT_TRIES,
@@ -36,6 +35,8 @@ import { AgentIcon, mapLabel } from '../../components/GameImage';
 import { countryName } from '../../components/CountryChip';
 import { Icon } from '../../components/Icon';
 import { AttrCell, AttrRow, GiveUp, MarkLegend, MissList, OptionSearch, TryCounter, type Option } from './parts';
+import { CalloutBoard } from './CalloutBoard';
+import { useGameMedia } from './media';
 
 export interface GameProps<G extends 'agente' | 'habilidade' | 'mapa' | 'callout' | 'arma'> {
   puzzle: ValdlePuzzle<G>;
@@ -176,9 +177,10 @@ function maskNames(text: string, names: readonly string[]): string {
 export function HabilidadeGame(props: GameProps<'habilidade'>) {
   const { puzzle, progress, done, data } = props;
   const { note, play } = useGuess(props);
-  const [imgFailed, setImgFailed] = useState(false);
   const agent = data.agentById.get(puzzle.agent)!;
   const ability = agent.abilities.find((a) => a.slot === puzzle.slot)!;
+  const icon = useGameMedia('abilities', ability.icon);
+  const imgFailed = !ability.icon || icon.failed;
   const options = useMemo(() => agentOptions(data), [data]);
   const miss = misses(puzzle, progress);
   const max = VALDLE_GAMES.habilidade.maxTries;
@@ -196,19 +198,19 @@ export function HabilidadeGame(props: GameProps<'habilidade'>) {
     <div className="vd-game">
       <p className="daily-rule">De qual agente é esta habilidade? A imagem fica mais nítida e as pistas abrem a cada erro. No fim, um bônus: qual habilidade é.</p>
       <div className="vd-ability-stage" aria-label={done ? `Ícone de ${ability.name}` : 'Ícone da habilidade (borrado)'} role="img">
-        {ability.icon && !imgFailed ? (
+        {icon.src ? (
           <img
-            src={ability.icon}
+            src={icon.src}
             alt=""
             width={128}
             height={128}
             decoding="async"
             style={{ filter: `blur(${blur}px)`, transform: `rotate(${rotation}deg)` }}
-            onError={() => setImgFailed(true)}
+            onError={icon.onError}
           />
-        ) : (
+        ) : imgFailed ? (
           <span className="vd-ability-missing small muted">Imagem indisponível agora: jogue pelas pistas.</span>
-        )}
+        ) : null}
       </div>
       <ol className="daily-clues vd-clues">
         {clues.map((c) => {
@@ -336,7 +338,7 @@ export function MapaGame(props: GameProps<'mapa'>) {
   return (
     <div className="vd-game">
       <p className="daily-rule">
-        Que mapa é este? A imagem começa bem ampliada e se afasta a cada erro. Depois, no <strong>Onde é?</strong>, marque no esquema do mapa o lugar que ela
+        Que mapa é este? A imagem começa bem ampliada e se afasta a cada erro. Depois, no <strong>Onde é?</strong>, marque no minimapa o lugar que ela
         mostra.
       </p>
       {stepOne && <MissList items={progress.guesses.map((id) => ({ id, label: mapLabel(id), hit: id === puzzle.map }))} />}
@@ -399,7 +401,7 @@ export function MapaGame(props: GameProps<'mapa'>) {
             )
           </>
         )}
-        . Esquema e callouts: valorant-api.com (minimapa da Riot Games quando carrega).
+        . Minimapa e callouts: valorant-api.com (Riot Games).
       </p>
     </div>
   );
@@ -436,9 +438,9 @@ function step(map: ClassicMap, from: ClassicCallout, dir: { x: number; y: number
 const regionName = (c: ClassicCallout) => (['A', 'B', 'C'].includes(c.superRegionEn) ? `região ${c.superRegion}` : c.superRegion.replace(/^no /, '').toLowerCase());
 
 /**
- * Step 2 of Mapa: the unlabeled schema of the map (Voronoi cells, as in the Callout game). Tap or click a cell, or
- * move with the arrow keys, then confirm. Misses say only "mesma região/outra região" and "perto/longe"; no cell is
- * ever named except the answer, and only at the end.
+ * Step 2 of Mapa: the real minimap with no name on it (CalloutBoard: invisible areas clipped to the walkable part; the
+ * schema of Voronoi cells as the fallback). Tap or click an area, or move with the arrow keys, then confirm. Misses say
+ * only "mesma região/outra região" and "perto/longe"; no area is ever named except the answer, and only at the end.
  */
 function WherePicker({
   puzzle,
@@ -455,17 +457,12 @@ function WherePicker({
   done: boolean;
   onMove: (fn: (p: ValdleProgress) => ValdleProgress) => void;
 }) {
-  const cells = useMemo(() => voronoiCells(map.callouts), [map]);
   const numbers = useMemo(() => areaNumbers(map), [map]);
-  const [minimapOk, setMinimapOk] = useState(true);
   const [selected, setSelected] = useState<string | null>(null);
   const [note, setNote] = useState<string | null>(null);
   const spots = progress.spots ?? [];
   const byId = useMemo(() => new Map(map.callouts.map((c) => [c.id, c])), [map]);
   const sel = selected ? byId.get(selected) : undefined;
-  const S = 1000;
-  const path = (poly: readonly { x: number; y: number }[]) => `M${poly.map((p) => `${(p.x * S).toFixed(1)},${(p.y * S).toFixed(1)}`).join('L')}Z`;
-  const supers = [...new Set(map.callouts.map((c) => c.superRegionEn))].filter((s) => SUPER_CLASS[s]);
   const found = spots.includes(answer.id);
 
   const choose = (id: string) => {
@@ -496,8 +493,6 @@ function WherePicker({
       confirm();
     }
   };
-  const selCell = sel ? cells[map.callouts.indexOf(sel)] : undefined;
-  const selCenter = selCell ? centroid(selCell) : null;
   return (
     <section className="vd-where" aria-labelledby="vd-where-title">
       <h3 id="vd-where-title" className="vd-where-title">
@@ -507,57 +502,22 @@ function WherePicker({
         {done
           ? found
             ? 'Achou o lugar.'
-            : 'O lugar está destacado no esquema.'
-          : `Toque na área do esquema onde a imagem foi tirada e confirme (ou use as setas e Enter). ${MAPA_SPOT_TRIES} tentativas; cada erro diz se é a mesma região e se está perto.`}
+            : 'O lugar está destacado no mapa.'
+          : `Toque na parte do mapa onde a imagem foi tirada e confirme (ou use as setas e Enter). ${MAPA_SPOT_TRIES} tentativas; cada erro diz se é a mesma região e se está perto.`}
       </p>
-      <div className="vd-callout-stage vd-where-stage">
-        <svg
-          viewBox={`0 0 ${S} ${S}`}
-          role="group"
-          aria-label={done ? `Esquema de ${map.name}` : `Esquema de ${map.name}: setas escolhem uma área, Enter marca`}
-          tabIndex={done ? undefined : 0}
-          onKeyDown={onKeyDown}
-          className={done ? undefined : 'vd-where-live'}
-        >
-          {minimapOk && <image href={map.minimap} x={0} y={0} width={S} height={S} opacity={0.5} onError={() => setMinimapOk(false)} />}
-          {map.callouts.map((c, i) => {
-            const isAnswer = done && c.id === answer.id;
-            const missed = spots.includes(c.id) && c.id !== answer.id;
-            const cls = `vd-cc ${SUPER_CLASS[c.superRegionEn] ?? 'spawn'}${isAnswer ? ' answer' : ''}${missed ? ' missed' : ''}${c.id === selected && !done ? ' selected' : ''}`;
-            return <path key={c.id} d={path(cells[i]!)} className={cls} onClick={() => choose(c.id)} />;
-          })}
-          {supers.map((s) => {
-            const pts = map.callouts.filter((c) => c.superRegionEn === s);
-            const cx = pts.reduce((t, c) => t + c.x, 0) / pts.length;
-            const cy = pts.reduce((t, c) => t + c.y, 0) / pts.length;
-            return (
-              <text key={s} x={cx * S} y={cy * S} className="vd-cc-super" textAnchor="middle" dominantBaseline="middle">
-                {s === 'Mid' ? 'MEIO' : s}
-              </text>
-            );
-          })}
-          {selCell && !done && <path d={path(selCell)} className="vd-where-outline" />}
-          {selCenter && !done && (
-            <text x={selCenter.x * S} y={selCenter.y * S} className="vd-where-n" textAnchor="middle" dominantBaseline="middle">
-              {numbers.get(selected!)}
-            </text>
-          )}
-          {/* Only the answer is ever named, and only at the end: naming other cells would teach the map. */}
-          {done && (
-            <g className="vd-cc-label answer">
-              <circle cx={answer.x * S} cy={answer.y * S} r={16} className="vd-cc-pin" />
-              <text
-                x={Math.min(0.86, Math.max(0.14, answer.x)) * S}
-                y={Math.min(0.96, Math.max(0.04, answer.y + 0.044)) * S}
-                textAnchor="middle"
-                dominantBaseline="middle"
-              >
-                {calloutLabel(answer)}
-              </text>
-            </g>
-          )}
-        </svg>
-      </div>
+      <CalloutBoard
+        className="vd-where-stage"
+        map={map}
+        answer={answer}
+        showAnswer={done}
+        labelAnswer={done}
+        selected={done ? null : selected}
+        missed={spots.filter((id) => id !== answer.id)}
+        numbers={numbers}
+        onChoose={done ? undefined : choose}
+        onKeyDown={done ? undefined : onKeyDown}
+        ariaLabel={done ? `Mapa de ${map.name}` : `Mapa de ${map.name}: setas escolhem uma área, Enter marca`}
+      />
       <p className="sr-only" aria-live="polite">
         {sel && !done ? `Área ${numbers.get(sel.id)} de ${map.callouts.length}, ${regionName(sel)}.` : ''}
       </p>
@@ -602,8 +562,6 @@ function WherePicker({
 
 // --- Callout ---------------------------------------------------------------------------------------------------------
 
-const SUPER_CLASS: Record<string, string> = { A: 'a', B: 'b', C: 'c', Mid: 'mid' };
-
 export function CalloutGame(props: GameProps<'callout'>) {
   const { puzzle, progress, done, data } = props;
   const { note, play } = useGuess(props);
@@ -613,57 +571,17 @@ export function CalloutGame(props: GameProps<'callout'>) {
     () => map.callouts.map((c) => ({ id: c.id, label: calloutLabel(c), aliases: [calloutLabelEn(c), c.regionEn, c.region], sub: calloutLabelEn(c) })),
     [map],
   );
-  const cells = useMemo(() => voronoiCells(map.callouts), [map]);
-  const [minimapOk, setMinimapOk] = useState(true);
   const max = VALDLE_GAMES.callout.maxTries;
   const result = resultOf(puzzle, progress);
-  const S = 1000;
-  const path = (poly: readonly { x: number; y: number }[]) => `M${poly.map((p) => `${(p.x * S).toFixed(1)},${(p.y * S).toFixed(1)}`).join('L')}Z`;
-  const supers = [...new Set(map.callouts.map((c) => c.superRegionEn))].filter((s) => SUPER_CLASS[s]);
   const guessed = new Set(progress.guesses);
   return (
     <div className="vd-game">
       <p className="daily-rule">
-        Em <strong>{map.name}</strong>: qual é o callout destacado? Cada área do esquema é a parte do mapa mais perto de um callout. Vale o nome em português
-        ou em inglês.
+        Em <strong>{map.name}</strong>: qual é o callout destacado no minimapa? Vale o nome em português ou em inglês.
       </p>
-      <div className="vd-callout-stage">
-        <svg viewBox={`0 0 ${S} ${S}`} role="img" aria-label={`Esquema de ${map.name} com um callout destacado`}>
-          {minimapOk && (
-            <image href={map.minimap} x={0} y={0} width={S} height={S} opacity={0.5} onError={() => setMinimapOk(false)} />
-          )}
-          {map.callouts.map((c, i) => {
-            const isAnswer = c.id === answer.id;
-            const cls = `vd-cc ${SUPER_CLASS[c.superRegionEn] ?? 'spawn'}${isAnswer ? ' answer' : ''}`;
-            return <path key={c.id} d={path(cells[i]!)} className={cls} />;
-          })}
-          {supers.map((s) => {
-            const pts = map.callouts.filter((c) => c.superRegionEn === s);
-            const cx = pts.reduce((t, c) => t + c.x, 0) / pts.length;
-            const cy = pts.reduce((t, c) => t + c.y, 0) / pts.length;
-            return (
-              <text key={s} x={cx * S} y={cy * S} className="vd-cc-super" textAnchor="middle" dominantBaseline="middle">
-                {s === 'Mid' ? 'MEIO' : s}
-              </text>
-            );
-          })}
-          {/* Only the asked callout is ever named or pinned: labelling the other cells (or the wrong guesses) would teach
-              the map and give away later puzzles on the same map. */}
-          <g className="vd-cc-label answer">
-            <circle cx={answer.x * S} cy={answer.y * S} r={16} className="vd-cc-pin" />
-            {done && (
-              <text
-                x={Math.min(0.86, Math.max(0.14, answer.x)) * S}
-                y={Math.min(0.96, Math.max(0.04, answer.y + 0.044)) * S}
-                textAnchor="middle"
-                dominantBaseline="middle"
-              >
-                {calloutLabel(answer)}
-              </text>
-            )}
-          </g>
-        </svg>
-      </div>
+      {/* Only the asked callout is ever highlighted or pinned, and named only at the end: marking the other areas (or the
+          wrong guesses) would teach the map and give away later puzzles on the same map. */}
+      <CalloutBoard map={map} answer={answer} showAnswer labelAnswer={done} ariaLabel={`Mapa de ${map.name} com um callout destacado`} />
       <MissList
         items={progress.guesses.map((id) => {
           const c = map.callouts.find((x) => x.id === id);
@@ -705,7 +623,10 @@ export function CalloutGame(props: GameProps<'callout'>) {
           </span>
         </Reveal>
       )}
-      <p className="small muted vd-source">Callouts e posições: valorant-api.com (minimapa da Riot Games quando carrega; o esquema sai só dos pontos da API).</p>
+      <p className="small muted vd-source">
+        Minimapa, callouts e posições: valorant-api.com (Riot Games). Sem o minimapa, o jogo mostra um esquema: a área de cada callout é a parte do mapa mais
+        perto do seu ponto.
+      </p>
     </div>
   );
 }
@@ -737,7 +658,7 @@ export function ArmaGame(props: GameProps<'arma'>) {
   const answer = data.weaponById.get(puzzle.answer)!;
   const options = useMemo(() => data.weapons.map((w) => ({ id: w.id, label: w.name, sub: WEAPON_CATEGORY_LABELS[w.category] })), [data]);
   const max = VALDLE_GAMES.arma.maxTries;
-  const [iconOk, setIconOk] = useState(true);
+  const icon = useGameMedia('weapons', answer.icon);
   return (
     <div className="vd-game">
       <p className="daily-rule">Qual é a arma? Cada palpite compara categoria, preço, dano na cabeça (primeira faixa de distância), cadência, pente, penetração e modo de tiro.</p>
@@ -772,7 +693,7 @@ export function ArmaGame(props: GameProps<'arma'>) {
       )}
       {done && (
         <Reveal won={resultOf(puzzle, progress).won} kicker="A arma era">
-          {iconOk && <img className="vd-weapon-icon" src={answer.icon} alt="" width={200} height={60} decoding="async" onError={() => setIconOk(false)} />}
+          {icon.src && <img className="vd-weapon-icon" src={icon.src} alt="" width={200} height={60} decoding="async" onError={icon.onError} />}
           <span>
             <span className="daily-reveal-name">{answer.name}</span>
             <span className="small muted">

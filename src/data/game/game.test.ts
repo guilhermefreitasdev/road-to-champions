@@ -1,11 +1,18 @@
 import { describe, expect, it } from 'vitest';
 import { SAMPLE_MAP_POOL } from '../mapPools';
+import gameMediaJson from './game-media.json';
 import { AGENTS, MAPS, agentByName, calloutToMinimap, mapByName } from './index';
+import weaponsJson from './weapons.json';
 
 const ROLES = ['duelist', 'initiator', 'controller', 'sentinel'];
 const CORE_SLOTS = ['Grenade', 'Ability1', 'Ability2', 'Ultimate'];
 const NON_COMPETITIVE = ['The Range', 'Basic Training', 'Gauntlet', 'District', 'Kasbah', 'Drift', 'Glitch', 'Piazza'];
 const EPS = 0.02;
+
+// Node built-ins without @types/node (tsconfig types are vite/client only): vitest runs on Node >= 22.
+const proc = (globalThis as { process?: { getBuiltinModule(id: string): unknown; cwd(): string } }).process!;
+const fs = proc.getBuiltinModule('node:fs') as { existsSync(p: string): boolean };
+const PUBLIC = `${proc.cwd()}/public`;
 
 describe('agents snapshot', () => {
   it('has a reasonable number of agents with unique names and uuids', () => {
@@ -90,6 +97,38 @@ describe('maps snapshot', () => {
       const ys = pts.map((p) => p.y);
       expect(Math.max(...xs) - Math.min(...xs)).toBeGreaterThan(0.4);
       expect(Math.max(...ys) - Math.min(...ys)).toBeGreaterThan(0.4);
+    }
+  });
+});
+
+describe('local game media (game-media.json, npm run data:game-media)', () => {
+  const kinds = ['minimaps', 'abilities', 'weapons'] as const;
+  const sources: Record<(typeof kinds)[number], Set<string>> = {
+    minimaps: new Set(MAPS.map((m) => m.displayIcon)),
+    abilities: new Set(AGENTS.flatMap((a) => a.abilities.flatMap((ab) => (ab.displayIcon ? [ab.displayIcon] : [])))),
+    weapons: new Set((weaponsJson as { displayIcon: string }[]).map((w) => w.displayIcon)),
+  };
+  const manifest = gameMediaJson as unknown as Record<(typeof kinds)[number], Record<string, { file: string; width: number; height: number }>>;
+
+  it.each(kinds)('%s: every entry is a snapshot image with a WebP under public/media/<kind>/', (kind) => {
+    for (const [url, entry] of Object.entries(manifest[kind])) {
+      expect(sources[kind].has(url), url).toBe(true);
+      expect(entry.file).toMatch(new RegExp(`^media/${kind}/[0-9a-f-]+\\.webp$`));
+      expect(fs.existsSync(`${PUBLIC}/${entry.file}`), entry.file).toBe(true);
+    }
+  });
+
+  it('minimaps keep the square framing of the callout coordinates', () => {
+    for (const [url, entry] of Object.entries(manifest.minimaps)) {
+      const map = MAPS.find((m) => m.displayIcon === url)!;
+      expect(entry.file).toBe(`media/minimaps/${map.uuid}.webp`);
+      expect(entry.width).toBe(entry.height);
+    }
+  });
+
+  it('ability and weapon files never name what they show', () => {
+    for (const kind of ['abilities', 'weapons'] as const) {
+      for (const entry of Object.values(manifest[kind])) expect(entry.file).toMatch(/\/[0-9a-f]{12}\.webp$/);
     }
   });
 });
