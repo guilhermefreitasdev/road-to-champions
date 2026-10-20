@@ -89,6 +89,7 @@ import {
   userOpponent,
   userWon,
   withFamiliarity,
+  withoutUserSuffix,
   type BracketCell as RunBracketCell,
   type GroupView,
   type MapFamiliarity,
@@ -454,12 +455,7 @@ function championsFieldIds(s: SeasonState): string[] {
   const regionOfId = (id: string) => regionOf(rosterByKey(id));
   const entries: { id: string }[] = [];
 
-  const homeIds = league.entrants
-    .map((e) => ({ id: e.id, rank: leaguePlaceOf(league, e.id)?.rank ?? 99, seed: e.seed }))
-    .sort((x, y) => x.rank - y.rank || x.seed - y.seed)
-    .slice(0, CHAMPIONS_PER_REGION)
-    .map((e) => e.id);
-  for (const id of homeIds) entries.push({ id });
+  for (const id of homeChampionsIds(league)) entries.push({ id });
 
   for (const region of REGIONS) {
     if (region === s.region) continue;
@@ -471,6 +467,30 @@ function championsFieldIds(s: SeasonState): string[] {
   }
   if (entries.length !== TEAM_COUNT) throw new Error(`Champions field has ${entries.length} teams, needs ${TEAM_COUNT}`);
   return entries.map((e) => e.id);
+}
+
+/** The user's region at the Champions: the league's top 4 (known once the league ends). */
+function homeChampionsIds(league: LeagueState): string[] {
+  return league.entrants
+    .map((e) => ({ id: e.id, rank: leaguePlaceOf(league, e.id)?.rank ?? 99, seed: e.seed }))
+    .sort((x, y) => x.rank - y.rank || x.seed - y.seed)
+    .slice(0, CHAMPIONS_PER_REGION)
+    .map((e) => e.id);
+}
+
+/**
+ * Every AI entrant the user can still face after a market window: the next stage's field, and after the league also
+ * the Champions (the league's top 4, plus every team another region could send: its Masters teams are in the next
+ * field and its draws come from its field candidates).
+ */
+function stillToFace(s: SeasonState, window: MarketWindow, nextField: readonly string[]): string[] {
+  const ids = new Set(nextField);
+  if (window === 'post-league') {
+    for (const id of homeChampionsIds(s.league!)) ids.add(id);
+    for (const region of REGIONS) if (region !== s.region) for (const e of fieldCandidates(region, s.field)) ids.add(rosterKey(e));
+  }
+  ids.delete(USER_ID);
+  return [...ids];
 }
 
 /** Builds the Champions from its entrant ids (fixed when the market window opened), seeded by strength. */
@@ -508,13 +528,13 @@ function regionQuantiles(region: Region): { p50: number; p90: number } {
 
 /**
  * The window's offers, deterministic from the seed: cards of the user's region (every era, like the draft), one per
- * player, never a player of the user's lineup or of the next stage's field. Tier quotas MARKET_TIERS; one value
- * slot goes to an IGL when the draw has one. Most expensive first.
+ * player, never a player of the user's lineup or of a team the user can still face this season (stillToFace). Tier
+ * quotas MARKET_TIERS; one value slot goes to an IGL when the draw has one. Most expensive first.
  */
 function drawOffers(s: SeasonState, window: MarketWindow, nextField: readonly string[]): string[] {
   const pool = seasonPool(s);
   const banned = new Set(userPlayers(s));
-  for (const id of nextField) if (id !== USER_ID) for (const c of rosterByKey(id).cards) banned.add(c.playerId);
+  for (const id of stillToFace(s, window, nextField)) for (const c of rosterByKey(id).cards) banned.add(c.playerId);
   const { p50, p90 } = regionQuantiles(s.region!);
   const tierOf = (c: Card): keyof typeof MARKET_TIERS => (c.ovr >= p90 ? 'star' : c.ovr >= p50 ? 'mid' : 'value');
   const quota: Record<keyof typeof MARKET_TIERS, number> = { ...MARKET_TIERS };
@@ -819,7 +839,7 @@ export function lineupOf(s: SeasonState, id: string): Lineup {
 
 /** The user's lineup as the Team screen shows it (same cards and form as lineupOf, without the id suffix). */
 export function userLineup(s: SeasonState): Lineup {
-  return applyTournamentForm(seasonLineup(s), stageFormSeed(s, formStage(s)), prodigyGrowth(userStagesReached(s)));
+  return withoutUserSuffix(lineupOf(s, USER_ID));
 }
 
 /** Seed base of a stage's tournament form (applyTournamentForm). */
@@ -843,10 +863,18 @@ export function formStage(s: SeasonState): CompStage {
  * 3 Champions, 4 Champions playoffs.
  */
 export function userStagesReached(s: SeasonState): number {
-  if (s.stage === 'market') return s.market?.window === 'post-masters' ? 3 : 2;
-  if (s.champions) return s.champions.matches.some((m) => involvesUser(m) && m.stage === 'playoffs') ? 4 : 3;
-  if (s.masters) return 2;
-  return s.league?.matches.some((m) => involvesUser(m) && m.stage === 'playoffs') ? 1 : 0;
+  return userStagesReachedIn(s, formStage(s));
+}
+
+/**
+ * Stages reached by the end of `stage` (or so far, for the stage being played): what the user's prodigies grew to
+ * while playing it. League 0–1 (its playoffs), Masters 2, Champions 3–4 (its playoffs).
+ */
+export function userStagesReachedIn(s: SeasonState, stage: CompStage): number {
+  const playoffs = (matches: readonly SeasonMatch[] | undefined) => !!matches?.some((m) => involvesUser(m) && m.stage === 'playoffs');
+  if (stage === 'champions') return playoffs(s.champions?.matches) ? 4 : 3;
+  if (stage === 'masters') return 2;
+  return playoffs(s.league?.matches) ? 1 : 0;
 }
 
 function userPlayers(s: SeasonState): Set<string> {

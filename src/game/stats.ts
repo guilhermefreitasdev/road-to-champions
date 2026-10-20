@@ -15,7 +15,7 @@ import {
   lineupOf as seasonLineupOf,
   seasonTeamInfo,
   stageFormSeed,
-  userStagesReached as seasonStagesReached,
+  userStagesReachedIn as seasonStagesReachedIn,
   type CompStage,
   type SeasonState,
 } from './season';
@@ -348,7 +348,8 @@ export function runAllPlayerStats(run: RunState): StatRow[] {
 
 function seasonContext(s: SeasonState, stage: CompStage): RowContext {
   const lineups = new Map<string, readonly { card: Card }[]>();
-  const growth = prodigyGrowth(seasonStagesReached(s));
+  // The prodigies' growth as they played this stage (by its end, or so far for the current one), not today's.
+  const growth = prodigyGrowth(seasonStagesReachedIn(s, stage));
   const current = formStage(s) === stage;
   return {
     teamName: (id) => seasonTeamInfo(s, id).name,

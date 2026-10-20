@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { SLOTS, openSlots } from '../engine/draft';
 import { roleFit, teamStrength } from '../engine/team';
+import { rosterKey } from '../engine/roster';
 import { PLAYOFF_BRACKET } from '../engine/tournament';
 import { isVetoComplete, nextTurn, remainingMaps } from '../engine/veto';
 import {
@@ -56,6 +57,7 @@ import {
   userFinish,
   userPendingMatch,
   userGroup,
+  userLineup,
   userRecord,
   vetoScouting,
   type DraftMode,
@@ -489,5 +491,39 @@ describe('share text', () => {
   it('writes series results as plain letters, no emoji', () => {
     expect(resultLetters([true, false, true])).toBe('V D V');
     expect(resultLetters([])).toBe('');
+  });
+});
+
+describe('the Team screen shows the lineup as it plays', () => {
+  it('userLineup has the same cards, form and strength as lineupOf(user) and the hub, for many seeds', () => {
+    for (let i = 0; i < 12; i++) {
+      const drafted = autoDraft(createRun(i % 2 ? 'ultimate' : 'classic', `team-form-${i}`));
+      const started = startTournament(drafted, 'Forma');
+      for (const r of [drafted, started]) {
+        const shown = userLineup(r).players.map((p) => [p.card.id, p.card.ovr, p.tournamentForm]);
+        const played = lineupOf(r, USER_ID).players.map((p) => [p.card.id.replace(/#user$/, ''), p.card.ovr, p.tournamentForm]);
+        expect(shown).toEqual(played);
+        expect(teamStrength(userLineup(r)).total).toBeCloseTo(teamStrength(lineupOf(r, USER_ID)).total, 9);
+      }
+      expect(teamStrength(userLineup(started)).total).toBeCloseTo(teamInfo(started, USER_ID).strength, 9);
+      expect(userLineup(started).players.every((p) => !p.card.id.includes('#'))).toBe(true);
+    }
+  });
+});
+
+describe('the field avoids the user’s players', () => {
+  it('the elite floor never brings a roster with one of the user’s drafted players (Lendário)', () => {
+    let checked = 0;
+    for (let i = 0; i < 300; i++) {
+      const r = autoDraft(createRun(i % 2 ? 'ultimate' : 'classic', `f5-${i}`, 'legend'));
+      const players = new Set(draftedLineup(r).players.map((p) => p.card.playerId));
+      const keys = pickField(r.seed, [...players], 'legend');
+      expect(keys).toHaveLength(OPPONENT_COUNT);
+      const clean = new Set(RUN_POOL.filter((e) => !e.cards.some((c) => players.has(c.playerId))).map((e) => e.teamId)).size;
+      if (clean < OPPONENT_COUNT) continue;
+      checked++;
+      for (const k of keys) expect(RUN_POOL.find((e) => rosterKey(e) === k)!.cards.some((c) => players.has(c.playerId))).toBe(false);
+    }
+    expect(checked).toBeGreaterThan(250);
   });
 });

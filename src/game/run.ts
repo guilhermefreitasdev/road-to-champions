@@ -224,6 +224,9 @@ export function pickField(seed: string, exclude: readonly string[], difficulty: 
   const { eliteMin: FIELD_ELITE_MIN, eliteCap: FIELD_ELITE_CAP } = DIFFICULTY_SETTINGS[difficulty];
   const order = pickOpponents(RUN_POOL, TEAM_TOTAL, seed, exclude);
   const isElite = order.map((e) => aiStrength(e) >= ELITE_FLOOR);
+  // pickOpponents puts last the teams whose every roster has one of the user's players (a last resort to fill 15).
+  const excluded = new Set(exclude);
+  const hasUserPlayer = order.map((e) => e.cards.some((c) => excluded.has(c.playerId)));
   const chosen = new Set<number>();
   let elite = 0;
   for (let i = 0; i < order.length && chosen.size < OPPONENT_COUNT; i++) {
@@ -233,9 +236,10 @@ export function pickField(seed: string, exclude: readonly string[], difficulty: 
     }
     chosen.add(i);
   }
-  // Floor: the next elite rosters in the draw order replace the last non-elite ones.
+  // Floor: the next elite rosters in the draw order replace the last non-elite ones (never a roster with one of the
+  // user's players: the floor yields before the user meets his own player).
   for (let i = 0; i < order.length && elite < FIELD_ELITE_MIN; i++) {
-    if (!isElite[i] || chosen.has(i)) continue;
+    if (!isElite[i] || chosen.has(i) || hasUserPlayer[i]) continue;
     const last = [...chosen].filter((j) => !isElite[j]).pop();
     if (last === undefined) break;
     chosen.delete(last);
@@ -374,9 +378,23 @@ export function lineupOf(run: RunState, id: string): Lineup {
   return applyTournamentForm(realLineup(rosterByKey(id)), formSeed);
 }
 
-/** The user's lineup as the Team screen shows it (same cards and form as lineupOf, without the id suffix). */
+/**
+ * The user's lineup as the Team screen shows it: exactly lineupOf(run, USER_ID) (same form draws, which are seeded by
+ * the suffixed card ids), with the '#user' suffix removed so the ids match the pool's cards.
+ */
 export function userLineup(run: RunState): Lineup {
-  return applyTournamentForm(draftedLineup(run), runFormSeed(run), prodigyGrowth(userStagesReached(run)));
+  return withoutUserSuffix(lineupOf(run, USER_ID));
+}
+
+/** Suffix of the user's card ids in the sim (lineupOf), so they never clash with an opponent's copy. */
+export const USER_CARD_SUFFIX = '#user';
+
+/** A user lineup from lineupOf with the pool's card ids back (the form stays as drawn for the suffixed ids). */
+export function withoutUserSuffix(lineup: Lineup): Lineup {
+  return {
+    ...lineup,
+    players: lineup.players.map((p) => (p.card.id.endsWith(USER_CARD_SUFFIX) ? { ...p, card: { ...p.card, id: p.card.id.slice(0, -USER_CARD_SUFFIX.length) } } : p)),
+  };
 }
 
 /** Seed base of the run's tournament form (applyTournamentForm). */

@@ -78,16 +78,17 @@ export function Leaderboard({ rows, cardOf, idPrefix, caption }: Props) {
   const [comparing, setComparing] = useState(false);
   const [picked, setPicked] = useState<string[]>([]);
 
+  // Keyed by entrant: two teams with the same name (the user can name his after an opponent) stay apart.
   const teams = useMemo(() => {
-    const seen = new Map<string, boolean>();
-    for (const r of rows) seen.set(r.teamName, r.isUser);
-    return [...seen.entries()].sort((a, b) => Number(b[1]) - Number(a[1]) || a[0].localeCompare(b[0], 'pt-BR')).map(([name, isUser]) => ({ name, isUser }));
+    const seen = new Map<string, { id: string; name: string; isUser: boolean }>();
+    for (const r of rows) seen.set(r.entrantId, { id: r.entrantId, name: r.teamName, isUser: r.isUser });
+    return [...seen.values()].sort((a, b) => Number(b.isUser) - Number(a.isUser) || a.name.localeCompare(b.name, 'pt-BR') || a.id.localeCompare(b.id));
   }, [rows]);
 
   const filtered = useMemo(() => {
     const q = fold(query.trim());
     return rows.filter(
-      (r) => r.maps >= minMaps && (!team || r.teamName === team) && (!role || r.role === role) && (!q || fold(r.handle).includes(q) || fold(r.teamName).includes(q)),
+      (r) => r.maps >= minMaps && (!team || r.entrantId === team) && (!role || r.role === role) && (!q || fold(r.handle).includes(q) || fold(r.teamName).includes(q)),
     );
   }, [rows, minMaps, team, role, query]);
 
@@ -153,7 +154,7 @@ export function Leaderboard({ rows, cardOf, idPrefix, caption }: Props) {
           <select value={team} onChange={(e) => setTeam(e.target.value)}>
             <option value="">Todos os times</option>
             {teams.map((t) => (
-              <option key={t.name} value={t.name}>
+              <option key={t.id} value={t.id}>
                 {t.name}
                 {t.isUser ? ' (você)' : ''}
               </option>

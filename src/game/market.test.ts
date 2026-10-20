@@ -2,7 +2,9 @@ import { describe, expect, it } from 'vitest';
 import { openSlots } from '../engine/draft';
 import { rosterKey } from '../engine/roster';
 import { cardFit } from '../engine/team';
-import type { Card, Region } from '../engine/types';
+import { REGIONS, type Card, type Region } from '../engine/types';
+import { leaguePlaceOf } from '../engine/league';
+import { ALL_ROSTERS } from '../data/real';
 import { isVetoComplete, remainingMaps } from '../engine/veto';
 import { explainPrice } from './explain';
 import {
@@ -17,7 +19,9 @@ import {
   chooseRegion,
   closeMarket,
   createSeason,
+  fieldCandidates,
   marketOffers,
+  seasonTeamInfo,
   parseSeason,
   pickSeasonCoach,
   pickSeasonPlayer,
@@ -176,5 +180,44 @@ describe('free agency', () => {
     expect(parseSeason(JSON.parse(JSON.stringify(s)))).toEqual(s);
     const after = closeMarket(s);
     expect(after.champions!.entrants.map((e) => e.id).sort()).toEqual([...s.market!.nextField].sort());
+  });
+});
+
+describe('offers never bring a player the user can still face', () => {
+  it('after the league: not from the Masters field, the league top 4 (Champions) or any other region’s candidates', () => {
+    const byKey = new Map(ALL_ROSTERS.map((e) => [rosterKey(e), e]));
+    let windows = 0;
+    for (let i = 0; i < 40 && windows < 12; i++) {
+      const region: Region = REGIONS[i % 4]!;
+      let s = startLeague(autoDraft(chooseRegion(createSeason(`face-${i}`, 'easy'), region)), 'Face');
+      while (s.stage === 'league') s = playOne(s);
+      if (s.stage !== 'market') continue;
+      windows++;
+      const faced = new Set<string>(s.market!.nextField);
+      for (const e of s.league!.entrants) if ((leaguePlaceOf(s.league!, e.id)?.rank ?? 99) <= 4) faced.add(e.id);
+      for (const r of REGIONS) if (r !== region) for (const e of fieldCandidates(r, s.field)) faced.add(rosterKey(e));
+      faced.delete(USER_ID);
+      const banned = new Set([...faced].flatMap((id) => byKey.get(id)!.cards.map((c) => c.playerId)));
+      for (const o of marketOffers(s)) expect(banned.has(o.card.playerId)).toBe(false);
+      // The Champions that follows never has a signed player on both sides.
+      let t = s;
+      const offer = marketOffers(t).find((o) => !signingPreview(t, o.card.id, seasonLineup(t).players[0]!.card.id).blocked);
+      if (offer) t = signFreeAgent(t, offer.card.id, seasonLineup(t).players[0]!.card.id);
+      t = closeMarket(t);
+      while (t.stage === 'masters') t = playOne(t);
+      if (t.stage !== 'market') continue;
+      t = closeMarket(t);
+      if (!offer) continue;
+      for (const e of t.champions!.entrants) {
+        if (e.id !== USER_ID) expect(byKey.get(e.id)!.cards.some((c) => c.playerId === offer.card.playerId)).toBe(false);
+      }
+    }
+    expect(windows).toBeGreaterThan(5);
+  });
+
+  it('previews the strength the hub shows (same tournament form as the matches)', () => {
+    const out = seasonLineup(market).players[0]!.card.id;
+    const pre = signingPreview(market, marketOffers(market)[0]!.card.id, out);
+    expect(pre.strengthBefore).toBeCloseTo(seasonTeamInfo(market, USER_ID).strength, 9);
   });
 });
