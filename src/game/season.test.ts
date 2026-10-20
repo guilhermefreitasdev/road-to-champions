@@ -2,6 +2,7 @@ import { describe, expect, it } from 'vitest';
 import { ALL_ROSTERS, REGIONAL_ROSTERS } from '../data/real';
 import { openSlots } from '../engine/draft';
 import { rosterKey } from '../engine/roster';
+import { teamStrength } from '../engine/team';
 import { REGIONS, type Region, type RosterEntry } from '../engine/types';
 import { isVetoComplete, remainingMaps } from '../engine/veto';
 import { seasonPlayerStats } from './stats';
@@ -48,9 +49,15 @@ import {
   startLeague,
   userPendingMatch,
   userSeasonResults,
+  closeMarket,
+  marketOffers,
+  signFreeAgent,
+  signingPreview,
+  userLineup,
   type FieldMode,
   type SeasonState,
 } from './season';
+import type { Difficulty } from './difficulty';
 
 /** The project has no Node types, hence the cast (as in balance.test.ts). */
 const env = (globalThis as { process?: { env: Record<string, string | undefined> } }).process?.env ?? {};
@@ -76,12 +83,41 @@ function playOne(s: SeasonState): SeasonState {
   return playUserMatch(r);
 }
 
-function fullSeason(seed: string, region: Region = 'americas', field: FieldMode = 'current', onStop?: (s: SeasonState) => void): SeasonState {
-  let s = startLeague(autoDraft(chooseRegion(createSeason(seed), region, field)), 'Time Teste');
+/**
+ * Greedy market policy: up to the window's limit, the affordable signing (offer × lineup card) with the biggest
+ * strength gain, while one gains anything.
+ */
+const teamStrengthNow = (s: SeasonState): number => teamStrength(userLineup(s)).total;
+
+function greedyMarket(s: SeasonState): SeasonState {
+  let r = s;
+  while (r.market!.signed.length < r.market!.maxSignings) {
+    let best: { card: string; out: string; gain: number } | null = null;
+    for (const offer of marketOffers(r)) {
+      for (const p of userLineup(r).players) {
+        const pre = signingPreview(r, offer.card.id, p.card.id);
+        const gain = pre.strengthAfter - pre.strengthBefore;
+        if (!pre.blocked && gain > 0 && (!best || gain > best.gain)) best = { card: offer.card.id, out: p.card.id, gain };
+      }
+    }
+    if (!best) break;
+    r = signFreeAgent(r, best.card, best.out);
+  }
+  return r;
+}
+
+function fullSeason(
+  seed: string,
+  region: Region = 'americas',
+  field: FieldMode = 'current',
+  onStop?: (s: SeasonState) => void,
+  opts: { difficulty?: Difficulty; market?: (s: SeasonState) => SeasonState } = {},
+): SeasonState {
+  let s = startLeague(autoDraft(chooseRegion(createSeason(seed, opts.difficulty ?? 'normal', field), region, field)), 'Time Teste');
   for (let guard = 0; s.stage !== 'done'; guard++) {
     if (guard > 60) throw new Error('Season did not finish');
     onStop?.(s);
-    s = playOne(s);
+    s = s.stage === 'market' ? closeMarket(opts.market ? opts.market(s) : s) : playOne(s);
   }
   return s;
 }
@@ -275,6 +311,42 @@ describe('a whole season', () => {
     }
   });
 
+  // TRIALS_MARKET=1 TRIALS_N=80 npx vitest run src/game/season -t market --silent=false: the market's effect.
+  it.skipIf(!env.TRIALS_MARKET)('reports the market: greedy signings vs none, per difficulty', () => {
+    const n = Number(env.TRIALS_N ?? 24);
+    const levels = (env.TRIALS_DIFF ?? 'normal').split(',') as Difficulty[];
+    for (const difficulty of levels) {
+      for (const policy of ['none', 'greedy'] as const) {
+        let masters = 0;
+        let top4 = 0;
+        let champPlayoffs = 0;
+        let titles = 0;
+        let gain = 0;
+        let signings = 0;
+        for (let i = 0; i < n; i++) {
+          let before = 0;
+          const market = policy === 'greedy'
+            ? (x: SeasonState) => {
+                before = teamStrengthNow(x);
+                const after = greedyMarket(x);
+                gain += teamStrengthNow(after) - before;
+                signings += after.market!.signed.length;
+                return after;
+              }
+            : undefined;
+          const s = fullSeason(`rate-${i}`, REGIONS[i % 4]!, 'current', undefined, { difficulty, ...(market ? { market } : {}) });
+          if (s.masters) masters++;
+          if ((stageOutcome(s, 'masters').rank ?? 9) <= 4) top4++;
+          if ((stageOutcome(s, 'champions').rank ?? 99) <= 8) champPlayoffs++;
+          if (s.champions?.champion === USER_ID) titles++;
+        }
+        const pct = (x: number) => `${Math.round((100 * x) / n)}%`;
+        const windows = Math.max(1, signings);
+        console.log(`${difficulty} ${policy}: Masters ${pct(masters)} · top 4 do Masters ${pct(top4)} · playoffs do Champions ${pct(champPlayoffs)} · título ${pct(titles)}` + (policy === 'greedy' ? ` · ${signings} contratações, +${(gain / windows).toFixed(2)} de força por contratação` : '') + ` (n=${n})`);
+      }
+    }
+  }, 3_600_000);
+
   it('parseSeason rejects broken saves', () => {
     expect(parseSeason(null)).toBeNull();
     expect(parseSeason({ version: 99 })).toBeNull();
@@ -294,7 +366,7 @@ describe('map familiarity across the season', () => {
       const done = fullSeason(`fam-${i}`);
       if (done.masters) s = done;
     }
-    expect(SEASON_VERSION).toBe(3);
+    expect(SEASON_VERSION).toBe(4);
     const season = s ?? fullSeason('fam-0');
     const stages = [season.league?.matches ?? [], season.masters?.matches ?? [], season.champions?.matches ?? []];
     const played = stages.flat().reduce((n, m) => n + (m.result ? m.result.score[0] + m.result.score[1] : 0), 0);
@@ -323,6 +395,6 @@ describe('map familiarity across the season', () => {
     const old: Record<string, unknown> = { ...s };
     delete old.mapsPlayed;
     expect(parseSeason(old)).toBeNull();
-    expect(parseSeason({ ...s, version: 2 })).toBeNull();
+    expect(parseSeason({ ...s, version: 3 })).toBeNull();
   });
 });

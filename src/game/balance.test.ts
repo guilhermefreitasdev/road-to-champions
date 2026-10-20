@@ -20,6 +20,12 @@
  * Agents per map, flex natos and map familiarity (2026-10-20, BT=30): agents and familiarity measured as noise; the
  * flex natos lifted the drafted teams (p90 90.0 → 91.4) and the top decile's titles to ~55%, brought back to 46% by a
  * floor of 2 elite rosters per field (FIELD_ELITE_MIN, run.ts); median 71% / 5%, bottom 34% (docs/design.md).
+ *
+ * Difficulty ladder (2026-10-20, src/game/difficulty.ts): the old balance sits between Fácil and Normal; Normal is
+ * harder at the owner's request. Targets per level (median playoffs / median title / top-decile title): Fácil ~80% /
+ * 10% / 55%, Normal ~55% / 2–3% / 25%, Difícil ~35% / 1% / 12%, Lendário ~20% / ≤0.5% / 5%. Measured (classic, BT=30):
+ * Fácil 87% / 10% / 55%, Normal 55% / 1% / 26%, Difícil 38% / 0% / 10%, Lendário 17% / 0% / 4% (bottom decile
+ * 45% / 18% / 6% / 4%). The bands below are for Normal; DIFF=all prints the whole ladder.
  */
 import { describe, expect, it } from 'vitest';
 import { SAMPLE_AURORA } from '../data/sample';
@@ -29,6 +35,7 @@ import { createRng } from '../engine/rng';
 import { cardFit, teamStrength } from '../engine/team';
 import type { Card, Slot } from '../engine/types';
 import { aiChooseMap, isVetoComplete } from '../engine/veto';
+import { DIFFICULTIES, type Difficulty } from './difficulty';
 import {
   USER_ID,
   applyUserVeto,
@@ -116,9 +123,9 @@ interface Group {
  * Drafts `drafts` teams, splits them by strength (bottom decile, middle fifth around the median, top decile)
  * and plays `tournaments` Champions for each of `perGroup` teams of every group.
  */
-function measure(mode: DraftMode, drafts: number, perGroup: number, tournaments: number) {
+function measure(mode: DraftMode, drafts: number, perGroup: number, tournaments: number, difficulty: Difficulty = 'normal') {
   const runs = Array.from({ length: drafts }, (_, i) => {
-    const run = greedyDraft(createRun(mode, `balance-${mode}-${i}`));
+    const run = greedyDraft(createRun(mode, `balance-${mode}-${i}`, difficulty));
     return { run, strength: teamStrength(draftedLineup(run)).total };
   }).sort((a, b) => a.strength - b.strength);
 
@@ -164,7 +171,7 @@ function measure(mode: DraftMode, drafts: number, perGroup: number, tournaments:
       `  ${name.padEnd(6)} str ${g.strength.toFixed(1)}  playoffs ${pct(g.playoffs)}  title ${pct(g.title)}`;
     console.log(
       [
-        `${mode}: drafted p10/p50/p90 ${result.p10.toFixed(1)} / ${result.p50.toFixed(1)} / ${result.p90.toFixed(1)}`,
+        `${mode} ${difficulty}: drafted p10/p50/p90 ${result.p10.toFixed(1)} / ${result.p50.toFixed(1)} / ${result.p90.toFixed(1)}`,
         row('bottom', result.bottom),
         row('median', result.median),
         row('top', result.top),
@@ -197,30 +204,50 @@ describe('balance: single map', () => {
   });
 });
 
-describe('balance: Champions runs', () => {
+describe('balance: Champions runs (Normal)', () => {
   it('classic: drafting well makes you a contender, drafting badly gets you knocked out', () => {
     const { bottom, median, top } = measure('classic', 200, 16, Number(env.BT ?? 4));
-    // Targets: median playoffs 55–75%, bottom decile ≤ 35%.
-    expect(median.playoffs).toBeGreaterThan(0.5);
-    expect(median.playoffs).toBeLessThan(0.82);
-    expect(bottom.playoffs).toBeLessThan(0.4);
+    // Normal targets (BT=30): median playoffs ~55%, title ~2–3%; top decile title ~25%; bottom decile ≤ 20%.
+    expect(median.playoffs).toBeGreaterThan(0.38);
+    expect(median.playoffs).toBeLessThan(0.72);
+    expect(bottom.playoffs).toBeLessThan(0.33);
     expect(top.playoffs).toBeGreaterThan(median.playoffs);
     expect(median.playoffs).toBeGreaterThan(bottom.playoffs);
-    // Titles: top decile 25–45%, median 8–20% (currently ~5–7%, see the note at the top of the file).
-    expect(top.title).toBeGreaterThan(0.2);
-    expect(top.title).toBeLessThan(0.55);
-    // At the default BT=4 the median group plays 64 Champions (~3 titles expected at 5%): only ask for one.
-    expect(median.title).toBeGreaterThan(0);
-    expect(median.title).toBeLessThan(0.22);
+    expect(top.title).toBeGreaterThan(0.1);
+    expect(top.title).toBeLessThan(0.45);
+    expect(median.title).toBeLessThan(0.09);
     expect(top.title).toBeGreaterThan(median.title);
   }, 600_000);
 
   it('ultimate: same shape', () => {
     const { bottom, median, top } = measure('ultimate', 100, 8, Number(env.BT ?? 3));
-    expect(median.playoffs).toBeGreaterThan(0.55);
+    expect(median.playoffs).toBeGreaterThan(0.3);
+    expect(median.playoffs).toBeLessThan(0.8);
     expect(bottom.playoffs).toBeLessThan(median.playoffs);
-    expect(top.title).toBeGreaterThan(median.title);
-    expect(top.title).toBeLessThan(0.6);
-    expect(median.title).toBeLessThan(0.3);
+    expect(top.title).toBeGreaterThanOrEqual(median.title);
+    expect(top.title).toBeLessThan(0.4);
+    expect(median.title).toBeLessThan(0.15);
   }, 600_000);
+});
+
+describe('balance: difficulty ladder', () => {
+  it('Fácil is far easier than Lendário for the same drafter', () => {
+    const bt = Math.max(2, Math.round(Number(env.BT ?? 4) / 2));
+    const easy = measure('classic', 200, 16, bt, 'easy');
+    const legend = measure('classic', 200, 16, bt, 'legend');
+    // BT=30: easy median playoffs 87%, legend 17%; top-decile titles 55% vs 4%.
+    expect(easy.median.playoffs - legend.median.playoffs).toBeGreaterThan(0.4);
+    expect(easy.top.title).toBeGreaterThan(legend.top.title + 0.2);
+    expect(easy.median.title).toBeGreaterThan(0);
+    expect(legend.median.title).toBeLessThan(0.03);
+  }, 600_000);
+});
+
+// BALANCE_REPORT=1 BT=30 DIFF=hard npx vitest run src/game/balance -t ladder --silent=false: one level of the ladder.
+describe.skipIf(!env.DIFF)('balance: difficulty ladder (report)', () => {
+  it('ladder', () => {
+    const levels = env.DIFF === 'all' ? DIFFICULTIES : (env.DIFF!.split(',') as Difficulty[]);
+    const mode = (env.DIFF_MODE ?? 'classic') as DraftMode;
+    for (const d of levels) measure(mode, mode === 'classic' ? 200 : 100, mode === 'classic' ? 16 : 8, Number(env.BT ?? 4), d);
+  }, 3_600_000);
 });

@@ -27,8 +27,8 @@ export const VETO_ORDERS: Record<BestOf, readonly ('ban' | 'pick')[]> = {
   5: ['ban', 'ban', 'pick', 'pick', 'pick', 'pick'],
 };
 
-/** Base AI noise in strength points; each point of coach vetoBonus removes 0.5. */
-const AI_NOISE = 2;
+/** Base AI noise in strength points; each point of coach vetoBonus removes 0.5. The difficulty may pass another base. */
+export const AI_NOISE = 2;
 const AI_NOISE_PER_VETO_BONUS = 0.5;
 
 const other = (team: TeamIndex): TeamIndex => (team === 0 ? 1 : 0);
@@ -84,12 +84,12 @@ export function playedMaps(state: VetoState): { map: MapName; pickedBy: TeamInde
  * AI choice for the team on turn: edge = own map affinity − opponent's + noise.
  * Bans the lowest edge, picks the highest. A better coach (vetoBonus) means less noise.
  */
-export function aiChooseMap(state: VetoState, lineups: [Lineup, Lineup], rng: Rng): MapName {
+export function aiChooseMap(state: VetoState, lineups: [Lineup, Lineup], rng: Rng, baseNoise: number = AI_NOISE): MapName {
   const turn = nextTurn(state);
   if (!turn) throw new Error('Veto is already complete');
   const own = lineups[turn.team];
   const opp = lineups[other(turn.team)];
-  const amplitude = Math.max(0, AI_NOISE - AI_NOISE_PER_VETO_BONUS * (own.coach?.vetoBonus ?? 0));
+  const amplitude = Math.max(0, baseNoise - AI_NOISE_PER_VETO_BONUS * (own.coach?.vetoBonus ?? 0));
 
   let best: MapName | undefined;
   let bestScore = -Infinity;

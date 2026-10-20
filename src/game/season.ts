@@ -56,9 +56,9 @@ import {
   type LeagueState,
 } from '../engine/league';
 import { createRng } from '../engine/rng';
-import { findCoach, rosterKey, shuffled } from '../engine/roster';
+import { findCard, findCoach, rosterKey, shuffled } from '../engine/roster';
 import { simulateSeries, type SeriesResult } from '../engine/series';
-import { teamStrength } from '../engine/team';
+import { cardFit, teamStrength } from '../engine/team';
 import {
   GROUP_KEYS,
   PLAYOFF_BRACKET,
@@ -76,6 +76,9 @@ import {
 import { REGIONS, type Card, type Coach, type Lineup, type MapName, type Region, type RosterEntry, type Slot, type TeamIndex } from '../engine/types';
 import { aiChooseMap, applyVeto, createVeto, isVetoComplete, nextTurn, type VetoState } from '../engine/veto';
 import { formatDecimal } from './explain';
+import { compactSeries, type CompactSeries } from './boxscore';
+import { LEAGUE_PRIZE, MARKET_MAX_SIGNINGS, MARKET_START_BUDGET, MARKET_TIERS, MASTERS_PRIZE, playerValue, saleValue } from './market';
+import { DEFAULT_DIFFICULTY, DIFFICULTY_SETTINGS, aiAdjust, difficultySettings, isDifficulty, scoutingLevel, type Difficulty } from './difficulty';
 import {
   AGENT_ROLES,
   DEFAULT_TEAM_NAME,
@@ -94,12 +97,28 @@ import {
 } from './run';
 
 export { USER_ID } from './run';
+export {
+  LEAGUE_PRIZE,
+  MARKET_AURA_PREMIUM,
+  MARKET_IGL_PREMIUM,
+  MARKET_MAX_SIGNINGS,
+  MARKET_MIN_PRICE,
+  MARKET_PRICE_BASE,
+  MARKET_PRICE_DOUBLING,
+  MARKET_SALE_SHARE,
+  MARKET_START_BUDGET,
+  MARKET_TIERS,
+  MASTERS_PRIZE,
+  playerValue,
+  saleValue,
+} from './market';
 
 /**
- * v3 = agents per map in the map results, agent and familiarity edges, `mapsPlayed` in the state; v2 = Modelo v3
+ * v4 = difficulty, box scores of every series (`boxScores`) and the free-agency market (stage 'market', `market`,
+ * `funds`, `transfers`); v3 = agents per map in the map results, agent and familiarity edges, `mapsPlayed` in the state; v2 = Modelo v3
  * (per-player form, multikills and MVP in the map results, aura on the cards).
  */
-export const SEASON_VERSION = 3;
+export const SEASON_VERSION = 4;
 export const SEASON_MAP_POOL: readonly MapName[] = REAL_MAP_POOL;
 export const LEAGUE_OPPONENTS = LEAGUE_TEAMS - 1;
 export const MASTERS_TEAMS = 8;
@@ -115,7 +134,7 @@ export const FIELD_MODE_TEXT: Record<FieldMode, string> = {
 
 export const REGION_LABELS: Record<Region, string> = { americas: 'Americas', emea: 'EMEA', pacific: 'Pacific', china: 'China' };
 
-export type SeasonStage = 'region' | 'draft' | 'team' | 'league' | 'masters' | 'champions' | 'done';
+export type SeasonStage = 'region' | 'draft' | 'team' | 'league' | 'market' | 'masters' | 'champions' | 'done';
 export type CompStage = 'league' | 'masters' | 'champions';
 export const COMP_STAGES: readonly CompStage[] = ['league', 'masters', 'champions'];
 export const STAGE_LABELS: Record<CompStage, string> = { league: 'Liga', masters: 'Masters', champions: 'Champions' };
@@ -145,6 +164,54 @@ export interface SeasonState {
   eliminatedAt?: 'league';
   /** Maps every entrant played so far in the season, across stages (map familiarity, src/engine/familiarity.ts). */
   mapsPlayed: MapsPlayed;
+  /** Difficulty of the season (src/game/difficulty.ts). */
+  difficulty: Difficulty;
+  /** Compact box score of every series played (AI vs AI included), keyed like userSeries (src/game/boxscore.ts). */
+  boxScores: Record<string, CompactSeries>;
+  /** Free-agency window in progress (stage 'market'). */
+  market?: MarketState;
+  /** Money kept between market windows (set when a window closes). */
+  funds?: number;
+  /** Every signing of the season, in order. */
+  transfers?: Transfer[];
+}
+
+export type MarketWindow = 'post-league' | 'post-masters';
+
+export interface MarketSigning {
+  /** Card signed. */
+  in: string;
+  /** Card released (its slot goes to the new card). */
+  out: string;
+  /** Price paid. */
+  price: number;
+  /** Credit for the released player (MARKET_SALE_SHARE of his value). */
+  sale: number;
+}
+
+export interface Transfer extends MarketSigning {
+  window: MarketWindow;
+}
+
+export interface MarketState {
+  window: MarketWindow;
+  /** Money available now (in US$ thousand): funds carried + the prize of the stage just played ± signings. */
+  budget: number;
+  /** Card ids on offer (most expensive first). */
+  offers: string[];
+  signed: MarketSigning[];
+  maxSignings: number;
+  /** Prize money credited when the window opened (placement in the stage just played). */
+  prize: number;
+  /** Entrant ids of the next stage (the user included), fixed when the window opens. */
+  nextField: string[];
+}
+
+export interface MarketOffer {
+  card: Card;
+  teamName: string;
+  eventName: string;
+  price: number;
 }
 
 export type SeasonMatch = TMatch | LMatch;
@@ -234,8 +301,20 @@ export function entrantName(entry: RosterEntry, mode: FieldMode): string {
 // Region, draft and team
 // ---------------------------------------------------------------------------
 
-export function createSeason(seed: string, field: FieldMode = 'current'): SeasonState {
-  return { version: SEASON_VERSION, seed, stage: 'region', field, userSeries: {}, mapsPlayed: {} };
+/**
+ * A new season. `createSeason(seed, difficulty?, field?)`; the older `createSeason(seed, field)` still works (the
+ * two value sets are disjoint).
+ */
+export function createSeason(seed: string, difficulty?: Difficulty | FieldMode, field?: FieldMode): SeasonState {
+  let level: Difficulty = DEFAULT_DIFFICULTY;
+  let mode: FieldMode = field ?? 'current';
+  if (difficulty !== undefined) {
+    if (isDifficulty(difficulty)) level = difficulty;
+    else if (FIELD_MODES.includes(difficulty)) mode = field ?? difficulty;
+    else throw new Error(`Unknown difficulty "${String(difficulty)}"`);
+  }
+  if (!FIELD_MODES.includes(mode)) throw new Error(`Unknown field mode "${mode}"`);
+  return { version: SEASON_VERSION, seed, stage: 'region', field: mode, userSeries: {}, mapsPlayed: {}, difficulty: level, boxScores: {} };
 }
 
 /** Picks the server. The draft then rolls only rosters of that region. */
@@ -245,7 +324,8 @@ export function chooseRegion(s: SeasonState, region: Region, field: FieldMode = 
   if (!FIELD_MODES.includes(field)) throw new Error(`Unknown field mode "${field}"`);
   const pool = regionPool(region);
   if (pool.length === 0) throw new Error(`No rosters for region "${region}"`);
-  return { ...s, stage: 'draft', region, field, draft: createDraft(pool, 'classic', `${s.seed}:${region}`) };
+  const draft = createDraft(pool, 'classic', `${s.seed}:${region}`, DIFFICULTY_SETTINGS[s.difficulty].rerolls);
+  return { ...s, stage: 'draft', region, field, draft };
 }
 
 /** Changes the field mode; only before the league starts. */
@@ -316,26 +396,30 @@ export function startLeague(s: SeasonState, teamName: string): SeasonState {
   const entrants = seedByStrength([
     // The user's strength as seasonTeamInfo shows it (tournament form included), as in the main mode.
     { id: USER_ID, name, strength: teamStrength(lineupOf({ ...s, teamName: name }, USER_ID)).total },
-    ...opponents.map((e) => ({ id: rosterKey(e), name: entrantName(e, s.field), strength: aiStrength(e) })),
+    ...opponents.map((e) => ({ id: rosterKey(e), name: entrantName(e, s.field), strength: aiStrength(e) + aiBonus(s) })),
   ]);
   return advance({ ...s, stage: 'league', teamName: name, league: createLeague(entrants) });
 }
 
+/** The difficulty's AI strength bonus (seeds and shown strength of the AI teams; the user's matches). */
+const aiBonus = (s: Pick<SeasonState, 'difficulty'>): number => difficultySettings(s.difficulty).aiBonus;
+
 /**
- * Masters: the league's top 3 (the user among them) + 5 teams of the other regions: 2 from each of two regions
- * and 1 from the third (which one gets 1 is drawn), each region sending the strongest of a draw of twice as many.
+ * Masters entrants: the league's top 3 (the user among them) + 5 teams of the other regions: 2 from each of two
+ * regions and 1 from the third (which one gets 1 is drawn), each region sending the strongest of a draw of twice as many.
  */
-function startMasters(s: SeasonState): SeasonState {
-  const league = s.league!;
-  const home = mastersQualified(league);
+function mastersFieldIds(s: SeasonState): string[] {
+  const home = mastersQualified(s.league!);
   const others = shuffled(REGIONS.filter((r) => r !== s.region), createRng(`${s.seed}:masters:regions`));
   const slots = [2, 2, 1];
   const exclude = userPlayers(s);
   const away = others.flatMap((region, i) => drawStrongest(fieldCandidates(region, s.field), slots[i]!, `${s.seed}:masters:${region}`, exclude));
-  const entrants = seedByStrength([
-    ...home.map((id) => ({ id, name: nameOf(s, id), strength: strengthOf(s, id) })),
-    ...away.map((e) => ({ id: rosterKey(e), name: entrantName(e, s.field), strength: aiStrength(e) })),
-  ]);
+  return [...home, ...away.map(rosterKey)];
+}
+
+/** Builds the Masters from its entrant ids (fixed when the market window opened), seeded by strength. */
+function startMasters(s: SeasonState, ids: readonly string[] = mastersFieldIds(s)): SeasonState {
+  const entrants = seedByStrength(ids.map((id) => ({ id, name: nameOf(s, id), strength: strengthOf(s, id) })));
   return { ...s, stage: 'masters', masters: createBracket(entrants), mapsPlayed: withLeagueBaseline(s, entrants.map((e) => e.id)) };
 }
 
@@ -362,36 +446,214 @@ function withLeagueBaseline(s: SeasonState, ids: readonly string[]): MapsPlayed 
  * Champions: 4 teams per region. The user's region sends the league's top 4; every other region sends its Masters
  * teams plus draws (distinct teams) to fill 4. Seeded by strength into the main mode's format.
  */
-function startChampions(s: SeasonState): SeasonState {
+function championsFieldIds(s: SeasonState): string[] {
   const league = s.league!;
   const masters = s.masters!;
   const exclude = userPlayers(s);
   const regionOfId = (id: string) => regionOf(rosterByKey(id));
-  const entries: { id: string; name: string; strength: number }[] = [];
+  const entries: { id: string }[] = [];
 
   const homeIds = league.entrants
     .map((e) => ({ id: e.id, rank: leaguePlaceOf(league, e.id)?.rank ?? 99, seed: e.seed }))
     .sort((x, y) => x.rank - y.rank || x.seed - y.seed)
     .slice(0, CHAMPIONS_PER_REGION)
     .map((e) => e.id);
-  for (const id of homeIds) entries.push({ id, name: nameOf(s, id), strength: strengthOf(s, id) });
+  for (const id of homeIds) entries.push({ id });
 
   for (const region of REGIONS) {
     if (region === s.region) continue;
     const fromMasters = bracketRanking(masters).filter((id) => id !== USER_ID && regionOfId(id) === region);
     const taken = new Set(fromMasters.map((id) => rosterByKey(id).teamId));
     const draws = drawRosters(fieldCandidates(region, s.field), CHAMPIONS_PER_REGION - fromMasters.length, `${s.seed}:champions:${region}`, exclude, taken);
-    for (const id of fromMasters) entries.push({ id, name: nameOf(s, id), strength: strengthOf(s, id) });
-    for (const e of draws) entries.push({ id: rosterKey(e), name: entrantName(e, s.field), strength: aiStrength(e) });
+    for (const id of fromMasters) entries.push({ id });
+    for (const e of draws) entries.push({ id: rosterKey(e) });
   }
   if (entries.length !== TEAM_COUNT) throw new Error(`Champions field has ${entries.length} teams, needs ${TEAM_COUNT}`);
-  return { ...s, stage: 'champions', champions: createTournament(seedByStrength(entries)), mapsPlayed: withLeagueBaseline(s, entries.map((e) => e.id)) };
+  return entries.map((e) => e.id);
+}
+
+/** Builds the Champions from its entrant ids (fixed when the market window opened), seeded by strength. */
+function startChampions(s: SeasonState, ids: readonly string[] = championsFieldIds(s)): SeasonState {
+  const entries = ids.map((id) => ({ id, name: nameOf(s, id), strength: strengthOf(s, id) }));
+  return { ...s, stage: 'champions', champions: createTournament(seedByStrength(entries)), mapsPlayed: withLeagueBaseline(s, ids) };
 }
 
 function seedByStrength(teams: { id: string; name: string; strength: number }[]): Entrant[] {
   return [...teams]
     .sort((x, y) => y.strength - x.strength || (x.id < y.id ? -1 : 1))
     .map((t, i) => ({ id: t.id, name: t.name, seed: i + 1 }));
+}
+
+// ---------------------------------------------------------------------------
+// Free agency (docs/design.md, "Mercado de transferências")
+// ---------------------------------------------------------------------------
+
+/** Prize money of the stage that just ended, by the user's place in it. */
+export function marketPrize(s: SeasonState, window: MarketWindow): number {
+  if (window === 'post-league') return LEAGUE_PRIZE[s.league ? leaguePlaceOf(s.league, USER_ID)?.rank ?? 0 : 0] ?? 0;
+  return MASTERS_PRIZE[s.masters ? bracketPlaceOf(s.masters, USER_ID)?.rank ?? 0 : 0] ?? 0;
+}
+
+const ovrQuantiles = new Map<Region, { p50: number; p90: number }>();
+function regionQuantiles(region: Region): { p50: number; p90: number } {
+  let q = ovrQuantiles.get(region);
+  if (!q) {
+    const ovr = regionPool(region).flatMap((e) => e.cards.map((c) => c.ovr)).sort((a, b) => a - b);
+    q = { p50: ovr[Math.floor(0.5 * (ovr.length - 1))]!, p90: ovr[Math.floor(0.9 * (ovr.length - 1))]! };
+    ovrQuantiles.set(region, q);
+  }
+  return q;
+}
+
+/**
+ * The window's offers, deterministic from the seed: cards of the user's region (every era, like the draft), one per
+ * player, never a player of the user's lineup or of the next stage's field. Tier quotas MARKET_TIERS; one value
+ * slot goes to an IGL when the draw has one. Most expensive first.
+ */
+function drawOffers(s: SeasonState, window: MarketWindow, nextField: readonly string[]): string[] {
+  const pool = seasonPool(s);
+  const banned = new Set(userPlayers(s));
+  for (const id of nextField) if (id !== USER_ID) for (const c of rosterByKey(id).cards) banned.add(c.playerId);
+  const { p50, p90 } = regionQuantiles(s.region!);
+  const tierOf = (c: Card): keyof typeof MARKET_TIERS => (c.ovr >= p90 ? 'star' : c.ovr >= p50 ? 'mid' : 'value');
+  const quota: Record<keyof typeof MARKET_TIERS, number> = { ...MARKET_TIERS };
+  const cards = shuffled(pool.flatMap((e) => e.cards), createRng(`${s.seed}:market:${window}`));
+  const out: Card[] = [];
+  const take = (c: Card) => {
+    out.push(c);
+    banned.add(c.playerId);
+    quota[tierOf(c)]--;
+  };
+  const igl = cards.find((c) => c.isIGL && tierOf(c) === 'value' && !banned.has(c.playerId));
+  if (igl) take(igl);
+  for (const c of cards) {
+    if (banned.has(c.playerId) || quota[tierOf(c)] <= 0) continue;
+    take(c);
+  }
+  return out.sort((x, y) => playerValue(y) - playerValue(x) || y.ovr - x.ovr || x.id.localeCompare(y.id)).map((c) => c.id);
+}
+
+/** Opens a market window after the league or the Masters: the next stage's field is fixed now. */
+function openMarket(s: SeasonState, window: MarketWindow): SeasonState {
+  const nextField = window === 'post-league' ? mastersFieldIds(s) : championsFieldIds(s);
+  const prize = marketPrize(s, window);
+  const market: MarketState = {
+    window,
+    budget: (s.funds ?? MARKET_START_BUDGET) + prize,
+    offers: drawOffers(s, window, nextField),
+    signed: [],
+    maxSignings: MARKET_MAX_SIGNINGS,
+    prize,
+    nextField,
+  };
+  return { ...s, stage: 'market', market };
+}
+
+function requireMarket(s: SeasonState): MarketState {
+  if (s.stage !== 'market' || !s.market) throw new Error('No market window is open');
+  return s.market;
+}
+
+/** The offers still available in the open window (signed ones leave the list), most expensive first. */
+export function marketOffers(s: SeasonState): MarketOffer[] {
+  const m = requireMarket(s);
+  const pool = seasonPool(s);
+  const signed = new Set(m.signed.map((x) => x.in));
+  return m.offers
+    .filter((id) => !signed.has(id))
+    .map((id) => {
+      const card = findCard(pool, id);
+      if (!card) throw new Error(`Unknown card "${id}"`);
+      const entry = pool.find((e) => e.teamId === card.teamId && e.eventId === card.eventId)!;
+      return { card, teamName: entry.teamName, eventName: entry.eventName, price: playerValue(card) };
+    });
+}
+
+const baseId = (cardId: string): string => cardId.replace(/#user$/, '');
+
+/** Checks a signing and returns the new draft picks and money; throws with the reason when it is not allowed. */
+function planSigning(s: SeasonState, cardId: string, replaceCardId: string) {
+  const m = requireMarket(s);
+  const pool = seasonPool(s);
+  if (!m.offers.includes(cardId)) throw new Error(`Card "${cardId}" is not on offer`);
+  if (m.signed.some((x) => x.in === cardId)) throw new Error(`Card "${cardId}" was already signed`);
+  if (m.signed.length >= m.maxSignings) throw new Error(`Only ${m.maxSignings} signings per window`);
+  const draft = requireDraft(s);
+  const out = baseId(replaceCardId);
+  const index = draft.picks.findIndex((p) => p.cardId === out);
+  if (index < 0) throw new Error(`Card "${replaceCardId}" is not in the lineup`);
+  const card = findCard(pool, cardId)!;
+  const released = findCard(pool, out)!;
+  const others = draft.picks.filter((_, i) => i !== index).map((p) => findCard(pool, p.cardId)?.playerId);
+  if (others.includes(card.playerId)) throw new Error(`Player "${card.handle}" is already in the lineup`);
+  const price = playerValue(card);
+  const sale = saleValue(released);
+  if (m.budget + sale < price) throw new Error(`Not enough budget: ${m.budget} + ${sale} < ${price}`);
+  const picks = draft.picks.map((p, i) => (i === index ? { cardId, slot: p.slot } : p));
+  return { m, draft, picks, slot: draft.picks[index]!.slot, card, released, price, sale };
+}
+
+/**
+ * Signs `cardId` in place of `replaceCardId` (same slot). Validates the window, the offer, MARKET_MAX_SIGNINGS,
+ * duplicate players and the budget; the released player's sale value (MARKET_SALE_SHARE) is credited first.
+ */
+export function signFreeAgent(s: SeasonState, cardId: string, replaceCardId: string): SeasonState {
+  const { m, draft, picks, price, sale } = planSigning(s, cardId, replaceCardId);
+  const out = baseId(replaceCardId);
+  return {
+    ...s,
+    draft: { ...draft, picks },
+    market: { ...m, budget: m.budget + sale - price, signed: [...m.signed, { in: cardId, out, price, sale }] },
+  };
+}
+
+export interface SigningPreview {
+  slot: Slot;
+  /** cardFit of the new card in that slot (1, 0.9 flex, 0.75 off-role; natural flexes 1). */
+  fit: number;
+  price: number;
+  sale: number;
+  /** Budget after the signing. */
+  budgetAfter: number;
+  /** Team strength now and with the signing (the next stage's tournament form included). */
+  strengthBefore: number;
+  strengthAfter: number;
+  /** null when allowed, else the reason (pt-BR). */
+  blocked: string | null;
+}
+
+/** What a signing would do, for the market screen (never throws for a listed offer and a lineup card). */
+export function signingPreview(s: SeasonState, cardId: string, replaceCardId: string): SigningPreview {
+  const m = requireMarket(s);
+  const pool = seasonPool(s);
+  const card = findCard(pool, cardId);
+  const out = baseId(replaceCardId);
+  const pick = requireDraft(s).picks.find((p) => p.cardId === out);
+  if (!card || !pick) throw new Error('Unknown card');
+  const price = playerValue(card);
+  const sale = saleValue(findCard(pool, out)!);
+  const before = teamStrength(userLineup(s)).total;
+  let blocked: string | null = null;
+  let after = before;
+  try {
+    after = teamStrength(userLineup(signFreeAgent(s, cardId, replaceCardId))).total;
+  } catch (e) {
+    const msg = (e as Error).message;
+    blocked = msg.startsWith('Not enough budget') ? 'Orçamento insuficiente'
+      : msg.startsWith('Only') ? `Limite de ${m.maxSignings} contratações nesta janela`
+      : msg.includes('already in the lineup') ? 'Jogador já está no elenco'
+      : msg.includes('already signed') ? 'Já contratado'
+      : 'Contratação indisponível';
+  }
+  return { slot: pick.slot, fit: cardFit(card, pick.slot), price, sale, budgetAfter: m.budget + sale - price, strengthBefore: before, strengthAfter: after, blocked };
+}
+
+/** Closes the window: keeps the money for the next one and starts the next stage with the field fixed at opening. */
+export function closeMarket(s: SeasonState): SeasonState {
+  const m = requireMarket(s);
+  const next: SeasonState = { ...s, funds: m.budget, transfers: [...(s.transfers ?? []), ...m.signed.map((x) => ({ ...x, window: m.window }))] };
+  delete next.market;
+  return advance(m.window === 'post-league' ? startMasters(next, m.nextField) : startChampions(next, m.nextField));
 }
 
 export function isCompStage(stage: SeasonStage): stage is CompStage {
@@ -421,9 +683,10 @@ function stageDone(s: SeasonState, stage: CompStage): boolean {
 function stageReport(s: SeasonState, stage: CompStage, match: SeasonMatch, played: { series: SeriesResult; result: LeagueResult }): SeasonState {
   const { result } = played;
   const mapsPlayed = recordMapsPlayed(s.mapsPlayed, [match.a, match.b], played.series.maps.map((m) => m.map));
-  if (stage === 'league') return { ...s, mapsPlayed, league: reportLeagueResult(s.league!, match.id, result) };
-  if (stage === 'masters') return { ...s, mapsPlayed, masters: reportBracketResult(s.masters!, match.id, result) };
-  return { ...s, mapsPlayed, champions: reportResult(s.champions!, match.id, result) };
+  const boxScores = { ...s.boxScores, [seriesKey(stage, match.id)]: compactSeries(played.series, match.a, match.b) };
+  if (stage === 'league') return { ...s, mapsPlayed, boxScores, league: reportLeagueResult(s.league!, match.id, result) };
+  if (stage === 'masters') return { ...s, mapsPlayed, boxScores, masters: reportBracketResult(s.masters!, match.id, result) };
+  return { ...s, mapsPlayed, boxScores, champions: reportResult(s.champions!, match.id, result) };
 }
 
 /** Runs a series and turns it into a result with map and round totals. */
@@ -437,6 +700,8 @@ function playSeries(s: SeasonState, stage: CompStage, match: SeasonMatch, veto?:
   };
   if (REAL_META) opts.meta = REAL_META;
   if (veto) opts.veto = veto;
+  const adjust = aiAdjust(match.a, match.b, USER_ID, s.difficulty);
+  if (adjust) opts.adjust = adjust;
   const series = simulateSeries(lineupOf(s, match.a), lineupOf(s, match.b), createRng(`${s.seed}:${stage}:${match.id}`), opts);
   const rounds: [number, number] = [0, 0];
   for (const m of series.maps) {
@@ -460,9 +725,9 @@ function advance(s: SeasonState): SeasonState {
     if (!stageDone(cur, stage)) return cur;
     if (stage === 'league') {
       if (!mastersQualified(cur.league!).includes(USER_ID)) return { ...cur, stage: 'done', eliminatedAt: 'league' };
-      cur = startMasters(cur);
+      return openMarket(cur, 'post-league');
     } else if (stage === 'masters') {
-      cur = startChampions(cur);
+      return openMarket(cur, 'post-masters');
     } else {
       return { ...cur, stage: 'done' };
     }
@@ -542,7 +807,7 @@ export function findSeasonMatch(s: SeasonState, key: string): { stage: CompStage
  * get a suffix so they never clash with an opponent's copy.
  */
 export function lineupOf(s: SeasonState, id: string): Lineup {
-  const formSeed = `${s.seed}:${formStage(s)}:form`;
+  const formSeed = stageFormSeed(s, formStage(s));
   if (id === USER_ID) {
     const lineup = seasonLineup(s);
     const suffixed = { ...lineup, players: lineup.players.map((p) => ({ ...p, card: { ...p.card, id: `${p.card.id}#user` } })) };
@@ -553,12 +818,21 @@ export function lineupOf(s: SeasonState, id: string): Lineup {
 
 /** The user's lineup as the Team screen shows it (same cards and form as lineupOf, without the id suffix). */
 export function userLineup(s: SeasonState): Lineup {
-  return applyTournamentForm(seasonLineup(s), `${s.seed}:${formStage(s)}:form`, prodigyGrowth(userStagesReached(s)));
+  return applyTournamentForm(seasonLineup(s), stageFormSeed(s, formStage(s)), prodigyGrowth(userStagesReached(s)));
 }
 
-/** Stage whose tournament form applies now ('league' before the league starts and after the run ends in it). */
-function formStage(s: SeasonState): CompStage {
+/** Seed base of a stage's tournament form (applyTournamentForm). */
+export function stageFormSeed(s: Pick<SeasonState, 'seed'>, stage: CompStage): string {
+  return `${s.seed}:${stage}:form`;
+}
+
+/**
+ * Stage whose tournament form applies now ('league' before the league starts and after the run ends in it; in a
+ * market window, the stage it leads to).
+ */
+export function formStage(s: SeasonState): CompStage {
   if (isCompStage(s.stage)) return s.stage;
+  if (s.stage === 'market') return s.market?.window === 'post-masters' ? 'champions' : 'masters';
   if (s.stage === 'done') return s.champions ? 'champions' : s.masters ? 'masters' : 'league';
   return 'league';
 }
@@ -568,6 +842,7 @@ function formStage(s: SeasonState): CompStage {
  * 3 Champions, 4 Champions playoffs.
  */
 export function userStagesReached(s: SeasonState): number {
+  if (s.stage === 'market') return s.market?.window === 'post-masters' ? 3 : 2;
   if (s.champions) return s.champions.matches.some((m) => involvesUser(m) && m.stage === 'playoffs') ? 4 : 3;
   if (s.masters) return 2;
   return s.league?.matches.some((m) => involvesUser(m) && m.stage === 'playoffs') ? 1 : 0;
@@ -590,7 +865,7 @@ export function seasonMapFamiliarity(s: Pick<SeasonState, 'mapsPlayed'>, teamId:
 
 /** Scouting of the opponent's veto preferences: map comfort plus the familiarity it gained this season. */
 export function seasonVetoScouting(s: SeasonState, opponentId: string): { level: number; hints: ScoutHint[] } {
-  const level = s.draft?.coachId ? findCoach(seasonPool(s), s.draft.coachId)?.vetoBonus ?? 0 : 0;
+  const level = scoutingLevel(s.draft?.coachId ? findCoach(seasonPool(s), s.draft.coachId)?.vetoBonus ?? 0 : 0, s.difficulty);
   const affinity = seasonVetoLineup(s, opponentId).mapAffinity ?? {};
   const all = SEASON_MAP_POOL.map((map) => ({ map, value: affinity[map] ?? 0 })).sort((x, y) => y.value - x.value || (x.map < y.map ? -1 : 1));
   if (level <= 0) return { level, hints: [] };
@@ -620,11 +895,12 @@ function nameOf(s: SeasonState, id: string): string {
     const e = stageEntrants(s, stage).find((x) => x.id === id);
     if (e) return e.name;
   }
-  return rosterByKey(id).teamName;
+  return entrantName(rosterByKey(id), s.field);
 }
 
+/** Strength as seeded and shown: the user's lineup as it plays now; an AI roster plus the difficulty's bonus. */
 function strengthOf(s: SeasonState, id: string): number {
-  return id === USER_ID ? teamStrength(lineupOf(s, id)).total : aiStrength(rosterByKey(id));
+  return id === USER_ID ? teamStrength(lineupOf(s, id)).total : aiStrength(rosterByKey(id)) + aiBonus(s);
 }
 
 function stageEntrants(s: SeasonState, stage: CompStage): Entrant[] {
@@ -926,9 +1202,11 @@ export function parseSeason(data: unknown): SeasonState | null {
     const s = data as SeasonState;
     if (s.version !== SEASON_VERSION || typeof s.seed !== 'string') return null;
     if (!FIELD_MODES.includes(s.field)) return null;
-    if (!['region', 'draft', 'team', 'league', 'masters', 'champions', 'done'].includes(s.stage)) return null;
+    if (!['region', 'draft', 'team', 'league', 'market', 'masters', 'champions', 'done'].includes(s.stage)) return null;
     if (!s.userSeries || typeof s.userSeries !== 'object') return null;
     if (!s.mapsPlayed || typeof s.mapsPlayed !== 'object') return null;
+    if (!isDifficulty(s.difficulty)) return null;
+    if (!s.boxScores || typeof s.boxScores !== 'object') return null;
     if (s.stage === 'region') return s;
     if (!s.region || !REGIONS.includes(s.region)) return null;
     if (!s.draft || typeof s.draft !== 'object' || !Array.isArray(s.draft.picks)) return null;
@@ -940,6 +1218,13 @@ export function parseSeason(data: unknown): SeasonState | null {
     if (s.champions && s.champions.entrants?.length !== TEAM_COUNT) return null;
     if (s.stage === 'masters' && !s.masters) return null;
     if (s.stage === 'champions' && (!s.masters || !s.champions)) return null;
+    if (s.stage === 'market') {
+      const m = s.market;
+      if (!m || !Array.isArray(m.offers) || !Array.isArray(m.signed) || !Array.isArray(m.nextField) || typeof m.budget !== 'number') return null;
+      if (m.window === 'post-masters' ? !s.masters : m.window !== 'post-league') return null;
+      for (const id of m.nextField) if (id !== USER_ID) rosterByKey(id);
+      marketOffers(s);
+    }
     for (const stage of COMP_STAGES) for (const e of stageEntrants(s, stage)) seasonTeamInfo(s, e.id);
     // Smoke-test the selectors the screens rely on.
     leagueViews(s);
@@ -985,7 +1270,7 @@ function resolveOpponentTurns(s: SeasonState, pending: PendingMatch, start: Veto
   let state = start;
   for (let turn = nextTurn(state); turn && turn.team !== pending.side; turn = nextTurn(state)) {
     const rng = createRng(`${s.seed}:${pending.stage}:${pending.match.id}:veto:${state.steps.length}`);
-    state = applyVeto(state, aiChooseMap(state, lineups, rng));
+    state = applyVeto(state, aiChooseMap(state, lineups, rng, difficultySettings(s.difficulty).vetoNoise));
   }
   return state;
 }

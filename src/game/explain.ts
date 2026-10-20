@@ -43,6 +43,19 @@ import {
 import { AGENT_EDGE_MAX, AGENT_SHRINK_MAPS, AGENT_TEAM_CAP } from '../engine/agents';
 import { FAMILIARITY_CAP, FAMILIARITY_PER_MAP } from '../engine/familiarity';
 import type { Attributes, AuraTier, Card, Lineup, LineupPlayer, Role, Slot } from '../engine/types';
+import {
+  LEAGUE_PRIZE,
+  MARKET_AURA_PREMIUM,
+  MARKET_IGL_PREMIUM,
+  MARKET_MAX_SIGNINGS,
+  MARKET_PRICE_BASE,
+  MARKET_PRICE_DOUBLING,
+  MARKET_SALE_SHARE,
+  MARKET_START_BUDGET,
+  MASTERS_PRIZE,
+  playerValue,
+  round5,
+} from './market';
 
 export const ROLE_LABELS: Record<Role, string> = {
   duelist: 'Duelista',
@@ -382,3 +395,34 @@ export function flagEmoji(country: string): string {
   if (!/^[A-Za-z]{2}$/.test(country)) return '';
   return String.fromCodePoint(...[...country.toUpperCase()].map((c) => 0x1f1e6 + c.charCodeAt(0) - 65));
 }
+
+// --- Free agency (Complete Trials, docs/design.md "Mercado de transferências") ---
+
+/** Money in the game's unit (US$ thousand): "US$ 250 mil", "US$ 1,2 mi". */
+export function formatMoney(thousands: number): string {
+  const sign = thousands < 0 ? '−' : '';
+  const n = Math.abs(thousands);
+  if (n >= 1000) return `${sign}US$ ${formatDecimal(n / 1000, n % 1000 === 0 ? 0 : 1)} mi`;
+  return `${sign}US$ ${Math.round(n)} mil`;
+}
+
+export const MARKET_WINDOW_LABELS: Record<'post-league' | 'post-masters', string> = {
+  'post-league': 'Janela pós-liga',
+  'post-masters': 'Janela pós-Masters',
+};
+
+/** "OVR 84: US$ 200 mil · Estrela +10% · IGL +15% → US$ 250 mil": how a card's price is built. */
+export function explainPrice(card: Card): string {
+  const base = round5(MARKET_PRICE_BASE * 2 ** ((card.ovr - 80) / MARKET_PRICE_DOUBLING));
+  const parts = [`OVR ${card.ovr}: ${formatMoney(base)}`];
+  const aura = card.aura ? MARKET_AURA_PREMIUM[card.aura] ?? 0 : 0;
+  if (aura > 0) parts.push(`${AURA_LABELS[card.aura!]} +${Math.round(aura * 100)}%`);
+  if (card.isIGL) parts.push(`IGL +${Math.round(MARKET_IGL_PREMIUM * 100)}%`);
+  const price = playerValue(card);
+  return parts.length === 1 && price === base ? parts[0]! : `${parts.join(' · ')} → ${formatMoney(price)}`;
+}
+
+const prizeList = (table: Record<number, number>, labels: Record<number, string>) =>
+  Object.entries(table).map(([rank, v]) => `${labels[Number(rank)] ?? `${rank}º`} ${formatMoney(v)}`).join(', ');
+
+export const MARKET_HELP = `Mercado: depois da liga e depois do Masters abre uma janela com agentes livres da sua região (de qualquer época, como no draft). Preço = ${formatMoney(MARKET_PRICE_BASE)} no OVR 80, dobrando a cada ${MARKET_PRICE_DOUBLING} de OVR (84 → ${formatMoney(2 * MARKET_PRICE_BASE)}, 88 → ${formatMoney(4 * MARKET_PRICE_BASE)}), mais ${Math.round(MARKET_AURA_PREMIUM.star! * 100)}–${Math.round(MARKET_AURA_PREMIUM.goat! * 100)}% de aura e ${Math.round(MARKET_IGL_PREMIUM * 100)}% para IGL. Até ${MARKET_MAX_SIGNINGS} contratações por janela; quem sai libera a vaga (mesma função) e devolve ${Math.round(MARKET_SALE_SHARE * 100)}% do valor dele. Caixa inicial ${formatMoney(MARKET_START_BUDGET)}, mais a premiação: liga ${prizeList(LEAGUE_PRIZE, {})}; Masters ${prizeList(MASTERS_PRIZE, { 5: '5º–6º', 7: '7º–8º' })}. O que sobra fica para a próxima janela.`;

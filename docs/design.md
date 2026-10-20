@@ -77,6 +77,10 @@ Pedidos do dono do projeto (2026-10-20), com os limites da pesquisa. O pipeline 
 
 **Reprodução e estatísticas.** `src/game/timeline.ts`: `seriesTimeline(série)` devolve, por mapa, os eventos em ordem (início do mapa, início do round com lados e placar, cada kill com matador/vítima/assistência, agente, primeira kill, multikill até ali e vivos por time, fim do round com vencedor, placar, ace, clutch 1vN e flawless, fim do mapa com MVP), para a tela de série animar em 1x/2x/4x ou pular para o fim; tudo sai da `SeriesResult`, então bate com o placar. `src/game/stats.ts`: `playerStats(séries, ids?)` (mapas, rounds, K/D/A, KD, ACS e rating médios por round, KAST, FK/FD, 3K/4K/aces, MVPs de mapa e de série, quebra por agente) e `runPlayerStats(run)` / `seasonPlayerStats(temporada)` para os cinco do usuário.
 
+**Estatísticas de todos os jogadores** (pedido do dono, 2026-10-20: "quero as stats de TODOS para comparar no campeonato" e "o OVR na aba de estatísticas"). Toda série jogada, IA × IA inclusive, guarda um box score compacto (`src/game/boxscore.ts`, `RunState.boxScores` por id da partida, `SeasonState.boxScores` por `etapa:id`): os dois times, os ids dos dez cards na ordem do elenco, o MVP da série e, por mapa, placar, rounds e uma linha por jogador `[K, D, A, FK, FD, 2K, 3K, 4K, ace, rating × 100, ACS, KAST, MVP, agente]` — sem eventos de kill nem rounds. Determinístico (é uma projeção da `SeriesResult`). `src/game/stats.ts`: `runAllPlayerStats(run)` (os 80 do Champions) e `seasonAllPlayerStats(temporada, etapa?)` (padrão: a etapa atual ou a última jogada; 60 na liga, 40 no Masters, 80 no Champions) devolvem `StatRow`: as colunas de `playerStats` mais time (id real para o logo, entrante, nome), função, `isUser` e **OVR como jogado** (com a fase do torneio e o crescimento de prodígio; para um card que saiu pelo mercado, o mesmo sorteio da fase feito para ele sozinho). `runPlayerStats` / `seasonPlayerStats` são os mesmos rows filtrados pelo usuário (inclui quem saiu pelo mercado).
+
+**Tamanho do save.** Box scores: ~1,7 KB por série (run completa, 34 séries: 58 KB; temporada completa até o Champions, 84 séries: 149 KB). O que pesava de verdade já era a `userSeries` (séries completas do usuário, para o replay: ~40–65 KB cada, 90% eventos de kill com três ids de card): uma temporada inteira dava 1,4 MB em JSON. `src/game/persist.ts` (`serializeRun`/`deserializeRun`, `serializeSeason`/`deserializeSeason`) empacota sem perda para o localStorage: kills viram índices nos dez jogadores do mapa, linhas de jogador viram arrays e todo id de card vira índice numa tabela única do save. Medido: run completa 189 KB → **76 KB**; temporada completa (19 séries do usuário) 1,4 MB → **308 KB** (meta < 400 KB). `deserialize*` aceita save empacotado ou não e sempre valida com `parseRun`/`parseSeason`.
+
 **O que não existe, de propósito:** atributo de volatilidade/explosão por card (confiabilidade ≈ 0), "jogador de final" (0 medido), embalo de série para o time (0 medido), cadeia forte (≥ 0,5 dobra os aces), aura por reputação sem fato, prodígio com variância maior.
 
 ### Cards reais (`src/data/real/cards.ts`)
@@ -95,6 +99,34 @@ Um card por linha jogador-evento do VLR, só para os 5 titulares (os 5 com mais 
 - **Pool do veto**: o pool do evento mais recente (pela data de início) com exatamente 7 mapas; hoje é o do Champions 2026 (Abyss, Ascent, Haven, Lotus, Split, Summit, Sunset). Atualiza sozinho quando um evento novo entra.
 - **Campo do Champions**: 15 adversários de times diferentes (um elenco por time, sorteado), sem nenhum jogador do usuário, e de 2 a 3 elencos "de elite" (os 20% mais fortes do pool) por campo (`FIELD_ELITE_MIN` 2 desde os flex natos; teto 3 desde a força v2, antes 2): um Champions tem poucos favoritos, mas sempre alguns.
 
+## Dificuldade (`src/game/difficulty.ts`)
+Pedido do dono (2026-10-20): "está fácil demais, precisamos de um seletor de dificuldade" e depois "o Normal precisa ser mais difícil". Quatro níveis nos dois modos (`createRun(modo, seed, dificuldade)`, `createSeason(seed, dificuldade, campo)`; padrão Normal; `RunState.difficulty` / `SeasonState.difficulty`). Só alavancas que já existiam:
+
+| Nível | Rerolls | Bônus da IA | Elites no Champions (mín–máx) | Ruído do veto da IA | Scouting do coach |
+|---|---|---|---|---|---|
+| Fácil | 4 | −0,5 | 2–2 | 3 | +1 nível |
+| Normal | 3 | +2,5 | 3–4 | 1,5 | igual |
+| Difícil | 2 | +4 | 4–5 | 1 | −1 nível |
+| Lendário | 1 | +4,5 | 6–8 | 0,5 | nenhum |
+
+- **Bônus da IA**: pontos de força somados ao time da IA em todo mapa **contra o usuário** (`SeriesOptions.adjust` → `MapOptions.adjust`); IA × IA não muda. Entra também na força mostrada e no seed dos times da IA, para a tabela não esconder. +2,5 ≈ −10 pp por série na liga (medido: o usuário vence 49% das séries da liga com bônus 0 e 39% com +2,5).
+- **Elites**: piso e teto de elencos de elite (20% mais fortes do pool) entre os 15 adversários do modo principal (`pickField`). No Complete Trials o campo vem das regiões (Atual/Prime) e não muda.
+- **Veto da IA contra o usuário**: ruído base do `aiChooseMap` (antes fixo em 2; o coach da IA ainda tira 0,5 por ponto de veto).
+- **Scouting**: nível do coach (0–3) deslocado; no Lendário o scouting não revela nada.
+
+Medido com o drafter automático (`balance.test.ts`, `BALANCE_REPORT=1 BT=30 DIFF=<nível>`; `DIFF_MODE=ultimate` para o Ultimate). Metas do dono: playoffs do mediano Fácil ~80% · Normal ~55% · Difícil ~35% · Lendário ~20%; título do mediano ~10% / 2–3% / ~1% / ≤ 0,5%; título do decil de cima ~55% / ~25% / ~12% / ~5%.
+
+| Clássico, BT=30 | Força p10/p50/p90 | 10% piores: playoffs | Mediano: playoffs / título | 10% melhores: playoffs / título |
+|---|---|---|---|---|
+| Fácil | 84,1 / 88,1 / 92,7 | 45% | 87% / 10% | 98% / 55% |
+| Normal | 84,0 / 87,5 / 91,8 | 18% | 55% / 1% | 95% / 26% |
+| Difícil | 83,4 / 87,0 / 91,0 | 6% | 38% / 0% | 83% / 10% |
+| Lendário | 83,0 / 86,0 / 90,5 | 4% | 17% / 0% | 69% / 4% |
+
+Ultimate (BT=30, sem rerolls): mediano 79% / 12% · 54% / 1% · 41% / 0% · 28% / 0%; decil de cima 37% · 10% · 6% · 2% de título. O balanceamento anterior (mediano 71–75% / 5%, topo 46%) fica entre Fácil e Normal. Primeira tentativa (Fácil −1,5, Normal +2, Difícil +3,5, Lendário +5): 88% / 15% / 60% · 62% / 2% / 28% · 42% / 0% / 13% · 13% / 0% / 3%; o ajuste fino foi só no bônus da IA. Fácil fica acima da meta de playoffs (87% contra ~80%) para acertar título e topo; o título do mediano no Normal (1%) está dentro do ruído de 2% (480 Champions por grupo). **Por que o Normal ficou mais duro do que o drafter sugeria:** o drafter ignora IGL, química e flex natos; quem joga escolhe IGL e flex e monta times do decil de cima com frequência, onde o título antigo era ~46% (por isso "fácil demais"). No Normal novo o decil de cima leva ~26%.
+
+No Complete Trials (`season.test.ts`, `TRIALS_MARKET=1 TRIALS_N=120`, campo Atual, sem mercado): chegam ao Masters Fácil 19% · Normal 18% · Difícil 13% · Lendário 9%; título 5% · 0% · 1% · 0% (antes da dificuldade: 29% / 3%). Com n = 120 a diferença Fácil × Normal na liga fica no ruído (medida direta com 60 temporadas: 25% × 8% de classificação).
+
 ## Formato do Champions (`src/engine/tournament.ts`)
 Igual ao VCT Champions real: 16 times, fase de grupos e playoffs. Tudo MD3, menos final da chave inferior e grande final (MD5). 34 partidas no total (20 nos grupos + 14 nos playoffs).
 - **Seeds**: os 16 times são ordenados pela força (o seu time incluso); seed 1 = mais forte.
@@ -104,13 +136,13 @@ Igual ao VCT Champions real: 16 times, fase de grupos e playoffs. Tudo MD3, meno
 - **Playoffs (8 times, dupla eliminação sem reset)**: cada 1º enfrenta o 2º de outro grupo nas quartas, e cada metade da chave tem um time de cada grupo: metade 1 = A1 × B2 e C1 × D2; metade 2 = B1 × A2 e D1 × C2. Times do mesmo grupo só se reencontram na final superior, na chave inferior a partir da rodada 2 ou na grande final. A rodada 2 da inferior cruza as metades para não repetir as quartas.
 - **Colocação de quem cai nos grupos**: 3º do grupo = 9º–12º; 4º = 13º–16º. Nos playoffs: 7º–8º (inferior R1), 5º–6º (R2), 4º (R3), 3º (final inferior), 2º (grande final).
 - **Na tela**: aba "Grupos" com cada grupo desenhado como chave GSL (Abertura → Vencedores → Classificado ✔ em cima, Eliminação → Decisiva → Classificado ✔ embaixo) e a tabela 1º–4º; no celular um grupo por vez (começa no seu), no desktop os quatro em 2×2 com o seu primeiro. Aba "Playoffs" com a chave completa (superior em cima, inferior embaixo, grande final à direita), linhas de ligação, placares e MD3/MD5; vagas vazias dizem de onde vem o time ("1º Grupo A", "Vencedor Quartas 1"). No celular a chave rola para o lado dentro da caixa, nunca a página. Para leitor de tela cada partida tem um resumo falado e "Ver série" é alcançável pelo teclado.
-- Saves do formato antigo (Suíça) são descartados (RunState v3); o Modelo v2 da força subiu para v4, o Modelo v3 para v5 e agentes por mapa + familiaridade para v6 (chave `rtc:run:v6`; temporada `SEASON_VERSION` 3, `rtc:season:v3`).
+- Saves do formato antigo (Suíça) são descartados (RunState v3); o Modelo v2 da força subiu para v4, o Modelo v3 para v5, agentes por mapa + familiaridade para v6 e dificuldade + box scores para v7 (chave `rtc:run:v7`; temporada `SEASON_VERSION` 4 com dificuldade, box scores e mercado, `rtc:season:v4`).
 
 ## Modo Complete Trials (`src/game/season.ts`)
 
 Modo secundário, aprovado e implementado em 2026-10-19: a temporada começa no servidor do jogador. O modo principal (draft → Champions) continua intacto; a temporada tem seu próprio save (`rtc:season:v1`), e os dois podem coexistir.
 
-Fluxo: **Região** → **Draft** (clássico, 3 rerolls, roleta limitada aos elencos da região, de qualquer época) → **Coach** → **Seu time** → **Liga regional** → **Masters** → **Champions** → fim. Quem não fica entre os 3 primeiros da liga termina a run ali ("Eliminado na liga"). Tudo é determinístico pela seed + escolhas (região, campo, draft, veto); as partidas da IA são simuladas em ordem de tabela até a próxima partida do usuário, como no modo principal.
+Fluxo: **Região** → **Draft** (clássico, rerolls da dificuldade — 3 no Normal —, roleta limitada aos elencos da região, de qualquer época) → **Coach** → **Seu time** → **Liga regional** → **Mercado** → **Masters** → **Mercado** → **Champions** → fim. Quem não fica entre os 3 primeiros da liga termina a run ali ("Eliminado na liga"). Tudo é determinístico pela seed + escolhas (região, campo, draft, veto); as partidas da IA são simuladas em ordem de tabela até a próxima partida do usuário, como no modo principal.
 
 ### Campo adversário: Atual × Prime
 Escolhido na tela de região (padrão **Atual**), guardado em `SeasonState.field` e travado quando a liga começa. Os adversários são sempre **um elenco por time** (`fieldRosterFor(teamId, mode)`):
@@ -125,6 +157,14 @@ Escolhido na tela de região (padrão **Atual**), guardado em `SeasonState.field
 
 ### Champions
 16 times, 4 por região, no formato do modo principal (`createTournament`: grupos GSL + playoffs). A região do usuário manda os 4 primeiros da liga (os 3 do Masters + o 4º colocado); cada outra região manda seus times do Masters mais sorteios de times distintos para completar 4. Seeds pela força.
+
+### Mercado de transferências (`src/game/season.ts`, preços em `src/game/market.ts`)
+Pedido do dono (2026-10-20): "um mercado de agentes livres ao fim de cada etapa, quero contratar jogadores novos". Duas janelas, só no Complete Trials: depois da liga (para quem se classificou) e depois do Masters (`SeasonStage` `'market'`, `SeasonState.market`). Ao abrir, o campo da etapa seguinte é sorteado e travado (`MarketState.nextField`), para as ofertas nunca trazerem um jogador que você vai enfrentar; `closeMarket` monta o Masters/Champions com esse campo (seeds pela força já com as contratações) e segue.
+- **Ofertas**: 11 por janela, determinísticas pela seed, da região do usuário e de qualquer época (como o draft), um card por jogador, nunca um jogador do seu elenco nem da próxima etapa. Faixas por OVR dentro da região: 2 estrelas (≥ p90, ~90+), 5 medianos (p50–p90) e 4 baratos (< p50), um deles IGL quando o sorteio tem (o IGL vale muito mais na força do que no OVR). Mais caras primeiro.
+- **Preço** (`playerValue`): US$ 100 mil no OVR 80, dobrando a cada 4 de OVR (76 → 50, 84 → 200, 88 → 400, 92 → 800), × (1 + aura: Estrela 10%, Lenda 20%, GOAT 30% + IGL 15%), arredondado a 5, mínimo 10. `explainPrice` (explain.ts) mostra a conta.
+- **Caixa**: começa com US$ 200 mil; premiação da liga 1º 400 · 2º 300 · 3º 200; do Masters 1º 600 · 2º 450 · 3º 350 · 4º 300 · 5º–6º 200 · 7º–8º 150. O que sobra passa para a próxima janela (`SeasonState.funds`).
+- **Contratar** (`signFreeAgent(temporada, card, sai)`): no máximo **2 por janela**; o contratado ocupa a vaga (mesmo slot) de quem sai; quem sai devolve **50%** do valor dele (crédito antes de cobrar o preço); sem jogador repetido no elenco. `signingPreview` dá slot, encaixe (`cardFit`), preço, crédito, caixa depois e a força antes/depois (com a fase da próxima etapa), ou o motivo do bloqueio. As contratações ficam em `SeasonState.transfers`.
+- **Medido** (`TRIALS_MARKET=1 TRIALS_N=120`, política gulosa: a contratação que mais sobe a força, enquanto houver ganho e caixa): ~1,6 contratação por janela, +1,1 a +1,3 de força cada. Normal: playoffs do Champions 13% → 14%, título 0% → 3%; Fácil 13% → 17% / 5% → 8%; Difícil 8% → 8% / 1% → 0%; Lendário 6% → 7% / 0% → 2% (n pequeno: só ~10–23 temporadas chegam ao Masters). Ajuda, sem decidir sozinho: um time de força ~87 ganha +2 a +3 numa janela boa, o mesmo que uma estrela a mais.
 
 ### Tela, fim e compartilhamento
 - Início: terceiro card "Complete Trials — comece do seu servidor" e "Temporada salva" separada da "Run salva".
@@ -197,6 +237,7 @@ Tempo real: ver docs/ideias-futuras.md (em espera).
 
 ## Balanceamento (estado atual, com dados reais)
 Medido em `src/game/balance.test.ts` (`BALANCE_REPORT=1 BT=12 npx vitest run src/game/balance --silent=false` imprime os números com 12 Champions por time).
+- **Dificuldade** (2026-10-20): ver a seção "Dificuldade". O Normal ficou mais duro (mediano 55% / 1%, topo 26%); os números abaixo são de antes, sem bônus da IA, e correspondem a algo entre Fácil e Normal.
 - **Agentes por mapa, flex natos e familiaridade** (2026-10-20, BT=30, antes → depois): mapa +10 77% / +20 90% (igual); clássico p10/p50/p90 82,2 / 85,9 / 90,0 → 83,3 / 86,8 / 91,4; 10% piores 30% → 34% de playoffs; mediano 71% / 5% → 71% / 5%; top 10% 99% / 47% → 96% / 46%; ultimate mediano 64% / 4% → 68% / 6%, top 35% → 34%. Medido por partes (BT=12): agente e familiaridade não mexem em nada além do ruído; os flex natos sobem a força draftada (~+1, mais no topo) e levaram o título do top 10% a ~55%; a alavanca foi um piso de 2 elencos de elite por campo (`FIELD_ELITE_MIN`), que trouxe o topo de volta a 46% sem tirar do mediano (piso 3: 40% no topo, mas 4% de título no mediano; `FORM_SWING` 9 com piso 2: 43% / 4%).
 - **Modelo v3** (2026-10-20, BT=30): mapa +10 → 77%, +20 → 90%; clássico p10/p50/p90 78,3 / 81,9 / 86,1, 10% piores 31% de playoffs, mediano 69% / 7% de título, top 10% 99% / 47%; ultimate mediano 64% / 4%, top 36%. Antes do v3 (BT=12): mapa 73,5% / 93%; clássico 32% · 73% / 7% · 97% / 46%; ultimate 65% / 2% · 42%. Ou seja, a forma individual, a cadeia de multikill, o encaixe de meta, a fase do torneio e a aura não mexeram no balanceamento de forma mensurável (ruído de BT=12 ≈ ±3,6 pp no título); `FORM_SWING` 10 → 8 compensou a forma individual (σ_p 0,059 → 0,067). Controle sem aura/durão/prodígio (BT=12): top 42% contra 51% com o teto de aura +2 e os mesmos seeds: a diferença (≈ 9 ± 5 pp) vinha sobretudo do durão (30% dos times do decil de cima têm um, contra 9% dos elencos da IA) e da seleção dos times pela força; o teto da aura pessoal caiu para +1 e, com BT=30, o top ficou em 47% (antes do v3: 46%). Nenhuma outra alavanca foi tocada.
 - Mapa: favorito com +10 de força vence ~74–77%; com +20, ~90–93% (a economia pós-pistol, R2 87% / R3 38%, tirou ~1 pp do favorito).

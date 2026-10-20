@@ -22,6 +22,8 @@ export interface SeriesOptions {
   familiarity?: [Partial<Record<MapName, number>>, Partial<Record<MapName, number>>];
   /** Agent → role table for the agent picks, see MapOptions.agentRoles. */
   agentRoles?: AgentRoles;
+  /** Extra strength points per team on every map (MapOptions.adjust), e.g. the difficulty's AI bonus. */
+  adjust?: [number, number];
 }
 
 export interface SeriesMvp {
@@ -88,6 +90,7 @@ export function simulateSeries(a: Lineup, b: Lineup, rng: Rng, opts: SeriesOptio
     if (meta) mapOpts.meta = meta;
     if (opts.familiarity) mapOpts.familiarity = [opts.familiarity[0][map] ?? 0, opts.familiarity[1][map] ?? 0];
     if (opts.agentRoles) mapOpts.agentRoles = opts.agentRoles;
+    if (opts.adjust) mapOpts.adjust = opts.adjust;
     const result = simulateMap(a, b, rng, mapOpts);
     maps.push(result);
     score[result.winner]++;

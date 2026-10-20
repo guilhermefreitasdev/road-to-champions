@@ -415,7 +415,7 @@ describe('explainStrength', () => {
 describe('map familiarity in the run', () => {
   it('counts every map of every match (AI too) and feeds it back into later maps', () => {
     const r = fullRun('classic', 'familiar');
-    expect(RUN_VERSION).toBe(6);
+    expect(RUN_VERSION).toBe(7);
     const recorded = Object.values(r.mapsPlayed).reduce((n, row) => n + Object.values(row ?? {}).reduce((m: number, c) => m + (c ?? 0), 0), 0);
     const played = r.tournament!.matches.reduce((n, m) => n + (m.result ? m.result.score[0] + m.result.score[1] : 0), 0);
     expect(recorded).toBe(2 * played);

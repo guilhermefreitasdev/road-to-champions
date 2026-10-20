@@ -49,8 +49,11 @@ import {
 } from '../engine/tournament';
 import type { Card, Coach, Lineup, MapName, RosterEntry, Slot, TeamIndex } from '../engine/types';
 import { aiChooseMap, applyVeto, createVeto, isVetoComplete, nextTurn, type VetoState } from '../engine/veto';
+import { compactSeries, type CompactSeries } from './boxscore';
+import { DEFAULT_DIFFICULTY, DIFFICULTY_SETTINGS, aiAdjust, difficultySettings, isDifficulty, scoutingLevel, type Difficulty } from './difficulty';
 
 export type { DraftMode } from '../engine/draft';
+export type { Difficulty } from './difficulty';
 
 /** The roster pool used for the draft and the opponents: real rosters (VLR.gg + Liquipedia), see src/data/real. */
 export const RUN_POOL: readonly RosterEntry[] = REAL_ROSTERS;
@@ -61,13 +64,14 @@ export const RUN_META = REAL_META;
 /** Agent → role (valorant-api.com snapshot), for the per-map agent picks (src/engine/agents.ts). */
 export const AGENT_ROLES: AgentRoles = Object.fromEntries(AGENTS.map((a) => [a.name, a.role]));
 /**
- * Save format version: bumped when saved runs stop making sense (v6 = agents per map in the map results, agent
+ * Save format version: bumped when saved runs stop making sense (v7 = difficulty and the box scores of every
+ * series, `boxScores`; v6 = agents per map in the map results, agent
  * and familiarity edges, `mapsPlayed` in the state; v5 = Modelo v3: per-player form, multikills
  * and MVP in every map result, `presence` instead of `consistency`, aura on the cards; v4 = strength v2: five
  * dimensions and the `decision` attribute, stored in every map result; v3 = GSL groups instead of the Swiss
  * stage; v2 = real pool; v1 saves used fictional cards).
  */
-export const RUN_VERSION = 6;
+export const RUN_VERSION = 7;
 
 /** Entrant id of the user's team. Opponents use their roster key (`${teamId}-${eventId}`). */
 export const USER_ID = 'user';
@@ -99,14 +103,20 @@ export interface RunState {
   userSeries: Record<string, SeriesResult>;
   /** Maps every entrant played so far in this Champions (map familiarity, src/engine/familiarity.ts). */
   mapsPlayed: MapsPlayed;
+  /** Difficulty of the run (src/game/difficulty.ts). */
+  difficulty: Difficulty;
+  /** Compact box score of every series played (AI vs AI included), by match id (src/game/boxscore.ts). */
+  boxScores: Record<string, CompactSeries>;
 }
 
 // ---------------------------------------------------------------------------
 // Draft
 // ---------------------------------------------------------------------------
 
-export function createRun(mode: DraftMode, seed: string): RunState {
-  return { version: RUN_VERSION, seed, mode, phase: 'draft', draft: createDraft(RUN_POOL, mode, seed), userSeries: {}, mapsPlayed: {} };
+export function createRun(mode: DraftMode, seed: string, difficulty: Difficulty = DEFAULT_DIFFICULTY): RunState {
+  if (!isDifficulty(difficulty)) throw new Error(`Unknown difficulty "${String(difficulty)}"`);
+  const draft = createDraft(RUN_POOL, mode, seed, DIFFICULTY_SETTINGS[difficulty].rerolls);
+  return { version: RUN_VERSION, seed, mode, phase: 'draft', draft, userSeries: {}, mapsPlayed: {}, difficulty, boxScores: {} };
 }
 
 export function rollDraft(run: RunState): RunState {
@@ -170,13 +180,15 @@ export function startTournament(run: RunState, teamName: string): RunState {
   const name = cleanTeamName(teamName);
   const user = draftLineup(run.draft, RUN_POOL, name);
   const userPlayers = user.players.map((p) => p.card.playerId);
-  const opponents = pickField(run.seed, userPlayers);
+  const opponents = pickField(run.seed, userPlayers, run.difficulty);
 
-  // Seeds by the strength of the lineups as they enter this Champions (tournament form included).
+  // Seeds by the strength of the lineups as they enter this Champions (tournament form included; the AI with the
+  // difficulty's bonus, as it plays the user).
   const named: RunState = { ...run, teamName: name, opponents };
+  const bonus = difficultySettings(run.difficulty).aiBonus;
   const field = [
     { id: USER_ID, name, strength: teamStrength(lineupOf(named, USER_ID)).total },
-    ...opponents.map((id) => ({ id, name: rosterByKey(id).teamName, strength: teamStrength(lineupOf(named, id)).total })),
+    ...opponents.map((id) => ({ id, name: rosterByKey(id).teamName, strength: teamStrength(lineupOf(named, id)).total + bonus })),
   ].sort((x, y) => y.strength - x.strength || (x.id < y.id ? -1 : 1));
 
   const tournament = createTournament(field.map((t, i) => ({ id: t.id, name: t.name, seed: i + 1 })));
@@ -191,15 +203,13 @@ export function startTournament(run: RunState, teamName: string): RunState {
  * short of the floor the next elite rosters in that order replace the last non-elite ones.
  */
 export const FIELD_ELITE_SHARE = 0.2;
-/** 3 since strength v2 (was 2): the IGL-only top decile of drafted teams needed one more real contender. */
-export const FIELD_ELITE_CAP = 3;
 /**
- * At least this many elite rosters per field. Natural flexes lift drafted teams (a flex nato fills a slot at 100%);
- * with the real flex data and Viper counted as controller + sentinel (2026-10-20) a floor of 2 let the median
- * drafted team reach the playoffs 81% of the time; 3 brings it to 75% (title 5%), top decile 41%, bottom 39%
- * (BT=30, src/game/balance.test.ts).
+ * Elite cap and floor of the Normal difficulty; every level has its own (DIFFICULTY_SETTINGS, src/game/difficulty.ts).
+ * History: cap 3 since strength v2 (was 2), floor 3 since the real flex data (2026-10-20); the difficulty ladder
+ * (2026-10-20) made Normal harder (docs/design.md, "Dificuldade").
  */
-export const FIELD_ELITE_MIN = 3;
+export const FIELD_ELITE_CAP = DIFFICULTY_SETTINGS.normal.eliteCap;
+export const FIELD_ELITE_MIN = DIFFICULTY_SETTINGS.normal.eliteMin;
 
 const aiStrength = (entry: RosterEntry): number => teamStrength(realLineup(entry)).total;
 const ELITE_FLOOR = (() => {
@@ -208,8 +218,9 @@ const ELITE_FLOOR = (() => {
 })();
 const TEAM_TOTAL = new Set(RUN_POOL.map((e) => e.teamId)).size;
 
-/** Roster keys of the 15 opponents for a run (deterministic from the seed). */
-export function pickField(seed: string, exclude: readonly string[]): string[] {
+/** Roster keys of the 15 opponents for a run (deterministic from the seed), with the difficulty's elite floor and cap. */
+export function pickField(seed: string, exclude: readonly string[], difficulty: Difficulty = DEFAULT_DIFFICULTY): string[] {
+  const { eliteMin: FIELD_ELITE_MIN, eliteCap: FIELD_ELITE_CAP } = DIFFICULTY_SETTINGS[difficulty];
   const order = pickOpponents(RUN_POOL, TEAM_TOTAL, seed, exclude);
   const isElite = order.map((e) => aiStrength(e) >= ELITE_FLOOR);
   const chosen = new Set<number>();
@@ -285,13 +296,14 @@ export function playUserMatch(run: RunState): RunState {
     ...run,
     tournament,
     userSeries: { ...run.userSeries, [match.id]: series },
+    boxScores: { ...run.boxScores, [match.id]: compactSeries(series, match.a, match.b) },
     mapsPlayed: recordSeriesMaps(run.mapsPlayed, match, series),
   };
   delete next.veto;
   return advance(next);
 }
 
-type SharedSeriesOptions = Pick<SeriesOptions, 'pool' | 'formSeed' | 'meta' | 'familiarity' | 'agentRoles'>;
+type SharedSeriesOptions = Pick<SeriesOptions, 'pool' | 'formSeed' | 'meta' | 'familiarity' | 'agentRoles' | 'adjust'>;
 
 /**
  * Series options shared by the user's and the AI's matches: map pool, per-player form seeds, the agent meta and
@@ -305,6 +317,8 @@ function seriesOptions(run: RunState, match: Pick<TMatch, 'id' | 'a' | 'b'>): Sh
     agentRoles: AGENT_ROLES,
   };
   if (RUN_META) opts.meta = RUN_META;
+  const adjust = aiAdjust(match.a, match.b, USER_ID, run.difficulty);
+  if (adjust) opts.adjust = adjust;
   return opts;
 }
 
@@ -350,7 +364,7 @@ export function mapFamiliarity(run: Pick<RunState, 'mapsPlayed'>, teamId: string
  * ids get a suffix so they never clash with an opponent's copy.
  */
 export function lineupOf(run: RunState, id: string): Lineup {
-  const formSeed = `${run.seed}:form`;
+  const formSeed = runFormSeed(run);
   if (id === USER_ID) {
     const lineup = draftLineup(run.draft, RUN_POOL, run.teamName ?? DEFAULT_TEAM_NAME);
     const suffixed = { ...lineup, players: lineup.players.map((p) => ({ ...p, card: { ...p.card, id: `${p.card.id}#user` } })) };
@@ -361,7 +375,12 @@ export function lineupOf(run: RunState, id: string): Lineup {
 
 /** The user's lineup as the Team screen shows it (same cards and form as lineupOf, without the id suffix). */
 export function userLineup(run: RunState): Lineup {
-  return applyTournamentForm(draftedLineup(run), `${run.seed}:form`, prodigyGrowth(userStagesReached(run)));
+  return applyTournamentForm(draftedLineup(run), runFormSeed(run), prodigyGrowth(userStagesReached(run)));
+}
+
+/** Seed base of the run's tournament form (applyTournamentForm). */
+export function runFormSeed(run: Pick<RunState, 'seed'>): string {
+  return `${run.seed}:form`;
 }
 
 /** Stages the user reached in this run (prodigy growth): 0 groups, 1 playoffs, 2 top 4, 3 grand final. */
@@ -397,7 +416,7 @@ export function teamInfo(run: RunState, id: string): TeamInfo {
     subtitle: isUser ? 'Seu time' : rosterByKey(id).eventName,
     isUser,
     seed: entrant?.seed ?? 0,
-    strength: teamStrength(lineupOf(run, id)).total,
+    strength: teamStrength(lineupOf(run, id)).total + (isUser ? 0 : difficultySettings(run.difficulty).aiBonus),
   };
 }
 
@@ -665,7 +684,7 @@ export interface ScoutHint {
 
 /** Scouting of the opponent's veto preferences: map comfort plus the familiarity it gained in this run. */
 export function vetoScouting(run: RunState, opponentId: string): { level: number; hints: ScoutHint[] } {
-  const level = run.draft.coachId ? findCoach(RUN_POOL, run.draft.coachId)?.vetoBonus ?? 0 : 0;
+  const level = scoutingLevel(run.draft.coachId ? findCoach(RUN_POOL, run.draft.coachId)?.vetoBonus ?? 0 : 0, run.difficulty);
   const affinity = vetoLineup(run, opponentId).mapAffinity ?? {};
   const all = RUN_MAP_POOL.map((map) => ({ map, value: affinity[map] ?? 0 })).sort(
     (x, y) => y.value - x.value || (x.map < y.map ? -1 : 1),
@@ -692,6 +711,8 @@ export function parseRun(data: unknown): RunState | null {
     if (!run.draft || typeof run.draft !== 'object' || !Array.isArray(run.draft.picks)) return null;
     if (!run.userSeries || typeof run.userSeries !== 'object') return null;
     if (!run.mapsPlayed || typeof run.mapsPlayed !== 'object') return null;
+    if (!isDifficulty(run.difficulty)) return null;
+    if (!run.boxScores || typeof run.boxScores !== 'object') return null;
     // Past the draft, the lineup and the coach must be complete.
     if (run.phase !== 'draft' && (run.draft.picks.length !== 5 || run.draft.phase !== 'done')) return null;
     // Every referenced card, coach and opponent must still exist in the pool.
@@ -742,7 +763,7 @@ function resolveOpponentTurns(run: RunState, match: TMatch, userSide: TeamIndex,
   let state = start;
   for (let turn = nextTurn(state); turn && turn.team !== userSide; turn = nextTurn(state)) {
     const rng = createRng(`${run.seed}:${match.id}:veto:${state.steps.length}`);
-    state = applyVeto(state, aiChooseMap(state, lineups, rng));
+    state = applyVeto(state, aiChooseMap(state, lineups, rng, difficultySettings(run.difficulty).vetoNoise));
   }
   return state;
 }
@@ -751,6 +772,7 @@ function resolveOpponentTurns(run: RunState, match: TMatch, userSide: TeamIndex,
 function advance(run: RunState): RunState {
   let tournament = requireTournament(run);
   let mapsPlayed = run.mapsPlayed;
+  const boxScores = { ...run.boxScores };
   for (let guard = 0; guard < 1000 && tournament.phase !== 'done'; guard++) {
     const [next] = pendingMatches(tournament);
     if (!next || involvesUser(next)) break;
@@ -760,6 +782,7 @@ function advance(run: RunState): RunState {
     });
     tournament = reportResult(tournament, next.id, { winner: series.winner, score: series.score });
     mapsPlayed = recordSeriesMaps(mapsPlayed, next, series);
+    boxScores[next.id] = compactSeries(series, next.a, next.b);
   }
-  return { ...run, tournament, mapsPlayed, phase: tournament.phase === 'done' ? 'done' : 'tournament' };
+  return { ...run, tournament, mapsPlayed, boxScores, phase: tournament.phase === 'done' ? 'done' : 'tournament' };
 }

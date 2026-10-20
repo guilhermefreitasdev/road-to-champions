@@ -38,9 +38,10 @@ export interface DraftState {
   coachId?: string;
 }
 
-export function createDraft(pool: readonly RosterEntry[], mode: DraftMode, seed: string): DraftState {
+/** `rerolls` = classic rerolls (CLASSIC_REROLLS by default; the difficulty sets it, src/game/difficulty.ts). */
+export function createDraft(pool: readonly RosterEntry[], mode: DraftMode, seed: string, rerolls: number = CLASSIC_REROLLS): DraftState {
   if (mode === 'classic') {
-    return { mode, seed, phase: 'roll', rerollsLeft: CLASSIC_REROLLS, rollCount: 0, picks: [] };
+    return { mode, seed, phase: 'roll', rerollsLeft: Math.max(0, Math.floor(rerolls)), rollCount: 0, picks: [] };
   }
   return { mode, seed, phase: 'pick', rerollsLeft: 0, rollCount: 0, picks: [], options: ultimateOptions(pool, seed)[0]! };
 }
