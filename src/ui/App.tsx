@@ -41,6 +41,7 @@ export function App() {
 
 const BOOT_NAV: NavItem[] = [
   { key: 'home', label: 'Início', active: true, disabled: true },
+  { key: 'daily', label: 'Diário', active: false, disabled: true },
   { key: 'ranking', label: 'Ranking', active: false, disabled: true },
   { key: 'history', label: 'Histórico', active: false, disabled: true },
   { key: 'howto', label: 'Como jogar', active: false, disabled: true },

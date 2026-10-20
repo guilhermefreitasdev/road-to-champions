@@ -33,6 +33,8 @@ export type IconName =
   | 'medal'
   | 'podium'
   | 'install'
+  | 'calendar'
+  | 'mask'
   | 'role-duelist'
   | 'role-initiator'
   | 'role-controller'
@@ -74,6 +76,8 @@ const PATHS: Record<IconName, string> = {
   medal: 'M8 3l3 6.5M16 3l-3 6.5M12 21a5.5 5.5 0 100-11 5.5 5.5 0 000 11zM12 13.2v4.6',
   podium: 'M9 8h6v12H9zM3 13h6v7H3zM15 11h6v9h-6zM12 3l.9 1.9 2 .3-1.5 1.4.4 2-1.8-1-1.8 1 .4-2-1.5-1.4 2-.3z',
   install: 'M12 3v11M7.5 9.5L12 14l4.5-4.5M5 15v5h14v-5',
+  calendar: 'M4 6h16v14H4zM4 10h16M8 3v4M16 3v4',
+  mask: 'M3 8c3-1.5 6-1.5 9 0 3-1.5 6-1.5 9 0v3c0 3.5-3 5.5-5.5 5.5-1.6 0-2.6-1-3.5-2.5-.9 1.5-1.9 2.5-3.5 2.5C6 16.5 3 14.5 3 11zM7 11.5h2.5M14.5 11.5H17',
   'role-duelist': 'M13 2L5 14h6l-1 8 8-12h-6z',
   'role-initiator': 'M2 12s3.6-6 10-6 10 6 10 6-3.6 6-10 6S2 12 2 12zM12 9.5a2.5 2.5 0 100 5 2.5 2.5 0 000-5z',
   'role-controller': 'M7 18h10a4 4 0 00.6-8A6 6 0 006.3 9 4.5 4.5 0 007 18z',

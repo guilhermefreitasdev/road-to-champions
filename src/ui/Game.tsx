@@ -45,6 +45,7 @@ import { loadRun, loadSeason, newSeed, saveRun, saveSeason } from './storage';
  */
 
 const Coach = lazyScreen(() => import('./screens/Coach').then((m) => m.Coach));
+const Daily = lazyScreen(() => import('./screens/Daily').then((m) => m.Daily));
 const Draft = lazyScreen(() => import('./screens/Draft').then((m) => m.Draft));
 const End = lazyScreen(() => import('./screens/End').then((m) => m.End));
 const History = lazyScreen(() => import('./screens/History').then((m) => m.History));
@@ -62,7 +63,7 @@ const Team = lazyScreen(() => import('./screens/Team').then((m) => m.Team));
 const Veto = lazyScreen(() => import('./screens/Veto').then((m) => m.Veto));
 
 /** Most likely next screens first. */
-const PREFETCH = [Draft, Coach, Team, Hub, Veto, Playback, Series, End, Region, SeasonHub, Market, SeasonEnd, Stats, HowTo, Ranking, History];
+const PREFETCH = [Draft, Coach, Team, Hub, Veto, Playback, Series, End, Region, SeasonHub, Market, SeasonEnd, Stats, HowTo, Ranking, History, Daily];
 
 /** Fetches every screen's chunk once the browser is idle (each is small; failures are retried when shown). */
 function prefetchScreens(): () => void {
@@ -85,6 +86,7 @@ type SeasonState = season.SeasonState;
  */
 type View =
   | { kind: 'home' }
+  | { kind: 'daily' }
   | { kind: 'history' }
   | { kind: 'howto' }
   | { kind: 'ranking' }
@@ -99,11 +101,12 @@ type View =
   | { kind: 'season-series'; key: string }
   | { kind: 'season-playback'; key: string };
 
-type ScreenKey = 'home' | 'history' | 'howto' | 'ranking' | 'region' | 'market' | 'draft' | 'coach' | 'team' | 'hub' | 'stats' | 'veto' | 'playback' | 'series' | 'end';
+type ScreenKey = 'home' | 'daily' | 'history' | 'howto' | 'ranking' | 'region' | 'market' | 'draft' | 'coach' | 'team' | 'hub' | 'stats' | 'veto' | 'playback' | 'series' | 'end';
 type Game = 'run' | 'season' | null;
 
 function screenOf(run: RunState | null, s: SeasonState | null, view: View): { screen: ScreenKey; game: Game } {
   if (view.kind === 'home') return { screen: 'home', game: null };
+  if (view.kind === 'daily') return { screen: 'daily', game: null };
   if (view.kind === 'history') return { screen: 'history', game: null };
   if (view.kind === 'howto') return { screen: 'howto', game: null };
   if (view.kind === 'ranking') return { screen: 'ranking', game: null };
@@ -282,6 +285,7 @@ export function Game() {
     to ? { key, label, active, onSelect: () => setView(to) } : { key, label, active };
   const nav: NavItem[] = [
     item('home', 'Início', { kind: 'home' }, screen === 'home'),
+    item('daily', 'Diário', { kind: 'daily' }, screen === 'daily'),
     item('stats', 'Estatísticas', statsTarget, screen === 'stats'),
     item('ranking', 'Ranking', { kind: 'ranking' }, screen === 'ranking'),
     item('history', 'Histórico', { kind: 'history' }, screen === 'history'),
@@ -343,9 +347,11 @@ export function Game() {
           onHistory={() => setView({ kind: 'history' })}
           onHowTo={() => setView({ kind: 'howto' })}
           onRanking={() => setView({ kind: 'ranking' })}
+          onDaily={() => setView({ kind: 'daily' })}
         />
       )}
       <Suspense fallback={<ScreenLoading />}>
+        {screen === 'daily' && <Daily onExit={() => setView({ kind: 'home' })} />}
         {screen === 'howto' && <HowTo onBack={() => setView({ kind: 'home' })} />}
         {screen === 'ranking' && <Ranking onBack={() => setView({ kind: 'home' })} />}
         {screen === 'history' && (

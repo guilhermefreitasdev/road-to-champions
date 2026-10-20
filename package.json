@@ -14,6 +14,7 @@
     "data:game": "node scripts/fetch-game-data.mjs",
     "data:vlr": "NODE_USE_ENV_PROXY=1 node scripts/vlr/run.mjs",
     "data:vlr-agents": "NODE_USE_ENV_PROXY=1 node scripts/vlr/agents.mjs",
+    "data:vlr-series": "NODE_USE_ENV_PROXY=1 node scripts/vlr/series.mjs",
     "data:liquipedia": "NODE_USE_ENV_PROXY=1 node scripts/liquipedia/run.mjs",
     "data:media": "NODE_USE_ENV_PROXY=1 node scripts/media/run.mjs",
     "icons": "NODE_USE_ENV_PROXY=1 node scripts/pwa-icons.mjs"

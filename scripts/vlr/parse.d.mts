@@ -139,3 +139,29 @@ export function aggregateAgentStats(
 
 /** The subset of a full event file that src/data/real/cards.ts reads (vlr/slim.json). */
 export function slimEvent(event: unknown): unknown;
+
+export interface SeriesPage {
+  eventId: number | null;
+  eventPath: string | null;
+  stage: string | null;
+  round: string | null;
+  date: string | null;
+  bestOf: number | null;
+  teams: { id: number | null; slug: string | null; name: string | null }[];
+  score: (number | null)[];
+  maps: { map: string | null; score: number[]; pickedBy: 1 | 2 | null }[];
+}
+export function parseSeriesPage(html: string): SeriesPage;
+export function seriesProblem(s: SeriesPage): string | null;
+export interface CompactSeries {
+  id: number;
+  event: string;
+  stage: string | null;
+  round: string | null;
+  date: string | null;
+  bo: number | null;
+  teams: [number | null, string | null, string | null][];
+  score: (number | null)[];
+  maps: [string | null, number, number, 1 | 2 | null][];
+}
+export function compactSeries(matchId: number, eventSlug: string, s: SeriesPage): CompactSeries;

@@ -68,6 +68,15 @@ O VLR só mostra os 3 agentes mais jogados de cada jogador por evento. Para o po
 - Cobertura (2026-10-20): 1.159 das 1.968 séries concluídas dos 57 eventos (todas as dos 18 internacionais; nas etapas regionais, pelo menos 1–2 séries por time e mais nos playoffs), 3.016 mapas, 30.158 linhas jogador-mapa (8 sem agente único), 637 jogadores, 6.122 células jogador-ano-agente. O arquivo tem 454 KB (82 KB gzip). Destas séries, 600 foram baixadas para isto em 2026-10-20 (601 pedidos, cerca de 25 min: 259 dos internacionais de 2021–2024 e 341 regionais); as outras 559 já estavam no cache.
 - Pesquisa por trás (docs/pesquisa-variancia.md §9.1): o desempenho jogador × agente medido é quase todo ruído de amostra. Por isso os números por agente aparecem com o tamanho da amostra (`maps`) e o motor só os usa encolhidos pela amostra e limitados (`src/engine/agents.ts`).
 
+### Resultados de séries (`src/data/real/series.json`, para o Diário)
+
+O "Placar Clássico" do Diário precisa do placar de séries reais. `scripts/vlr/series.mjs` (`npm run data:vlr-series`) lê as mesmas páginas de partida do cache e grava uma linha compacta por série: id da partida no VLR, evento (slug), fase e rodada como o VLR rotula ("Playoffs" / "Grand Final", do cabeçalho "Playoffs: Grand Final"), data (UTC), MD (da nota "Bo3"), os dois times na ordem do cabeçalho (`[id VLR, slug, nome]`), placar da série e cada mapa jogado (`[mapa, rounds 1, rounds 2, quem escolheu: 1, 2 ou null]`).
+
+- Parser puro `parseSeriesPage` e checagem `seriesProblem` em `parse.mjs` (testados em `src/data/real/series.test.ts` com o trecho da final do Champions 2022 em `__fixtures__/match-130685.html`): só entra série com os dois times, MD, placar fechado (o vencedor com ⌈MD/2⌉ mapas), mapas que somam o placar e vencedor de cada mapa batendo com ele. Showmatches ficam de fora (5).
+- `src/data/real/series.ts` resolve cada time para o id do pool (o mesmo `teamIdResolver` dos cards, para logos e elencos) e junta nome curto, tier e ano do evento (`SERIES`).
+- Cobertura (2026-10-20): **1.358 séries** de 1.968 concluídas: todas as dos 18 internacionais e todas as de playoffs das 39 etapas regionais (as 204 que faltavam foram baixadas para isto: 205 pedidos, ~8,5 min, mesmo cliente educado); o resto das semanas regulares fica como o cache já tinha. 358 KB (35 KB gzip), só no chunk do Diário.
+- `--plan` mostra o que `--fetch` baixaria (sem rede); sem flag, gera o JSON só do cache.
+
 ## Como regenerar
 
 ```bash
@@ -79,6 +88,7 @@ npm run data:vlr -- --refresh        # baixa de novo páginas já em cache
 npm run data:vlr-agents              # agent-stats.json só a partir do cache (sem rede)
 npm run data:vlr-agents -- --plan    # mostra o que --fetch baixaria (sem rede) e gera o JSON
 npm run data:vlr-agents -- --fetch   # baixa páginas de partida que faltam (máx. 600 por rodada, --max-new N) e gera o JSON
+npm run data:vlr-series              # series.json só a partir do cache (--plan / --fetch: playoffs regionais que faltam)
 ```
 
 Ordem do `--fetch` de `data:vlr-agents`: primeiro todas as séries dos internacionais que faltam no cache; depois, nas etapas regionais, séries escolhidas para que todo time da etapa tenha pelo menos 1, depois 2, depois 3 séries no cache (cada nível em todas as etapas antes do seguinte, para o teto se espalhar por igual). Usa o mesmo cliente educado (`fetch.mjs`).

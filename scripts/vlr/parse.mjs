@@ -643,3 +643,100 @@ export function slimEvent(e) {
     })),
   };
 }
+
+// ---------------------------------------------------------------------------------------------
+// Series results (/{matchId}/{slug}): the compact record the Daily mode's "Placar Clássico" reads
+
+/**
+ * Result of a series from its match page: event (VLR id and path), stage and round as VLR labels them
+ * ("Playoffs" / "Grand Final"; the header reads "Playoffs: Grand Final"), date (UTC day), best-of (from the
+ * "Bo3" note), the two teams in header order (VLR id, slug, name), the series score and every played map (name,
+ * the two scores in header order, who picked it: 1, 2 or null for the decider/remaining map). A map without both
+ * scores is skipped (not played); anything missing is null, never guessed.
+ */
+export function parseSeriesPage(html) {
+  const $ = cheerio.load(html);
+  const $event = $('a.match-header-event').first();
+  const event = idFromHref($event.attr('href'), 'event');
+  const seriesText = clean($event.find('.match-header-event-series').text()) || '';
+  const sep = seriesText.indexOf(':');
+  const stage = sep >= 0 ? clean(seriesText.slice(0, sep)) || null : null;
+  const round = clean(sep >= 0 ? seriesText.slice(sep + 1) : seriesText) || null;
+  const ts = $('.match-header-date .moment-tz-convert').first().attr('data-utc-ts') ?? null;
+  const teams = [1, 2].map((n) => {
+    const $a = $(`.match-header-vs a.match-header-link.mod-${n}`).first();
+    const team = idFromHref($a.attr('href'), 'team');
+    return { id: team?.id ?? null, slug: team?.slug ?? null, name: clean($a.find('.wf-title-med').text()) || null };
+  });
+  const scoreSpans = $('.match-header-vs-score .sp-hide span').filter((_, s) => !$(s).hasClass('match-header-vs-score-colon'));
+  const score = scoreSpans.length === 2 ? scoreSpans.map((_, s) => num($(s).text())).get() : [null, null];
+  let bestOf = null;
+  $('.match-header-vs-note').each((_, n) => {
+    const m = clean($(n).text()).match(/^Bo([1-7])$/i);
+    if (m) bestOf = Number(m[1]);
+  });
+  const maps = [];
+  $('.vm-stats-game').each((_, g) => {
+    const gameId = $(g).attr('data-game-id');
+    if (!gameId || gameId === 'all') return;
+    const $header = $(g).find('.vm-stats-game-header').first();
+    const $name = $header.find('.map .map-name').first().clone();
+    const pickedClass = $name.find('.picked').attr('class') ?? '';
+    $name.find('.picked').remove();
+    const scores = $header
+      .find('.team .score')
+      .map((__, s) => num($(s).text()))
+      .get();
+    if (scores.length !== 2 || scores.some((s) => s === null)) return;
+    const pickedBy = /\bmod-1\b/.test(pickedClass) ? 1 : /\bmod-2\b/.test(pickedClass) ? 2 : null;
+    maps.push({ map: clean($name.text()) || null, score: scores, pickedBy });
+  });
+  return {
+    eventId: event?.id ?? null,
+    eventPath: $event.attr('href') ?? null,
+    stage,
+    round,
+    date: ts ? ts.slice(0, 10) : null,
+    bestOf,
+    teams,
+    score,
+    maps,
+  };
+}
+
+/**
+ * Checks a parsed series for the Daily mode: both teams known, a best-of, a decided score that the played maps
+ * add up to (each map won by the side the score credits) and a winner with exactly ceil(bestOf / 2) maps.
+ * Returns null when it is usable, else the reason (forfeits, unfinished pages, missing maps...).
+ */
+export function seriesProblem(s) {
+  if (isShowmatch(s.stage) || isShowmatch(s.round)) return 'showmatch';
+  if (!s.teams.every((t) => t.id !== null && t.name)) return 'team missing';
+  if (!s.bestOf) return 'best-of missing';
+  if (s.score.some((x) => x === null)) return 'score missing';
+  const need = Math.ceil(s.bestOf / 2);
+  if (Math.max(...s.score) !== need || s.score[0] === s.score[1]) return 'score is not a finished series';
+  if (s.maps.length !== s.score[0] + s.score[1]) return 'maps do not add up to the score';
+  const wins = [0, 0];
+  for (const m of s.maps) {
+    if (!m.map || m.score[0] === m.score[1]) return 'map without a winner';
+    wins[m.score[0] > m.score[1] ? 0 : 1]++;
+  }
+  if (wins[0] !== s.score[0] || wins[1] !== s.score[1]) return 'map winners do not match the score';
+  return null;
+}
+
+/** Compact series.json row: [vlrId, slug, name] per team, maps as [name, score1, score2, pickedBy]. */
+export function compactSeries(matchId, eventSlug, s) {
+  return {
+    id: matchId,
+    event: eventSlug,
+    stage: s.stage,
+    round: s.round,
+    date: s.date,
+    bo: s.bestOf,
+    teams: s.teams.map((t) => [t.id, t.slug, t.name]),
+    score: s.score,
+    maps: s.maps.map((m) => [m.map, m.score[0], m.score[1], m.pickedBy]),
+  };
+}

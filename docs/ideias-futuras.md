@@ -33,7 +33,8 @@ Status: decidido em 2026-10-19 deixar para depois. MVP usa snapshot estático ge
 Decisão do dono (20/10/2026): o Valdle sai do jogo principal e vira uma aba "Outros modos", em duas versões
 criativas e separadas:
 - **Cena pro**: tudo sobre o cenário e os pros (Pro Clássico, Quem jogou de…, Comp Misteriosa, Grade 3x3, Conexões,
-  Linha do Tempo, Veto Quiz — ver `docs/design.md`, "Modo Diário").
+  Linha do Tempo, Veto Quiz — a lista antiga estava em `docs/design.md`; o Diário implementado em 2026-10-20 ficou só com
+  4 desafios da cena pro: Linhas Históricas, Quem é o Pro, O Impostor e Placar Clássico).
 - **Jogo clássico**: só o Valorant em si (Agente Clássico, Habilidade, Fala, Mapa, Callout, Arma).
 
 ### "Acerte o ace" (ideia do dono)

@@ -2,6 +2,7 @@ import type { ReactNode } from 'react';
 import type { DraftMode } from '../../engine/draft';
 import { MODE_LABELS } from '../../game/labels';
 import { DIFFICULTY_LABELS, DIFFICULTY_SETTINGS, type Difficulty } from '../../game/difficulty';
+import { DailyHomeCard } from '../components/DailyHomeCard';
 import { DifficultyPicker } from '../components/Difficulty';
 import { Emblem } from '../components/Emblem';
 import { Icon } from '../components/Icon';
@@ -32,6 +33,8 @@ interface Props {
   /** Difficulty of the next game started here (remembered between visits). */
   difficulty: Difficulty;
   onDifficulty: (d: Difficulty) => void;
+  /** Opens the Daily ("Diário"); absent while the game loads (the card shows today's progress anyway). */
+  onDaily?: () => void;
 }
 
 export function Home({
@@ -49,6 +52,7 @@ export function Home({
   onRanking,
   difficulty,
   onDifficulty,
+  onDaily,
 }: Props) {
   return (
     <div className="screen home" aria-busy={!ready}>
@@ -86,6 +90,8 @@ export function Home({
           </section>
         )
       )}
+
+      <DailyHomeCard onOpen={onDaily} />
 
       <section className="modes" aria-labelledby="modes-title">
         <h2 id="modes-title" className="section-label">

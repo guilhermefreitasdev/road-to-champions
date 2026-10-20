@@ -35,17 +35,27 @@ export function withDifficulty(text: string, difficulty?: Difficulty): string {
 }
 
 /** Spoiler-free share box: the text, copy and (when available) the native share sheet. */
-export function SharePanel({ text: base, difficulty }: { text: string; difficulty?: Difficulty }) {
+export function SharePanel({
+  text: base,
+  difficulty,
+  title = 'Compartilhe sua run',
+  note = 'Sem spoiler: só o caminho, sem nomes de time ou jogador.',
+}: {
+  text: string;
+  difficulty?: Difficulty;
+  title?: string;
+  note?: string;
+}) {
   const text = withDifficulty(base, difficulty);
   const [copied, setCopied] = useState<'idle' | 'ok' | 'fail'>('idle');
   const canShare = typeof navigator !== 'undefined' && typeof navigator.share === 'function';
   return (
     <section className="panel share-panel" aria-labelledby="share-title">
       <h2 id="share-title">
-        Compartilhe sua run
+        {title}
         {difficulty && <DifficultyBadge difficulty={difficulty} />}
       </h2>
-      <p className="small muted">Sem spoiler: só o caminho, sem nomes de time ou jogador.</p>
+      <p className="small muted">{note}</p>
       {/* Exactly what gets copied: plain text, no emoji, so it reads the same in any chat app. */}
       <pre className="share">{text}</pre>
       <div className="share-actions">

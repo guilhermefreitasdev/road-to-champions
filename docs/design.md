@@ -9,7 +9,7 @@ jogadores históricos (card = jogador + evento, ex.: "aspas @ LOUD, Champions 20
 | Draft (MVP) | Roleta time+evento → escolhe 1 jogador → slot de função (DUE/INI/CON/SEN/FLEX). 5 picks + coach, 3 rerolls. Champions de 16 times: 4 grupos GSL (A–D) → playoffs dupla eliminação, final MD5 (ver "Formato do Champions") |
 | Ultimate Draft | 5 opções fixas por pick (seed por run), sem reroll |
 | Complete Trials (secundário) | Comece do seu servidor: escolha a região (Americas/EMEA/Pacific/China) e o campo (Atual ou Prime), drafte só com elencos de times dela, dispute a liga regional (12 times), o Masters (8) e o Champions (16). Ver "Modo Complete Trials" |
-| Diário / Valdle | Hub de minijogos diários: Cena Pro + Jogo (detalhado abaixo) |
+| Diário | 4 desafios por dia iguais para todos: Linhas Históricas, Quem é o Pro, O Impostor, Placar Clássico (ver "Modo Diário"). Minijogos estilo Valdle ficaram para "Outros modos" (`docs/ideias-futuras.md`) |
 | Carreira | Org em liga regional (Americas/EMEA/Pacific/China): Kickoff → Stage 1 → Masters → Stage 2 → Champions. Transferências, patrocínio, base (Challengers), aura Rising→Star→Legend→GOAT |
 | Online | Ranked 1v1, lobby de 8 managers (fase final, precisa backend) |
 
@@ -175,54 +175,36 @@ Pedido do dono (2026-10-20): "um mercado de agentes livres ao fim de cada etapa,
 ### Balanceamento (medido em `src/game/season.test.ts`, `TRIALS_REPORT=1`)
 Com o drafter guloso por OVR (o mesmo do `balance.test.ts`), n = 40 por campo: **Atual**: 15% chegam ao Masters, 8% ao top 4 do Masters, 0% de título; **Prime**: 13% / 5% / 0%. Ficar entre os 3 de 12 contra elencos reais de nível internacional é bem mais duro que o top 8 de 16 do modo principal (~74%). Com agentes por mapa, flex natos e familiaridade (2026-10-20, `TRIALS_N=120`, antes → depois): **Atual** 28% / 18% / 4% → 29% / 15% / 3%; **Prime** 11% / 4% / 0% → 10% / 7% / 0%, dentro do ruído. Pendente: decidir se a liga deve ter mais vagas, um teto de elencos de elite (como `FIELD_ELITE_CAP` no modo principal) ou rerolls extras; nada no motor foi tocado.
 
-## Modo Diário (inspirado em valdle.gg / Loldle)
+## Modo Diário (`src/game/daily/`, telas `src/ui/screens/Daily*.tsx`)
 
-Status: ideia aprovada em 2026-10-19 — guardada, ainda sem implementação.
+Implementado em 2026-10-20, no estilo do Daily do Road to Major: **quatro desafios por dia, iguais para todos**, todos sobre a cena pro e todos tirados dos nossos dados (nada inventado). As abas no estilo Valdle (Pro Clássico, Agente, Habilidade, Mapa, Callout, Grade 3x3, Conexões...) saíram daqui e ficaram para o projeto "Outros modos" (`docs/ideias-futuras.md`).
 
-Hub com duas abas, um desafio novo por dia, igual para todos.
+### Calendário e determinismo (`calendar.ts`)
+- O dia é a data do calendário em **America/Sao_Paulo** (`dayKeyAt`, via `Intl`, então segue o banco de fusos, inclusive o horário de verão antigo); vira à meia-noite de Brasília. Contas de dias em números de dia UTC (`dayNumber`), sem depender do fuso da máquina.
+- Numeração: **#1 = 2026-10-01** (`DAILY_LAUNCH`), alguns dias antes do lançamento para o arquivo já ter dias.
+- Sem backend e sem `Math.random`: cada desafio usa `createRng("daily:<data>:<desafio>")`. Os dias são planejados em ordem a partir do #1 (`createDailyGenerator`): cada dia olha os anteriores para não repetir. 400 dias levam ~0,3 s e o resultado de uma data é o mesmo por qualquer caminho (testado). O Diário fica estável enquanto o snapshot de dados não muda.
 
-### Aba "Cena Pro" (diferencial: usa nossos dados de jogadores/eventos)
-1. **Pro Clássico** — adivinhar o jogador. Cada palpite compara:
-   Time atual · Região · País · Função · Agente principal · Ano de estreia (↑↓) · Títulos internacionais (↑↓) · Rating de carreira (↑↓).
-   🟩 igual · 🟨 parcial (mesma região/time anterior/função secundária) · 🟥 diferente · ↑↓ para números.
-2. **Quem é o Pro** — linha de stats de um evento (rating, ACS, agentes); dicas reveladas a cada erro (evento → time → país).
-3. **O Impostor** — 5 jogadores, um nunca jogou pelo time X.
-4. **Placar Clássico** — adivinhar o placar/vencedor de uma série histórica.
-5. **Elenco** — "Fnatic @ Masters Tokyo 2023": complete os 5 titulares.
+### Os quatro desafios (5 pontos cada, 20 por dia)
+| Desafio | Regra | Pontos | Conta como acerto ("N/4") |
+|---|---|---|---|
+| **Linhas Históricas** | Time + evento (logo da época, evento, colocação, região): escreva os 5 titulares (os 5 cards do elenco), em qualquer ordem, com autocomplete sobre os 637 handles (sem diferença de maiúsculas, acentos e pontuação). Dicas por titular: país (−0,25), função (−0,25), inicial (−0,5). Acaba com os cinco, com 5 erros ou em "Revelar". | 1 por nome menos as dicas daquele nome (mín. 0) | 3+ nomes |
+| **Quem é o Pro** | 6 tentativas; uma dica aberta e mais uma a cada erro: função → país → 3 agentes mais jogados na carreira (mapas, do `agent-stats.json`) → uma linha real de stats (rating, ACS, KAST e rounds do card com mais rounds, só com o ano) → times como titular, com anos → o evento dessa linha, com time e colocação. Cada palpite errado mostra "mesmo país / mesma função". | 5, 4, 3, 2, 1, 1 pela tentativa | acertar |
+| **O Impostor** | 5 jogadores (foto e handle); 4 cumprem a regra do dia, dita na tela: "jogaram pela X" (qualquer evento da base), "titulares da X no evento Y" ou "jogaram pela X no ano Y" (pesos 40/35/25%). Uma escolha, com confirmação. Depois, os eventos de cada um pelo time e os times do impostor. | 5 ou 0 | acertar |
+| **Placar Clássico** | Uma série real (MD3/MD5) de playoffs (regional ou internacional) ou de um internacional: evento, fase e rodada em pt-BR, data, MD; os times em ordem sorteada (a ordem da chave não entrega o vencedor). Palpite: vencedor, placar e, de bônus, o último mapa (pool do evento). Depois: mapas, placares e quem escolheu cada um. | vencedor 2 + placar exato 2 + último mapa 1 | vencedor e placar |
 
-### Aba "Jogo" (o jogo Valorant em si)
-6. **Agente Clássico** — atributos: Função · Gênero · Origem · Ano de lançamento (↑↓) · Custo da ult (↑↓) · Tipo de utilitário (cura, flash, smoke, recon, trap...).
-7. **Habilidade** — ícone (cinza/girado) → agente; bônus por acertar o nome da habilidade.
-8. **Fala** — frase de voz (texto) → qual agente disse.
-9. **Mapa** — imagem com zoom alto; cada erro abre o zoom. Etapa 2: acertar o callout.
-10. **Callout** — minimapa com uma região destacada → nome do callout (ex.: "A Heaven", "Hookah").
-11. **Arma** (opcional) — por stats (preço, dano, cadência).
+### Seleção (`generate.ts`)
+- **Pools ordenados por fama** (proxy só de fatos): jogador = 4 × internacionais + 6 × títulos internacionais + aura máxima (1/4/8/12) + 3 × top-3 de rating + (melhor OVR − 75) + 0,5 × etapas de liga; elenco = tier do evento (Champions 10, Masters 7) + colocação (8/5/3) + fama dos cinco / 15; série = "memorável": grande final 6, final superior/inferior 4, semifinal 2, chave 1; Champions +4, Masters +3; foi até o último mapa +3; zebra pelo OVR médio dos elencos (vencedor ≥ 2 abaixo) +2. Placar só entra com memorável ≥ 3.
+- **Curva da semana**: segunda (nível 1/7) sorteia na faixa mais famosa de cada pool e domingo (7/7) mais fundo: centro da faixa em 5% + 12% × nível, ±10% (a faixa alarga se nada passar). Medido em 365 dias: a fama média das respostas cai de segunda para domingo, e 70%+ das Linhas de segunda são elencos internacionais.
+- **Sem repetir**: o mesmo time não volta em ~30 dias no mesmo desafio (Linhas, Impostor; Placar 21 dias, dois times por dia); elenco e Pro não repetem em 365 dias, série em 180. No mesmo dia, nenhum time aparece em dois desafios (pelo nome, ver abaixo) e o Pro não está nas Linhas nem no Impostor. Se um pool esgota, as janelas caem pela metade; o teste confere todas as janelas em 365 dias seguidos.
+- **Nunca ambíguo** (`puzzleProblems`, que recalcula tudo dos dados; zero problemas em 365 dias seguidos): handles repetidos entre jogadores (klaus, russ, laz) nunca são resposta do Pro nem aparecem no Impostor, e os cinco do Impostor têm handles distintos; "jogou pela X" usa **todas** as listas do VLR, reservas incluídos, e trata como o mesmo time os ids com o mesmo nome (ex.: duas organizações "Team Liquid"); os quatro são titulares na regra e o impostor não aparece em lista nenhuma do time no escopo; o impostor é da mesma região e época, de fama parecida, e na regra de evento/ano preferimos um "pega" (jogou pelo time, mas em outro evento/ano). Série só com placar fechado, mapas que somam o placar e vencedor de cada mapa batendo.
 
-### Aba "Mix" (híbridos: cena pro + jogo)
-12. **Grade 3x3** — linhas e colunas com critérios mistos (time, agente principal, país, título, mapa); preencher cada célula com um pro que atenda os dois. Raridade = % de jogadores que escolheram o mesmo (precisa backend).
-13. **Comp Misteriosa** — 5 agentes de uma comp histórica + mapa → adivinhar time e evento. Dicas: ano → região → placar.
-14. **Quem jogou de...** — agente + mapa + partida histórica → qual pro. Sai de pick de agente por mapa (VLR).
-15. **Conexões** — 16 itens (pros, agentes, mapas, callouts) em 4 grupos escondidos.
-16. **Linha do Tempo** — ordenar fatos do jogo e da cena (lançamento de agente, mapa no pool, título).
-17. **Maior ou Menor** — "pick rate de Viper vs Omen no Champions 2024", "rating de X vs Y".
-18. **Jogada Histórica** (curada) — minimapa com posições, callout e situação de um round famoso → quem fez a jogada.
-19. **Veto Quiz** — veto de uma final histórica com lacunas → completar o decider / quem escolheu.
+### Progresso, sequência e compartilhamento (`play.ts`, `src/ui/dailyStorage.ts`)
+- `localStorage` **`rtc:daily:v1`**: `{ v: 1, days: { "AAAA-MM-DD": progresso } }` com os palpites de cada desafio, `finishedOn` (dia em que o quarto terminou) e o resultado congelado. Toda leitura/escrita em try/catch; save inválido é descartado campo a campo.
+- **Sequência**: dias terminados no próprio dia, contando até hoje (ou até ontem enquanto hoje está aberto). Arquivo: qualquer dia desde o #1, jogável, marcado "(arquivo)" e fora da sequência. Estatísticas: jogados, média, melhor, sequência, recorde e distribuição de 0/4 a 4/4.
+- Texto para compartilhar, sem emoji e sem spoiler: `Road to Champions · Diário #20 · 2/4 · 8,5/20 pts` e, na linha de baixo, `Linhas 3/5 · Pro em 3 · Impostor errado · Placar: só o vencedor`.
 
-Diário sugerido: 5 desafios por dia (2 Jogo + 2 Cena Pro + 1 Mix), rodando entre os modos.
-
-### Mecânica comum
-- Desafio por dia via seed `hash(data + modo)` sobre lista embaralhada por temporada (sem repetir em curto prazo). Reset 00:00 BRT.
-- Palpites ilimitados no Clássico (pontuação = tentativas); limite de 6 nos modos de imagem.
-- Sequência (streak), estatísticas pessoais, arquivo de dias passados, modo infinito após o diário.
-- Compartilhar grade de emojis (🟩🟨🟥⬆️⬇️) sem spoiler.
-- Integração com o jogo principal: completar o Diário dá XP/moedas, reroll extra no Draft, molduras de card.
-
-### Dados do modo Diário
-- Agentes, habilidades (ícones), mapas e callouts (com coordenadas no minimapa): valorant-api.com (comunitária, gratuita, sem chave) → snapshot local.
-- Jogadores/eventos: o mesmo pipeline dos cards (VLR + Liquipedia).
-- Imagens de mapa com zoom: começar pelo minimapa + callouts; screenshots próprias depois.
-- MVP: resposta validada no cliente. Se houver ranking, validar no servidor.
-- Jurídico: usar assets da Riot só sob a política "Legal Jibber Jabber", com aviso de não afiliação; jogo gratuito.
+### Telas
+Item "Diário" no menu principal e card dourado no Início (número do dia, os quatro desafios feitos ou não, resultado e sequência; lê só o localStorage, então aparece antes do pool carregar). Hub com os quatro cards (estado e pontos), resultado do dia com o painel de compartilhar, estatísticas, arquivo e a contagem até o próximo desafio; cada desafio numa tela com os quatro passos no topo e "Próximo" ao terminar. Chunk próprio (`Daily`, ~48 KB gzip, quase tudo `series.json`).
 
 ## Pipeline de dados (MVP)
 Script offline: VLR (stats, agentes, mapas) + Liquipedia (elencos, IGL, coach, map pool) + valorant-api.com (agentes/mapas)
@@ -231,7 +213,7 @@ Tempo real: ver docs/ideias-futuras.md (em espera).
 
 ## Roadmap
 1. MVP: Draft + snapshot estático + placar VLR + card compartilhável.
-2. Diário/Valdle (Jogo + Cena Pro) + Ultimate Draft — ciclo viral diário.
+2. Diário (4 desafios da cena pro, feito) + Ultimate Draft — ciclo viral diário.
 3. Carreira.
 4. Contas + Online.
 
