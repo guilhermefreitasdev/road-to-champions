@@ -8,7 +8,9 @@
 import { rosterKey, rosterToLineup } from '../../engine/roster';
 import type { Lineup, MapName, Region, Role, RosterEntry } from '../../engine/types';
 import { AGENTS } from '../game';
+import type { MetaTable } from '../../engine/form';
 import { buildRealPool, type VlrEventData } from './cards';
+import { metaForYear } from './meta';
 import { LIQUIPEDIA_EVENTS } from './liquipedia';
 import slimJson from './vlr/slim.json';
 
@@ -63,6 +65,10 @@ export const REGIONAL_EVENTS: readonly RegionalEvent[] = EVENTS
 
 /** Veto pool: the map pool of the most recent international event with exactly 7 maps (see REAL_POOL.mapPoolEventId). */
 export const REAL_MAP_POOL: readonly MapName[] = REAL_POOL.mapPool;
+/** Year of the veto pool's event: the agent meta the comps are scored against (./meta.ts). */
+export const REAL_MAP_POOL_YEAR: number = EVENTS.find((e) => e.slug === REAL_POOL.mapPoolEventId)!.year;
+/** Agent meta per map for the veto pool's year (undefined when no year at or before it was measured). */
+export const REAL_META: MetaTable | undefined = metaForYear(REAL_MAP_POOL_YEAR);
 
 /** AI lineup for a real roster (international or regional), with its map comfort from the stored vetoes (if any). */
 export function realLineup(entry: RosterEntry): Lineup {

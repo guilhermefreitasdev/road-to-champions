@@ -1,7 +1,8 @@
 import type { SeriesResult } from '../../engine/series';
 import type { BestOf, TeamIndex } from '../../engine/types';
 import { playedMaps } from '../../engine/veto';
-import { YouTag } from '../components/Icon';
+import { formatDecimal } from '../../game/explain';
+import { Icon, YouTag } from '../components/Icon';
 import { Scoreboard } from '../components/Scoreboard';
 
 interface Props {
@@ -42,6 +43,13 @@ export function Series({ label, bestOf, series, side, names, onContinue }: Props
           <span>
             {side === 1 && <YouTag />}
             {names[1]}
+          </span>
+        </p>
+        <p className="series-mvp" title="MVP da série: melhor rating estimado dos 10, ponderado pelos rounds">
+          <Icon name="decider" />
+          <span>
+            <strong>MVP da série:</strong> {series.mvp.handle} ({names[series.mvp.team]}) · R {formatDecimal(series.mvp.rating, 2)} · ACS{' '}
+            {series.mvp.acs}
           </span>
         </p>
       </header>

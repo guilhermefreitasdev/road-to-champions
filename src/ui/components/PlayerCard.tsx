@@ -2,8 +2,11 @@ import type { CSSProperties } from 'react';
 import {
   ATTRIBUTE_KEYS,
   ATTRIBUTE_LABELS,
+  AURA_LABELS,
   IGL_SOURCE_LABELS,
+  PRODIGY_HELP,
   ROLE_LABELS,
+  auraTitle,
   flagEmoji,
   formatStat,
 } from '../../game/explain';
@@ -58,6 +61,17 @@ export function PlayerCard({ card, selected = false, onSelect, index = 0 }: Prop
           <span className="badge igl" title={`IGL: ${IGL_SOURCE_LABELS[card.iglSource ?? ''] ?? 'Liquipedia'}`}>
             IGL
           </span>
+        )}
+        {card.prodigy ? (
+          <span className="badge aura prodigy" title={PRODIGY_HELP}>
+            Prodígio
+          </span>
+        ) : (
+          card.aura && (
+            <span className={`badge aura aura-${card.aura}`} title={auraTitle(card)}>
+              {AURA_LABELS[card.aura]}
+            </span>
+          )
         )}
       </span>
       {stats && (

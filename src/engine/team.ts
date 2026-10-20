@@ -91,6 +91,15 @@ export const UNKNOWN_IGL_DECISION = DIMENSION_REFERENCE.decision;
 
 export type IglStatus = 'one' | 'two' | 'none' | 'unknown';
 
+// --- Aura: "durão" (anchor), docs/design.md "Modelo v3" ---
+/** An anchor (legend/GOAT who leads, or a champion at the team's level) adds this to decision and communication, once per team. */
+export const ANCHOR_DIMENSION_BONUS = 3;
+
+/** The lineup's anchors ("durões"), in lineup order. */
+export function anchors(lineup: Lineup): Card[] {
+  return lineup.players.filter((p) => p.card.anchor).map((p) => p.card);
+}
+
 export interface DecisionDetail {
   status: IglStatus;
   /** The IGL used in the formula (the best one when there are two). */
@@ -201,21 +210,23 @@ export function teamDimensions(lineup: Lineup): TeamDimensions {
   const utility = avg((p) => fit(p) * p.card.attrs.utility) * coverage.factor + coverage.bonus;
 
   const decision = decisionDetail(lineup);
+  const anchor = anchors(lineup).length > 0 ? ANCHOR_DIMENSION_BONUS : 0;
 
   const { teammates, compatriots } = chemistryPairs(lineup);
   const communication =
     Math.min(100, 50 + COMM_PER_TEAMMATE_PAIR * teammates + COMM_PER_COMPATRIOT_PAIR * compatriots) -
-    (decision.status === 'two' ? SECOND_IGL_COMM_PENALTY : 0);
+    (decision.status === 'two' ? SECOND_IGL_COMM_PENALTY : 0) +
+    anchor;
 
   const clutch =
     0.5 * avg((p) => p.card.attrs.clutch) +
     0.3 * Math.max(...players.map((p) => p.card.attrs.clutch)) +
-    0.2 * avg((p) => p.card.attrs.consistency);
+    0.2 * avg((p) => p.card.attrs.presence);
 
   return {
     mechanics: clamp100(mechanics),
     utility: clamp100(utility),
-    decision: clamp100(decision.value),
+    decision: clamp100(decision.value + anchor),
     communication: clamp100(communication),
     clutch: clamp100(clutch),
   };

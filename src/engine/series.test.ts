@@ -22,7 +22,7 @@ function lineup(name: string, ovr = 80, mapAffinity?: Partial<Record<MapName, nu
         role,
         isIGL: i === 2,
         agents: [],
-        attrs: { aim: ovr, entry: ovr, utility: ovr, clutch: ovr, consistency: ovr, decision: ovr },
+        attrs: { aim: ovr, entry: ovr, utility: ovr, clutch: ovr, presence: ovr, decision: ovr },
         ovr,
       };
       return { card, slot: role };

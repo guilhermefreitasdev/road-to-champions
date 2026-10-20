@@ -6,7 +6,7 @@ import {
   applyUserVeto,
   beginUserVeto,
   createRun,
-  draftedLineup,
+  userLineup,
   pickDraftCoach,
   pickDraftPlayer,
   playUserMatch,
@@ -251,7 +251,7 @@ function RunScreens({ run, screen, view, act, setView, viewSeries }: RunScreensP
   if (screen === 'coach') return <Coach draft={run.draft} pool={RUN_POOL} onPick={(id) => act((r) => pickDraftCoach(r, id))} />;
   if (screen === 'team') {
     const props = run.teamName === undefined ? {} : { initialName: run.teamName };
-    return <Team lineup={draftedLineup(run)} pool={RUN_POOL} {...props} cta="Começar Champions" onStart={(name) => act((r) => startTournament(r, name))} />;
+    return <Team lineup={userLineup(run)} pool={RUN_POOL} {...props} cta="Começar Champions" onStart={(name) => act((r) => startTournament(r, name))} />;
   }
   if (screen === 'hub') {
     return (
@@ -332,7 +332,7 @@ function SeasonScreens({ s, screen, view, act, setView, viewSeries }: SeasonScre
     const props = s.teamName === undefined ? {} : { initialName: s.teamName };
     return (
       <Team
-        lineup={season.seasonLineup(s)}
+        lineup={season.userLineup(s)}
         pool={pool}
         {...props}
         context={`${context} · campo ${season.FIELD_MODE_LABELS[s.field]}`}

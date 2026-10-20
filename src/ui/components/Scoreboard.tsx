@@ -1,6 +1,6 @@
-import type { MapResult, PlayerLine } from '../../engine/match';
+import { isCold, isInspired, type MapResult, type PlayerLine } from '../../engine/match';
 import type { TeamIndex } from '../../engine/types';
-import { formatDecimal } from '../../game/explain';
+import { FORM_HELP, formatDecimal } from '../../game/explain';
 import { mapLabel } from './GameImage';
 import { YouTag } from './Icon';
 
@@ -26,7 +26,7 @@ function TeamTable({
   lines: PlayerLine[];
   strength: number;
 }) {
-  const sorted = [...lines].sort((a, b) => b.acs - a.acs);
+  const sorted = [...lines].sort((a, b) => b.rating - a.rating || b.acs - a.acs);
   return (
     <div className="team">
       <h4 className={won ? 'won' : undefined}>
@@ -39,6 +39,9 @@ function TeamTable({
           <thead>
             <tr>
               <th scope="col">Jogador</th>
+              <th scope="col" title="Rating estimado pelo simulador (1,00 = linha média; não é o Rating 2.0 do VLR)">
+                R
+              </th>
               <th scope="col" title="ACS estimado">
                 ACS
               </th>
@@ -53,12 +56,41 @@ function TeamTable({
               <th scope="col" title="First deaths">
                 FD
               </th>
+              <th scope="col" title="Rounds com 3 kills">
+                3K
+              </th>
+              <th scope="col" title="Rounds com 4 kills">
+                4K
+              </th>
+              <th scope="col" title="Rounds com 5 kills (ace)">
+                ACE
+              </th>
             </tr>
           </thead>
           <tbody>
             {sorted.map((p) => (
-              <tr key={p.cardId}>
-                <td>{p.handle}</td>
+              <tr key={p.cardId} className={p.mvp ? 'mvp-row' : undefined}>
+                <td>
+                  {p.handle}
+                  <span className="line-tags">
+                  {p.mvp && (
+                    <span className="tag mvp" title="MVP do mapa: melhor rating estimado dos 10">
+                      MVP
+                    </span>
+                  )}
+                  {isInspired(p) && (
+                    <span className="tag form-hot" title={`Mapa inspirado: rating estimado ${formatDecimal(p.rating, 2)}. ${FORM_HELP}`}>
+                      <span aria-hidden="true">🔥</span> Inspirado
+                    </span>
+                  )}
+                  {isCold(p) && (
+                    <span className="tag form-cold" title={`Mapa apagado: rating estimado ${formatDecimal(p.rating, 2)}. ${FORM_HELP}`}>
+                      <span aria-hidden="true">❄️</span> Apagado
+                    </span>
+                  )}
+                  </span>
+                </td>
+                <td>{formatDecimal(p.rating, 2)}</td>
                 <td>{p.acs}</td>
                 <td>{p.kills}</td>
                 <td>{p.deaths}</td>
@@ -70,6 +102,9 @@ function TeamTable({
                 <td>{p.kast}%</td>
                 <td>{p.firstKills}</td>
                 <td>{p.firstDeaths}</td>
+                <td>{p.multikills.k3 || '–'}</td>
+                <td>{p.multikills.k4 || '–'}</td>
+                <td className={p.multikills.k5 ? 'ace' : undefined}>{p.multikills.k5 || '–'}</td>
               </tr>
             ))}
           </tbody>

@@ -20,7 +20,11 @@ export interface Attributes {
   entry: number;
   utility: number;
   clutch: number;
-  consistency: number;
+  /**
+   * Presence (KAST): share of rounds with a kill, assist, survival or trade. Was "consistency" (KAST + rating),
+   * which measured level, not regularity: per-map volatility is not a measurable trait (docs/pesquisa-variancia.md §2.3).
+   */
+  presence: number;
   /**
    * Decision-making (calls, buys, mid-round). A game scale over Liquipedia facts, not a stat: the event's IGL
    * is high, an IGL elsewhere moderate, the rest around 45 nudged by APR/KAST (see docs/design.md).
@@ -34,6 +38,25 @@ export interface CardStats {
   rating: number | null;
   acs: number | null;
   kast: number | null;
+}
+
+/**
+ * Aura tier, from career facts up to and including the card's event (international events only, docs/design.md
+ * "Modelo v3"): 'goat' ≥ 2 titles and ≥ 2 top-3 ratings; 'legend' 1 title + 2 top-3, or 2 titles, or 3 top-3;
+ * 'star' ≥ 1 top-3, or rating ≥ 1.10 twice, or a title with a top-8 rating; 'rising' = first international event.
+ */
+export type AuraTier = 'rising' | 'star' | 'legend' | 'goat';
+
+/** Career facts behind the aura, counted over the international events up to and including the card's. */
+export interface CardCareer {
+  /** International events played (as a main player), including this one when it is international. */
+  events: number;
+  /** International titles. */
+  titles: number;
+  /** Events where the player's rating was in the top 3 of the event. */
+  top3: number;
+  /** Events with rating ≥ 1.10. */
+  high: number;
 }
 
 /** A player in a specific event — the core unit of the game ("aspas @ LOUD, Champions 2022"). */
@@ -53,6 +76,13 @@ export interface Card {
   /** Where the IGL flag came from (e.g. 'event-captain', 'infobox-unique'), when the data says. */
   iglSource?: string;
   stats?: CardStats;
+  /** Aura tier (absent = regular). Fact-based, see AuraTier. */
+  aura?: AuraTier;
+  /** "Durão": a legend/GOAT who leads (IGL or decision ≥ 60), or a champion rated at or above the team's median. */
+  anchor?: boolean;
+  /** First international event with rating ≥ 1.10 or in the event's top 25%. */
+  prodigy?: boolean;
+  career?: CardCareer;
 }
 
 /** A coach in a specific event. Bonuses are in strength points. */
@@ -89,6 +119,13 @@ export interface RosterEntry {
 export interface LineupPlayer {
   card: Card;
   slot: Slot;
+  /**
+   * Tournament form ("fase"), in OVR points, already applied to the card's attributes and OVR by
+   * applyTournamentForm (src/engine/form.ts). Display only.
+   */
+  tournamentForm?: number;
+  /** Prodigy growth in this run, in OVR points, already applied (src/engine/form.ts). Display only. */
+  growth?: number;
 }
 
 export interface Lineup {

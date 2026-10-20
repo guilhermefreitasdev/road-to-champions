@@ -1,13 +1,18 @@
 import { useState } from 'react';
 import { roleFit } from '../../engine/team';
 import {
+  ANCHOR_HELP,
+  AURA_LABELS,
   DIMENSION_HINTS,
+  PRODIGY_HELP,
   ROLE_LABELS,
   SLOT_LABELS,
+  auraTitle,
   explainStrength,
   fitLabel,
   formatDecimal,
   formatPoints,
+  lineupNotes,
 } from '../../game/explain';
 import type { Lineup, RosterEntry } from '../../engine/types';
 import { DEFAULT_TEAM_NAME, TEAM_NAME_MAX } from '../../game/run';
@@ -32,6 +37,7 @@ export function Team({ lineup, pool, initialName, context, cta, onStart }: Props
   const rosterOf = (teamId: string, eventId: string) => pool.find((e) => e.teamId === teamId && e.eventId === eventId);
   const { breakdown, parts, dimensions, warnings } = explainStrength(lineup);
   const points = parts.filter((p) => p.key === 'base' || p.key === 'composition');
+  const notes = lineupNotes(lineup);
 
   return (
     <div className="screen team-screen">
@@ -43,7 +49,9 @@ export function Team({ lineup, pool, initialName, context, cta, onStart }: Props
       <div className="team-grid">
         <section className="team-roster" aria-label="Escalação">
           <ul className="lineup">
-            {lineup.players.map(({ card, slot }) => (
+            {lineup.players.map((player) => {
+              const { card, slot } = player;
+              return (
               <li key={card.id} className="lineup-row">
                 <span className="lineup-slot">{SLOT_LABELS[slot]}</span>
                 <PlayerPhoto playerId={card.playerId} eventId={card.eventId} handle={card.handle} country={card.country} size={36} />
@@ -51,6 +59,22 @@ export function Team({ lineup, pool, initialName, context, cta, onStart }: Props
                   <strong>
                     {card.handle}
                     {card.isIGL && <span className="badge igl">IGL</span>}
+                    {card.prodigy ? (
+                      <span className="badge aura prodigy" title={PRODIGY_HELP}>
+                        Prodígio
+                      </span>
+                    ) : (
+                      card.aura && (
+                        <span className={`badge aura aura-${card.aura}`} title={auraTitle(card)}>
+                          {AURA_LABELS[card.aura]}
+                        </span>
+                      )
+                    )}
+                    {card.anchor && (
+                      <span className="badge aura anchor" title={ANCHOR_HELP}>
+                        Durão
+                      </span>
+                    )}
                   </strong>
                   <span className="small muted lineup-origin">
                     <TeamLogo teamId={card.teamId} eventId={card.eventId} name={rosterOf(card.teamId, card.eventId)?.teamName ?? card.teamId} size={14} />
@@ -62,13 +86,21 @@ export function Team({ lineup, pool, initialName, context, cta, onStart }: Props
                     <AgentIcon key={a} name={a} />
                   ))}
                 </span>
-                <span className="lineup-ovr" title="OVR × encaixe">
+                <span className="lineup-ovr" title="OVR × encaixe (com a fase do torneio)">
                   {Math.round(card.ovr * roleFit(card.role, slot))}
                 </span>
               </li>
-            ))}
+              );
+            })}
           </ul>
           {lineup.coach && <p className="muted">Coach: {lineup.coach.name}</p>}
+          {notes.length > 0 && (
+            <ul className="team-notes small" aria-label="Aura, prodígios e fase do torneio">
+              {notes.map((n) => (
+                <li key={n}>{n}</li>
+              ))}
+            </ul>
+          )}
         </section>
 
         <div className="team-side">

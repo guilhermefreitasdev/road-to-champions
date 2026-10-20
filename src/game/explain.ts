@@ -25,7 +25,20 @@ import {
   type DimensionKey,
   type StrengthBreakdown,
 } from '../engine/team';
-import type { Attributes, Lineup, Role, Slot } from '../engine/types';
+import {
+  ANCHOR_DIMENSION_BONUS,
+  anchors,
+} from '../engine/team';
+import {
+  AURA_OVR,
+  AURA_TEAM_CAP,
+  FORM_SIGMA,
+  META_BONUS_MAX,
+  PRODIGY_GROWTH_CAP,
+  PRODIGY_GROWTH_PER_STAGE,
+  TOURNAMENT_FORM_SHOWN,
+} from '../engine/form';
+import type { Attributes, AuraTier, Card, Lineup, LineupPlayer, Role, Slot } from '../engine/types';
 
 export const ROLE_LABELS: Record<Role, string> = {
   duelist: 'Duelista',
@@ -50,7 +63,7 @@ export const ATTRIBUTE_LABELS: Record<keyof Attributes, string> = {
   entry: 'Entrada',
   utility: 'Utilidade',
   clutch: 'Clutch',
-  consistency: 'Consistência',
+  presence: 'Presença',
   decision: 'Decisão',
 };
 
@@ -73,7 +86,7 @@ export const DIMENSION_HINTS: Record<DimensionKey, string> = {
   utility: 'utilidade dos cinco (APR, KAST) e cobertura de controlador e iniciador',
   decision: 'IGL (70%), o segundo melhor em decisão (15%) e o coach (15%)',
   communication: 'duplas que já jogaram juntas ou falam a mesma língua',
-  clutch: 'clutch médio, o melhor clutcher e a consistência',
+  clutch: 'clutch médio, o melhor clutcher e a presença (KAST)',
 };
 
 /** "100%", "90% flex" or "75% fora da função". */
@@ -190,6 +203,8 @@ export function explainStrength(lineup: Lineup): {
   if (lineup.coach && d.status !== 'unknown') {
     decision.push('o coach cobre parte da tática (preparação, intervalo e timeouts), mas não faz calls durante o round');
   }
+  const anchorNames = anchors(lineup).map((c) => c.handle);
+  if (anchorNames.length > 0) decision.push(`durão (${anchorNames.join(', ')}): +${ANCHOR_DIMENSION_BONUS}`);
 
   // Communication
   const { teammates, compatriots } = chemistryPairs(lineup);
@@ -199,9 +214,10 @@ export function explainStrength(lineup: Lineup): {
   if (compatriots > 0) communication.push(`${duplas(compatriots)} do mesmo país: +${COMM_PER_COMPATRIOT_PAIR} cada`);
   if (communication.length === 0) communication.push('nenhuma dupla do mesmo time e evento ou do mesmo país');
   if (d.status === 'two') communication.push(`dois IGLs: −${SECOND_IGL_COMM_PENALTY}`);
+  if (anchorNames.length > 0) communication.push(`durão: +${ANCHOR_DIMENSION_BONUS}`);
 
   // Clutch
-  const clutch = ['clutch médio (50%), melhor clutcher (30%) e consistência média (20%)'];
+  const clutch = ['clutch médio (50%), melhor clutcher (30%) e presença média (KAST, 20%)'];
 
   const notesByKey: Record<DimensionKey, string[]> = { mechanics, utility, decision, communication, clutch };
   const dimensions: DimensionNote[] = DIMENSION_KEYS.map((key) => ({
@@ -226,6 +242,73 @@ export function explainStrength(lineup: Lineup): {
     dimensions,
     warnings,
   };
+}
+
+// --- Modelo v3: form, aura, prodigies (docs/design.md "Modelo v3") ---
+
+export const AURA_LABELS: Record<AuraTier, string> = { goat: 'GOAT', legend: 'Lenda', star: 'Estrela', rising: 'Em ascensão' };
+
+/** "2 títulos · top-3 de rating em 3 internacionais · 7º internacional", from the card's career facts. */
+export function auraFacts(card: Card): string {
+  const c = card.career;
+  if (!c) return '';
+  const parts: string[] = [];
+  if (c.titles > 0) parts.push(`${c.titles} título${c.titles === 1 ? '' : 's'} internaciona${c.titles === 1 ? 'l' : 'is'}`);
+  if (c.top3 > 0) parts.push(`top-3 de rating em ${c.top3} internaciona${c.top3 === 1 ? 'l' : 'is'}`);
+  if (c.high > 0) parts.push(`rating ≥ 1,10 em ${c.high}`);
+  parts.push(c.events === 1 ? 'primeiro internacional' : `${c.events}º internacional`);
+  return parts.join(' · ');
+}
+
+/** Tooltip of the aura badge: what the tier means, the facts behind it and what it does in the game. */
+export function auraTitle(card: Card): string {
+  const tier = card.aura;
+  if (!tier) return '';
+  const facts = auraFacts(card);
+  const effect =
+    tier === 'rising'
+      ? 'Sem efeito no jogo: é só o fato da estreia.'
+      : `No jogo: +${AURA_OVR[tier]} OVR-equivalente nas kills, só em mapa decisivo e prorrogação (teto +${AURA_TEAM_CAP} de força por time).`;
+  return `${AURA_LABELS[tier]}: ${facts}. ${effect} A aura sai só de fatos (títulos, rating nos internacionais, estreia): nos dados ninguém rende mais em playoff ou decider.`;
+}
+
+export const PRODIGY_HELP = `Prodígio: primeiro internacional com rating ≥ 1,10 ou entre os 25% melhores do evento. Na run, +${formatDecimal(PRODIGY_GROWTH_PER_STAGE)} OVR por fase alcançada (máx. +${PRODIGY_GROWTH_CAP}). Nos dados, estreantes rendem igual aos veteranos e quem estreia muito bem cai um pouco depois; o crescimento aqui é parte do jogo.`;
+
+export const ANCHOR_HELP = `Durão: lenda ou GOAT que lidera (IGL ou decisão alta), ou campeão rendendo no nível do time naquele evento. Tomada de decisão e Comunicação +${ANCHOR_DIMENSION_BONUS} (uma vez por time).`;
+
+export const FORM_HELP = `Forma do dia: cada jogador sorteia uma forma por mapa (±${Math.round(FORM_SIGMA * 100)}% nas kills, com dias excepcionais raros), que pesa também um pouco na força do time. Estrelas têm teto maior, não sorte maior: nos dados, o quanto um jogador oscila não se repete de evento para evento; o que muda com o nível é o teto.`;
+
+export const META_HELP = `Encaixe de meta: a comp que o elenco consegue montar com os agentes que cada card jogou, contra o meta do mapa no ano do pool (participação de cada agente nos slots). Até +${formatDecimal(META_BONUS_MAX)} de força, nunca negativo. Nos dados, um jogador rende igual em qualquer agente ou mapa que joga; o que pesa é a comp certa para o mapa.`;
+
+/** "Em alta neste torneio (+3)" / "Em baixa neste torneio (−2)", or null when the form is too small to mention. */
+export function tournamentFormLabel(player: LineupPlayer): string | null {
+  const t = player.tournamentForm ?? 0;
+  if (Math.abs(t) < TOURNAMENT_FORM_SHOWN) return null;
+  return `${t > 0 ? 'Em alta' : 'Em baixa'} neste torneio (${formatPoints(t)})`;
+}
+
+/** Notes about the lineup's anchors, prodigies and tournament forms, for the Team screen. */
+export function lineupNotes(lineup: Lineup): string[] {
+  const notes: string[] = [];
+  const anchor = anchors(lineup);
+  if (anchor.length > 0) {
+    notes.push(`Durão: ${anchor.map((c) => c.handle).join(', ')} — Tomada de decisão e Comunicação +${ANCHOR_DIMENSION_BONUS} (uma vez por time).`);
+  }
+  for (const p of lineup.players) {
+    if (p.card.prodigy) {
+      const g = p.growth ?? 0;
+      notes.push(
+        g > 0
+          ? `Prodígio em ascensão: ${p.card.handle} — +${formatDecimal(g)} OVR pelas fases alcançadas nesta run (máx. +${PRODIGY_GROWTH_CAP}).`
+          : `Prodígio: ${p.card.handle} — ganha +${formatDecimal(PRODIGY_GROWTH_PER_STAGE)} OVR por fase alcançada nesta run (máx. +${PRODIGY_GROWTH_CAP}).`,
+      );
+    }
+  }
+  for (const p of lineup.players) {
+    const label = tournamentFormLabel(p);
+    if (label) notes.push(`${p.card.handle}: ${label.toLowerCase()}.`);
+  }
+  return notes;
 }
 
 /** Short source of an IGL flag, for the decision notes. */

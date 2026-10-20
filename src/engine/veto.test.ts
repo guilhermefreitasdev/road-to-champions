@@ -31,7 +31,7 @@ function lineup(name: string, mapAffinity?: Partial<Record<MapName, number>>, ve
         role,
         isIGL: i === 2,
         agents: [],
-        attrs: { aim: 80, entry: 80, utility: 80, clutch: 80, consistency: 80, decision: 80 },
+        attrs: { aim: 80, entry: 80, utility: 80, clutch: 80, presence: 80, decision: 80 },
         ovr: 80,
       };
       return { card, slot: role };

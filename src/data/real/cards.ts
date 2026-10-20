@@ -6,7 +6,7 @@
  * source does not have counts as the neutral 50th percentile (never a guess), and the card keeps `null` in
  * its `stats`. The formulas are summarized in pt-BR in docs/design.md ("Núcleo de simulação").
  */
-import type { Attributes, Card, Coach, EventTier, MapName, Region, Role, RosterEntry } from '../../engine/types';
+import type { Attributes, AuraTier, Card, CardCareer, Coach, EventTier, MapName, Region, Role, RosterEntry } from '../../engine/types';
 import type { LiquipediaEvent, LiquipediaPlayer, LiquipediaTeam } from './liquipedia';
 import { buildRegionIndex, teamIdResolver } from './regions';
 
@@ -107,6 +107,34 @@ export const FLEX_MIN_SHARE = 0.2;
 export const DECISION = { captain: 90, infobox: 80, iglElsewhere: 60, none: 45, swing: 5 } as const;
 
 const ROLES: readonly Role[] = ['duelist', 'initiator', 'controller', 'sentinel'];
+
+/**
+ * Aura (docs/design.md "Modelo v3", docs/pesquisa-variancia.md §10.2): tiers from career facts over the
+ * international events up to and including the card's. Rating thresholds are VLR Rating 2.0 as published.
+ */
+export const AURA = {
+  /** "High" event: rating at or above this. */
+  highRating: 1.1,
+  /** Top-N rating of the event's main players. */
+  top: 3,
+  /** A title counts for 'star' only when the player was in the event's top 8 by rating. */
+  titleTop: 8,
+  /** Prodigy: debut rating ≥ highRating or in the best quarter of the event. */
+  prodigyShare: 0.25,
+  /** Anchor: a legend/GOAT leads with at least this decision (when not the IGL). */
+  anchorDecision: 60,
+  /** Anchor by title: a champion rated at or above the team's median, with at least this many internationals (no debutants). */
+  anchorEvents: 2,
+} as const;
+
+/** Tier from the career facts (`titleTop8` = titles where the player was top-8 rated). */
+export function auraTier(c: CardCareer, titleTop8: number, international: boolean): AuraTier | undefined {
+  if (c.titles >= 2 && c.top3 >= 2) return 'goat';
+  if ((c.titles >= 1 && c.top3 >= 2) || c.titles >= 2 || c.top3 >= 3) return 'legend';
+  if (c.top3 >= 1 || c.high >= 2 || titleTop8 >= 1) return 'star';
+  if (international && c.events === 1) return 'rising';
+  return undefined;
+}
 
 export type RoleWeights = Record<Role, number>;
 
@@ -476,6 +504,56 @@ export function buildRealPool(
   const isIglRow = (r: Row) => isLiquipediaIgl(r) || isInferredIgl(r);
   const everIgl = new Set(rows.filter(isLiquipediaIgl).map((r) => r.vlr.playerId));
 
+  // 4b. Career facts for the aura (international events only, in date order): titles, top-3 / top-8 ratings,
+  //     events with rating ≥ 1.10, and the rank of each row inside its event.
+  type Facts = CardCareer & { titleTop8: number };
+  const blank = (): Facts => ({ events: 0, titles: 0, top3: 0, high: 0, titleTop8: 0 });
+  /** Facts of a player after each international event (by event slug), cumulative. */
+  const factsAfter = new Map<string, Facts>();
+  const running = new Map<number, Facts>();
+  /** Rank of a row's rating among the main players of its event (1 = best; rows without rating rank last). */
+  const ratingRank = new Map<Row, { rank: number; of: number }>();
+  const intlEvents = events.filter((e) => tierGroup(e.tier) === 'international');
+  for (const event of intlEvents) {
+    const eventRows = rows.filter((r) => r.event === event);
+    const rated = eventRows.filter((r) => r.vlr.rating !== null).sort((x, y) => y.vlr.rating! - x.vlr.rating!);
+    rated.forEach((r, i) => ratingRank.set(r, { rank: i + 1, of: rated.length }));
+    for (const r of eventRows) {
+      const f = { ...(running.get(r.vlr.playerId) ?? blank()) };
+      const rank = ratingRank.get(r)?.rank ?? Infinity;
+      const title = r.team.placement?.min === 1;
+      f.events++;
+      if (title) f.titles++;
+      if (rank <= AURA.top) f.top3++;
+      if ((r.vlr.rating ?? 0) >= AURA.highRating) f.high++;
+      if (title && rank <= AURA.titleTop) f.titleTop8++;
+      running.set(r.vlr.playerId, f);
+      factsAfter.set(`${r.vlr.playerId}@${event.slug}`, f);
+    }
+  }
+  /** Facts a card carries: up to and including its event (international), or up to its date (regional). */
+  const careerOf = (r: Row): Facts => {
+    if (tierGroup(r.event.tier) === 'international') return factsAfter.get(`${r.vlr.playerId}@${r.event.slug}`) ?? blank();
+    let last = blank();
+    for (const e of intlEvents) {
+      if ((e.startDate ?? '') > (r.event.startDate ?? '')) break;
+      last = factsAfter.get(`${r.vlr.playerId}@${e.slug}`) ?? last;
+    }
+    return last;
+  };
+  const teamMedianRating = new Map<string, number | null>();
+  for (const [key, rr] of (() => {
+    const m = new Map<string, Row[]>();
+    for (const r of rows) {
+      const k = `${r.teamId}-${r.event.slug}`;
+      m.set(k, [...(m.get(k) ?? []), r]);
+    }
+    return m;
+  })()) {
+    const ratings = rr.map((r) => r.vlr.rating).filter((x): x is number => x !== null).sort((a, b) => a - b);
+    teamMedianRating.set(key, ratings.length ? ratings[Math.floor(ratings.length / 2)]! : null);
+  }
+
   // 5. Coaches: experience counted in event order.
   const coachSeen = new Map<string, number>();
   const coachExperience = new Map<string, number>();
@@ -553,7 +631,7 @@ export function buildRealPool(
       entry: attr(blend([[pYear(r, 'net'), netWeight], [pYear(r, 'fk'), 1 - netWeight]])),
       utility: attr(blend([[pYear(r, 'apr'), 1], [pYear(r, 'kast'), 1]])),
       clutch: attr(pYear(r, 'clutch')),
-      consistency: attr(blend([[pYear(r, 'kast'), 1], [pYear(r, 'rating'), 1]])),
+      presence: attr(pYear(r, 'kast')),
       decision:
         igl === 'event-captain' || igl === 'squad-captain'
           ? DECISION.captain
@@ -586,6 +664,30 @@ export function buildRealPool(
       stats: { rounds: n, rating: r.vlr.rating, acs: r.vlr.acs, kast: r.vlr.kast },
     };
     if (igl) card.iglSource = igl;
+
+    // Aura, anchor and prodigy: facts only (titles, event ratings, debut), never a guess.
+    const international = tierGroup(r.event.tier) === 'international';
+    const { titleTop8, ...career } = careerOf(r);
+    const tier = auraTier(career, titleTop8, international);
+    if (tier) card.aura = tier;
+    card.career = career;
+    const rank = ratingRank.get(r);
+    const champion = r.team.placement?.min === 1;
+    const median = teamMedianRating.get(`${r.teamId}-${r.event.slug}`) ?? null;
+    const leads = isIGL || attrs.decision >= AURA.anchorDecision;
+    if (
+      ((tier === 'legend' || tier === 'goat') && leads) ||
+      (international && champion && career.events >= AURA.anchorEvents && r.vlr.rating !== null && median !== null && r.vlr.rating >= median)
+    ) {
+      card.anchor = true;
+    }
+    if (
+      tier === 'rising' &&
+      rank &&
+      ((r.vlr.rating ?? 0) >= AURA.highRating || rank.rank <= Math.ceil(rank.of * AURA.prodigyShare))
+    ) {
+      card.prodigy = true;
+    }
     return card;
   }
 

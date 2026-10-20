@@ -1,4 +1,5 @@
-import { simulateMap, type MapResult, type Side } from './match';
+import type { MetaTable } from './form';
+import { compareLines, simulateMap, type MapResult, type Side } from './match';
 import type { Rng } from './rng';
 import type { BestOf, Lineup, MapName, TeamIndex } from './types';
 import { autoVeto, isVetoComplete, playedMaps, type VetoState } from './veto';
@@ -12,6 +13,20 @@ export interface SeriesOptions {
   firstTeam?: TeamIndex;
   /** Per-map defender bias, passed to simulateMap. */
   defenderBias?: Partial<Record<MapName, number>>;
+  /** Base of the per-player form seeds (e.g. `${runSeed}:${matchId}`), see MapOptions.formSeed. */
+  formSeed?: string;
+  /** Agent meta per map (the veto pool's year), see MapOptions.meta. */
+  meta?: MetaTable;
+}
+
+export interface SeriesMvp {
+  team: TeamIndex;
+  cardId: string;
+  handle: string;
+  /** Rounds-weighted estimated rating over the series. */
+  rating: number;
+  /** Rounds-weighted ACS over the series. */
+  acs: number;
 }
 
 export interface SeriesResult {
@@ -21,6 +36,8 @@ export interface SeriesResult {
   maps: MapResult[];
   score: [number, number];
   winner: TeamIndex;
+  /** Best rounds-weighted estimated rating of the 10 over the maps played. */
+  mvp: SeriesMvp;
 }
 
 const other = (team: TeamIndex): TeamIndex => (team === 0 ? 1 : 0);
@@ -52,11 +69,49 @@ export function simulateSeries(a: Lineup, b: Lineup, rng: Rng, opts: SeriesOptio
     const side = chosenSide(defenderBias);
     const teamAStartsOn: Side = chooser === 0 ? side : side === 'attack' ? 'defense' : 'attack';
 
-    const result = simulateMap(a, b, rng, { map, teamAStartsOn, defenderBias, seriesMap: maps.length + 1 });
+    const mapOpts: Parameters<typeof simulateMap>[3] = {
+      map,
+      teamAStartsOn,
+      defenderBias,
+      seriesMap: maps.length + 1,
+      decider: maps.length + 1 === bestOf,
+    };
+    if (opts.formSeed !== undefined) mapOpts.formSeed = opts.formSeed;
+    const prev = maps[maps.length - 1];
+    if (prev) mapOpts.prevForm = [prev.players[0].map((p) => p.form), prev.players[1].map((p) => p.form)];
+    const meta = opts.meta?.[map];
+    if (meta) mapOpts.meta = meta;
+    const result = simulateMap(a, b, rng, mapOpts);
     maps.push(result);
     score[result.winner]++;
   }
 
   if (Math.max(score[0], score[1]) < target) throw new Error('Veto does not have enough maps for the series');
-  return { bestOf, veto, maps, score, winner: score[0] > score[1] ? 0 : 1 };
+  return { bestOf, veto, maps, score, winner: score[0] > score[1] ? 0 : 1, mvp: seriesMvp(maps) };
+}
+
+/** MVP of a series: best rounds-weighted estimated rating of the 10 (ties like compareLines; then team order). */
+export function seriesMvp(maps: readonly MapResult[]): SeriesMvp {
+  const totals = new Map<string, { team: TeamIndex; handle: string; rating: number; acs: number; kills: number; deaths: number; rounds: number }>();
+  for (const m of maps) {
+    const n = m.rounds.length;
+    ([0, 1] as const).forEach((team) => {
+      for (const line of m.players[team]) {
+        const t = totals.get(line.cardId) ?? { team, handle: line.handle, rating: 0, acs: 0, kills: 0, deaths: 0, rounds: 0 };
+        t.rating += line.rating * n;
+        t.acs += line.acs * n;
+        t.kills += line.kills;
+        t.deaths += line.deaths;
+        t.rounds += n;
+        totals.set(line.cardId, t);
+      }
+    });
+  }
+  let best: { cardId: string; team: TeamIndex; handle: string; rating: number; acs: number; kills: number; deaths: number } | null = null;
+  for (const [cardId, t] of totals) {
+    const line = { cardId, team: t.team, handle: t.handle, rating: t.rating / t.rounds, acs: t.acs / t.rounds, kills: t.kills, deaths: t.deaths };
+    if (!best || compareLines(line, best) > 0) best = line;
+  }
+  if (!best) throw new Error('A series needs at least one map');
+  return { team: best.team, cardId: best.cardId, handle: best.handle, rating: Math.round(best.rating * 100) / 100, acs: Math.round(best.acs) };
 }

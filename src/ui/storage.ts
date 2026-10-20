@@ -1,11 +1,11 @@
 import { parseRun, type RunState } from '../game/run';
 import { parseSeason, type SeasonState } from '../game/season';
 
-const KEY = 'rtc:run:v4';
+const KEY = 'rtc:run:v5';
 /** Complete Trials season (its own slot: a season and a run can be saved at the same time). */
-const SEASON_KEY = 'rtc:season:v1';
-/** Keys of older save formats, removed on load (v1 = fictional sample cards, v2 = Swiss stage, v3 = strength v1). */
-const OLD_KEYS = ['rtc:run:v1', 'rtc:run:v2', 'rtc:run:v3'];
+const SEASON_KEY = 'rtc:season:v2';
+/** Keys of older save formats, removed on load (v1 = fictional sample cards, v2 = Swiss stage, v3 = strength v1, v4 = before Modelo v3). */
+const OLD_KEYS = ['rtc:run:v1', 'rtc:run:v2', 'rtc:run:v3', 'rtc:run:v4', 'rtc:season:v1'];
 
 /** Saved run, or null when there is none, storage is unavailable, or the save is corrupted/outdated. */
 export function loadRun(): RunState | null {

@@ -23,6 +23,24 @@ import {
   type VlrTeamRow,
 } from './cards';
 import type { LiquipediaEvent, LiquipediaTeam } from './liquipedia';
+import { auraTier } from './cards';
+
+describe('auraTier', () => {
+  const facts = (events: number, titles: number, top3: number, high = 0) => ({ events, titles, top3, high });
+  it('follows the research criteria (docs/pesquisa-variancia.md §10.2)', () => {
+    expect(auraTier(facts(5, 2, 2), 0, true)).toBe('goat');
+    expect(auraTier(facts(5, 1, 2), 0, true)).toBe('legend');
+    expect(auraTier(facts(5, 2, 0), 0, true)).toBe('legend');
+    expect(auraTier(facts(5, 0, 3), 0, true)).toBe('legend');
+    expect(auraTier(facts(2, 0, 1), 0, true)).toBe('star');
+    expect(auraTier(facts(3, 0, 0, 2), 0, true)).toBe('star');
+    expect(auraTier(facts(3, 1, 0, 0), 1, true)).toBe('star');
+    expect(auraTier(facts(1, 0, 0), 0, true)).toBe('rising');
+    expect(auraTier(facts(1, 0, 0), 0, false)).toBeUndefined();
+    expect(auraTier(facts(3, 1, 0, 1), 0, true)).toBeUndefined();
+    expect(auraTier(facts(0, 0, 0), 0, false)).toBeUndefined();
+  });
+});
 
 // ---------------------------------------------------------------------------
 // Synthetic fixtures (test-only; never shown in the game)

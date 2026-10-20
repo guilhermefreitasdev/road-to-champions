@@ -13,7 +13,8 @@
  * ever (highest AI strength). Only the user's draft rolls every era. The field mode is chosen with the region and
  * stored in the state.
  */
-import { ALL_ROSTERS, REAL_MAP_POOL, realLineup, teamRegion } from '../data/real';
+import { ALL_ROSTERS, REAL_MAP_POOL, REAL_META, realLineup, teamRegion } from '../data/real';
+import { applyTournamentForm, prodigyGrowth } from '../engine/form';
 import {
   bracketCells,
   bracketPending,
@@ -90,7 +91,8 @@ import {
 
 export { USER_ID } from './run';
 
-export const SEASON_VERSION = 1;
+/** v2 = Modelo v3 (per-player form, multikills and MVP in the map results, aura on the cards). */
+export const SEASON_VERSION = 2;
 export const SEASON_MAP_POOL: readonly MapName[] = REAL_MAP_POOL;
 export const LEAGUE_OPPONENTS = LEAGUE_TEAMS - 1;
 export const MASTERS_TEAMS = 8;
@@ -394,7 +396,8 @@ function stageReport(s: SeasonState, stage: CompStage, matchId: string, result: 
 
 /** Runs a series and turns it into a result with map and round totals. */
 function playSeries(s: SeasonState, stage: CompStage, match: SeasonMatch, veto?: VetoState): { series: SeriesResult; result: LeagueResult } {
-  const opts: Parameters<typeof simulateSeries>[3] = { bestOf: match.bestOf, pool: SEASON_MAP_POOL };
+  const opts: Parameters<typeof simulateSeries>[3] = { bestOf: match.bestOf, pool: SEASON_MAP_POOL, formSeed: `${s.seed}:${stage}:${match.id}` };
+  if (REAL_META) opts.meta = REAL_META;
   if (veto) opts.veto = veto;
   const series = simulateSeries(lineupOf(s, match.a), lineupOf(s, match.b), createRng(`${s.seed}:${stage}:${match.id}`), opts);
   const rounds: [number, number] = [0, 0];
@@ -494,13 +497,41 @@ export function findSeasonMatch(s: SeasonState, key: string): { stage: CompStage
   return match ? { stage, match } : undefined;
 }
 
-/** Lineup of any entrant. The user's card ids get a suffix so they never clash with an opponent's copy. */
+/**
+ * Lineup of any entrant in the current stage: cards shifted by their tournament form (one draw per stage,
+ * src/engine/form.ts) and, for the user's prodigies, by the growth of the stages reached. The user's card ids
+ * get a suffix so they never clash with an opponent's copy.
+ */
 export function lineupOf(s: SeasonState, id: string): Lineup {
+  const formSeed = `${s.seed}:${formStage(s)}:form`;
   if (id === USER_ID) {
     const lineup = seasonLineup(s);
-    return { ...lineup, players: lineup.players.map((p) => ({ ...p, card: { ...p.card, id: `${p.card.id}#user` } })) };
+    const suffixed = { ...lineup, players: lineup.players.map((p) => ({ ...p, card: { ...p.card, id: `${p.card.id}#user` } })) };
+    return applyTournamentForm(suffixed, formSeed, prodigyGrowth(userStagesReached(s)));
   }
-  return realLineup(rosterByKey(id));
+  return applyTournamentForm(realLineup(rosterByKey(id)), formSeed);
+}
+
+/** The user's lineup as the Team screen shows it (same cards and form as lineupOf, without the id suffix). */
+export function userLineup(s: SeasonState): Lineup {
+  return applyTournamentForm(seasonLineup(s), `${s.seed}:${formStage(s)}:form`, prodigyGrowth(userStagesReached(s)));
+}
+
+/** Stage whose tournament form applies now ('league' before the league starts and after the run ends in it). */
+function formStage(s: SeasonState): CompStage {
+  if (isCompStage(s.stage)) return s.stage;
+  if (s.stage === 'done') return s.champions ? 'champions' : s.masters ? 'masters' : 'league';
+  return 'league';
+}
+
+/**
+ * Stages the user reached in this season (prodigy growth): 0 league groups, 1 league playoffs, 2 Masters,
+ * 3 Champions, 4 Champions playoffs.
+ */
+export function userStagesReached(s: SeasonState): number {
+  if (s.champions) return s.champions.matches.some((m) => involvesUser(m) && m.stage === 'playoffs') ? 4 : 3;
+  if (s.masters) return 2;
+  return s.league?.matches.some((m) => involvesUser(m) && m.stage === 'playoffs') ? 1 : 0;
 }
 
 function userPlayers(s: SeasonState): Set<string> {

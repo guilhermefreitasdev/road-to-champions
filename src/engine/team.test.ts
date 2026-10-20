@@ -195,7 +195,7 @@ describe('mechanics and clutch', () => {
       ...SAMPLE_AURORA,
       players: SAMPLE_AURORA.players.map((p) => ({
         ...p,
-        card: { ...p.card, attrs: { ...p.card.attrs, aim: 99, entry: 99, clutch: 99, consistency: 99 } },
+        card: { ...p.card, attrs: { ...p.card.attrs, aim: 99, entry: 99, clutch: 99, presence: 99 } },
       })),
     };
     expect(teamDimensions(better).mechanics).toBeGreaterThan(dims.mechanics);

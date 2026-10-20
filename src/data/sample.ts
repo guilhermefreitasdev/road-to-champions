@@ -29,12 +29,12 @@ function card(
   };
 }
 
-const attrs = (aim: number, entry: number, utility: number, clutch: number, consistency: number, decision: number): Attributes => ({
+const attrs = (aim: number, entry: number, utility: number, clutch: number, presence: number, decision: number): Attributes => ({
   aim,
   entry,
   utility,
   clutch,
-  consistency,
+  presence,
   decision,
 });
 
@@ -138,10 +138,10 @@ const ROLE_AGENTS: Record<Role, string[]> = {
 
 /** Attribute offsets from OVR per role (decision is absolute), so attributes match the role. */
 const ROLE_PROFILE: Record<Role, Attributes> = {
-  duelist: { aim: 4, entry: 7, utility: -24, clutch: -6, consistency: -8, decision: 25 },
-  initiator: { aim: -3, entry: -12, utility: 5, clutch: -10, consistency: 1, decision: 45 },
-  controller: { aim: -8, entry: -30, utility: 7, clutch: -2, consistency: 2, decision: 55 },
-  sentinel: { aim: -4, entry: -35, utility: -1, clutch: 4, consistency: 4, decision: 40 },
+  duelist: { aim: 4, entry: 7, utility: -24, clutch: -6, presence: -8, decision: 25 },
+  initiator: { aim: -3, entry: -12, utility: 5, clutch: -10, presence: 1, decision: 45 },
+  controller: { aim: -8, entry: -30, utility: 7, clutch: -2, presence: 2, decision: 55 },
+  sentinel: { aim: -4, entry: -35, utility: -1, clutch: 4, presence: 4, decision: 40 },
 };
 
 const ROLE_CODE = { D: 'duelist', I: 'initiator', C: 'controller', S: 'sentinel' } as const;
@@ -186,7 +186,7 @@ function sampleCard(def: PlayerDef, teamId: string, eventId: string): Card {
       entry: clamp(ovr + p.entry + jitter()),
       utility: clamp(ovr + p.utility + jitter()),
       clutch: clamp(ovr + p.clutch + jitter()),
-      consistency: clamp(ovr + p.consistency + jitter()),
+      presence: clamp(ovr + p.presence + jitter()),
       decision: clamp(isIGL ? 78 + (ovr - 70) / 2 + jitter() : p.decision + jitter() * 3),
     },
     ovr,

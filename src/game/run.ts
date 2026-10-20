@@ -7,7 +7,8 @@
  * the next match in the schedule is the user's, which waits for the user's veto. Once the user is eliminated
  * the rest of the tournament plays out on its own, so the champion is always known at the end.
  */
-import { REAL_MAP_POOL, REAL_ROSTERS, realLineup } from '../data/real';
+import { REAL_MAP_POOL, REAL_META, REAL_ROSTERS, realLineup } from '../data/real';
+import { applyTournamentForm, prodigyGrowth } from '../engine/form';
 import {
   availableCards,
   createDraft,
@@ -22,7 +23,7 @@ import {
 import { createRng } from '../engine/rng';
 import { formatDecimal } from './explain';
 import { findCoach, pickOpponents, rosterKey } from '../engine/roster';
-import { simulateSeries, type SeriesResult } from '../engine/series';
+import { simulateSeries, type SeriesOptions, type SeriesResult } from '../engine/series';
 import { teamStrength } from '../engine/team';
 import {
   GROUP_KEYS,
@@ -52,12 +53,15 @@ export type { DraftMode } from '../engine/draft';
 export const RUN_POOL: readonly RosterEntry[] = REAL_ROSTERS;
 /** Veto pool of every match: the map pool of the most recent event with exactly 7 maps. */
 export const RUN_MAP_POOL: readonly MapName[] = REAL_MAP_POOL;
+/** Agent meta the comps are scored against (the veto pool's year), see src/data/real/meta.ts. */
+export const RUN_META = REAL_META;
 /**
- * Save format version: bumped when saved runs stop making sense (v4 = strength v2: five dimensions and the
- * `decision` attribute, stored in every map result; v3 = GSL groups instead of the Swiss stage; v2 = real pool;
- * v1 saves used fictional cards).
+ * Save format version: bumped when saved runs stop making sense (v5 = Modelo v3: per-player form, multikills
+ * and MVP in every map result, `presence` instead of `consistency`, aura on the cards; v4 = strength v2: five
+ * dimensions and the `decision` attribute, stored in every map result; v3 = GSL groups instead of the Swiss
+ * stage; v2 = real pool; v1 saves used fictional cards).
  */
-export const RUN_VERSION = 4;
+export const RUN_VERSION = 5;
 
 /** Entrant id of the user's team. Opponents use their roster key (`${teamId}-${eventId}`). */
 export const USER_ID = 'user';
@@ -160,12 +164,11 @@ export function startTournament(run: RunState, teamName: string): RunState {
   const userPlayers = user.players.map((p) => p.card.playerId);
   const opponents = pickField(run.seed, userPlayers);
 
+  // Seeds by the strength of the lineups as they enter this Champions (tournament form included).
+  const named: RunState = { ...run, teamName: name, opponents };
   const field = [
-    { id: USER_ID, name, strength: teamStrength(user).total },
-    ...opponents.map((id) => {
-      const entry = rosterByKey(id);
-      return { id, name: entry.teamName, strength: aiStrength(entry) };
-    }),
+    { id: USER_ID, name, strength: teamStrength(lineupOf(named, USER_ID)).total },
+    ...opponents.map((id) => ({ id, name: rosterByKey(id).teamName, strength: teamStrength(lineupOf(named, id)).total })),
   ].sort((x, y) => y.strength - x.strength || (x.id < y.id ? -1 : 1));
 
   const tournament = createTournament(field.map((t, i) => ({ id: t.id, name: t.name, seed: i + 1 })));
@@ -246,8 +249,8 @@ export function playUserMatch(run: RunState): RunState {
     throw new Error('The user match needs a complete veto');
   }
   const series = simulateSeries(lineupOf(run, match.a), lineupOf(run, match.b), createRng(`${run.seed}:${match.id}`), {
+    ...seriesOptions(run, match.id),
     bestOf: match.bestOf,
-    pool: RUN_MAP_POOL,
     veto: veto.state,
   });
   const tournament = reportResult(requireTournament(run), match.id, { winner: series.winner, score: series.score });
@@ -256,13 +259,41 @@ export function playUserMatch(run: RunState): RunState {
   return advance(next);
 }
 
-/** Lineup of any entrant. The user's card ids get a suffix so they never clash with an opponent's copy. */
+/** Series options shared by the user's and the AI's matches: map pool, per-player form seeds and the agent meta. */
+function seriesOptions(run: RunState, matchId: string): Pick<SeriesOptions, 'pool' | 'formSeed' | 'meta'> {
+  const opts: Pick<SeriesOptions, 'pool' | 'formSeed' | 'meta'> = { pool: RUN_MAP_POOL, formSeed: `${run.seed}:${matchId}` };
+  if (RUN_META) opts.meta = RUN_META;
+  return opts;
+}
+
+/**
+ * Lineup of any entrant as it plays this Champions: the cards shifted by their tournament form (seeded by the
+ * run, src/engine/form.ts) and, for the user's prodigies, by the growth of the stages reached. The user's card
+ * ids get a suffix so they never clash with an opponent's copy.
+ */
 export function lineupOf(run: RunState, id: string): Lineup {
+  const formSeed = `${run.seed}:form`;
   if (id === USER_ID) {
     const lineup = draftLineup(run.draft, RUN_POOL, run.teamName ?? DEFAULT_TEAM_NAME);
-    return { ...lineup, players: lineup.players.map((p) => ({ ...p, card: { ...p.card, id: `${p.card.id}#user` } })) };
+    const suffixed = { ...lineup, players: lineup.players.map((p) => ({ ...p, card: { ...p.card, id: `${p.card.id}#user` } })) };
+    return applyTournamentForm(suffixed, formSeed, prodigyGrowth(userStagesReached(run)));
   }
-  return realLineup(rosterByKey(id));
+  return applyTournamentForm(realLineup(rosterByKey(id)), formSeed);
+}
+
+/** The user's lineup as the Team screen shows it (same cards and form as lineupOf, without the id suffix). */
+export function userLineup(run: RunState): Lineup {
+  return applyTournamentForm(draftedLineup(run), `${run.seed}:form`, prodigyGrowth(userStagesReached(run)));
+}
+
+/** Stages the user reached in this run (prodigy growth): 0 groups, 1 playoffs, 2 top 4, 3 grand final. */
+export function userStagesReached(run: RunState): number {
+  const t = run.tournament;
+  if (!t) return 0;
+  const rounds = new Set(t.matches.filter(involvesUser).map((m) => m.round));
+  if (rounds.has('gf')) return 3;
+  if (rounds.has('ub-final') || rounds.has('lb-r3') || rounds.has('lb-final')) return 2;
+  return t.matches.some((m) => involvesUser(m) && m.stage === 'playoffs') ? 1 : 0;
 }
 
 // ---------------------------------------------------------------------------
@@ -643,8 +674,8 @@ function advance(run: RunState): RunState {
     const [next] = pendingMatches(tournament);
     if (!next || involvesUser(next)) break;
     const series = simulateSeries(lineupOf(run, next.a), lineupOf(run, next.b), createRng(`${run.seed}:${next.id}`), {
+      ...seriesOptions(run, next.id),
       bestOf: next.bestOf,
-      pool: RUN_MAP_POOL,
     });
     tournament = reportResult(tournament, next.id, { winner: series.winner, score: series.score });
   }

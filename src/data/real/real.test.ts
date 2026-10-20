@@ -264,3 +264,70 @@ describe('REGIONAL_ROSTERS', () => {
     );
   });
 });
+
+describe('Modelo v3: aura, anchors and prodigies are facts of the snapshot', () => {
+  const cards = REAL_ROSTERS.flatMap((r) => r.cards);
+  const find = (handle: string, eventId: string) => cards.find((c) => c.handle.toLowerCase() === handle && c.eventId === eventId)!;
+  const count = (f: (c: (typeof cards)[number]) => boolean) => cards.filter(f).length;
+
+  it('tiers the pool in the research\'s proportions (≈ 20 GOAT, 24–35 legend cards, hundreds of stars and debuts)', () => {
+    expect(count((c) => c.aura === 'goat')).toBeGreaterThanOrEqual(12);
+    expect(count((c) => c.aura === 'goat')).toBeLessThanOrEqual(30);
+    expect(count((c) => c.aura === 'legend')).toBeGreaterThanOrEqual(20);
+    expect(count((c) => c.aura === 'legend')).toBeLessThanOrEqual(50);
+    expect(count((c) => c.aura === 'star')).toBeGreaterThan(150);
+    expect(count((c) => c.aura === 'rising')).toBeGreaterThan(200);
+    expect(count((c) => !c.aura)).toBeGreaterThan(400);
+    expect(count((c) => !!c.anchor)).toBeGreaterThan(40);
+    expect(count((c) => !!c.anchor)).toBeLessThan(120);
+    expect(count((c) => !!c.prodigy)).toBeGreaterThan(40);
+    expect(count((c) => !!c.prodigy)).toBeLessThan(100);
+    // Every prodigy is a debutant; every GOAT has two titles and two top-3 ratings; every card has its facts.
+    expect(cards.filter((c) => c.prodigy).every((c) => c.aura === 'rising' && c.career?.events === 1)).toBe(true);
+    expect(cards.filter((c) => c.aura === 'goat').every((c) => c.career!.titles >= 2 && c.career!.top3 >= 2)).toBe(true);
+    expect(cards.every((c) => c.career && c.career.events >= 1)).toBe(true);
+  });
+
+  it('names the obvious ones: Chronicle and Derke GOATs, yay 2022 a legend, Sacy 2024 a legend and anchor, Demon1 a prodigy', () => {
+    expect(find('chronicle', 'masters-tokyo-2023').aura).toBe('goat');
+    expect(find('derke', 'champions-2024').aura).toBe('goat');
+    expect(find('yay', 'champions-2022').aura).toBe('legend');
+    expect(find('yay', 'champions-2022').career).toEqual({ events: 5, titles: 1, top3: 3, high: 5 });
+    expect(find('sacy', 'masters-madrid-2024').aura).toBe('legend');
+    expect(find('sacy', 'champions-2022').anchor).toBe(true);
+    expect(find('boaster', 'masters-tokyo-2023').anchor).toBe(true);
+    expect(find('demon1', 'masters-tokyo-2023').prodigy).toBe(true);
+    expect(find('demon1', 'masters-tokyo-2023').aura).toBe('rising');
+    // A debutant champion is not an anchor, even rated above the team's median.
+    expect(find('tkzin', 'champions-2026').aura).toBe('rising');
+    expect(find('tkzin', 'champions-2026').anchor).toBeUndefined();
+    // Saadhak leads (IGL) but his facts stop at 'regular' before his titles stack up.
+    expect(find('saadhak', 'champions-2021').aura).toBeUndefined();
+  });
+
+  it('facts never look ahead: a card only counts events up to and including its own', () => {
+    expect(find('aspas', 'masters-reykjavik-2022').career).toEqual({ events: 1, titles: 0, top3: 0, high: 1 });
+    expect(find('aspas', 'champions-2022').career!.titles).toBe(1);
+    expect(find('aspas', 'champions-2025').career!.events).toBe(10);
+    const regional = REGIONAL_ROSTERS.flatMap((r) => r.cards).find((c) => c.handle === 'aspas' && c.eventId === 'americas-kickoff-2024')!;
+    expect(regional.career!.events).toBe(6);
+    expect(regional.aura).toBe('star');
+    expect(regional.prodigy).toBeUndefined();
+  });
+
+  it('presence is the KAST percentile, not a second OVR', () => {
+    const rated = cards.filter((c) => c.stats?.kast !== null && c.stats?.kast !== undefined);
+    const corr = (xs: number[], ys: number[]) => {
+      const mx = xs.reduce((s, x) => s + x, 0) / xs.length;
+      const my = ys.reduce((s, y) => s + y, 0) / ys.length;
+      const sxy = xs.reduce((s, x, i) => s + (x - mx) * (ys[i]! - my), 0);
+      const sxx = xs.reduce((s, x) => s + (x - mx) ** 2, 0);
+      const syy = ys.reduce((s, y) => s + (y - my) ** 2, 0);
+      return sxy / Math.sqrt(sxx * syy);
+    };
+    const withKast = corr(rated.map((c) => c.attrs.presence), rated.map((c) => c.stats!.kast!));
+    const withOvr = corr(rated.map((c) => c.attrs.presence), rated.map((c) => c.ovr));
+    expect(withKast).toBeGreaterThan(0.8);
+    expect(withOvr).toBeLessThan(withKast);
+  });
+});
