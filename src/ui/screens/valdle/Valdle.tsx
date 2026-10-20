@@ -8,6 +8,7 @@ import {
   emptyProgress,
   gameStats,
   isDone,
+  mapaSummary,
   newFree,
   resultOf,
   shareText,
@@ -238,13 +239,15 @@ function GameList({
           const stats = gameStats(store, g, date);
           const state = r ? (r.won ? 'won' : 'lost') : p?.guesses.length ? 'playing' : 'new';
           const label = r
-            ? r.won
-              ? g === 'grade' || g === 'conexoes'
-                ? `Completo · ${r.score}/${r.max}`
-                : `Acertou em ${r.tries}`
-              : g === 'grade' || g === 'conexoes'
-                ? `${r.score}/${r.max}`
-                : 'Não acertou'
+            ? g === 'mapa'
+              ? mapaSummary(r, false)
+              : r.won
+                ? g === 'grade' || g === 'conexoes'
+                  ? `Completo · ${r.score}/${r.max}`
+                  : `Acertou em ${r.tries}`
+                : g === 'grade' || g === 'conexoes'
+                  ? `${r.score}/${r.max}`
+                  : 'Não acertou'
             : p?.guesses.length
               ? 'Em andamento'
               : `Novo · #${valdleNumber(date)}`;
@@ -281,7 +284,7 @@ function GameList({
       <p className="small muted daily-source">
         {group === 'cena'
           ? 'Tudo sai dos dados reais da base: eventos internacionais do VCT desde 2021 e ligas regionais desde 2023 (VLR.gg), elencos da Liquipedia. Nada é inventado.'
-          : 'Agentes, habilidades, mapas, callouts e armas do snapshot do valorant-api.com (dados da Riot Games). Nada é inventado.'}{' '}
+          : 'Agentes, habilidades, mapas, callouts e armas do snapshot do valorant-api.com (dados da Riot Games); imagens do Mapa: VALORANT Wiki. Nada é inventado.'}{' '}
         Um desafio por jogo e por dia, igual para todos; o modo livre não conta para a sequência.
       </p>
     </>
@@ -386,6 +389,12 @@ function Stats({ game, stats }: { game: ValdleGameId; stats: ReturnType<typeof g
           <dt>Recorde</dt>
           <dd>{stats.bestStreak}</dd>
         </div>
+        {game === 'mapa' && (
+          <div>
+            <dt>Lugar certo</dt>
+            <dd>{stats.played ? `${Math.round(((stats.placeFound ?? 0) / stats.played) * 100)}%` : '—'}</dd>
+          </div>
+        )}
         <div>
           <dt>Livres</dt>
           <dd>
@@ -410,7 +419,9 @@ function Stats({ game, stats }: { game: ValdleGameId; stats: ReturnType<typeof g
           ? 'Distribuição: grades por casas preenchidas.'
           : game === 'conexoes'
             ? 'Distribuição: vitórias por número de erros.'
-            : 'Distribuição: vitórias por tentativa.'}{' '}
+            : game === 'mapa'
+              ? 'Distribuição: mapas acertados por tentativa; "Lugar certo": diários em que achou o lugar no Onde é?.'
+              : 'Distribuição: vitórias por tentativa.'}{' '}
         A sequência conta os diários vencidos no próprio dia (meia-noite de Brasília). &quot;Livres&quot;: vitórias/jogos no modo livre. Tudo fica salvo só neste
         navegador.
       </p>

@@ -4,7 +4,8 @@ import { mapMedia } from '../../data/media';
 import { seriesComps } from '../../data/real/comps';
 import { SERIES } from '../../data/real/series';
 import { addDays } from '../daily/calendar';
-import { AGENT_ORIGINS, AGENT_COLUMNS, CLASSIC_GAPS, WEAPON_COLUMNS, askableCallouts, calloutLabel } from './classic';
+import placesJson from '../../data/game/places.json';
+import { AGENT_ORIGINS, AGENT_COLUMNS, CLASSIC_GAPS, WEAPON_COLUMNS, askableCallouts, calloutLabel, calloutLabelEn, mapaPlaces } from './classic';
 import { classicData, classicDaily, classicFree } from './classicIndex';
 import { compareAll, exact, exactOr, numeric } from './feedback';
 import { GROUP_GAMES, VALDLE_GAMES, VALDLE_LAUNCH, valdleNumber, type ValdleGameId } from './games';
@@ -18,6 +19,9 @@ import {
   giveUp,
   gradeCells,
   guess,
+  guessSpot,
+  MAPA_SPOT_TRIES,
+  mapaStepOneDone,
   guessConexoes,
   guessGrade,
   isDone,
@@ -38,6 +42,11 @@ const dates = Array.from({ length: DAYS }, (_, i) => addDays(VALDLE_LAUNCH, i));
 const daily = (game: ValdleGameId, date: string): ValdlePuzzle =>
   (GROUP_GAMES.classico.includes(game) ? classicDaily(game as 'agente', date) : proDaily(game as 'pro', date)) as ValdlePuzzle;
 const EMOJI = /[\u{1F000}-\u{1FAFF}\u{2600}-\u{27BF}\u{2B00}-\u{2BFF}\u{FE0F}]/u;
+
+// Node built-ins without @types/node (tsconfig types are vite/client only): vitest runs on Node >= 22.
+const proc = (globalThis as { process?: { getBuiltinModule(id: string): unknown; cwd(): string } }).process!;
+const fs = proc.getBuiltinModule('node:fs') as { existsSync(p: string): boolean; statSync(p: string): { size: number } };
+const PUBLIC = `${proc.cwd()}/public`;
 
 describe('feedback', () => {
   it('marks hits, partial hits and arrows toward the answer', () => {
@@ -90,6 +99,21 @@ describe('jogo clássico data', () => {
     }
   });
 
+  it('reads the wiki screenshots of the Mapa game, under names that give nothing away', () => {
+    expect(data.places.length).toBe(placesJson.places.length);
+    expect(mapaPlaces(data).length).toBeGreaterThanOrEqual(200);
+    const maps = new Set(mapaPlaces(data).map((p) => p.map));
+    expect(maps.size).toBeGreaterThanOrEqual(12);
+    expect(maps.has('Summit')).toBe(false); // no screenshots: the game skips it
+    for (const p of data.places) {
+      expect(p.file, p.id).toMatch(/^media\/places\/[0-9a-f]{12}\.webp$/);
+      expect(fs.existsSync(`${PUBLIC}/${p.file}`), p.file).toBe(true);
+      expect(fs.statSync(`${PUBLIC}/${p.file}`).size, p.file).toBeLessThan(120_000);
+      expect(p.source, p.id).toMatch(/^https:\/\/wiki\.playvalorant\.com\//);
+    }
+    expect(new Set(data.places.map((p) => p.file)).size).toBe(data.places.length);
+  });
+
   it('compares agents column by column', () => {
     const raze = data.agentById.get('Raze')!;
     const reyna = data.agentById.get('Reyna')!;
@@ -113,6 +137,15 @@ describe.each(['agente', 'habilidade', 'mapa', 'callout', 'arma', 'pro', 'grade'
     const problems = puzzles.flatMap((p) => problemsOf(p).map((x) => `${p.id}: ${x}`));
     expect(problems).toEqual([]);
   });
+
+  if (game === 'mapa')
+    it('do not repeat a screenshot for months', () => {
+      const keyOf = (p: ValdlePuzzle) => `${answerOf(p)}:${(p as ValdlePuzzle<'mapa'>).place}`;
+      for (let i = 0; i < puzzles.length; i++) {
+        for (let k = Math.max(0, i - CLASSIC_GAPS.mapaPlace); k < i; k++) expect(keyOf(puzzles[k]!), `${puzzles[i]!.id} repeats ${puzzles[k]!.id}`).not.toBe(keyOf(puzzles[i]!));
+      }
+      expect(new Set(puzzles.map((p) => answerOf(p))).size).toBeGreaterThanOrEqual(12);
+    });
 
   it('do not repeat an answer too soon', () => {
     const gap = GAPS[game];
@@ -169,7 +202,13 @@ function problemsOf(p: ValdlePuzzle): string[] {
     }
     case 'mapa': {
       const m = p as ValdlePuzzle<'mapa'>;
-      if (!c.mapById.has(m.map) || !mapMedia(m.map)) out.push('map without image');
+      const place = c.placeById.get(`${m.map}:${m.place}`);
+      const map = c.mapById.get(m.map);
+      if (!map || !place) out.push('no screenshot of that place');
+      else {
+        if (!fs.existsSync(`${PUBLIC}/${place.file}`)) out.push('screenshot file missing');
+        if (!askableCallouts(map).some((x) => x.id === m.place)) out.push('place not askable');
+      }
       if (m.focus.x < 0.2 || m.focus.x > 0.8 || m.focus.y < 0.2 || m.focus.y > 0.8) out.push('focus off the image');
       break;
     }
@@ -351,20 +390,73 @@ describe('playing', () => {
   it('settles daily puzzles into the store, with streaks and a spoiler-free share text', () => {
     let store = emptyStore();
     for (const [i, d] of dates.slice(0, 3).entries()) {
-      const p = daily('mapa', d);
+      const p = daily('arma', d);
       store = updateDaily(store, p, (g) => guess(p, g, i === 1 ? 'Nope' : answerOf(p)).progress, d);
       if (i === 1) for (let k = 0; k < 6; k++) store = updateDaily(store, p, (g) => guess(p, g, `x${k}`).progress, d);
     }
-    const stats = gameStats(store, 'mapa', dates[2]!);
+    const stats = gameStats(store, 'arma', dates[2]!);
     expect(stats).toMatchObject({ played: 3, won: 2, streak: 1, bestStreak: 1 });
-    const p0 = daily('mapa', dates[0]!);
-    const text = shareText(p0, store.daily.mapa![dates[0]!]!);
-    expect(text).toContain('Valdle Mapa #1');
+    const p0 = daily('arma', dates[0]!);
+    const text = shareText(p0, store.daily.arma![dates[0]!]!);
+    expect(text).toContain('Valdle Arma #1');
     expect(text).not.toContain(answerOf(p0));
     expect(text).not.toMatch(EMOJI);
     expect(parseValdleStore(JSON.parse(JSON.stringify(store)))).toEqual(store);
     expect(parseValdleStore({ v: 2 })).toEqual(emptyStore());
     expect(parseValdleStore({ v: 1, daily: { agente: { 'bad-day': {} } }, free: { nope: {} } })).toEqual({ v: 1, daily: { agente: {} }, free: {} });
+  });
+
+  it('plays Mapa in two steps: the map, then where the screenshot is', () => {
+    const p = daily('mapa', VALDLE_LAUNCH) as ValdlePuzzle<'mapa'>;
+    const map = classicData().mapById.get(p.map)!;
+    const answer = map.callouts.find((x) => x.id === p.place)!;
+    const wrongMap = classicData().maps.find((m) => m.id !== p.map)!.id;
+    const sameRegion = map.callouts.find((x) => x.id !== p.place && x.superRegionEn === answer.superRegionEn)!;
+    let g = emptyProgress();
+    expect(guessSpot(p, g, p.place).outcome).toBe('over'); // step 2 waits for step 1
+    g = guess(p, g, wrongMap).progress;
+    g = guess(p, g, p.map).progress;
+    expect(mapaStepOneDone(p, g)).toBe(true);
+    expect(isDone('mapa', p, g)).toBe(false);
+    const miss = guessSpot(p, g, sameRegion.id);
+    expect(miss.outcome).toBe('miss');
+    expect(guessSpot(p, miss.progress, sameRegion.id).outcome).toBe('repeat');
+    const hit = guessSpot(p, miss.progress, p.place);
+    expect(hit.outcome).toBe('hit');
+    expect(isDone('mapa', p, hit.progress)).toBe(true);
+    const done = settle(p, hit.progress, VALDLE_LAUNCH);
+    expect(done.result).toMatchObject({ won: true, tries: 2, place: 2 });
+    const text = shareText(p, done);
+    expect(text.split('\n').slice(1)).toEqual(['Mapa em 2/5 · Lugar em 2/3', 'Mapa: - V', 'Lugar: P V', 'V certo · P mesma região · - errado']);
+    for (const name of [map.name, map.id, answer.region, answer.regionEn, calloutLabel(answer), calloutLabelEn(answer)]) expect(text).not.toContain(name);
+    expect(text).not.toMatch(EMOJI);
+
+    // Lost map: step 2 still opens; three misses end it.
+    let lost = emptyProgress();
+    for (const m of classicData().maps.filter((x) => x.id !== p.map).slice(0, VALDLE_GAMES.mapa.maxTries)) lost = guess(p, lost, m.id).progress;
+    expect(mapaStepOneDone(p, lost)).toBe(true);
+    for (const c of map.callouts.filter((x) => x.id !== p.place).slice(0, MAPA_SPOT_TRIES)) lost = guessSpot(p, lost, c.id).progress;
+    expect(isDone('mapa', p, lost)).toBe(true);
+    expect(resultOf(p, lost)).toMatchObject({ won: false, place: 0 });
+    expect(shareText(p, lost)).toContain('Mapa: não acertou · Lugar: não acertou');
+    expect(isDone('mapa', p, giveUp(emptyProgress()))).toBe(true);
+  });
+
+  it('drops Mapa progress saved on the old puzzle shape, keeping everything else', () => {
+    const old = {
+      v: 1,
+      daily: { mapa: { [VALDLE_LAUNCH]: { guesses: ['Bind'], finishedOn: VALDLE_LAUNCH, result: { won: true, tries: 1, score: 1, max: 5 } } }, arma: { [VALDLE_LAUNCH]: { guesses: ['Vandal'] } } },
+      free: { mapa: { seed: 'abc', progress: { guesses: ['Bind', 'Lotus'] }, played: 4, won: 3 } },
+    };
+    const store = parseValdleStore(old);
+    expect(store.daily.mapa).toEqual({});
+    expect(store.daily.arma![VALDLE_LAUNCH]!.guesses).toEqual(['Vandal']);
+    expect(store.free.mapa).toMatchObject({ seed: 'abc', played: 4, won: 3, progress: { guesses: [] } });
+    const p = daily('mapa', VALDLE_LAUNCH) as ValdlePuzzle<'mapa'>;
+    const next = updateDaily(store, p, (g) => guess(p, g, p.map).progress, VALDLE_LAUNCH);
+    expect(next.daily.mapa![VALDLE_LAUNCH]).toMatchObject({ guesses: [p.map], shape: 2 });
+    expect(parseValdleStore(JSON.parse(JSON.stringify(next)))).toEqual(next);
+    expect(gameStats(next, 'mapa', VALDLE_LAUNCH).placeFound).toBe(0);
   });
 
   it('counts free puzzles once and keeps the open one', () => {

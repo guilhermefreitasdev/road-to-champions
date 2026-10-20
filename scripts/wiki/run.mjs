@@ -1,21 +1,25 @@
 #!/usr/bin/env node
 // VALORANT Wiki pipeline (wiki.playvalorant.com, MediaWiki API only; no HTML scraping). Two jobs for the Valdle:
 //   places: the wiki's "Category:Map Images" screenshots whose file name is exactly "<Map> <Callout>" for a callout of
-//           src/data/game/maps.json (e.g. "Ascent B Main.png"). Each one is resized to WebP under
-//           public/media/places/<map>/ and listed in src/data/game/places.json with its file page (credit/removal).
-//           Anything without an exact, unique match is left out and listed in scripts/wiki/out/places-unmatched.json.
+//           src/data/game/maps.json (e.g. "Ascent B Main.png"). Each one is resized to WebP as
+//           public/media/places/<hash>.webp (placeFile: a stable short hash of map + callout, so neither the URL nor the
+//           file name gives the Mapa game's answer away) and listed in src/data/game/places.json with its file page
+//           (credit/removal). Anything without an exact, unique match is left out and listed in
+//           scripts/wiki/out/places-unmatched.json.
+//   rehash: offline, no network: renames the files already listed in places.json to placeFile's names (and rewrites
+//           places.json). Run after changing placeFile or to migrate an old snapshot.
 //   sounds: lists every audio file under "Category:Audio Files" whose category or title names a weapon, with URL, type
 //           and size, in scripts/wiki/out/weapon-audio-candidates.json. Nothing is downloaded: the single-shot files of
 //           the default weapons are picked by a person from that list first (docs/data.md, "VALORANT Wiki").
 //
-// Usage: npm run data:wiki -- [--only=places,sounds] [--refresh]
+// Usage: npm run data:wiki -- [--only=places,sounds] [--refresh]   |   npm run data:wiki -- --only=rehash
 // The sandbox the game is built in cannot reach the wiki, so this runs on a normal machine. Polite: one request every
 // 2 s, a descriptive User-Agent, retries with back-off on 429/5xx, and every API answer cached in .cache/wiki.
 // Media from the wiki are Riot Games IP (used under Riot's "Legal Jibber Jabber" fan policy) collected by the
 // VALORANT Wiki; the game credits both and removes any file on request.
 
 import { createHash } from 'node:crypto';
-import { mkdir, readFile, writeFile } from 'node:fs/promises';
+import { mkdir, readFile, readdir, rename, rmdir, writeFile } from 'node:fs/promises';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import sharp from 'sharp';
@@ -147,7 +151,13 @@ const norm = (s) =>
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, ' ')
     .trim();
-const slug = (s) => norm(s).replace(/ /g, '-');
+
+/**
+ * Public path of a place screenshot: a stable short hash of the map and the callout (English names), flat under
+ * media/places/, so the src of the Mapa game's image names neither the map nor the callout.
+ */
+const placeFile = (mapName, superRegionEn, regionEn) =>
+  `media/places/${createHash('sha256').update(`rtc-place:${mapName}|${superRegionEn}|${regionEn}`).digest('hex').slice(0, 12)}.webp`;
 
 async function places() {
   const maps = await readJson(join(GAME_DIR, 'maps.json'));
@@ -184,12 +194,12 @@ async function places() {
       unmatched.push({ title: m.title, reason: 'no imageinfo' });
       continue;
     }
-    const rel = `media/places/${slug(m.map.displayName)}/${slug(`${m.callout.superRegionNameEn} ${m.callout.regionNameEn}`)}.webp`;
+    const rel = placeFile(m.map.name, m.callout.superRegionNameEn, m.callout.regionNameEn);
     const buf = Buffer.from(await (await politeFetch(ii.thumburl ?? ii.url)).arrayBuffer());
     await mkdir(dirname(join(ROOT, 'public', rel)), { recursive: true });
     await sharp(buf).resize(960, 540, { fit: 'cover' }).webp({ quality: 78 }).toFile(join(ROOT, 'public', rel));
     entries.push({
-      map: m.map.displayName,
+      map: m.map.name,
       superRegionEn: m.callout.superRegionNameEn,
       regionEn: m.callout.regionNameEn,
       file: rel,
@@ -203,6 +213,33 @@ async function places() {
   await writeJson(join(OUT, 'places-unmatched.json'), unmatched);
   console.log(`places: ${entries.length} matched, ${unmatched.length} left out (see scripts/wiki/out/places-unmatched.json)`);
   console.log(`(the images are written under ${PLACES_DIR})`);
+}
+
+/** Offline: moves the listed screenshots to placeFile's names and rewrites places.json (no network). */
+async function rehash() {
+  const file = join(GAME_DIR, 'places.json');
+  const json = await readJson(file);
+  const maps = await readJson(join(GAME_DIR, 'maps.json'));
+  let moved = 0;
+  for (const e of json.places) {
+    const map = maps.find((m) => m.name === e.map || m.displayName === e.map);
+    if (!map) throw new Error(`places.json: unknown map ${e.map}`);
+    const rel = placeFile(map.name, e.superRegionEn, e.regionEn);
+    if (rel !== e.file) {
+      await mkdir(dirname(join(ROOT, 'public', rel)), { recursive: true });
+      await rename(join(ROOT, 'public', e.file), join(ROOT, 'public', rel));
+      moved++;
+    }
+    e.map = map.name;
+    e.file = rel;
+  }
+  json.places.sort((a, b) => a.file.localeCompare(b.file));
+  // Drop the per-map folders the old names used, once empty.
+  for (const d of await readdir(PLACES_DIR, { withFileTypes: true })) {
+    if (d.isDirectory()) await rmdir(join(PLACES_DIR, d.name)).catch(() => undefined);
+  }
+  await writeJson(file, json);
+  console.log(`rehash: ${moved} files renamed, ${json.places.length} listed`);
 }
 
 async function sounds() {
@@ -232,6 +269,7 @@ async function sounds() {
   console.log(`sounds: ${rows.length} audio files that name a weapon`, per);
 }
 
-API = await findApi();
+if (only.has('rehash')) await rehash();
+if (only.has('places') || only.has('sounds')) API = await findApi();
 if (only.has('places')) await places();
 if (only.has('sounds')) await sounds();

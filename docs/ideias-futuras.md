@@ -48,3 +48,9 @@ decisão do dono: todo embed do YouTube entregava a resposta (título e canal ao
 no killfeed e a narração dos casters), e nenhum outro host é aceitável (os clipes da Twitch também mostram título e
 canal; reenviar trechos da transmissão não é permitido). O código completo (41 aces conferidos no VLR, lógica e
 interface) pode ser recuperado do commit `a07456b`. Só voltar a isto se aparecer uma fonte de clipes sem spoiler.
+
+### "Ouça a arma" (ideia; NÃO feito, 2026-10-20)
+Adivinhar a arma pelo som do tiro e pelo desenho do spray. Não feito: a VALORANT Wiki não tem o tiro único das armas
+padrão (só 4 sons de inspeção da skin Spectrum, ver `scripts/wiki/out/weapon-audio-candidates.json`), nenhuma outra
+fonte licenciada foi encontrada e a Riot nunca publicou o recuo bala a bala (o recuo é em parte aleatório por design),
+então o spray teria de ser inventado. Retomar se aparecer uma fonte.

@@ -3,1730 +3,1834 @@
   "generatedAt": "2026-10-20",
   "places": [
     {
-      "map": "Abyss",
-      "superRegionEn": "A",
-      "regionEn": "Bridge",
-      "file": "media/places/abyss/a-bridge.webp",
-      "title": "File:Abyss Bridge.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Abyss_Bridge.png"
-    },
-    {
-      "map": "Abyss",
-      "superRegionEn": "A",
+      "map": "Lotus",
+      "superRegionEn": "C",
       "regionEn": "Link",
-      "file": "media/places/abyss/a-link.webp",
-      "title": "File:Abyss A Link.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Abyss_A_Link.png"
-    },
-    {
-      "map": "Abyss",
-      "superRegionEn": "A",
-      "regionEn": "Lobby",
-      "file": "media/places/abyss/a-lobby.webp",
-      "title": "File:Abyss A Lobby.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Abyss_A_Lobby.png"
-    },
-    {
-      "map": "Abyss",
-      "superRegionEn": "A",
-      "regionEn": "Main",
-      "file": "media/places/abyss/a-main.webp",
-      "title": "File:Abyss A Main.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Abyss_A_Main.png"
-    },
-    {
-      "map": "Abyss",
-      "superRegionEn": "A",
-      "regionEn": "Secret",
-      "file": "media/places/abyss/a-secret.webp",
-      "title": "File:Abyss A Secret.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Abyss_A_Secret.png"
-    },
-    {
-      "map": "Abyss",
-      "superRegionEn": "A",
-      "regionEn": "Security",
-      "file": "media/places/abyss/a-security.webp",
-      "title": "File:Abyss Security.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Abyss_Security.png"
-    },
-    {
-      "map": "Abyss",
-      "superRegionEn": "A",
-      "regionEn": "Site",
-      "file": "media/places/abyss/a-site.webp",
-      "title": "File:Abyss A Site.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Abyss_A_Site.png"
-    },
-    {
-      "map": "Abyss",
-      "superRegionEn": "A",
-      "regionEn": "Tower",
-      "file": "media/places/abyss/a-tower.webp",
-      "title": "File:Abyss A Tower.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Abyss_A_Tower.png"
-    },
-    {
-      "map": "Abyss",
-      "superRegionEn": "A",
-      "regionEn": "Vent",
-      "file": "media/places/abyss/a-vent.webp",
-      "title": "File:Abyss Vent.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Abyss_Vent.png"
-    },
-    {
-      "map": "Abyss",
-      "superRegionEn": "B",
-      "regionEn": "Danger",
-      "file": "media/places/abyss/b-danger.webp",
-      "title": "File:Abyss Danger.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Abyss_Danger.png"
-    },
-    {
-      "map": "Abyss",
-      "superRegionEn": "B",
-      "regionEn": "Link",
-      "file": "media/places/abyss/b-link.webp",
-      "title": "File:Abyss B Link.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Abyss_B_Link.png"
-    },
-    {
-      "map": "Abyss",
-      "superRegionEn": "B",
-      "regionEn": "Lobby",
-      "file": "media/places/abyss/b-lobby.webp",
-      "title": "File:Abyss B Lobby.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Abyss_B_Lobby.png"
-    },
-    {
-      "map": "Abyss",
-      "superRegionEn": "B",
-      "regionEn": "Main",
-      "file": "media/places/abyss/b-main.webp",
-      "title": "File:Abyss B Main.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Abyss_B_Main.png"
-    },
-    {
-      "map": "Abyss",
-      "superRegionEn": "B",
-      "regionEn": "Nest",
-      "file": "media/places/abyss/b-nest.webp",
-      "title": "File:Abyss B Nest.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Abyss_B_Nest.png"
-    },
-    {
-      "map": "Abyss",
-      "superRegionEn": "B",
-      "regionEn": "Site",
-      "file": "media/places/abyss/b-site.webp",
-      "title": "File:Abyss B Site.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Abyss_B_Site.png"
-    },
-    {
-      "map": "Abyss",
-      "superRegionEn": "B",
-      "regionEn": "Tower",
-      "file": "media/places/abyss/b-tower.webp",
-      "title": "File:Abyss B Tower.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Abyss_B_Tower.png"
-    },
-    {
-      "map": "Abyss",
-      "superRegionEn": "Mid",
-      "regionEn": "Bend",
-      "file": "media/places/abyss/mid-bend.webp",
-      "title": "File:Abyss Mid Bend.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Abyss_Mid_Bend.png"
-    },
-    {
-      "map": "Abyss",
-      "superRegionEn": "Mid",
-      "regionEn": "Bottom",
-      "file": "media/places/abyss/mid-bottom.webp",
-      "title": "File:Abyss Mid Bottom.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Abyss_Mid_Bottom.png"
-    },
-    {
-      "map": "Abyss",
-      "superRegionEn": "Mid",
-      "regionEn": "Catwalk",
-      "file": "media/places/abyss/mid-catwalk.webp",
-      "title": "File:Abyss Mid Catwalk.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Abyss_Mid_Catwalk.png"
-    },
-    {
-      "map": "Abyss",
-      "superRegionEn": "Mid",
-      "regionEn": "Library",
-      "file": "media/places/abyss/mid-library.webp",
-      "title": "File:Abyss Library.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Abyss_Library.png"
-    },
-    {
-      "map": "Abyss",
-      "superRegionEn": "Mid",
-      "regionEn": "Top",
-      "file": "media/places/abyss/mid-top.webp",
-      "title": "File:Abyss Mid Top.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Abyss_Mid_Top.png"
-    },
-    {
-      "map": "Ascent",
-      "superRegionEn": "A",
-      "regionEn": "Garden",
-      "file": "media/places/ascent/a-garden.webp",
-      "title": "File:Ascent Garden.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Ascent_Garden.png"
-    },
-    {
-      "map": "Ascent",
-      "superRegionEn": "A",
-      "regionEn": "Lobby",
-      "file": "media/places/ascent/a-lobby.webp",
-      "title": "File:Ascent A Lobby.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Ascent_A_Lobby.png"
-    },
-    {
-      "map": "Ascent",
-      "superRegionEn": "A",
-      "regionEn": "Main",
-      "file": "media/places/ascent/a-main.webp",
-      "title": "File:Ascent A Main.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Ascent_A_Main.png"
-    },
-    {
-      "map": "Ascent",
-      "superRegionEn": "A",
-      "regionEn": "Rafters",
-      "file": "media/places/ascent/a-rafters.webp",
-      "title": "File:Ascent Rafters.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Ascent_Rafters.png"
-    },
-    {
-      "map": "Ascent",
-      "superRegionEn": "A",
-      "regionEn": "Site",
-      "file": "media/places/ascent/a-site.webp",
-      "title": "File:Ascent A Site.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Ascent_A_Site.png"
-    },
-    {
-      "map": "Ascent",
-      "superRegionEn": "A",
-      "regionEn": "Tree",
-      "file": "media/places/ascent/a-tree.webp",
-      "title": "File:Ascent Tree.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Ascent_Tree.png"
-    },
-    {
-      "map": "Ascent",
-      "superRegionEn": "A",
-      "regionEn": "Window",
-      "file": "media/places/ascent/a-window.webp",
-      "title": "File:Ascent Window.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Ascent_Window.png"
-    },
-    {
-      "map": "Ascent",
-      "superRegionEn": "A",
-      "regionEn": "Wine",
-      "file": "media/places/ascent/a-wine.webp",
-      "title": "File:Ascent Wine.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Ascent_Wine.png"
-    },
-    {
-      "map": "Ascent",
-      "superRegionEn": "B",
-      "regionEn": "Boat House",
-      "file": "media/places/ascent/b-boat-house.webp",
-      "title": "File:Ascent Boat House.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Ascent_Boat_House.png"
-    },
-    {
-      "map": "Ascent",
-      "superRegionEn": "B",
-      "regionEn": "Lobby",
-      "file": "media/places/ascent/b-lobby.webp",
-      "title": "File:Ascent B Lobby.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Ascent_B_Lobby.png"
-    },
-    {
-      "map": "Ascent",
-      "superRegionEn": "B",
-      "regionEn": "Main",
-      "file": "media/places/ascent/b-main.webp",
-      "title": "File:Ascent B Main.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Ascent_B_Main.png"
-    },
-    {
-      "map": "Ascent",
-      "superRegionEn": "B",
-      "regionEn": "Site",
-      "file": "media/places/ascent/b-site.webp",
-      "title": "File:Ascent B Site.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Ascent_B_Site.png"
-    },
-    {
-      "map": "Ascent",
-      "superRegionEn": "Mid",
-      "regionEn": "Bottom",
-      "file": "media/places/ascent/mid-bottom.webp",
-      "title": "File:Ascent Mid Bottom.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Ascent_Mid_Bottom.png"
-    },
-    {
-      "map": "Ascent",
-      "superRegionEn": "Mid",
-      "regionEn": "Catwalk",
-      "file": "media/places/ascent/mid-catwalk.webp",
-      "title": "File:Ascent Catwalk.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Ascent_Catwalk.png"
-    },
-    {
-      "map": "Ascent",
-      "superRegionEn": "Mid",
-      "regionEn": "Courtyard",
-      "file": "media/places/ascent/mid-courtyard.webp",
-      "title": "File:Ascent Courtyard.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Ascent_Courtyard.png"
-    },
-    {
-      "map": "Ascent",
-      "superRegionEn": "Mid",
-      "regionEn": "Cubby",
-      "file": "media/places/ascent/mid-cubby.webp",
-      "title": "File:Ascent Mid Cubby.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Ascent_Mid_Cubby.png"
-    },
-    {
-      "map": "Ascent",
-      "superRegionEn": "Mid",
-      "regionEn": "Link",
-      "file": "media/places/ascent/mid-link.webp",
-      "title": "File:Ascent Mid Link.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Ascent_Mid_Link.png"
-    },
-    {
-      "map": "Ascent",
-      "superRegionEn": "Mid",
-      "regionEn": "Market",
-      "file": "media/places/ascent/mid-market.webp",
-      "title": "File:Ascent Market.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Ascent_Market.png"
-    },
-    {
-      "map": "Ascent",
-      "superRegionEn": "Mid",
-      "regionEn": "Pizza",
-      "file": "media/places/ascent/mid-pizza.webp",
-      "title": "File:Ascent Pizza.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Ascent_Pizza.png"
-    },
-    {
-      "map": "Ascent",
-      "superRegionEn": "Mid",
-      "regionEn": "Top",
-      "file": "media/places/ascent/mid-top.webp",
-      "title": "File:Ascent Mid Top.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Ascent_Mid_Top.png"
-    },
-    {
-      "map": "Bind",
-      "superRegionEn": "A",
-      "regionEn": "Bath",
-      "file": "media/places/bind/a-bath.webp",
-      "title": "File:Bind Bath.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Bind_Bath.png"
-    },
-    {
-      "map": "Bind",
-      "superRegionEn": "A",
-      "regionEn": "Cubby",
-      "file": "media/places/bind/a-cubby.webp",
-      "title": "File:Bind A Cubby.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Bind_A_Cubby.png"
-    },
-    {
-      "map": "Bind",
-      "superRegionEn": "A",
-      "regionEn": "Lamps",
-      "file": "media/places/bind/a-lamps.webp",
-      "title": "File:Bind Lamps.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Bind_Lamps.png"
-    },
-    {
-      "map": "Bind",
-      "superRegionEn": "A",
-      "regionEn": "Link",
-      "file": "media/places/bind/a-link.webp",
-      "title": "File:Bind A Link.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Bind_A_Link.png"
-    },
-    {
-      "map": "Bind",
-      "superRegionEn": "A",
-      "regionEn": "Lobby",
-      "file": "media/places/bind/a-lobby.webp",
-      "title": "File:Bind A Lobby.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Bind_A_Lobby.png"
-    },
-    {
-      "map": "Bind",
-      "superRegionEn": "A",
-      "regionEn": "Short",
-      "file": "media/places/bind/a-short.webp",
-      "title": "File:Bind A Short.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Bind_A_Short.png"
-    },
-    {
-      "map": "Bind",
-      "superRegionEn": "A",
-      "regionEn": "Site",
-      "file": "media/places/bind/a-site.webp",
-      "title": "File:Bind A Site.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Bind_A_Site.png"
-    },
-    {
-      "map": "Bind",
-      "superRegionEn": "A",
-      "regionEn": "Teleporter",
-      "file": "media/places/bind/a-teleporter.webp",
-      "title": "File:Bind A Teleporter.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Bind_A_Teleporter.png"
-    },
-    {
-      "map": "Bind",
-      "superRegionEn": "A",
-      "regionEn": "Tower",
-      "file": "media/places/bind/a-tower.webp",
-      "title": "File:Bind Tower.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Bind_Tower.png"
-    },
-    {
-      "map": "Bind",
-      "superRegionEn": "Attacker Side",
-      "regionEn": "Cave",
-      "file": "media/places/bind/attacker-side-cave.webp",
-      "title": "File:Bind Cave.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Bind_Cave.png"
-    },
-    {
-      "map": "Bind",
-      "superRegionEn": "B",
-      "regionEn": "Elbow",
-      "file": "media/places/bind/b-elbow.webp",
-      "title": "File:Bind B Elbow.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Bind_B_Elbow.png"
-    },
-    {
-      "map": "Bind",
-      "superRegionEn": "B",
-      "regionEn": "Fountain",
-      "file": "media/places/bind/b-fountain.webp",
-      "title": "File:Bind Fountain.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Bind_Fountain.png"
-    },
-    {
-      "map": "Bind",
-      "superRegionEn": "B",
-      "regionEn": "Garden",
-      "file": "media/places/bind/b-garden.webp",
-      "title": "File:Bind Garden.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Bind_Garden.png"
-    },
-    {
-      "map": "Bind",
-      "superRegionEn": "B",
-      "regionEn": "Hall",
-      "file": "media/places/bind/b-hall.webp",
-      "title": "File:Bind B Hall.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Bind_B_Hall.png"
-    },
-    {
-      "map": "Bind",
-      "superRegionEn": "B",
-      "regionEn": "Link",
-      "file": "media/places/bind/b-link.webp",
-      "title": "File:Bind B Link.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Bind_B_Link.png"
-    },
-    {
-      "map": "Bind",
-      "superRegionEn": "B",
-      "regionEn": "Long",
-      "file": "media/places/bind/b-long.webp",
-      "title": "File:Bind B Long.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Bind_B_Long.png"
-    },
-    {
-      "map": "Bind",
-      "superRegionEn": "B",
-      "regionEn": "Short",
-      "file": "media/places/bind/b-short.webp",
-      "title": "File:Bind B Short.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Bind_B_Short.png"
-    },
-    {
-      "map": "Bind",
-      "superRegionEn": "B",
-      "regionEn": "Site",
-      "file": "media/places/bind/b-site.webp",
-      "title": "File:Bind B Site.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Bind_B_Site.png"
-    },
-    {
-      "map": "Bind",
-      "superRegionEn": "B",
-      "regionEn": "Teleporter",
-      "file": "media/places/bind/b-teleporter.webp",
-      "title": "File:Bind B Teleporter.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Bind_B_Teleporter.png"
-    },
-    {
-      "map": "Bind",
-      "superRegionEn": "B",
-      "regionEn": "Window",
-      "file": "media/places/bind/b-window.webp",
-      "title": "File:Bind B Window.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Bind_B_Window.png"
-    },
-    {
-      "map": "Breeze",
-      "superRegionEn": "A",
-      "regionEn": "Bridge",
-      "file": "media/places/breeze/a-bridge.webp",
-      "title": "File:Breeze Bridge.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Breeze_Bridge.png"
-    },
-    {
-      "map": "Breeze",
-      "superRegionEn": "A",
-      "regionEn": "Lobby",
-      "file": "media/places/breeze/a-lobby.webp",
-      "title": "File:Breeze A Lobby.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Breeze_A_Lobby.png"
-    },
-    {
-      "map": "Breeze",
-      "superRegionEn": "A",
-      "regionEn": "Pyramids",
-      "file": "media/places/breeze/a-pyramids.webp",
-      "title": "File:Breeze Pyramids.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Breeze_Pyramids.png"
-    },
-    {
-      "map": "Breeze",
-      "superRegionEn": "A",
-      "regionEn": "Shop",
-      "file": "media/places/breeze/a-shop.webp",
-      "title": "File:Breeze A Shop.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Breeze_A_Shop.png"
+      "file": "media/places/041dafc2f398.webp",
+      "title": "File:Lotus C Link.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Lotus_C_Link.png"
     },
     {
       "map": "Breeze",
       "superRegionEn": "A",
       "regionEn": "Site",
-      "file": "media/places/breeze/a-site.webp",
+      "file": "media/places/0426efc544be.webp",
       "title": "File:Breeze A Site.png",
       "source": "https://wiki.playvalorant.com/en-us/File:Breeze_A_Site.png"
     },
     {
-      "map": "Breeze",
+      "map": "Corrode",
+      "superRegionEn": "Mid",
+      "regionEn": "Stairs",
+      "file": "media/places/05facfcdd99f.webp",
+      "title": "File:Corrode Mid Stairs.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Corrode_Mid_Stairs.png"
+    },
+    {
+      "map": "Split",
       "superRegionEn": "B",
       "regionEn": "Back",
-      "file": "media/places/breeze/b-back.webp",
-      "title": "File:Breeze B Back.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Breeze_B_Back.png"
+      "file": "media/places/07da9746411a.webp",
+      "title": "File:Split B Back.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Split_B_Back.png"
     },
     {
-      "map": "Breeze",
+      "map": "Split",
       "superRegionEn": "B",
-      "regionEn": "Elbow",
-      "file": "media/places/breeze/b-elbow.webp",
-      "title": "File:Breeze B Elbow.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Breeze_B_Elbow.png"
+      "regionEn": "Lobby",
+      "file": "media/places/08afee01e31f.webp",
+      "title": "File:Split B Lobby.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Split_B_Lobby.png"
     },
     {
-      "map": "Breeze",
+      "map": "Lotus",
       "superRegionEn": "B",
-      "regionEn": "Main",
-      "file": "media/places/breeze/b-main.webp",
-      "title": "File:Breeze B Main.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Breeze_B_Main.png"
+      "regionEn": "Upper",
+      "file": "media/places/0947bb5c665b.webp",
+      "title": "File:Lotus B Upper.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Lotus_B_Upper.png"
     },
     {
-      "map": "Breeze",
-      "superRegionEn": "B",
-      "regionEn": "Site",
-      "file": "media/places/breeze/b-site.webp",
-      "title": "File:Breeze B Site.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Breeze_B_Site.png"
-    },
-    {
-      "map": "Breeze",
-      "superRegionEn": "B",
-      "regionEn": "Tunnel",
-      "file": "media/places/breeze/b-tunnel.webp",
-      "title": "File:Breeze Tunnel.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Breeze_Tunnel.png"
-    },
-    {
-      "map": "Breeze",
-      "superRegionEn": "B",
-      "regionEn": "Wall",
-      "file": "media/places/breeze/b-wall.webp",
-      "title": "File:Breeze B Wall.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Breeze_B_Wall.png"
-    },
-    {
-      "map": "Breeze",
-      "superRegionEn": "B",
-      "regionEn": "Window",
-      "file": "media/places/breeze/b-window.webp",
-      "title": "File:Breeze B Window.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Breeze_B_Window.png"
-    },
-    {
-      "map": "Breeze",
-      "superRegionEn": "Defender Side",
-      "regionEn": "Arches",
-      "file": "media/places/breeze/defender-side-arches.webp",
-      "title": "File:Breeze Arches.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Breeze_Arches.png"
-    },
-    {
-      "map": "Breeze",
+      "map": "Split",
       "superRegionEn": "Mid",
       "regionEn": "Bottom",
-      "file": "media/places/breeze/mid-bottom.webp",
-      "title": "File:Breeze Mid Bottom.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Breeze_Mid_Bottom.png"
-    },
-    {
-      "map": "Breeze",
-      "superRegionEn": "Mid",
-      "regionEn": "Cannon",
-      "file": "media/places/breeze/mid-cannon.webp",
-      "title": "File:Breeze Cannon.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Breeze_Cannon.png"
-    },
-    {
-      "map": "Breeze",
-      "superRegionEn": "Mid",
-      "regionEn": "Hall",
-      "file": "media/places/breeze/mid-hall.webp",
-      "title": "File:Breeze Hall.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Breeze_Hall.png"
-    },
-    {
-      "map": "Breeze",
-      "superRegionEn": "Mid",
-      "regionEn": "Nest",
-      "file": "media/places/breeze/mid-nest.webp",
-      "title": "File:Breeze Nest.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Breeze_Nest.png"
-    },
-    {
-      "map": "Breeze",
-      "superRegionEn": "Mid",
-      "regionEn": "Pillar",
-      "file": "media/places/breeze/mid-pillar.webp",
-      "title": "File:Breeze Pillar.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Breeze_Pillar.png"
-    },
-    {
-      "map": "Breeze",
-      "superRegionEn": "Mid",
-      "regionEn": "Top",
-      "file": "media/places/breeze/mid-top.webp",
-      "title": "File:Breeze Mid Top.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Breeze_Mid_Top.png"
-    },
-    {
-      "map": "Breeze",
-      "superRegionEn": "Mid",
-      "regionEn": "Wood Doors",
-      "file": "media/places/breeze/mid-wood-doors.webp",
-      "title": "File:Breeze Wood Doors.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Breeze_Wood_Doors.png"
-    },
-    {
-      "map": "Corrode",
-      "superRegionEn": "A",
-      "regionEn": "Crane",
-      "file": "media/places/corrode/a-crane.webp",
-      "title": "File:Corrode A Crane.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Corrode_A_Crane.png"
-    },
-    {
-      "map": "Corrode",
-      "superRegionEn": "A",
-      "regionEn": "Elbow",
-      "file": "media/places/corrode/a-elbow.webp",
-      "title": "File:Corrode A Elbow.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Corrode_A_Elbow.png"
-    },
-    {
-      "map": "Corrode",
-      "superRegionEn": "A",
-      "regionEn": "Link",
-      "file": "media/places/corrode/a-link.webp",
-      "title": "File:Corrode A Link.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Corrode_A_Link.png"
-    },
-    {
-      "map": "Corrode",
-      "superRegionEn": "A",
-      "regionEn": "Lobby",
-      "file": "media/places/corrode/a-lobby.webp",
-      "title": "File:Corrode A Lobby.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Corrode_A_Lobby.png"
-    },
-    {
-      "map": "Corrode",
-      "superRegionEn": "A",
-      "regionEn": "Main",
-      "file": "media/places/corrode/a-main.webp",
-      "title": "File:Corrode A Main.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Corrode_A_Main.png"
-    },
-    {
-      "map": "Corrode",
-      "superRegionEn": "A",
-      "regionEn": "Pocket",
-      "file": "media/places/corrode/a-pocket.webp",
-      "title": "File:Corrode A Pocket.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Corrode_A_Pocket.png"
-    },
-    {
-      "map": "Corrode",
-      "superRegionEn": "A",
-      "regionEn": "Site",
-      "file": "media/places/corrode/a-site.webp",
-      "title": "File:Corrode A Site.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Corrode_A_Site.png"
-    },
-    {
-      "map": "Corrode",
-      "superRegionEn": "A",
-      "regionEn": "Yard",
-      "file": "media/places/corrode/a-yard.webp",
-      "title": "File:Corrode A Yard.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Corrode_A_Yard.png"
-    },
-    {
-      "map": "Corrode",
-      "superRegionEn": "Attacker Side",
-      "regionEn": "Spawn",
-      "file": "media/places/corrode/attacker-side-spawn.webp",
-      "title": "File:Corrode Attacker Side Spawn.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Corrode_Attacker_Side_Spawn.png"
+      "file": "media/places/0aa9133f4778.webp",
+      "title": "File:Split Mid Bottom.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Split_Mid_Bottom.png"
     },
     {
       "map": "Corrode",
       "superRegionEn": "B",
       "regionEn": "Arch",
-      "file": "media/places/corrode/b-arch.webp",
+      "file": "media/places/1382378e5bbf.webp",
       "title": "File:Corrode B Arch.png",
       "source": "https://wiki.playvalorant.com/en-us/File:Corrode_B_Arch.png"
-    },
-    {
-      "map": "Corrode",
-      "superRegionEn": "B",
-      "regionEn": "Elbow",
-      "file": "media/places/corrode/b-elbow.webp",
-      "title": "File:Corrode B Elbow.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Corrode_B_Elbow.png"
-    },
-    {
-      "map": "Corrode",
-      "superRegionEn": "B",
-      "regionEn": "Link",
-      "file": "media/places/corrode/b-link.webp",
-      "title": "File:Corrode B Link.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Corrode_B_Link.png"
-    },
-    {
-      "map": "Corrode",
-      "superRegionEn": "B",
-      "regionEn": "Lobby",
-      "file": "media/places/corrode/b-lobby.webp",
-      "title": "File:Corrode B Lobby.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Corrode_B_Lobby.png"
-    },
-    {
-      "map": "Corrode",
-      "superRegionEn": "B",
-      "regionEn": "Main",
-      "file": "media/places/corrode/b-main.webp",
-      "title": "File:Corrode B Main.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Corrode_B_Main.png"
-    },
-    {
-      "map": "Corrode",
-      "superRegionEn": "B",
-      "regionEn": "Site",
-      "file": "media/places/corrode/b-site.webp",
-      "title": "File:Corrode B Site.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Corrode_B_Site.png"
-    },
-    {
-      "map": "Corrode",
-      "superRegionEn": "B",
-      "regionEn": "Tower",
-      "file": "media/places/corrode/b-tower.webp",
-      "title": "File:Corrode B Tower.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Corrode_B_Tower.png"
-    },
-    {
-      "map": "Corrode",
-      "superRegionEn": "Defender Side",
-      "regionEn": "Spawn",
-      "file": "media/places/corrode/defender-side-spawn.webp",
-      "title": "File:Corrode Defender Side Spawn.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Corrode_Defender_Side_Spawn.png"
-    },
-    {
-      "map": "Corrode",
-      "superRegionEn": "Mid",
-      "regionEn": "Bottom",
-      "file": "media/places/corrode/mid-bottom.webp",
-      "title": "File:Corrode Mid Bottom.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Corrode_Mid_Bottom.png"
-    },
-    {
-      "map": "Corrode",
-      "superRegionEn": "Mid",
-      "regionEn": "Stairs",
-      "file": "media/places/corrode/mid-stairs.webp",
-      "title": "File:Corrode Mid Stairs.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Corrode_Mid_Stairs.png"
-    },
-    {
-      "map": "Corrode",
-      "superRegionEn": "Mid",
-      "regionEn": "Top",
-      "file": "media/places/corrode/mid-top.webp",
-      "title": "File:Corrode Mid Top.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Corrode_Mid_Top.png"
-    },
-    {
-      "map": "Corrode",
-      "superRegionEn": "Mid",
-      "regionEn": "Window",
-      "file": "media/places/corrode/mid-window.webp",
-      "title": "File:Corrode Mid Window.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Corrode_Mid_Window.png"
-    },
-    {
-      "map": "Fracture",
-      "superRegionEn": "A",
-      "regionEn": "Dish",
-      "file": "media/places/fracture/a-dish.webp",
-      "title": "File:Fracture Dish.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Fracture_Dish.png"
-    },
-    {
-      "map": "Fracture",
-      "superRegionEn": "A",
-      "regionEn": "Door",
-      "file": "media/places/fracture/a-door.webp",
-      "title": "File:Fracture A Door.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Fracture_A_Door.png"
-    },
-    {
-      "map": "Fracture",
-      "superRegionEn": "A",
-      "regionEn": "Drop",
-      "file": "media/places/fracture/a-drop.webp",
-      "title": "File:Fracture Drop.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Fracture_Drop.png"
-    },
-    {
-      "map": "Fracture",
-      "superRegionEn": "A",
-      "regionEn": "Gate",
-      "file": "media/places/fracture/a-gate.webp",
-      "title": "File:Fracture Gate.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Fracture_Gate.png"
-    },
-    {
-      "map": "Fracture",
-      "superRegionEn": "A",
-      "regionEn": "Hall",
-      "file": "media/places/fracture/a-hall.webp",
-      "title": "File:Fracture A Hall.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Fracture_A_Hall.png"
-    },
-    {
-      "map": "Fracture",
-      "superRegionEn": "A",
-      "regionEn": "Link",
-      "file": "media/places/fracture/a-link.webp",
-      "title": "File:Fracture A Link.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Fracture_A_Link.png"
-    },
-    {
-      "map": "Fracture",
-      "superRegionEn": "A",
-      "regionEn": "Main",
-      "file": "media/places/fracture/a-main.webp",
-      "title": "File:Fracture A Main.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Fracture_A_Main.png"
-    },
-    {
-      "map": "Fracture",
-      "superRegionEn": "A",
-      "regionEn": "Rope",
-      "file": "media/places/fracture/a-rope.webp",
-      "title": "File:Fracture A Rope.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Fracture_A_Rope.png"
-    },
-    {
-      "map": "Fracture",
-      "superRegionEn": "A",
-      "regionEn": "Site",
-      "file": "media/places/fracture/a-site.webp",
-      "title": "File:Fracture A Site.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Fracture_A_Site.png"
-    },
-    {
-      "map": "Fracture",
-      "superRegionEn": "Attacker Side",
-      "regionEn": "Bridge",
-      "file": "media/places/fracture/attacker-side-bridge.webp",
-      "title": "File:Fracture Bridge.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Fracture_Bridge.png"
-    },
-    {
-      "map": "Fracture",
-      "superRegionEn": "B",
-      "regionEn": "Arcade",
-      "file": "media/places/fracture/b-arcade.webp",
-      "title": "File:Fracture Arcade.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Fracture_Arcade.png"
-    },
-    {
-      "map": "Fracture",
-      "superRegionEn": "B",
-      "regionEn": "Bench",
-      "file": "media/places/fracture/b-bench.webp",
-      "title": "File:Fracture Bench.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Fracture_Bench.png"
-    },
-    {
-      "map": "Fracture",
-      "superRegionEn": "B",
-      "regionEn": "Canteen",
-      "file": "media/places/fracture/b-canteen.webp",
-      "title": "File:Fracture Canteen.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Fracture_Canteen.png"
-    },
-    {
-      "map": "Fracture",
-      "superRegionEn": "B",
-      "regionEn": "Generator",
-      "file": "media/places/fracture/b-generator.webp",
-      "title": "File:Fracture Generator.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Fracture_Generator.png"
-    },
-    {
-      "map": "Fracture",
-      "superRegionEn": "B",
-      "regionEn": "Link",
-      "file": "media/places/fracture/b-link.webp",
-      "title": "File:Fracture B Link.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Fracture_B_Link.png"
-    },
-    {
-      "map": "Fracture",
-      "superRegionEn": "B",
-      "regionEn": "Main",
-      "file": "media/places/fracture/b-main.webp",
-      "title": "File:Fracture B Main.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Fracture_B_Main.png"
-    },
-    {
-      "map": "Fracture",
-      "superRegionEn": "B",
-      "regionEn": "Site",
-      "file": "media/places/fracture/b-site.webp",
-      "title": "File:Fracture B Site.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Fracture_B_Site.png"
-    },
-    {
-      "map": "Fracture",
-      "superRegionEn": "B",
-      "regionEn": "Tower",
-      "file": "media/places/fracture/b-tower.webp",
-      "title": "File:Fracture B Tower.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Fracture_B_Tower.png"
-    },
-    {
-      "map": "Fracture",
-      "superRegionEn": "B",
-      "regionEn": "Tree",
-      "file": "media/places/fracture/b-tree.webp",
-      "title": "File:Fracture Tree.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Fracture_Tree.png"
-    },
-    {
-      "map": "Fracture",
-      "superRegionEn": "B",
-      "regionEn": "Tunnel",
-      "file": "media/places/fracture/b-tunnel.webp",
-      "title": "File:Fracture Tunnel.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Fracture_Tunnel.png"
-    },
-    {
-      "map": "Haven",
-      "superRegionEn": "A",
-      "regionEn": "Garden",
-      "file": "media/places/haven/a-garden.webp",
-      "title": "File:Haven Garden.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Haven_Garden.png"
-    },
-    {
-      "map": "Haven",
-      "superRegionEn": "A",
-      "regionEn": "Link",
-      "file": "media/places/haven/a-link.webp",
-      "title": "File:Haven A Link.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Haven_A_Link.png"
-    },
-    {
-      "map": "Haven",
-      "superRegionEn": "A",
-      "regionEn": "Lobby",
-      "file": "media/places/haven/a-lobby.webp",
-      "title": "File:Haven A Lobby.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Haven_A_Lobby.png"
-    },
-    {
-      "map": "Haven",
-      "superRegionEn": "A",
-      "regionEn": "Long",
-      "file": "media/places/haven/a-long.webp",
-      "title": "File:Haven A Long.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Haven_A_Long.png"
-    },
-    {
-      "map": "Haven",
-      "superRegionEn": "A",
-      "regionEn": "Sewer",
-      "file": "media/places/haven/a-sewer.webp",
-      "title": "File:Haven Sewer.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Haven_Sewer.png"
-    },
-    {
-      "map": "Haven",
-      "superRegionEn": "A",
-      "regionEn": "Site",
-      "file": "media/places/haven/a-site.webp",
-      "title": "File:Haven A Site.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Haven_A_Site.png"
-    },
-    {
-      "map": "Haven",
-      "superRegionEn": "A",
-      "regionEn": "Tower",
-      "file": "media/places/haven/a-tower.webp",
-      "title": "File:Haven A Tower.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Haven_A_Tower.png"
-    },
-    {
-      "map": "Haven",
-      "superRegionEn": "B",
-      "regionEn": "Back",
-      "file": "media/places/haven/b-back.webp",
-      "title": "File:Haven B Back.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Haven_B_Back.png"
-    },
-    {
-      "map": "Haven",
-      "superRegionEn": "B",
-      "regionEn": "Site",
-      "file": "media/places/haven/b-site.webp",
-      "title": "File:Haven B Site.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Haven_B_Site.png"
-    },
-    {
-      "map": "Haven",
-      "superRegionEn": "C",
-      "regionEn": "Cubby",
-      "file": "media/places/haven/c-cubby.webp",
-      "title": "File:Haven C Cubby.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Haven_C_Cubby.png"
-    },
-    {
-      "map": "Haven",
-      "superRegionEn": "C",
-      "regionEn": "Garage",
-      "file": "media/places/haven/c-garage.webp",
-      "title": "File:Haven Garage.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Haven_Garage.png"
-    },
-    {
-      "map": "Haven",
-      "superRegionEn": "C",
-      "regionEn": "Link",
-      "file": "media/places/haven/c-link.webp",
-      "title": "File:Haven C Link.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Haven_C_Link.png"
-    },
-    {
-      "map": "Haven",
-      "superRegionEn": "C",
-      "regionEn": "Lobby",
-      "file": "media/places/haven/c-lobby.webp",
-      "title": "File:Haven C Lobby.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Haven_C_Lobby.png"
-    },
-    {
-      "map": "Haven",
-      "superRegionEn": "C",
-      "regionEn": "Long",
-      "file": "media/places/haven/c-long.webp",
-      "title": "File:Haven C Long.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Haven_C_Long.png"
-    },
-    {
-      "map": "Haven",
-      "superRegionEn": "C",
-      "regionEn": "Site",
-      "file": "media/places/haven/c-site.webp",
-      "title": "File:Haven C Site.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Haven_C_Site.png"
-    },
-    {
-      "map": "Haven",
-      "superRegionEn": "C",
-      "regionEn": "Window",
-      "file": "media/places/haven/c-window.webp",
-      "title": "File:Haven C Window.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Haven_C_Window.png"
-    },
-    {
-      "map": "Haven",
-      "superRegionEn": "Mid",
-      "regionEn": "Courtyard",
-      "file": "media/places/haven/mid-courtyard.webp",
-      "title": "File:Haven Courtyard.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Haven_Courtyard.png"
-    },
-    {
-      "map": "Haven",
-      "superRegionEn": "Mid",
-      "regionEn": "Doors",
-      "file": "media/places/haven/mid-doors.webp",
-      "title": "File:Haven Mid Doors.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Haven_Mid_Doors.png"
-    },
-    {
-      "map": "Haven",
-      "superRegionEn": "Mid",
-      "regionEn": "Window",
-      "file": "media/places/haven/mid-window.webp",
-      "title": "File:Haven Mid Window.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Haven_Mid_Window.png"
-    },
-    {
-      "map": "Icebox",
-      "superRegionEn": "A",
-      "regionEn": "Belt",
-      "file": "media/places/icebox/a-belt.webp",
-      "title": "File:Icebox Belt.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Icebox_Belt.png"
     },
     {
       "map": "Icebox",
       "superRegionEn": "A",
       "regionEn": "Nest",
-      "file": "media/places/icebox/a-nest.webp",
+      "file": "media/places/13a5c575c030.webp",
       "title": "File:Icebox A Nest.png",
       "source": "https://wiki.playvalorant.com/en-us/File:Icebox_A_Nest.png"
     },
     {
       "map": "Icebox",
-      "superRegionEn": "A",
-      "regionEn": "Pipes",
-      "file": "media/places/icebox/a-pipes.webp",
-      "title": "File:Icebox Pipes.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Icebox_Pipes.png"
+      "superRegionEn": "B",
+      "regionEn": "Garage",
+      "file": "media/places/1529b63bd3cc.webp",
+      "title": "File:Icebox Garage.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Icebox_Garage.png"
     },
     {
-      "map": "Icebox",
+      "map": "Pearl",
+      "superRegionEn": "B",
+      "regionEn": "Site",
+      "file": "media/places/162e8d4b9d12.webp",
+      "title": "File:Pearl B Site.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Pearl_B_Site.png"
+    },
+    {
+      "map": "Abyss",
+      "superRegionEn": "B",
+      "regionEn": "Tower",
+      "file": "media/places/172e5c14b6fc.webp",
+      "title": "File:Abyss B Tower.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Abyss_B_Tower.png"
+    },
+    {
+      "map": "Split",
+      "superRegionEn": "B",
+      "regionEn": "Alley",
+      "file": "media/places/18b827bd84dc.webp",
+      "title": "File:Split Alley.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Split_Alley.png"
+    },
+    {
+      "map": "Pearl",
+      "superRegionEn": "Mid",
+      "regionEn": "Plaza",
+      "file": "media/places/18d45e889b76.webp",
+      "title": "File:Pearl Plaza.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Pearl_Plaza.png"
+    },
+    {
+      "map": "Abyss",
+      "superRegionEn": "A",
+      "regionEn": "Bridge",
+      "file": "media/places/19027a6ae3ad.webp",
+      "title": "File:Abyss Bridge.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Abyss_Bridge.png"
+    },
+    {
+      "map": "Breeze",
+      "superRegionEn": "A",
+      "regionEn": "Lobby",
+      "file": "media/places/19539196635b.webp",
+      "title": "File:Breeze A Lobby.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Breeze_A_Lobby.png"
+    },
+    {
+      "map": "Pearl",
+      "superRegionEn": "Mid",
+      "regionEn": "Doors",
+      "file": "media/places/1b636d9224ce.webp",
+      "title": "File:Pearl Doors.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Pearl_Doors.png"
+    },
+    {
+      "map": "Split",
+      "superRegionEn": "B",
+      "regionEn": "Tower",
+      "file": "media/places/1dd7ba886145.webp",
+      "title": "File:Split B Tower.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Split_B_Tower.png"
+    },
+    {
+      "map": "Fracture",
+      "superRegionEn": "B",
+      "regionEn": "Bench",
+      "file": "media/places/1ea95da37ea0.webp",
+      "title": "File:Fracture Bench.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Fracture_Bench.png"
+    },
+    {
+      "map": "Breeze",
+      "superRegionEn": "Mid",
+      "regionEn": "Hall",
+      "file": "media/places/1f4bfa1e4693.webp",
+      "title": "File:Breeze Hall.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Breeze_Hall.png"
+    },
+    {
+      "map": "Bind",
+      "superRegionEn": "B",
+      "regionEn": "Link",
+      "file": "media/places/202dd6fe8f32.webp",
+      "title": "File:Bind B Link.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Bind_B_Link.png"
+    },
+    {
+      "map": "Split",
+      "superRegionEn": "B",
+      "regionEn": "Garage",
+      "file": "media/places/21203f2607e6.webp",
+      "title": "File:Split Garage.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Split_Garage.png"
+    },
+    {
+      "map": "Bind",
+      "superRegionEn": "B",
+      "regionEn": "Teleporter",
+      "file": "media/places/225ad5ada11f.webp",
+      "title": "File:Bind B Teleporter.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Bind_B_Teleporter.png"
+    },
+    {
+      "map": "Ascent",
+      "superRegionEn": "Mid",
+      "regionEn": "Catwalk",
+      "file": "media/places/227662b0c66f.webp",
+      "title": "File:Ascent Catwalk.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Ascent_Catwalk.png"
+    },
+    {
+      "map": "Haven",
+      "superRegionEn": "B",
+      "regionEn": "Site",
+      "file": "media/places/240a39c0dfa6.webp",
+      "title": "File:Haven B Site.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Haven_B_Site.png"
+    },
+    {
+      "map": "Ascent",
       "superRegionEn": "A",
       "regionEn": "Rafters",
-      "file": "media/places/icebox/a-rafters.webp",
-      "title": "File:Icebox Rafters.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Icebox_Rafters.png"
+      "file": "media/places/245760915cbe.webp",
+      "title": "File:Ascent Rafters.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Ascent_Rafters.png"
     },
     {
-      "map": "Icebox",
-      "superRegionEn": "A",
-      "regionEn": "Screen",
-      "file": "media/places/icebox/a-screen.webp",
-      "title": "File:Icebox Screen.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Icebox_Screen.png"
+      "map": "Sunset",
+      "superRegionEn": "Mid",
+      "regionEn": "Tiles",
+      "file": "media/places/246d6250370c.webp",
+      "title": "File:Sunset Mid Tiles.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Sunset_Mid_Tiles.png"
     },
     {
-      "map": "Icebox",
+      "map": "Split",
       "superRegionEn": "A",
-      "regionEn": "Site",
-      "file": "media/places/icebox/a-site.webp",
-      "title": "File:Icebox A Site.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Icebox_A_Site.png"
+      "regionEn": "Lobby",
+      "file": "media/places/264da727ed5b.webp",
+      "title": "File:Split A Lobby.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Split_A_Lobby.png"
+    },
+    {
+      "map": "Abyss",
+      "superRegionEn": "A",
+      "regionEn": "Security",
+      "file": "media/places/27584f32a833.webp",
+      "title": "File:Abyss Security.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Abyss_Security.png"
     },
     {
       "map": "Icebox",
       "superRegionEn": "B",
       "regionEn": "Back",
-      "file": "media/places/icebox/b-back.webp",
+      "file": "media/places/276e68a372b3.webp",
       "title": "File:Icebox B Back.png",
       "source": "https://wiki.playvalorant.com/en-us/File:Icebox_B_Back.png"
-    },
-    {
-      "map": "Icebox",
-      "superRegionEn": "B",
-      "regionEn": "Cubby",
-      "file": "media/places/icebox/b-cubby.webp",
-      "title": "File:Icebox B Cubby.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Icebox_B_Cubby.png"
-    },
-    {
-      "map": "Icebox",
-      "superRegionEn": "B",
-      "regionEn": "Fence",
-      "file": "media/places/icebox/b-fence.webp",
-      "title": "File:Icebox Fence.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Icebox_Fence.png"
-    },
-    {
-      "map": "Icebox",
-      "superRegionEn": "B",
-      "regionEn": "Garage",
-      "file": "media/places/icebox/b-garage.webp",
-      "title": "File:Icebox Garage.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Icebox_Garage.png"
-    },
-    {
-      "map": "Icebox",
-      "superRegionEn": "B",
-      "regionEn": "Green",
-      "file": "media/places/icebox/b-green.webp",
-      "title": "File:Icebox Green.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Icebox_Green.png"
-    },
-    {
-      "map": "Icebox",
-      "superRegionEn": "B",
-      "regionEn": "Hall",
-      "file": "media/places/icebox/b-hall.webp",
-      "title": "File:Icebox B Hall.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Icebox_B_Hall.png"
-    },
-    {
-      "map": "Icebox",
-      "superRegionEn": "B",
-      "regionEn": "Hut",
-      "file": "media/places/icebox/b-hut.webp",
-      "title": "File:Icebox Hut.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Icebox_Hut.png"
-    },
-    {
-      "map": "Icebox",
-      "superRegionEn": "B",
-      "regionEn": "Kitchen",
-      "file": "media/places/icebox/b-kitchen.webp",
-      "title": "File:Icebox Kitchen.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Icebox_Kitchen.png"
-    },
-    {
-      "map": "Icebox",
-      "superRegionEn": "B",
-      "regionEn": "Orange",
-      "file": "media/places/icebox/b-orange.webp",
-      "title": "File:Icebox Orange.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Icebox_Orange.png"
-    },
-    {
-      "map": "Icebox",
-      "superRegionEn": "B",
-      "regionEn": "Site",
-      "file": "media/places/icebox/b-site.webp",
-      "title": "File:Icebox B Site.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Icebox_B_Site.png"
-    },
-    {
-      "map": "Icebox",
-      "superRegionEn": "B",
-      "regionEn": "Snow Pile",
-      "file": "media/places/icebox/b-snow-pile.webp",
-      "title": "File:Icebox Snow Pile.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Icebox_Snow_Pile.png"
-    },
-    {
-      "map": "Icebox",
-      "superRegionEn": "B",
-      "regionEn": "Snowman",
-      "file": "media/places/icebox/b-snowman.webp",
-      "title": "File:Icebox Snowman.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Icebox_Snowman.png"
-    },
-    {
-      "map": "Icebox",
-      "superRegionEn": "B",
-      "regionEn": "Tube",
-      "file": "media/places/icebox/b-tube.webp",
-      "title": "File:Icebox Tube.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Icebox_Tube.png"
-    },
-    {
-      "map": "Icebox",
-      "superRegionEn": "B",
-      "regionEn": "Yellow",
-      "file": "media/places/icebox/b-yellow.webp",
-      "title": "File:Icebox Yellow.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Icebox_Yellow.png"
-    },
-    {
-      "map": "Icebox",
-      "superRegionEn": "Mid",
-      "regionEn": "Blue",
-      "file": "media/places/icebox/mid-blue.webp",
-      "title": "File:Icebox Blue.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Icebox_Blue.png"
-    },
-    {
-      "map": "Icebox",
-      "superRegionEn": "Mid",
-      "regionEn": "Boiler",
-      "file": "media/places/icebox/mid-boiler.webp",
-      "title": "File:Icebox Boiler.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Icebox_Boiler.png"
-    },
-    {
-      "map": "Icebox",
-      "superRegionEn": "Mid",
-      "regionEn": "Pallet",
-      "file": "media/places/icebox/mid-pallet.webp",
-      "title": "File:Icebox Pallet.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Icebox_Pallet.png"
-    },
-    {
-      "map": "Lotus",
-      "superRegionEn": "A",
-      "regionEn": "Hut",
-      "file": "media/places/lotus/a-hut.webp",
-      "title": "File:Lotus Hut.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Lotus_Hut.png"
     },
     {
       "map": "Lotus",
       "superRegionEn": "A",
       "regionEn": "Link",
-      "file": "media/places/lotus/a-link.webp",
+      "file": "media/places/286cd184fa3a.webp",
       "title": "File:Lotus A Link.png",
       "source": "https://wiki.playvalorant.com/en-us/File:Lotus_A_Link.png"
     },
     {
-      "map": "Lotus",
-      "superRegionEn": "A",
-      "regionEn": "Lobby",
-      "file": "media/places/lotus/a-lobby.webp",
-      "title": "File:Lotus A Lobby.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Lotus_A_Lobby.png"
+      "map": "Ascent",
+      "superRegionEn": "Mid",
+      "regionEn": "Courtyard",
+      "file": "media/places/288141b8fb0a.webp",
+      "title": "File:Ascent Courtyard.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Ascent_Courtyard.png"
     },
     {
       "map": "Lotus",
       "superRegionEn": "A",
+      "regionEn": "Tree",
+      "file": "media/places/292a9f06c30e.webp",
+      "title": "File:Lotus Tree.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Lotus_Tree.png"
+    },
+    {
+      "map": "Abyss",
+      "superRegionEn": "A",
+      "regionEn": "Vent",
+      "file": "media/places/2a261a5cdae4.webp",
+      "title": "File:Abyss Vent.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Abyss_Vent.png"
+    },
+    {
+      "map": "Pearl",
+      "superRegionEn": "B",
+      "regionEn": "Screen",
+      "file": "media/places/2c647ff04a03.webp",
+      "title": "File:Pearl Screen.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Pearl_Screen.png"
+    },
+    {
+      "map": "Sunset",
+      "superRegionEn": "B",
+      "regionEn": "Lobby",
+      "file": "media/places/2cc2da69bde9.webp",
+      "title": "File:Sunset B Lobby.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Sunset_B_Lobby.png"
+    },
+    {
+      "map": "Icebox",
+      "superRegionEn": "B",
+      "regionEn": "Tube",
+      "file": "media/places/2ded86389d0c.webp",
+      "title": "File:Icebox Tube.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Icebox_Tube.png"
+    },
+    {
+      "map": "Pearl",
+      "superRegionEn": "B",
+      "regionEn": "Hall",
+      "file": "media/places/2e7e738f1c3f.webp",
+      "title": "File:Pearl B Hall.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Pearl_B_Hall.png"
+    },
+    {
+      "map": "Abyss",
+      "superRegionEn": "Mid",
+      "regionEn": "Library",
+      "file": "media/places/31526ed4e8f9.webp",
+      "title": "File:Abyss Library.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Abyss_Library.png"
+    },
+    {
+      "map": "Ascent",
+      "superRegionEn": "A",
+      "regionEn": "Window",
+      "file": "media/places/321a8c86e155.webp",
+      "title": "File:Ascent Window.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Ascent_Window.png"
+    },
+    {
+      "map": "Split",
+      "superRegionEn": "B",
+      "regionEn": "Rafters",
+      "file": "media/places/329d2e755f98.webp",
+      "title": "File:Split B Rafters.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Split_B_Rafters.png"
+    },
+    {
+      "map": "Sunset",
+      "superRegionEn": "A",
       "regionEn": "Main",
-      "file": "media/places/lotus/a-main.webp",
-      "title": "File:Lotus A Main.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Lotus_A_Main.png"
+      "file": "media/places/32b805f0c5d9.webp",
+      "title": "File:Sunset A Main.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Sunset_A_Main.png"
+    },
+    {
+      "map": "Breeze",
+      "superRegionEn": "Mid",
+      "regionEn": "Cannon",
+      "file": "media/places/3331935ee9d7.webp",
+      "title": "File:Breeze Cannon.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Breeze_Cannon.png"
+    },
+    {
+      "map": "Ascent",
+      "superRegionEn": "A",
+      "regionEn": "Main",
+      "file": "media/places/3370cbbff66b.webp",
+      "title": "File:Ascent A Main.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Ascent_A_Main.png"
+    },
+    {
+      "map": "Split",
+      "superRegionEn": "B",
+      "regionEn": "Stairs",
+      "file": "media/places/34ee74eb851d.webp",
+      "title": "File:Split Stairs.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Split_Stairs.png"
+    },
+    {
+      "map": "Abyss",
+      "superRegionEn": "A",
+      "regionEn": "Link",
+      "file": "media/places/35576e7177bc.webp",
+      "title": "File:Abyss A Link.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Abyss_A_Link.png"
+    },
+    {
+      "map": "Lotus",
+      "superRegionEn": "C",
+      "regionEn": "Site",
+      "file": "media/places/3592ffb4d4b4.webp",
+      "title": "File:Lotus C Site.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Lotus_C_Site.png"
+    },
+    {
+      "map": "Bind",
+      "superRegionEn": "A",
+      "regionEn": "Tower",
+      "file": "media/places/35a4973adaf3.webp",
+      "title": "File:Bind Tower.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Bind_Tower.png"
+    },
+    {
+      "map": "Abyss",
+      "superRegionEn": "Mid",
+      "regionEn": "Bend",
+      "file": "media/places/36bd4bd91a0d.webp",
+      "title": "File:Abyss Mid Bend.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Abyss_Mid_Bend.png"
+    },
+    {
+      "map": "Haven",
+      "superRegionEn": "C",
+      "regionEn": "Site",
+      "file": "media/places/383cdeb698c6.webp",
+      "title": "File:Haven C Site.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Haven_C_Site.png"
+    },
+    {
+      "map": "Ascent",
+      "superRegionEn": "Mid",
+      "regionEn": "Link",
+      "file": "media/places/3870cf970dee.webp",
+      "title": "File:Ascent Mid Link.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Ascent_Mid_Link.png"
+    },
+    {
+      "map": "Fracture",
+      "superRegionEn": "A",
+      "regionEn": "Rope",
+      "file": "media/places/389aa62d10ff.webp",
+      "title": "File:Fracture A Rope.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Fracture_A_Rope.png"
+    },
+    {
+      "map": "Icebox",
+      "superRegionEn": "A",
+      "regionEn": "Screen",
+      "file": "media/places/3946dd70519c.webp",
+      "title": "File:Icebox Screen.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Icebox_Screen.png"
+    },
+    {
+      "map": "Breeze",
+      "superRegionEn": "A",
+      "regionEn": "Pyramids",
+      "file": "media/places/3a5aee58f008.webp",
+      "title": "File:Breeze Pyramids.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Breeze_Pyramids.png"
+    },
+    {
+      "map": "Fracture",
+      "superRegionEn": "A",
+      "regionEn": "Site",
+      "file": "media/places/3aad4bc08e6c.webp",
+      "title": "File:Fracture A Site.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Fracture_A_Site.png"
+    },
+    {
+      "map": "Bind",
+      "superRegionEn": "A",
+      "regionEn": "Bath",
+      "file": "media/places/3bf71eaf7205.webp",
+      "title": "File:Bind Bath.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Bind_Bath.png"
+    },
+    {
+      "map": "Abyss",
+      "superRegionEn": "B",
+      "regionEn": "Danger",
+      "file": "media/places/3c201fc01c0d.webp",
+      "title": "File:Abyss Danger.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Abyss_Danger.png"
+    },
+    {
+      "map": "Pearl",
+      "superRegionEn": "A",
+      "regionEn": "Secret",
+      "file": "media/places/3cce7ced27d5.webp",
+      "title": "File:Pearl Secret.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Pearl_Secret.png"
+    },
+    {
+      "map": "Bind",
+      "superRegionEn": "A",
+      "regionEn": "Teleporter",
+      "file": "media/places/3d142ff89c99.webp",
+      "title": "File:Bind A Teleporter.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Bind_A_Teleporter.png"
+    },
+    {
+      "map": "Bind",
+      "superRegionEn": "B",
+      "regionEn": "Fountain",
+      "file": "media/places/3d298f39f6f8.webp",
+      "title": "File:Bind Fountain.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Bind_Fountain.png"
+    },
+    {
+      "map": "Fracture",
+      "superRegionEn": "B",
+      "regionEn": "Main",
+      "file": "media/places/3daa8dcbae54.webp",
+      "title": "File:Fracture B Main.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Fracture_B_Main.png"
+    },
+    {
+      "map": "Corrode",
+      "superRegionEn": "A",
+      "regionEn": "Lobby",
+      "file": "media/places/3ed7860e4113.webp",
+      "title": "File:Corrode A Lobby.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Corrode_A_Lobby.png"
+    },
+    {
+      "map": "Split",
+      "superRegionEn": "A",
+      "regionEn": "Rafters",
+      "file": "media/places/3fc27fd0a79b.webp",
+      "title": "File:Split A Rafters.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Split_A_Rafters.png"
+    },
+    {
+      "map": "Haven",
+      "superRegionEn": "A",
+      "regionEn": "Garden",
+      "file": "media/places/40c51b856b25.webp",
+      "title": "File:Haven Garden.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Haven_Garden.png"
+    },
+    {
+      "map": "Corrode",
+      "superRegionEn": "Attacker Side",
+      "regionEn": "Spawn",
+      "file": "media/places/40e689d2103a.webp",
+      "title": "File:Corrode Attacker Side Spawn.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Corrode_Attacker_Side_Spawn.png"
+    },
+    {
+      "map": "Fracture",
+      "superRegionEn": "B",
+      "regionEn": "Canteen",
+      "file": "media/places/4382dc5a62ba.webp",
+      "title": "File:Fracture Canteen.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Fracture_Canteen.png"
+    },
+    {
+      "map": "Icebox",
+      "superRegionEn": "Mid",
+      "regionEn": "Pallet",
+      "file": "media/places/44d6bfdee406.webp",
+      "title": "File:Icebox Pallet.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Icebox_Pallet.png"
+    },
+    {
+      "map": "Corrode",
+      "superRegionEn": "A",
+      "regionEn": "Main",
+      "file": "media/places/459a6aaca2b3.webp",
+      "title": "File:Corrode A Main.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Corrode_A_Main.png"
+    },
+    {
+      "map": "Sunset",
+      "superRegionEn": "Mid",
+      "regionEn": "Bottom",
+      "file": "media/places/46a4f0562a50.webp",
+      "title": "File:Sunset Mid Bottom.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Sunset_Mid_Bottom.png"
+    },
+    {
+      "map": "Fracture",
+      "superRegionEn": "B",
+      "regionEn": "Tree",
+      "file": "media/places/470a136943c5.webp",
+      "title": "File:Fracture Tree.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Fracture_Tree.png"
+    },
+    {
+      "map": "Haven",
+      "superRegionEn": "C",
+      "regionEn": "Garage",
+      "file": "media/places/48f025ce8060.webp",
+      "title": "File:Haven Garage.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Haven_Garage.png"
+    },
+    {
+      "map": "Breeze",
+      "superRegionEn": "B",
+      "regionEn": "Tunnel",
+      "file": "media/places/49b38e6a1167.webp",
+      "title": "File:Breeze Tunnel.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Breeze_Tunnel.png"
+    },
+    {
+      "map": "Split",
+      "superRegionEn": "A",
+      "regionEn": "Ramps",
+      "file": "media/places/49f8c1216736.webp",
+      "title": "File:Split Ramps.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Split_Ramps.png"
+    },
+    {
+      "map": "Split",
+      "superRegionEn": "Mid",
+      "regionEn": "Mail",
+      "file": "media/places/4a372fae4677.webp",
+      "title": "File:Split Mail.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Split_Mail.png"
+    },
+    {
+      "map": "Haven",
+      "superRegionEn": "Mid",
+      "regionEn": "Doors",
+      "file": "media/places/4a39bdcae902.webp",
+      "title": "File:Haven Mid Doors.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Haven_Mid_Doors.png"
+    },
+    {
+      "map": "Corrode",
+      "superRegionEn": "B",
+      "regionEn": "Elbow",
+      "file": "media/places/4b2edbd53124.webp",
+      "title": "File:Corrode B Elbow.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Corrode_B_Elbow.png"
+    },
+    {
+      "map": "Pearl",
+      "superRegionEn": "B",
+      "regionEn": "Main",
+      "file": "media/places/4cdcc5090f4b.webp",
+      "title": "File:Pearl B Main.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Pearl_B_Main.png"
+    },
+    {
+      "map": "Split",
+      "superRegionEn": "B",
+      "regionEn": "Site",
+      "file": "media/places/4e7190905269.webp",
+      "title": "File:Split B Site.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Split_B_Site.png"
+    },
+    {
+      "map": "Corrode",
+      "superRegionEn": "B",
+      "regionEn": "Main",
+      "file": "media/places/50d1d420beaf.webp",
+      "title": "File:Corrode B Main.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Corrode_B_Main.png"
+    },
+    {
+      "map": "Icebox",
+      "superRegionEn": "A",
+      "regionEn": "Pipes",
+      "file": "media/places/54d0a60a140e.webp",
+      "title": "File:Icebox Pipes.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Icebox_Pipes.png"
+    },
+    {
+      "map": "Lotus",
+      "superRegionEn": "C",
+      "regionEn": "Mound",
+      "file": "media/places/55631116127c.webp",
+      "title": "File:Lotus Mound.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Lotus_Mound.png"
+    },
+    {
+      "map": "Fracture",
+      "superRegionEn": "A",
+      "regionEn": "Link",
+      "file": "media/places/5578e35ad7e3.webp",
+      "title": "File:Fracture A Link.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Fracture_A_Link.png"
+    },
+    {
+      "map": "Pearl",
+      "superRegionEn": "B",
+      "regionEn": "Tunnel",
+      "file": "media/places/55ad8fcaf686.webp",
+      "title": "File:Pearl Tunnel.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Pearl_Tunnel.png"
+    },
+    {
+      "map": "Bind",
+      "superRegionEn": "B",
+      "regionEn": "Garden",
+      "file": "media/places/56f660e3f357.webp",
+      "title": "File:Bind Garden.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Bind_Garden.png"
+    },
+    {
+      "map": "Ascent",
+      "superRegionEn": "A",
+      "regionEn": "Lobby",
+      "file": "media/places/596d66702639.webp",
+      "title": "File:Ascent A Lobby.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Ascent_A_Lobby.png"
+    },
+    {
+      "map": "Pearl",
+      "superRegionEn": "A",
+      "regionEn": "Flowers",
+      "file": "media/places/59c35ca8b766.webp",
+      "title": "File:Pearl Flowers.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Pearl_Flowers.png"
+    },
+    {
+      "map": "Abyss",
+      "superRegionEn": "Mid",
+      "regionEn": "Bottom",
+      "file": "media/places/5b67c90872e4.webp",
+      "title": "File:Abyss Mid Bottom.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Abyss_Mid_Bottom.png"
+    },
+    {
+      "map": "Pearl",
+      "superRegionEn": "Defender Side",
+      "regionEn": "Water",
+      "file": "media/places/5baa3c1298ad.webp",
+      "title": "File:Pearl Water.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Pearl_Water.png"
+    },
+    {
+      "map": "Ascent",
+      "superRegionEn": "Mid",
+      "regionEn": "Pizza",
+      "file": "media/places/5e315d37693f.webp",
+      "title": "File:Ascent Pizza.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Ascent_Pizza.png"
+    },
+    {
+      "map": "Lotus",
+      "superRegionEn": "B",
+      "regionEn": "Site",
+      "file": "media/places/5f37d2c221b1.webp",
+      "title": "File:Lotus B Site.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Lotus_B_Site.png"
+    },
+    {
+      "map": "Sunset",
+      "superRegionEn": "B",
+      "regionEn": "Boba",
+      "file": "media/places/5fb4b1b3fbf8.webp",
+      "title": "File:Sunset B Boba.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Sunset_B_Boba.png"
+    },
+    {
+      "map": "Haven",
+      "superRegionEn": "A",
+      "regionEn": "Site",
+      "file": "media/places/6827cfec2419.webp",
+      "title": "File:Haven A Site.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Haven_A_Site.png"
+    },
+    {
+      "map": "Fracture",
+      "superRegionEn": "A",
+      "regionEn": "Main",
+      "file": "media/places/6a76330b4080.webp",
+      "title": "File:Fracture A Main.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Fracture_A_Main.png"
+    },
+    {
+      "map": "Sunset",
+      "superRegionEn": "A",
+      "regionEn": "Link",
+      "file": "media/places/6c5147749624.webp",
+      "title": "File:Sunset A Link.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Sunset_A_Link.png"
+    },
+    {
+      "map": "Abyss",
+      "superRegionEn": "A",
+      "regionEn": "Site",
+      "file": "media/places/6d6e3c1f53d4.webp",
+      "title": "File:Abyss A Site.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Abyss_A_Site.png"
+    },
+    {
+      "map": "Icebox",
+      "superRegionEn": "A",
+      "regionEn": "Site",
+      "file": "media/places/6d7e663bf1de.webp",
+      "title": "File:Icebox A Site.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Icebox_A_Site.png"
+    },
+    {
+      "map": "Icebox",
+      "superRegionEn": "A",
+      "regionEn": "Belt",
+      "file": "media/places/6e8078600401.webp",
+      "title": "File:Icebox Belt.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Icebox_Belt.png"
+    },
+    {
+      "map": "Fracture",
+      "superRegionEn": "B",
+      "regionEn": "Tower",
+      "file": "media/places/702e7a68af5d.webp",
+      "title": "File:Fracture B Tower.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Fracture_B_Tower.png"
+    },
+    {
+      "map": "Ascent",
+      "superRegionEn": "B",
+      "regionEn": "Lobby",
+      "file": "media/places/71294f7437aa.webp",
+      "title": "File:Ascent B Lobby.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Ascent_B_Lobby.png"
+    },
+    {
+      "map": "Haven",
+      "superRegionEn": "A",
+      "regionEn": "Tower",
+      "file": "media/places/73145b568fd6.webp",
+      "title": "File:Haven A Tower.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Haven_A_Tower.png"
+    },
+    {
+      "map": "Sunset",
+      "superRegionEn": "A",
+      "regionEn": "Alley",
+      "file": "media/places/7576da8808a9.webp",
+      "title": "File:Sunset A Alley.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Sunset_A_Alley.png"
+    },
+    {
+      "map": "Breeze",
+      "superRegionEn": "B",
+      "regionEn": "Back",
+      "file": "media/places/798accd593d3.webp",
+      "title": "File:Breeze B Back.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Breeze_B_Back.png"
+    },
+    {
+      "map": "Bind",
+      "superRegionEn": "A",
+      "regionEn": "Short",
+      "file": "media/places/7b06f137d739.webp",
+      "title": "File:Bind A Short.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Bind_A_Short.png"
+    },
+    {
+      "map": "Fracture",
+      "superRegionEn": "A",
+      "regionEn": "Dish",
+      "file": "media/places/7b44e6b5a8ab.webp",
+      "title": "File:Fracture Dish.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Fracture_Dish.png"
     },
     {
       "map": "Lotus",
       "superRegionEn": "A",
       "regionEn": "Root",
-      "file": "media/places/lotus/a-root.webp",
+      "file": "media/places/7b46e839c510.webp",
       "title": "File:Lotus Root.png",
       "source": "https://wiki.playvalorant.com/en-us/File:Lotus_Root.png"
     },
     {
+      "map": "Breeze",
+      "superRegionEn": "Mid",
+      "regionEn": "Bottom",
+      "file": "media/places/7be83df03195.webp",
+      "title": "File:Breeze Mid Bottom.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Breeze_Mid_Bottom.png"
+    },
+    {
+      "map": "Corrode",
+      "superRegionEn": "A",
+      "regionEn": "Site",
+      "file": "media/places/7c857f746aea.webp",
+      "title": "File:Corrode A Site.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Corrode_A_Site.png"
+    },
+    {
+      "map": "Pearl",
+      "superRegionEn": "A",
+      "regionEn": "Art",
+      "file": "media/places/7cbcac25af4b.webp",
+      "title": "File:Pearl Art.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Pearl_Art.png"
+    },
+    {
+      "map": "Breeze",
+      "superRegionEn": "A",
+      "regionEn": "Shop",
+      "file": "media/places/7d27796f52e8.webp",
+      "title": "File:Breeze A Shop.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Breeze_A_Shop.png"
+    },
+    {
+      "map": "Icebox",
+      "superRegionEn": "B",
+      "regionEn": "Snowman",
+      "file": "media/places/7db5a0f9c4f8.webp",
+      "title": "File:Icebox Snowman.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Icebox_Snowman.png"
+    },
+    {
+      "map": "Abyss",
+      "superRegionEn": "A",
+      "regionEn": "Lobby",
+      "file": "media/places/7e9a53c4dae1.webp",
+      "title": "File:Abyss A Lobby.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Abyss_A_Lobby.png"
+    },
+    {
+      "map": "Lotus",
+      "superRegionEn": "C",
+      "regionEn": "Gravel",
+      "file": "media/places/7f20ca1071ea.webp",
+      "title": "File:Lotus Gravel.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Lotus_Gravel.png"
+    },
+    {
+      "map": "Fracture",
+      "superRegionEn": "Attacker Side",
+      "regionEn": "Bridge",
+      "file": "media/places/801c30b64e45.webp",
+      "title": "File:Fracture Bridge.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Fracture_Bridge.png"
+    },
+    {
+      "map": "Lotus",
+      "superRegionEn": "C",
+      "regionEn": "Lobby",
+      "file": "media/places/8144b29eefbf.webp",
+      "title": "File:Lotus C Lobby.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Lotus_C_Lobby.png"
+    },
+    {
+      "map": "Ascent",
+      "superRegionEn": "B",
+      "regionEn": "Boat House",
+      "file": "media/places/81b2933fe36d.webp",
+      "title": "File:Ascent Boat House.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Ascent_Boat_House.png"
+    },
+    {
+      "map": "Sunset",
+      "superRegionEn": "A",
+      "regionEn": "Elbow",
+      "file": "media/places/81e86ef837f8.webp",
+      "title": "File:Sunset A Elbow.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Sunset_A_Elbow.png"
+    },
+    {
+      "map": "Bind",
+      "superRegionEn": "B",
+      "regionEn": "Site",
+      "file": "media/places/8398072a26b9.webp",
+      "title": "File:Bind B Site.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Bind_B_Site.png"
+    },
+    {
       "map": "Lotus",
       "superRegionEn": "A",
-      "regionEn": "Rubble",
-      "file": "media/places/lotus/a-rubble.webp",
-      "title": "File:Lotus Rubble.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Lotus_Rubble.png"
+      "regionEn": "Hut",
+      "file": "media/places/83e1b68b0023.webp",
+      "title": "File:Lotus Hut.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Lotus_Hut.png"
+    },
+    {
+      "map": "Bind",
+      "superRegionEn": "Attacker Side",
+      "regionEn": "Cave",
+      "file": "media/places/85b3d5405d0c.webp",
+      "title": "File:Bind Cave.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Bind_Cave.png"
+    },
+    {
+      "map": "Corrode",
+      "superRegionEn": "A",
+      "regionEn": "Yard",
+      "file": "media/places/86fd32cdfdf5.webp",
+      "title": "File:Corrode A Yard.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Corrode_A_Yard.png"
     },
     {
       "map": "Lotus",
       "superRegionEn": "A",
       "regionEn": "Site",
-      "file": "media/places/lotus/a-site.webp",
+      "file": "media/places/884614748349.webp",
       "title": "File:Lotus A Site.png",
       "source": "https://wiki.playvalorant.com/en-us/File:Lotus_A_Site.png"
     },
     {
-      "map": "Lotus",
+      "map": "Corrode",
+      "superRegionEn": "B",
+      "regionEn": "Site",
+      "file": "media/places/886973c8db64.webp",
+      "title": "File:Corrode B Site.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Corrode_B_Site.png"
+    },
+    {
+      "map": "Bind",
+      "superRegionEn": "B",
+      "regionEn": "Long",
+      "file": "media/places/8921086568ad.webp",
+      "title": "File:Bind B Long.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Bind_B_Long.png"
+    },
+    {
+      "map": "Split",
       "superRegionEn": "A",
-      "regionEn": "Stairs",
-      "file": "media/places/lotus/a-stairs.webp",
-      "title": "File:Lotus Stairs.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Lotus_Stairs.png"
+      "regionEn": "Back",
+      "file": "media/places/89faeec7c267.webp",
+      "title": "File:Split A Back.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Split_A_Back.png"
+    },
+    {
+      "map": "Bind",
+      "superRegionEn": "A",
+      "regionEn": "Link",
+      "file": "media/places/8c21556509f2.webp",
+      "title": "File:Bind A Link.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Bind_A_Link.png"
+    },
+    {
+      "map": "Ascent",
+      "superRegionEn": "Mid",
+      "regionEn": "Bottom",
+      "file": "media/places/8c227aeeffae.webp",
+      "title": "File:Ascent Mid Bottom.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Ascent_Mid_Bottom.png"
+    },
+    {
+      "map": "Breeze",
+      "superRegionEn": "A",
+      "regionEn": "Bridge",
+      "file": "media/places/8c22fe8f6525.webp",
+      "title": "File:Breeze Bridge.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Breeze_Bridge.png"
+    },
+    {
+      "map": "Abyss",
+      "superRegionEn": "B",
+      "regionEn": "Lobby",
+      "file": "media/places/8c3041c4ff1f.webp",
+      "title": "File:Abyss B Lobby.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Abyss_B_Lobby.png"
     },
     {
       "map": "Lotus",
       "superRegionEn": "A",
       "regionEn": "Top",
-      "file": "media/places/lotus/a-top.webp",
+      "file": "media/places/8ec72b03d0c1.webp",
       "title": "File:Lotus A Top.png",
       "source": "https://wiki.playvalorant.com/en-us/File:Lotus_A_Top.png"
     },
     {
       "map": "Lotus",
       "superRegionEn": "A",
-      "regionEn": "Tree",
-      "file": "media/places/lotus/a-tree.webp",
-      "title": "File:Lotus Tree.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Lotus_Tree.png"
+      "regionEn": "Stairs",
+      "file": "media/places/8fed4874b9af.webp",
+      "title": "File:Lotus Stairs.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Lotus_Stairs.png"
     },
     {
-      "map": "Lotus",
-      "superRegionEn": "B",
-      "regionEn": "Main",
-      "file": "media/places/lotus/b-main.webp",
-      "title": "File:Lotus B Main.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Lotus_B_Main.png"
-    },
-    {
-      "map": "Lotus",
-      "superRegionEn": "B",
-      "regionEn": "Pillars",
-      "file": "media/places/lotus/b-pillars.webp",
-      "title": "File:Lotus Pillars.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Lotus_Pillars.png"
-    },
-    {
-      "map": "Lotus",
-      "superRegionEn": "B",
-      "regionEn": "Site",
-      "file": "media/places/lotus/b-site.webp",
-      "title": "File:Lotus B Site.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Lotus_B_Site.png"
-    },
-    {
-      "map": "Lotus",
-      "superRegionEn": "B",
-      "regionEn": "Upper",
-      "file": "media/places/lotus/b-upper.webp",
-      "title": "File:Lotus B Upper.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Lotus_B_Upper.png"
-    },
-    {
-      "map": "Lotus",
-      "superRegionEn": "C",
-      "regionEn": "Bend",
-      "file": "media/places/lotus/c-bend.webp",
-      "title": "File:Lotus Bend.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Lotus_Bend.png"
-    },
-    {
-      "map": "Lotus",
-      "superRegionEn": "C",
-      "regionEn": "Gravel",
-      "file": "media/places/lotus/c-gravel.webp",
-      "title": "File:Lotus Gravel.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Lotus_Gravel.png"
-    },
-    {
-      "map": "Lotus",
-      "superRegionEn": "C",
-      "regionEn": "Hall",
-      "file": "media/places/lotus/c-hall.webp",
-      "title": "File:Lotus C Hall.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Lotus_C_Hall.png"
-    },
-    {
-      "map": "Lotus",
-      "superRegionEn": "C",
+      "map": "Haven",
+      "superRegionEn": "A",
       "regionEn": "Link",
-      "file": "media/places/lotus/c-link.webp",
-      "title": "File:Lotus C Link.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Lotus_C_Link.png"
+      "file": "media/places/9032e948e134.webp",
+      "title": "File:Haven A Link.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Haven_A_Link.png"
     },
     {
-      "map": "Lotus",
+      "map": "Bind",
+      "superRegionEn": "B",
+      "regionEn": "Window",
+      "file": "media/places/907bcdb15175.webp",
+      "title": "File:Bind B Window.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Bind_B_Window.png"
+    },
+    {
+      "map": "Haven",
       "superRegionEn": "C",
-      "regionEn": "Lobby",
-      "file": "media/places/lotus/c-lobby.webp",
-      "title": "File:Lotus C Lobby.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Lotus_C_Lobby.png"
+      "regionEn": "Long",
+      "file": "media/places/9101b6481f1f.webp",
+      "title": "File:Haven C Long.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Haven_C_Long.png"
     },
     {
-      "map": "Lotus",
-      "superRegionEn": "C",
-      "regionEn": "Main",
-      "file": "media/places/lotus/c-main.webp",
-      "title": "File:Lotus C Main.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Lotus_C_Main.png"
-    },
-    {
-      "map": "Lotus",
-      "superRegionEn": "C",
-      "regionEn": "Mound",
-      "file": "media/places/lotus/c-mound.webp",
-      "title": "File:Lotus Mound.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Lotus_Mound.png"
-    },
-    {
-      "map": "Lotus",
-      "superRegionEn": "C",
-      "regionEn": "Site",
-      "file": "media/places/lotus/c-site.webp",
-      "title": "File:Lotus C Site.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Lotus_C_Site.png"
-    },
-    {
-      "map": "Pearl",
-      "superRegionEn": "A",
-      "regionEn": "Art",
-      "file": "media/places/pearl/a-art.webp",
-      "title": "File:Pearl Art.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Pearl_Art.png"
-    },
-    {
-      "map": "Pearl",
-      "superRegionEn": "A",
-      "regionEn": "Dugout",
-      "file": "media/places/pearl/a-dugout.webp",
-      "title": "File:Pearl Dugout.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Pearl_Dugout.png"
-    },
-    {
-      "map": "Pearl",
-      "superRegionEn": "A",
-      "regionEn": "Flowers",
-      "file": "media/places/pearl/a-flowers.webp",
-      "title": "File:Pearl Flowers.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Pearl_Flowers.png"
+      "map": "Sunset",
+      "superRegionEn": "Mid",
+      "regionEn": "Top",
+      "file": "media/places/91039049ed3a.webp",
+      "title": "File:Sunset Mid Top.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Sunset_Mid_Top.png"
     },
     {
       "map": "Pearl",
       "superRegionEn": "A",
       "regionEn": "Link",
-      "file": "media/places/pearl/a-link.webp",
+      "file": "media/places/91f80b076f48.webp",
       "title": "File:Pearl A Link.png",
       "source": "https://wiki.playvalorant.com/en-us/File:Pearl_A_Link.png"
     },
     {
       "map": "Pearl",
+      "superRegionEn": "Mid",
+      "regionEn": "Shops",
+      "file": "media/places/92695ff6ae60.webp",
+      "title": "File:Pearl Shops.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Pearl_Shops.png"
+    },
+    {
+      "map": "Fracture",
       "superRegionEn": "A",
-      "regionEn": "Main",
-      "file": "media/places/pearl/a-main.webp",
-      "title": "File:Pearl A Main.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Pearl_A_Main.png"
-    },
-    {
-      "map": "Pearl",
-      "superRegionEn": "A",
-      "regionEn": "Restaurant",
-      "file": "media/places/pearl/a-restaurant.webp",
-      "title": "File:Pearl Restaurant.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Pearl_Restaurant.png"
-    },
-    {
-      "map": "Pearl",
-      "superRegionEn": "A",
-      "regionEn": "Secret",
-      "file": "media/places/pearl/a-secret.webp",
-      "title": "File:Pearl Secret.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Pearl_Secret.png"
-    },
-    {
-      "map": "Pearl",
-      "superRegionEn": "A",
-      "regionEn": "Site",
-      "file": "media/places/pearl/a-site.webp",
-      "title": "File:Pearl A Site.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Pearl_A_Site.png"
-    },
-    {
-      "map": "Pearl",
-      "superRegionEn": "B",
-      "regionEn": "Club",
-      "file": "media/places/pearl/b-club.webp",
-      "title": "File:Pearl Club.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Pearl_Club.png"
-    },
-    {
-      "map": "Pearl",
-      "superRegionEn": "B",
       "regionEn": "Hall",
-      "file": "media/places/pearl/b-hall.webp",
-      "title": "File:Pearl B Hall.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Pearl_B_Hall.png"
+      "file": "media/places/9379b256a48c.webp",
+      "title": "File:Fracture A Hall.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Fracture_A_Hall.png"
     },
     {
-      "map": "Pearl",
+      "map": "Corrode",
       "superRegionEn": "B",
-      "regionEn": "Link",
-      "file": "media/places/pearl/b-link.webp",
-      "title": "File:Pearl B Link.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Pearl_B_Link.png"
+      "regionEn": "Lobby",
+      "file": "media/places/946693f8dabc.webp",
+      "title": "File:Corrode B Lobby.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Corrode_B_Lobby.png"
     },
     {
-      "map": "Pearl",
+      "map": "Breeze",
       "superRegionEn": "B",
       "regionEn": "Main",
-      "file": "media/places/pearl/b-main.webp",
-      "title": "File:Pearl B Main.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Pearl_B_Main.png"
+      "file": "media/places/95a8232e3781.webp",
+      "title": "File:Breeze B Main.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Breeze_B_Main.png"
+    },
+    {
+      "map": "Icebox",
+      "superRegionEn": "B",
+      "regionEn": "Hut",
+      "file": "media/places/965d31494c1c.webp",
+      "title": "File:Icebox Hut.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Icebox_Hut.png"
+    },
+    {
+      "map": "Fracture",
+      "superRegionEn": "B",
+      "regionEn": "Arcade",
+      "file": "media/places/9c070750022e.webp",
+      "title": "File:Fracture Arcade.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Fracture_Arcade.png"
+    },
+    {
+      "map": "Corrode",
+      "superRegionEn": "Mid",
+      "regionEn": "Window",
+      "file": "media/places/9cb4967e011c.webp",
+      "title": "File:Corrode Mid Window.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Corrode_Mid_Window.png"
     },
     {
       "map": "Pearl",
-      "superRegionEn": "B",
-      "regionEn": "Ramp",
-      "file": "media/places/pearl/b-ramp.webp",
-      "title": "File:Pearl Ramp.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Pearl_Ramp.png"
+      "superRegionEn": "A",
+      "regionEn": "Dugout",
+      "file": "media/places/9d789edfea50.webp",
+      "title": "File:Pearl Dugout.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Pearl_Dugout.png"
     },
     {
-      "map": "Pearl",
-      "superRegionEn": "B",
-      "regionEn": "Screen",
-      "file": "media/places/pearl/b-screen.webp",
-      "title": "File:Pearl Screen.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Pearl_Screen.png"
-    },
-    {
-      "map": "Pearl",
-      "superRegionEn": "B",
+      "map": "Sunset",
+      "superRegionEn": "A",
       "regionEn": "Site",
-      "file": "media/places/pearl/b-site.webp",
-      "title": "File:Pearl B Site.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Pearl_B_Site.png"
+      "file": "media/places/9f4ca483b2a6.webp",
+      "title": "File:Sunset A Site.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Sunset_A_Site.png"
     },
     {
-      "map": "Pearl",
+      "map": "Bind",
       "superRegionEn": "B",
-      "regionEn": "Tower",
-      "file": "media/places/pearl/b-tower.webp",
-      "title": "File:Pearl B Tower.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Pearl_B_Tower.png"
+      "regionEn": "Short",
+      "file": "media/places/9f8f3e011227.webp",
+      "title": "File:Bind B Short.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Bind_B_Short.png"
     },
     {
-      "map": "Pearl",
-      "superRegionEn": "B",
-      "regionEn": "Tunnel",
-      "file": "media/places/pearl/b-tunnel.webp",
-      "title": "File:Pearl Tunnel.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Pearl_Tunnel.png"
+      "map": "Lotus",
+      "superRegionEn": "C",
+      "regionEn": "Hall",
+      "file": "media/places/a00be51dd3d2.webp",
+      "title": "File:Lotus C Hall.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Lotus_C_Hall.png"
     },
     {
-      "map": "Pearl",
-      "superRegionEn": "Defender Side",
-      "regionEn": "Records",
-      "file": "media/places/pearl/defender-side-records.webp",
-      "title": "File:Pearl Records.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Pearl_Records.png"
-    },
-    {
-      "map": "Pearl",
-      "superRegionEn": "Defender Side",
-      "regionEn": "Water",
-      "file": "media/places/pearl/defender-side-water.webp",
-      "title": "File:Pearl Water.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Pearl_Water.png"
+      "map": "Lotus",
+      "superRegionEn": "A",
+      "regionEn": "Lobby",
+      "file": "media/places/a154339b3a4a.webp",
+      "title": "File:Lotus A Lobby.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Lotus_A_Lobby.png"
     },
     {
       "map": "Pearl",
       "superRegionEn": "Mid",
       "regionEn": "Connector",
-      "file": "media/places/pearl/mid-connector.webp",
+      "file": "media/places/a170a39e28df.webp",
       "title": "File:Pearl Connector.png",
       "source": "https://wiki.playvalorant.com/en-us/File:Pearl_Connector.png"
     },
     {
-      "map": "Pearl",
-      "superRegionEn": "Mid",
-      "regionEn": "Doors",
-      "file": "media/places/pearl/mid-doors.webp",
-      "title": "File:Pearl Doors.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Pearl_Doors.png"
+      "map": "Fracture",
+      "superRegionEn": "B",
+      "regionEn": "Link",
+      "file": "media/places/a244d93bb090.webp",
+      "title": "File:Fracture B Link.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Fracture_B_Link.png"
     },
     {
-      "map": "Pearl",
-      "superRegionEn": "Mid",
-      "regionEn": "Plaza",
-      "file": "media/places/pearl/mid-plaza.webp",
-      "title": "File:Pearl Plaza.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Pearl_Plaza.png"
+      "map": "Breeze",
+      "superRegionEn": "B",
+      "regionEn": "Window",
+      "file": "media/places/a3a08af3f417.webp",
+      "title": "File:Breeze B Window.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Breeze_B_Window.png"
     },
     {
-      "map": "Pearl",
-      "superRegionEn": "Mid",
-      "regionEn": "Shops",
-      "file": "media/places/pearl/mid-shops.webp",
-      "title": "File:Pearl Shops.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Pearl_Shops.png"
+      "map": "Icebox",
+      "superRegionEn": "B",
+      "regionEn": "Green",
+      "file": "media/places/a4fd798281e9.webp",
+      "title": "File:Icebox Green.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Icebox_Green.png"
     },
     {
-      "map": "Pearl",
-      "superRegionEn": "Mid",
-      "regionEn": "Top",
-      "file": "media/places/pearl/mid-top.webp",
-      "title": "File:Pearl Mid Top.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Pearl_Mid_Top.png"
-    },
-    {
-      "map": "Split",
-      "superRegionEn": "A",
-      "regionEn": "Back",
-      "file": "media/places/split/a-back.webp",
-      "title": "File:Split A Back.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Split_A_Back.png"
-    },
-    {
-      "map": "Split",
+      "map": "Bind",
       "superRegionEn": "A",
       "regionEn": "Lobby",
-      "file": "media/places/split/a-lobby.webp",
-      "title": "File:Split A Lobby.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Split_A_Lobby.png"
+      "file": "media/places/a6a8036556bd.webp",
+      "title": "File:Bind A Lobby.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Bind_A_Lobby.png"
+    },
+    {
+      "map": "Icebox",
+      "superRegionEn": "Mid",
+      "regionEn": "Boiler",
+      "file": "media/places/a7415e726393.webp",
+      "title": "File:Icebox Boiler.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Icebox_Boiler.png"
+    },
+    {
+      "map": "Ascent",
+      "superRegionEn": "Mid",
+      "regionEn": "Top",
+      "file": "media/places/a86beb55704e.webp",
+      "title": "File:Ascent Mid Top.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Ascent_Mid_Top.png"
+    },
+    {
+      "map": "Icebox",
+      "superRegionEn": "B",
+      "regionEn": "Cubby",
+      "file": "media/places/aa8e14902610.webp",
+      "title": "File:Icebox B Cubby.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Icebox_B_Cubby.png"
+    },
+    {
+      "map": "Icebox",
+      "superRegionEn": "A",
+      "regionEn": "Rafters",
+      "file": "media/places/ab450693e11f.webp",
+      "title": "File:Icebox Rafters.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Icebox_Rafters.png"
+    },
+    {
+      "map": "Bind",
+      "superRegionEn": "A",
+      "regionEn": "Lamps",
+      "file": "media/places/ab9289736738.webp",
+      "title": "File:Bind Lamps.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Bind_Lamps.png"
+    },
+    {
+      "map": "Split",
+      "superRegionEn": "B",
+      "regionEn": "Link",
+      "file": "media/places/ac26fd3212df.webp",
+      "title": "File:Split B Link.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Split_B_Link.png"
+    },
+    {
+      "map": "Corrode",
+      "superRegionEn": "B",
+      "regionEn": "Tower",
+      "file": "media/places/acb0335f53f6.webp",
+      "title": "File:Corrode B Tower.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Corrode_B_Tower.png"
+    },
+    {
+      "map": "Ascent",
+      "superRegionEn": "B",
+      "regionEn": "Main",
+      "file": "media/places/acbb0f1af727.webp",
+      "title": "File:Ascent B Main.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Ascent_B_Main.png"
     },
     {
       "map": "Split",
       "superRegionEn": "A",
       "regionEn": "Main",
-      "file": "media/places/split/a-main.webp",
+      "file": "media/places/ad42d82ccdcd.webp",
       "title": "File:Split A Main.png",
       "source": "https://wiki.playvalorant.com/en-us/File:Split_A_Main.png"
     },
     {
-      "map": "Split",
+      "map": "Breeze",
+      "superRegionEn": "Mid",
+      "regionEn": "Pillar",
+      "file": "media/places/ad629a829850.webp",
+      "title": "File:Breeze Pillar.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Breeze_Pillar.png"
+    },
+    {
+      "map": "Abyss",
       "superRegionEn": "A",
-      "regionEn": "Rafters",
-      "file": "media/places/split/a-rafters.webp",
-      "title": "File:Split A Rafters.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Split_A_Rafters.png"
+      "regionEn": "Main",
+      "file": "media/places/add2a85dabd3.webp",
+      "title": "File:Abyss A Main.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Abyss_A_Main.png"
+    },
+    {
+      "map": "Fracture",
+      "superRegionEn": "A",
+      "regionEn": "Gate",
+      "file": "media/places/ae662eb3d621.webp",
+      "title": "File:Fracture Gate.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Fracture_Gate.png"
+    },
+    {
+      "map": "Pearl",
+      "superRegionEn": "B",
+      "regionEn": "Link",
+      "file": "media/places/afe7730547a4.webp",
+      "title": "File:Pearl B Link.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Pearl_B_Link.png"
+    },
+    {
+      "map": "Haven",
+      "superRegionEn": "C",
+      "regionEn": "Link",
+      "file": "media/places/afec7e8e8ff7.webp",
+      "title": "File:Haven C Link.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Haven_C_Link.png"
+    },
+    {
+      "map": "Bind",
+      "superRegionEn": "B",
+      "regionEn": "Hall",
+      "file": "media/places/b13d3e81b814.webp",
+      "title": "File:Bind B Hall.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Bind_B_Hall.png"
+    },
+    {
+      "map": "Abyss",
+      "superRegionEn": "A",
+      "regionEn": "Secret",
+      "file": "media/places/b29e745b1dac.webp",
+      "title": "File:Abyss A Secret.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Abyss_A_Secret.png"
+    },
+    {
+      "map": "Haven",
+      "superRegionEn": "Mid",
+      "regionEn": "Window",
+      "file": "media/places/b597af2cc8c0.webp",
+      "title": "File:Haven Mid Window.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Haven_Mid_Window.png"
+    },
+    {
+      "map": "Haven",
+      "superRegionEn": "C",
+      "regionEn": "Lobby",
+      "file": "media/places/b6b8a37121af.webp",
+      "title": "File:Haven C Lobby.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Haven_C_Lobby.png"
+    },
+    {
+      "map": "Split",
+      "superRegionEn": "Mid",
+      "regionEn": "Vent",
+      "file": "media/places/b7d14a0a4468.webp",
+      "title": "File:Split Vent.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Split_Vent.png"
+    },
+    {
+      "map": "Corrode",
+      "superRegionEn": "A",
+      "regionEn": "Elbow",
+      "file": "media/places/b7e5b49c0212.webp",
+      "title": "File:Corrode A Elbow.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Corrode_A_Elbow.png"
+    },
+    {
+      "map": "Corrode",
+      "superRegionEn": "A",
+      "regionEn": "Crane",
+      "file": "media/places/b7fc72c58da4.webp",
+      "title": "File:Corrode A Crane.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Corrode_A_Crane.png"
+    },
+    {
+      "map": "Haven",
+      "superRegionEn": "C",
+      "regionEn": "Cubby",
+      "file": "media/places/b836704def44.webp",
+      "title": "File:Haven C Cubby.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Haven_C_Cubby.png"
+    },
+    {
+      "map": "Breeze",
+      "superRegionEn": "B",
+      "regionEn": "Elbow",
+      "file": "media/places/b8ee640e89c3.webp",
+      "title": "File:Breeze B Elbow.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Breeze_B_Elbow.png"
+    },
+    {
+      "map": "Ascent",
+      "superRegionEn": "Mid",
+      "regionEn": "Market",
+      "file": "media/places/ba69899680a0.webp",
+      "title": "File:Ascent Market.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Ascent_Market.png"
+    },
+    {
+      "map": "Fracture",
+      "superRegionEn": "A",
+      "regionEn": "Door",
+      "file": "media/places/bae4f03fa50a.webp",
+      "title": "File:Fracture A Door.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Fracture_A_Door.png"
     },
     {
       "map": "Split",
       "superRegionEn": "A",
-      "regionEn": "Ramps",
-      "file": "media/places/split/a-ramps.webp",
-      "title": "File:Split Ramps.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Split_Ramps.png"
+      "regionEn": "Tower",
+      "file": "media/places/bbd277502eea.webp",
+      "title": "File:Split A Tower.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Split_A_Tower.png"
+    },
+    {
+      "map": "Pearl",
+      "superRegionEn": "A",
+      "regionEn": "Site",
+      "file": "media/places/bd33145e92da.webp",
+      "title": "File:Pearl A Site.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Pearl_A_Site.png"
+    },
+    {
+      "map": "Bind",
+      "superRegionEn": "A",
+      "regionEn": "Site",
+      "file": "media/places/be4b0b2bd9d2.webp",
+      "title": "File:Bind A Site.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Bind_A_Site.png"
+    },
+    {
+      "map": "Pearl",
+      "superRegionEn": "B",
+      "regionEn": "Ramp",
+      "file": "media/places/c1455ebf0f24.webp",
+      "title": "File:Pearl Ramp.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Pearl_Ramp.png"
+    },
+    {
+      "map": "Fracture",
+      "superRegionEn": "B",
+      "regionEn": "Site",
+      "file": "media/places/c32f3375d47d.webp",
+      "title": "File:Fracture B Site.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Fracture_B_Site.png"
+    },
+    {
+      "map": "Pearl",
+      "superRegionEn": "A",
+      "regionEn": "Restaurant",
+      "file": "media/places/c428e87191a0.webp",
+      "title": "File:Pearl Restaurant.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Pearl_Restaurant.png"
+    },
+    {
+      "map": "Icebox",
+      "superRegionEn": "B",
+      "regionEn": "Kitchen",
+      "file": "media/places/c75cb53a47fc.webp",
+      "title": "File:Icebox Kitchen.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Icebox_Kitchen.png"
+    },
+    {
+      "map": "Corrode",
+      "superRegionEn": "A",
+      "regionEn": "Link",
+      "file": "media/places/c865ea0b7858.webp",
+      "title": "File:Corrode A Link.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Corrode_A_Link.png"
+    },
+    {
+      "map": "Sunset",
+      "superRegionEn": "B",
+      "regionEn": "Site",
+      "file": "media/places/ca30edf12555.webp",
+      "title": "File:Sunset B Site.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Sunset_B_Site.png"
+    },
+    {
+      "map": "Pearl",
+      "superRegionEn": "A",
+      "regionEn": "Main",
+      "file": "media/places/ca57d614229d.webp",
+      "title": "File:Pearl A Main.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Pearl_A_Main.png"
+    },
+    {
+      "map": "Icebox",
+      "superRegionEn": "B",
+      "regionEn": "Yellow",
+      "file": "media/places/cabd64715363.webp",
+      "title": "File:Icebox Yellow.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Icebox_Yellow.png"
+    },
+    {
+      "map": "Corrode",
+      "superRegionEn": "Mid",
+      "regionEn": "Top",
+      "file": "media/places/cb5e63862dfc.webp",
+      "title": "File:Corrode Mid Top.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Corrode_Mid_Top.png"
+    },
+    {
+      "map": "Abyss",
+      "superRegionEn": "B",
+      "regionEn": "Link",
+      "file": "media/places/cbaf24c182ee.webp",
+      "title": "File:Abyss B Link.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Abyss_B_Link.png"
+    },
+    {
+      "map": "Abyss",
+      "superRegionEn": "B",
+      "regionEn": "Site",
+      "file": "media/places/cd114b3af124.webp",
+      "title": "File:Abyss B Site.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Abyss_B_Site.png"
+    },
+    {
+      "map": "Haven",
+      "superRegionEn": "A",
+      "regionEn": "Lobby",
+      "file": "media/places/cdbcfa38951d.webp",
+      "title": "File:Haven A Lobby.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Haven_A_Lobby.png"
+    },
+    {
+      "map": "Icebox",
+      "superRegionEn": "B",
+      "regionEn": "Site",
+      "file": "media/places/ce8791cca835.webp",
+      "title": "File:Icebox B Site.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Icebox_B_Site.png"
+    },
+    {
+      "map": "Corrode",
+      "superRegionEn": "Defender Side",
+      "regionEn": "Spawn",
+      "file": "media/places/ceddda2d31a5.webp",
+      "title": "File:Corrode Defender Side Spawn.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Corrode_Defender_Side_Spawn.png"
+    },
+    {
+      "map": "Icebox",
+      "superRegionEn": "B",
+      "regionEn": "Orange",
+      "file": "media/places/cf1c82836b4f.webp",
+      "title": "File:Icebox Orange.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Icebox_Orange.png"
+    },
+    {
+      "map": "Lotus",
+      "superRegionEn": "C",
+      "regionEn": "Bend",
+      "file": "media/places/cf7146e2356e.webp",
+      "title": "File:Lotus Bend.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Lotus_Bend.png"
+    },
+    {
+      "map": "Sunset",
+      "superRegionEn": "Mid",
+      "regionEn": "Courtyard",
+      "file": "media/places/d2aefd3ba8b7.webp",
+      "title": "File:Sunset Mid Courtyard.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Sunset_Mid_Courtyard.png"
+    },
+    {
+      "map": "Abyss",
+      "superRegionEn": "Mid",
+      "regionEn": "Catwalk",
+      "file": "media/places/d30795c8a0a7.webp",
+      "title": "File:Abyss Mid Catwalk.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Abyss_Mid_Catwalk.png"
+    },
+    {
+      "map": "Bind",
+      "superRegionEn": "B",
+      "regionEn": "Elbow",
+      "file": "media/places/d33d63f62dbc.webp",
+      "title": "File:Bind B Elbow.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Bind_B_Elbow.png"
+    },
+    {
+      "map": "Haven",
+      "superRegionEn": "A",
+      "regionEn": "Sewer",
+      "file": "media/places/d390a9b000cd.webp",
+      "title": "File:Haven Sewer.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Haven_Sewer.png"
+    },
+    {
+      "map": "Haven",
+      "superRegionEn": "A",
+      "regionEn": "Long",
+      "file": "media/places/d5a9fd7250ed.webp",
+      "title": "File:Haven A Long.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Haven_A_Long.png"
+    },
+    {
+      "map": "Pearl",
+      "superRegionEn": "B",
+      "regionEn": "Club",
+      "file": "media/places/d5c62f2dd27b.webp",
+      "title": "File:Pearl Club.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Pearl_Club.png"
+    },
+    {
+      "map": "Fracture",
+      "superRegionEn": "B",
+      "regionEn": "Generator",
+      "file": "media/places/d67ffbb6b4da.webp",
+      "title": "File:Fracture Generator.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Fracture_Generator.png"
+    },
+    {
+      "map": "Abyss",
+      "superRegionEn": "B",
+      "regionEn": "Nest",
+      "file": "media/places/d740e5a64566.webp",
+      "title": "File:Abyss B Nest.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Abyss_B_Nest.png"
+    },
+    {
+      "map": "Breeze",
+      "superRegionEn": "Mid",
+      "regionEn": "Top",
+      "file": "media/places/d78c4b5cf4cf.webp",
+      "title": "File:Breeze Mid Top.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Breeze_Mid_Top.png"
+    },
+    {
+      "map": "Icebox",
+      "superRegionEn": "B",
+      "regionEn": "Snow Pile",
+      "file": "media/places/da53ad2aaa79.webp",
+      "title": "File:Icebox Snow Pile.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Icebox_Snow_Pile.png"
+    },
+    {
+      "map": "Lotus",
+      "superRegionEn": "B",
+      "regionEn": "Main",
+      "file": "media/places/dae9ff30f388.webp",
+      "title": "File:Lotus B Main.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Lotus_B_Main.png"
+    },
+    {
+      "map": "Haven",
+      "superRegionEn": "C",
+      "regionEn": "Window",
+      "file": "media/places/db9816276469.webp",
+      "title": "File:Haven C Window.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Haven_C_Window.png"
+    },
+    {
+      "map": "Ascent",
+      "superRegionEn": "A",
+      "regionEn": "Site",
+      "file": "media/places/dbcd084cd17f.webp",
+      "title": "File:Ascent A Site.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Ascent_A_Site.png"
+    },
+    {
+      "map": "Fracture",
+      "superRegionEn": "A",
+      "regionEn": "Drop",
+      "file": "media/places/dc9a01c24c68.webp",
+      "title": "File:Fracture Drop.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Fracture_Drop.png"
+    },
+    {
+      "map": "Breeze",
+      "superRegionEn": "Defender Side",
+      "regionEn": "Arches",
+      "file": "media/places/ddbe3870522c.webp",
+      "title": "File:Breeze Arches.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Breeze_Arches.png"
+    },
+    {
+      "map": "Icebox",
+      "superRegionEn": "Mid",
+      "regionEn": "Blue",
+      "file": "media/places/de849a48c840.webp",
+      "title": "File:Icebox Blue.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Icebox_Blue.png"
+    },
+    {
+      "map": "Ascent",
+      "superRegionEn": "Mid",
+      "regionEn": "Cubby",
+      "file": "media/places/df3a8eefd095.webp",
+      "title": "File:Ascent Mid Cubby.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Ascent_Mid_Cubby.png"
+    },
+    {
+      "map": "Bind",
+      "superRegionEn": "A",
+      "regionEn": "Cubby",
+      "file": "media/places/e0ae36fbf325.webp",
+      "title": "File:Bind A Cubby.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Bind_A_Cubby.png"
+    },
+    {
+      "map": "Sunset",
+      "superRegionEn": "B",
+      "regionEn": "Market",
+      "file": "media/places/e125d9112e48.webp",
+      "title": "File:Sunset B Market.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Sunset_B_Market.png"
+    },
+    {
+      "map": "Pearl",
+      "superRegionEn": "Mid",
+      "regionEn": "Top",
+      "file": "media/places/e1fe171c0921.webp",
+      "title": "File:Pearl Mid Top.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Pearl_Mid_Top.png"
+    },
+    {
+      "map": "Split",
+      "superRegionEn": "Mid",
+      "regionEn": "Top",
+      "file": "media/places/e203bf4d0dd6.webp",
+      "title": "File:Split Mid Top.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Split_Mid_Top.png"
+    },
+    {
+      "map": "Abyss",
+      "superRegionEn": "A",
+      "regionEn": "Tower",
+      "file": "media/places/e39f8f63a062.webp",
+      "title": "File:Abyss A Tower.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Abyss_A_Tower.png"
+    },
+    {
+      "map": "Ascent",
+      "superRegionEn": "B",
+      "regionEn": "Site",
+      "file": "media/places/e6b34c315def.webp",
+      "title": "File:Ascent B Site.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Ascent_B_Site.png"
+    },
+    {
+      "map": "Breeze",
+      "superRegionEn": "B",
+      "regionEn": "Site",
+      "file": "media/places/e7624bc15ebf.webp",
+      "title": "File:Breeze B Site.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Breeze_B_Site.png"
+    },
+    {
+      "map": "Breeze",
+      "superRegionEn": "Mid",
+      "regionEn": "Wood Doors",
+      "file": "media/places/e9675cf61db5.webp",
+      "title": "File:Breeze Wood Doors.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Breeze_Wood_Doors.png"
+    },
+    {
+      "map": "Haven",
+      "superRegionEn": "Mid",
+      "regionEn": "Courtyard",
+      "file": "media/places/e96fc68b7471.webp",
+      "title": "File:Haven Courtyard.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Haven_Courtyard.png"
+    },
+    {
+      "map": "Breeze",
+      "superRegionEn": "B",
+      "regionEn": "Wall",
+      "file": "media/places/eac678ef2df0.webp",
+      "title": "File:Breeze B Wall.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Breeze_B_Wall.png"
+    },
+    {
+      "map": "Pearl",
+      "superRegionEn": "Defender Side",
+      "regionEn": "Records",
+      "file": "media/places/eb8354d2a766.webp",
+      "title": "File:Pearl Records.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Pearl_Records.png"
+    },
+    {
+      "map": "Ascent",
+      "superRegionEn": "A",
+      "regionEn": "Garden",
+      "file": "media/places/ec874c1b3c9c.webp",
+      "title": "File:Ascent Garden.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Ascent_Garden.png"
+    },
+    {
+      "map": "Haven",
+      "superRegionEn": "B",
+      "regionEn": "Back",
+      "file": "media/places/ef07ed0b2ba7.webp",
+      "title": "File:Haven B Back.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Haven_B_Back.png"
+    },
+    {
+      "map": "Lotus",
+      "superRegionEn": "C",
+      "regionEn": "Main",
+      "file": "media/places/f022457e2d79.webp",
+      "title": "File:Lotus C Main.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Lotus_C_Main.png"
+    },
+    {
+      "map": "Lotus",
+      "superRegionEn": "A",
+      "regionEn": "Main",
+      "file": "media/places/f1912e7a6298.webp",
+      "title": "File:Lotus A Main.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Lotus_A_Main.png"
     },
     {
       "map": "Split",
       "superRegionEn": "A",
       "regionEn": "Screens",
-      "file": "media/places/split/a-screens.webp",
+      "file": "media/places/f259a596fce4.webp",
       "title": "File:Split Screens.png",
       "source": "https://wiki.playvalorant.com/en-us/File:Split_Screens.png"
     },
@@ -1734,249 +1838,145 @@
       "map": "Split",
       "superRegionEn": "A",
       "regionEn": "Sewer",
-      "file": "media/places/split/a-sewer.webp",
+      "file": "media/places/f4c1727108dd.webp",
       "title": "File:Split Sewer.png",
       "source": "https://wiki.playvalorant.com/en-us/File:Split_Sewer.png"
     },
     {
-      "map": "Split",
-      "superRegionEn": "A",
-      "regionEn": "Site",
-      "file": "media/places/split/a-site.webp",
-      "title": "File:Split A Site.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Split_A_Site.png"
-    },
-    {
-      "map": "Split",
-      "superRegionEn": "A",
-      "regionEn": "Tower",
-      "file": "media/places/split/a-tower.webp",
-      "title": "File:Split A Tower.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Split_A_Tower.png"
-    },
-    {
-      "map": "Split",
-      "superRegionEn": "B",
-      "regionEn": "Alley",
-      "file": "media/places/split/b-alley.webp",
-      "title": "File:Split Alley.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Split_Alley.png"
-    },
-    {
-      "map": "Split",
-      "superRegionEn": "B",
-      "regionEn": "Back",
-      "file": "media/places/split/b-back.webp",
-      "title": "File:Split B Back.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Split_B_Back.png"
-    },
-    {
-      "map": "Split",
-      "superRegionEn": "B",
-      "regionEn": "Garage",
-      "file": "media/places/split/b-garage.webp",
-      "title": "File:Split Garage.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Split_Garage.png"
-    },
-    {
-      "map": "Split",
-      "superRegionEn": "B",
-      "regionEn": "Link",
-      "file": "media/places/split/b-link.webp",
-      "title": "File:Split B Link.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Split_B_Link.png"
-    },
-    {
-      "map": "Split",
-      "superRegionEn": "B",
-      "regionEn": "Lobby",
-      "file": "media/places/split/b-lobby.webp",
-      "title": "File:Split B Lobby.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Split_B_Lobby.png"
-    },
-    {
-      "map": "Split",
-      "superRegionEn": "B",
-      "regionEn": "Rafters",
-      "file": "media/places/split/b-rafters.webp",
-      "title": "File:Split B Rafters.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Split_B_Rafters.png"
-    },
-    {
-      "map": "Split",
-      "superRegionEn": "B",
-      "regionEn": "Site",
-      "file": "media/places/split/b-site.webp",
-      "title": "File:Split B Site.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Split_B_Site.png"
-    },
-    {
-      "map": "Split",
-      "superRegionEn": "B",
-      "regionEn": "Stairs",
-      "file": "media/places/split/b-stairs.webp",
-      "title": "File:Split Stairs.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Split_Stairs.png"
-    },
-    {
-      "map": "Split",
+      "map": "Pearl",
       "superRegionEn": "B",
       "regionEn": "Tower",
-      "file": "media/places/split/b-tower.webp",
-      "title": "File:Split B Tower.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Split_B_Tower.png"
+      "file": "media/places/f55214df7f0e.webp",
+      "title": "File:Pearl B Tower.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Pearl_B_Tower.png"
     },
     {
-      "map": "Split",
-      "superRegionEn": "Mid",
-      "regionEn": "Bottom",
-      "file": "media/places/split/mid-bottom.webp",
-      "title": "File:Split Mid Bottom.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Split_Mid_Bottom.png"
-    },
-    {
-      "map": "Split",
-      "superRegionEn": "Mid",
-      "regionEn": "Mail",
-      "file": "media/places/split/mid-mail.webp",
-      "title": "File:Split Mail.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Split_Mail.png"
-    },
-    {
-      "map": "Split",
-      "superRegionEn": "Mid",
-      "regionEn": "Top",
-      "file": "media/places/split/mid-top.webp",
-      "title": "File:Split Mid Top.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Split_Mid_Top.png"
-    },
-    {
-      "map": "Split",
-      "superRegionEn": "Mid",
-      "regionEn": "Vent",
-      "file": "media/places/split/mid-vent.webp",
-      "title": "File:Split Vent.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Split_Vent.png"
-    },
-    {
-      "map": "Sunset",
+      "map": "Ascent",
       "superRegionEn": "A",
-      "regionEn": "Alley",
-      "file": "media/places/sunset/a-alley.webp",
-      "title": "File:Sunset A Alley.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Sunset_A_Alley.png"
+      "regionEn": "Wine",
+      "file": "media/places/f64fc93fb88d.webp",
+      "title": "File:Ascent Wine.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Ascent_Wine.png"
     },
     {
-      "map": "Sunset",
+      "map": "Lotus",
       "superRegionEn": "A",
-      "regionEn": "Elbow",
-      "file": "media/places/sunset/a-elbow.webp",
-      "title": "File:Sunset A Elbow.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Sunset_A_Elbow.png"
+      "regionEn": "Rubble",
+      "file": "media/places/f6d8a24a2cd0.webp",
+      "title": "File:Lotus Rubble.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Lotus_Rubble.png"
     },
     {
-      "map": "Sunset",
-      "superRegionEn": "A",
-      "regionEn": "Link",
-      "file": "media/places/sunset/a-link.webp",
-      "title": "File:Sunset A Link.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Sunset_A_Link.png"
+      "map": "Icebox",
+      "superRegionEn": "B",
+      "regionEn": "Fence",
+      "file": "media/places/f81cf3059c17.webp",
+      "title": "File:Icebox Fence.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Icebox_Fence.png"
+    },
+    {
+      "map": "Fracture",
+      "superRegionEn": "B",
+      "regionEn": "Tunnel",
+      "file": "media/places/f8349602abcd.webp",
+      "title": "File:Fracture Tunnel.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Fracture_Tunnel.png"
     },
     {
       "map": "Sunset",
       "superRegionEn": "A",
       "regionEn": "Lobby",
-      "file": "media/places/sunset/a-lobby.webp",
+      "file": "media/places/f9a62edb3797.webp",
       "title": "File:Sunset A Lobby.png",
       "source": "https://wiki.playvalorant.com/en-us/File:Sunset_A_Lobby.png"
     },
     {
-      "map": "Sunset",
-      "superRegionEn": "A",
-      "regionEn": "Main",
-      "file": "media/places/sunset/a-main.webp",
-      "title": "File:Sunset A Main.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Sunset_A_Main.png"
+      "map": "Abyss",
+      "superRegionEn": "Mid",
+      "regionEn": "Top",
+      "file": "media/places/f9e44fd3ef96.webp",
+      "title": "File:Abyss Mid Top.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Abyss_Mid_Top.png"
     },
     {
-      "map": "Sunset",
+      "map": "Lotus",
+      "superRegionEn": "B",
+      "regionEn": "Pillars",
+      "file": "media/places/fb308dfcf8b7.webp",
+      "title": "File:Lotus Pillars.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Lotus_Pillars.png"
+    },
+    {
+      "map": "Ascent",
+      "superRegionEn": "A",
+      "regionEn": "Tree",
+      "file": "media/places/fcdc7c849af9.webp",
+      "title": "File:Ascent Tree.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Ascent_Tree.png"
+    },
+    {
+      "map": "Split",
       "superRegionEn": "A",
       "regionEn": "Site",
-      "file": "media/places/sunset/a-site.webp",
-      "title": "File:Sunset A Site.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Sunset_A_Site.png"
+      "file": "media/places/fd1b19f5fd4f.webp",
+      "title": "File:Split A Site.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Split_A_Site.png"
     },
     {
-      "map": "Sunset",
+      "map": "Icebox",
       "superRegionEn": "B",
-      "regionEn": "Boba",
-      "file": "media/places/sunset/b-boba.webp",
-      "title": "File:Sunset B Boba.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Sunset_B_Boba.png"
+      "regionEn": "Hall",
+      "file": "media/places/fd385e681652.webp",
+      "title": "File:Icebox B Hall.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Icebox_B_Hall.png"
     },
     {
-      "map": "Sunset",
+      "map": "Corrode",
+      "superRegionEn": "Mid",
+      "regionEn": "Bottom",
+      "file": "media/places/fd58448bb7f9.webp",
+      "title": "File:Corrode Mid Bottom.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Corrode_Mid_Bottom.png"
+    },
+    {
+      "map": "Breeze",
+      "superRegionEn": "Mid",
+      "regionEn": "Nest",
+      "file": "media/places/fd5d28799246.webp",
+      "title": "File:Breeze Nest.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Breeze_Nest.png"
+    },
+    {
+      "map": "Corrode",
+      "superRegionEn": "A",
+      "regionEn": "Pocket",
+      "file": "media/places/fd669cfe4cc7.webp",
+      "title": "File:Corrode A Pocket.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Corrode_A_Pocket.png"
+    },
+    {
+      "map": "Corrode",
       "superRegionEn": "B",
-      "regionEn": "Lobby",
-      "file": "media/places/sunset/b-lobby.webp",
-      "title": "File:Sunset B Lobby.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Sunset_B_Lobby.png"
+      "regionEn": "Link",
+      "file": "media/places/fd773882adaf.webp",
+      "title": "File:Corrode B Link.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Corrode_B_Link.png"
     },
     {
       "map": "Sunset",
       "superRegionEn": "B",
       "regionEn": "Main",
-      "file": "media/places/sunset/b-main.webp",
+      "file": "media/places/fe4898d02759.webp",
       "title": "File:Sunset B Main.png",
       "source": "https://wiki.playvalorant.com/en-us/File:Sunset_B_Main.png"
     },
     {
-      "map": "Sunset",
+      "map": "Abyss",
       "superRegionEn": "B",
-      "regionEn": "Market",
-      "file": "media/places/sunset/b-market.webp",
-      "title": "File:Sunset B Market.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Sunset_B_Market.png"
-    },
-    {
-      "map": "Sunset",
-      "superRegionEn": "B",
-      "regionEn": "Site",
-      "file": "media/places/sunset/b-site.webp",
-      "title": "File:Sunset B Site.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Sunset_B_Site.png"
-    },
-    {
-      "map": "Sunset",
-      "superRegionEn": "Mid",
-      "regionEn": "Bottom",
-      "file": "media/places/sunset/mid-bottom.webp",
-      "title": "File:Sunset Mid Bottom.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Sunset_Mid_Bottom.png"
-    },
-    {
-      "map": "Sunset",
-      "superRegionEn": "Mid",
-      "regionEn": "Courtyard",
-      "file": "media/places/sunset/mid-courtyard.webp",
-      "title": "File:Sunset Mid Courtyard.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Sunset_Mid_Courtyard.png"
-    },
-    {
-      "map": "Sunset",
-      "superRegionEn": "Mid",
-      "regionEn": "Tiles",
-      "file": "media/places/sunset/mid-tiles.webp",
-      "title": "File:Sunset Mid Tiles.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Sunset_Mid_Tiles.png"
-    },
-    {
-      "map": "Sunset",
-      "superRegionEn": "Mid",
-      "regionEn": "Top",
-      "file": "media/places/sunset/mid-top.webp",
-      "title": "File:Sunset Mid Top.png",
-      "source": "https://wiki.playvalorant.com/en-us/File:Sunset_Mid_Top.png"
+      "regionEn": "Main",
+      "file": "media/places/ff0a0099a85e.webp",
+      "title": "File:Abyss B Main.png",
+      "source": "https://wiki.playvalorant.com/en-us/File:Abyss_B_Main.png"
     }
   ]
 }

@@ -41,6 +41,8 @@ export interface ClassicInput {
     yScalarToAdd: number;
     callouts: readonly { regionName: string; superRegionName: string; regionNameEn: string; superRegionNameEn: string; location: { x: number; y: number } }[];
   }[];
+  /** Wiki screenshots of callouts (src/data/game/places.json), for the Mapa game. Optional: fixtures may skip it. */
+  places?: readonly { map: string; superRegionEn: string; regionEn: string; file: string; source: string }[];
   weapons: readonly {
     name: string;
     displayName: string;
@@ -188,10 +190,25 @@ export interface ClassicMap {
   callouts: ClassicCallout[];
 }
 
+/** A wiki screenshot of one callout (VALORANT Wiki, src/data/game/places.json). */
+export interface ClassicPlace {
+  /** "<map>:<callout id>". */
+  id: string;
+  map: string;
+  /** ClassicCallout id of the place. */
+  callout: string;
+  /** Path under public/ (a hash: names neither the map nor the callout). */
+  file: string;
+  /** The wiki's file page (credit; its name says the place, so only shown after the round). */
+  source: string;
+}
+
 export interface ClassicData {
   agents: readonly ClassicAgent[];
   weapons: readonly ClassicWeapon[];
   maps: readonly ClassicMap[];
+  places: readonly ClassicPlace[];
+  placeById: ReadonlyMap<string, ClassicPlace>;
   agentById: ReadonlyMap<string, ClassicAgent>;
   weaponById: ReadonlyMap<string, ClassicWeapon>;
   mapById: ReadonlyMap<string, ClassicMap>;
@@ -261,10 +278,18 @@ export function buildClassicData(input: ClassicInput): ClassicData {
       y: c.location.x * m.yMultiplier + m.yScalarToAdd,
     })),
   }));
+  const mapNames = new Map(input.maps.map((m) => [m.name, m.name] as const).concat(input.maps.map((m) => [m.displayName, m.name] as const)));
+  const places: ClassicPlace[] = (input.places ?? []).flatMap((p) => {
+    const mapId = mapNames.get(p.map);
+    const callout = mapId ? maps.find((m) => m.id === mapId)!.callouts.find((c) => c.superRegionEn === p.superRegionEn && c.regionEn === p.regionEn) : undefined;
+    return mapId && callout ? [{ id: `${mapId}:${callout.id}`, map: mapId, callout: callout.id, file: p.file, source: p.source }] : [];
+  });
   return {
     agents,
     weapons,
     maps,
+    places,
+    placeById: new Map(places.map((p) => [p.id, p])),
     agentById: new Map(agents.map((a) => [a.id, a])),
     weaponById: new Map(weapons.map((w) => [w.id, w])),
     mapById: new Map(maps.map((m) => [m.id, m])),
@@ -315,6 +340,8 @@ export interface HabilidadePuzzle {
 }
 export interface MapaPuzzle {
   map: string;
+  /** Step 2 ("Onde é?"): the callout id the screenshot shows (a ClassicPlace of `map`). */
+  place: string;
   /** Point the zoom starts on (fractions of the image). */
   focus: { x: number; y: number };
 }
@@ -326,8 +353,11 @@ export interface ArmaPuzzle {
   answer: string;
 }
 
-/** Days before an answer can come back (pools: 29 agents, ~115 abilities, 13 maps, ~300 callouts, 20 weapons). */
-export const CLASSIC_GAPS = { agente: 20, habilidade: 90, mapa: 8, callout: 180, calloutMap: 3, arma: 12 } as const;
+/**
+ * Days before an answer can come back (pools: 29 agents, ~115 abilities, 13 maps, ~300 callouts, ~230 wiki
+ * screenshots of 12 maps, 20 weapons). Mapa: the map in `mapa`, the screenshot in `mapaPlace`.
+ */
+export const CLASSIC_GAPS = { agente: 20, habilidade: 90, mapa: 3, mapaPlace: 180, callout: 180, calloutMap: 3, arma: 12 } as const;
 
 /** Callouts closer than this (in minimap fractions) to another one are never asked: the highlight would be ambiguous. */
 export const CALLOUT_MIN_DISTANCE = 0.045;
@@ -341,6 +371,14 @@ export function calloutNeighborDistance(map: ClassicMap, c: ClassicCallout): num
 /** Callouts that can be asked: inside the image and not crowded by a neighbour. */
 export function askableCallouts(map: ClassicMap): ClassicCallout[] {
   return map.callouts.filter((c) => c.x > 0.02 && c.x < 0.98 && c.y > 0.02 && c.y < 0.98 && calloutNeighborDistance(map, c) >= CALLOUT_MIN_DISTANCE);
+}
+
+/** Screenshots the Mapa game can ask: the callout is askable (inside the minimap, not crowded), so "Onde é?" is fair. */
+export function mapaPlaces(data: ClassicData): ClassicPlace[] {
+  return data.places.filter((p) => {
+    const m = data.mapById.get(p.map);
+    return !!m && askableCallouts(m).some((c) => c.id === p.callout);
+  });
 }
 
 export function classicMakers(data: ClassicData) {
@@ -364,10 +402,16 @@ export function classicMakers(data: ClassicData) {
     const rotation = ([0, 90, 180, 270] as const)[rng.int(1, 3)]!;
     return { puzzle: { agent: pick.agent, slot: pick.slot, rotation }, keys: [`ability:${pick.agent}:${pick.slot}`, `agent:${pick.agent}`] };
   };
+  const places = [...mapaPlaces(data)].sort((a, b) => a.id.localeCompare(b.id));
   const mapa: Maker<MapaPuzzle> = ({ rng, recent }) => {
-    const map = pickOne(rng, fresh(mapIds, (id) => `map:${id}`, recent(CLASSIC_GAPS.mapa)))!;
+    // A screenshot not shown in a long while, of a map not asked in the last days (each gap relaxed only if empty).
+    const unseen = fresh(places, (p) => `place:${p.id}`, recent(CLASSIC_GAPS.mapaPlace));
+    const pick = pickOne(rng, fresh(unseen, (p) => `map:${p.map}`, recent(CLASSIC_GAPS.mapa)))!;
     const focus = { x: 0.25 + 0.5 * rng.next(), y: 0.25 + 0.5 * rng.next() };
-    return { puzzle: { map, focus: { x: Math.round(focus.x * 1000) / 1000, y: Math.round(focus.y * 1000) / 1000 } }, keys: [`map:${map}`] };
+    return {
+      puzzle: { map: pick.map, place: pick.callout, focus: { x: Math.round(focus.x * 1000) / 1000, y: Math.round(focus.y * 1000) / 1000 } },
+      keys: [`map:${pick.map}`, `place:${pick.id}`],
+    };
   };
   const callout: Maker<CalloutPuzzle> = ({ rng, recent, level }) => {
     const map = pickOne(rng, fresh(mapIds, (id) => `map:${id}`, recent(CLASSIC_GAPS.calloutMap)))!;

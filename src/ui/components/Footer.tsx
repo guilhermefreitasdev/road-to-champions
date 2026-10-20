@@ -41,7 +41,11 @@ export function Footer({ onHowTo }: { onHowTo?: () => void }) {
         <a href="https://valorant-api.com" target="_blank" rel="noopener noreferrer">
           valorant-api.com
         </a>{' '}
-        (API comunitária, não oficial), conteúdo da Riot Games.
+        (API comunitária, não oficial), conteúdo da Riot Games. Imagens dos lugares dos mapas:{' '}
+        <a href="https://wiki.playvalorant.com" target="_blank" rel="noopener noreferrer">
+          VALORANT Wiki
+        </a>{' '}
+        (Riot Games).
       </p>
       <p id="aviso">
         Road to Champions é um projeto de fã, não oficial, e não é endossado pela Riot Games. Não reflete as opiniões

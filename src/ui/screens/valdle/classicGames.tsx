@@ -1,4 +1,4 @@
-import { useMemo, useState, type ReactNode } from 'react';
+import { useEffect, useMemo, useState, type KeyboardEvent, type ReactNode } from 'react';
 import { ROLE_LABELS } from '../../../game/explain';
 import {
   AGENT_COLUMNS,
@@ -10,14 +10,28 @@ import {
   calloutLabel,
   calloutLabelEn,
   type ClassicAgent,
+  type ClassicCallout,
   type ClassicData,
+  type ClassicMap,
   type ClassicWeapon,
 } from '../../../game/valdle/classic';
 import { compareAll } from '../../../game/valdle/feedback';
-import { voronoiCells } from '../../../game/valdle/geometry';
+import { centroid, voronoiCells } from '../../../game/valdle/geometry';
 import { VALDLE_GAMES } from '../../../game/valdle/games';
-import { answerBonus, giveUp, guess, misses, resultOf, type ValdleProgress, type ValdlePuzzle } from '../../../game/valdle/play';
-import { mapMedia, mediaUrl } from '../../../data/media';
+import {
+  MAPA_SPOT_TRIES,
+  answerBonus,
+  giveUp,
+  guess,
+  guessSpot,
+  mapaStepOneDone,
+  mapaSummary,
+  misses,
+  resultOf,
+  type ValdleProgress,
+  type ValdlePuzzle,
+} from '../../../game/valdle/play';
+import { loadPlaceImage, placeImageNow } from '../../../data/placeImages';
 import { AgentIcon, mapLabel } from '../../components/GameImage';
 import { countryName } from '../../components/CountryChip';
 import { Icon } from '../../components/Icon';
@@ -276,11 +290,32 @@ export function HabilidadeGame(props: GameProps<'habilidade'>) {
 
 // --- Mapa ------------------------------------------------------------------------------------------------------------
 
-const ZOOM = [4.2, 3.2, 2.4, 1.7, 1.25];
+const ZOOM = [3.6, 2.8, 2.1, 1.6, 1.25];
 
 function mapOptions(data: ClassicData): Option[] {
-  return data.maps.map((m) => ({ id: m.id, label: m.name, aliases: [m.id] }));
+  return data.places.length
+    ? [...new Set(data.places.map((p) => p.map))].map((id) => data.mapById.get(id)!).map((m) => ({ id: m.id, label: m.name, aliases: [m.id] }))
+    : data.maps.map((m) => ({ id: m.id, label: m.name, aliases: [m.id] }));
 }
+
+/** The screenshot's URL: at once from public/, or after the lazy chunk of a VITE_INLINE_PLACES build. */
+function usePlaceImage(file: string): { src: string | null; failed: boolean; onError: () => void } {
+  const [loaded, setLoaded] = useState<{ file: string; src: string } | null>(null);
+  const [failed, setFailed] = useState<string | null>(null);
+  const now = placeImageNow(file);
+  useEffect(() => {
+    if (now) return;
+    let live = true;
+    void loadPlaceImage(file).then((src) => live && setLoaded({ file, src }));
+    return () => {
+      live = false;
+    };
+  }, [file, now]);
+  return { src: now ?? (loaded?.file === file ? loaded.src : null), failed: failed === file, onError: () => setFailed(file) };
+}
+
+/** Mid-range of the distance feedback of "Onde é?" (minimap fractions), as in the Callout game. */
+const NEAR = 0.18;
 
 export function MapaGame(props: GameProps<'mapa'>) {
   const { puzzle, progress, done, data } = props;
@@ -288,48 +323,280 @@ export function MapaGame(props: GameProps<'mapa'>) {
   const options = useMemo(() => mapOptions(data), [data]);
   const miss = misses(puzzle, progress);
   const max = VALDLE_GAMES.mapa.maxTries;
-  const zoom = done ? 1 : ZOOM[Math.min(miss, ZOOM.length - 1)]!;
-  const media = mapMedia(puzzle.map);
+  const stepOne = mapaStepOneDone(puzzle, progress);
+  const zoom = stepOne ? 1 : ZOOM[Math.min(miss, ZOOM.length - 1)]!;
+  const place = data.placeById.get(`${puzzle.map}:${puzzle.place}`);
+  const map = data.mapById.get(puzzle.map)!;
+  const answer = map.callouts.find((c) => c.id === puzzle.place);
+  const image = usePlaceImage(place?.file ?? '');
   const result = resultOf(puzzle, progress);
+  const mapWon = progress.guesses.includes(puzzle.map);
+  // Names only as each step ends: the map after step 1, the callout (and the wiki file page) at the very end.
+  const alt = done && answer ? `${calloutLabel(answer)}, em ${map.name}` : stepOne ? `Lugar de ${map.name}` : 'Lugar de um mapa';
   return (
     <div className="vd-game">
-      <p className="daily-rule">Que mapa é este? A imagem começa bem ampliada e se afasta a cada erro.</p>
-      <div className="vd-map-stage" role="img" aria-label={done ? `Imagem de ${mapLabel(puzzle.map)}` : 'Pedaço ampliado de um mapa'}>
-        {media && (
-          <img
-            src={mediaUrl(media.image)}
-            alt=""
-            width={640}
-            height={360}
-            decoding="async"
-            style={{
-              transform: `scale(${zoom})`,
-              transformOrigin: `${puzzle.focus.x * 100}% ${puzzle.focus.y * 100}%`,
-              filter: !done && miss === 0 ? 'grayscale(1)' : undefined,
-            }}
-          />
-        )}
-        {!done && <span className="vd-zoom-tag">{pt(zoom, 1)}x</span>}
+      <p className="daily-rule">
+        Que mapa é este? A imagem começa bem ampliada e se afasta a cada erro. Depois, no <strong>Onde é?</strong>, marque no esquema do mapa o lugar que ela
+        mostra.
+      </p>
+      {stepOne && <MissList items={progress.guesses.map((id) => ({ id, label: mapLabel(id), hit: id === puzzle.map }))} />}
+      {stepOne && !done && (
+        <p className={`daily-feedback ${mapWon ? 'hit' : 'miss'}`} role="status">
+          <Icon name={mapWon ? 'check' : 'close'} /> {mapWon ? `Acertou: é ${map.name}.` : `O mapa era ${map.name}.`} Agora, onde é?
+        </p>
+      )}
+      <div className={`vd-mapa-board${stepOne ? ' two' : ''}`}>
+        <div className="vd-map-stage">
+          {image.src && !image.failed ? (
+            <img
+              src={image.src}
+              alt={alt}
+              width={960}
+              height={540}
+              decoding="async"
+              style={{
+                transform: `scale(${zoom})`,
+                transformOrigin: `${puzzle.focus.x * 100}% ${puzzle.focus.y * 100}%`,
+                filter: !stepOne && miss === 0 ? 'grayscale(1)' : undefined,
+              }}
+              onError={image.onError}
+            />
+          ) : (
+            <span className="vd-map-missing small muted">{image.failed ? 'Imagem indisponível agora.' : 'Carregando a imagem…'}</span>
+          )}
+          {!stepOne && <span className="vd-zoom-tag">{pt(zoom, 1)}x</span>}
+        </div>
+        {stepOne && answer && <WherePicker key={puzzle.id} map={map} answer={answer} progress={progress} done={done} onMove={props.onMove} puzzle={puzzle} />}
       </div>
-      <MissList items={progress.guesses.map((id) => ({ id, label: mapLabel(id), hit: id === puzzle.map }))} />
-      {!done && (
+      {!stepOne && (
         <>
+          <MissList items={progress.guesses.map((id) => ({ id, label: mapLabel(id), hit: id === puzzle.map }))} />
           <TryCounter used={progress.guesses.length} max={max} />
           <OptionSearch options={options} exclude={new Set(progress.guesses)} onPick={(o) => play(o.id, o.label)} label="Qual é o mapa?" placeholder="Digite um mapa" showAllOnFocus />
           <Note text={note} />
           <GiveUp onGiveUp={() => props.onMove(giveUp)} />
         </>
       )}
-      {done && (
-        <Reveal won={result.won} kicker="O mapa era">
+      {done && answer && (
+        <Reveal won={result.won && (result.place ?? 0) > 0} kicker={result.won ? 'Faltou o lugar: era' : 'O lugar era'}>
           <span>
-            <span className="daily-reveal-name">{mapLabel(puzzle.map)}</span>
-            {data.mapById.get(puzzle.map) && <span className="small muted">{data.maps.length} mapas competitivos na lista do jogo</span>}
+            <span className="daily-reveal-name">{calloutLabel(answer)}</span>
+            <span className="small muted">
+              Em inglês: {calloutLabelEn(answer)} · {map.name} · {mapaSummary(result, false)}
+            </span>
           </span>
         </Reveal>
       )}
-      <p className="small muted vd-source">Imagens de mapas: Riot Games, via Liquipedia (CC-BY-SA 3.0). Lista de mapas: valorant-api.com.</p>
+      <p className="small muted vd-source">
+        Imagem: VALORANT Wiki (wiki.playvalorant.com), Riot Games
+        {done && place && (
+          <>
+            {' '}
+            (
+            <a href={place.source} target="_blank" rel="noreferrer">
+              página do arquivo
+            </a>
+            )
+          </>
+        )}
+        . Esquema e callouts: valorant-api.com (minimapa da Riot Games quando carrega).
+      </p>
     </div>
+  );
+}
+
+/** Callout ids in reading order (top to bottom, then left to right): "Área N" numbers that say nothing of the names. */
+function areaNumbers(map: ClassicMap): Map<string, number> {
+  const order = [...map.callouts].sort((a, b) => Math.round(a.y * 12) - Math.round(b.y * 12) || a.x - b.x);
+  return new Map(order.map((c, i) => [c.id, i + 1]));
+}
+
+const ARROWS: Record<string, { x: number; y: number }> = { ArrowRight: { x: 1, y: 0 }, ArrowLeft: { x: -1, y: 0 }, ArrowDown: { x: 0, y: 1 }, ArrowUp: { x: 0, y: -1 } };
+
+/** The cell nearest to `from` in the arrow's direction (within a 60° cone each side), or null. */
+function step(map: ClassicMap, from: ClassicCallout, dir: { x: number; y: number }): ClassicCallout | null {
+  let best: ClassicCallout | null = null;
+  let bestScore = Infinity;
+  for (const c of map.callouts) {
+    if (c === from) continue;
+    const dx = c.x - from.x;
+    const dy = c.y - from.y;
+    const along = dx * dir.x + dy * dir.y;
+    const across = Math.abs(dx * dir.y - dy * dir.x);
+    if (along <= 0 || across > along * 1.8) continue;
+    const score = along + 2 * across;
+    if (score < bestScore) {
+      bestScore = score;
+      best = c;
+    }
+  }
+  return best;
+}
+
+const regionName = (c: ClassicCallout) => (['A', 'B', 'C'].includes(c.superRegionEn) ? `região ${c.superRegion}` : c.superRegion.replace(/^no /, '').toLowerCase());
+
+/**
+ * Step 2 of Mapa: the unlabeled schema of the map (Voronoi cells, as in the Callout game). Tap or click a cell, or
+ * move with the arrow keys, then confirm. Misses say only "mesma região/outra região" and "perto/longe"; no cell is
+ * ever named except the answer, and only at the end.
+ */
+function WherePicker({
+  puzzle,
+  map,
+  answer,
+  progress,
+  done,
+  onMove,
+}: {
+  puzzle: ValdlePuzzle<'mapa'>;
+  map: ClassicMap;
+  answer: ClassicCallout;
+  progress: ValdleProgress;
+  done: boolean;
+  onMove: (fn: (p: ValdleProgress) => ValdleProgress) => void;
+}) {
+  const cells = useMemo(() => voronoiCells(map.callouts), [map]);
+  const numbers = useMemo(() => areaNumbers(map), [map]);
+  const [minimapOk, setMinimapOk] = useState(true);
+  const [selected, setSelected] = useState<string | null>(null);
+  const [note, setNote] = useState<string | null>(null);
+  const spots = progress.spots ?? [];
+  const byId = useMemo(() => new Map(map.callouts.map((c) => [c.id, c])), [map]);
+  const sel = selected ? byId.get(selected) : undefined;
+  const S = 1000;
+  const path = (poly: readonly { x: number; y: number }[]) => `M${poly.map((p) => `${(p.x * S).toFixed(1)},${(p.y * S).toFixed(1)}`).join('L')}Z`;
+  const supers = [...new Set(map.callouts.map((c) => c.superRegionEn))].filter((s) => SUPER_CLASS[s]);
+  const found = spots.includes(answer.id);
+
+  const choose = (id: string) => {
+    if (done) return;
+    setNote(spots.includes(id) ? `Você já marcou a área ${numbers.get(id)}.` : null);
+    setSelected(id);
+  };
+  const confirm = () => {
+    if (!selected || done) return;
+    const r = guessSpot(puzzle, progress, selected);
+    if (r.outcome === 'repeat') setNote(`Você já marcou a área ${numbers.get(selected)}.`);
+    if (r.outcome === 'hit' || r.outcome === 'miss') {
+      setNote(null);
+      setSelected(null);
+      onMove(() => r.progress);
+    }
+  };
+  const onKeyDown = (e: KeyboardEvent<SVGSVGElement>) => {
+    if (done) return;
+    const dir = ARROWS[e.key];
+    if (dir) {
+      e.preventDefault();
+      const from = sel ?? [...map.callouts].sort((a, b) => Math.hypot(a.x - 0.5, a.y - 0.5) - Math.hypot(b.x - 0.5, b.y - 0.5))[0]!;
+      const next = sel ? step(map, from, dir) : from;
+      if (next) choose(next.id);
+    } else if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      confirm();
+    }
+  };
+  const selCell = sel ? cells[map.callouts.indexOf(sel)] : undefined;
+  const selCenter = selCell ? centroid(selCell) : null;
+  return (
+    <section className="vd-where" aria-labelledby="vd-where-title">
+      <h3 id="vd-where-title" className="vd-where-title">
+        <Icon name="target" /> Onde é?
+      </h3>
+      <p className="small muted vd-where-rule">
+        {done
+          ? found
+            ? 'Achou o lugar.'
+            : 'O lugar está destacado no esquema.'
+          : `Toque na área do esquema onde a imagem foi tirada e confirme (ou use as setas e Enter). ${MAPA_SPOT_TRIES} tentativas; cada erro diz se é a mesma região e se está perto.`}
+      </p>
+      <div className="vd-callout-stage vd-where-stage">
+        <svg
+          viewBox={`0 0 ${S} ${S}`}
+          role="group"
+          aria-label={done ? `Esquema de ${map.name}` : `Esquema de ${map.name}: setas escolhem uma área, Enter marca`}
+          tabIndex={done ? undefined : 0}
+          onKeyDown={onKeyDown}
+          className={done ? undefined : 'vd-where-live'}
+        >
+          {minimapOk && <image href={map.minimap} x={0} y={0} width={S} height={S} opacity={0.5} onError={() => setMinimapOk(false)} />}
+          {map.callouts.map((c, i) => {
+            const isAnswer = done && c.id === answer.id;
+            const missed = spots.includes(c.id) && c.id !== answer.id;
+            const cls = `vd-cc ${SUPER_CLASS[c.superRegionEn] ?? 'spawn'}${isAnswer ? ' answer' : ''}${missed ? ' missed' : ''}${c.id === selected && !done ? ' selected' : ''}`;
+            return <path key={c.id} d={path(cells[i]!)} className={cls} onClick={() => choose(c.id)} />;
+          })}
+          {supers.map((s) => {
+            const pts = map.callouts.filter((c) => c.superRegionEn === s);
+            const cx = pts.reduce((t, c) => t + c.x, 0) / pts.length;
+            const cy = pts.reduce((t, c) => t + c.y, 0) / pts.length;
+            return (
+              <text key={s} x={cx * S} y={cy * S} className="vd-cc-super" textAnchor="middle" dominantBaseline="middle">
+                {s === 'Mid' ? 'MEIO' : s}
+              </text>
+            );
+          })}
+          {selCell && !done && <path d={path(selCell)} className="vd-where-outline" />}
+          {selCenter && !done && (
+            <text x={selCenter.x * S} y={selCenter.y * S} className="vd-where-n" textAnchor="middle" dominantBaseline="middle">
+              {numbers.get(selected!)}
+            </text>
+          )}
+          {/* Only the answer is ever named, and only at the end: naming other cells would teach the map. */}
+          {done && (
+            <g className="vd-cc-label answer">
+              <circle cx={answer.x * S} cy={answer.y * S} r={16} className="vd-cc-pin" />
+              <text
+                x={Math.min(0.86, Math.max(0.14, answer.x)) * S}
+                y={Math.min(0.96, Math.max(0.04, answer.y + 0.044)) * S}
+                textAnchor="middle"
+                dominantBaseline="middle"
+              >
+                {calloutLabel(answer)}
+              </text>
+            </g>
+          )}
+        </svg>
+      </div>
+      <p className="sr-only" aria-live="polite">
+        {sel && !done ? `Área ${numbers.get(sel.id)} de ${map.callouts.length}, ${regionName(sel)}.` : ''}
+      </p>
+      <MissList
+        items={spots.map((id) => {
+          const c = byId.get(id);
+          const hit = id === answer.id;
+          const same = c?.superRegionEn === answer.superRegionEn;
+          const near = c ? Math.hypot(c.x - answer.x, c.y - answer.y) < NEAR : false;
+          return {
+            id,
+            label: `Área ${numbers.get(id) ?? '?'}`,
+            hit,
+            ...(hit || !c
+              ? {}
+              : {
+                  hint: (
+                    <>
+                      <span className={same ? 'same' : 'diff'}>{same ? 'mesma região' : 'outra região'}</span>
+                      <span className={near ? 'same' : 'diff'}>{near ? 'perto' : 'longe'}</span>
+                    </>
+                  ),
+                }),
+          };
+        })}
+      />
+      {!done && (
+        <>
+          <TryCounter used={spots.length} max={MAPA_SPOT_TRIES} />
+          <div className="vd-where-actions">
+            <button type="button" className="primary" disabled={!selected || spots.includes(selected)} onClick={confirm}>
+              <Icon name="target" /> {selected ? `Marcar a área ${numbers.get(selected)}` : 'Escolha uma área'}
+            </button>
+          </div>
+          <Note text={note} />
+          <GiveUp onGiveUp={() => onMove(giveUp)} note="Desistir encerra o Onde é? sem o lugar." />
+        </>
+      )}
+    </section>
   );
 }
 

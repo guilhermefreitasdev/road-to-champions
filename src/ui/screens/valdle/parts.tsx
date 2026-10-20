@@ -259,7 +259,7 @@ export function MissList({ items }: { items: { id: string; label: ReactNode; hin
 }
 
 /** "Desistir": ends the puzzle as a loss (asks once). */
-export function GiveUp({ onGiveUp }: { onGiveUp: () => void }) {
+export function GiveUp({ onGiveUp, note = 'Desistir conta como derrota.' }: { onGiveUp: () => void; note?: string }) {
   const [ask, setAsk] = useState(false);
   if (!ask)
     return (
@@ -269,7 +269,7 @@ export function GiveUp({ onGiveUp }: { onGiveUp: () => void }) {
     );
   return (
     <p className="vd-giveup-confirm">
-      <span>Desistir conta como derrota.</span>
+      <span>{note}</span>
       <button type="button" className="secondary" onClick={onGiveUp}>
         Desistir
       </button>

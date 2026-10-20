@@ -1,7 +1,8 @@
 // Vite plugin for the PWA (used by vite.config.ts). Plain JS so the app's tsconfig needs no Node types.
 //
 // Emits dist/sw.js from the template src/pwa/sw.js with this build's precache list (every emitted chunk and asset,
-// the shell, and the manifest/icons from public/; not public/media, which the worker caches on demand) and a version
+// the shell, and the manifest/icons from public/; not public/media, which the worker caches on demand, nor the
+// inlined Mapa screenshots of a VITE_INLINE_PLACES build, a multi-megabyte chunk only that game loads) and a version
 // hash of that list. Skipped in the claude.ai preview build (VITE_INLINE_PLAYER_PHOTOS=1), whose sandbox does not
 // allow service workers; that build also drops the manifest link. Registration: src/ui/sw-register.ts.
 import { createHash } from 'node:crypto';
@@ -10,6 +11,9 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const template = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../src/pwa/sw.js');
+
+/** The chunk of the inlined Mapa screenshots (scripts/places-inline-plugin.mjs): never precached. */
+const isPlacesChunk = (out) => out.type === 'chunk' && out.moduleIds.some((id) => id.includes('virtual:rtc-places-inline'));
 
 /** @param {boolean} inline @returns {import('vite').Plugin} */
 export function pwa(inline) {
@@ -27,7 +31,7 @@ export function pwa(inline) {
     },
     generateBundle(_options, bundle) {
       if (inline) return;
-      const built = Object.keys(bundle).filter((file) => !file.endsWith('.map') && !file.endsWith('.html'));
+      const built = Object.keys(bundle).filter((file) => !file.endsWith('.map') && !file.endsWith('.html') && !isPlacesChunk(bundle[file]));
       const icons = readdirSync(path.join(publicDir, 'icons')).map((file) => `icons/${file}`);
       const precache = ['index.html', 'manifest.webmanifest', 'favicon.svg', ...icons, ...built].sort();
       const source = readFileSync(template, 'utf8');

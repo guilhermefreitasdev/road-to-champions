@@ -10779,6 +10779,108 @@ button.vd-bonus-option.wrong {
   }
 }
 
+/* Mapa: the screenshot, then "Onde é?" on the unlabeled schema */
+
+.vd-mapa-board {
+  display: grid;
+  gap: var(--sp-3);
+  min-width: 0;
+}
+
+@media (min-width: 900px) {
+  .vd-mapa-board.two {
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+    align-items: start;
+  }
+}
+
+.vd-map-missing {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--sp-3);
+  text-align: center;
+}
+
+.vd-where {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+  min-width: 0;
+}
+
+.vd-where-title {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.vd-where-rule {
+  margin: 0;
+}
+
+.vd-where-stage {
+  max-width: 520px;
+}
+
+.vd-where-live path.vd-cc {
+  cursor: pointer;
+}
+
+.vd-where-live:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: -3px;
+}
+
+@media (hover: hover) {
+  .vd-where-live path.vd-cc:hover {
+    fill-opacity: 0.6;
+  }
+}
+
+.vd-cc.missed {
+  fill: #2a1218;
+  fill-opacity: 0.85;
+  stroke: var(--loss-text);
+  stroke-dasharray: 14 10;
+  stroke-width: 5;
+}
+
+.vd-cc.selected {
+  fill: var(--accent);
+  fill-opacity: 0.55;
+  stroke: #fff;
+  stroke-width: 8;
+}
+
+.vd-where-outline {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 8;
+  pointer-events: none;
+}
+
+.vd-where-n {
+  fill: #fff;
+  font-family: var(--font-display);
+  font-size: 44px;
+  font-weight: 900;
+  paint-order: stroke;
+  stroke: rgba(15, 25, 35, 0.95);
+  stroke-width: 8px;
+  pointer-events: none;
+}
+
+.vd-where-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-2);
+}
+
 /* Grade 3x3 */
 
 .vd-grade {

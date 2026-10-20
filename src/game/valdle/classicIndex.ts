@@ -1,8 +1,9 @@
 /**
  * "Valdle — Jogo clássico" over the real snapshot (src/data/game, valorant-api.com; agent debut years from the VLR
- * agent stats): the data and the daily / free puzzles, built once on first use. Does not import the card pool.
+ * agent stats; the Mapa game's screenshots from the VALORANT Wiki, places.json): the data and the daily / free puzzles, built once on first use. Does not import the card pool.
  */
 import agentDetailsJson from '../../data/game/agent-details.json';
+import placesJson from '../../data/game/places.json';
 import weaponsJson from '../../data/game/weapons.json';
 import agentStatsJson from '../../data/real/vlr/agent-stats.json';
 import { AGENTS, MAPS } from '../../data/game';
@@ -17,6 +18,7 @@ export function classicData(): ClassicData {
     agents: AGENTS as ClassicInput['agents'],
     details: agentDetailsJson as ClassicInput['details'],
     maps: MAPS,
+    places: placesJson.places,
     weapons: weaponsJson as ClassicInput['weapons'],
     agentStats: (agentStatsJson as unknown as { players: ClassicInput['agentStats'] }).players,
   }));

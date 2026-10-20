@@ -5,7 +5,9 @@
  *
  * - Guess games (Agente Clássico, Habilidade, Mapa, Callout, Arma, Pro Clássico, Comp Misteriosa): `guesses` are
  *   ids; won when the answer is guessed within VALDLE_GAMES[game].maxTries. Habilidade adds a bonus question (which
- *   ability: C, Q, E or X) once the agent part is over.
+ *   ability: C, Q, E or X) once the agent part is over. Mapa adds step 2, "Onde é?": once the map part is over (hit
+ *   or out of tries), `spots` are callout ids of the screenshot's map, MAPA_SPOT_TRIES of them; the puzzle ends when
+ *   the place is found or the spots run out. `won` stays the map part; `result.place` is the step 2 score.
  * - Grade 3x3: `guesses` are "cell:playerId" (cell 0–8, row-major); a pick is right when the player fits the cell
  *   and was not used yet; 12 picks for the 9 cells; won with the 9 cells.
  * - Conexões: `guesses` are four player ids, sorted and joined by ","; won with the 4 groups before the 4th mistake.
@@ -40,12 +42,18 @@ export interface ValdleResult {
   max: number;
   /** Habilidade: the bonus question (null while unanswered). */
   bonus?: boolean | null;
+  /** Mapa: the try of "Onde é?" that found the place (1–MAPA_SPOT_TRIES), 0 = not found. */
+  place?: number;
 }
 
 export interface ValdleProgress {
   guesses: string[];
   /** Habilidade: the slot picked in the bonus question. */
   bonus?: string | null;
+  /** Mapa, step 2: the callout ids marked on the schema. */
+  spots?: string[];
+  /** Puzzle shape the progress was played on (PROGRESS_SHAPES; absent = 1). */
+  shape?: number;
   gaveUp?: boolean;
   /** Day key (São Paulo) when the puzzle ended: equal to the puzzle's date = played on its day. */
   finishedOn?: string;
@@ -54,6 +62,17 @@ export interface ValdleProgress {
 }
 
 export const emptyProgress = (): ValdleProgress => ({ guesses: [] });
+
+/**
+ * Games whose puzzle changed shape after launch: saved progress of an older shape is dropped on load (a fresh start),
+ * so old guesses are never replayed against a new puzzle. Mapa 2 = wiki screenshot + "Onde é?" (2026-10-20).
+ */
+export const PROGRESS_SHAPES: Partial<Record<ValdleGameId, number>> = { mapa: 2 };
+
+const stamp = (game: ValdleGameId, p: ValdleProgress): ValdleProgress => {
+  const shape = PROGRESS_SHAPES[game];
+  return shape && p.shape !== shape ? { ...p, shape } : p;
+};
 
 export type GuessOutcome = 'hit' | 'miss' | 'repeat' | 'over' | 'filled' | 'used';
 
@@ -140,6 +159,34 @@ export function guessConexoes(puzzle: ConexoesPuzzle, progress: ValdleProgress, 
   return { progress: { ...progress, guesses: [...progress.guesses, key] }, outcome: hit ? 'hit' : 'miss', oneAway: !hit && isOneAway(puzzle, ids) };
 }
 
+// --- Mapa: "Onde é?" ------------------------------------------------------------------------------------------------
+
+/** Marks of step 2 ("Onde é?") of the Mapa game. */
+export const MAPA_SPOT_TRIES = 3;
+
+/** Super region of a callout id ("A|Main" → "A"). */
+export const spotRegion = (id: string): string => id.slice(0, Math.max(0, id.indexOf('|')));
+
+/** The map part of the Mapa game is over (map guessed, tries used up, or gave up): step 2 opens. */
+export function mapaStepOneDone(puzzle: ValdlePuzzle<'mapa'>, progress: ValdleProgress): boolean {
+  return !!progress.gaveUp || progress.guesses.includes(puzzle.map) || progress.guesses.length >= VALDLE_GAMES.mapa.maxTries;
+}
+
+/** Marks a cell (callout id) in "Onde é?"; only once step 1 is over and while marks are left. */
+export function guessSpot(puzzle: ValdlePuzzle<'mapa'>, progress: ValdleProgress, id: string): { progress: ValdleProgress; outcome: GuessOutcome } {
+  if (!mapaStepOneDone(puzzle, progress) || isDone('mapa', puzzle, progress)) return { progress, outcome: 'over' };
+  const spots = progress.spots ?? [];
+  if (spots.includes(id)) return { progress, outcome: 'repeat' };
+  return { progress: { ...progress, spots: [...spots, id] }, outcome: id === puzzle.place ? 'hit' : 'miss' };
+}
+
+/** "Mapa em 2/5 · Lugar em 1/3" (or without the maxima: the cards). */
+export function mapaSummary(r: ValdleResult, withMax = true): string {
+  const map = r.won ? `Mapa em ${r.tries}${withMax ? `/${r.max}` : ''}` : 'Mapa: não acertou';
+  const place = r.place ? `Lugar em ${r.place}${withMax ? `/${MAPA_SPOT_TRIES}` : ''}` : 'Lugar: não acertou';
+  return `${map} · ${place}`;
+}
+
 // --- Guess games ---------------------------------------------------------------------------------------------------
 
 export function guess(puzzle: ValdlePuzzle, progress: ValdleProgress, id: string): { progress: ValdleProgress; outcome: GuessOutcome } {
@@ -177,6 +224,10 @@ export function isDone(game: ValdleGameId, puzzle: ValdlePuzzle, progress: Valdl
     const s = conexoesState(puzzle as unknown as ConexoesPuzzle, progress);
     return s.solved.length === 4 || s.mistakes.length >= max;
   }
+  if (game === 'mapa') {
+    const spots = progress.spots ?? [];
+    return mapaStepOneDone(puzzle as ValdlePuzzle<'mapa'>, progress) && (spots.includes((puzzle as ValdlePuzzle<'mapa'>).place) || spots.length >= MAPA_SPOT_TRIES);
+  }
   return progress.guesses.includes(answerOf(puzzle)) || progress.guesses.length >= max;
 }
 
@@ -194,6 +245,7 @@ export function resultOf(puzzle: ValdlePuzzle, progress: ValdleProgress): Valdle
   const won = at >= 0;
   const out: ValdleResult = { won, tries: won ? at + 1 : progress.guesses.length, score: won ? 1 : 0, max: VALDLE_GAMES[game].maxTries };
   if (game === 'habilidade') out.bonus = progress.bonus ? progress.bonus === (puzzle as ValdlePuzzle<'habilidade'>).slot : null;
+  if (game === 'mapa') out.place = (progress.spots ?? []).indexOf((puzzle as ValdlePuzzle<'mapa'>).place) + 1;
   return out;
 }
 
@@ -228,6 +280,14 @@ export function shareText(puzzle: ValdlePuzzle, progress: ValdleProgress, marks?
       const ids = g.split(',');
       lines.push(ids.map((id) => String(groups.findIndex((gr) => gr.players.includes(id)) + 1)).sort().join(' '));
     }
+  } else if (puzzle.game === 'mapa') {
+    // No names: one mark per try. Step 2: V = the place, P = same region (A, B, Meio…), - = another region.
+    const m = puzzle as ValdlePuzzle<'mapa'>;
+    lines.push(mapaSummary(r));
+    if (progress.guesses.length) lines.push(`Mapa: ${progress.guesses.map((g) => (g === m.map ? 'V' : '-')).join(' ')}`);
+    const spots = progress.spots ?? [];
+    if (spots.length) lines.push(`Lugar: ${spots.map((g) => (g === m.place ? 'V' : spotRegion(g) === spotRegion(m.place) ? 'P' : '-')).join(' ')}`);
+    lines.push('V certo · P mesma região · - errado');
   } else {
     lines.push(r.won ? `Acertei em ${r.tries}/${r.max}` : `Não acertei em ${r.max} tentativas`);
     if (puzzle.game === 'habilidade' && r.bonus !== undefined && r.bonus !== null) lines[1] += r.bonus ? ' · bônus certo' : ' · bônus errado';
@@ -263,7 +323,7 @@ export const emptyStore = (): ValdleStore => ({ v: 1, daily: {}, free: {} });
 /** Applies a move to a daily puzzle (and settles it). */
 export function updateDaily(store: ValdleStore, puzzle: ValdlePuzzle, fn: (p: ValdleProgress) => ValdleProgress, today: string): ValdleStore {
   const days = store.daily[puzzle.game] ?? {};
-  const next = settle(puzzle, fn(days[puzzle.id] ?? emptyProgress()), today);
+  const next = settle(puzzle, stamp(puzzle.game, fn(days[puzzle.id] ?? emptyProgress())), today);
   return { ...store, daily: { ...store.daily, [puzzle.game]: { ...days, [puzzle.id]: next } } };
 }
 
@@ -271,7 +331,7 @@ export function updateDaily(store: ValdleStore, puzzle: ValdlePuzzle, fn: (p: Va
 export function updateFree(store: ValdleStore, puzzle: ValdlePuzzle, fn: (p: ValdleProgress) => ValdleProgress, today: string): ValdleStore {
   const slot = store.free[puzzle.game];
   const base: FreeSlot = slot && slot.seed === puzzle.id ? slot : { seed: puzzle.id, progress: emptyProgress(), played: slot?.played ?? 0, won: slot?.won ?? 0 };
-  const progress = settle(puzzle, fn(base.progress), today);
+  const progress = settle(puzzle, stamp(puzzle.game, fn(base.progress)), today);
   const ended = !base.progress.result && progress.result;
   const out: FreeSlot = {
     seed: puzzle.id,
@@ -285,7 +345,7 @@ export function updateFree(store: ValdleStore, puzzle: ValdlePuzzle, fn: (p: Val
 /** Starts a new free puzzle (the open one is dropped; counts stay). */
 export function newFree(store: ValdleStore, game: ValdleGameId, seed: string): ValdleStore {
   const slot = store.free[game];
-  return { ...store, free: { ...store.free, [game]: { seed, progress: emptyProgress(), played: slot?.played ?? 0, won: slot?.won ?? 0 } } };
+  return { ...store, free: { ...store.free, [game]: { seed, progress: stamp(game, emptyProgress()), played: slot?.played ?? 0, won: slot?.won ?? 0 } } };
 }
 
 export interface GameStats {
@@ -298,6 +358,8 @@ export interface GameStats {
   dist: number[];
   freePlayed: number;
   freeWon: number;
+  /** Mapa: daily puzzles whose place ("Onde é?") was found. */
+  placeFound?: number;
 }
 
 export function gameStats(store: ValdleStore, game: ValdleGameId, today: string): GameStats {
@@ -333,6 +395,7 @@ export function gameStats(store: ValdleStore, game: ValdleGameId, today: string)
   }
   const free = store.free[game];
   return {
+    ...(game === 'mapa' ? { placeFound: results.filter(([, p]) => (p.result!.place ?? 0) > 0).length } : {}),
     played: results.length,
     won: results.filter(([, p]) => p.result!.won).length,
     streak,
@@ -353,15 +416,21 @@ function parseProgress(x: unknown): ValdleProgress | null {
   if (!isObj(x)) return null;
   const out: ValdleProgress = { guesses: strArr(x.guesses).slice(0, 64) };
   if (typeof x.bonus === 'string') out.bonus = x.bonus;
+  if (Array.isArray(x.spots)) out.spots = strArr(x.spots).slice(0, 16);
+  if (typeof x.shape === 'number' && Number.isInteger(x.shape)) out.shape = x.shape;
   if (x.gaveUp === true) out.gaveUp = true;
   if (typeof x.finishedOn === 'string' && isDayKey(x.finishedOn)) out.finishedOn = x.finishedOn;
   const r = x.result;
   if (isObj(r) && typeof r.won === 'boolean') {
     out.result = { won: r.won, tries: num(r.tries), score: num(r.score), max: num(r.max) };
     if (typeof r.bonus === 'boolean' || r.bonus === null) out.result.bonus = r.bonus;
+    if (typeof r.place === 'number') out.result.place = r.place;
   }
   return out;
 }
+
+/** Progress saved on an older puzzle shape of its game (PROGRESS_SHAPES) is not kept. */
+const shapeOk = (game: ValdleGameId, p: ValdleProgress) => (p.shape ?? 1) === (PROGRESS_SHAPES[game] ?? 1);
 
 /** Reads a saved store (anything malformed is dropped, never thrown). */
 export function parseValdleStore(json: unknown): ValdleStore {
@@ -373,7 +442,7 @@ export function parseValdleStore(json: unknown): ValdleStore {
       const parsed: Record<string, ValdleProgress> = {};
       for (const [d, p] of Object.entries(days)) {
         const pp = isDayKey(d) ? parseProgress(p) : null;
-        if (pp) parsed[d] = pp;
+        if (pp && shapeOk(game, pp)) parsed[d] = pp;
       }
       out.daily[game] = parsed;
     }
@@ -381,7 +450,8 @@ export function parseValdleStore(json: unknown): ValdleStore {
   if (isObj(json.free)) {
     for (const [game, slot] of Object.entries(json.free)) {
       if (!isValdleGame(game) || !isObj(slot) || typeof slot.seed !== 'string') continue;
-      const progress = parseProgress(slot.progress) ?? emptyProgress();
+      const parsed = parseProgress(slot.progress);
+      const progress = parsed && shapeOk(game, parsed) ? parsed : stamp(game, emptyProgress());
       out.free[game] = { seed: slot.seed, progress, played: num(slot.played), won: num(slot.won) };
     }
   }

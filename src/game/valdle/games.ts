@@ -21,7 +21,7 @@ export interface ValdleGameInfo {
 export const VALDLE_GAMES: Record<ValdleGameId, ValdleGameInfo> = {
   agente: { id: 'agente', group: 'classico', label: 'Agente Clássico', blurb: 'Adivinhe o agente: cada palpite compara função, origem, estreia no VCT e mais.', maxTries: 7 },
   habilidade: { id: 'habilidade', group: 'classico', label: 'Habilidade', blurb: 'De quem é esta habilidade? A imagem e as pistas abrem a cada erro.', maxTries: 6 },
-  mapa: { id: 'mapa', group: 'classico', label: 'Mapa', blurb: 'Um pedaço ampliado de um mapa: a imagem se afasta a cada erro.', maxTries: 5 },
+  mapa: { id: 'mapa', group: 'classico', label: 'Mapa', blurb: 'Um lugar de um mapa, bem ampliado: qual é o mapa? Depois, marque no esquema onde é.', maxTries: 5 },
   callout: { id: 'callout', group: 'classico', label: 'Callout', blurb: 'Um ponto destacado no mapa: qual é o callout?', maxTries: 5 },
   arma: { id: 'arma', group: 'classico', label: 'Arma', blurb: 'Adivinhe a arma por categoria, preço, dano, cadência e pente.', maxTries: 6 },
   pro: { id: 'pro', group: 'cena', label: 'Pro Clássico', blurb: 'Adivinhe o pro: cada palpite compara time, país, região, função, títulos e mais.', maxTries: 8 },
