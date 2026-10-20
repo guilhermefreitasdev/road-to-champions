@@ -83,6 +83,27 @@ export interface Card {
   /** First international event with rating ≥ 1.10 or in the event's top 25%. */
   prodigy?: boolean;
   career?: CardCareer;
+  /**
+   * Real per-agent numbers for this player (most played first), aggregated from VLR map scoreboards up to and
+   * including the card's year. Display + a bounded, sample-shrunk agent edge in the sim; never invented.
+   */
+  agentPool?: AgentStat[];
+  /**
+   * Roles the player has genuinely played (share of maps ≥ a threshold), main role first. Two or more = a
+   * natural flex ("flex nato"): no off-role penalty in those roles and full value in the flex slot.
+   */
+  flexRoles?: Role[];
+}
+
+/** One agent in a player's real pool. */
+export interface AgentStat {
+  agent: string;
+  /** Maps played on the agent (the sample size). */
+  maps: number;
+  rating: number | null;
+  acs: number | null;
+  /** Kills / deaths on the agent. */
+  kd: number | null;
 }
 
 /** A coach in a specific event. Bonuses are in strength points. */

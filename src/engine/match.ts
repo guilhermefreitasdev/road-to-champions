@@ -84,6 +84,8 @@ export interface PlayerLine {
   form: number;
   /** Best estimated rating of the 10 on this map. */
   mvp: boolean;
+  /** Agent the player used on this map (from his real pool), when the sim picks one. */
+  agent?: string;
 }
 
 /** Strength points each team got on this map beyond its lineup strength, for the UI and the calibration tests. */
