@@ -47,8 +47,19 @@ interface RealMediaJson {
 const GAME_MEDIA = gameMediaJson as GameMediaJson;
 const REAL_MEDIA = realMediaJson as RealMediaJson;
 
-/** Public URL of a path under public/ (honours Vite's base). */
+/**
+ * Player photos inlined as data URLs, only in builds made with VITE_INLINE_PLAYER_PHOTOS=1 (the claude.ai preview,
+ * which caps a page at 511 files). Regular builds serve them from public/ and leave this map empty.
+ */
+const INLINE_PLAYER_PHOTOS: Record<string, string> =
+  import.meta.env?.VITE_INLINE_PLAYER_PHOTOS === '1'
+    ? import.meta.glob<string>('../../public/media/players/*.webp', { query: '?inline', import: 'default', eager: true })
+    : {};
+
+/** Public URL of a path under public/ (honours Vite's base), or the inlined data URL of a player photo. */
 export function mediaUrl(path: string): string {
+  const inlined = INLINE_PLAYER_PHOTOS[`../../public/${path}`];
+  if (inlined) return inlined;
   const base = import.meta.env?.BASE_URL ?? '/';
   return `${base.endsWith('/') ? base : `${base}/`}${path}`;
 }
