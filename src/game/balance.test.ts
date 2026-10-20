@@ -52,7 +52,7 @@ const env = (globalThis as { process?: { env: Record<string, string | undefined>
 const REPORT = !!env.BALANCE_REPORT;
 
 /** Reroll the classic roulette while the best option is worth less than this (OVR × role fit). */
-const REROLL_BELOW = 85;
+const REROLL_BELOW = 89; // 85 before the +4 OVR shift (cards.ts OVR_FLOOR 63 → 67)
 
 function bestOption(cards: Card[], open: Slot[]): { card: Card; slot: Slot; value: number } | null {
   let best: { card: Card; slot: Slot; value: number } | null = null;

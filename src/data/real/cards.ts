@@ -86,8 +86,12 @@ export const SHRINK_ROUNDS = 60;
 /** Attribute scale: percentile 0 → 40, percentile 100 → 99. */
 const ATTR_FLOOR = 40;
 const ATTR_SPAN = 59;
-/** OVR from the (shrunk) performance percentile: 0 → 63, 100 → 92, before the event bonuses. */
-const OVR_FLOOR = 63;
+/**
+ * OVR from the (shrunk) performance percentile: 0 → 67, 100 → 96, before the event bonuses. Shifted +4 (was 63)
+ * on 2026-10-20 at the owner's request so primes read like primes (top cards 96–98, median ~83). A pure shift:
+ * the span, the gaps between cards and therefore the balance are unchanged.
+ */
+const OVR_FLOOR = 67;
 const OVR_SPAN = 29;
 const OVR_MIN = 50;
 const OVR_MAX = 99;

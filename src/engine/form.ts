@@ -16,6 +16,8 @@ import type { AuraTier, Card, Lineup, LineupPlayer, MapName, Role } from './type
 export const FORM_SIGMA = 0.1;
 /** The SD grows 6% per 10 OVR (measured 0.29 → 0.33 from the bottom to the top quartile). */
 export const FORM_OVR_SLOPE = 0.006;
+/** OVR at which the form SD equals FORM_SIGMA (≈ the median real card). */
+export const FORM_OVR_CENTER = 84;
 /** Duelists swing ~10% more than initiators (measured 0.262 … 0.235). */
 export const FORM_ROLE_FACTOR: Record<Role, number> = { duelist: 1.06, sentinel: 1.01, controller: 0.98, initiator: 0.95 };
 /** Bounds of the kill multiplier. */
@@ -45,7 +47,7 @@ export function drawFormZ(rng: Rng): number {
 
 /** Rating-equivalent SD of a card's map form. */
 export function formSigma(ovr: number, role: Role): number {
-  return FORM_SIGMA * (1 + FORM_OVR_SLOPE * (ovr - 80)) * FORM_ROLE_FACTOR[role];
+  return FORM_SIGMA * (1 + FORM_OVR_SLOPE * (ovr - FORM_OVR_CENTER)) * FORM_ROLE_FACTOR[role];
 }
 
 /** Kill multiplier of a map: exp(σ × z), bounded. */

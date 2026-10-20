@@ -70,13 +70,15 @@ describe('REAL_ROSTERS', () => {
     }
   });
 
-  it('spreads OVR from the mid-60s to the mid-90s, attributes in 40–99', () => {
-    expect(quantile(0)).toBeGreaterThanOrEqual(60);
-    expect(quantile(0.1)).toBeGreaterThanOrEqual(68);
-    expect(quantile(0.5)).toBeGreaterThanOrEqual(76);
-    expect(quantile(0.5)).toBeLessThanOrEqual(82);
-    expect(quantile(1)).toBeGreaterThanOrEqual(92);
-    expect(quantile(1)).toBeLessThanOrEqual(97);
+  it('spreads OVR from about 70 to the high 90s, attributes in 40–99', () => {
+    expect(quantile(0)).toBeGreaterThanOrEqual(65);
+    expect(quantile(0.1)).toBeGreaterThanOrEqual(72);
+    expect(quantile(0.5)).toBeGreaterThanOrEqual(80);
+    expect(quantile(0.5)).toBeLessThanOrEqual(86);
+    expect(quantile(1)).toBeGreaterThanOrEqual(96);
+    expect(quantile(1)).toBeLessThanOrEqual(99);
+    // Primes read like primes, but 99 stays rare.
+    expect(cards.filter((c) => c.card.ovr >= 99).length).toBeLessThanOrEqual(5);
     for (const { card } of cards) {
       for (const v of Object.values(card.attrs)) {
         expect(v).toBeGreaterThanOrEqual(40);
