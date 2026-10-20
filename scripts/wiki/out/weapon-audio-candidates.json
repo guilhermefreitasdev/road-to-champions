@@ -1,0 +1,50 @@
+{
+  "credit": "VALORANT Wiki (wiki.playvalorant.com); imagens e sons da Riot Games",
+  "generatedAt": "2026-10-20",
+  "files": [
+    {
+      "weapon": "Bulldog",
+      "title": "File:Spectrum Bulldog Inspect.mp3",
+      "categories": [
+        "Category:Audio Files"
+      ],
+      "url": "https://wiki.playvalorant.com/en-us/images/Spectrum_Bulldog_Inspect.mp3?c8de0",
+      "source": "https://wiki.playvalorant.com/en-us/File:Spectrum_Bulldog_Inspect.mp3",
+      "mime": "audio/mpeg",
+      "bytes": 299648
+    },
+    {
+      "weapon": "Classic",
+      "title": "File:Spectrum Classic Inspect.mp3",
+      "categories": [
+        "Category:Audio Files"
+      ],
+      "url": "https://wiki.playvalorant.com/en-us/images/Spectrum_Classic_Inspect.mp3?91a25",
+      "source": "https://wiki.playvalorant.com/en-us/File:Spectrum_Classic_Inspect.mp3",
+      "mime": "audio/mpeg",
+      "bytes": 299648
+    },
+    {
+      "weapon": "Guardian",
+      "title": "File:Spectrum Guardian Inspect.mp3",
+      "categories": [
+        "Category:Audio Files"
+      ],
+      "url": "https://wiki.playvalorant.com/en-us/images/Spectrum_Guardian_Inspect.mp3?2efbe",
+      "source": "https://wiki.playvalorant.com/en-us/File:Spectrum_Guardian_Inspect.mp3",
+      "mime": "audio/mpeg",
+      "bytes": 299648
+    },
+    {
+      "weapon": "Phantom",
+      "title": "File:Spectrum Phantom Inspect.mp3",
+      "categories": [
+        "Category:Audio Files"
+      ],
+      "url": "https://wiki.playvalorant.com/en-us/images/Spectrum_Phantom_Inspect.mp3?2efbe",
+      "source": "https://wiki.playvalorant.com/en-us/File:Spectrum_Phantom_Inspect.mp3",
+      "mime": "audio/mpeg",
+      "bytes": 299648
+    }
+  ]
+}
