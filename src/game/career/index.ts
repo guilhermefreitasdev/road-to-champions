@@ -14,7 +14,7 @@
  *   'over'       → bankruptcy (cash ≤ −1000, or in the red at two season ends in a row)
  *
  * Creation
- *   createCareer({ name, tag?, region, difficulty?, seed })            first off-season, no players yet
+ *   createCareer({ name, tag?, region, difficulty?, seed, emblem? })   first off-season, no players yet (emblem: cosmetic)
  * Off-season / windows (throw an Error with a pt-BR message when not allowed; the *Block selectors say why first)
  *   signPlayer(c, playerId, years?)        buyout / free agent / import from `marketOffers`
  *   releasePlayer(c, playerId)             sell (50% of value while under contract)
@@ -126,6 +126,7 @@ export {
   type OfferKind,
   type OfferRef,
   type OfferTerms,
+  type OrgEmblem,
   type Placement,
   type PlayerSeasonLine,
   type PlayerStatus,

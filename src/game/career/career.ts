@@ -344,11 +344,18 @@ export interface SeasonRecord {
   bankrupt?: boolean;
 }
 
+/** The org's emblem (cosmetic, picked when the org is founded): a shield shape and an accent color, by key. */
+export interface OrgEmblem {
+  shape: string;
+  color: string;
+}
+
 export interface CareerOrg {
   name: string;
   tag: string;
   region: Region;
   difficulty: Difficulty;
+  emblem?: OrgEmblem;
 }
 
 export interface CareerVeto {
@@ -407,6 +414,7 @@ export interface CreateCareerInput {
   region: Region;
   difficulty?: Difficulty;
   seed: string;
+  emblem?: OrgEmblem;
 }
 
 export const LEAGUE_AI_TEAMS = LEAGUE_TEAMS - 1;
@@ -437,7 +445,7 @@ export function createCareer(input: CreateCareerInput): CareerState {
   const base: CareerState = {
     version: CAREER_VERSION,
     seed: input.seed,
-    org: { name, tag: cleanTag(input.tag, name), region: input.region, difficulty },
+    org: { name, tag: cleanTag(input.tag, name), region: input.region, difficulty, ...(input.emblem ? { emblem: { shape: String(input.emblem.shape), color: String(input.emblem.color) } } : {}) },
     season: 1,
     year: CAREER_START_YEAR,
     phase: 'offseason',

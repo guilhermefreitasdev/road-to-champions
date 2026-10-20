@@ -24,7 +24,7 @@ export interface NavItem {
 interface FrameProps {
   /** data-screen / data-game of <main>, for the per-screen CSS. */
   screen: string;
-  game?: 'run' | 'season' | null;
+  game?: 'run' | 'season' | 'career' | null;
   nav: NavItem[];
   onHome?: () => void;
   onHowTo?: () => void;

@@ -4,7 +4,7 @@ import { Frame, type NavItem } from './Frame';
 import { lazyScreen } from './lazyScreen';
 import { loadDifficulty, saveDifficulty } from './difficulty';
 import { Home } from './screens/Home';
-import { clearRun, clearSeason, savedSlots } from './saveSlots';
+import { clearCareer, clearRun, clearSeason, savedSlots } from './saveSlots';
 
 /**
  * The app shell: the first chunk the browser runs. It paints the page and the home page right away, then fetches
@@ -29,6 +29,7 @@ export function App() {
       onReset={() => {
         clearRun();
         clearSeason();
+        clearCareer();
         setGeneration((g) => g + 1);
       }}
     >
@@ -42,6 +43,7 @@ export function App() {
 const BOOT_NAV: NavItem[] = [
   { key: 'home', label: 'Início', active: true, disabled: true },
   { key: 'daily', label: 'Diário', active: false, disabled: true },
+  { key: 'career', label: 'Carreira', active: false, disabled: true },
   { key: 'ranking', label: 'Ranking', active: false, disabled: true },
   { key: 'history', label: 'Histórico', active: false, disabled: true },
   { key: 'howto', label: 'Como jogar', active: false, disabled: true },
@@ -62,13 +64,15 @@ function Boot() {
       <Home
         ready={false}
         continueCards={null}
-        pendingSaves={Number(saved.run) + Number(saved.season)}
+        pendingSaves={Number(saved.run) + Number(saved.season) + Number(saved.career)}
         hasRun={saved.run}
         hasSeason={saved.season}
+        hasCareer={saved.career}
         fanArt={null}
         historyCount={null}
         onNew={noop}
         onNewSeason={noop}
+        onNewCareer={noop}
         onHistory={noop}
         onHowTo={noop}
         onRanking={noop}
@@ -128,7 +132,7 @@ class ErrorBoundary extends Component<BoundaryProps, { failed: boolean; loadErro
           <section className="panel" role="alert">
             <h1>Algo deu errado</h1>
             <p>Não foi possível mostrar esta tela. A run salva pode estar corrompida ou ser de uma versão antiga.</p>
-            <p className="small muted">Começar uma nova run apaga as runs salvas.</p>
+            <p className="small muted">Começar uma nova run apaga as runs, temporadas e carreiras salvas.</p>
             <button type="button" className="primary wide" onClick={this.props.onReset}>
               Nova run
             </button>

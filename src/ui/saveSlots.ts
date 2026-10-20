@@ -7,6 +7,8 @@
 export const RUN_KEY = 'rtc:run:v7';
 /** Complete Trials season (its own slot: a season and a run can be saved at the same time). */
 export const SEASON_KEY = 'rtc:season:v4';
+/** Career mode ("Modo Carreira"): its own slot, next to the run and the season. */
+export const CAREER_KEY = 'rtc:career:v1';
 /**
  * Keys of older save formats, removed on load (v1 = fictional sample cards, v2 = Swiss stage, v3 = strength v1,
  * v4 = before Modelo v3, v5 = before agent pools / flex roles / per-map agents, v6 = before difficulty and box scores;
@@ -23,9 +25,9 @@ function has(key: string): boolean {
   }
 }
 
-/** Which saved games (run, season) the home page will offer to continue; read before they are parsed. */
-export function savedSlots(): { run: boolean; season: boolean } {
-  return { run: has(RUN_KEY), season: has(SEASON_KEY) };
+/** Which saved games (run, season, career) the home page will offer to continue; read before they are parsed. */
+export function savedSlots(): { run: boolean; season: boolean; career: boolean } {
+  return { run: has(RUN_KEY), season: has(SEASON_KEY), career: has(CAREER_KEY) };
 }
 
 export function clearRun(): void {
@@ -39,6 +41,14 @@ export function clearRun(): void {
 export function clearSeason(): void {
   try {
     window.localStorage.removeItem(SEASON_KEY);
+  } catch {
+    // Ignore.
+  }
+}
+
+export function clearCareer(): void {
+  try {
+    window.localStorage.removeItem(CAREER_KEY);
   } catch {
     // Ignore.
   }

@@ -23,6 +23,7 @@ import {
   type RunState,
 } from '../game/run';
 import * as season from '../game/season';
+import * as career from '../game/career';
 import { MODE_LABELS, USER_ID } from '../game/run';
 import { ConfirmBar } from './components/ConfirmBar';
 import { Frame, ScreenLoading, type NavItem } from './Frame';
@@ -36,7 +37,9 @@ import { runAllPlayerStats, seasonAllPlayerStats } from '../game/stats';
 import { difficultyOf, loadDifficulty, saveDifficulty } from './difficulty';
 import { usePrefersReducedMotion } from './motion';
 import { runStats, seasonStats } from './playerStats';
-import { loadRun, loadSeason, newSeed, saveRun, saveSeason } from './storage';
+import { clearCareer, loadCareer, loadRun, loadSeason, newSeed, saveCareer, saveRun, saveSeason } from './storage';
+import { defaultCareerTab, simulateUntilBreak, type CareerTab } from './careerView';
+import { mapLabel } from './components/GameImage';
 
 /**
  * The game: the saved run (main mode) and season (Complete Trials), and the screen machine of both modes. Loaded
@@ -44,6 +47,9 @@ import { loadRun, loadSeason, newSeed, saveRun, saveSeason } from './storage';
  * own, prefetched once the game is up so later screens open instantly (and work offline with the service worker).
  */
 
+const CareerCreate = lazyScreen(() => import('./screens/CareerCreate').then((m) => m.CareerCreate));
+const CareerHub = lazyScreen(() => import('./screens/CareerHub').then((m) => m.CareerHub));
+const CareerReport = lazyScreen(() => import('./screens/CareerReport').then((m) => m.CareerReport));
 const Coach = lazyScreen(() => import('./screens/Coach').then((m) => m.Coach));
 const Daily = lazyScreen(() => import('./screens/Daily').then((m) => m.Daily));
 const Draft = lazyScreen(() => import('./screens/Draft').then((m) => m.Draft));
@@ -63,7 +69,7 @@ const Team = lazyScreen(() => import('./screens/Team').then((m) => m.Team));
 const Veto = lazyScreen(() => import('./screens/Veto').then((m) => m.Veto));
 
 /** Most likely next screens first. */
-const PREFETCH = [Draft, Coach, Team, Hub, Veto, Playback, Series, End, Region, SeasonHub, Market, SeasonEnd, Stats, HowTo, Ranking, History, Daily];
+const PREFETCH = [Draft, Coach, Team, Hub, Veto, Playback, Series, End, Region, SeasonHub, Market, SeasonEnd, Stats, CareerHub, CareerCreate, CareerReport, HowTo, Ranking, History, Daily];
 
 /** Fetches every screen's chunk once the browser is idle (each is small; failures are retried when shown). */
 function prefetchScreens(): () => void {
@@ -79,6 +85,7 @@ function prefetchScreens(): () => void {
 }
 
 type SeasonState = season.SeasonState;
+type CareerState = career.CareerState;
 
 /**
  * Transient UI state on top of the saved games: the home page, the run (main mode) or the season (Complete
@@ -99,17 +106,53 @@ type View =
   | { kind: 'season-hub' }
   | { kind: 'season-stats' }
   | { kind: 'season-series'; key: string }
-  | { kind: 'season-playback'; key: string };
+  | { kind: 'season-playback'; key: string }
+  | { kind: 'career-create' }
+  /** The career: the hub ("Escritório"), or the veto / season report when one is due; `office` forces the hub. */
+  | { kind: 'career'; tab?: CareerTab; office?: boolean }
+  | { kind: 'career-series'; key: string }
+  | { kind: 'career-playback'; key: string };
 
-type ScreenKey = 'home' | 'daily' | 'history' | 'howto' | 'ranking' | 'region' | 'market' | 'draft' | 'coach' | 'team' | 'hub' | 'stats' | 'veto' | 'playback' | 'series' | 'end';
-type Game = 'run' | 'season' | null;
+type ScreenKey =
+  | 'home'
+  | 'daily'
+  | 'history'
+  | 'howto'
+  | 'ranking'
+  | 'region'
+  | 'market'
+  | 'draft'
+  | 'coach'
+  | 'team'
+  | 'hub'
+  | 'stats'
+  | 'veto'
+  | 'playback'
+  | 'series'
+  | 'end'
+  | 'career-create'
+  | 'career-hub'
+  | 'career-report';
+type Game = 'run' | 'season' | 'career' | null;
 
-function screenOf(run: RunState | null, s: SeasonState | null, view: View): { screen: ScreenKey; game: Game } {
+function screenOf(run: RunState | null, s: SeasonState | null, c: CareerState | null, view: View): { screen: ScreenKey; game: Game } {
   if (view.kind === 'home') return { screen: 'home', game: null };
   if (view.kind === 'daily') return { screen: 'daily', game: null };
   if (view.kind === 'history') return { screen: 'history', game: null };
   if (view.kind === 'howto') return { screen: 'howto', game: null };
   if (view.kind === 'ranking') return { screen: 'ranking', game: null };
+  if (view.kind === 'career-create') return { screen: 'career-create', game: null };
+  if (view.kind.startsWith('career')) {
+    if (!c) return { screen: 'career-create', game: null };
+    const game: Game = 'career';
+    if (view.kind === 'career-series' && c.userSeries[view.key]) return { screen: 'series', game };
+    if (view.kind === 'career-playback' && c.userSeries[view.key]) return { screen: 'playback', game };
+    const office = view.kind === 'career' && !!view.office;
+    if (!office && (c.phase === 'report' || c.phase === 'over')) return { screen: 'career-report', game };
+    const pending = career.userPendingMatch(c);
+    const vetoOpen = !!pending && c.veto?.stage === pending.stage && c.veto.matchId === pending.match.id;
+    return { screen: !office && vetoOpen ? 'veto' : 'career-hub', game };
+  }
   if (view.kind.startsWith('season')) {
     if (!s) return { screen: 'home', game: null };
     const game: Game = 'season';
@@ -176,13 +219,14 @@ function cardsOfRows(rows: readonly { cardId: string }[]): Map<string, Card> {
 export function Game() {
   const [run, setRun] = useState<RunState | null>(() => loadRun());
   const [s, setSeason] = useState<SeasonState | null>(() => loadSeason());
+  const [c, setCareer] = useState<CareerState | null>(() => loadCareer());
   const [history, setHistory] = useState<HistoryEntry[]>(() => loadHistory());
   const [difficulty, setDifficultyState] = useState<Difficulty>(() => loadDifficulty());
   const [view, setViewState] = useState<View>({ kind: 'home' });
   const [error, setError] = useState<string | null>(null);
   const [confirmReset, setConfirmReset] = useState(false);
   const reducedMotion = usePrefersReducedMotion();
-  const { screen, game } = screenOf(run, s, view);
+  const { screen, game } = screenOf(run, s, c, view);
   const headingRef = useRef<HTMLElement>(null);
   const mounted = useRef(false);
   const featured = useMemo(featuredCards, []);
@@ -190,7 +234,7 @@ export function Game() {
   // New screen: back to the top, and move focus there for keyboard and screen-reader users.
   const viewKey =
     view.kind === 'series' || view.kind === 'playback' ? `${view.kind}:${view.matchId}`
-    : view.kind === 'season-series' || view.kind === 'season-playback' ? `${view.kind}:${view.key}`
+    : view.kind === 'season-series' || view.kind === 'season-playback' || view.kind === 'career-series' || view.kind === 'career-playback' ? `${view.kind}:${view.key}`
     : `${game}:${screen}`;
   // Not on mount: the game takes over from the shell's home page, where the user may already be scrolling.
   useEffect(() => {
@@ -245,6 +289,32 @@ export function Game() {
     }
   };
 
+  /** Same for the career (it has no history entry: its seasons are its history). */
+  const actCareer = (fn: (x: CareerState) => CareerState): boolean => {
+    if (!c) return false;
+    try {
+      const next = fn(c);
+      setCareer(next);
+      saveCareer(next);
+      setError(null);
+      return true;
+    } catch (e) {
+      fail(e);
+      return false;
+    }
+  };
+
+  const createNewCareer = (input: Omit<career.CreateCareerInput, 'seed'>) => {
+    try {
+      const next = career.createCareer({ ...input, seed: newSeed() });
+      setCareer(next);
+      saveCareer(next);
+      setView({ kind: 'career', tab: defaultCareerTab(next) });
+    } catch (e) {
+      fail(e);
+    }
+  };
+
   const setDifficulty = (d: Difficulty) => {
     setDifficultyState(d);
     saveDifficulty(d);
@@ -268,6 +338,11 @@ export function Game() {
   const restart = () => {
     if (game === 'run' && run) startNew(run.mode, difficultyOf(run));
     else if (game === 'season' && s) startNewSeason(difficultyOf(s), s.field);
+    else if (game === 'career') {
+      clearCareer();
+      setCareer(null);
+      setView({ kind: 'career-create' });
+    }
   };
 
   const viewSeries = (matchId: string) => setView({ kind: 'series', matchId });
@@ -277,22 +352,26 @@ export function Game() {
   const watchSeasonSeries = (key: string) => setView(reducedMotion ? { kind: 'season-series', key } : { kind: 'season-playback', key });
 
   // Stats of the game in progress (main nav): only once its competition has started.
+  const careerTab = view.kind === 'career' ? (view.tab ?? (c ? defaultCareerTab(c) : 'roster')) : null;
   const statsTarget: View | null =
     game === 'run' && run?.tournament ? { kind: 'stats' }
     : game === 'season' && s && seasonHasStats(s) ? { kind: 'season-stats' }
+    : game === 'career' && c?.league ? { kind: 'career', tab: 'stats', office: true }
     : null;
+  const careerStatsOpen = screen === 'career-hub' && careerTab === 'stats';
   const item = (key: string, label: string, to: View | null, active: boolean): NavItem =>
     to ? { key, label, active, onSelect: () => setView(to) } : { key, label, active };
   const nav: NavItem[] = [
     item('home', 'Início', { kind: 'home' }, screen === 'home'),
     item('daily', 'Diário', { kind: 'daily' }, screen === 'daily'),
-    item('stats', 'Estatísticas', statsTarget, screen === 'stats'),
+    item('career', 'Carreira', c ? { kind: 'career' } : { kind: 'career-create' }, (game === 'career' || screen === 'career-create') && !careerStatsOpen),
+    item('stats', 'Estatísticas', statsTarget, screen === 'stats' || careerStatsOpen),
     item('ranking', 'Ranking', { kind: 'ranking' }, screen === 'ranking'),
     item('history', 'Histórico', { kind: 'history' }, screen === 'history'),
     item('howto', 'Como jogar', { kind: 'howto' }, screen === 'howto'),
   ];
-  const resetLabel = game === 'season' ? 'Recomeçar temporada' : 'Recomeçar run';
-  const hasSaves = !!(run || s);
+  const resetLabel = game === 'season' ? 'Recomeçar temporada' : game === 'career' ? 'Recomeçar carreira' : 'Recomeçar run';
+  const hasSaves = !!(run || s || c);
 
   return (
     <Frame
@@ -306,13 +385,15 @@ export function Game() {
     >
       {confirmReset && game !== null && (
         <ConfirmBar
-          title={game === 'season' ? 'Recomeçar a temporada?' : 'Recomeçar a run?'}
+          title={game === 'season' ? 'Recomeçar a temporada?' : game === 'career' ? 'Recomeçar a carreira?' : 'Recomeçar a run?'}
           text={
             game === 'season'
               ? 'A temporada salva é apagada e você volta à escolha do servidor. Não dá para desfazer.'
-              : `A run salva é apagada e um novo ${run ? MODE_LABELS[run.mode] : 'draft'} começa do zero. Não dá para desfazer.`
+              : game === 'career'
+                ? `A carreira salva${c ? ` (${c.org.name}, temporada ${c.season})` : ''} é apagada e você volta à fundação da org. Não dá para desfazer.`
+                : `A run salva é apagada e um novo ${run ? MODE_LABELS[run.mode] : 'draft'} começa do zero. Não dá para desfazer.`
           }
-          confirmLabel={game === 'season' ? 'Recomeçar temporada' : 'Recomeçar run'}
+          confirmLabel={resetLabel}
           onConfirm={restart}
           onCancel={() => setConfirmReset(false)}
         />
@@ -330,18 +411,22 @@ export function Game() {
               <ContinueCards
                 saved={run}
                 savedSeason={s}
+                savedCareer={c}
                 onContinue={() => setView({ kind: 'run' })}
                 onContinueSeason={() => setView({ kind: 'season' })}
+                onContinueCareer={() => setView({ kind: 'career' })}
               />
             ) : null
           }
           pendingSaves={0}
           hasRun={!!run}
           hasSeason={!!s}
+          hasCareer={!!c}
           fanArt={<FanArt cards={featured} />}
           historyCount={history.length}
           onNew={startNew}
           onNewSeason={() => startNewSeason()}
+          onNewCareer={() => setView({ kind: 'career-create' })}
           difficulty={difficulty}
           onDifficulty={setDifficulty}
           onHistory={() => setView({ kind: 'history' })}
@@ -368,6 +453,12 @@ export function Game() {
 
         {game === 'run' && run && (
           <RunScreens run={run} screen={screen} view={view} act={act} setView={setView} viewSeries={viewSeries} watchSeries={watchSeries} />
+        )}
+        {screen === 'career-create' && (
+          <CareerCreate difficulty={difficulty} replaces={!!c} onCreate={createNewCareer} onBack={() => setView({ kind: 'home' })} />
+        )}
+        {game === 'career' && c && (
+          <CareerScreens c={c} screen={screen} view={view} tab={careerTab ?? defaultCareerTab(c)} act={actCareer} setView={setView} reducedMotion={reducedMotion} />
         )}
         {game === 'season' && s && (
           <SeasonScreens
@@ -627,3 +718,104 @@ function SeasonScreens({ s, screen, view, act, setView, viewSeries, watchSeries 
   return null;
 }
 
+
+interface CareerScreensProps {
+  c: CareerState;
+  screen: ScreenKey;
+  view: View;
+  tab: CareerTab;
+  act: (fn: (x: CareerState) => CareerState) => boolean;
+  setView: (v: View) => void;
+  reducedMotion: boolean;
+}
+
+/** Career: the hub ("Escritório") with its tabs, the veto and series of the org's matches, scrim replays and the report. */
+function CareerScreens({ c, screen, view, tab, act, setView, reducedMotion }: CareerScreensProps) {
+  const office = view.kind === 'career' && !!view.office;
+  const toHub = (next: CareerTab = tab, keepOffice = office) => setView({ kind: 'career', tab: next, office: keepOffice });
+  const viewSeries = (key: string) => setView({ kind: 'career-series', key });
+  const watchSeries = (key: string) => setView(reducedMotion ? { kind: 'career-series', key } : { kind: 'career-playback', key });
+
+  if (screen === 'career-hub') {
+    return (
+      <CareerHub
+        c={c}
+        act={act}
+        tab={tab}
+        onTab={(t) => toHub(t)}
+        cardOf={cardById}
+        onVeto={() => {
+          if (act(career.beginUserVeto)) setView({ kind: 'career', tab });
+        }}
+        onAutoMatch={() => {
+          const pending = career.userPendingMatch(c);
+          if (!pending) return;
+          const key = career.seriesKey(pending.stage, pending.match.id);
+          if (act(career.autoPlayMatch)) viewSeries(key);
+        }}
+        onSimulate={() => {
+          if (act((x) => simulateUntilBreak(x))) setView({ kind: 'career', tab: 'competition' });
+        }}
+        onViewSeries={viewSeries}
+        onReport={() => setView({ kind: 'career' })}
+      />
+    );
+  }
+  if (screen === 'career-report') {
+    return (
+      <CareerReport
+        c={c}
+        onAdvance={() => {
+          if (act(career.advanceToNextSeason)) setView({ kind: 'career', tab: 'roster' });
+        }}
+        onOffice={() => toHub('history', true)}
+        onNewCareer={() => setView({ kind: 'career-create' })}
+      />
+    );
+  }
+  if (screen === 'veto') {
+    const pending = career.userPendingMatch(c)!;
+    const oppId = pending.match.a === career.USER_ID ? pending.match.b : pending.match.a;
+    return (
+      <Veto
+        match={{ label: `${career.CAREER_STAGE_LABELS[pending.stage]} · ${pending.match.label}`, bestOf: pending.match.bestOf }}
+        side={pending.side}
+        veto={c.veto!.state}
+        opponentName={career.careerTeamInfo(c, oppId).name}
+        scouting={career.careerVetoScouting(c, oppId)}
+        mapPool={career.CAREER_MAP_POOL}
+        onChoose={(map) => act((x) => career.applyUserVeto(x, map))}
+        onPlay={() => {
+          const key = career.seriesKey(c.veto!.stage, c.veto!.matchId);
+          if (act(career.playUserMatch)) watchSeries(key);
+        }}
+        onBack={() => toHub(tab, true)}
+        backLabel="Voltar ao escritório"
+      />
+    );
+  }
+  if ((screen === 'series' || screen === 'playback') && (view.kind === 'career-series' || view.kind === 'career-playback')) {
+    const key = view.key;
+    const found = career.findCareerMatch(c, key);
+    const scrim = found ? undefined : c.scrims.find((x) => `scrim:${x.n}` === key);
+    const props = found
+      ? {
+          label: `${career.CAREER_STAGE_LABELS[found.stage]} · ${found.match.label}`,
+          bestOf: found.match.bestOf,
+          series: c.userSeries[key]!,
+          side: (found.match.a === career.USER_ID ? 0 : 1) as 0 | 1,
+          names: [career.nameOf(c, found.match.a), career.nameOf(c, found.match.b)] as [string, string],
+        }
+      : {
+          label: `Scrim #${scrim?.n ?? ''} · ${scrim ? mapLabel(scrim.map) : ''}`,
+          bestOf: 1 as const,
+          series: c.userSeries[key]!,
+          side: 0 as const,
+          names: [c.org.name, scrim ? career.nameOf(c, scrim.opponent) : 'Adversário'] as [string, string],
+        };
+    const back = () => toHub(found ? 'competition' : 'scrims', false);
+    if (screen === 'playback') return <Playback key={key} {...props} onDone={() => viewSeries(key)} />;
+    return <Series {...props} onContinue={back} onReplay={() => setView({ kind: 'career-playback', key })} />;
+  }
+  return null;
+}

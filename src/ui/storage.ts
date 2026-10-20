@@ -1,9 +1,10 @@
-import { deserializeRun, deserializeSeason, serializeRun, serializeSeason } from '../game/persist';
+import { deserializeCareer, deserializeRun, deserializeSeason, serializeCareer, serializeRun, serializeSeason } from '../game/persist';
+import type { CareerState } from '../game/career';
 import type { RunState } from '../game/run';
 import type { SeasonState } from '../game/season';
-import { OLD_KEYS, RUN_KEY as KEY, SEASON_KEY, clearRun, clearSeason } from './saveSlots';
+import { CAREER_KEY, OLD_KEYS, RUN_KEY as KEY, SEASON_KEY, clearCareer, clearRun, clearSeason } from './saveSlots';
 
-export { clearRun, clearSeason };
+export { clearCareer, clearRun, clearSeason };
 
 /** Saved run, or null when there is none, storage is unavailable, or the save is corrupted/outdated. */
 export function loadRun(): RunState | null {
@@ -46,6 +47,29 @@ export function saveSeason(season: SeasonState): void {
     window.localStorage.setItem(SEASON_KEY, serializeSeason(season));
   } catch {
     // Same as saveRun.
+  }
+}
+
+/** Saved career, or null (none, unavailable storage, corrupted or outdated save). */
+export function loadCareer(): CareerState | null {
+  try {
+    const raw = window.localStorage.getItem(CAREER_KEY);
+    if (!raw) return null;
+    const career = deserializeCareer(raw);
+    if (!career) clearCareer();
+    return career;
+  } catch {
+    return null;
+  }
+}
+
+/** False when the save did not fit (storage full or blocked): the career keeps going, it just won't survive a reload. */
+export function saveCareer(career: CareerState): boolean {
+  try {
+    window.localStorage.setItem(CAREER_KEY, serializeCareer(career));
+    return true;
+  } catch {
+    return false;
   }
 }
 

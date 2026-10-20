@@ -21,10 +21,13 @@ interface Props {
   /** A saved run / season that a new game would replace. */
   hasRun: boolean;
   hasSeason: boolean;
+  hasCareer: boolean;
   /** Real player photos fanned on the Draft clássico card (./HomeExtras.tsx); null while loading. */
   fanArt: ReactNode | null;
   onNew: (mode: DraftMode) => void;
   onNewSeason: () => void;
+  /** Opens the career's "found your org" screen (a saved career is replaced only when the new org is founded). */
+  onNewCareer: () => void;
   /** Finished runs in the history; null while loading. */
   historyCount: number | null;
   onHistory: () => void;
@@ -43,9 +46,11 @@ export function Home({
   pendingSaves,
   hasRun,
   hasSeason,
+  hasCareer,
   fanArt,
   onNew,
   onNewSeason,
+  onNewCareer,
   historyCount,
   onHistory,
   onHowTo,
@@ -131,6 +136,16 @@ export function Home({
             ready={ready}
             onPlay={onNewSeason}
           />
+          <ModeCard
+            id="career"
+            name="Carreira"
+            text="Funde a sua org e jogue temporada após temporada: contratos, mercado, patrocínios, base e scrims."
+            art={<CareerArt />}
+            replaces={hasCareer}
+            ready={ready}
+            onPlay={onNewCareer}
+            cta="Fundar org"
+          />
         </ul>
       </section>
 
@@ -176,6 +191,7 @@ function ModeCard({
   replaces,
   ready,
   onPlay,
+  cta = 'Jogar',
 }: {
   id: string;
   name: string;
@@ -184,6 +200,7 @@ function ModeCard({
   replaces: boolean;
   ready: boolean;
   onPlay: () => void;
+  cta?: string;
 }) {
   return (
     <li className={`mode-card mode-${id}`}>
@@ -196,17 +213,21 @@ function ModeCard({
       <p id={`mode-${id}-text`} className="mode-text">
         {text}
       </p>
-      {replaces && <p className="mode-warn small">Substitui a {id === 'trials' ? 'temporada' : 'run'} salva.</p>}
+      {replaces && (
+        <p className="mode-warn small">
+          {id === 'career' ? 'Fundar uma org substitui a carreira salva.' : `Substitui a ${id === 'trials' ? 'temporada' : 'run'} salva.`}
+        </p>
+      )}
       <button
         type="button"
         className="primary play"
         aria-describedby={`mode-${id}-text`}
-        aria-label={ready ? `Jogar ${name}` : `Jogar ${name} (carregando)`}
+        aria-label={ready ? `${cta}: ${name}` : `${cta}: ${name} (carregando)`}
         disabled={!ready}
         onClick={onPlay}
       >
         {ready ? (
-          'Jogar'
+          cta
         ) : (
           <>
             <span className="spinner" aria-hidden="true" /> Carregando
@@ -244,6 +265,29 @@ function BlindCardArt() {
       <path d="M72 50v-7a8 8 0 0116 0v7" fill="none" stroke="var(--text)" strokeWidth="3" strokeLinecap="round" />
       <rect x="68" y="50" width="24" height="18" rx="3" fill="var(--accent)" />
       <circle cx="80" cy="59" r="2.5" fill="#1a1206" />
+    </svg>
+  );
+}
+
+/** A shield with the org's tag over a rising season line: found your org, play season after season. */
+function CareerArt() {
+  return (
+    <svg className="mode-svg" viewBox="0 0 160 110" focusable="false">
+      <path d="M14 92h132" stroke="rgba(255,255,255,0.18)" strokeWidth="1.5" />
+      <path d="M18 86l28-10 26 4 28-18 26-6 18-14" fill="none" stroke="var(--gold)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" strokeDasharray="5 5" />
+      {[
+        [46, 76],
+        [72, 80],
+        [100, 62],
+        [126, 56],
+      ].map(([x, y]) => (
+        <circle key={x} cx={x} cy={y} r="3.5" fill="var(--gold)" stroke="#0f1923" strokeWidth="1.5" />
+      ))}
+      <path d="M80 10l26 8v22c0 17-11 27-26 33-15-6-26-16-26-33V18z" fill="#1a2632" stroke="var(--accent)" strokeWidth="3" strokeLinejoin="round" />
+      <path d="M67 24h26" stroke="var(--accent)" strokeWidth="3" strokeLinecap="round" />
+      <text x="80" y="52" textAnchor="middle" fill="var(--text)" fontSize="17" fontWeight="900" fontStyle="italic" fontFamily="'Barlow Condensed', sans-serif">
+        ORG
+      </text>
     </svg>
   );
 }

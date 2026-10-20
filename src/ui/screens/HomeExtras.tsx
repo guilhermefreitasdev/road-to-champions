@@ -2,7 +2,9 @@ import { playerMedia } from '../../data/media';
 import type { Card } from '../../engine/types';
 import { MODE_LABELS, RUN_POOL, type RunState } from '../../game/run';
 import { REGION_LABELS, STAGE_LABELS, isCompStage, type SeasonState } from '../../game/season';
+import { CAREER_PHASE_TEXT, type CareerState } from '../../game/career';
 import { DifficultyBadge } from '../components/Difficulty';
+import { OrgEmblem } from '../components/OrgEmblem';
 import { Icon } from '../components/Icon';
 import { PlayerPhoto } from '../components/PlayerPhoto';
 import { difficultyOf } from '../difficulty';
@@ -45,13 +47,17 @@ export function FanArt({ cards }: { cards: Card[] }) {
 export function ContinueCards({
   saved,
   savedSeason,
+  savedCareer,
   onContinue,
   onContinueSeason,
+  onContinueCareer,
 }: {
   saved: RunState | null;
   savedSeason: SeasonState | null;
+  savedCareer: CareerState | null;
   onContinue: () => void;
   onContinueSeason: () => void;
+  onContinueCareer: () => void;
 }) {
   return (
     <>
@@ -81,6 +87,19 @@ export function ContinueCards({
             <DifficultyBadge difficulty={difficultyOf(savedSeason)} />
           </span>
           <span className="continue-go">Continuar temporada</span>
+        </button>
+      )}
+      {savedCareer && (
+        <button type="button" className="continue-card" onClick={onContinueCareer}>
+          <OrgEmblem emblem={savedCareer.org.emblem} tag={savedCareer.org.tag} size={28} className="continue-icon" />
+          <span className="continue-text">
+            <strong>Carreira · {REGION_LABELS[savedCareer.org.region]}</strong>
+            <span className="small muted">
+              {savedCareer.org.name} · temporada {savedCareer.season} ({savedCareer.year}) · {CAREER_PHASE_TEXT[savedCareer.phase]}
+            </span>
+            <DifficultyBadge difficulty={savedCareer.org.difficulty} />
+          </span>
+          <span className="continue-go">Continuar carreira</span>
         </button>
       )}
     </>

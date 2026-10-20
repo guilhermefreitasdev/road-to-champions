@@ -114,6 +114,13 @@ describe('createCareer', () => {
     expect(createCareer({ name: 'Furia Azul', region: 'emea', seed: 'x' }).org.tag).toBe('FA');
     expect(() => createCareer({ name: 'x', region: 'mars' as never, seed: 'x' })).toThrow();
   });
+
+  it('keeps the cosmetic emblem through a save, and works without one', () => {
+    const c = createCareer({ name: 'Furia Azul', region: 'emea', seed: 'x', emblem: { shape: 'kite', color: 'gold' } });
+    expect(c.org.emblem).toEqual({ shape: 'kite', color: 'gold' });
+    expect(deserializeCareer(serializeCareer(c))?.org.emblem).toEqual({ shape: 'kite', color: 'gold' });
+    expect('emblem' in createCareer({ name: 'Furia Azul', region: 'emea', seed: 'x' }).org).toBe(false);
+  });
 });
 
 describe('market and contracts', () => {
