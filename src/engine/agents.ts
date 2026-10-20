@@ -30,6 +30,20 @@ export const AGENT_META_NUDGE = 0.05;
 /** Agent → role table (valorant-api.com), so a player in another role's slot picks that role's agents when he has them. */
 export type AgentRoles = Readonly<Record<string, Role>>;
 
+/**
+ * Agents that also do another role's job, on top of their official one. Viper is a controller (smokes) that
+ * also anchors a site like a sentinel (owner's call, 2026-10-20): her maps count for both roles in "flex nato",
+ * and a Viper player can fill a sentinel slot with her.
+ */
+export const EXTRA_AGENT_ROLES: Readonly<Record<string, readonly Role[]>> = { Viper: ['sentinel'] };
+
+/** Roles an agent covers: the official one plus any extra role from EXTRA_AGENT_ROLES. */
+export function agentRolesOf(agent: string, roles: AgentRoles): Role[] {
+  const main = roles[agent];
+  const extra = EXTRA_AGENT_ROLES[agent] ?? [];
+  return main ? [main, ...extra.filter((r) => r !== main)] : [...extra];
+}
+
 interface Candidate {
   agent: string;
   weight: number;
@@ -42,7 +56,7 @@ function candidates(p: LineupPlayer, meta: MapMeta | undefined, roles: AgentRole
   const base = pool && pool.length > 0 ? pool : card.agents.map((agent) => ({ agent, maps: 1 }));
   let list = base;
   if (roles && slot !== 'flex') {
-    const inRole = base.filter((a) => roles[a.agent] === slot);
+    const inRole = base.filter((a) => agentRolesOf(a.agent, roles).includes(slot));
     if (inRole.length > 0) list = inRole;
   }
   return list.map(({ agent, maps }) => ({ agent, weight: maps * (1 + AGENT_META_NUDGE * (meta?.[agent] ?? 0)) }));

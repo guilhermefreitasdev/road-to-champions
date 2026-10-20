@@ -5,6 +5,7 @@ import {
   AGENT_TEAM_CAP,
   agentEdge,
   agentFactor,
+  agentRolesOf,
   agentTeamPoints,
   pickAgents,
 } from './agents';
@@ -159,5 +160,21 @@ describe('agents in the map simulation', () => {
       const agents = m.players[0].map((l) => l.agent).filter(Boolean);
       expect(new Set(agents).size).toBe(agents.length);
     }
+  });
+});
+
+describe('agentRolesOf', () => {
+  it('gives Viper both controller and sentinel, other agents only their official role', () => {
+    const roles = { Viper: 'controller', Omen: 'controller', Killjoy: 'sentinel' } as const;
+    expect(agentRolesOf('Viper', roles)).toEqual(['controller', 'sentinel']);
+    expect(agentRolesOf('Omen', roles)).toEqual(['controller']);
+    expect(agentRolesOf('Killjoy', roles)).toEqual(['sentinel']);
+    expect(agentRolesOf('Unknown', roles)).toEqual([]);
+  });
+
+  it('lets a Viper player pick Viper in a sentinel slot', () => {
+    const card: Card = { ...SAMPLE_CARDS.nevoa, agentPool: [{ agent: 'Viper', maps: 20, rating: 1.05, acs: 200, kd: 1.1 }] };
+    const lineup: Lineup = { ...SAMPLE_AURORA, players: [{ card, slot: 'sentinel' }] };
+    expect(pickAgents(lineup.players, 'viper-sentinel', undefined, { Viper: 'controller', Killjoy: 'sentinel' })).toEqual(['Viper']);
   });
 });

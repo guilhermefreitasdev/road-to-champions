@@ -449,6 +449,142 @@ export function parseMatchPage(html) {
 }
 
 // ---------------------------------------------------------------------------------------------
+// Match page, per-map scoreboards: who played which agent on each map, with that map's numbers
+
+/** VLR agent slug from an agent icon (`/img/vlr/game/agents/kayo.png` -> "kayo"); null when it is not one. */
+function agentIconSlug(src) {
+  const m = (src ?? '').match(/\/agents\/([a-z0-9_-]+)\.(png|webp|svg)/i);
+  return m ? m[1].toLowerCase() : null;
+}
+
+/**
+ * Per-map scoreboards of a match page (`/{matchId}/{slug}`, the default overview tab). For every map that
+ * was played (the "all" tab is skipped): map name, rounds (sum of the two scores, null when a score is
+ * missing) and, per player, the side (1 = first team in the header, 2 = second), the agent (null when the
+ * row shows no icon or more than one) and the map's "both sides" numbers: Rating 2.0, ACS, K, D, A.
+ * Unknown agent slugs become `unknown:<slug>`; a missing number is null.
+ */
+export function parseMatchMapStats(html, agentNameBySlug = {}) {
+  const $ = cheerio.load(html);
+  const event = idFromHref($('a.match-header-event').first().attr('href'), 'event');
+  const ts = $('.match-header-date .moment-tz-convert').first().attr('data-utc-ts') ?? null;
+  const maps = [];
+  $('.vm-stats-game').each((_, g) => {
+    const gameId = $(g).attr('data-game-id');
+    if (!gameId || gameId === 'all') return;
+    const $name = $(g).find('.vm-stats-game-header .map .map-name').first().clone();
+    $name.find('.picked').remove();
+    const scores = $(g)
+      .find('.vm-stats-game-header .team .score')
+      .map((__, s) => num($(s).text()))
+      .get();
+    const rounds = scores.length === 2 && scores.every((s) => s !== null) ? scores[0] + scores[1] : null;
+    const players = [];
+    $(g)
+      .find('.ovw-table')
+      .each((side, table) => {
+        if (side > 1) return;
+        $(table)
+          .find('.ovw-row')
+          .not('.mod-head')
+          .each((__, row) => {
+            const $row = $(row);
+            const $a = $row.find('.ovw-cell.mod-player a[href^="/player/"]').first();
+            const pl = idFromHref($a.attr('href'), 'player');
+            if (!pl) return;
+            const slugs = $row
+              .find('.ovw-cell.mod-agents img')
+              .map((___, img) => agentIconSlug($(img).attr('src')))
+              .get()
+              .filter(Boolean);
+            const both = (sel) => num($row.find(`${sel} .side.mod-both`).first().text());
+            players.push({
+              playerId: pl.id,
+              handle: clean($a.find('.ovw-player-name').text()),
+              side: side + 1,
+              agent: slugs.length === 1 ? (agentNameBySlug[slugs[0]] ?? `unknown:${slugs[0]}`) : null,
+              rating: both('.ovw-cell[data-col="rating2"]'),
+              acs: both('.ovw-cell[data-col="acs"]'),
+              k: both('.ovw-kda-stat[data-col="kills"]'),
+              d: both('.ovw-kda-stat[data-col="deaths"]'),
+              a: both('.ovw-kda-stat[data-col="assists"]'),
+            });
+          });
+      });
+    maps.push({ gameId: Number(gameId), map: clean($name.text()) || null, rounds, players });
+  });
+  return { eventId: event?.id ?? null, date: ts ? ts.slice(0, 10) : null, maps };
+}
+
+/** One agent cell of a player-year: maps, rounds, round-weighted Rating 2.0 and ACS, total kills and deaths. */
+function emptyCell() {
+  return { maps: 0, rounds: 0, ratingRounds: 0, ratingSum: 0, acsRounds: 0, acsSum: 0, k: 0, d: 0, kdMaps: 0 };
+}
+
+/**
+ * Aggregates parsed match pages into playerId → year → agent → {maps, rounds, rating, acs, k, d}.
+ * `matches` is a list of `{ year, maps }` (maps as returned by parseMatchMapStats). Rows without a known agent
+ * are skipped; `keep(playerId)` filters players. Rating and ACS are averaged weighted by the map's rounds, over
+ * the maps that have them (null when none does); k and d are summed over the maps that have both (null when
+ * none does). Agents are ordered by maps desc, then name; ids and years ascending.
+ */
+export function aggregateAgentStats(matches, keep = () => true) {
+  const acc = new Map();
+  for (const { year, maps } of matches) {
+    for (const g of maps) {
+      for (const p of g.players) {
+        if (!p.agent || p.agent.startsWith('unknown:') || !keep(p.playerId)) continue;
+        const byYear = acc.get(p.playerId) ?? new Map();
+        acc.set(p.playerId, byYear);
+        const byAgent = byYear.get(year) ?? new Map();
+        byYear.set(year, byAgent);
+        const c = byAgent.get(p.agent) ?? emptyCell();
+        byAgent.set(p.agent, c);
+        const w = g.rounds ?? 0;
+        c.maps++;
+        c.rounds += w;
+        if (p.rating !== null && w > 0) {
+          c.ratingRounds += w;
+          c.ratingSum += p.rating * w;
+        }
+        if (p.acs !== null && w > 0) {
+          c.acsRounds += w;
+          c.acsSum += p.acs * w;
+        }
+        if (p.k !== null && p.d !== null) {
+          c.k += p.k;
+          c.d += p.d;
+          c.kdMaps++;
+        }
+      }
+    }
+  }
+  const round = (x, dp) => Math.round(x * 10 ** dp) / 10 ** dp;
+  const out = {};
+  for (const id of [...acc.keys()].sort((a, b) => a - b)) {
+    const years = {};
+    for (const year of [...acc.get(id).keys()].sort((a, b) => a - b)) {
+      const cells = [...acc.get(id).get(year).entries()].sort((a, b) => b[1].maps - a[1].maps || (a[0] < b[0] ? -1 : 1));
+      years[year] = Object.fromEntries(
+        cells.map(([agent, c]) => [
+          agent,
+          {
+            maps: c.maps,
+            rounds: c.rounds,
+            rating: c.ratingRounds > 0 ? round(c.ratingSum / c.ratingRounds, 2) : null,
+            acs: c.acsRounds > 0 ? round(c.acsSum / c.acsRounds, 1) : null,
+            k: c.kdMaps > 0 ? c.k : null,
+            d: c.kdMaps > 0 ? c.d : null,
+          },
+        ]),
+      );
+    }
+    out[id] = years;
+  }
+  return out;
+}
+
+// ---------------------------------------------------------------------------------------------
 // Slim event (what the game bundles)
 
 /**

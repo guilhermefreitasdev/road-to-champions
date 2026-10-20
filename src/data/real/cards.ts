@@ -6,8 +6,9 @@
  * source does not have counts as the neutral 50th percentile (never a guess), and the card keeps `null` in
  * its `stats`. The formulas are summarized in pt-BR in docs/design.md ("Núcleo de simulação").
  */
-import type { Attributes, AuraTier, Card, CardCareer, Coach, EventTier, MapName, Region, Role, RosterEntry } from '../../engine/types';
+import type { AgentStat, Attributes, AuraTier, Card, CardCareer, Coach, EventTier, MapName, Region, Role, RosterEntry } from '../../engine/types';
 import type { LiquipediaEvent, LiquipediaPlayer, LiquipediaTeam } from './liquipedia';
+import { agentRolesOf } from '../../engine/agents';
 import { buildRegionIndex, teamIdResolver } from './regions';
 
 // ---------------------------------------------------------------------------
@@ -75,6 +76,19 @@ export interface VlrEventData {
   matches: VlrMatch[];
 }
 
+/** One agent of a player-year in vlr/agent-stats.json (scripts/vlr/agents.mjs): sums and round-weighted means. */
+export interface AgentCell {
+  maps: number;
+  rounds: number;
+  rating: number | null;
+  acs: number | null;
+  k: number | null;
+  d: number | null;
+}
+
+/** vlr/agent-stats.json `players`: VLR player id → year (of the event) → agent → cell. */
+export type AgentStatsData = Readonly<Record<string, Readonly<Record<string, Readonly<Record<string, AgentCell>>>>>>;
+
 // ---------------------------------------------------------------------------
 // Tunables (documented in docs/design.md)
 // ---------------------------------------------------------------------------
@@ -111,6 +125,16 @@ export const FLEX_MIN_SHARE = 0.2;
 export const DECISION = { captain: 90, infobox: 80, iglElsewhere: 60, none: 45, swing: 5 } as const;
 
 const ROLES: readonly Role[] = ['duelist', 'initiator', 'controller', 'sentinel'];
+
+/** Agents kept in `Card.agentPool` (the event's own agents are added after these when missing). */
+export const AGENT_POOL_SIZE = 6;
+/**
+ * Window of the agent pool and the role shares: the card's year when it has at least this many maps in the
+ * data, else every year up to and including it (career). Below this the role shares are not read at all.
+ */
+export const AGENT_YEAR_MIN_MAPS = 8;
+/** "Flex nato": a role counts as genuinely played at this share of the window's maps (agent roles from src/data/game). */
+export const FLEX_ROLE_SHARE = 0.3;
 
 /**
  * Aura (docs/design.md "Modelo v3", docs/pesquisa-variancia.md §10.2): tiers from career facts over the
@@ -259,6 +283,119 @@ export function coverRoles(roles: readonly Role[], weights: readonly RoleWeights
   return out;
 }
 
+/** Sum of a player's agent cells over the given years (rating/ACS re-weighted by rounds; k/d summed). */
+function mergeAgentCells(years: readonly Readonly<Record<string, AgentCell>>[]): Map<string, AgentCell> {
+  const acc = new Map<string, { maps: number; rounds: number; rw: number; rs: number; aw: number; as: number; k: number; d: number; kd: boolean }>();
+  for (const cells of years) {
+    for (const [agent, c] of Object.entries(cells)) {
+      const a = acc.get(agent) ?? { maps: 0, rounds: 0, rw: 0, rs: 0, aw: 0, as: 0, k: 0, d: 0, kd: false };
+      a.maps += c.maps;
+      a.rounds += c.rounds;
+      if (c.rating !== null) {
+        a.rw += c.rounds;
+        a.rs += c.rating * c.rounds;
+      }
+      if (c.acs !== null) {
+        a.aw += c.rounds;
+        a.as += c.acs * c.rounds;
+      }
+      if (c.k !== null && c.d !== null) {
+        a.k += c.k;
+        a.d += c.d;
+        a.kd = true;
+      }
+      acc.set(agent, a);
+    }
+  }
+  const out = new Map<string, AgentCell>();
+  for (const [agent, a] of acc) {
+    out.set(agent, {
+      maps: a.maps,
+      rounds: a.rounds,
+      rating: a.rw > 0 ? a.rs / a.rw : null,
+      acs: a.aw > 0 ? a.as / a.aw : null,
+      k: a.kd ? a.k : null,
+      d: a.kd ? a.d : null,
+    });
+  }
+  return out;
+}
+
+/**
+ * A player's agent cells in the card's window: the card's year when it has ≥ AGENT_YEAR_MIN_MAPS maps, else
+ * every year up to and including it. `window` says which one was used ('none' = no map data up to that year).
+ */
+export function agentWindow(
+  stats: AgentStatsData | undefined,
+  playerId: number | string,
+  year: number,
+): { window: 'year' | 'career' | 'none'; cells: Map<string, AgentCell> } {
+  const byYear = stats?.[String(playerId)];
+  if (!byYear) return { window: 'none', cells: new Map() };
+  const same = byYear[String(year)];
+  const sameMaps = same ? Object.values(same).reduce((s, c) => s + c.maps, 0) : 0;
+  if (same && sameMaps >= AGENT_YEAR_MIN_MAPS) return { window: 'year', cells: mergeAgentCells([same]) };
+  const upTo = Object.keys(byYear)
+    .filter((y) => Number(y) <= year)
+    .map((y) => byYear[y]!);
+  const cells = mergeAgentCells(upTo);
+  return { window: cells.size > 0 ? 'career' : 'none', cells };
+}
+
+/**
+ * `Card.agentPool`: the window's agents (agentWindow) we know, by maps desc (ties: the event's order, then name),
+ * top AGENT_POOL_SIZE, then any of the event's own agents (`eventAgents`, VLR's top 3) still missing, with the
+ * window's numbers when it has them and maps 0 / null otherwise. Rating to 0.01, ACS to 1, K/D to 0.01.
+ */
+export function agentPoolFor(
+  cells: ReadonlyMap<string, AgentCell>,
+  eventAgents: readonly string[],
+  agentRoles: Readonly<Record<string, Role>>,
+): AgentStat[] {
+  const toStat = (agent: string): AgentStat => {
+    const c = cells.get(agent);
+    if (!c) return { agent, maps: 0, rating: null, acs: null, kd: null };
+    return {
+      agent,
+      maps: c.maps,
+      rating: c.rating === null ? null : Math.round(c.rating * 100) / 100,
+      acs: c.acs === null ? null : Math.round(c.acs),
+      kd: c.k === null || c.d === null || c.d === 0 ? null : Math.round((c.k / c.d) * 100) / 100,
+    };
+  };
+  const eventIdx = (a: string) => (eventAgents.includes(a) ? eventAgents.indexOf(a) : eventAgents.length);
+  const top = [...cells.keys()]
+    .filter((a) => agentRoles[a] !== undefined)
+    .sort((a, b) => cells.get(b)!.maps - cells.get(a)!.maps || eventIdx(a) - eventIdx(b) || (a < b ? -1 : a > b ? 1 : 0))
+    .slice(0, AGENT_POOL_SIZE);
+  for (const a of eventAgents) if (agentRoles[a] !== undefined && !top.includes(a)) top.push(a);
+  return top.map(toStat);
+}
+
+/**
+ * `Card.flexRoles`: the roles with ≥ FLEX_ROLE_SHARE of the window's maps (agentWindow; needs ≥ AGENT_YEAR_MIN_MAPS
+ * maps), by share. Two or more → [role, ...the others]; otherwise just [role]. `role` (the card's) always comes first.
+ */
+export function flexRolesFor(
+  cells: ReadonlyMap<string, AgentCell>,
+  role: Role,
+  agentRoles: Readonly<Record<string, Role>>,
+): Role[] {
+  const maps: RoleWeights = { duelist: 0, initiator: 0, controller: 0, sentinel: 0 };
+  let total = 0;
+  for (const [agent, c] of cells) {
+    // A dual-role agent (Viper: controller + sentinel) counts its maps for both roles; the total counts them once.
+    const covered = agentRolesOf(agent, agentRoles);
+    if (covered.length === 0) continue;
+    for (const r of covered) maps[r] += c.maps;
+    total += c.maps;
+  }
+  if (total < AGENT_YEAR_MIN_MAPS) return [role];
+  const played = ROLES.filter((r) => maps[r] / total >= FLEX_ROLE_SHARE).sort((a, b) => maps[b] - maps[a] || ROLES.indexOf(a) - ROLES.indexOf(b));
+  if (played.length < 2) return [role];
+  return [role, ...played.filter((r) => r !== role)];
+}
+
 /** Coach's tactic bonus from the team's final placement at the event: 1st 3, 2nd–4th 2, 5th–8th 1, else 0. */
 export function tacticFromPlacement(placement: { min: number } | null): number {
   if (!placement) return 0;
@@ -343,6 +480,8 @@ export function buildRealPool(
   vlrEvents: readonly VlrEventData[],
   liquipedia: readonly LiquipediaEvent[],
   agentRoles: Readonly<Record<string, Role>>,
+  /** Per-map agent stats (vlr/agent-stats.json). Without it every card keeps its event agents with maps 0. */
+  agentStats?: AgentStatsData,
 ): RealPool {
   const events = [...vlrEvents].sort(
     (a, b) => (a.startDate ?? '').localeCompare(b.startDate ?? '') || a.slug.localeCompare(b.slug),
@@ -668,6 +807,11 @@ export function buildRealPool(
       stats: { rounds: n, rating: r.vlr.rating, acs: r.vlr.acs, kast: r.vlr.kast },
     };
     if (igl) card.iglSource = igl;
+
+    // Real agent pool and natural flex, from the per-map scoreboards (nothing when the data has no maps).
+    const { cells } = agentWindow(agentStats, r.vlr.playerId, r.event.year);
+    card.agentPool = agentPoolFor(cells, card.agents, agentRoles);
+    card.flexRoles = flexRolesFor(cells, r.role, agentRoles);
 
     // Aura, anchor and prodigy: facts only (titles, event ratings, debut), never a guess.
     const international = tierGroup(r.event.tier) === 'international';

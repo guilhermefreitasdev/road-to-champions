@@ -46,7 +46,7 @@ Arquivos gerados em `src/data/real/vlr/` (não editar à mão):
   - `matches`: algumas séries (da final para trás, até cobrir o pool, no máximo 12) com placar, mapas, quem escolheu cada mapa e o veto cru (`vetoRaw`, e `veto` só separado por `;`).
 - `slim.json`: o que o jogo empacota. É exatamente o subconjunto que `src/data/real/cards.ts` lê (`VlrEventData`): meta, pool de mapas, times (com `countryName`, colocação e a lista `{ playerId, main }`), só os titulares (`main`) com os stats que viram atributos, e as séries reduzidas a times, mapas (com quem escolheu) e veto. Gerado por `slimEvent()` (`scripts/vlr/parse.mjs`) a partir dos arquivos completos a cada rodada; o teste confere que é idêntico a `slimEvent()` de cada arquivo. Os arquivos completos continuam sendo a fonte da verdade (e são o que os testes de verificação leem); `index.ts` e `regions.ts` importam só o `slim.json`, para o bundle não crescer com reservas, URLs e colunas que o jogo não usa.
 - Showmatches (times de streamers/all-star) ficam de fora: as abas "Showmatch" são ignoradas e as stats usam o filtro `exclude` do próprio VLR quando a fase aparece nelas.
-- Limite conhecido: o VLR mostra só os 3 agentes mais jogados de cada jogador e um "+N"; guardamos os 3 e `agentsHidden: N`, sem adivinhar os outros.
+- Limite conhecido: o VLR mostra só os 3 agentes mais jogados de cada jogador e um "+N"; guardamos os 3 e `agentsHidden: N`, sem adivinhar os outros. O pool completo vem dos placares por mapa (seção "Agentes por mapa" abaixo).
 
 ### Ligas regionais
 
@@ -57,6 +57,17 @@ Arquivos gerados em `src/data/real/vlr/` (não editar à mão):
 - Correção que veio com a regra de colocação: no Masters Tokyo 2023 a tabela da fase de grupos do VLR é por fase, então T1, FUT, ASE e NAVI (9º–12º de fato) ficavam com "5th–6th"/"7th–8th" e seus técnicos com tática 1; agora ficam sem colocação (tática 0). Nenhum outro card internacional mudou.
 - Eventos coletados (id do VLR): 2023 — Americas 1189, EMEA 1190, Pacific 1191. 2024 — Kickoff: Americas 1923, Pacific 1924, EMEA 1925, China 1926; Stage 1: EMEA 1998, Pacific 2002, Americas 2004, China 2006; Stage 2: EMEA 2094, Americas 2095, China 2096, Pacific 2005. 2025 — Kickoff: Americas 2274, China 2275, EMEA 2276, Pacific 2277; Stage 1: Americas 2347, China 2359, Pacific 2379, EMEA 2380; Stage 2: EMEA 2498, China 2499, Pacific 2500, Americas 2501. 2026 — Kickoff: Americas 2682, Pacific 2683, EMEA 2684, China 2685; Stage 1: Pacific 2775, Americas 2860, EMEA 2863, China 2864; Stage 2: Pacific 2776, EMEA 2976, Americas 2977, China 2978.
 
+### Agentes por mapa (`agent-stats.json`)
+
+O VLR só mostra os 3 agentes mais jogados de cada jogador por evento. Para o pool de agentes real de cada card (`Card.agentPool`) e para o "flex nato" (`Card.flexRoles`), lemos o placar **de cada mapa** das páginas de partida (`/{id}/{slug}`, aba padrão), onde aparece o agente que cada jogador usou naquele mapa e os números do mapa.
+
+- `vlr/agent-stats.json` (gerado por `scripts/vlr/agents.mjs`, não editar à mão): `players` → id do jogador no VLR → ano (do evento) → agente → `{maps, rounds, rating, acs, k, d}`. `rating` (Rating 2.0) e `acs` são médias ponderadas pelos rounds do mapa (soma dos dois placares), só sobre os mapas que têm o número; `k` e `d` são somas. Sem o número no VLR → `null`. Agentes em ordem de mapas (desc.), ids e anos em ordem crescente; uma linha por jogador, para o diff ficar legível.
+- Só os titulares (`main`) de algum evento do `slim.json` entram; reservas e times de fora não.
+- Linha sem exatamente um ícone de agente não conta (não adivinhamos o agente). O VLR não publica Rating nos mapas da liga da China de 2024 até o início de 2025 nem no Masters Shanghai 2024: nesses mapas `rating` fica `null` (ACS, K e D existem).
+- Fonte: as séries concluídas (sem showmatch) das listas de partidas dos eventos de `events.json`. Parser puro `parseMatchMapStats` e agregação `aggregateAgentStats` em `parse.mjs`, testados com `scripts/vlr/__fixtures__/match-maps-130685.html` (trecho do placar do Ascent da final do Champions 2022).
+- Cobertura (2026-10-20): 1.159 das 1.968 séries concluídas dos 57 eventos (todas as dos 18 internacionais; nas etapas regionais, pelo menos 1–2 séries por time e mais nos playoffs), 3.016 mapas, 30.158 linhas jogador-mapa (8 sem agente único), 637 jogadores, 6.122 células jogador-ano-agente. O arquivo tem 454 KB (82 KB gzip). Destas séries, 600 foram baixadas para isto em 2026-10-20 (601 pedidos, cerca de 25 min: 259 dos internacionais de 2021–2024 e 341 regionais); as outras 559 já estavam no cache.
+- Pesquisa por trás (docs/pesquisa-variancia.md §9.1): o desempenho jogador × agente medido é quase todo ruído de amostra. Por isso os números por agente aparecem com o tamanho da amostra (`maps`) e o motor só os usa encolhidos pela amostra e limitados (`src/engine/agents.ts`).
+
 ## Como regenerar
 
 ```bash
@@ -65,7 +76,12 @@ npm run data:vlr -- --tier regional  # só as ligas regionais (ou: international
 npm run data:vlr -- --event 1015     # só um evento (id do VLR)
 npm run data:vlr -- --offline        # reconstrói o JSON só a partir do cache, sem rede
 npm run data:vlr -- --refresh        # baixa de novo páginas já em cache
+npm run data:vlr-agents              # agent-stats.json só a partir do cache (sem rede)
+npm run data:vlr-agents -- --plan    # mostra o que --fetch baixaria (sem rede) e gera o JSON
+npm run data:vlr-agents -- --fetch   # baixa páginas de partida que faltam (máx. 600 por rodada, --max-new N) e gera o JSON
 ```
+
+Ordem do `--fetch` de `data:vlr-agents`: primeiro todas as séries dos internacionais que faltam no cache; depois, nas etapas regionais, séries escolhidas para que todo time da etapa tenha pelo menos 1, depois 2, depois 3 séries no cache (cada nível em todas as etapas antes do seguinte, para o teto se espalhar por igual). Usa o mesmo cliente educado (`fetch.mjs`).
 
 O script (`scripts/vlr/`, Node 22, única dependência `cheerio`) tem três partes: `fetch.mjs` (HTTP, cache e limites), `parse.mjs` (parsers puros) e `run.mjs` (descoberta dos eventos em `/events/?tier=60` e montagem do JSON). Toda página baixada fica em `.cache/vlr/<caminho>.html` (fora do git). Uma rodada nova só busca o que falta, e `--offline` gera arquivos idênticos byte a byte. Para um evento novo, basta rodar de novo depois que ele terminar: a listagem fica em cache, então use `--refresh` para enxergar eventos novos (isso baixa tudo de novo e demora). As 39 etapas regionais custaram cerca de 530 requisições (uns 25 min) na primeira vez; com o cache, a rodada completa dos 57 eventos leva menos de 2 min e `--offline` gera os mesmos bytes.
 
@@ -146,6 +162,12 @@ O conteúdo da Liquipedia é [CC-BY-SA 3.0](https://creativecommons.org/licenses
 - Cobertura (ligas): 464 elencos (2.320 cards) em 39 etapas; IGL conhecido em 176 (pela regra do mesmo ano, abaixo); nenhum técnico. OVR mín./p10/mediana/p90/máx. 63/68/76/84/90 (internacionais: 68/72/79/87/94).
 - Testes: `cards.test.ts` (fórmulas com dados sintéticos), `real.test.ts` (os pools reais: 5 cards por elenco, ids únicos entre os dois pools, stats copiados sem alteração, faixa de OVR, funções, IGL e coach batendo com a Liquipedia; ≥ 8 elencos por etapa regional) e `regions.test.ts`. `REAL_REPORT=1 npx vitest run src/data/real/real --silent=false` imprime a distribuição de OVR e os melhores cards com os stats de origem (dos dois pools); o mesmo com `src/data/real/regions` imprime os elencos por região e ano.
 - O jogo mostra os créditos no rodapé: VLR.gg e Liquipedia (CC-BY-SA 3.0), com links.
+- **Pool de agentes (`agentPool`)** e **flex nato (`flexRoles`)**, de `vlr/agent-stats.json` (seção "Agentes por mapa"), em `cards.ts` (`agentWindow`, `agentPoolFor`, `flexRolesFor`):
+  - Janela: o **ano do card** quando o jogador tem pelo menos 8 mapas nele (`AGENT_YEAR_MIN_MAPS`); senão, a carreira até aquele ano (todos os anos ≤ o do card). Nunca um ano posterior. Dentro do ano entram também os mapas de eventos do mesmo ano posteriores ao do card (o dado é por ano).
+  - `agentPool`: os agentes da janela por mapas (desc.), no máximo 6 (`AGENT_POOL_SIZE`), cada um com `maps`, `rating` (0,01), `acs` (inteiro) e `kd` (K/D, 0,01) ou `null` quando o VLR não tem; depois, se faltar algum, os agentes do próprio evento (`card.agents`, o top 3 do VLR) com os números da janela ou `maps: 0` e `null`. Card sem nenhum mapa nos dados fica só com o top 3 do evento, `maps: 0` e stats `null`. Nada é inventado.
+  - `flexRoles`: participação de cada função nos mapas da janela (função do agente em `src/data/game`). Funções com ≥ 25% (`FLEX_ROLE_SHARE`) contam como jogadas de verdade; com duas ou mais, `flexRoles = [função do card, ...as outras por participação]` (flex nato); senão `[função do card]`. Janela com menos de 8 mapas → `[função do card]`. A função do card (`role`) não muda com isso.
+  - Cobertura e contagem (2026-10-20): todo card tem `agentPool` (média de 4,6 agentes nos internacionais, 5,0 nas ligas); só 1 dos 3.570 cards não tem nenhum mapa nos dados (fica com o top 3 do evento). Janela no ano do card em 91–92% dos cards, na carreira no resto. Flex nato: 398 de 1.250 cards internacionais (32%) e 770 de 2.320 de liga (33%); o par mais comum é controlador + sentinela (jogadores de Viper que também jogam Killjoy/Cypher), seguido de controlador + iniciador. Exemplos (função: participação nos mapas da janela): erde (LOUD, Champions 2026) controlador 59% / sentinela 41% de 39 mapas; Demon1 (EG, Champions 2023) duelista 65% / controlador 25% de 52; ShahZaM (Sentinels, Masters Reykjavík 2021) iniciador 67% / duelista 33% de 30; Chronicle (FNATIC, Masters Tokyo 2023) iniciador 57% / controlador 34% de 47; Less (LOUD, Champions 2022) sentinela 62% / controlador 38% de 34.
+  - `agents.test.ts` testa as regras com dados sintéticos, valida o `agent-stats.json` (agentes conhecidos, faixas plausíveis, ordem) e confere todo card (pool com ≥ 1 agente, incluindo os do evento; `flexRoles[0] === role`; proporção de flex numa faixa plausível). `AGENTS_REPORT=1 npx vitest run src/data/real/agents --silent=false` imprime a cobertura, a contagem de flex e exemplos.
 
 ## Elencos das ligas regionais (`REGIONAL_ROSTERS`)
 

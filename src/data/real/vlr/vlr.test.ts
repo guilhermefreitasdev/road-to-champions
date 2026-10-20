@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import {
   agentSlug,
+  aggregateAgentStats,
   classifyEvent,
   classifyEventTitle,
   classifyRegionalTitle,
@@ -8,6 +9,7 @@ import {
   parseAgentsPageMaps,
   parseDateRange,
   parseEventPage,
+  parseMatchMapStats,
   parseMatchPage,
   parsePlacement,
   parseStatsPage,
@@ -20,6 +22,7 @@ import {
 import eventFixture from '../../../../scripts/vlr/__fixtures__/event-1015.html?raw';
 import statsFixture from '../../../../scripts/vlr/__fixtures__/event-stats-1015.html?raw';
 import matchFixture from '../../../../scripts/vlr/__fixtures__/match-130685.html?raw';
+import matchMapsFixture from '../../../../scripts/vlr/__fixtures__/match-maps-130685.html?raw';
 import { AGENTS, MAPS } from '../../game';
 import index from './events.json';
 import slim from './slim.json';
@@ -123,6 +126,70 @@ describe('vlr parsers (fixtures)', () => {
       { id: 8185, name: 'DRX', players: [{ id: 485, handle: 'stax', tag: 'KRX' }, { id: 4462, handle: 'MaKo', tag: 'KRX' }] },
       { id: 8304, name: 'TALON', players: [{ id: 3977, handle: 'Crws', tag: 'TLN' }] },
     ]);
+  });
+
+  it('reads the per-map scoreboards: agent and the map\'s Rating, ACS, K/D/A per player, rounds from the score', () => {
+    const m = parseMatchMapStats(matchMapsFixture, AGENT_BY_SLUG);
+    expect(m.eventId).toBe(1015);
+    expect(m.date).toBe('2022-09-18');
+    expect(m.maps).toHaveLength(1);
+    const ascent = m.maps[0]!;
+    expect(ascent).toMatchObject({ gameId: 95131, map: 'Ascent', rounds: 28 });
+    expect(ascent.players).toEqual([
+      { playerId: 659, handle: 'Sacy', side: 1, agent: 'Sova', rating: 1.83, acs: 313, k: 32, d: 15, a: 14 },
+      { playerId: 683, handle: 'pANcada', side: 1, agent: 'Omen', rating: 1.02, acs: 179, k: 18, d: 19, a: 12 },
+      { playerId: 817, handle: 'FiNESSE', side: 2, agent: 'Killjoy', rating: 1.11, acs: 218, k: 20, d: 20, a: 8 },
+      { playerId: 881, handle: 'yay', side: 2, agent: 'Jett', rating: 1.03, acs: 247, k: 27, d: 23, a: 0 },
+    ]);
+  });
+
+  it('per-map scoreboards: no guesses for odd rows (two icons, unknown slug, missing numbers or score)', () => {
+    const cell = (col: string, v: string) => `<div class="ovw-cell" data-col="${col}"><span class="stats-sq"><span class="side mod-both">${v}</span></span></div>`;
+    const row = (id: number, icons: string[], rating: string) =>
+      `<div class="ovw-row"><div class="ovw-cell mod-player"><a href="/player/${id}/p${id}"><div class="ovw-player-name">p${id}</div></a></div>
+       <div class="ovw-cell mod-agents">${icons.map((i) => `<img src="/img/vlr/game/agents/${i}.png">`).join('')}</div>
+       ${cell('rating2', rating)}${cell('acs', '')}</div>`;
+    const html = `<div class="vm-stats-game" data-game-id="all"><div class="ovw-table">${row(9, ['jett'], '9.99')}</div></div>
+      <div class="vm-stats-game" data-game-id="7"><div class="vm-stats-game-header"><div class="team"><div class="score">13</div></div>
+      <div class="map"><div class="map-name">Lotus</div></div><div class="team"><div class="score"></div></div></div>
+      <div class="ovw-table"><div class="ovw-row mod-head"></div>${row(1, ['jett', 'raze'], '1.10')}${row(2, ['newagent'], '')}</div>
+      <div class="ovw-table">${row(3, [], '0.90')}</div></div>`;
+    const m = parseMatchMapStats(html, AGENT_BY_SLUG);
+    expect(m.eventId).toBeNull();
+    expect(m.maps).toEqual([
+      {
+        gameId: 7,
+        map: 'Lotus',
+        rounds: null,
+        players: [
+          { playerId: 1, handle: 'p1', side: 1, agent: null, rating: 1.1, acs: null, k: null, d: null, a: null },
+          { playerId: 2, handle: 'p2', side: 1, agent: 'unknown:newagent', rating: null, acs: null, k: null, d: null, a: null },
+          { playerId: 3, handle: 'p3', side: 2, agent: null, rating: 0.9, acs: null, k: null, d: null, a: null },
+        ],
+      },
+    ]);
+  });
+
+  it('aggregates maps into playerId → year → agent, rating and ACS weighted by rounds, agents by maps', () => {
+    const p = (playerId: number, agent: string | null, rating: number | null, acs: number | null, k: number | null, d: number | null) =>
+      ({ playerId, handle: `p${playerId}`, side: 1 as const, agent, rating, acs, k, d, a: 0 });
+    const out = aggregateAgentStats(
+      [
+        { year: 2024, maps: [{ gameId: 1, map: 'Bind', rounds: 20, players: [p(5, 'Jett', 1.2, 250, 20, 10), p(6, 'Sova', 1, 200, 15, 15)] }] },
+        { year: 2024, maps: [{ gameId: 2, map: 'Lotus', rounds: 30, players: [p(5, 'Jett', 0.7, 150, 10, 20), p(6, null, 1, 1, 1, 1)] }] },
+        { year: 2024, maps: [{ gameId: 3, map: 'Split', rounds: 24, players: [p(5, 'Raze', null, null, null, null)] }] },
+        { year: 2023, maps: [{ gameId: 4, map: 'Pearl', rounds: 26, players: [p(5, 'unknown:x', 1, 1, 1, 1), p(7, 'Omen', 1, 1, 1, 1)] }] },
+      ],
+      (id) => id !== 7,
+    );
+    expect(Object.keys(out)).toEqual(['5', '6']);
+    expect(out['5']).toEqual({
+      2024: {
+        Jett: { maps: 2, rounds: 50, rating: 0.9, acs: 190, k: 30, d: 30 },
+        Raze: { maps: 1, rounds: 24, rating: null, acs: null, k: null, d: null },
+      },
+    });
+    expect(out['6']).toEqual({ 2024: { Sova: { maps: 1, rounds: 20, rating: 1, acs: 200, k: 15, d: 15 } } });
   });
 
   it('classifies regional league stages (and leaves qualifiers, Challengers and the Evolution Series out)', () => {

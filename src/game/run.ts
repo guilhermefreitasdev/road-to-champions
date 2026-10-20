@@ -194,11 +194,12 @@ export const FIELD_ELITE_SHARE = 0.2;
 /** 3 since strength v2 (was 2): the IGL-only top decile of drafted teams needed one more real contender. */
 export const FIELD_ELITE_CAP = 3;
 /**
- * At least this many elite rosters per field, since the flex natos: natural flexes lifted the best drafted teams by
- * ≈ 1.3 points and their title rate from 47% to ~55% (BT=30); a floor of 2 brought it back to 46% with the median
- * unchanged (71% playoffs, 5% title); 3 gave 40% but a 4% median title (src/game/balance.test.ts).
+ * At least this many elite rosters per field. Natural flexes lift drafted teams (a flex nato fills a slot at 100%);
+ * with the real flex data and Viper counted as controller + sentinel (2026-10-20) a floor of 2 let the median
+ * drafted team reach the playoffs 81% of the time; 3 brings it to 75% (title 5%), top decile 41%, bottom 39%
+ * (BT=30, src/game/balance.test.ts).
  */
-export const FIELD_ELITE_MIN = 2;
+export const FIELD_ELITE_MIN = 3;
 
 const aiStrength = (entry: RosterEntry): number => teamStrength(realLineup(entry)).total;
 const ELITE_FLOOR = (() => {

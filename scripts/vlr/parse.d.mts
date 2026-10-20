@@ -104,5 +104,38 @@ export interface MatchPage {
 }
 export function parseMatchPage(html: string): MatchPage;
 
+export interface MapPlayerStats {
+  playerId: number;
+  handle: string;
+  side: 1 | 2;
+  agent: string | null;
+  rating: number | null;
+  acs: number | null;
+  k: number | null;
+  d: number | null;
+  a: number | null;
+}
+export interface MatchMapStats {
+  eventId: number | null;
+  date: string | null;
+  maps: { gameId: number; map: string | null; rounds: number | null; players: MapPlayerStats[] }[];
+}
+export function parseMatchMapStats(html: string, agentNameBySlug?: Record<string, string>): MatchMapStats;
+
+export interface AgentCell {
+  maps: number;
+  rounds: number;
+  rating: number | null;
+  acs: number | null;
+  k: number | null;
+  d: number | null;
+}
+/** playerId → year → agent → cell. */
+export type AgentStatsByPlayer = Record<string, Record<string, Record<string, AgentCell>>>;
+export function aggregateAgentStats(
+  matches: { year: number; maps: MatchMapStats['maps'] }[],
+  keep?: (playerId: number) => boolean,
+): AgentStatsByPlayer;
+
 /** The subset of a full event file that src/data/real/cards.ts reads (vlr/slim.json). */
 export function slimEvent(event: unknown): unknown;

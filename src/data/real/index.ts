@@ -9,10 +9,11 @@ import { rosterKey, rosterToLineup } from '../../engine/roster';
 import type { Lineup, MapName, Region, Role, RosterEntry } from '../../engine/types';
 import { AGENTS } from '../game';
 import type { MetaTable } from '../../engine/form';
-import { buildRealPool, type VlrEventData } from './cards';
+import { buildRealPool, type AgentStatsData, type VlrEventData } from './cards';
 import { metaForYear } from './meta';
 import { LIQUIPEDIA_EVENTS } from './liquipedia';
 import slimJson from './vlr/slim.json';
+import agentStatsJson from './vlr/agent-stats.json';
 
 export { teamRegion } from './regions';
 
@@ -21,7 +22,10 @@ const EVENTS = slimJson as VlrEventData[];
 
 const AGENT_ROLES: Record<string, Role> = Object.fromEntries(AGENTS.map((a) => [a.name, a.role]));
 
-export const REAL_POOL = buildRealPool(EVENTS, LIQUIPEDIA_EVENTS, AGENT_ROLES);
+/** vlr/agent-stats.json: per-map agent stats of the main players (playerId → year → agent), by scripts/vlr/agents.mjs. */
+export const AGENT_STATS = agentStatsJson.players as unknown as AgentStatsData;
+
+export const REAL_POOL = buildRealPool(EVENTS, LIQUIPEDIA_EVENTS, AGENT_ROLES, AGENT_STATS);
 
 /** Every international roster (team + event) with 5 cards: what the roulette rolls and where opponents come from. */
 export const REAL_ROSTERS: readonly RosterEntry[] = REAL_POOL.rosters;
