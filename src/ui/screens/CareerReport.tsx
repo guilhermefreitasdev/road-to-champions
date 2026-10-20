@@ -93,7 +93,7 @@ export function CareerReport({ c, onAdvance, onOffice, onNewCareer }: Props) {
           </button>
         ) : (
           <button type="button" className="primary big wide" onClick={onAdvance}>
-            Avançar para a próxima temporada <Icon name="chevron" />
+            Próxima temporada <Icon name="chevron" />
           </button>
         )}
         <button type="button" className="secondary wide" onClick={onOffice}>

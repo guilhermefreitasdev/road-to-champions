@@ -230,7 +230,7 @@ export function MarketPanel({ c, act }: PanelProps) {
               text={`Paga ${formatMoney(offer.fee)} agora e ${formatMoney(offer.salary)} por temporada, por ${years} temporada${years === 1 ? '' : 's'}.`}
               confirmLabel={`Contratar ${offer.handle}`}
               onConfirm={() => {
-                if (act((x) => signPlayer(x, offer.playerId, years))) {
+                if (act((x) => signPlayer(x, offer.playerId, years), (next) => `${offer.handle} contratado (${next.players.find((p) => p.id === offer.playerId)?.status === 'starter' ? 'titular' : 'reserva'}), ${years} temporada${years === 1 ? '' : 's'}`)) {
                   setPicked(null);
                   setConfirming(false);
                 }

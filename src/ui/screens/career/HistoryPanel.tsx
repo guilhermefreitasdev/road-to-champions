@@ -2,16 +2,16 @@ import {
   CAREER_STAGES,
   CAREER_STAGE_LABELS,
   LEDGER_LABELS,
-  OFFER_KIND_LABELS,
   careerHistory,
   careerSummary,
-  playerCard,
+  seasonTransfers,
   type Award,
   type CareerState,
   type LedgerKind,
   type SeasonRecord,
+  type TransferRow,
 } from '../../../game/career';
-import { formatDecimal, formatMoney } from '../../../game/explain';
+import { ROLE_LABELS, formatDecimal, formatMoney } from '../../../game/explain';
 import { Icon, YouTag } from '../../components/Icon';
 import { signed } from '../../careerView';
 
@@ -58,13 +58,9 @@ export function HistoryPanel({ c }: { c: CareerState }) {
 
 const KIND_ORDER: LedgerKind[] = ['prize', 'sponsor', 'bonus', 'sale', 'salaries', 'coach', 'fee'];
 
-/** One season's record: path, titles, awards, sponsors, money and reputation, and the signings that stayed. */
+/** One season's record: path, titles, awards, sponsors, money and reputation, and every transfer of the season. */
 export function SeasonRecordCard({ c, record: r, headingLevel = 2 }: { c: CareerState; record: SeasonRecord; headingLevel?: 2 | 3 }) {
   const H = headingLevel === 2 ? 'h2' : 'h3';
-  const signings = c.players
-    .filter((p) => p.joined.year === r.year)
-    .sort((x, y) => y.joined.fee - x.joined.fee)
-    .map((p) => ({ handle: playerCard(p, false).handle, from: p.joined.from, fee: p.joined.fee }));
   return (
     <article className="panel cr-season">
       <header className="cr-season-head">
@@ -135,22 +131,77 @@ export function SeasonRecordCard({ c, record: r, headingLevel = 2 }: { c: Career
               ))}
             </ul>
           )}
-          <h4>Contratações que seguem no elenco</h4>
-          {signings.length === 0 ? (
-            <p className="small muted">Nenhuma.</p>
-          ) : (
-            <ul className="cr-plain small">
-              {signings.map((s) => (
-                <li key={s.handle}>
-                  <strong>{s.handle}</strong> · {s.from === 'academy' ? 'base' : OFFER_KIND_LABELS[s.from].toLowerCase()}
-                  {s.fee > 0 ? ` · ${formatMoney(s.fee)}` : ''}
-                </li>
-              ))}
-            </ul>
-          )}
         </section>
       </div>
+      <Transfers c={c} record={r} />
     </article>
+  );
+}
+
+/** The season's transfer log: arrivals (also those who left again since), academy promotions and departures. */
+function Transfers({ c, record }: { c: CareerState; record: SeasonRecord }) {
+  const t = seasonTransfers(c, record);
+  const inOrg = new Set(c.players.map((p) => p.id));
+  const total = t.in.length + t.promotions.length + t.out.length;
+  if (!t.complete) {
+    return (
+      <section className="cr-transfers">
+        <h4>Contratações que seguem no elenco</h4>
+        <p className="small muted">Temporada salva antes do registro completo de transferências: só aparece quem ainda está na org.</p>
+        <TransferList rows={t.in} inOrg={inOrg} empty="Nenhuma." />
+      </section>
+    );
+  }
+  return (
+    <section className="cr-transfers">
+      <h4>Transferências ({total})</h4>
+      {total === 0 ? (
+        <p className="small muted">Nenhuma movimentação no elenco.</p>
+      ) : (
+        <div className="cr-transfer-groups">
+          <div>
+            <h5>Chegadas ({t.in.length})</h5>
+            <TransferList rows={t.in} inOrg={inOrg} empty="Nenhuma." />
+          </div>
+          {t.promotions.length > 0 && (
+            <div>
+              <h5>Promovidos da base ({t.promotions.length})</h5>
+              <TransferList rows={t.promotions} inOrg={inOrg} empty="Nenhum." />
+            </div>
+          )}
+          <div>
+            <h5>Saídas ({t.out.length})</h5>
+            <TransferList rows={t.out} inOrg={inOrg} empty="Nenhuma." />
+          </div>
+        </div>
+      )}
+    </section>
+  );
+}
+
+function TransferList({ rows, inOrg, empty }: { rows: TransferRow[]; inOrg: ReadonlySet<string>; empty: string }) {
+  if (rows.length === 0) return <p className="small muted">{empty}</p>;
+  return (
+    <ul className="cr-plain small cr-transfer-list">
+      {rows.map((t, i) => {
+        const left = t.direction !== 'out' && !inOrg.has(t.playerId);
+        return (
+          <li key={`${t.move}-${t.playerId}-${i}`}>
+            <span>
+              <strong>{t.handle}</strong> <span className="muted">· {ROLE_LABELS[t.role]} · OVR {t.ovr}</span>
+              {left && <span className="cr-left-tag">já saiu</span>}
+            </span>
+            <span className="muted">
+              {t.moveLabel}
+              {t.from ? ` (${t.from})` : ''}
+              {t.direction === 'out' ? (t.amount > 0 ? ` · +${formatMoney(t.amount)}` : '') : t.amount > 0 ? ` · taxa ${formatMoney(t.amount)}` : ''}
+              {t.contract ? ` · contrato de ${t.contract.years} temp. (${formatMoney(t.contract.salary)}/temp.)` : ''}
+              {t.window === 'midseason' ? ' · janela do meio' : ''}
+            </span>
+          </li>
+        );
+      })}
+    </ul>
   );
 }
 

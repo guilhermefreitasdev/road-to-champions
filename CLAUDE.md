@@ -5,7 +5,7 @@ O jogador monta um dream team com cards de jogadores históricos (card = jogador
 ex.: "aspas @ LOUD, Champions 2022") e disputa um Champions simulado.
 
 Modo secundário "Complete Trials" (região → liga regional → Masters → Champions, campo Atual/Prime): seção "Modo Complete Trials" em `docs/design.md`.
-Modo Carreira (org multi-temporada: contratos, mercado, patrocínios, base, scrims, envelhecimento e aura de carreira): seção "Modo Carreira" em `docs/design.md`; motor e estado prontos em `src/game/career/`, interface pendente.
+Modo Carreira (org multi-temporada: contratos, mercado, patrocínios, base, scrims, envelhecimento e aura de carreira): seção "Modo Carreira" em `docs/design.md`; motor e estado em `src/game/career/`, interface pronta (telas da Carreira em `src/ui/`, ver "Estrutura").
 
 Design completo: `docs/design.md`. Ideias guardadas, que ainda NÃO devem ser implementadas: `docs/ideias-futuras.md`
 (dados em tempo real, aba "Outros modos" estilo Valdle). Modo Diário (4 desafios por dia, iguais para todos): seção "Modo Diário" em `docs/design.md`.

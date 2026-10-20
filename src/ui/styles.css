@@ -571,11 +571,92 @@ button.menu-btn {
   color: var(--text);
 }
 
-.error {
-  background: var(--loss-tint);
-  border: 1px solid var(--accent);
-  border-radius: var(--radius);
-  padding: var(--sp-2) var(--sp-3);
+/* --- Toast: action feedback fixed in the viewport (components/Toast.tsx) --- */
+
+.toast-region {
+  position: fixed;
+  top: calc(var(--sp-3) + env(safe-area-inset-top));
+  left: max(16px, env(safe-area-inset-left));
+  right: max(16px, env(safe-area-inset-right));
+  z-index: 60;
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.toast {
+  pointer-events: auto;
+  display: flex;
+  align-items: flex-start;
+  gap: var(--sp-2);
+  width: min(100%, 520px);
+  padding: var(--sp-3) var(--sp-2) var(--sp-3) var(--sp-3);
+  background: var(--surface-2);
+  border: 1px solid var(--line-strong);
+  border-left-width: 4px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-2);
+  animation: toast-in var(--dur) var(--ease-out);
+}
+
+.toast-error {
+  border-color: var(--accent);
+}
+
+.toast-success {
+  border-color: var(--win);
+}
+
+.toast-icon {
+  flex: none;
+  margin-top: 3px;
+}
+
+.toast-error .toast-icon {
+  color: var(--loss-text);
+}
+
+.toast-success .toast-icon {
+  color: var(--win);
+}
+
+.toast-text {
+  flex: 1;
+  margin: 0;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+button.toast-close {
+  flex: none;
+  display: inline-grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  min-height: 0;
+  margin: -10px 0 -10px 0;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  color: var(--muted);
+}
+
+button.toast-close:hover {
+  color: var(--text);
+  background: var(--surface-3);
+}
+
+@keyframes toast-in {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .toast {
+    animation: none;
+  }
 }
 
 /* --- Controls --- */
@@ -9190,8 +9271,9 @@ button.daily-archive-item.current {
   margin: var(--sp-3) 0 var(--sp-2);
 }
 
+/* Natural width, then grow: a label that does not fit next to another button moves to its own row instead of wrapping. */
 .cr-next-actions button {
-  flex: 1 1 200px;
+  flex: 1 1 auto;
 }
 
 .cr-next-actions button.ghost {
@@ -9464,7 +9546,7 @@ p.cr-warn {
 
 .cr-actions > button,
 .cr-renew > button {
-  flex: 1 1 140px;
+  flex: 1 1 auto;
   min-height: 44px;
   font-size: var(--fs-sm);
 }
@@ -9686,6 +9768,11 @@ button.cr-clear {
 
   .cr-offer-btn {
     grid-column: auto;
+  }
+
+  /* Academy prospects have no price cell: the button takes the price column too, so its label stays on one line. */
+  .cr-offer-btn.cr-prospect-btn {
+    grid-column: span 2;
   }
 }
 
@@ -9958,6 +10045,59 @@ button.cr-scrim-play {
 .cr-season-grid section > ul,
 .cr-season-grid section > p {
   margin: 0 0 var(--sp-3);
+}
+
+.cr-transfers {
+  border-top: 1px solid var(--line);
+  padding-top: var(--sp-3);
+}
+
+.cr-transfers h4,
+.cr-transfers h5 {
+  margin: 0 0 var(--sp-1);
+  color: var(--muted);
+  font-family: var(--font-display);
+  font-size: var(--fs-sm);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.cr-transfers h5 {
+  font-size: var(--fs-xs);
+}
+
+.cr-transfers p {
+  margin: 0 0 var(--sp-2);
+}
+
+.cr-transfer-groups {
+  display: grid;
+  gap: var(--sp-3);
+}
+
+@media (min-width: 760px) {
+  .cr-transfer-groups {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+}
+
+.cr-transfer-list {
+  gap: var(--sp-2);
+}
+
+.cr-transfer-list li {
+  display: flex;
+  flex-direction: column;
+}
+
+.cr-left-tag {
+  margin-left: var(--sp-2);
+  padding: 0 6px;
+  border: 1px dashed var(--inactive);
+  border-radius: var(--radius);
+  color: var(--muted);
+  font-size: var(--fs-xs);
+  white-space: nowrap;
 }
 
 .cr-awards {

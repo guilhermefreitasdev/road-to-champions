@@ -1,8 +1,7 @@
 import type { ReactNode } from 'react';
-import { acceptSponsor, dropSponsor, sponsorSlots, sponsorsView, type SponsorRow } from '../../../game/career';
+import { acceptSponsor, dropSponsor, sponsorSlots, sponsorsView, type ObjectiveProgress, type ObjectiveState, type SponsorRow } from '../../../game/career';
 import { formatMoney } from '../../../game/explain';
 import { Icon } from '../../components/Icon';
-import { sponsorProgress, type ObjectiveState } from '../../careerView';
 import { BlockNote, Empty, type PanelProps } from './shared';
 
 const STATE_ICON: Record<ObjectiveState, 'check' | 'ban' | 'chevron' | 'decider'> = { met: 'check', missed: 'ban', 'on-track': 'chevron', open: 'decider' };
@@ -32,8 +31,8 @@ export function SponsorsPanel({ c, act }: PanelProps) {
         <ul className="cr-list">
           {view.accepted.map((row) => (
             <SponsorItem key={row.offer.id} row={row}>
-              <Progress state={sponsorProgress(c, row.offer.objective)} />
-              <button type="button" className="secondary" disabled={!offseason} aria-describedby={!offseason ? `cr-sp-${row.offer.id}` : undefined} onClick={() => act((x) => dropSponsor(x, row.offer.id))}>
+              {row.progress && <Progress state={row.progress} />}
+              <button type="button" className="secondary" disabled={!offseason} aria-describedby={!offseason ? `cr-sp-${row.offer.id}` : undefined} onClick={() => act((x) => dropSponsor(x, row.offer.id), `Contrato com ${row.offer.name} desfeito`)}>
                 Desistir
               </button>
               {!offseason && <BlockNote id={`cr-sp-${row.offer.id}`}>Contrato fechado até o fim da temporada</BlockNote>}
@@ -53,7 +52,7 @@ export function SponsorsPanel({ c, act }: PanelProps) {
             const id = `cr-spo-${row.offer.id}`;
             return (
               <SponsorItem key={row.offer.id} row={row}>
-                <button type="button" className="primary" disabled={full} aria-describedby={full ? id : undefined} onClick={() => act((x) => acceptSponsor(x, row.offer.id))}>
+                <button type="button" className="primary" disabled={full} aria-describedby={full ? id : undefined} onClick={() => act((x) => acceptSponsor(x, row.offer.id), `${row.offer.name} fechado: ${formatMoney(row.offer.base)} quando a liga começar`)}>
                   Aceitar
                 </button>
                 {full && <BlockNote id={id}>Sem vaga: {view.slots} patrocinador{view.slots === 1 ? '' : 'es'} com a sua reputação</BlockNote>}
@@ -89,7 +88,7 @@ function SponsorItem({ row, children }: { row: SponsorRow; children: ReactNode }
   );
 }
 
-function Progress({ state }: { state: ReturnType<typeof sponsorProgress> }) {
+function Progress({ state }: { state: ObjectiveProgress }) {
   return (
     <span className={`cr-objective obj-${state.state} small`}>
       <Icon name={STATE_ICON[state.state]} /> {state.text}

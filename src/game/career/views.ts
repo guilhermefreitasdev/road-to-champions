@@ -28,8 +28,12 @@ import {
   CAREER_PHASE_TEXT,
   CAREER_STAGES,
   CAREER_STAGE_LABELS,
+  LEAGUE_QUALIFY,
   LEDGER_LABELS,
   OFFER_KIND_LABELS,
+  TRANSFER_MOVES_IN,
+  TRANSFER_MOVES_OUT,
+  TRANSFER_MOVE_LABELS,
   autoLineup,
   baseUserLineup,
   careerPlayerValue,
@@ -43,6 +47,7 @@ import {
   lineupOf,
   moraleShift,
   nameOf,
+  objectiveStanding,
   offerTerms,
   payroll,
   playerCard,
@@ -78,6 +83,8 @@ import {
   type ScrimRecord,
   type SeasonRecord,
   type SponsorOffer,
+  type TransferMove,
+  type TransferRecord,
 } from './career';
 import {
   CAREER_PHASE_LABELS,
@@ -421,10 +428,63 @@ export function careerCoach(c: CareerState): { coach: Coach; salary: number } | 
   return coach && c.coach ? { coach, salary: c.coach.salary } : null;
 }
 
+export type ObjectiveState = 'met' | 'missed' | 'on-track' | 'open';
+
+export interface ObjectiveProgress {
+  /** 'met' / 'missed' are final and always what the season report settles; 'on-track' / 'open' can still change. */
+  state: ObjectiveState;
+  text: string;
+}
+
+/**
+ * How a sponsor objective stands now, in words. Built on objectiveStanding (career.ts), the very function the season
+ * report settles the bonuses with: a 'met' or 'missed' here is never contradicted by the report, and at the report
+ * every objective is one of the two.
+ */
+export function sponsorProgress(c: CareerState, objective: SponsorObjective): ObjectiveProgress {
+  const ranking = seasonRanking(c);
+  const standing = objectiveStanding(c, objective, ranking);
+  const league = careerStageOutcome(c, 'league');
+  switch (objective) {
+    case 'league-top6':
+    case 'league-top4': {
+      const place = league.place?.label ?? '';
+      if (standing === 'met') return { state: 'met', text: `Cumprido: liga ${place}` };
+      if (standing === 'missed') return { state: 'missed', text: league.place ? `Não cumprido: liga ${place}` : 'Não cumprido: sem colocação na liga' };
+      return league.status === 'playing' ? { state: 'open', text: `Liga em andamento (${league.wins}-${league.losses})` } : { state: 'open', text: 'Começa com a liga' };
+    }
+    case 'masters':
+    case 'champions': {
+      const label = CAREER_STAGE_LABELS[objective];
+      if (standing === 'met') return { state: 'met', text: `Cumprido: no ${label}` };
+      if (standing === 'missed') return { state: 'missed', text: `Não cumprido: fora do ${label}` };
+      if (league.place) return { state: 'on-track', text: `Classificado pela liga (${league.place.label})` };
+      return { state: 'open', text: `Top ${LEAGUE_QUALIFY[objective]} da liga classifica` };
+    }
+    case 'title': {
+      if (standing === 'met') {
+        const won = CAREER_STAGES.filter((s) => careerStageOutcome(c, s).place?.rank === 1);
+        return { state: 'met', text: `Cumprido: ${won.map((s) => CAREER_STAGE_LABELS[s]).join(', ')}` };
+      }
+      return standing === 'missed' ? { state: 'missed', text: 'Não cumprido: nenhum título' } : { state: 'open', text: 'Nenhum título ainda' };
+    }
+    case 'top5-rating': {
+      const i = ranking.findIndex((r) => r.isUser);
+      const best = i >= 0 && i < 5 ? ranking[i]! : null;
+      if (standing === 'met') return { state: 'met', text: best ? `Cumprido: ${best.handle} ${i + 1}º` : 'Cumprido' };
+      if (standing === 'missed') return { state: 'missed', text: 'Não cumprido: ninguém no top 5' };
+      if (best) return { state: 'on-track', text: `Hoje: ${best.handle} é o ${i + 1}º do ranking` };
+      return { state: 'open', text: ranking.length > 0 ? 'Ninguém seu no top 5 ainda' : 'Ranking com 8+ mapas por jogador' };
+    }
+  }
+}
+
 export interface SponsorRow {
   offer: SponsorOffer;
   objectiveLabel: string;
   accepted: boolean;
+  /** Accepted sponsors: how the objective stands now (sponsorProgress). */
+  progress?: ObjectiveProgress;
 }
 
 export interface SponsorsView {
@@ -437,7 +497,7 @@ export function sponsorsView(c: CareerState): SponsorsView {
   const label = (o: SponsorOffer): SponsorRow => ({ offer: o, objectiveLabel: SPONSOR_OBJECTIVE_LABELS[o.objective], accepted: c.sponsors.some((s) => s.id === o.id) });
   return {
     slots: sponsorSlots(c.reputation),
-    accepted: c.sponsors.map(label),
+    accepted: c.sponsors.map((o) => ({ ...label(o), progress: sponsorProgress(c, o.objective) })),
     offers: c.phase === 'offseason' ? (c.window?.sponsorOffers ?? []).map(label) : [],
   };
 }
@@ -702,6 +762,49 @@ export function seasonReport(c: CareerState): SeasonRecord | null {
 
 export function careerHistory(c: CareerState): SeasonRecord[] {
   return c.history;
+}
+
+export interface TransferRow extends TransferRecord {
+  /** 'in' = joined the org (signing or academy prospect), 'promotion' = academy → main roster, 'out' = left. */
+  direction: 'in' | 'promotion' | 'out';
+  moveLabel: string;
+}
+
+export interface SeasonTransfers {
+  /** false for a record from a save made before the transfer log existed (only the players still in the org are known). */
+  complete: boolean;
+  in: TransferRow[];
+  promotions: TransferRow[];
+  out: TransferRow[];
+}
+
+const transferRow = (t: TransferRecord): TransferRow => ({
+  ...t,
+  direction: TRANSFER_MOVES_IN.includes(t.move) ? 'in' : TRANSFER_MOVES_OUT.includes(t.move) ? 'out' : 'promotion',
+  moveLabel: TRANSFER_MOVE_LABELS[t.move],
+});
+
+/**
+ * The transfers of a season: the record's log (every signing, also of players released or sold since, the academy and
+ * every departure). Old records without the log fall back to the players still in the org who joined that year.
+ * With no record, the current season's log so far.
+ */
+export function seasonTransfers(c: CareerState, record?: SeasonRecord): SeasonTransfers {
+  const log = record ? record.transfers : c.transfers;
+  if (log) {
+    const rows = log.map(transferRow);
+    return { complete: true, in: rows.filter((r) => r.direction === 'in'), promotions: rows.filter((r) => r.direction === 'promotion'), out: rows.filter((r) => r.direction === 'out') };
+  }
+  const year = record?.year ?? c.year;
+  const stayed = c.players
+    .filter((p) => p.joined.year === year)
+    .sort((x, y) => y.joined.fee - x.joined.fee)
+    .map((p): TransferRow => {
+      const card = cardById(p.cardId);
+      const move: TransferMove = p.joined.from === 'academy' ? 'prospect' : p.joined.from;
+      return transferRow({ move, playerId: p.id, cardId: p.cardId, handle: card.handle, role: card.role, ovr: p.ovr, amount: p.joined.fee, window: 'offseason' });
+    });
+  return { complete: false, in: stayed, promotions: [], out: [] };
 }
 
 export interface CareerSummary {

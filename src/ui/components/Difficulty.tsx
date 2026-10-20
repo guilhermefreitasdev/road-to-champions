@@ -1,4 +1,4 @@
-import { DIFFICULTIES, DIFFICULTY_LABELS, type Difficulty } from '../../game/difficulty';
+import { DIFFICULTIES, DIFFICULTY_LABELS, difficultyBlurb, type Difficulty, type DifficultyMode } from '../../game/difficulty';
 import { difficultyLevel } from '../difficulty';
 import { Icon } from './Icon';
 
@@ -28,20 +28,22 @@ export function DifficultyBadge({ difficulty, className }: { difficulty: Difficu
 }
 
 /**
- * The difficulty of the next game, for every mode: four radio tiles (name, pips, blurb). Arrow keys move between
- * them (native radio group).
+ * The difficulty of the next game, for every mode: four radio tiles (name, pips, blurb). The blurb says what the level
+ * changes in that mode (`mode`: the run and the Complete Trials, or the career). Arrow keys move between them (native
+ * radio group).
  */
-export function DifficultyPicker({ value, onChange }: { value: Difficulty; onChange: (d: Difficulty) => void }) {
+export function DifficultyPicker({ value, onChange, mode = 'run' }: { value: Difficulty; onChange: (d: Difficulty) => void; mode?: DifficultyMode }) {
   return (
     <fieldset className="diff-picker">
       <legend className="section-label">Dificuldade</legend>
       <div className="diff-tiles">
         {DIFFICULTIES.map((d) => {
-          const { name, blurb } = DIFFICULTY_LABELS[d];
+          const { name } = DIFFICULTY_LABELS[d];
+          const blurb = difficultyBlurb(d, mode);
           const on = value === d;
           return (
             <label key={d} className={`diff-tile diff-${d}${on ? ' is-on' : ''}`}>
-              <input type="radio" name="difficulty" value={d} checked={on} onChange={() => onChange(d)} aria-describedby={`diff-${d}-blurb`} />
+              <input type="radio" name={`difficulty-${mode}`} value={d} checked={on} onChange={() => onChange(d)} aria-describedby={`diff-${mode}-${d}-blurb`} />
               <span className="diff-tile-head">
                 <span className="diff-name">
                   {on && <Icon name="check" className="diff-check" />}
@@ -49,7 +51,7 @@ export function DifficultyPicker({ value, onChange }: { value: Difficulty; onCha
                 </span>
                 <Pips level={difficultyLevel(d)} />
               </span>
-              <span id={`diff-${d}-blurb`} className="diff-blurb">
+              <span id={`diff-${mode}-${d}-blurb`} className="diff-blurb">
                 {blurb}
               </span>
             </label>

@@ -291,7 +291,7 @@ function NextStep({ c, act, onVeto, onAutoMatch, onSimulate, onReport, onTab }: 
     const w = c.window;
     const start = () => {
       setConfirm(null);
-      act(startStage);
+      act(startStage, off ? 'A liga começou: folha paga e patrocínio fixo no caixa' : 'Janela fechada');
     };
     return (
       <section className="panel cr-next" aria-labelledby="cr-next-title">
@@ -328,7 +328,7 @@ function NextStep({ c, act, onVeto, onAutoMatch, onSimulate, onReport, onTab }: 
             confirmLabel="Usar o automático"
             onConfirm={() => {
               setConfirm(null);
-              act((x) => (off ? autoOffseason(x) : autoMidseason(x)));
+              act((x) => (off ? autoOffseason(x) : autoMidseason(x)), off ? 'Pré-temporada montada pelo automático: confira o elenco' : 'Janela feita pelo automático');
             }}
             onCancel={() => setConfirm(null)}
           />

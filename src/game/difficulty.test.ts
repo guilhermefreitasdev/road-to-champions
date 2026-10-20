@@ -8,8 +8,11 @@ import {
   DIFFICULTY_LABELS,
   DIFFICULTY_SETTINGS,
   aiAdjust,
+  difficultyBlurb,
   scoutingLevel,
 } from './difficulty';
+import { CAREER_DIFFICULTY } from './career/constants';
+import { formatMoney } from './explain';
 import {
   USER_ID,
   applyUserVeto,
@@ -50,6 +53,20 @@ describe('difficulty settings', () => {
     expect(DIFFICULTIES.map((d) => DIFFICULTY_LABELS[d].name)).toEqual(['Fácil', 'Normal', 'Difícil', 'Lendário']);
     for (const d of DIFFICULTIES) expect(DIFFICULTY_LABELS[d].blurb).toMatch(/reroll/);
     expect(DEFAULT_DIFFICULTY).toBe('normal');
+  });
+
+  it('describes the career with its own levers, never the run ones', () => {
+    for (const d of DIFFICULTIES) {
+      const text = difficultyBlurb(d, 'career');
+      expect(difficultyBlurb(d)).toBe(DIFFICULTY_LABELS[d].blurb);
+      expect(text).not.toMatch(/reroll|favorito|Champions/i);
+      expect(text).toContain(formatMoney(CAREER_DIFFICULTY[d].money));
+      expect(text).toContain(`reputação ${CAREER_DIFFICULTY[d].reputation}`);
+      expect(text).toMatch(/scrims/);
+    }
+    // A player asks (OVR − 83) × 5 reputation: Normal starts at 20 → up to OVR 87.
+    expect(difficultyBlurb('normal', 'career')).toContain('até OVR 87');
+    expect(difficultyBlurb('legend', 'career')).toContain('até OVR 83');
   });
 
   it('gets harder on every lever, level by level', () => {
