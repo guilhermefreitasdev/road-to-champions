@@ -1,8 +1,7 @@
 /**
  * Daily puzzles of the Valdle games: one per game and day (São Paulo calendar), the same for everyone, planned in
  * order from the launch so a day can look back at the days before it and not repeat a recent answer. Every draw
- * comes from createRng (`valdle:<game>:<date>`), never Math.random. The free mode ("Modo livre") uses the same
- * makers with a seed chosen by the UI and no look-back.
+ * comes from createRng (`valdle:<game>:<date>`), never Math.random. Daily only: there is no free mode.
  */
 import { createRng, type Rng } from '../../engine/rng';
 import { addDays, dayIndex, weekdayIndex } from '../daily/calendar';
@@ -10,9 +9,9 @@ import { VALDLE_LAUNCH, valdleNumber, type ValdleGameId } from './games';
 
 export interface MakeContext {
   rng: Rng;
-  /** Monday 0 … Sunday 6 (daily: the difficulty curve; free mode: a seeded level). */
+  /** Monday 0 … Sunday 6 (the difficulty curve of the week). */
   level: number;
-  /** Keys (answers, teams…) used by this game within the last `days` days (always empty in the free mode). */
+  /** Keys (answers, teams…) used by this game within the last `days` days. */
   recent: (days: number) => ReadonlySet<string>;
 }
 
@@ -24,10 +23,9 @@ export interface Planned<P> {
 
 export interface PuzzleMeta {
   game: ValdleGameId;
-  mode: 'daily' | 'free';
-  /** Daily: the date (YYYY-MM-DD); free: the seed. */
+  /** The date (YYYY-MM-DD). */
   id: string;
-  /** Daily: #N since the launch; free: 0. */
+  /** #N since the launch. */
   number: number;
 }
 
@@ -35,7 +33,6 @@ export type Maker<P> = (ctx: MakeContext) => Planned<P>;
 
 export interface Planner<P> {
   daily(date: string): P & PuzzleMeta;
-  free(seed: string): P & PuzzleMeta;
 }
 
 export function createPlanner<P>(game: ValdleGameId, make: Maker<P>): Planner<P> {
@@ -60,13 +57,7 @@ export function createPlanner<P>(game: ValdleGameId, make: Maker<P>): Planner<P>
         const d = addDays(VALDLE_LAUNCH, days.length);
         days.push(make({ rng: createRng(`valdle:${game}:${d}`), level: weekdayIndex(d), recent: recentAt(days.length) }));
       }
-      return { ...days[i]!.puzzle, game, mode: 'daily', id: date, number: valdleNumber(date) };
-    },
-    free(seed) {
-      const rng = createRng(`valdle:free:${game}:${seed}`);
-      const level = rng.int(0, 6);
-      const empty: ReadonlySet<string> = new Set();
-      return { ...make({ rng, level, recent: () => empty }).puzzle, game, mode: 'free', id: seed, number: 0 };
+      return { ...days[i]!.puzzle, game, id: date, number: valdleNumber(date) };
     },
   };
 }

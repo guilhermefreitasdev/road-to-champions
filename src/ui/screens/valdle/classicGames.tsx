@@ -1,29 +1,30 @@
-import { useEffect, useMemo, useState, type KeyboardEvent, type ReactNode } from 'react';
+import { useEffect, useLayoutEffect, useMemo, useRef, useState, type ReactNode } from 'react';
 import { ROLE_LABELS } from '../../../game/explain';
 import {
+  ABILITY_TILES,
   AGENT_COLUMNS,
   CONTINENT_LABELS,
   PENETRATION_LABELS,
   SLOT_KEYS,
   WEAPON_CATEGORY_LABELS,
   WEAPON_COLUMNS,
+  abilityTiles,
   calloutLabel,
   calloutLabelEn,
   type ClassicAgent,
-  type ClassicCallout,
   type ClassicData,
-  type ClassicMap,
   type ClassicWeapon,
 } from '../../../game/valdle/classic';
 import { compareAll } from '../../../game/valdle/feedback';
 import { VALDLE_GAMES } from '../../../game/valdle/games';
+import { spreadLabels, type Pt } from '../../../game/valdle/geometry';
+import { mapaView, type MapaView } from '../../../game/valdle/mapaView';
 import {
   MAPA_SPOT_TRIES,
   answerBonus,
   giveUp,
   guess,
   guessSpot,
-  mapaStepOneDone,
   mapaSummary,
   misses,
   resultOf,
@@ -31,12 +32,13 @@ import {
   type ValdlePuzzle,
 } from '../../../game/valdle/play';
 import { loadPlaceImage, placeImageNow } from '../../../data/placeImages';
-import { AgentIcon, mapLabel } from '../../components/GameImage';
+import { AgentIcon } from '../../components/GameImage';
 import { countryName } from '../../components/CountryChip';
 import { Icon } from '../../components/Icon';
+import { loadChipLang, saveChipLang, type ChipLang } from '../../valdleStorage';
 import { AttrCell, AttrRow, GiveUp, MarkLegend, MissList, OptionSearch, TryCounter, type Option } from './parts';
 import { CalloutBoard } from './CalloutBoard';
-import { useGameMedia } from './media';
+import { useGameMedia, useMinimap } from './media';
 
 export interface GameProps<G extends 'agente' | 'habilidade' | 'mapa' | 'callout' | 'arma'> {
   puzzle: ValdlePuzzle<G>;
@@ -164,8 +166,6 @@ export function Reveal({ won, kicker, children }: { won: boolean; kicker: string
 
 // --- Habilidade ------------------------------------------------------------------------------------------------------
 
-const BLUR = [16, 11, 7, 4, 2, 1];
-
 function maskNames(text: string, names: readonly string[]): string {
   let out = text;
   for (const n of names.flatMap((x) => x.split(/\s*\/\s*/)).filter((x) => x.length > 2)) {
@@ -185,9 +185,7 @@ export function HabilidadeGame(props: GameProps<'habilidade'>) {
   const miss = misses(puzzle, progress);
   const max = VALDLE_GAMES.habilidade.maxTries;
   const result = resultOf(puzzle, progress);
-  const step = done ? BLUR.length : Math.min(miss, BLUR.length - 1);
-  const blur = done ? 0 : BLUR[step]!;
-  const rotation = done || miss >= 3 ? 0 : puzzle.rotation;
+  const open = abilityTiles(puzzle, miss, done);
   const clues = [
     { at: 1, title: 'Função do agente', body: ROLE_LABELS[agent.role] },
     { at: 2, title: 'Descrição', body: maskNames(ability.description, [ability.name, ability.nameEn, agent.name, agent.id]) },
@@ -196,21 +194,28 @@ export function HabilidadeGame(props: GameProps<'habilidade'>) {
   const shownFrom = imgFailed ? 1 : 0; // without the image, the first clue opens at once
   return (
     <div className="vd-game">
-      <p className="daily-rule">De qual agente é esta habilidade? A imagem fica mais nítida e as pistas abrem a cada erro. No fim, um bônus: qual habilidade é.</p>
-      <div className="vd-ability-stage" aria-label={done ? `Ícone de ${ability.name}` : 'Ícone da habilidade (borrado)'} role="img">
-        {icon.src ? (
-          <img
-            src={icon.src}
-            alt=""
-            width={128}
-            height={128}
-            decoding="async"
-            style={{ filter: `blur(${blur}px)`, transform: `rotate(${rotation}deg)` }}
-            onError={icon.onError}
-          />
-        ) : imgFailed ? (
+      <p className="daily-rule">
+        De qual agente é esta habilidade? O ícone está coberto por quadrados: um começa aberto e cada erro abre mais. As pistas também abrem a cada erro. No
+        fim, um bônus: qual habilidade é.
+      </p>
+      {/* No name until the end: the label says only how many tiles are open. */}
+      <div
+        className="vd-ability-stage"
+        role="img"
+        aria-label={done ? `Ícone de ${ability.name}, de ${agent.name}` : `Ícone da habilidade, ${open.size} de ${ABILITY_TILES} quadrados abertos`}
+      >
+        {imgFailed ? (
           <span className="vd-ability-missing small muted">Imagem indisponível agora: jogue pelas pistas.</span>
-        ) : null}
+        ) : (
+          <span className="vd-ability-box">
+            {icon.src && <img src={icon.src} alt="" width={128} height={128} decoding="async" onError={icon.onError} />}
+            <span className="vd-tiles" aria-hidden="true">
+              {Array.from({ length: ABILITY_TILES }, (_, i) => (
+                <span key={i} className={`vd-tile${open.has(i) ? ' open' : ''}`} />
+              ))}
+            </span>
+          </span>
+        )}
       </div>
       <ol className="daily-clues vd-clues">
         {clues.map((c) => {
@@ -292,14 +297,6 @@ export function HabilidadeGame(props: GameProps<'habilidade'>) {
 
 // --- Mapa ------------------------------------------------------------------------------------------------------------
 
-const ZOOM = [3.6, 2.8, 2.1, 1.6, 1.25];
-
-function mapOptions(data: ClassicData): Option[] {
-  return data.places.length
-    ? [...new Set(data.places.map((p) => p.map))].map((id) => data.mapById.get(id)!).map((m) => ({ id: m.id, label: m.name, aliases: [m.id] }))
-    : data.maps.map((m) => ({ id: m.id, label: m.name, aliases: [m.id] }));
-}
-
 /** The screenshot's URL: at once from public/, or after the lazy chunk of a VITE_INLINE_PLACES build. */
 function usePlaceImage(file: string): { src: string | null; failed: boolean; onError: () => void } {
   const [loaded, setLoaded] = useState<{ file: string; src: string } | null>(null);
@@ -316,86 +313,103 @@ function usePlaceImage(file: string): { src: string | null; failed: boolean; onE
   return { src: now ?? (loaded?.file === file ? loaded.src : null), failed: failed === file, onError: () => setFailed(file) };
 }
 
-/** Mid-range of the distance feedback of "Onde é?" (minimap fractions), as in the Callout game. */
-const NEAR = 0.18;
-
+/**
+ * Mapa: step 1 ("Que mapa é?") shows the screenshot zoomed in on a point and one button per map with screenshots; a
+ * wrong map turns red and the image backs away. Step 2 ("Onde é?") puts the screenshot behind the real minimap, with a
+ * name chip on every callout: the player clicks the place's chip. Everything shown comes from mapaView (mapaView.ts),
+ * which keeps the map out of the screen until step 1 is over and the place's name until the end.
+ */
 export function MapaGame(props: GameProps<'mapa'>) {
-  const { puzzle, progress, done, data } = props;
-  const { note, play } = useGuess(props);
-  const options = useMemo(() => mapOptions(data), [data]);
-  const miss = misses(puzzle, progress);
-  const max = VALDLE_GAMES.mapa.maxTries;
-  const stepOne = mapaStepOneDone(puzzle, progress);
-  const zoom = stepOne ? 1 : ZOOM[Math.min(miss, ZOOM.length - 1)]!;
-  const place = data.placeById.get(`${puzzle.map}:${puzzle.place}`);
-  const map = data.mapById.get(puzzle.map)!;
-  const answer = map.callouts.find((c) => c.id === puzzle.place);
-  const image = usePlaceImage(place?.file ?? '');
+  const { puzzle, progress, data } = props;
+  const view = mapaView(data, puzzle, progress);
+  const image = usePlaceImage(view.image.file ?? '');
   const result = resultOf(puzzle, progress);
-  const mapWon = progress.guesses.includes(puzzle.map);
-  // Names only as each step ends: the map after step 1, the callout (and the wiki file page) at the very end.
-  const alt = done && answer ? `${calloutLabel(answer)}, em ${map.name}` : stepOne ? `Lugar de ${map.name}` : 'Lugar de um mapa';
+  const map = view.map;
+  const pickMap = (id: string) => {
+    const r = guess(puzzle, progress, id);
+    if (r.outcome === 'hit' || r.outcome === 'miss') props.onMove(() => r.progress);
+  };
   return (
     <div className="vd-game">
       <p className="daily-rule">
-        Que mapa é este? A imagem começa bem ampliada e se afasta a cada erro. Depois, no <strong>Onde é?</strong>, marque no minimapa o lugar que ela
-        mostra.
+        Que mapa é este? A imagem começa bem ampliada e se afasta a cada erro. Depois, no <strong>Onde é?</strong>, toque no nome do lugar que ela
+        mostra, por cima do minimapa.
       </p>
-      {stepOne && <MissList items={progress.guesses.map((id) => ({ id, label: mapLabel(id), hit: id === puzzle.map }))} />}
-      {stepOne && !done && (
-        <p className={`daily-feedback ${mapWon ? 'hit' : 'miss'}`} role="status">
-          <Icon name={mapWon ? 'check' : 'close'} /> {mapWon ? `Acertou: é ${map.name}.` : `O mapa era ${map.name}.`} Agora, onde é?
-        </p>
-      )}
-      <div className={`vd-mapa-board${stepOne ? ' two' : ''}`}>
-        <div className="vd-map-stage">
-          {image.src && !image.failed ? (
-            <img
-              src={image.src}
-              alt={alt}
-              width={960}
-              height={540}
-              decoding="async"
-              style={{
-                transform: `scale(${zoom})`,
-                transformOrigin: `${puzzle.focus.x * 100}% ${puzzle.focus.y * 100}%`,
-                filter: !stepOne && miss === 0 ? 'grayscale(1)' : undefined,
-              }}
-              onError={image.onError}
-            />
-          ) : (
-            <span className="vd-map-missing small muted">{image.failed ? 'Imagem indisponível agora.' : 'Carregando a imagem…'}</span>
-          )}
-          {!stepOne && <span className="vd-zoom-tag">{pt(zoom, 1)}x</span>}
-        </div>
-        {stepOne && answer && <WherePicker key={puzzle.id} map={map} answer={answer} progress={progress} done={done} onMove={props.onMove} puzzle={puzzle} />}
-      </div>
-      {!stepOne && (
+      {view.step === 'map' ? (
         <>
-          <MissList items={progress.guesses.map((id) => ({ id, label: mapLabel(id), hit: id === puzzle.map }))} />
-          <TryCounter used={progress.guesses.length} max={max} />
-          <OptionSearch options={options} exclude={new Set(progress.guesses)} onPick={(o) => play(o.id, o.label)} label="Qual é o mapa?" placeholder="Digite um mapa" showAllOnFocus />
-          <Note text={note} />
-          <GiveUp onGiveUp={() => props.onMove(giveUp)} />
+          <div className="vd-map-stage">
+            {image.src && !image.failed ? (
+              <img
+                src={image.src}
+                alt={view.image.alt}
+                width={960}
+                height={540}
+                decoding="async"
+                style={{
+                  transform: `scale(${view.image.zoom})`,
+                  transformOrigin: `${view.image.focus.x * 100}% ${view.image.focus.y * 100}%`,
+                  filter: view.image.grayscale ? 'grayscale(1)' : undefined,
+                }}
+                onError={image.onError}
+              />
+            ) : (
+              <span className="vd-map-missing small muted">{image.failed ? 'Imagem indisponível agora.' : 'Carregando a imagem…'}</span>
+            )}
+            <span className="vd-zoom-tag">{pt(view.image.zoom, 1)}x</span>
+          </div>
+          <section className="vd-map-pick" aria-labelledby="vd-map-pick-title">
+            <h3 id="vd-map-pick-title" className="vd-where-title">
+              <Icon name="globe" /> Que mapa é?
+            </h3>
+            <TryCounter used={view.mapTries.used} max={view.mapTries.max} />
+            <div className="vd-map-buttons">
+              {view.choices.map((c) => (
+                <button
+                  key={c.id}
+                  type="button"
+                  className={`vd-map-btn${c.state === 'miss' ? ' miss' : ''}`}
+                  disabled={c.state !== 'open'}
+                  aria-label={c.state === 'miss' ? `${c.name}: errado` : c.name}
+                  onClick={() => pickMap(c.id)}
+                >
+                  {c.state === 'miss' && <Icon name="close" />}
+                  {c.name}
+                </button>
+              ))}
+            </div>
+            <GiveUp onGiveUp={() => props.onMove(giveUp)} />
+          </section>
         </>
+      ) : (
+        map && (
+          <>
+            <MissList items={view.mapGuesses.map((g) => ({ id: g.id, label: g.name, hit: g.hit }))} />
+            {view.step === 'where' && (
+              <p className={`daily-feedback ${map.won ? 'hit' : 'miss'}`} role="status">
+                <Icon name={map.won ? 'check' : 'close'} /> {map.won ? `Acertou: é ${map.name}.` : `O mapa era ${map.name}.`} Agora, onde é?
+              </p>
+            )}
+            <WhereStage key={puzzle.id} view={view} image={image} alt={view.image.alt} puzzle={puzzle} progress={progress} onMove={props.onMove} />
+          </>
+        )
       )}
-      {done && answer && (
+      {view.answer && map && (
         <Reveal won={result.won && (result.place ?? 0) > 0} kicker={result.won ? 'Faltou o lugar: era' : 'O lugar era'}>
           <span>
-            <span className="daily-reveal-name">{calloutLabel(answer)}</span>
+            <span className="daily-reveal-name">{view.answer.pt}</span>
             <span className="small muted">
-              Em inglês: {calloutLabelEn(answer)} · {map.name} · {mapaSummary(result, false)}
+              Em inglês: {view.answer.en} · {map.name} · {mapaSummary(result, false)}
             </span>
           </span>
         </Reveal>
       )}
       <p className="small muted vd-source">
         Imagem: VALORANT Wiki (wiki.playvalorant.com), Riot Games
-        {done && place && (
+        {view.source && (
           <>
             {' '}
             (
-            <a href={place.source} target="_blank" rel="noreferrer">
+            <a href={view.source} target="_blank" rel="noreferrer">
               página do arquivo
             </a>
             )
@@ -407,92 +421,91 @@ export function MapaGame(props: GameProps<'mapa'>) {
   );
 }
 
-/** Callout ids in reading order (top to bottom, then left to right): "Área N" numbers that say nothing of the names. */
-function areaNumbers(map: ClassicMap): Map<string, number> {
-  const order = [...map.callouts].sort((a, b) => Math.round(a.y * 12) - Math.round(b.y * 12) || a.x - b.x);
-  return new Map(order.map((c, i) => [c.id, i + 1]));
-}
-
-const ARROWS: Record<string, { x: number; y: number }> = { ArrowRight: { x: 1, y: 0 }, ArrowLeft: { x: -1, y: 0 }, ArrowDown: { x: 0, y: 1 }, ArrowUp: { x: 0, y: -1 } };
-
-/** The cell nearest to `from` in the arrow's direction (within a 60° cone each side), or null. */
-function step(map: ClassicMap, from: ClassicCallout, dir: { x: number; y: number }): ClassicCallout | null {
-  let best: ClassicCallout | null = null;
-  let bestScore = Infinity;
-  for (const c of map.callouts) {
-    if (c === from) continue;
-    const dx = c.x - from.x;
-    const dy = c.y - from.y;
-    const along = dx * dir.x + dy * dir.y;
-    const across = Math.abs(dx * dir.y - dy * dir.x);
-    if (along <= 0 || across > along * 1.8) continue;
-    const score = along + 2 * across;
-    if (score < bestScore) {
-      bestScore = score;
-      best = c;
-    }
-  }
-  return best;
-}
-
-const regionName = (c: ClassicCallout) => (['A', 'B', 'C'].includes(c.superRegionEn) ? `região ${c.superRegion}` : c.superRegion.replace(/^no /, '').toLowerCase());
+/** Below this stage width the chips draw the compact names (the full one stays in the aria-label). */
+const WIDE_STAGE = 560;
 
 /**
- * Step 2 of Mapa: the real minimap with no name on it (CalloutBoard: invisible areas clipped to the walkable part; the
- * schema of Voronoi cells as the fallback). Tap or click an area, or move with the arrow keys, then confirm. Misses say
- * only "mesma região/outra região" and "perto/longe"; no area is ever named except the answer, and only at the end.
+ * Step 2 of Mapa: the screenshot as the stage's background, the real minimap over it (semi-opaque; a dark panel while
+ * it loads or without it) and one clickable chip per callout at its projected point, nudged apart so none overlaps and
+ * all stay inside. "Esconder mapa" hides the overlay to see the whole screenshot; PT | EN switches the chip names.
  */
-function WherePicker({
+function WhereStage({
+  view,
+  image,
+  alt,
   puzzle,
-  map,
-  answer,
   progress,
-  done,
   onMove,
 }: {
+  view: MapaView;
+  image: { src: string | null; failed: boolean; onError: () => void };
+  alt: string;
   puzzle: ValdlePuzzle<'mapa'>;
-  map: ClassicMap;
-  answer: ClassicCallout;
   progress: ValdleProgress;
-  done: boolean;
   onMove: (fn: (p: ValdleProgress) => ValdleProgress) => void;
 }) {
-  const numbers = useMemo(() => areaNumbers(map), [map]);
-  const [selected, setSelected] = useState<string | null>(null);
+  const map = view.map!;
+  const done = view.step === 'done';
+  const minimap = useMinimap(map.minimap);
+  const [lang, setLangState] = useState<ChipLang>(loadChipLang);
+  const [showMap, setShowMap] = useState(true);
   const [note, setNote] = useState<string | null>(null);
-  const spots = progress.spots ?? [];
-  const byId = useMemo(() => new Map(map.callouts.map((c) => [c.id, c])), [map]);
-  const sel = selected ? byId.get(selected) : undefined;
-  const found = spots.includes(answer.id);
-
-  const choose = (id: string) => {
-    if (done) return;
-    setNote(spots.includes(id) ? `Você já marcou a área ${numbers.get(id)}.` : null);
-    setSelected(id);
+  const stageRef = useRef<HTMLDivElement>(null);
+  const chipRefs = useRef<(HTMLButtonElement | null)[]>([]);
+  const [width, setWidth] = useState(0);
+  const [placed, setPlaced] = useState<{ key: string; pos: Pt[] } | null>(null);
+  const setLang = (l: ChipLang) => {
+    setLangState(l);
+    saveChipLang(l);
   };
-  const confirm = () => {
-    if (!selected || done) return;
-    const r = guessSpot(puzzle, progress, selected);
-    if (r.outcome === 'repeat') setNote(`Você já marcou a área ${numbers.get(selected)}.`);
+  const [fonts, setFonts] = useState(0);
+  const wide = width >= WIDE_STAGE;
+  const layoutKey = `${width}:${lang}:${showMap}:${fonts}`;
+
+  useEffect(() => {
+    const el = stageRef.current;
+    if (!el) return;
+    const measure = () => setWidth(Math.round(el.clientWidth));
+    measure();
+    // The chips are measured in the display font: lay them out again once it has loaded.
+    let live = true;
+    void document.fonts?.ready.then(() => live && setFonts((n) => n + 1));
+    if (typeof ResizeObserver === 'undefined') return () => void (live = false);
+    const ro = new ResizeObserver(measure);
+    ro.observe(el);
+    return () => {
+      live = false;
+      ro.disconnect();
+    };
+  }, []);
+
+  useLayoutEffect(() => {
+    if (!showMap || !width) return;
+    const sizes = view.chips.map((_, i) => {
+      const el = chipRefs.current[i];
+      return { w: el?.offsetWidth ?? 60, h: el?.offsetHeight ?? 28 };
+    });
+    const pos = spreadLabels(
+      view.chips.map((c) => ({ x: c.x * width, y: c.y * width })),
+      sizes,
+      width,
+      width,
+    );
+    setPlaced({ key: layoutKey, pos });
+    // The chips' sizes depend only on the width (long or short names), the language and the font (layoutKey).
+  }, [layoutKey]);
+
+  const pick = (id: string) => {
+    const r = guessSpot(puzzle, progress, id);
+    if (r.outcome === 'repeat') setNote('Você já tentou esse lugar.');
     if (r.outcome === 'hit' || r.outcome === 'miss') {
       setNote(null);
-      setSelected(null);
       onMove(() => r.progress);
     }
   };
-  const onKeyDown = (e: KeyboardEvent<SVGSVGElement>) => {
-    if (done) return;
-    const dir = ARROWS[e.key];
-    if (dir) {
-      e.preventDefault();
-      const from = sel ?? [...map.callouts].sort((a, b) => Math.hypot(a.x - 0.5, a.y - 0.5) - Math.hypot(b.x - 0.5, b.y - 0.5))[0]!;
-      const next = sel ? step(map, from, dir) : from;
-      if (next) choose(next.id);
-    } else if (e.key === 'Enter' || e.key === ' ') {
-      e.preventDefault();
-      confirm();
-    }
-  };
+  const pos = placed?.key === layoutKey ? placed.pos : null;
+  const nameOf = (c: { pt: string; en: string }) => (lang === 'en' ? c.en : c.pt);
+  const stateText = { open: '', miss: ': errado', hit: ': certo', answer: ': era este' } as const;
   return (
     <section className="vd-where" aria-labelledby="vd-where-title">
       <h3 id="vd-where-title" className="vd-where-title">
@@ -500,58 +513,90 @@ function WherePicker({
       </h3>
       <p className="small muted vd-where-rule">
         {done
-          ? found
+          ? view.spots.some((s) => s.hit)
             ? 'Achou o lugar.'
             : 'O lugar está destacado no mapa.'
-          : `Toque na parte do mapa onde a imagem foi tirada e confirme (ou use as setas e Enter). ${MAPA_SPOT_TRIES} tentativas; cada erro diz se é a mesma região e se está perto.`}
+          : `Toque no nome do lugar onde a imagem foi tirada. ${MAPA_SPOT_TRIES} tentativas; cada erro diz se é a mesma região e se está perto. "Esconder mapa" mostra a imagem inteira.`}
       </p>
-      <CalloutBoard
-        className="vd-where-stage"
-        map={map}
-        answer={answer}
-        showAnswer={done}
-        labelAnswer={done}
-        selected={done ? null : selected}
-        missed={spots.filter((id) => id !== answer.id)}
-        numbers={numbers}
-        onChoose={done ? undefined : choose}
-        onKeyDown={done ? undefined : onKeyDown}
-        ariaLabel={done ? `Mapa de ${map.name}` : `Mapa de ${map.name}: setas escolhem uma área, Enter marca`}
-      />
-      <p className="sr-only" aria-live="polite">
-        {sel && !done ? `Área ${numbers.get(sel.id)} de ${map.callouts.length}, ${regionName(sel)}.` : ''}
-      </p>
+      <div className="vd-where-tools">
+        <button type="button" role="switch" aria-checked={showMap} className={`vd-switch${showMap ? ' on' : ''}`} onClick={() => setShowMap((v) => !v)}>
+          <span className="vd-switch-track" aria-hidden="true">
+            <span className="vd-switch-knob" />
+          </span>
+          {showMap ? 'Esconder mapa' : 'Mostrar mapa'}
+        </button>
+        <span className="vd-lang" role="group" aria-label="Idioma dos nomes">
+          <button type="button" className={lang === 'pt' ? 'on' : ''} aria-pressed={lang === 'pt'} onClick={() => setLang('pt')}>
+            PT
+          </button>
+          <button type="button" className={lang === 'en' ? 'on' : ''} aria-pressed={lang === 'en'} onClick={() => setLang('en')}>
+            EN
+          </button>
+        </span>
+      </div>
+      <div ref={stageRef} className={`vd-where-board${showMap ? '' : ' photo'}`}>
+        {image.src && !image.failed ? (
+          <img className="vd-where-photo" src={image.src} alt={alt} width={960} height={540} decoding="async" onError={image.onError} />
+        ) : (
+          <span className="vd-map-missing small muted">{image.failed ? 'Imagem indisponível agora.' : 'Carregando a imagem…'}</span>
+        )}
+        {showMap && (
+          <div className={`vd-where-overlay${minimap.status === 'ready' ? '' : ' plain'}`}>
+            {minimap.status === 'ready' && <img className="vd-where-mm" src={minimap.src} alt="" width={1024} height={1024} decoding="async" />}
+            <div className="vd-chips" role="group" aria-label={`Lugares de ${map.name}`}>
+              {view.chips.map((c, i) => {
+                const p = pos?.[i];
+                const full = nameOf(c);
+                const text = wide ? full : lang === 'en' ? c.enShort : c.ptShort;
+                return (
+                  <button
+                    key={c.id}
+                    ref={(el) => {
+                      chipRefs.current[i] = el;
+                    }}
+                    type="button"
+                    lang={lang === 'en' ? 'en' : undefined}
+                    className={`vd-chip ${c.state}`}
+                    // Placed by transform from the corner, so a chip's measured size never depends on where it sits.
+                    style={{
+                      transform: `translate(calc(${p ? p.x : c.x * width}px - 50%), calc(${p ? p.y : c.y * width}px - 50%))`,
+                      visibility: p ? undefined : 'hidden',
+                    }}
+                    disabled={done || c.state !== 'open'}
+                    aria-label={`${full}${stateText[c.state]}`}
+                    title={full}
+                    onClick={() => pick(c.id)}
+                  >
+                    {c.state === 'miss' && <Icon name="close" />}
+                    {(c.state === 'hit' || c.state === 'answer') && <Icon name="check" />}
+                    {text}
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+        )}
+      </div>
       <MissList
-        items={spots.map((id) => {
-          const c = byId.get(id);
-          const hit = id === answer.id;
-          const same = c?.superRegionEn === answer.superRegionEn;
-          const near = c ? Math.hypot(c.x - answer.x, c.y - answer.y) < NEAR : false;
-          return {
-            id,
-            label: `Área ${numbers.get(id) ?? '?'}`,
-            hit,
-            ...(hit || !c
-              ? {}
-              : {
-                  hint: (
-                    <>
-                      <span className={same ? 'same' : 'diff'}>{same ? 'mesma região' : 'outra região'}</span>
-                      <span className={near ? 'same' : 'diff'}>{near ? 'perto' : 'longe'}</span>
-                    </>
-                  ),
-                }),
-          };
-        })}
+        items={view.spots.map((s) => ({
+          id: s.id,
+          label: nameOf(s),
+          hit: s.hit,
+          ...(s.hit
+            ? {}
+            : {
+                hint: (
+                  <>
+                    <span className={s.sameRegion ? 'same' : 'diff'}>{s.sameRegion ? 'mesma região' : 'outra região'}</span>
+                    <span className={s.near ? 'same' : 'diff'}>{s.near ? 'perto' : 'longe'}</span>
+                  </>
+                ),
+              }),
+        }))}
       />
       {!done && (
         <>
-          <TryCounter used={spots.length} max={MAPA_SPOT_TRIES} />
-          <div className="vd-where-actions">
-            <button type="button" className="primary" disabled={!selected || spots.includes(selected)} onClick={confirm}>
-              <Icon name="target" /> {selected ? `Marcar a área ${numbers.get(selected)}` : 'Escolha uma área'}
-            </button>
-          </div>
+          <TryCounter used={view.spots.length} max={MAPA_SPOT_TRIES} />
           <Note text={note} />
           <GiveUp onGiveUp={() => onMove(giveUp)} note="Desistir encerra o Onde é? sem o lugar." />
         </>

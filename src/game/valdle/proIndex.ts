@@ -1,6 +1,6 @@
 /**
  * "Valdle — Cena pro" over the real pool (the Diário's facts index, the series and their comps): the index and the
- * daily / free puzzles, built once on first use.
+ * daily puzzles, built once on first use.
  */
 import { AGENTS } from '../../data/game';
 import { seriesComps } from '../../data/real/comps';
@@ -35,8 +35,4 @@ function plannersOf() {
 
 export function proDaily<G extends ProGame>(game: G, date: string): ValdlePuzzle<G> {
   return plannersOf()[game].daily(date) as ValdlePuzzle<G>;
-}
-
-export function proFree<G extends ProGame>(game: G, seed: string): ValdlePuzzle<G> {
-  return plannersOf()[game].free(seed) as ValdlePuzzle<G>;
 }

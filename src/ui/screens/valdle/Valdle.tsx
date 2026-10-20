@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { dayKeyAt, formatCountdown, msUntilNextDay } from '../../../game/daily/calendar';
 import { AGENT_COLUMNS, WEAPON_COLUMNS } from '../../../game/valdle/classic';
-import { classicData, classicDaily, classicFree } from '../../../game/valdle/classicIndex';
+import { classicData, classicDaily } from '../../../game/valdle/classicIndex';
 import { compareAll, type Mark } from '../../../game/valdle/feedback';
 import { GROUP_GAMES, VALDLE_GAMES, VALDLE_LAUNCH, valdleNumber, type ValdleGameId, type ValdleGroup } from '../../../game/valdle/games';
 import {
@@ -9,17 +9,15 @@ import {
   gameStats,
   isDone,
   mapaSummary,
-  newFree,
   resultOf,
   shareText,
   updateDaily,
-  updateFree,
   type ValdleProgress,
   type ValdlePuzzle,
   type ValdleStore,
 } from '../../../game/valdle/play';
 import { proColumns } from '../../../game/valdle/pro';
-import { proDaily, proFree, proIndex } from '../../../game/valdle/proIndex';
+import { proDaily, proIndex } from '../../../game/valdle/proIndex';
 import { Icon, type IconName } from '../../components/Icon';
 import { SharePanel } from '../../components/SharePanel';
 import { loadValdleStore, saveValdleStore } from '../../valdleStorage';
@@ -28,8 +26,8 @@ import { CompGame, ConexoesGame, GradeGame, ProGame } from './proGames';
 
 /**
  * "Valdle" (Outros modos), in two versions: "Cena pro" (the real pool) and "Jogo clássico" (the game itself). Each
- * game has a daily puzzle (the same for everyone, #N since the launch, new at midnight in São Paulo) and a free mode
- * (unlimited puzzles from a random seed). Progress, streaks and the open free puzzle are saved in rtc:valdle:v1.
+ * game has a daily puzzle (the same for everyone, #N since the launch, new at midnight in São Paulo); there is no free
+ * mode. Progress and streaks are saved in rtc:valdle:v1.
  */
 
 export const GAME_ICONS: Record<ValdleGameId, IconName> = {
@@ -44,8 +42,6 @@ export const GAME_ICONS: Record<ValdleGameId, IconName> = {
   comp: 'cards',
 };
 
-type Mode = 'daily' | 'free';
-
 function useNow(): Date {
   const [now, setNow] = useState(() => new Date());
   useEffect(() => {
@@ -55,13 +51,9 @@ function useNow(): Date {
   return now;
 }
 
-/** A free-mode seed (UI only: the puzzle itself is generated from it by the seeded engine). */
-const randomSeed = () => Math.random().toString(36).slice(2, 10);
-
-function puzzleFor(game: ValdleGameId, mode: Mode, id: string): ValdlePuzzle {
+function puzzleFor(game: ValdleGameId, date: string): ValdlePuzzle {
   const classic = VALDLE_GAMES[game].group === 'classico';
-  if (mode === 'daily') return (classic ? classicDaily(game as 'agente', id) : proDaily(game as 'pro', id)) as ValdlePuzzle;
-  return (classic ? classicFree(game as 'agente', id) : proFree(game as 'pro', id)) as ValdlePuzzle;
+  return (classic ? classicDaily(game as 'agente', date) : proDaily(game as 'pro', date)) as ValdlePuzzle;
 }
 
 /** Per-guess marks of the games with columns (for the share text). */
@@ -107,16 +99,14 @@ function Valdle({ group, onBack }: { group: ValdleGroup; onBack: () => void }) {
   const date = today < VALDLE_LAUNCH ? VALDLE_LAUNCH : today;
   const [store, setStore] = useState<ValdleStore>(loadValdleStore);
   const [game, setGameState] = useState<ValdleGameId | null>(null);
-  const [mode, setMode] = useState<Mode>('daily');
   const topRef = useRef<HTMLDivElement>(null);
 
   const focusTop = () => {
     window.scrollTo(0, 0);
     topRef.current?.focus({ preventScroll: true });
   };
-  const openGame = (g: ValdleGameId | null, m: Mode = 'daily') => {
+  const openGame = (g: ValdleGameId | null) => {
     setGameState(g);
-    setMode(m);
     focusTop();
   };
 
@@ -127,22 +117,12 @@ function Valdle({ group, onBack }: { group: ValdleGroup; onBack: () => void }) {
       return next;
     });
 
-  // Free mode: a puzzle is always open (a new seed the first time).
-  const freeSeed = game ? store.free[game]?.seed : undefined;
-  useEffect(() => {
-    if (game && mode === 'free' && !freeSeed) commit((s) => newFree(s, game, randomSeed()));
-  }, [game, mode, freeSeed]);
-
-  const puzzle = useMemo(() => {
-    if (!game) return null;
-    if (mode === 'daily') return puzzleFor(game, 'daily', date);
-    return freeSeed ? puzzleFor(game, 'free', freeSeed) : null;
-  }, [game, mode, date, freeSeed]);
-  const progress: ValdleProgress = !game || !puzzle ? emptyProgress() : mode === 'daily' ? (store.daily[game]?.[date] ?? emptyProgress()) : (store.free[game]?.progress ?? emptyProgress());
+  const puzzle = useMemo(() => (game ? puzzleFor(game, date) : null), [game, date]);
+  const progress: ValdleProgress = game ? (store.daily[game]?.[date] ?? emptyProgress()) : emptyProgress();
 
   const onMove = (fn: (p: ValdleProgress) => ValdleProgress) => {
     if (!puzzle) return;
-    commit((s) => (mode === 'daily' ? updateDaily(s, puzzle, fn, dayKeyAt(new Date())) : updateFree(s, puzzle, fn, dayKeyAt(new Date()))));
+    commit((s) => updateDaily(s, puzzle, fn, dayKeyAt(new Date())));
   };
 
   const games = GROUP_GAMES[group];
@@ -180,7 +160,7 @@ function Valdle({ group, onBack }: { group: ValdleGroup; onBack: () => void }) {
                     aria-current={g === game ? 'step' : undefined}
                     aria-label={VALDLE_GAMES[g].label}
                     title={VALDLE_GAMES[g].label}
-                    onClick={() => openGame(g, mode)}
+                    onClick={() => openGame(g)}
                   >
                     <Icon name={GAME_ICONS[g]} />
                   </button>
@@ -191,24 +171,17 @@ function Valdle({ group, onBack }: { group: ValdleGroup; onBack: () => void }) {
           <h2 id="vd-title" className="daily-challenge-title">
             <Icon name={GAME_ICONS[game]} /> {VALDLE_GAMES[game].label}
           </h2>
-          <div className="vd-modes" role="tablist" aria-label="Modo">
-            <button type="button" role="tab" aria-selected={mode === 'daily'} className={`vd-mode${mode === 'daily' ? ' on' : ''}`} onClick={() => setMode('daily')}>
-              <Icon name="calendar" /> Diário #{valdleNumber(date)}
-            </button>
-            <button type="button" role="tab" aria-selected={mode === 'free'} className={`vd-mode${mode === 'free' ? ' on' : ''}`} onClick={() => setMode('free')}>
-              <Icon name="dice" /> Modo livre
-            </button>
-          </div>
+          <p className="vd-daily-tag">
+            <Icon name="calendar" /> Diário #{valdleNumber(date)}
+          </p>
           {puzzle && (
             <GameView
-              key={`${game}:${mode}:${puzzle.id}`}
+              key={`${game}:${puzzle.id}`}
               puzzle={puzzle}
               progress={progress}
               onMove={onMove}
               store={store}
               today={date}
-              onNewFree={() => commit((s) => newFree(s, game, randomSeed()))}
-              onFree={() => setMode('free')}
             />
           )}
         </section>
@@ -227,7 +200,7 @@ function GameList({
   group: ValdleGroup;
   store: ValdleStore;
   date: string;
-  onOpen: (g: ValdleGameId, m?: Mode) => void;
+  onOpen: (g: ValdleGameId) => void;
   onBack: () => void;
 }) {
   return (
@@ -285,7 +258,7 @@ function GameList({
         {group === 'cena'
           ? 'Tudo sai dos dados reais da base: eventos internacionais do VCT desde 2021 e ligas regionais desde 2023 (VLR.gg), elencos da Liquipedia. Nada é inventado.'
           : 'Agentes, habilidades, mapas, callouts e armas do snapshot do valorant-api.com (dados da Riot Games); imagens do Mapa: VALORANT Wiki. Nada é inventado.'}{' '}
-        Um desafio por jogo e por dia, igual para todos; o modo livre não conta para a sequência.
+        Um desafio por jogo e por dia, igual para todos.
       </p>
     </>
   );
@@ -297,16 +270,12 @@ function GameView({
   onMove,
   store,
   today,
-  onNewFree,
-  onFree,
 }: {
   puzzle: ValdlePuzzle;
   progress: ValdleProgress;
   onMove: (fn: (p: ValdleProgress) => ValdleProgress) => void;
   store: ValdleStore;
   today: string;
-  onNewFree: () => void;
-  onFree: () => void;
 }) {
   const done = isDone(puzzle.game, puzzle, progress);
   const common = { progress, done, onMove };
@@ -338,26 +307,11 @@ function GameView({
     <>
       {body}
       {done && result && (
-        <>
-          <SharePanel
-            text={shareText(puzzle, progress, marksOf(puzzle, progress))}
-            title="Compartilhe o resultado"
-            note="Sem spoiler: só os acertos de cada palpite, sem nomes."
-          />
-          {puzzle.mode === 'free' ? (
-            <div className="vd-next">
-              <button type="button" className="primary wide" onClick={onNewFree}>
-                <Icon name="dice" /> Novo desafio livre
-              </button>
-            </div>
-          ) : (
-            <div className="vd-next">
-              <button type="button" className="secondary wide" onClick={onFree}>
-                <Icon name="dice" /> Jogar mais no modo livre
-              </button>
-            </div>
-          )}
-        </>
+        <SharePanel
+          text={shareText(puzzle, progress, marksOf(puzzle, progress))}
+          title="Compartilhe o resultado"
+          note="Sem spoiler: só os acertos de cada palpite, sem nomes."
+        />
       )}
       <Stats game={puzzle.game} stats={stats} />
     </>
@@ -395,12 +349,6 @@ function Stats({ game, stats }: { game: ValdleGameId; stats: ReturnType<typeof g
             <dd>{stats.played ? `${Math.round(((stats.placeFound ?? 0) / stats.played) * 100)}%` : '—'}</dd>
           </div>
         )}
-        <div>
-          <dt>Livres</dt>
-          <dd>
-            {stats.freeWon}/{stats.freePlayed}
-          </dd>
-        </div>
       </dl>
       {stats.played > 0 && (
         <div className="daily-dist" role="img" aria-label={`Distribuição: ${stats.dist.map((n, i) => `${distLabel(i)}: ${n}`).join(', ')}`}>
@@ -422,8 +370,7 @@ function Stats({ game, stats }: { game: ValdleGameId; stats: ReturnType<typeof g
             : game === 'mapa'
               ? 'Distribuição: mapas acertados por tentativa; "Lugar certo": diários em que achou o lugar no Onde é?.'
               : 'Distribuição: vitórias por tentativa.'}{' '}
-        A sequência conta os diários vencidos no próprio dia (meia-noite de Brasília). &quot;Livres&quot;: vitórias/jogos no modo livre. Tudo fica salvo só neste
-        navegador.
+        A sequência conta os diários vencidos no próprio dia (meia-noite de Brasília). Tudo fica salvo só neste navegador.
       </p>
     </section>
   );

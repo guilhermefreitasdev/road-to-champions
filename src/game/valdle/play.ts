@@ -1,7 +1,8 @@
 /**
  * Playing the Valdle: the progress of one puzzle (JSON, saved in localStorage by the UI under `rtc:valdle:v1`), the
- * moves of each game, the results, the share text and the personal stats (daily win streak, wins, distribution;
- * free-mode counts). Pure: no storage, no clock (the day key of "today" is passed in), no data beyond the puzzle.
+ * moves of each game, the results, the share text and the personal stats (daily win streak, wins, distribution).
+ * Daily only (the free mode was removed on 2026-10-20; the `free` part of older saves is ignored). Pure: no storage,
+ * no clock (the day key of "today" is passed in), no data beyond the puzzle.
  *
  * - Guess games (Agente Clássico, Habilidade, Mapa, Callout, Arma, Pro Clássico, Comp Misteriosa): `guesses` are
  *   ids; won when the answer is guessed within VALDLE_GAMES[game].maxTries. Habilidade adds a bonus question (which
@@ -266,8 +267,8 @@ const MARK_LETTER: Record<Mark, string> = { hit: 'V', partial: 'P', miss: '-' };
 export function shareText(puzzle: ValdlePuzzle, progress: ValdleProgress, marks?: readonly (readonly Mark[])[]): string {
   const info = VALDLE_GAMES[puzzle.game];
   const r = progress.result ?? resultOf(puzzle, progress);
-  const late = puzzle.mode === 'daily' && progress.finishedOn && progress.finishedOn !== puzzle.id ? ' (arquivo)' : '';
-  const head = puzzle.mode === 'daily' ? `Road to Champions · Valdle ${info.label} #${puzzle.number}${late}` : `Road to Champions · Valdle ${info.label} · Modo livre`;
+  const late = progress.finishedOn && progress.finishedOn !== puzzle.id ? ' (arquivo)' : '';
+  const head = `Road to Champions · Valdle ${info.label} #${puzzle.number}${late}`;
   const lines: string[] = [head];
   if (puzzle.game === 'grade') {
     const cells = gradeCells(puzzle as unknown as GradePuzzle, progress);
@@ -304,48 +305,18 @@ export function shareText(puzzle: ValdlePuzzle, progress: ValdleProgress, marks?
 
 // --- Store and stats -----------------------------------------------------------------------------------------------
 
-export interface FreeSlot {
-  seed: string;
-  progress: ValdleProgress;
-  /** Free puzzles finished and won (all time). */
-  played: number;
-  won: number;
-}
-
 export interface ValdleStore {
   v: 1;
   daily: Partial<Record<ValdleGameId, Record<string, ValdleProgress>>>;
-  free: Partial<Record<ValdleGameId, FreeSlot>>;
 }
 
-export const emptyStore = (): ValdleStore => ({ v: 1, daily: {}, free: {} });
+export const emptyStore = (): ValdleStore => ({ v: 1, daily: {} });
 
 /** Applies a move to a daily puzzle (and settles it). */
 export function updateDaily(store: ValdleStore, puzzle: ValdlePuzzle, fn: (p: ValdleProgress) => ValdleProgress, today: string): ValdleStore {
   const days = store.daily[puzzle.game] ?? {};
   const next = settle(puzzle, stamp(puzzle.game, fn(days[puzzle.id] ?? emptyProgress())), today);
   return { ...store, daily: { ...store.daily, [puzzle.game]: { ...days, [puzzle.id]: next } } };
-}
-
-/** Applies a move to the open free puzzle; counts it once when it ends. */
-export function updateFree(store: ValdleStore, puzzle: ValdlePuzzle, fn: (p: ValdleProgress) => ValdleProgress, today: string): ValdleStore {
-  const slot = store.free[puzzle.game];
-  const base: FreeSlot = slot && slot.seed === puzzle.id ? slot : { seed: puzzle.id, progress: emptyProgress(), played: slot?.played ?? 0, won: slot?.won ?? 0 };
-  const progress = settle(puzzle, stamp(puzzle.game, fn(base.progress)), today);
-  const ended = !base.progress.result && progress.result;
-  const out: FreeSlot = {
-    seed: puzzle.id,
-    progress,
-    played: base.played + (ended ? 1 : 0),
-    won: base.won + (ended && progress.result!.won ? 1 : 0),
-  };
-  return { ...store, free: { ...store.free, [puzzle.game]: out } };
-}
-
-/** Starts a new free puzzle (the open one is dropped; counts stay). */
-export function newFree(store: ValdleStore, game: ValdleGameId, seed: string): ValdleStore {
-  const slot = store.free[game];
-  return { ...store, free: { ...store.free, [game]: { seed, progress: stamp(game, emptyProgress()), played: slot?.played ?? 0, won: slot?.won ?? 0 } } };
 }
 
 export interface GameStats {
@@ -356,8 +327,6 @@ export interface GameStats {
   bestStreak: number;
   /** Wins by tries (guess games, index = tries - 1); Grade: puzzles by cells filled (0–9); Conexões: wins by mistakes (0–3). */
   dist: number[];
-  freePlayed: number;
-  freeWon: number;
   /** Mapa: daily puzzles whose place ("Onde é?") was found. */
   placeFound?: number;
 }
@@ -393,7 +362,6 @@ export function gameStats(store: ValdleStore, game: ValdleGameId, today: string)
     bestStreak = Math.max(bestStreak, run);
     prev = n;
   }
-  const free = store.free[game];
   return {
     ...(game === 'mapa' ? { placeFound: results.filter(([, p]) => (p.result!.place ?? 0) > 0).length } : {}),
     played: results.length,
@@ -401,8 +369,6 @@ export function gameStats(store: ValdleStore, game: ValdleGameId, today: string)
     streak,
     bestStreak: Math.max(bestStreak, streak),
     dist,
-    freePlayed: free?.played ?? 0,
-    freeWon: free?.won ?? 0,
   };
 }
 
@@ -432,7 +398,7 @@ function parseProgress(x: unknown): ValdleProgress | null {
 /** Progress saved on an older puzzle shape of its game (PROGRESS_SHAPES) is not kept. */
 const shapeOk = (game: ValdleGameId, p: ValdleProgress) => (p.shape ?? 1) === (PROGRESS_SHAPES[game] ?? 1);
 
-/** Reads a saved store (anything malformed is dropped, never thrown). */
+/** Reads a saved store (anything malformed is dropped, never thrown; the old `free` part is left out). */
 export function parseValdleStore(json: unknown): ValdleStore {
   const out = emptyStore();
   if (!isObj(json) || json.v !== 1) return out;
@@ -447,14 +413,7 @@ export function parseValdleStore(json: unknown): ValdleStore {
       out.daily[game] = parsed;
     }
   }
-  if (isObj(json.free)) {
-    for (const [game, slot] of Object.entries(json.free)) {
-      if (!isValdleGame(game) || !isObj(slot) || typeof slot.seed !== 'string') continue;
-      const parsed = parseProgress(slot.progress);
-      const progress = parsed && shapeOk(game, parsed) ? parsed : stamp(game, emptyProgress());
-      out.free[game] = { seed: slot.seed, progress, played: num(slot.played), won: num(slot.won) };
-    }
-  }
+  // `free` (the removed free mode) of older saves is ignored.
   return out;
 }
 

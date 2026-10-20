@@ -33,7 +33,7 @@ export function OutrosModos({ onExit }: { onExit: () => void }) {
           <Icon name="puzzle" /> Fora do Champions
         </p>
         <h1>Outros modos</h1>
-        <p className="context">Jogos rápidos à parte do modo principal, com desafios diários iguais para todos e modo livre.</p>
+        <p className="context">Jogos rápidos à parte do modo principal, com desafios diários iguais para todos.</p>
       </header>
       <ul className="outros-list">
         {OTHER_MODES.map((m) => (

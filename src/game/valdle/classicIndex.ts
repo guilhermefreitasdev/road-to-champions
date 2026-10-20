@@ -1,6 +1,6 @@
 /**
  * "Valdle — Jogo clássico" over the real snapshot (src/data/game, valorant-api.com; agent debut years from the VLR
- * agent stats; the Mapa game's screenshots from the VALORANT Wiki, places.json): the data and the daily / free puzzles, built once on first use. Does not import the card pool.
+ * agent stats; the Mapa game's screenshots from the VALORANT Wiki, places.json): the data and the daily puzzles, built once on first use. Does not import the card pool.
  */
 import agentDetailsJson from '../../data/game/agent-details.json';
 import placesJson from '../../data/game/places.json';
@@ -43,8 +43,4 @@ function plannersOf() {
 
 export function classicDaily<G extends ClassicGame>(game: G, date: string): ValdlePuzzle<G> {
   return plannersOf()[game].daily(date) as ValdlePuzzle<G>;
-}
-
-export function classicFree<G extends ClassicGame>(game: G, seed: string): ValdlePuzzle<G> {
-  return plannersOf()[game].free(seed) as ValdlePuzzle<G>;
 }

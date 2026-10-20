@@ -59,3 +59,6 @@ export function clearCareer(): void {
  * rtc:daily:v1 it is progress, not a saved game: "Recomeçar" and the crash reset never clear it.
  */
 export const VALDLE_KEY = 'rtc:valdle:v1';
+
+/** Valdle display preferences (the language of the "Onde é?" chips); progress-like, never cleared by "Recomeçar". */
+export const VALDLE_PREFS_KEY = 'rtc:valdle:prefs:v1';

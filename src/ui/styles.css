@@ -10286,6 +10286,21 @@ button.outros-card.soon {
 
 /* Valdle: game list and frame */
 
+.vd-daily-tag {
+  display: inline-flex;
+  align-self: flex-start;
+  align-items: center;
+  gap: 6px;
+  margin: 0;
+  padding: 4px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--accent);
+  background: var(--accent-tint);
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
 .valdle .vd-streak {
   display: inline-flex;
   align-items: center;
@@ -10297,37 +10312,6 @@ button.outros-card.soon {
 .vd-challenge .daily-steps {
   flex-wrap: wrap;
   justify-content: flex-end;
-}
-
-.vd-modes {
-  display: inline-flex;
-  align-self: flex-start;
-  gap: 4px;
-  padding: 4px;
-  border-radius: 999px;
-  border: 1px solid var(--glass-line);
-  background: var(--glass);
-}
-
-button.vd-mode {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  min-height: 40px;
-  padding: 0 14px;
-  border: 1px solid transparent;
-  border-radius: 999px;
-  background: transparent;
-  color: var(--muted);
-  font-family: var(--font-display);
-  font-weight: 700;
-  letter-spacing: 0.04em;
-}
-
-button.vd-mode.on {
-  border-color: var(--accent);
-  background: var(--accent-tint);
-  color: var(--text);
 }
 
 .vd-game {
@@ -10640,13 +10624,49 @@ button.vd-bonus-option.wrong {
   overflow: hidden;
 }
 
-.vd-ability-stage img {
+.vd-ability-box {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 168px;
+  height: 168px;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #0b131b;
+}
+
+.vd-ability-box img {
   width: 128px;
   height: 128px;
   object-fit: contain;
+}
+
+/* Habilidade: a 4x4 grid of solid tiles over the icon; each wrong guess uncovers more (abilityTiles). */
+.vd-tiles {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+}
+
+.vd-tile {
+  background: var(--accent);
+  box-shadow: inset 0 0 0 1.5px #0f1923;
   transition:
-    filter var(--dur) var(--ease-out),
-    transform var(--dur) var(--ease-out);
+    opacity 300ms var(--ease-out),
+    transform 300ms var(--ease-out);
+}
+
+.vd-tile.open {
+  opacity: 0;
+  transform: scale(0.6);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .vd-tile {
+    transition: none;
+  }
 }
 
 .vd-ability-missing {
@@ -10779,8 +10799,8 @@ button.vd-bonus-option.wrong {
   }
 }
 
-/* Callout and "Onde é?" on the real minimap (CalloutBoard.tsx): the image is the map; the areas are invisible
-   Voronoi cells clipped to its walkable part (SVG mask), drawn only when hovered, picked, missed or revealed. */
+/* Callout on the real minimap (CalloutBoard.tsx): the image is the map; the areas are invisible Voronoi cells
+   clipped to its walkable part (SVG mask); only the asked one is drawn. */
 
 .vd-mm-stage {
   background:
@@ -10806,53 +10826,8 @@ button.vd-bonus-option.wrong {
   fill-opacity: 0.5;
 }
 
-.vd-mm-area.selected path {
-  fill: var(--accent);
-  fill-opacity: 0.32;
-}
-
-.vd-mm-area.hover path {
-  fill: #ffffff;
-  fill-opacity: 0.16;
-}
-
-.vd-mm-area.missed path {
-  fill: #05080c;
-  fill-opacity: 0.35;
-}
-
-.vd-mm-miss {
-  fill: none;
-  stroke: var(--loss-text);
-  stroke-width: 5;
-  stroke-linecap: round;
-  pointer-events: none;
-}
-
-.vd-mm-hit {
-  fill: transparent;
-  pointer-events: all;
-  cursor: pointer;
-}
-
-.vd-mm-hit:focus {
-  outline: none;
-}
-
-/* Mapa: the screenshot, then "Onde é?" on the unlabeled minimap (or schema) */
-
-.vd-mapa-board {
-  display: grid;
-  gap: var(--sp-3);
-  min-width: 0;
-}
-
-@media (min-width: 900px) {
-  .vd-mapa-board.two {
-    grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
-    align-items: start;
-  }
-}
+/* Mapa: the zoomed screenshot and the map buttons, then "Onde é?": the screenshot behind the minimap, with a name
+   chip on every callout (classicGames.tsx, WhereStage) */
 
 .vd-map-missing {
   position: absolute;
@@ -10883,62 +10858,259 @@ button.vd-bonus-option.wrong {
   margin: 0;
 }
 
-.vd-where-stage {
-  max-width: 520px;
+.vd-map-pick {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
 }
 
-.vd-where-live path.vd-cc {
-  cursor: pointer;
-}
-
-.vd-where-live:focus-visible {
-  outline: 3px solid var(--accent);
-  outline-offset: -3px;
-}
-
-@media (hover: hover) {
-  .vd-where-live path.vd-cc:hover {
-    fill-opacity: 0.6;
-  }
-}
-
-.vd-cc.missed {
-  fill: #2a1218;
-  fill-opacity: 0.85;
-  stroke: var(--loss-text);
-  stroke-dasharray: 14 10;
-  stroke-width: 5;
-}
-
-.vd-cc.selected {
-  fill: var(--accent);
-  fill-opacity: 0.55;
-  stroke: #fff;
-  stroke-width: 8;
-}
-
-.vd-where-outline {
-  fill: none;
-  stroke: #fff;
-  stroke-width: 8;
-  pointer-events: none;
-}
-
-.vd-where-n {
-  fill: #fff;
-  font-family: var(--font-display);
-  font-size: 44px;
-  font-weight: 900;
-  paint-order: stroke;
-  stroke: rgba(15, 25, 35, 0.95);
-  stroke-width: 8px;
-  pointer-events: none;
-}
-
-.vd-where-actions {
+.vd-map-buttons {
   display: flex;
   flex-wrap: wrap;
   gap: var(--sp-2);
+}
+
+button.vd-map-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  min-height: 44px;
+  min-width: 104px;
+  padding: 0 16px;
+  border: 1.5px solid var(--accent);
+  border-radius: 6px;
+  background: rgba(255, 70, 85, 0.06);
+  color: var(--text);
+  font-family: var(--font-display);
+  font-size: var(--fs-md);
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+button.vd-map-btn:hover:not(:disabled) {
+  background: var(--accent);
+  color: #fff;
+}
+
+button.vd-map-btn.miss,
+button.vd-map-btn.miss:disabled {
+  border-color: var(--loss-text);
+  background: rgba(255, 70, 85, 0.22);
+  color: var(--loss-text);
+  text-decoration: line-through;
+  opacity: 1;
+  cursor: not-allowed;
+}
+
+@media (max-width: 520px) {
+  button.vd-map-btn {
+    flex: 1 1 calc(33.333% - var(--sp-2));
+    min-width: 0;
+    padding: 0 8px;
+    font-size: 0.85rem;
+  }
+}
+
+.vd-where-tools {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-2);
+}
+
+button.vd-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 40px;
+  padding: 0 14px 0 6px;
+  border: 1px solid var(--glass-line);
+  border-radius: 999px;
+  background: var(--glass);
+  color: var(--text);
+  font-family: var(--font-display);
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.vd-switch-track {
+  position: relative;
+  width: 40px;
+  height: 22px;
+  border-radius: 999px;
+  background: var(--surface-2);
+  border: 1px solid var(--line-strong);
+  transition: background var(--dur) var(--ease-out);
+}
+
+.vd-switch-knob {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #fff;
+  transition: transform var(--dur) var(--ease-out);
+}
+
+.vd-switch.on .vd-switch-track {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+.vd-switch.on .vd-switch-knob {
+  transform: translateX(18px);
+}
+
+.vd-lang {
+  display: inline-flex;
+  padding: 3px;
+  border-radius: 999px;
+  border: 1px solid var(--glass-line);
+  background: var(--glass);
+}
+
+.vd-lang button {
+  min-height: 34px;
+  min-width: 44px;
+  padding: 0 10px;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--muted);
+  font-family: var(--font-display);
+  font-weight: 800;
+  letter-spacing: 0.06em;
+}
+
+.vd-lang button.on {
+  background: var(--accent);
+  color: #fff;
+}
+
+/* The stage: square with the minimap over the screenshot; 16:9 with the screenshot alone ("Esconder mapa"). */
+.vd-where-board {
+  position: relative;
+  width: 100%;
+  max-width: 680px;
+  margin: 0 auto;
+  aspect-ratio: 1;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--glass-line);
+  background: #0b131b;
+  overflow: hidden;
+}
+
+.vd-where-board.photo {
+  aspect-ratio: 16 / 9;
+}
+
+.vd-where-photo {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.vd-where-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(8, 12, 18, 0.42);
+}
+
+.vd-where-overlay.plain {
+  background: rgba(8, 12, 18, 0.72);
+}
+
+.vd-where-mm {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.82;
+  pointer-events: none;
+}
+
+.vd-chips {
+  position: absolute;
+  inset: 0;
+}
+
+button.vd-chip {
+  position: absolute;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  max-width: 180px;
+  top: 0;
+  left: 0;
+  min-height: 28px;
+  padding: 2px 9px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 7px;
+  background: rgba(10, 15, 22, 0.88);
+  color: #fff;
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-align: center;
+  white-space: nowrap;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.45);
+}
+
+button.vd-chip:hover:not(:disabled) {
+  border-color: var(--accent);
+  background: rgba(30, 12, 18, 0.95);
+}
+
+button.vd-chip:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 1px;
+  z-index: 2;
+}
+
+button.vd-chip:disabled {
+  opacity: 1;
+  cursor: default;
+}
+
+button.vd-chip.miss {
+  border-color: var(--loss-text);
+  background: #5a1520;
+  color: #ffd6da;
+}
+
+button.vd-chip.hit {
+  border-color: var(--win);
+  background: #12503f;
+  z-index: 1;
+}
+
+button.vd-chip.answer {
+  border: 2px solid var(--gold);
+  background: #12503f;
+  z-index: 1;
+}
+
+@media (max-width: 600px) {
+  button.vd-chip {
+    max-width: 92px;
+    padding: 2px 6px;
+    font-size: 0.66rem;
+    letter-spacing: 0.02em;
+    white-space: normal;
+  }
 }
 
 /* Grade 3x3 */

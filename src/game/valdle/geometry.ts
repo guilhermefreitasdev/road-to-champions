@@ -92,3 +92,59 @@ export function contains(poly: readonly Pt[], p: Pt): boolean {
   }
   return inside;
 }
+
+/**
+ * Places labels (boxes of `sizes`, centered on `anchors`) inside a width × height box with light collision nudging:
+ * each overlapping pair is pushed apart along the axis where they overlap least, and every box is kept inside the
+ * frame. Returns the centers. Deterministic; used for the "Onde é?" chips (pixels in, pixels out).
+ */
+export function spreadLabels(anchors: readonly Pt[], sizes: readonly { w: number; h: number }[], width: number, height: number, gap = 2, iterations = 120): Pt[] {
+  const clampTo = (p: Pt, i: number): Pt => {
+    const { w, h } = sizes[i]!;
+    return {
+      x: w >= width ? width / 2 : Math.min(width - w / 2, Math.max(w / 2, p.x)),
+      y: h >= height ? height / 2 : Math.min(height - h / 2, Math.max(h / 2, p.y)),
+    };
+  };
+  const pos = anchors.map((a, i) => clampTo(a, i));
+  for (let it = 0; it < iterations; it++) {
+    let moved = false;
+    for (let i = 0; i < pos.length; i++) {
+      for (let j = i + 1; j < pos.length; j++) {
+        const a = pos[i]!;
+        const b = pos[j]!;
+        const dx = b.x - a.x;
+        const dy = b.y - a.y;
+        const ox = (sizes[i]!.w + sizes[j]!.w) / 2 + gap - Math.abs(dx);
+        const oy = (sizes[i]!.h + sizes[j]!.h) / 2 + gap - Math.abs(dy);
+        if (ox <= 0 || oy <= 0) continue;
+        moved = true;
+        // Push along the cheaper axis (ties and coincident centers split by index, so the result is deterministic).
+        if (oy <= ox) {
+          const s = dy === 0 ? 1 : Math.sign(dy);
+          pos[i] = clampTo({ x: a.x, y: a.y - (s * oy) / 2 }, i);
+          pos[j] = clampTo({ x: b.x, y: b.y + (s * oy) / 2 }, j);
+        } else {
+          const s = dx === 0 ? 1 : Math.sign(dx);
+          pos[i] = clampTo({ x: a.x - (s * ox) / 2, y: a.y }, i);
+          pos[j] = clampTo({ x: b.x + (s * ox) / 2, y: b.y }, j);
+        }
+      }
+    }
+    if (!moved) break;
+  }
+  return pos;
+}
+
+/** Total area where two of the boxes overlap (0 = clean layout); for tests and tuning. */
+export function labelOverlap(centers: readonly Pt[], sizes: readonly { w: number; h: number }[]): number {
+  let area = 0;
+  for (let i = 0; i < centers.length; i++) {
+    for (let j = i + 1; j < centers.length; j++) {
+      const ox = (sizes[i]!.w + sizes[j]!.w) / 2 - Math.abs(centers[j]!.x - centers[i]!.x);
+      const oy = (sizes[i]!.h + sizes[j]!.h) / 2 - Math.abs(centers[j]!.y - centers[i]!.y);
+      if (ox > 0 && oy > 0) area += ox * oy;
+    }
+  }
+  return area;
+}

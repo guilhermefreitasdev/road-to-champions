@@ -8,6 +8,7 @@
  * - Estreia no VCT: the first year the agent appears in a pro map scoreboard of our VLR data (2021 onward).
  * - Automática: the API leaves `fireMode` empty for automatic weapons and says "SemiAutomatic" otherwise.
  */
+import { createRng } from '../../engine/rng';
 import type { Role } from '../../engine/types';
 import { exact, exactOr, numeric, type Column } from './feedback';
 import { pickBand, pickOne, type Maker } from './planner';
@@ -335,8 +336,30 @@ export interface AgentePuzzle {
 export interface HabilidadePuzzle {
   agent: string;
   slot: AbilitySlot;
-  /** Starting rotation of the icon (degrees). */
+  /** Starting rotation of the icon (degrees). Kept so the planned puzzles stay the same; the screen no longer turns it. */
   rotation: 0 | 90 | 180 | 270;
+}
+
+/** Habilidade: the icon sits under a 4x4 grid of tiles. */
+export const ABILITY_TILES = 16;
+
+/** Tiles open by misses (one at the start; all of them once the puzzle ends). */
+export const ABILITY_TILES_OPEN = [1, 3, 5, 8, 11, 14] as const;
+
+/**
+ * The tiles uncovered so far (indices 0–15, row-major): a seeded order per puzzle (`valdle:tiles:<date>`, so it is the
+ * same for everyone), taking the first ABILITY_TILES_OPEN[misses] of it; every tile once it is over.
+ */
+export function abilityTiles(puzzle: { id: string }, misses: number, done: boolean): Set<number> {
+  if (done) return new Set(Array.from({ length: ABILITY_TILES }, (_, i) => i));
+  const rng = createRng(`valdle:tiles:${puzzle.id}`);
+  const order = Array.from({ length: ABILITY_TILES }, (_, i) => i);
+  for (let i = order.length - 1; i > 0; i--) {
+    const j = rng.int(0, i);
+    [order[i], order[j]] = [order[j]!, order[i]!];
+  }
+  const n = ABILITY_TILES_OPEN[Math.max(0, Math.min(misses, ABILITY_TILES_OPEN.length - 1))]!;
+  return new Set(order.slice(0, n));
 }
 export interface MapaPuzzle {
   map: string;
@@ -379,6 +402,12 @@ export function mapaPlaces(data: ClassicData): ClassicPlace[] {
     const m = data.mapById.get(p.map);
     return !!m && askableCallouts(m).some((c) => c.id === p.callout);
   });
+}
+
+/** Maps the Mapa game can ask (those with screenshots), by name: the buttons of "Que mapa é?". */
+export function mapaMaps(data: ClassicData): ClassicMap[] {
+  const ids = new Set(mapaPlaces(data).map((p) => p.map));
+  return data.maps.filter((m) => ids.has(m.id)).sort((a, b) => a.name.localeCompare(b.name, 'pt-BR'));
 }
 
 export function classicMakers(data: ClassicData) {
