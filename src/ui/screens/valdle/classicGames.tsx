@@ -14,7 +14,7 @@ import {
   type ClassicWeapon,
 } from '../../../game/valdle/classic';
 import { compareAll } from '../../../game/valdle/feedback';
-import { centroid, voronoiCells } from '../../../game/valdle/geometry';
+import { voronoiCells } from '../../../game/valdle/geometry';
 import { VALDLE_GAMES } from '../../../game/valdle/games';
 import { answerBonus, giveUp, guess, misses, resultOf, type ValdleProgress, type ValdlePuzzle } from '../../../game/valdle/play';
 import { mapMedia, mediaUrl } from '../../../data/media';
@@ -367,7 +367,7 @@ export function CalloutGame(props: GameProps<'callout'>) {
           )}
           {map.callouts.map((c, i) => {
             const isAnswer = c.id === answer.id;
-            const cls = `vd-cc ${SUPER_CLASS[c.superRegionEn] ?? 'spawn'}${isAnswer ? ' answer' : ''}${guessed.has(c.id) && !isAnswer ? ' guessed' : ''}`;
+            const cls = `vd-cc ${SUPER_CLASS[c.superRegionEn] ?? 'spawn'}${isAnswer ? ' answer' : ''}`;
             return <path key={c.id} d={path(cells[i]!)} className={cls} />;
           })}
           {supers.map((s) => {
@@ -380,26 +380,21 @@ export function CalloutGame(props: GameProps<'callout'>) {
               </text>
             );
           })}
-          {map.callouts.map((c, i) => {
-            const isAnswer = c.id === answer.id;
-            if (!isAnswer && !guessed.has(c.id) && !done) return null;
-            const ce = centroid(cells[i]!);
-            return (
-              <g key={`l-${c.id}`} className={isAnswer ? 'vd-cc-label answer' : 'vd-cc-label'}>
-                {isAnswer && <circle cx={c.x * S} cy={c.y * S} r={16} className="vd-cc-pin" />}
-                {(done || !isAnswer) && (
-                  <text
-                    x={Math.min(0.86, Math.max(0.14, isAnswer ? c.x : ce.x)) * S}
-                    y={Math.min(0.96, Math.max(0.04, isAnswer ? c.y + 0.044 : ce.y)) * S}
-                    textAnchor="middle"
-                    dominantBaseline="middle"
-                  >
-                    {calloutLabel(c)}
-                  </text>
-                )}
-              </g>
-            );
-          })}
+          {/* Only the asked callout is ever named or pinned: labelling the other cells (or the wrong guesses) would teach
+              the map and give away later puzzles on the same map. */}
+          <g className="vd-cc-label answer">
+            <circle cx={answer.x * S} cy={answer.y * S} r={16} className="vd-cc-pin" />
+            {done && (
+              <text
+                x={Math.min(0.86, Math.max(0.14, answer.x)) * S}
+                y={Math.min(0.96, Math.max(0.04, answer.y + 0.044)) * S}
+                textAnchor="middle"
+                dominantBaseline="middle"
+              >
+                {calloutLabel(answer)}
+              </text>
+            )}
+          </g>
         </svg>
       </div>
       <MissList

@@ -10729,11 +10729,6 @@ button.vd-bonus-option.wrong {
   fill: #4b6075;
 }
 
-.vd-cc.guessed {
-  fill-opacity: 0.12;
-  stroke-dasharray: 10 8;
-}
-
 .vd-cc.answer {
   fill: #ffffff;
   fill-opacity: 0.85;
