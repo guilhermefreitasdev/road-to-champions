@@ -11,8 +11,13 @@
 //   sounds: lists every audio file under "Category:Audio Files" whose category or title names a weapon, with URL, type
 //           and size, in scripts/wiki/out/weapon-audio-candidates.json. Nothing is downloaded: the single-shot files of
 //           the default weapons are picked by a person from that list first (docs/data.md, "VALORANT Wiki").
+//   quotes: survey for the Valdle "Fala" game. For every agent of src/data/game/agents.json it saves the raw wikitext of
+//           the agent's subpages that hold voice lines (English wiki and, when the wiki has one, the Portuguese one,
+//           found through the page's language links and the pt-br API) under scripts/wiki/out/quotes-raw/<lang>/, plus
+//           an index (quotes-index.json). Nothing is parsed into the game yet: the page layout is read first, then the
+//           parser is written against the real markup (never guessed).
 //
-// Usage: npm run data:wiki -- [--only=places,sounds] [--refresh]   |   npm run data:wiki -- --only=rehash
+// Usage: npm run data:wiki -- [--only=places,sounds,quotes] [--refresh]   |   npm run data:wiki -- --only=rehash
 // The sandbox the game is built in cannot reach the wiki, so this runs on a normal machine. Polite: one request every
 // 2 s, a descriptive User-Agent, retries with back-off on 429/5xx, and every API answer cached in .cache/wiki.
 // Media from the wiki are Riot Games IP (used under Riot's "Legal Jibber Jabber" fan policy) collected by the
@@ -88,10 +93,12 @@ async function findApi() {
 }
 
 let API;
+/** The English API (cache keys stay as before for it); other locales are keyed by their own URL. */
+let EN_API;
 /** One cached API query (params without format), returning the parsed JSON. */
 async function api(params) {
   const qs = new URLSearchParams({ ...params, format: 'json', formatversion: '2' }).toString();
-  const file = join(CACHE, `${createHash('sha1').update(qs).digest('hex')}.json`);
+  const file = join(CACHE, `${createHash('sha1').update(API === EN_API ? qs : `${API}?${qs}`).digest('hex')}.json`);
   if (!refresh) {
     try {
       return await readJson(file);
@@ -269,7 +276,80 @@ async function sounds() {
   console.log(`sounds: ${rows.length} audio files that name a weapon`, per);
 }
 
+/** The first api.php among `candidates` that answers siteinfo, or null (no error). */
+async function probeApi(candidates) {
+  for (const url of candidates) {
+    try {
+      const json = await (await politeFetch(`${url}?action=query&meta=siteinfo&format=json&formatversion=2`)).json();
+      if (json?.query?.general) return url;
+    } catch {
+      /* try the next one */
+    }
+  }
+  return null;
+}
+
+/** Subpages "<Agent>/..." of the current API's wiki (titles only). */
+async function subpages(agent) {
+  const json = await api({ action: 'query', list: 'allpages', apprefix: `${agent}/`, aplimit: '100' });
+  return json.query.allpages.map((p) => p.title);
+}
+
+const QUOTE_PAGE = /quote|voice|line|fala|frase|cita|di[aá]logo|voz/i;
+
+async function quotes() {
+  const agents = (await readJson(join(GAME_DIR, 'agents.json'))).map((a) => a.displayName ?? a.name);
+  const index = { credit: CREDIT, generatedAt: new Date().toISOString().slice(0, 10), en: EN_API, pt: null, agents: {} };
+  const save = async (lang, title, wikitext) => {
+    const file = join(OUT, 'quotes-raw', lang, `${title.replace(/[^\p{L}\p{N}]+/gu, '_')}.wikitext`);
+    await mkdir(dirname(file), { recursive: true });
+    await writeFile(file, wikitext, 'utf8');
+    return file.slice(ROOT.length + 1);
+  };
+  const wikitextOf = async (title) => (await api({ action: 'parse', page: title, prop: 'wikitext|langlinks' })).parse;
+
+  // English: the agent's quote/voice subpages (and the main page when no subpage matches).
+  for (const agent of agents) {
+    const entry = (index.agents[agent] = { en: [], pt: [] });
+    let titles = (await subpages(agent)).filter((t) => QUOTE_PAGE.test(t.slice(agent.length + 1)));
+    if (!titles.length) titles = [`${agent}/Quotes`];
+    for (const title of titles) {
+      try {
+        const parsed = await wikitextOf(title);
+        const pt = (parsed.langlinks ?? []).find((l) => /^pt/i.test(l.lang));
+        entry.en.push({ title, file: await save('en', title, parsed.wikitext), ptTitle: pt?.title ?? null, ptUrl: pt?.url ?? null });
+      } catch (e) {
+        entry.en.push({ title, error: e.message });
+      }
+    }
+  }
+
+  // Portuguese: a pt-br API, when the wiki has one.
+  const ptApi = process.env.WIKI_API_PT ?? (await probeApi([`${SITE}/pt-br/api.php`, `${SITE}/pt-br/w/api.php`, `${SITE}/pt/api.php`]));
+  index.pt = ptApi;
+  if (ptApi) {
+    API = ptApi;
+    for (const agent of agents) {
+      const entry = index.agents[agent];
+      const linked = entry.en.map((e) => e.ptTitle).filter(Boolean);
+      let titles = [...new Set([...linked, ...(await subpages(agent)).filter((t) => QUOTE_PAGE.test(t.slice(agent.length + 1)))])];
+      for (const title of titles) {
+        try {
+          entry.pt.push({ title, file: await save('pt', title, (await wikitextOf(title)).wikitext) });
+        } catch (e) {
+          entry.pt.push({ title, error: e.message });
+        }
+      }
+    }
+    API = EN_API;
+  }
+  await writeJson(join(OUT, 'quotes-index.json'), index);
+  const count = (lang) => Object.values(index.agents).reduce((n, a) => n + a[lang].filter((x) => x.file).length, 0);
+  console.log(`quotes: ${count('en')} English pages, ${count('pt')} Portuguese pages (pt API: ${ptApi ?? 'none found'})`);
+}
+
 if (only.has('rehash')) await rehash();
-if (only.has('places') || only.has('sounds')) API = await findApi();
+if (only.has('places') || only.has('sounds') || only.has('quotes')) API = EN_API = await findApi();
 if (only.has('places')) await places();
 if (only.has('sounds')) await sounds();
+if (only.has('quotes')) await quotes();

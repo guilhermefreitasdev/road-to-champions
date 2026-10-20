@@ -274,6 +274,8 @@ Fonte: a wiki oficial da comunidade, [wiki.playvalorant.com](https://wiki.playva
 - **Renomear** (`--only=rehash`, sem rede): renomeia os arquivos já listados em `places.json` para os nomes do `placeFile` e regrava o JSON (usado na migração das pastas por mapa para os hashes).
 - **Sons** (`--only=sounds`): lista em `scripts/wiki/out/weapon-audio-candidates.json` os áudios de `Category:Audio Files` cujo nome ou categoria cita uma arma (URL, tipo, tamanho, página). Não baixa nada: os tiros únicos das armas padrão são escolhidos por uma pessoa nessa lista antes de entrar no jogo, porque a maioria dos áudios da wiki é de skins.
 
+- **Falas** (`--only=quotes`): levantamento para o jogo "Fala" do Valdle. Salva o wikitext cru das subpáginas de falas de cada agente (wiki em inglês e, se existir, a em português, achada pelos links de idioma e pela API pt-br) em `scripts/wiki/out/quotes-raw/<idioma>/` e um índice em `scripts/wiki/out/quotes-index.json`. Ainda não vira dado do jogo: o formato das páginas é lido primeiro e o parser é escrito sobre a marcação real.
+
 ```bash
 npm run data:wiki                      # lugares + lista de sons
 npm run data:wiki -- --only=places     # só os lugares
