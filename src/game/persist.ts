@@ -3,13 +3,14 @@
  * naming three card ids: they become indices into the map's ten players. Player lines become arrays, and every card
  * id (series and box scores) an index into one table of the save. A full season goes from ~1.4 MB to < 400 KB.
  * `serializeRun` / `deserializeRun` (and the season pair) are what storage.ts should call; `deserialize*` also
- * accepts an unpacked save and always validates with parseRun / parseSeason.
+ * accepts an unpacked save and always validates with parseRun / parseSeason (parseCareer for the career pair).
  */
 import type { KillEvent, MapResult, PlayerLine, RoundResult } from '../engine/match';
 import type { CompactSeries } from './boxscore';
 import type { SeriesResult } from '../engine/series';
 import { parseRun, type RunState } from './run';
 import { parseSeason, type SeasonState } from './season';
+import { parseCareer, type CareerState } from './career/career';
 
 /** A round as [winner, side of team A (0 attack, 1 defense), then killer, victim, assister (−1 = none) per kill]. */
 type PackedRound = number[];
@@ -148,6 +149,19 @@ export function serializeSeason(s: SeasonState): string {
 export function deserializeSeason(text: string): SeasonState | null {
   try {
     return parseSeason(unpack(text));
+  } catch {
+    return null;
+  }
+}
+
+/** Career saves: the same packing (the season's user series and box scores); history and players are plain JSON. */
+export function serializeCareer(c: CareerState): string {
+  return pack(c);
+}
+
+export function deserializeCareer(text: string): CareerState | null {
+  try {
+    return parseCareer(unpack(text));
   } catch {
     return null;
   }

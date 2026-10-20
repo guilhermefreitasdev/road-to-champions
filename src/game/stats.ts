@@ -275,10 +275,20 @@ function aggregate(results: readonly NSeries[], ids?: Iterable<string>): PlayerS
 }
 
 /** How to describe the entrants and the cards' OVR of one competition (a run, or one stage of a season). */
-interface RowContext {
+export interface RowContext {
   teamName: (entrantId: string) => string;
   /** OVR of a card id as used by that entrant (its lineup), or computed for a card no longer in it. */
   ovr: (entrantId: string, cardId: string) => number;
+  /** Real team id for the logo (default: USER_ID for the user, else the card's own team). */
+  teamId?: (entrantId: string, cardId: string) => string;
+}
+
+/**
+ * Box scores → StatRows for any competition (used by the career mode): every player who played, with his team,
+ * role and OVR as `ctx` describes them; `onlyUser` keeps the USER_ID entrant's players.
+ */
+export function statRows(boxes: readonly CompactSeries[], ctx: RowContext, onlyUser = false): StatRow[] {
+  return rows(boxes, ctx, onlyUser);
 }
 
 /** Box scores → StatRows: every player who played, with his team, role and OVR as used. */
@@ -298,7 +308,7 @@ function rows(boxes: readonly CompactSeries[], ctx: RowContext, onlyUser = false
     const isUser = entrantId === USER_ID;
     return {
       ...p,
-      teamId: isUser ? USER_ID : card?.teamId ?? entrantId,
+      teamId: ctx.teamId ? ctx.teamId(entrantId, p.cardId) : isUser ? USER_ID : card?.teamId ?? entrantId,
       entrantId,
       teamName: nameOf(entrantId),
       isUser,

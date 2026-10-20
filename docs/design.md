@@ -10,7 +10,7 @@ jogadores históricos (card = jogador + evento, ex.: "aspas @ LOUD, Champions 20
 | Ultimate Draft | 5 opções fixas por pick (seed por run), sem reroll |
 | Complete Trials (secundário) | Comece do seu servidor: escolha a região (Americas/EMEA/Pacific/China) e o campo (Atual ou Prime), drafte só com elencos de times dela, dispute a liga regional (12 times), o Masters (8) e o Champions (16). Ver "Modo Complete Trials" |
 | Diário | 4 desafios por dia iguais para todos: Linhas Históricas, Quem é o Pro, O Impostor, Placar Clássico (ver "Modo Diário"). Minijogos estilo Valdle ficaram para "Outros modos" (`docs/ideias-futuras.md`) |
-| Carreira | Org em liga regional (Americas/EMEA/Pacific/China): Kickoff → Stage 1 → Masters → Stage 2 → Champions. Transferências, patrocínio, base (Challengers), aura Rising→Star→Legend→GOAT |
+| Carreira | Funde a sua org numa região (Americas/EMEA/Pacific/China) e jogue temporada após temporada (2026, 2027, …): pré-temporada → liga regional → janela → Masters → Champions → relatório. Contratos, transferências, patrocínio, base, scrims, envelhecimento e aura de carreira. Motor e estado prontos, interface pendente. Ver "Modo Carreira" |
 | Online | Ranked 1v1, lobby de 8 managers (fase final, precisa backend) |
 
 ## Núcleo de simulação
@@ -175,6 +175,122 @@ Pedido do dono (2026-10-20): "um mercado de agentes livres ao fim de cada etapa,
 ### Balanceamento (medido em `src/game/season.test.ts`, `TRIALS_REPORT=1`)
 Com o drafter guloso por OVR (o mesmo do `balance.test.ts`), n = 40 por campo: **Atual**: 15% chegam ao Masters, 8% ao top 4 do Masters, 0% de título; **Prime**: 13% / 5% / 0%. Ficar entre os 3 de 12 contra elencos reais de nível internacional é bem mais duro que o top 8 de 16 do modo principal (~74%). Com agentes por mapa, flex natos e familiaridade (2026-10-20, `TRIALS_N=120`, antes → depois): **Atual** 28% / 18% / 4% → 29% / 15% / 3%; **Prime** 11% / 4% / 0% → 10% / 7% / 0%, dentro do ruído. Pendente: decidir se a liga deve ter mais vagas, um teto de elencos de elite (como `FIELD_ELITE_CAP` no modo principal) ou rerolls extras; nada no motor foi tocado.
 
+## Modo Carreira (`src/game/career/`)
+
+Pedido do dono (2026-10-20), inspirado na Carreira do Road to Major: "você funda a org, contrata jogadores, faz transferências, fecha patrocínios e cuida da base. Scrims MD1 com relatório por jogador e MVP. Jogadores ganham aura com o auge da carreira: Rising → Star → LEGEND → GOAT, com fase de declínio". Motor e estado (puros, JSON, determinísticos, `CAREER_VERSION` 1) prontos; a interface vem depois, sobre a API resumida no topo de `src/game/career/index.ts`. Dinheiro em US$ mil, como o mercado do Complete Trials. Todo número abaixo está em `src/game/career/constants.ts` e é decisão de design, calibrada com o gerente guloso (`autopilot.ts`, `balance.test.ts`); nenhum é estatística real.
+
+### Org e dificuldade
+`createCareer({ name, tag, region, difficulty, seed })`: nome (como o do time), tag de 2–4 letras (das iniciais quando vazia), região e dificuldade. A dificuldade reaproveita as alavancas de `difficulty.ts` (bônus da IA contra o usuário, ruído do veto, scouting do coach) e soma duas da carreira:
+
+| Nível | Caixa inicial | Reputação inicial | Bônus da IA |
+|---|---|---|---|
+| Fácil | 1.500 | 30 | −0,5 |
+| Normal | 1.100 | 20 | +2,5 |
+| Difícil | 950 | 12 | +4 |
+| Lendário | 650 | 0 | +4,5 |
+
+### O mundo
+- **Ano inicial** = o último ano dos dados (2026); cada temporada avança um ano.
+- **Liga**: 11 times da IA, sorteados (seed) entre os elencos atuais da região (times cujo elenco mais recente é do último ano da região), um jogador por time (vaga duplicada vira o melhor agente livre da função). O formato é o da liga do Complete Trials (`league.ts`): 12 times, 2 grupos, playoffs de 6; os 3 primeiros vão ao Masters e os 4 primeiros ao Champions (como no Complete Trials).
+- **Resto do mundo**: os elencos atuais das outras regiões entram no Masters (2 + 2 + 1, os mais fortes de um sorteio de 2×) e no Champions (4 por região: os do Masters + sorteio), envelhecem como todos mas nunca trocam jogadores.
+- **Agentes livres**: todo outro jogador real, com o card mais recente; jogadores dos elencos atuais de outras regiões nunca estão livres; os da sua região cujo time não está na liga estão (jogam Challengers). Aposentado = experiência ≥ 11.
+- **Times da IA vivos**: a cada pré-temporada, envelhecem, aposentam quem tem experiência ≥ 11 (substituído pelo melhor livre da função; IGL por IGL quando há) e, com chance de 25%, trocam o pior não-IGL por um livre da função ao menos 2 de OVR melhor. Quando você compra um jogador da liga, o time contrata na hora o melhor livre da função (nunca um que está na sua lista de ofertas).
+
+### Jogadores e contratos
+`CareerPlayer`: id real do jogador, card (atributos deslocados para o OVR atual, como a fase do torneio), OVR, potencial, status (titular com slot / reserva / base), moral 0–100, contrato `{ salário, anos }`, fatos de carreira, histórico por temporada e a última evolução explicada. Elenco: 5 titulares + até 2 reservas; base com 3 vagas.
+- **Idade**: os dados não têm data de nascimento. A idade é a **experiência** = ano − ano do primeiro elenco do jogador nos dados. Um card antigo guarda o nível daquele evento; contratar não rejuvenesce ninguém.
+- **Preço**: valor = `playerValue` (`market.ts`: US$ 100 mil no OVR 80, dobra a cada 4, prêmios de aura e IGL). **Salário** por temporada = 25% do valor (mín. 10), ×1,25 para importados. **Taxa** na hora: comprar de um time da liga = 100% do valor (multa); agente livre da região = 25% (luvas); importado (livre de outra região) = 50%.
+- **Reputação exigida** para assinar: (OVR − 83) × 5, +10 para importado (85 → 10, 88 → 25, 90 → 35, 92 → 45). Abaixo disso, "Recusou".
+- **Contrato** de 1 a 3 temporadas (padrão 2), contando a atual. Cada virada de temporada tira 1; com 0 ele está sem contrato e sai quando a liga começa, a não ser que renove. **Renovação** (só na pré-temporada, no último ano ou vencido): salário recalculado pelo valor de hoje; recusa com moral < 35, com experiência ≥ 11 ("vai se aposentar") ou se a reputação está mais de 10 abaixo do que ele pediria hoje.
+- **Venda** (`releasePlayer`, nas janelas): credita 50% do valor enquanto há contrato; vencido, nada. O salário da temporada já pago não volta.
+- **Janelas**: pré-temporada sem limite de contratações (só o elenco); janela do meio da temporada (depois da liga) com no máximo 2, pagando na hora metade do salário da temporada. Ofertas por janela, sorteadas com a seed e o ano: pré-temporada 8 compras de times da liga, 3 livres por função + 2 (entre os melhores de cada função, para todo slot ter opção) e 4 importados; meio da temporada 4 / 1 por função + 1 / 2.
+- **Coach**: até 4 ofertas por pré-temporada (técnicos reais que não trabalham num time da liga nem num elenco atual de outra região). Salário = 20 + 15 × (tática + veto); reputação exigida = 8 × (tática + veto) − 10.
+
+### Evolução e envelhecimento (`world.ts`, `agingStep`)
+A cada virada de temporada, cada jogador (seu, da IA, do resto do mundo e livre) sorteia, com `createRng(seed:aging:ano:jogador)`, uma variação pela experiência:
+
+| Experiência | ≤ 1 | 2–3 | 4–5 | 6–7 | 8 | 9 | ≥ 10 |
+|---|---|---|---|---|---|---|---|
+| OVR por temporada | +1 a +3 | 0 a +2 | 0 a +1 | −1 a +1 | −2 a 0 | −3 a −1 | −4 a −1 |
+
+Modificadores (os da IA e do resto do mundo só têm o de prodígio, com tempo de jogo cheio): prodígio jovem +1 no crescimento; **tempo de jogo**: o crescimento vale × (0,5 + 0,5 × parcela dos mapas do time jogados); **base** +1 (Challengers, sem o corte de tempo de jogo); **foco de treino** (até 2 jogadores) +1, ou 1 a menos de declínio; moral ≥ 70 +0,5, < 40 −0,5; ter jogado metade dos mapas num Masters/Champions +0,5. Arredondado, limitado a −5…+6 por temporada; o crescimento nunca passa do **potencial** e o declínio nunca leva abaixo de 60. Potencial = OVR do card mais recente + folga sorteada uma vez por carreira (experiência no início ≤ 1: +2 a +6; 2–3: +1 a +4; 4–5: 0 a +2; depois 0 a +1), +2 para prodígio, teto 95.
+
+**Nível da cena.** O OVR de um card é percentil dentro do ano, mas os dados não têm estreias depois de 2026: sem correção, a geração 2025–26 só amadurece e a liga da IA subia ~+3,6 de força em 5 temporadas (medido). `sceneLevel` mede quanto a média da população de referência (todos os elencos atuais de 2026) teria andado e `sceneShift` aplica a variação arredondada, com sinal trocado, a todos (normalmente −1, 0 ou +1; com a seed do relatório: −1, −1, 0, 0, +1). Aparece na explicação da evolução como "Nível da cena". Com ela a liga da IA sobe só ~+1,8 em 5 temporadas (trocas por agentes livres melhores).
+
+Medido (`CAREER_REPORT=1`, OVR médio contra 2026, com a correção, temporadas 1 → 5): jovens (exp. ≤ 1) +0,5 / +0,5 / +1,3 / +1,8 / +3,0; prodígios jovens +0,8 / +1,4 / +2,2 / +2,8 / +3,8; auge (4–5) −0,9 / −1,8 / −2,4 / −3,9 / −5,3; veteranos (≥ 5) −1,1 / −2,2 / −3,3 / −5,1 / −6,8.
+
+**Fases**: Jovem (exp. ≤ 3), Auge (4–7), Veterano (≥ 8) e **Lenda em declínio** (veterano com aura Lenda ou GOAT).
+
+### Aura de carreira
+Fatos ganhos dentro da carreira (`CareerFacts`): Masters/Champions jogados, títulos neles, eventos com rating no top 3 (mín. 4 mapas), eventos com rating ≥ 1,10 (o rating estimado do simulador) e prêmios de MVP da temporada (cada um conta como um top 3). Somados aos fatos reais do card (`Card.career`), passam pelas mesmas faixas dos cards (`auraTier` de `cards.ts`): Em ascensão → Estrela → Lenda → GOAT. Nunca abaixo da aura do próprio card. A aura entra na força como em qualquer partida (mapa decisivo e prorrogação, teto +1) e no valor de mercado.
+
+### Moral
+Começa em 65. Depois de cada etapa: quem jogou metade dos mapas +4, quem jogou menos de 25% −6; liga top 3 +4, 9º ou pior −4; título +8 para o elenco. Scrim: vitória +2 para os cinco, derrota −1, MVP do scrim +2. Entre temporadas volta metade do caminho até 65. Efeito: OVR +1 com moral ≥ 80, −1 com ≤ 25; evolução ±0,5; renovação recusada abaixo de 35.
+
+### Temporada
+`phase`: **pré-temporada** (contratos, mercado, patrocínios, base, coach, foco, scrims; `startStage` exige 5 titulares com contrato e caixa depois da folha ≥ −300, ou ≥ 0 sob alerta de dívida) → **liga** (sai quem está sem contrato, paga a folha inteira da temporada e o coach, credita o fixo dos patrocinadores) → **janela do meio** → `startStage` monta o **Masters** (com ou sem você) e depois o **Champions**; uma etapa sem você é jogada sozinha → **relatório** → `advanceToNextSeason`. As suas partidas usam `userPendingMatch` / `beginUserVeto` / `applyUserVeto` / `playUserMatch`, como no Complete Trials; a escalação pode mudar entre partidas (`setStarter`, `benchPlayer`, `autoLineup`).
+
+**Premiação** (por colocação; a liga paga todo mundo, divisão de receita):
+
+| | 1º | 2º | 3º | 4º | 5º–6º | 7º–8º | 9º–12º (liga: 9º–10º) | 13º–16º (liga: 11º–12º) |
+|---|---|---|---|---|---|---|---|---|
+| Liga | 500 | 400 | 320 | 260 | 220 | 180 | 150 | 120 |
+| Masters | 700 | 500 | 380 | 300 | 220 | 180 | — | — |
+| Champions | 1.500 | 1.000 | 700 | 550 | 400 | 300 | 220 | 180 |
+
+**Reputação** (0–100) no fim da temporada: liga 1º +12 · 2º +10 · 3º +8 · 4º +6 · 5º–6º +4 · 7º–8º +2 · 9º–10º 0 · 11º–12º −2; Masters +4 por jogar + (1º +10 · 2º +6 · 3º +4 · 4º +3 · 5º–6º +1); Champions +6 por jogar + (1º +15 · 2º +10 · 3º +7 · 4º +5 · 5º–6º +3 · 7º–8º +2); MVP da temporada na org +3; −2 por objetivo de patrocínio perdido; −1 de esquecimento.
+
+**Relatório** (`SeasonRecord`): colocações, títulos, campeões de cada etapa, prêmios (MVP da temporada = melhor rating com ≥ 8 mapas entre todos os jogadores da temporada; **Revelação** = o melhor entre quem joga a liga pela primeira vez na carreira — na 1ª temporada, quem tem experiência ≤ 1; destaque da org), patrocínios cumpridos, dinheiro por tipo, reputação e o caminho ("Liga 2º → Masters 3º → Champions 9º–12º"). Cada jogador ganha a linha da temporada (OVR, mapas, parcela, rating, ACS, K/D/A, MVPs, internacional).
+
+### Patrocínios
+Ofertas a cada pré-temporada: 3 da faixa da reputação e 1 da faixa de baixo. Contrato de uma temporada: o **fixo** entra quando a liga começa; o **bônus** no fim, se o objetivo for cumprido; se não, −2 de reputação. Vagas: 1 (reputação < 35), 2 (< 65), 3.
+
+| Faixa (reputação) | Fixo (±10%) | Objetivos (bônus × fixo) |
+|---|---|---|
+| 0–24 | 150 | playoffs da liga (0,4), top 4 da liga (0,6), jogador no top 5 de rating da temporada (0,6) |
+| 25–49 | 220 | top 4 (0,6), chegar ao Masters (1), top 5 de rating |
+| 50–74 | 320 | Masters, chegar ao Champions (1,5), top 5 de rating |
+| 75+ | 450 | Champions, um título — liga, Masters ou Champions (2), Masters |
+
+Nomes de patrocinadores são fictícios (nunca marcas reais).
+
+### Base
+3 vagas. Prospectos: até 4 por pré-temporada, agentes livres da região com experiência ≤ 2 e OVR ≤ 78 (os melhores vão para o mercado), os de maior potencial de um sorteio. Sem taxa, salário fixo de 15, contrato de 3 temporadas. Crescem +1 por temporada a mais (sem precisar de tempo de jogo) e +1 com foco de treino. `promoteAcademy` (numa janela) leva ao elenco principal com contrato pelo valor dele (2 temporadas); vender funciona como para qualquer jogador.
+
+### Scrims
+`playScrim(estado, adversário, mapa?)`: MD1 (`simulateSeries` bestOf 1; com mapa escolhido, o veto bane os outros seis) contra um time da liga ou um elenco atual de outra região, com a fase do torneio da etapa e o bônus da IA da dificuldade. Limite: 3 na liga (a pré-temporada conta para ela), 2 no Masters (a janela do meio conta para ele), 2 no Champions. Relatório por jogador (`scrimReport`: rating, K/D/A, ACS, multikills, KAST, FK/FD, agentes) e MVP; a série completa fica em `userSeries` (`scrim:N`) para a reprodução. Efeitos pequenos: +1 mapa jogado naquele mapa para a org (familiaridade, `familiarity.ts`) e a moral (acima). Nunca mexe na tabela, nos box scores da temporada nem no caixa.
+
+### Finanças e falência
+Caixa = início + patrocínios + premiações + vendas − salários − taxas (`ledger` da temporada; o teste confere `caixa = início + Σ ledger`). Nenhuma ação do usuário deixa o caixa negativo (contratar exige caixa para a taxa); só a folha salarial, cobrada no início da liga, pode, até o limite de crédito de 300. Terminar a temporada no vermelho liga o **alerta de dívida**: na temporada seguinte não há crédito (a liga só começa com caixa ≥ 0 depois da folha). **Falência** (carreira encerrada, `phase: 'over'`): terminar a temporada com caixa ≤ −1.000, ou no vermelho de novo sob alerta. Escolhido assim para a falência ser a consequência de insistir no erro, não de uma temporada ruim.
+
+### Balanceamento (`balance.test.ts`, `CAREER_REPORT=1 CAREER_N=40`, gerente guloso, 5 temporadas)
+Gerente guloso: renova quem ainda serve, aceita os patrocínios que mais pagam (fixo + bônus × chance estimada), contrata o melhor coach que o caixa aguenta, preenche slots dentro de um orçamento por vaga, faz até 3 trocas por pré-temporada (1 no meio) quando sobem a força em ≥ 0,8 sem deixar o caixa depois da folha abaixo de 0 (`CAREER_RESERVE=-300`: usa o crédito), escala o melhor time, contrata prospectos de potencial alto e usa os scrims. Regiões alternadas pela seed.
+
+| Nível | Temporada | Masters | Champions | Título da liga | Título do Masters | Título do Champions | Algum título | Caixa (mediana) | Reputação |
+|---|---|---|---|---|---|---|---|---|---|
+| Fácil | 1 | 48% | 60% | 25% | 13% | 15% | 40% | 1.410 | 46 |
+| | 3 | 75% | 85% | 40% | 48% | 45% | 68% | 5.135 | 97 |
+| | 5 | 80% | 83% | 58% | 40% | 58% | 75% | 13.150 | 100 |
+| Normal | 1 | 23% | 30% | 13% | 5% | 0% | 13% | 595 | 21 |
+| | 3 | 48% | 58% | 20% | 15% | 15% | 33% | 1.445 | 42 |
+| | 5 | 63% | 68% | 33% | 38% | 20% | 53% | 4.225 | 91 |
+| Difícil | 1 | 13% | 18% | 3% | 0% | 0% | 3% | 560 | 9 |
+| | 3 | 23% | 38% | 10% | 3% | 3% | 15% | 620 | 13 |
+| | 5 | 23% | 25% | 10% | 8% | 3% | 13% | 1.050 | 23 |
+| Lendário | 1 | 0% | 0% | 0% | 0% | 0% | 0% | 450 | 0 |
+| | 3 | 3% | 8% | 3% | 0% | 0% | 3% | 485 | 0 |
+| | 5 | 3% | 8% | 0% | 0% | 0% | 0% | 615 | 0 |
+
+Primeiro título: Fácil 36/40 carreiras (mediana na 2ª temporada), Normal 30/40 (3ª), Difícil 13/40 (3ª), Lendário 1/40. Falências: 0/40 em todos os níveis, também com o gerente usando o crédito (Normal, reserva −300: 0/40) — o limite de crédito e o alerta de dívida seguram quem não insiste. Força mediana do usuário no Normal 84,5 → 90,6 em 5 temporadas; liga da IA 80,7 → 82,4. Metas: Normal desafiador (nenhum título do Champions na 1ª temporada, 15–20% a partir da 3ª), Fácil confortável, Lendário punitivo. O efeito bola de neve (caixa e reputação crescem com títulos) é proposital: é a recompensa da boa gestão; as premiações internacionais foram cortadas (Champions 2.000 → 1.500, Masters 900 → 700) para não explodir.
+
+Primeiras medições e o que mudou: com salário de 35% do valor e patrocínio de 100 o meio da tabela perdia ~265 por temporada (salário → 25%, patrocínio base 150, liga paga a todos); a reputação entrava em espiral para 0 no Normal (reputação exigida (OVR − 81) × 5 → (OVR − 83) × 5, esquecimento −2 → −1, objetivo perdido −3 → −2, liga mais generosa); prospectos de OVR 85 iam para a base (teto 78); a liga da IA inflava +5 (agentes livres passaram a envelhecer como todos, curva dos jovens +2…+4 → +1…+3, trocas da IA 35% → 25% com ganho mínimo 2, e o nível da cena).
+
+### Save
+`serializeCareer` / `deserializeCareer` (`src/game/persist.ts`, o mesmo empacotamento da temporada) e `parseCareer` (valida). Só a temporada atual guarda séries completas (`userSeries`, partidas e scrims) e box scores (`boxScores`); ao virar a temporada ficam o relatório (`history`) e as linhas por jogador. Medido: 220–280 KB empacotado numa temporada completa (0,6–1 MB em JSON cru); o histórico soma ~2 KB por temporada. Chave sugerida para a interface: `rtc:career:v1`.
+
+### Fora por enquanto
+Interface; salário negociável e cláusulas; empréstimos; lesões; rebaixamento/acesso da liga; reputação por região; times da IA de outras regiões trocando jogadores.
+
 ## Modo Diário (`src/game/daily/`, telas `src/ui/screens/Daily*.tsx`)
 
 Implementado em 2026-10-20, no estilo do Daily do Road to Major: **quatro desafios por dia, iguais para todos**, todos sobre a cena pro e todos tirados dos nossos dados (nada inventado). As abas no estilo Valdle (Pro Clássico, Agente, Habilidade, Mapa, Callout, Grade 3x3, Conexões...) saíram daqui e ficaram para o projeto "Outros modos" (`docs/ideias-futuras.md`).
@@ -214,7 +330,7 @@ Tempo real: ver docs/ideias-futuras.md (em espera).
 ## Roadmap
 1. MVP: Draft + snapshot estático + placar VLR + card compartilhável.
 2. Diário (4 desafios da cena pro, feito) + Ultimate Draft — ciclo viral diário.
-3. Carreira.
+3. Carreira (motor e estado prontos em `src/game/career/`; falta a interface).
 4. Contas + Online.
 
 ## Balanceamento (estado atual, com dados reais)
