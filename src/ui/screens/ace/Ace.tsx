@@ -314,7 +314,7 @@ function AceRound({
         }
       />
       <p className="small muted ace-honesty">
-        <Icon name="help" /> O player do YouTube e o killfeed podem mostrar o nome — vale a honestidade.
+        <Icon name="help" /> O YouTube pode mostrar o título do vídeo por alguns segundos ao começar ou ao passar o mouse; vale a honestidade.
       </p>
 
       {!done && <p className="daily-rule">De quem é este ace? Cada erro compara o seu palpite com a resposta. Depois de 2 erros abre o evento; depois de 4, o time.</p>}

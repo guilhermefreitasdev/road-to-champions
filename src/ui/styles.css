@@ -11059,8 +11059,9 @@ button.vd-tile.picked {
   }
 }
 
-/* Acerte o ace (screens/ace/): our neutral poster before the click (no YouTube thumbnail), the 16:9 embed (never
-   covered), the fallback when YouTube refuses the video, hints, guess rows (Valdle's), the reveal and free filters. */
+/* Acerte o ace (screens/ace/): our neutral poster before the click (no YouTube thumbnail) and in place of the player
+   while it is paused or over, the 16:9 API player (never covered) with our control bar below it, the fallback when
+   YouTube refuses the video, hints, guess rows (Valdle's), the reveal and free filters. */
 
 /* Five comparison cells fill the row, so long values ("Controlador") stay on one line. */
 .ace-challenge .vd-cells {
@@ -11155,7 +11156,8 @@ button.ace-poster:disabled .ace-poster-play {
   border: 1px solid var(--glass-line);
 }
 
-.ace-frame iframe {
+/* The iframe (ours, or the one the API swaps in for its placeholder) fills the 16:9 box. */
+.ace-frame > * {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -11187,6 +11189,81 @@ button.ace-poster:disabled .ace-poster-play {
 .ace-fallback a {
   color: var(--accent);
   font-weight: 700;
+}
+
+.ace-player {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+  min-width: 0;
+}
+
+.ace-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--sp-2);
+}
+
+button.ace-ctl {
+  min-height: 40px;
+  padding: 6px 12px;
+  font-size: var(--fs-sm);
+}
+
+button.ace-ctl .icon {
+  font-size: 1.05rem;
+}
+
+button.ace-ctl-alert {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+.ace-time {
+  display: flex;
+  flex: 1 1 120px;
+  align-items: center;
+  gap: var(--sp-2);
+  min-width: 0;
+  color: var(--muted);
+  font-size: var(--fs-sm);
+  font-variant-numeric: tabular-nums;
+}
+
+.ace-time-bar {
+  position: relative;
+  flex: 1;
+  min-width: 32px;
+  height: 4px;
+  border-radius: 2px;
+  background: var(--surface-3);
+  overflow: hidden;
+}
+
+.ace-time-bar > span {
+  position: absolute;
+  inset: 0 auto 0 0;
+  background: var(--accent);
+  transition: width 0.25s linear;
+}
+
+.ace-time-text {
+  white-space: nowrap;
+}
+
+.ace-sound-note {
+  margin: 0;
+}
+
+@media (max-width: 560px) {
+  button.ace-ctl {
+    padding: 6px 10px;
+  }
+
+  button.ace-ctl .ace-ctl-text {
+    display: none;
+  }
 }
 
 .ace-honesty {

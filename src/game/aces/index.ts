@@ -1,6 +1,7 @@
 /**
- * "Acerte o ace" (docs/aces.md): video first. The player plays a real pro ace in a click-to-load YouTube embed
- * (`embedSrc`, youtube-nocookie) and guesses whose it is. Nothing that names the pro is shown before the round ends:
+ * "Acerte o ace" (docs/aces.md): video first. The player plays a real pro ace in a click-to-load YouTube player
+ * (IFrame Player API on youtube-nocookie with `embedPlayerVars`: no native controls; `embedSrc` only without the API)
+ * and guesses whose it is. Nothing that names the pro is shown before the round ends:
  * the puzzle is only a neutral id and the embed (video id, start, end) plus the Daily number; title, channel,
  * description and the facts come out of `reveal` once it is over.
  *

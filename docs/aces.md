@@ -90,10 +90,26 @@ Nunca se chuta link, round, agente, arma ou minuto. O que não foi conferido fic
   `embed` (id do vídeo, `start`, `end`); o Diário traz também a data e o número. Título, canal, descrição, link
   original, fatos e fontes saem só de `revealAce` / `reveal`, que devolve `null` enquanto a rodada está aberta.
 - **Player**: a interface mostra um marcador próprio e neutro ("Assistir ao ace", sem a miniatura do YouTube, que pode
-  mostrar rosto ou nome) e só no clique carrega o iframe de `embedSrc(...)`:
-  `https://www.youtube-nocookie.com/embed/<id>?start=S&end=E&rel=0&playsinline=1&autoplay=1`. Nada toca antes do
-  clique. O player do YouTube não é coberto nem mascarado (as políticas da API do YouTube não permitem), por isso ele
-  pode mostrar o título: a interface avisa ("vale a honestidade") e o Diário prefere títulos neutros.
+  mostrar rosto ou nome) e só no clique carrega a API IFrame do YouTube e cria o player em `youtube-nocookie.com` com
+  `embedPlayerVars(...)`: `controls=0` (sem a barra nativa, com título, progresso e compartilhar), `disablekb=1`,
+  `fs=0`, `rel=0`, `iv_load_policy=3`, `playsinline=1`, `cc_load_policy=0`, `autoplay=1` e `start`/`end` quando
+  conferidos. Nada toca nem é pedido ao YouTube antes do clique. Os controles são nossos, numa barra **abaixo** do
+  player (nunca por cima): Tocar/Pausar, Voltar 5 s, Recomeçar, Som e o tempo (`m:ss / m:ss`), tudo pela API.
+- **Por que o player some na pausa**: o YouTube mostra o título do vídeo (que muitas vezes diz o nome do pro)
+  sobretudo com o vídeo pausado, no fim ou ainda não iniciado. As políticas da API do YouTube proíbem cobrir, mascarar
+  ou esconder qualquer parte do player, então não pomos nada por cima dele, não o deixamos sem clique
+  (`pointer-events`) e não escondemos o logo nem os links do YouTube. Em vez disso, o player é criado no clique e já
+  toca (o clique libera o autoplay; se o navegador só deixar tocar sem som, ele começa mudo e a barra mostra "Ativar
+  som"), e quando ele pausa (pelo nosso botão ou por um clique no vídeo), termina ou dá erro, a interface **destrói o
+  player** e põe de volta o nosso marcador no mesmo lugar e do mesmo tamanho (16:9), com "Continuar de m:ss" ou
+  "Assistir de novo". Continuar cria um player novo naquele segundo (`start`). Isso é tirar o embed da página, não
+  cobri-lo. O que ainda pode aparecer do YouTube: o título e o canal por alguns segundos quando o vídeo começa (e
+  enquanto carrega) e ao passar o mouse sobre o vídeo, além do logo do YouTube; e o killfeed do próprio vídeo mostra
+  o nome. A interface avisa ("O YouTube pode mostrar o título do vídeo por alguns segundos ao começar ou ao passar o
+  mouse; vale a honestidade.") e o Diário prefere títulos neutros. Se a API não carregar (bloqueador), depois de 4 s
+  entra o iframe simples de `embedSrc(...)`
+  (`https://www.youtube-nocookie.com/embed/<id>?start=S&end=E&rel=0&playsinline=1&autoplay=1`), com os controles
+  nativos do YouTube.
 - **Palpites**: até 5. O palpite vem do autocomplete do pool (id do jogador) ou digitado (handle ou apelido, sem
   diferenciar maiúsculas e acentos).
 - **Comparação de um palpite errado**: o pro chutado contra a resposta em fatos que o vídeo não mostra: país, região,
@@ -165,8 +181,9 @@ Nunca se chuta link, round, agente, arma ou minuto. O que não foi conferido fic
 
 ## YouTube, créditos e fontes
 
-- **YouTube**: o vídeo é embutido só depois do clique do jogador, pelo domínio `youtube-nocookie.com`, sem autoplay
-  antes disso, sem miniatura carregada antes do clique, sem cobrir o player e sem baixar, copiar ou reenviar nada. Na
+- **YouTube**: o vídeo é embutido só depois do clique do jogador, pelo domínio `youtube-nocookie.com` e pela API
+  IFrame oficial, sem autoplay antes disso, sem miniatura carregada antes do clique, sem cobrir, mascarar ou desativar
+  o player (ele sai da página quando pausa ou termina; ver "Player") e sem baixar, copiar ou reenviar nada. Na
   revelação aparecem o título, o canal (crédito) e o link para o vídeo original no YouTube. Os direitos dos vídeos são
   dos canais e da Riot Games. Vídeo que não aceita ser embutido (oEmbed 401/403) não entra no jogo.
 - **VLR.gg** (vlr.gg): partidas, aba Performance e faixa de rounds. Sem API oficial; dados exibidos com atribuição,

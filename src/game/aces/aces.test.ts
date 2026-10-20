@@ -12,6 +12,8 @@ import {
   WATCH_LABEL,
   acesDailyPuzzle,
   embedSrc,
+  embedPlayerVars,
+  PLAYER_HOST,
   watchUrl,
   acesStats,
   aceResult,
@@ -220,6 +222,18 @@ describe('puzzles: nothing names the pro before the answer', () => {
     expect(embedSrc(withTimes.embed)).toBe('https://www.youtube-nocookie.com/embed/abcdefghi01?start=42&end=60&rel=0&playsinline=1&autoplay=1');
     expect(embedSrc(plain.embed)).toBe('https://www.youtube-nocookie.com/embed/abcdefghi02?rel=0&playsinline=1&autoplay=1');
     expect(watchUrl(FAKE[1]!.youtube!)).toBe(`${FAKE[1]!.youtube!.url}&t=42s`);
+  });
+
+  it('player vars: no native chrome, start/end only when verified, resume from a whole second never before start', () => {
+    const withTimes = pickFreeAce([FAKE[1]!], 1)!.embed;
+    const plain = pickFreeAce([FAKE[2]!], 1)!.embed;
+    const base = { autoplay: 1, controls: 0, disablekb: 1, fs: 0, rel: 0, iv_load_policy: 3, playsinline: 1, cc_load_policy: 0, enablejsapi: 1 };
+    expect(PLAYER_HOST).toBe('https://www.youtube-nocookie.com');
+    expect(embedPlayerVars(plain)).toEqual(base);
+    expect(embedPlayerVars(plain, 12.8)).toEqual({ ...base, start: 12 });
+    expect(embedPlayerVars(withTimes)).toEqual({ ...base, start: 42, end: 60 });
+    expect(embedPlayerVars(withTimes, 50.4)).toEqual({ ...base, start: 50, end: 60 });
+    expect(embedPlayerVars(withTimes, 3)).toEqual({ ...base, start: 42, end: 60 });
   });
 
   it('only checked, embeddable (or unchecked) videos with a pool player are playable', () => {

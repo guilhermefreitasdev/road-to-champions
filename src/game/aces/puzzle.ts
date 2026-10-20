@@ -36,8 +36,9 @@ export interface AceHint {
  * What the UI gets before the answer: the neutral id and what the click-to-load player needs (video id, start, end),
  * nothing else. The title, channel, description, watch URL and every fact of the ace stay in the entry and come out
  * only through `revealAce` once the round ends. The UI shows its own neutral placeholder (no YouTube thumbnail) and
- * loads `embedSrc(...)` (youtube-nocookie) only on the player's click; YouTube's own player UI is never covered, so it
- * may show the title on hover or pause, which is why the Daily prefers clips whose title does not name the pro.
+ * builds the YouTube player (youtube-nocookie, `embedPlayerVars`: no native controls) only on the player's click and
+ * removes it whenever it pauses or ends. YouTube's own player UI is never covered, so it may still show the title for a
+ * few seconds when it starts or on hover, which is why the Daily prefers clips whose title does not name the pro.
  */
 export interface AcePuzzle {
   /** Neutral id (VLR match, map game id, round): it never names the player. */
@@ -63,12 +64,45 @@ export const WATCH_LABEL = 'Assistir ao ace';
 export const EMBED_HOST = 'https://www.youtube-nocookie.com/embed/';
 
 /**
- * The iframe src of the click-to-load player: youtube-nocookie, only the ace (start/end when verified), no related
+ * The plain iframe src, used only when the IFrame Player API cannot load (then YouTube's native controls are the only
+ * ones; normally the player is built by the API with `embedPlayerVars`): youtube-nocookie, only the ace (start/end when verified), no related
  * videos from other channels, inline on phones, and autoplay only because it is loaded by the player's click.
  */
 export function embedSrc(e: AceEmbed): string {
   const q = [e.start ? `start=${e.start}` : null, e.end ? `end=${e.end}` : null, 'rel=0', 'playsinline=1', 'autoplay=1'].filter(Boolean);
   return `${EMBED_HOST}${e.videoId}?${q.join('&')}`;
+}
+
+/** Host of the IFrame Player API player (same privacy-enhanced domain as `embedSrc`). */
+export const PLAYER_HOST = 'https://www.youtube-nocookie.com';
+
+/** The IFrame Player API `playerVars` of the click-to-load player (docs/aces.md, "Player"). */
+export interface AcePlayerVars {
+  autoplay: 1;
+  /** No native controls (title bar, progress, share): our own bar under the player drives it through the API. */
+  controls: 0;
+  disablekb: 1;
+  fs: 0;
+  rel: 0;
+  iv_load_policy: 3;
+  playsinline: 1;
+  cc_load_policy: 0;
+  enablejsapi: 1;
+  start?: number;
+  end?: number;
+}
+
+/**
+ * playerVars for the API player: no native controls, keyboard, fullscreen, annotations or captions, related videos
+ * only from the same channel, inline on phones and autoplay (it is created by the player's click). `from` resumes at
+ * that second (whole seconds, never before the verified start); `end` only when verified.
+ */
+export function embedPlayerVars(e: AceEmbed, from: number | null = null): AcePlayerVars {
+  const vars: AcePlayerVars = { autoplay: 1, controls: 0, disablekb: 1, fs: 0, rel: 0, iv_load_policy: 3, playsinline: 1, cc_load_policy: 0, enablejsapi: 1 };
+  const start = Math.max(e.start ?? 0, Math.floor(from ?? 0));
+  if (start > 0) vars.start = start;
+  if (e.end) vars.end = e.end;
+  return vars;
 }
 
 /** The original video on YouTube (with `t=` when a start time was verified), for the reveal's credit link. */
