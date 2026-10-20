@@ -27,3 +27,18 @@ Status: decidido em 2026-10-19 deixar para depois. MVP usa snapshot estático ge
 1. MVP: snapshot estático manual.
 2. Se animarem: atualização agendada + Daily de partidas reais.
 3. Se virar negócio: GRID + plano comercial da Liquipedia → modo ao vivo de verdade.
+
+## Aba "Outros modos" (projeto à parte, ainda NÃO implementar)
+
+Decisão do dono (20/10/2026): o Valdle sai do jogo principal e vira uma aba "Outros modos", em duas versões
+criativas e separadas:
+- **Cena pro**: tudo sobre o cenário e os pros (Pro Clássico, Quem jogou de…, Comp Misteriosa, Grade 3x3, Conexões,
+  Linha do Tempo, Veto Quiz — ver `docs/design.md`, "Modo Diário").
+- **Jogo clássico**: só o Valorant em si (Agente Clássico, Habilidade, Fala, Mapa, Callout, Arma).
+
+### "Acerte o ace" (ideia do dono)
+- Aces famosos de pros, **sem vídeo embutido**: a interface mostra o contexto (evento, mapa, round, agente, placar)
+  e um **link para o YouTube**, para não pesar.
+- Desafio: o jogador tenta adivinhar **de quem é o ace** (e/ou mapa, agente, evento) a partir das pistas; o link
+  só aparece depois (ou como "assistir" ao final).
+- Dados: lista curada de aces reais com fonte (VLR/Liquipedia/vídeo oficial); nunca inventar jogada nem link.
