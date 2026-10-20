@@ -325,14 +325,19 @@ async function quotes() {
   }
 
   // Portuguese: a pt-br API, when the wiki has one.
-  const ptApi = process.env.WIKI_API_PT ?? (await probeApi([`${SITE}/pt-br/api.php`, `${SITE}/pt-br/w/api.php`, `${SITE}/pt/api.php`]));
+  // The official wiki is English-only (2026); the Portuguese fan wiki on Fandom is the fallback.
+  const ptApi =
+    process.env.WIKI_API_PT ??
+    (await probeApi([`${SITE}/pt-br/api.php`, `${SITE}/pt-br/w/api.php`, `${SITE}/pt/api.php`, 'https://valorant.fandom.com/pt-br/api.php']));
   index.pt = ptApi;
   if (ptApi) {
     API = ptApi;
     for (const agent of agents) {
       const entry = index.agents[agent];
       const linked = entry.en.map((e) => e.ptTitle).filter(Boolean);
-      let titles = [...new Set([...linked, ...(await subpages(agent)).filter((t) => QUOTE_PAGE.test(t.slice(agent.length + 1)))])];
+      const found = await api({ action: 'query', list: 'search', srsearch: `${agent} falas`, srlimit: '5' });
+      const searched = found.query.search.map((r) => r.title).filter((t) => t.includes(agent) && QUOTE_PAGE.test(t));
+      let titles = [...new Set([...linked, ...searched, ...(await subpages(agent)).filter((t) => QUOTE_PAGE.test(t.slice(agent.length + 1)))])];
       for (const title of titles) {
         try {
           entry.pt.push({ title, file: await save('pt', title, (await wikitextOf(title)).wikitext) });
