@@ -2,7 +2,7 @@ import { describe, expect, it } from 'vitest';
 import { SAMPLE_MAP_AFFINITY, SAMPLE_ROSTERS, sampleLineup } from '../data/sample';
 import { SAMPLE_MAP_POOL } from '../data/mapPools';
 import { findCard, findCoach, pickOpponents, rosterKey, rosterToLineup } from './roster';
-import { teamStrength } from './team';
+import { cardFit, teamStrength } from './team';
 import type { Role, RosterEntry } from './types';
 
 const ROLES: Role[] = ['duelist', 'initiator', 'controller', 'sentinel'];
@@ -118,6 +118,25 @@ describe('rosterToLineup', () => {
     };
     const slots = rosterToLineup(noSentinel).players.map((p) => p.slot);
     expect(new Set(slots)).toEqual(new Set(['duelist', 'initiator', 'controller', 'sentinel', 'flex']));
+  });
+
+  it('puts a natural flex in the free role he played before the flex slot', () => {
+    const r = SAMPLE_ROSTERS[0]!;
+    const flexed: RosterEntry = {
+      ...r,
+      cards: r.cards.map((c) =>
+        c.role === 'sentinel' || c.role === 'initiator'
+          ? { ...c, role: 'initiator' as const, flexRoles: ['initiator' as const, 'sentinel' as const] }
+          : c,
+      ),
+    };
+    const lineup = rosterToLineup(flexed);
+    const sentinel = lineup.players.find((p) => p.slot === 'sentinel')!;
+    expect(sentinel.card.role).toBe('initiator');
+    expect(cardFit(sentinel.card, 'sentinel')).toBe(1);
+    // Without flexRoles the doubled-up cards play at 0.9 (flex) and 0.75 (off-role): a weaker base.
+    const plain = rosterToLineup({ ...flexed, cards: flexed.cards.map((c) => ({ ...c, flexRoles: undefined })) });
+    expect(teamStrength(lineup).base).toBeGreaterThan(teamStrength(plain).base);
   });
 
   it('carries an unknown IGL to the lineup', () => {

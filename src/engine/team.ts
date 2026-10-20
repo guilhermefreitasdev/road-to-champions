@@ -1,7 +1,7 @@
 /**
  * Team strength, "Modelo v2" (docs/pesquisa-taticas.md §6, docs/design.md "Força do time v2").
  *
- * total = base (OVR × role fit) + composition + Σ weight_d × (dimension_d − reference_d) / 10
+ * total = base (OVR × card fit, see cardFit) + composition + Σ weight_d × (dimension_d − reference_d) / 10
  *
  * The five dimensions (0–100) say WHY a team is strong: mechanics, utility, decision (tactics: IGL-driven, coach
  * 15%), communication (chemistry) and clutch. A team at the reference level of every dimension (a typical real
@@ -10,10 +10,27 @@
  */
 import type { Card, Coach, Lineup, Role, Slot } from './types';
 
-/** Multiplier applied to a card's OVR depending on the slot it fills. */
+/** Multiplier applied to a card's OVR depending on the slot it fills (role only; see cardFit for the card-aware rule). */
 export function roleFit(cardRole: Role, slot: Slot): number {
   if (slot === cardRole) return 1;
   if (slot === 'flex') return 0.9;
+  return 0.75;
+}
+
+/** A natural flex ("flex nato"): the data says the player genuinely played two or more roles (`Card.flexRoles`). */
+export function isNaturalFlex(card: Pick<Card, 'flexRoles'>): boolean {
+  return (card.flexRoles?.length ?? 0) >= 2;
+}
+
+/**
+ * Card-aware role fit, used by the team strength, the form shares, the kill weights and the UI: like roleFit, but a
+ * role the player genuinely played (`flexRoles`) fits at 1.0, and a natural flex fills the flex slot at 1.0 instead
+ * of 0.9. Without `flexRoles` it is exactly roleFit.
+ */
+export function cardFit(card: Pick<Card, 'role' | 'flexRoles'>, slot: Slot): number {
+  if (slot === card.role) return 1;
+  if (slot === 'flex') return isNaturalFlex(card) ? 1 : 0.9;
+  if (card.flexRoles?.includes(slot)) return 1;
   return 0.75;
 }
 
@@ -202,7 +219,7 @@ export function teamDimensions(lineup: Lineup): TeamDimensions {
   const { players } = lineup;
   const n = players.length;
   const avg = (f: (p: (typeof players)[number]) => number) => players.reduce((s, p) => s + f(p), 0) / n;
-  const fit = (p: (typeof players)[number]) => roleFit(p.card.role, p.slot);
+  const fit = (p: (typeof players)[number]) => cardFit(p.card, p.slot);
 
   const mechanics = avg((p) => fit(p) * (0.6 * p.card.attrs.aim + 0.4 * p.card.attrs.entry));
 
@@ -244,7 +261,7 @@ export function teamStrength(lineup: Lineup): StrengthBreakdown {
   }
 
   const base =
-    players.reduce((sum, p) => sum + p.card.ovr * roleFit(p.card.role, p.slot), 0) / players.length;
+    players.reduce((sum, p) => sum + p.card.ovr * cardFit(p.card, p.slot), 0) / players.length;
 
   const slots = new Set(players.map((p) => p.slot));
   let composition = 0;

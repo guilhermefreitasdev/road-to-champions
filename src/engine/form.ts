@@ -8,7 +8,7 @@
  * (src/data/real/cards.ts) and their effects are small and bounded.
  */
 import { createRng, type Rng } from './rng';
-import { roleFit } from './team';
+import { cardFit } from './team';
 import type { AuraTier, Card, Lineup, LineupPlayer, MapName, Role } from './types';
 
 // --- Per-map form (§6.1) ---
@@ -69,7 +69,7 @@ export function mapFormZ(rng: Rng, prev?: number): number {
 
 /** Share of a lineup's strength that each player carries: OVR × fit over the sum. */
 export function strengthShares(players: readonly LineupPlayer[]): number[] {
-  const weights = players.map((p) => p.card.ovr * roleFit(p.card.role, p.slot));
+  const weights = players.map((p) => p.card.ovr * cardFit(p.card, p.slot));
   const sum = weights.reduce((s, w) => s + w, 0) || 1;
   return weights.map((w) => w / sum);
 }

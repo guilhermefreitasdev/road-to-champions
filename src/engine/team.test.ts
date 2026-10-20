@@ -9,9 +9,11 @@ import {
   SECOND_IGL_COMM_PENALTY,
   SECOND_IGL_DECISION_BONUS,
   UNKNOWN_IGL_DECISION,
+  cardFit,
   chemistryPairs,
   coachDecision,
   decisionDetail,
+  isNaturalFlex,
   roleFit,
   teamDimensions,
   teamStrength,
@@ -203,5 +205,39 @@ describe('mechanics and clutch', () => {
     expect(teamDimensions(better).decision).toBe(dims.decision);
     const offRole: Lineup = { ...SAMPLE_AURORA, players: SAMPLE_AURORA.players.map((p) => ({ ...p, slot: 'flex' as const })) };
     expect(teamDimensions(offRole).mechanics).toBeLessThan(dims.mechanics);
+  });
+});
+
+describe('cardFit (flex natos)', () => {
+  const base = SAMPLE_AURORA.players[0]!.card; // a duelist
+  const flex = { ...base, flexRoles: ['duelist' as const, 'initiator' as const] };
+
+  it('is roleFit when the card has no flexRoles (or only one role)', () => {
+    for (const slot of ['duelist', 'initiator', 'controller', 'sentinel', 'flex'] as const) {
+      expect(cardFit(base, slot)).toBe(roleFit(base.role, slot));
+      expect(cardFit({ ...base, flexRoles: ['duelist'] }, slot)).toBe(roleFit(base.role, slot));
+    }
+    expect(isNaturalFlex(base)).toBe(false);
+  });
+
+  it('gives a natural flex 1.0 in every role he played and in the flex slot', () => {
+    expect(isNaturalFlex(flex)).toBe(true);
+    expect(cardFit(flex, 'duelist')).toBe(1);
+    expect(cardFit(flex, 'initiator')).toBe(1);
+    expect(cardFit(flex, 'flex')).toBe(1);
+    expect(cardFit(flex, 'controller')).toBe(0.75);
+  });
+
+  it('raises the team strength of a lineup that uses the flex nato', () => {
+    const asInitiator: Lineup = {
+      ...SAMPLE_AURORA,
+      players: SAMPLE_AURORA.players.map((p, i) => (i === 0 ? { ...p, slot: 'flex' as const } : p)),
+    };
+    const natural: Lineup = {
+      ...asInitiator,
+      players: asInitiator.players.map((p, i) => (i === 0 ? { ...p, card: flex } : p)),
+    };
+    expect(teamStrength(natural).base).toBeGreaterThan(teamStrength(asInitiator).base);
+    expect(teamStrength(natural).base - teamStrength(asInitiator).base).toBeCloseTo((base.ovr * 0.1) / 5);
   });
 });

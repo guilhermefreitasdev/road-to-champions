@@ -7,7 +7,10 @@
  * the next match in the schedule is the user's, which waits for the user's veto. Once the user is eliminated
  * the rest of the tournament plays out on its own, so the champion is always known at the end.
  */
+import { AGENTS } from '../data/game';
 import { REAL_MAP_POOL, REAL_META, REAL_ROSTERS, realLineup } from '../data/real';
+import type { AgentRoles } from '../engine/agents';
+import { familiarityOf, recordMapsPlayed, type MapsPlayed } from '../engine/familiarity';
 import { applyTournamentForm, prodigyGrowth } from '../engine/form';
 import {
   availableCards,
@@ -55,13 +58,16 @@ export const RUN_POOL: readonly RosterEntry[] = REAL_ROSTERS;
 export const RUN_MAP_POOL: readonly MapName[] = REAL_MAP_POOL;
 /** Agent meta the comps are scored against (the veto pool's year), see src/data/real/meta.ts. */
 export const RUN_META = REAL_META;
+/** Agent → role (valorant-api.com snapshot), for the per-map agent picks (src/engine/agents.ts). */
+export const AGENT_ROLES: AgentRoles = Object.fromEntries(AGENTS.map((a) => [a.name, a.role]));
 /**
- * Save format version: bumped when saved runs stop making sense (v5 = Modelo v3: per-player form, multikills
+ * Save format version: bumped when saved runs stop making sense (v6 = agents per map in the map results, agent
+ * and familiarity edges, `mapsPlayed` in the state; v5 = Modelo v3: per-player form, multikills
  * and MVP in every map result, `presence` instead of `consistency`, aura on the cards; v4 = strength v2: five
  * dimensions and the `decision` attribute, stored in every map result; v3 = GSL groups instead of the Swiss
  * stage; v2 = real pool; v1 saves used fictional cards).
  */
-export const RUN_VERSION = 5;
+export const RUN_VERSION = 6;
 
 /** Entrant id of the user's team. Opponents use their roster key (`${teamId}-${eventId}`). */
 export const USER_ID = 'user';
@@ -91,6 +97,8 @@ export interface RunState {
   veto?: UserVeto;
   /** Full series of every match the user played, by match id (AI matches keep only the MatchResult). */
   userSeries: Record<string, SeriesResult>;
+  /** Maps every entrant played so far in this Champions (map familiarity, src/engine/familiarity.ts). */
+  mapsPlayed: MapsPlayed;
 }
 
 // ---------------------------------------------------------------------------
@@ -98,7 +106,7 @@ export interface RunState {
 // ---------------------------------------------------------------------------
 
 export function createRun(mode: DraftMode, seed: string): RunState {
-  return { version: RUN_VERSION, seed, mode, phase: 'draft', draft: createDraft(RUN_POOL, mode, seed), userSeries: {} };
+  return { version: RUN_VERSION, seed, mode, phase: 'draft', draft: createDraft(RUN_POOL, mode, seed), userSeries: {}, mapsPlayed: {} };
 }
 
 export function rollDraft(run: RunState): RunState {
@@ -176,14 +184,21 @@ export function startTournament(run: RunState, teamName: string): RunState {
 }
 
 /**
- * Field composition (balance lever): a real Champions has few favourites, so at most FIELD_ELITE_CAP opponents
- * may be "elite" rosters, i.e. in the top FIELD_ELITE_SHARE of the pool by AI strength. Teams are drawn in the
- * seeded order of pickOpponents (one roster per team, avoiding the user's players); an elite roster past the cap
- * is skipped and the next team takes its place.
+ * Field composition (balance lever): a real Champions has a few favourites, never none and never many. Every field
+ * has between FIELD_ELITE_MIN and FIELD_ELITE_CAP "elite" rosters, i.e. in the top FIELD_ELITE_SHARE of the pool by
+ * AI strength. Teams are drawn in the seeded order of pickOpponents (one roster per team, avoiding the user's
+ * players); an elite roster past the cap is skipped and the next team takes its place, and when the draw falls
+ * short of the floor the next elite rosters in that order replace the last non-elite ones.
  */
 export const FIELD_ELITE_SHARE = 0.2;
 /** 3 since strength v2 (was 2): the IGL-only top decile of drafted teams needed one more real contender. */
 export const FIELD_ELITE_CAP = 3;
+/**
+ * At least this many elite rosters per field, since the flex natos: natural flexes lifted the best drafted teams by
+ * ≈ 1.3 points and their title rate from 47% to ~55% (BT=30); a floor of 2 brought it back to 46% with the median
+ * unchanged (71% playoffs, 5% title); 3 gave 40% but a 4% median title (src/game/balance.test.ts).
+ */
+export const FIELD_ELITE_MIN = 2;
 
 const aiStrength = (entry: RosterEntry): number => teamStrength(realLineup(entry)).total;
 const ELITE_FLOOR = (() => {
@@ -194,16 +209,27 @@ const TEAM_TOTAL = new Set(RUN_POOL.map((e) => e.teamId)).size;
 
 /** Roster keys of the 15 opponents for a run (deterministic from the seed). */
 export function pickField(seed: string, exclude: readonly string[]): string[] {
-  const out: string[] = [];
+  const order = pickOpponents(RUN_POOL, TEAM_TOTAL, seed, exclude);
+  const isElite = order.map((e) => aiStrength(e) >= ELITE_FLOOR);
+  const chosen = new Set<number>();
   let elite = 0;
-  for (const entry of pickOpponents(RUN_POOL, TEAM_TOTAL, seed, exclude)) {
-    if (out.length === OPPONENT_COUNT) break;
-    if (aiStrength(entry) >= ELITE_FLOOR) {
+  for (let i = 0; i < order.length && chosen.size < OPPONENT_COUNT; i++) {
+    if (isElite[i]) {
       if (elite >= FIELD_ELITE_CAP) continue;
       elite++;
     }
-    out.push(rosterKey(entry));
+    chosen.add(i);
   }
+  // Floor: the next elite rosters in the draw order replace the last non-elite ones.
+  for (let i = 0; i < order.length && elite < FIELD_ELITE_MIN; i++) {
+    if (!isElite[i] || chosen.has(i)) continue;
+    const last = [...chosen].filter((j) => !isElite[j]).pop();
+    if (last === undefined) break;
+    chosen.delete(last);
+    chosen.add(i);
+    elite++;
+  }
+  const out = [...chosen].sort((x, y) => x - y).map((i) => rosterKey(order[i]!));
   if (out.length < OPPONENT_COUNT) throw new Error(`Field has ${out.length} opponents, needs ${OPPONENT_COUNT}`);
   return out;
 }
@@ -249,21 +275,72 @@ export function playUserMatch(run: RunState): RunState {
     throw new Error('The user match needs a complete veto');
   }
   const series = simulateSeries(lineupOf(run, match.a), lineupOf(run, match.b), createRng(`${run.seed}:${match.id}`), {
-    ...seriesOptions(run, match.id),
+    ...seriesOptions(run, match),
     bestOf: match.bestOf,
     veto: veto.state,
   });
   const tournament = reportResult(requireTournament(run), match.id, { winner: series.winner, score: series.score });
-  const next: RunState = { ...run, tournament, userSeries: { ...run.userSeries, [match.id]: series } };
+  const next: RunState = {
+    ...run,
+    tournament,
+    userSeries: { ...run.userSeries, [match.id]: series },
+    mapsPlayed: recordSeriesMaps(run.mapsPlayed, match, series),
+  };
   delete next.veto;
   return advance(next);
 }
 
-/** Series options shared by the user's and the AI's matches: map pool, per-player form seeds and the agent meta. */
-function seriesOptions(run: RunState, matchId: string): Pick<SeriesOptions, 'pool' | 'formSeed' | 'meta'> {
-  const opts: Pick<SeriesOptions, 'pool' | 'formSeed' | 'meta'> = { pool: RUN_MAP_POOL, formSeed: `${run.seed}:${matchId}` };
+type SharedSeriesOptions = Pick<SeriesOptions, 'pool' | 'formSeed' | 'meta' | 'familiarity' | 'agentRoles'>;
+
+/**
+ * Series options shared by the user's and the AI's matches: map pool, per-player form seeds, the agent meta and
+ * roles, and both teams' map familiarity so far.
+ */
+function seriesOptions(run: RunState, match: Pick<TMatch, 'id' | 'a' | 'b'>): SharedSeriesOptions {
+  const opts: SharedSeriesOptions = {
+    pool: RUN_MAP_POOL,
+    formSeed: `${run.seed}:${match.id}`,
+    familiarity: [familiarityOf(run.mapsPlayed, match.a), familiarityOf(run.mapsPlayed, match.b)],
+    agentRoles: AGENT_ROLES,
+  };
   if (RUN_META) opts.meta = RUN_META;
   return opts;
+}
+
+/** The maps-played table after a series: both teams count every map they played. */
+export function recordSeriesMaps(played: MapsPlayed, match: Pick<TMatch, 'a' | 'b'>, series: Pick<SeriesResult, 'maps'>): MapsPlayed {
+  return recordMapsPlayed(played, [match.a, match.b], series.maps.map((m) => m.map));
+}
+
+/**
+ * Lineup the AI vetoes with: lineupOf plus the team's map familiarity added to its map comfort, so teams lean
+ * toward the maps they have been playing.
+ */
+export function vetoLineup(run: RunState, id: string): Lineup {
+  return withFamiliarity(lineupOf(run, id), familiarityOf(run.mapsPlayed, id));
+}
+
+/** A lineup whose map comfort includes `familiarity` (strength points per map). */
+export function withFamiliarity(lineup: Lineup, familiarity: Partial<Record<MapName, number>>): Lineup {
+  const maps = Object.keys(familiarity);
+  if (maps.length === 0) return lineup;
+  const mapAffinity: Partial<Record<MapName, number>> = { ...(lineup.mapAffinity ?? {}) };
+  for (const map of maps) mapAffinity[map] = (mapAffinity[map] ?? 0) + (familiarity[map] ?? 0);
+  return { ...lineup, mapAffinity };
+}
+
+export interface MapFamiliarity {
+  map: MapName;
+  /** Maps the team played on it so far. */
+  played: number;
+  /** Strength points it gives (FAMILIARITY_PER_MAP each, up to FAMILIARITY_CAP). */
+  points: number;
+}
+
+/** A team's familiarity with every map of the veto pool (pool order), for the hub and the veto. */
+export function mapFamiliarity(run: Pick<RunState, 'mapsPlayed'>, teamId: string): MapFamiliarity[] {
+  const points = familiarityOf(run.mapsPlayed, teamId);
+  return RUN_MAP_POOL.map((map) => ({ map, played: run.mapsPlayed?.[teamId]?.[map] ?? 0, points: points[map] ?? 0 }));
 }
 
 /**
@@ -585,9 +662,10 @@ export interface ScoutHint {
   value: number;
 }
 
+/** Scouting of the opponent's veto preferences: map comfort plus the familiarity it gained in this run. */
 export function vetoScouting(run: RunState, opponentId: string): { level: number; hints: ScoutHint[] } {
   const level = run.draft.coachId ? findCoach(RUN_POOL, run.draft.coachId)?.vetoBonus ?? 0 : 0;
-  const affinity = lineupOf(run, opponentId).mapAffinity ?? {};
+  const affinity = vetoLineup(run, opponentId).mapAffinity ?? {};
   const all = RUN_MAP_POOL.map((map) => ({ map, value: affinity[map] ?? 0 })).sort(
     (x, y) => y.value - x.value || (x.map < y.map ? -1 : 1),
   );
@@ -612,6 +690,7 @@ export function parseRun(data: unknown): RunState | null {
     if (!['draft', 'team', 'tournament', 'done'].includes(run.phase)) return null;
     if (!run.draft || typeof run.draft !== 'object' || !Array.isArray(run.draft.picks)) return null;
     if (!run.userSeries || typeof run.userSeries !== 'object') return null;
+    if (!run.mapsPlayed || typeof run.mapsPlayed !== 'object') return null;
     // Past the draft, the lineup and the coach must be complete.
     if (run.phase !== 'draft' && (run.draft.picks.length !== 5 || run.draft.phase !== 'done')) return null;
     // Every referenced card, coach and opponent must still exist in the pool.
@@ -658,7 +737,7 @@ function rosterByKey(key: string): RosterEntry {
 }
 
 function resolveOpponentTurns(run: RunState, match: TMatch, userSide: TeamIndex, start: VetoState): VetoState {
-  const lineups: [Lineup, Lineup] = [lineupOf(run, match.a), lineupOf(run, match.b)];
+  const lineups: [Lineup, Lineup] = [vetoLineup(run, match.a), vetoLineup(run, match.b)];
   let state = start;
   for (let turn = nextTurn(state); turn && turn.team !== userSide; turn = nextTurn(state)) {
     const rng = createRng(`${run.seed}:${match.id}:veto:${state.steps.length}`);
@@ -670,14 +749,16 @@ function resolveOpponentTurns(run: RunState, match: TMatch, userSide: TeamIndex,
 /** Plays AI-vs-AI matches in schedule order until the next match is the user's or the tournament ends. */
 function advance(run: RunState): RunState {
   let tournament = requireTournament(run);
+  let mapsPlayed = run.mapsPlayed;
   for (let guard = 0; guard < 1000 && tournament.phase !== 'done'; guard++) {
     const [next] = pendingMatches(tournament);
     if (!next || involvesUser(next)) break;
     const series = simulateSeries(lineupOf(run, next.a), lineupOf(run, next.b), createRng(`${run.seed}:${next.id}`), {
-      ...seriesOptions(run, next.id),
+      ...seriesOptions({ ...run, mapsPlayed }, next),
       bestOf: next.bestOf,
     });
     tournament = reportResult(tournament, next.id, { winner: series.winner, score: series.score });
+    mapsPlayed = recordSeriesMaps(mapsPlayed, next, series);
   }
-  return { ...run, tournament, phase: tournament.phase === 'done' ? 'done' : 'tournament' };
+  return { ...run, tournament, mapsPlayed, phase: tournament.phase === 'done' ? 'done' : 'tournament' };
 }

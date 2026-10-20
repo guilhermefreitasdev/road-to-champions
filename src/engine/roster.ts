@@ -20,7 +20,8 @@ export function rosterKey(entry: Pick<RosterEntry, 'teamId' | 'eventId'>): strin
 
 /**
  * Lineup for an AI team: each card goes to its own role slot, the extra one to flex.
- * If a roster doubles up on a role and misses another, the leftover card fills the free slot.
+ * If a roster doubles up on a role and misses another, the leftover card fills the free slot; a natural flex
+ * (`Card.flexRoles`) first takes a free role he genuinely played.
  */
 export function rosterToLineup(entry: RosterEntry, affinity?: Partial<Record<MapName, number>>): Lineup {
   if (entry.cards.length !== 5) {
@@ -38,7 +39,9 @@ export function rosterToLineup(entry: RosterEntry, affinity?: Partial<Record<Map
     }
   }
   for (const card of leftovers) {
-    const slot = (['flex', ...ROLES] as Slot[]).find((s) => !used.has(s))!;
+    // A natural flex covers a role nobody else fills, when he genuinely played it (full fit, no missing-role penalty).
+    const natural = card.flexRoles?.find((r) => !used.has(r));
+    const slot = natural ?? (['flex', ...ROLES] as Slot[]).find((s) => !used.has(s))!;
     used.add(slot);
     players.push({ card, slot });
   }

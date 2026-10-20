@@ -3,9 +3,22 @@ import { SLOTS, openSlots } from '../engine/draft';
 import { roleFit, teamStrength } from '../engine/team';
 import { PLAYOFF_BRACKET } from '../engine/tournament';
 import { isVetoComplete, nextTurn, remainingMaps } from '../engine/veto';
-import { MISSING_ROLE_PENALTY, explainStrength, fitLabel, formatStat, placementLabel } from './explain';
+import {
+  AGENT_HELP,
+  FAMILIARITY_HELP,
+  MISSING_ROLE_PENALTY,
+  agentEdgeLabel,
+  cardFitLabel,
+  explainStrength,
+  familiarityLabel,
+  fitLabel,
+  flexLabel,
+  formatStat,
+  placementLabel,
+} from './explain';
 import {
   FIELD_ELITE_CAP,
+  FIELD_ELITE_MIN,
   OPPONENT_COUNT,
   RUN_MAP_POOL,
   RUN_POOL,
@@ -24,6 +37,8 @@ import {
   involvesUser,
   lineupOf,
   isEliteRoster,
+  mapFamiliarity,
+  vetoLineup,
   parseRun,
   pickField,
   pickDraftCoach,
@@ -88,7 +103,7 @@ describe('real pool', () => {
     expect(rosterOf(roster.teamId, roster.eventId)).toBe(roster);
   });
 
-  it('builds a field of 15 distinct teams with at most FIELD_ELITE_CAP elite rosters, avoiding the user', () => {
+  it('builds a field of 15 distinct teams with FIELD_ELITE_MIN to FIELD_ELITE_CAP elite rosters, avoiding the user', () => {
     const userPlayers = RUN_POOL[0]!.cards.map((c) => c.playerId);
     let elites = 0;
     for (let i = 0; i < 40; i++) {
@@ -98,6 +113,7 @@ describe('real pool', () => {
       expect(new Set(entries.map((e) => e.teamId)).size).toBe(OPPONENT_COUNT);
       const n = entries.filter(isEliteRoster).length;
       expect(n).toBeLessThanOrEqual(FIELD_ELITE_CAP);
+      expect(n).toBeGreaterThanOrEqual(FIELD_ELITE_MIN);
       elites += n;
       for (const e of entries) expect(e.cards.some((c) => userPlayers.includes(c.playerId))).toBe(false);
       expect(pickField(`field-${i}`, userPlayers)).toEqual(keys);
@@ -393,5 +409,74 @@ describe('explainStrength', () => {
     expect(fitLabel('duelist', 'flex')).toBe('90% flex');
     expect(fitLabel('duelist', 'sentinel')).toBe('75% fora da função');
     expect(roleFit('duelist', 'sentinel')).toBe(0.75);
+  });
+});
+
+describe('map familiarity in the run', () => {
+  it('counts every map of every match (AI too) and feeds it back into later maps', () => {
+    const r = fullRun('classic', 'familiar');
+    expect(RUN_VERSION).toBe(6);
+    const recorded = Object.values(r.mapsPlayed).reduce((n, row) => n + Object.values(row ?? {}).reduce((m: number, c) => m + (c ?? 0), 0), 0);
+    const played = r.tournament!.matches.reduce((n, m) => n + (m.result ? m.result.score[0] + m.result.score[1] : 0), 0);
+    expect(recorded).toBe(2 * played);
+    for (const id of r.tournament!.entrants.map((e) => e.id)) {
+      const fam = mapFamiliarity(r, id);
+      expect(fam.map((f) => f.map)).toEqual([...RUN_MAP_POOL]);
+      for (const f of fam) expect(f.points).toBe(Math.min(2, 0.5 * f.played));
+    }
+    // The user's later series carry the familiarity earned before them.
+    const edges = Object.values(r.userSeries).flatMap((s) => s.maps.flatMap((m) => [m.edges[0].familiarity, m.edges[1].familiarity]));
+    expect(edges.some((e) => e > 0)).toBe(true);
+    expect(Math.max(...edges)).toBeLessThanOrEqual(2);
+    // The AI veto leans on it: comfort + familiarity.
+    const opp = r.tournament!.entrants.find((e) => e.id !== USER_ID)!.id;
+    const comfort = lineupOf(r, opp).mapAffinity ?? {};
+    const veto = vetoLineup(r, opp).mapAffinity ?? {};
+    for (const f of mapFamiliarity(r, opp)) expect(veto[f.map] ?? 0).toBeCloseTo((comfort[f.map] ?? 0) + f.points);
+  });
+
+  it('starts empty and is required in a save', () => {
+    const r = startTournament(autoDraft(createRun('classic', 'fam-save')), 'F');
+    expect(createRun('classic', 'x').mapsPlayed).toEqual({});
+    expect(parseRun(r)).not.toBeNull();
+    const old: Record<string, unknown> = { ...r };
+    delete old.mapsPlayed;
+    expect(parseRun(old)).toBeNull();
+    expect(parseRun({ ...r, version: 5 })).toBeNull();
+  });
+});
+
+describe('explain: flex natos, agents and familiarity', () => {
+  const card = RUN_POOL[0]!.cards[0]!;
+  const plain = { ...card, role: 'duelist' as const, flexRoles: ['duelist' as const] };
+  const flex = { ...card, role: 'duelist' as const, flexRoles: ['duelist' as const, 'initiator' as const, 'sentinel' as const] };
+
+  it('labels the card-aware fit', () => {
+    expect(cardFitLabel(plain, 'duelist')).toBe('100%');
+    expect(cardFitLabel(plain, 'flex')).toBe('90% flex');
+    expect(cardFitLabel(plain, 'initiator')).toBe('75% fora da função');
+    expect(cardFitLabel(flex, 'initiator')).toBe('100% flex nato');
+    expect(cardFitLabel(flex, 'flex')).toBe('100% flex nato');
+    expect(cardFitLabel(flex, 'controller')).toBe('75% fora da função');
+    expect(flexLabel(plain)).toBeNull();
+    expect(flexLabel(flex)).toBe('Flex nato: sem penalidade em Iniciador/Sentinela e no slot Flex');
+  });
+
+  it('explains a flex nato in the strength notes', () => {
+    const lineup = draftedLineup(autoDraft(createRun('classic', 'flex-note')));
+    const players = lineup.players.map((p, i) => (i === 0 ? { card: { ...p.card, flexRoles: [p.card.role, 'controller' as const] }, slot: 'controller' as const } : p));
+    const notes = explainStrength({ ...lineup, players }).parts.find((p) => p.key === 'base')!.notes;
+    expect(notes.some((n) => n.includes('Flex nato'))).toBe(true);
+  });
+
+  it('labels agent edges and familiarity', () => {
+    expect(agentEdgeLabel(0)).toBeNull();
+    expect(agentEdgeLabel(1.2)).toBe('Agente: +1,2 OVR');
+    expect(agentEdgeLabel(-0.5)).toBe('Agente: −0,5 OVR');
+    expect(familiarityLabel(0, 0)).toBeNull();
+    expect(familiarityLabel(1, 0.5)).toBe('Familiaridade: +0,5 (1 mapa)');
+    expect(familiarityLabel(5, 2)).toBe('Familiaridade: +2 (5 mapas)');
+    expect(AGENT_HELP).toContain('±2');
+    expect(FAMILIARITY_HELP).toContain('+0,5');
   });
 });

@@ -16,9 +16,11 @@ import {
   SECOND_IGL_COMM_PENALTY,
   SECOND_IGL_DECISION_BONUS,
   UNKNOWN_IGL_DECISION,
+  cardFit,
   chemistryPairs,
   decisionDetail,
   dimensionPoints,
+  isNaturalFlex,
   roleFit,
   teamStrength,
   utilityCoverage,
@@ -38,6 +40,8 @@ import {
   PRODIGY_GROWTH_PER_STAGE,
   TOURNAMENT_FORM_SHOWN,
 } from '../engine/form';
+import { AGENT_EDGE_MAX, AGENT_SHRINK_MAPS, AGENT_TEAM_CAP } from '../engine/agents';
+import { FAMILIARITY_CAP, FAMILIARITY_PER_MAP } from '../engine/familiarity';
 import type { Attributes, AuraTier, Card, Lineup, LineupPlayer, Role, Slot } from '../engine/types';
 
 export const ROLE_LABELS: Record<Role, string> = {
@@ -89,13 +93,29 @@ export const DIMENSION_HINTS: Record<DimensionKey, string> = {
   clutch: 'clutch médio, o melhor clutcher e a presença (KAST)',
 };
 
-/** "100%", "90% flex" or "75% fora da função". */
+/** "100%", "90% flex" or "75% fora da função" (role only; cardFitLabel knows natural flexes). */
 export function fitLabel(role: Role, slot: Slot): string {
   const fit = roleFit(role, slot);
   if (fit === 1) return '100%';
   if (slot === 'flex') return '90% flex';
   return `${Math.round(fit * 100)}% fora da função`;
 }
+
+/** Like fitLabel, but card-aware: "100% flex nato" when a natural flex fills another role he played or the flex slot. */
+export function cardFitLabel(card: Pick<Card, 'role' | 'flexRoles'>, slot: Slot): string {
+  if (slot !== card.role && cardFit(card, slot) === 1) return '100% flex nato';
+  return fitLabel(card.role, slot);
+}
+
+/** "Flex nato: sem penalidade em Iniciador/Sentinela e no slot Flex", or null for a card that is not a natural flex. */
+export function flexLabel(card: Pick<Card, 'role' | 'flexRoles'>): string | null {
+  if (!isNaturalFlex(card)) return null;
+  const roles = card.flexRoles!.filter((r) => r !== card.role).map((r) => ROLE_LABELS[r]);
+  return roles.length > 0 ? `Flex nato: sem penalidade em ${roles.join('/')} e no slot Flex` : 'Flex nato: sem penalidade no slot Flex';
+}
+
+export const FLEX_HELP =
+  'Flex nato: nos dados, o jogador jogou de verdade duas ou mais funções (parte relevante dos mapas em cada uma). Rende 100% nessas funções e no slot Flex, em vez de 75% fora da função e 90% no Flex.';
 
 export interface StrengthNote {
   key: 'base' | 'composition' | DimensionKey;
@@ -141,9 +161,14 @@ export function explainStrength(lineup: Lineup): {
   const warnings: string[] = [];
 
   const base = players
-    .filter((p) => roleFit(p.card.role, p.slot) < 1)
+    .filter((p) => cardFit(p.card, p.slot) < 1)
     .map((p) => `${p.card.handle} (${ROLE_LABELS[p.card.role]}) como ${SLOT_LABELS[p.slot]}: ${fitLabel(p.card.role, p.slot)}`);
   if (base.length === 0) base.push('todos na função: 100% do OVR');
+  for (const p of players) {
+    if (p.slot !== p.card.role && cardFit(p.card, p.slot) === 1) {
+      base.push(`${p.card.handle} como ${SLOT_LABELS[p.slot]}: ${flexLabel(p.card)}`);
+    }
+  }
 
   const slots = players.map((p) => p.slot);
   const composition = (Object.keys(MISSING_ROLE_PENALTY) as Role[])
@@ -277,6 +302,23 @@ export const PRODIGY_HELP = `Prodígio: primeiro internacional com rating ≥ 1,
 export const ANCHOR_HELP = `Durão: lenda ou GOAT que lidera (IGL ou decisão alta), ou campeão rendendo no nível do time naquele evento. Tomada de decisão e Comunicação +${ANCHOR_DIMENSION_BONUS} (uma vez por time).`;
 
 export const FORM_HELP = `Forma do dia: cada jogador sorteia uma forma por mapa (±${Math.round(FORM_SIGMA * 100)}% nas kills, com dias excepcionais raros), que pesa também um pouco na força do time. Estrelas têm teto maior, não sorte maior: nos dados, o quanto um jogador oscila não se repete de evento para evento; o que muda com o nível é o teto.`;
+
+export const AGENT_HELP = `Agente por mapa: cada jogador escolhe um agente do seu histórico real (mais mapas jogados = mais chance, com um empurrão para o meta do mapa; sem repetir agente no time). O rendimento no agente pesa pouco: a diferença para a média do próprio jogador é encolhida pela amostra (mapas / (mapas + ${AGENT_SHRINK_MAPS})), vale no máximo ±${AGENT_EDGE_MAX} OVR nas kills e no máximo ±${AGENT_TEAM_CAP} de força por time. Nos dados, quase toda a diferença entre o melhor e o pior agente de um jogador é acaso; só uma amostra grande sobrevive ao encolhimento.`;
+
+export const FAMILIARITY_HELP = `Familiaridade com o mapa: cada mapa que um time joga na run ou na temporada vale +${formatDecimal(FAMILIARITY_PER_MAP)} de força nele nas próximas partidas (até +${FAMILIARITY_CAP}). Vale para todos os times, inclusive a IA, e entra no veto: os times puxam os mapas que vêm jogando.`;
+
+/** "Familiaridade: +1 (2 mapas)", or null when the team never played the map. */
+export function familiarityLabel(played: number, points: number): string | null {
+  if (played <= 0) return null;
+  return `Familiaridade: ${formatPoints(points)} (${played} mapa${played === 1 ? '' : 's'})`;
+}
+
+/** "Agente: +1,2 OVR" for a non-zero agent edge, or null. */
+export function agentEdgeLabel(edgeOvr: number): string | null {
+  const rounded = Math.round(edgeOvr * 10) / 10;
+  if (rounded === 0) return null;
+  return `Agente: ${formatPoints(rounded)} OVR`;
+}
 
 export const META_HELP = `Encaixe de meta: a comp que o elenco consegue montar com os agentes que cada card jogou, contra o meta do mapa no ano do pool (participação de cada agente nos slots). Até +${formatDecimal(META_BONUS_MAX)} de força, nunca negativo. Nos dados, um jogador rende igual em qualquer agente ou mapa que joga; o que pesa é a comp certa para o mapa.`;
 

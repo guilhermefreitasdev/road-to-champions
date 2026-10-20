@@ -14,6 +14,7 @@
  * stored in the state.
  */
 import { ALL_ROSTERS, REAL_MAP_POOL, REAL_META, realLineup, teamRegion } from '../data/real';
+import { familiarityOf, recordMapsPlayed, type MapsPlayed } from '../engine/familiarity';
 import { applyTournamentForm, prodigyGrowth } from '../engine/form';
 import {
   bracketCells,
@@ -76,14 +77,17 @@ import { REGIONS, type Card, type Coach, type Lineup, type MapName, type Region,
 import { aiChooseMap, applyVeto, createVeto, isVetoComplete, nextTurn, type VetoState } from '../engine/veto';
 import { formatDecimal } from './explain';
 import {
+  AGENT_ROLES,
   DEFAULT_TEAM_NAME,
   USER_ID,
   cleanTeamName,
   involvesUser,
   userOpponent,
   userWon,
+  withFamiliarity,
   type BracketCell as RunBracketCell,
   type GroupView,
+  type MapFamiliarity,
   type PlayerStat,
   type ScoutHint,
   type StandingRow,
@@ -91,8 +95,11 @@ import {
 
 export { USER_ID } from './run';
 
-/** v2 = Modelo v3 (per-player form, multikills and MVP in the map results, aura on the cards). */
-export const SEASON_VERSION = 2;
+/**
+ * v3 = agents per map in the map results, agent and familiarity edges, `mapsPlayed` in the state; v2 = Modelo v3
+ * (per-player form, multikills and MVP in the map results, aura on the cards).
+ */
+export const SEASON_VERSION = 3;
 export const SEASON_MAP_POOL: readonly MapName[] = REAL_MAP_POOL;
 export const LEAGUE_OPPONENTS = LEAGUE_TEAMS - 1;
 export const MASTERS_TEAMS = 8;
@@ -136,6 +143,8 @@ export interface SeasonState {
   userSeries: Record<string, SeriesResult>;
   /** Set when the run ended before the Champions. */
   eliminatedAt?: 'league';
+  /** Maps every entrant played so far in the season, across stages (map familiarity, src/engine/familiarity.ts). */
+  mapsPlayed: MapsPlayed;
 }
 
 export type SeasonMatch = TMatch | LMatch;
@@ -226,7 +235,7 @@ export function entrantName(entry: RosterEntry, mode: FieldMode): string {
 // ---------------------------------------------------------------------------
 
 export function createSeason(seed: string, field: FieldMode = 'current'): SeasonState {
-  return { version: SEASON_VERSION, seed, stage: 'region', field, userSeries: {} };
+  return { version: SEASON_VERSION, seed, stage: 'region', field, userSeries: {}, mapsPlayed: {} };
 }
 
 /** Picks the server. The draft then rolls only rosters of that region. */
@@ -305,7 +314,8 @@ export function startLeague(s: SeasonState, teamName: string): SeasonState {
   const exclude = new Set(user.players.map((p) => p.card.playerId));
   const opponents = drawRosters(fieldCandidates(region, s.field), LEAGUE_OPPONENTS, `${s.seed}:league`, exclude);
   const entrants = seedByStrength([
-    { id: USER_ID, name, strength: teamStrength(user).total },
+    // The user's strength as seasonTeamInfo shows it (tournament form included), as in the main mode.
+    { id: USER_ID, name, strength: teamStrength(lineupOf({ ...s, teamName: name }, USER_ID)).total },
     ...opponents.map((e) => ({ id: rosterKey(e), name: entrantName(e, s.field), strength: aiStrength(e) })),
   ]);
   return advance({ ...s, stage: 'league', teamName: name, league: createLeague(entrants) });
@@ -326,7 +336,26 @@ function startMasters(s: SeasonState): SeasonState {
     ...home.map((id) => ({ id, name: nameOf(s, id), strength: strengthOf(s, id) })),
     ...away.map((e) => ({ id: rosterKey(e), name: entrantName(e, s.field), strength: aiStrength(e) })),
   ]);
-  return { ...s, stage: 'masters', masters: createBracket(entrants) };
+  return { ...s, stage: 'masters', masters: createBracket(entrants), mapsPlayed: withLeagueBaseline(s, entrants.map((e) => e.id)) };
+}
+
+/**
+ * Teams from other regions enter the Masters and the Champions without a single map in this season, while the
+ * user's league has been playing for weeks. They played their own leagues too, so each newcomer starts with the
+ * league's median maps per map (the AI teams of the user's league), keeping map familiarity symmetric.
+ */
+function withLeagueBaseline(s: SeasonState, ids: readonly string[]): MapsPlayed {
+  const league = (s.league?.entrants ?? []).filter((e) => e.id !== USER_ID).map((e) => s.mapsPlayed[e.id] ?? {});
+  if (league.length === 0) return s.mapsPlayed;
+  const baseline: Partial<Record<MapName, number>> = {};
+  for (const map of SEASON_MAP_POOL) {
+    const counts = league.map((row) => row[map] ?? 0).sort((a, b) => a - b);
+    const median = counts[Math.floor((counts.length - 1) / 2)]!;
+    if (median > 0) baseline[map] = median;
+  }
+  const out: Record<string, Partial<Record<MapName, number>>> = { ...s.mapsPlayed };
+  for (const id of ids) if (!out[id]) out[id] = { ...baseline };
+  return out;
 }
 
 /**
@@ -356,7 +385,7 @@ function startChampions(s: SeasonState): SeasonState {
     for (const e of draws) entries.push({ id: rosterKey(e), name: entrantName(e, s.field), strength: aiStrength(e) });
   }
   if (entries.length !== TEAM_COUNT) throw new Error(`Champions field has ${entries.length} teams, needs ${TEAM_COUNT}`);
-  return { ...s, stage: 'champions', champions: createTournament(seedByStrength(entries)) };
+  return { ...s, stage: 'champions', champions: createTournament(seedByStrength(entries)), mapsPlayed: withLeagueBaseline(s, entries.map((e) => e.id)) };
 }
 
 function seedByStrength(teams: { id: string; name: string; strength: number }[]): Entrant[] {
@@ -388,15 +417,24 @@ function stageDone(s: SeasonState, stage: CompStage): boolean {
   return s.champions?.phase === 'done';
 }
 
-function stageReport(s: SeasonState, stage: CompStage, matchId: string, result: LeagueResult): SeasonState {
-  if (stage === 'league') return { ...s, league: reportLeagueResult(s.league!, matchId, result) };
-  if (stage === 'masters') return { ...s, masters: reportBracketResult(s.masters!, matchId, result) };
-  return { ...s, champions: reportResult(s.champions!, matchId, result) };
+/** Reports a played series: the stage's result and both teams' maps played (map familiarity). */
+function stageReport(s: SeasonState, stage: CompStage, match: SeasonMatch, played: { series: SeriesResult; result: LeagueResult }): SeasonState {
+  const { result } = played;
+  const mapsPlayed = recordMapsPlayed(s.mapsPlayed, [match.a, match.b], played.series.maps.map((m) => m.map));
+  if (stage === 'league') return { ...s, mapsPlayed, league: reportLeagueResult(s.league!, match.id, result) };
+  if (stage === 'masters') return { ...s, mapsPlayed, masters: reportBracketResult(s.masters!, match.id, result) };
+  return { ...s, mapsPlayed, champions: reportResult(s.champions!, match.id, result) };
 }
 
 /** Runs a series and turns it into a result with map and round totals. */
 function playSeries(s: SeasonState, stage: CompStage, match: SeasonMatch, veto?: VetoState): { series: SeriesResult; result: LeagueResult } {
-  const opts: Parameters<typeof simulateSeries>[3] = { bestOf: match.bestOf, pool: SEASON_MAP_POOL, formSeed: `${s.seed}:${stage}:${match.id}` };
+  const opts: Parameters<typeof simulateSeries>[3] = {
+    bestOf: match.bestOf,
+    pool: SEASON_MAP_POOL,
+    formSeed: `${s.seed}:${stage}:${match.id}`,
+    familiarity: [familiarityOf(s.mapsPlayed, match.a), familiarityOf(s.mapsPlayed, match.b)],
+    agentRoles: AGENT_ROLES,
+  };
   if (REAL_META) opts.meta = REAL_META;
   if (veto) opts.veto = veto;
   const series = simulateSeries(lineupOf(s, match.a), lineupOf(s, match.b), createRng(`${s.seed}:${stage}:${match.id}`), opts);
@@ -417,7 +455,7 @@ function advance(s: SeasonState): SeasonState {
     for (let inner = 0; inner < 1000; inner++) {
       const [next] = stagePending(cur, stage);
       if (!next || involvesUser(next)) break;
-      cur = stageReport(cur, stage, next.id, playSeries(cur, stage, next).result);
+      cur = stageReport(cur, stage, next, playSeries(cur, stage, next));
     }
     if (!stageDone(cur, stage)) return cur;
     if (stage === 'league') {
@@ -475,9 +513,10 @@ export function playUserMatch(s: SeasonState): SeasonState {
   if (!veto || veto.stage !== pending.stage || veto.matchId !== pending.match.id || !isVetoComplete(veto.state)) {
     throw new Error('The user match needs a complete veto');
   }
-  const { series, result } = playSeries(s, pending.stage, pending.match, veto.state);
+  const played = playSeries(s, pending.stage, pending.match, veto.state);
+  const { series } = played;
   const next: SeasonState = {
-    ...stageReport(s, pending.stage, pending.match.id, result),
+    ...stageReport(s, pending.stage, pending.match, played),
     userSeries: { ...s.userSeries, [seriesKey(pending.stage, pending.match.id)]: series },
   };
   delete next.veto;
@@ -538,9 +577,21 @@ function userPlayers(s: SeasonState): Set<string> {
   return new Set(seasonLineup(s).players.map((p) => p.card.playerId));
 }
 
+/** Lineup the AI vetoes with: lineupOf plus the team's map familiarity in this season added to its map comfort. */
+export function seasonVetoLineup(s: SeasonState, id: string): Lineup {
+  return withFamiliarity(lineupOf(s, id), familiarityOf(s.mapsPlayed, id));
+}
+
+/** A team's familiarity with every map of the veto pool (pool order), across the season's stages. */
+export function seasonMapFamiliarity(s: Pick<SeasonState, 'mapsPlayed'>, teamId: string): MapFamiliarity[] {
+  const points = familiarityOf(s.mapsPlayed, teamId);
+  return SEASON_MAP_POOL.map((map) => ({ map, played: s.mapsPlayed?.[teamId]?.[map] ?? 0, points: points[map] ?? 0 }));
+}
+
+/** Scouting of the opponent's veto preferences: map comfort plus the familiarity it gained this season. */
 export function seasonVetoScouting(s: SeasonState, opponentId: string): { level: number; hints: ScoutHint[] } {
   const level = s.draft?.coachId ? findCoach(seasonPool(s), s.draft.coachId)?.vetoBonus ?? 0 : 0;
-  const affinity = lineupOf(s, opponentId).mapAffinity ?? {};
+  const affinity = seasonVetoLineup(s, opponentId).mapAffinity ?? {};
   const all = SEASON_MAP_POOL.map((map) => ({ map, value: affinity[map] ?? 0 })).sort((x, y) => y.value - x.value || (x.map < y.map ? -1 : 1));
   if (level <= 0) return { level, hints: [] };
   if (level >= 3) return { level, hints: all };
@@ -877,6 +928,7 @@ export function parseSeason(data: unknown): SeasonState | null {
     if (!FIELD_MODES.includes(s.field)) return null;
     if (!['region', 'draft', 'team', 'league', 'masters', 'champions', 'done'].includes(s.stage)) return null;
     if (!s.userSeries || typeof s.userSeries !== 'object') return null;
+    if (!s.mapsPlayed || typeof s.mapsPlayed !== 'object') return null;
     if (s.stage === 'region') return s;
     if (!s.region || !REGIONS.includes(s.region)) return null;
     if (!s.draft || typeof s.draft !== 'object' || !Array.isArray(s.draft.picks)) return null;
@@ -929,7 +981,7 @@ function rosterByKey(key: string): RosterEntry {
 }
 
 function resolveOpponentTurns(s: SeasonState, pending: PendingMatch, start: VetoState): VetoState {
-  const lineups: [Lineup, Lineup] = [lineupOf(s, pending.match.a), lineupOf(s, pending.match.b)];
+  const lineups: [Lineup, Lineup] = [seasonVetoLineup(s, pending.match.a), seasonVetoLineup(s, pending.match.b)];
   let state = start;
   for (let turn = nextTurn(state); turn && turn.team !== pending.side; turn = nextTurn(state)) {
     const rng = createRng(`${s.seed}:${pending.stage}:${pending.match.id}:veto:${state.steps.length}`);

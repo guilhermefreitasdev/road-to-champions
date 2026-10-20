@@ -4,6 +4,7 @@ import { openSlots } from '../engine/draft';
 import { rosterKey } from '../engine/roster';
 import { REGIONS, type Region, type RosterEntry } from '../engine/types';
 import { isVetoComplete, remainingMaps } from '../engine/veto';
+import { seasonPlayerStats } from './stats';
 import {
   CHAMPIONS_PER_REGION,
   LEAGUE_OPPONENTS,
@@ -22,7 +23,10 @@ import {
   leaguePlayoffCells,
   leagueViews,
   mastersCells,
+  SEASON_MAP_POOL,
+  SEASON_VERSION,
   parseSeason,
+  seasonMapFamiliarity,
   pickSeasonCoach,
   pickSeasonPlayer,
   playUserMatch,
@@ -279,5 +283,46 @@ describe('a whole season', () => {
     expect(parseSeason({ ...s, field: 'x' })).toBeNull();
     expect(parseSeason({ ...s, stage: 'league' })).toBeNull();
     expect(parseSeason(createSeason('p'))).toEqual(createSeason('p'));
+  });
+});
+
+describe('map familiarity across the season', () => {
+  it('carries the maps played from the league to the Champions, for every team', () => {
+    // A season that reaches the Masters (so familiarity crosses a stage boundary).
+    let s: SeasonState | null = null;
+    for (let i = 0; i < 12 && !s; i++) {
+      const done = fullSeason(`fam-${i}`);
+      if (done.masters) s = done;
+    }
+    expect(SEASON_VERSION).toBe(3);
+    const season = s ?? fullSeason('fam-0');
+    const stages = [season.league?.matches ?? [], season.masters?.matches ?? [], season.champions?.matches ?? []];
+    const played = stages.flat().reduce((n, m) => n + (m.result ? m.result.score[0] + m.result.score[1] : 0), 0);
+    // Every map of every series counts for both teams; teams from other regions also start the Masters/Champions
+    // with the league's median (they played their own leagues), so the table holds at least the maps played.
+    const recorded = Object.values(season.mapsPlayed).reduce((n, row) => n + Object.values(row ?? {}).reduce((m: number, c) => m + (c ?? 0), 0), 0);
+    expect(recorded).toBeGreaterThanOrEqual(2 * played);
+    const leagueIds = new Set(season.league!.entrants.map((e) => e.id));
+    const newcomers = (season.masters?.entrants ?? []).filter((e) => !leagueIds.has(e.id));
+    expect(newcomers.length).toBeGreaterThan(0);
+    for (const e of newcomers) expect(Object.values(season.mapsPlayed[e.id] ?? {}).length).toBeGreaterThan(0);
+    const fam = seasonMapFamiliarity(season, USER_ID);
+    expect(fam.map((f) => f.map)).toEqual([...SEASON_MAP_POOL]);
+    expect(fam.reduce((n, f) => n + f.played, 0)).toBeGreaterThan(0);
+    for (const f of fam) expect(f.points).toBe(Math.min(2, 0.5 * f.played));
+    // Stats of the user's five over the whole season.
+    const stats = seasonPlayerStats(season);
+    expect(stats).toHaveLength(5);
+    const maps = Object.values(season.userSeries).reduce((n, x) => n + x.maps.length, 0);
+    for (const p of stats) expect(p.maps).toBe(maps);
+  });
+
+  it('needs the maps-played table in a save', () => {
+    const s = startLeague(autoDraft(chooseRegion(createSeason('fam-save'), 'emea')), 'F');
+    expect(parseSeason(s)).not.toBeNull();
+    const old: Record<string, unknown> = { ...s };
+    delete old.mapsPlayed;
+    expect(parseSeason(old)).toBeNull();
+    expect(parseSeason({ ...s, version: 2 })).toBeNull();
   });
 });

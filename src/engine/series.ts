@@ -1,3 +1,4 @@
+import type { AgentRoles } from './agents';
 import type { MetaTable } from './form';
 import { compareLines, simulateMap, type MapResult, type Side } from './match';
 import type { Rng } from './rng';
@@ -17,6 +18,10 @@ export interface SeriesOptions {
   formSeed?: string;
   /** Agent meta per map (the veto pool's year), see MapOptions.meta. */
   meta?: MetaTable;
+  /** Map familiarity of each team, in strength points per map (src/engine/familiarity.ts), see MapOptions.familiarity. */
+  familiarity?: [Partial<Record<MapName, number>>, Partial<Record<MapName, number>>];
+  /** Agent → role table for the agent picks, see MapOptions.agentRoles. */
+  agentRoles?: AgentRoles;
 }
 
 export interface SeriesMvp {
@@ -81,6 +86,8 @@ export function simulateSeries(a: Lineup, b: Lineup, rng: Rng, opts: SeriesOptio
     if (prev) mapOpts.prevForm = [prev.players[0].map((p) => p.form), prev.players[1].map((p) => p.form)];
     const meta = opts.meta?.[map];
     if (meta) mapOpts.meta = meta;
+    if (opts.familiarity) mapOpts.familiarity = [opts.familiarity[0][map] ?? 0, opts.familiarity[1][map] ?? 0];
+    if (opts.agentRoles) mapOpts.agentRoles = opts.agentRoles;
     const result = simulateMap(a, b, rng, mapOpts);
     maps.push(result);
     score[result.winner]++;

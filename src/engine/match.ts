@@ -10,8 +10,10 @@ import {
   teamFormPoints,
   type MapMeta,
 } from './form';
+import { agentEdge, agentFactor, agentTeamPoints, pickAgents, type AgentRoles } from './agents';
+import { strengthShares } from './form';
 import { createRng, type Rng } from './rng';
-import { roleFit, teamStrength, type StrengthBreakdown } from './team';
+import { cardFit, teamStrength, type StrengthBreakdown } from './team';
 import type { AuraTier, Lineup, LineupPlayer, MapName, TeamIndex } from './types';
 
 export type { TeamIndex } from './types';
@@ -38,6 +40,13 @@ export interface MapOptions {
   decider?: boolean;
   /** Agent meta of this map (share of the slots per agent): the comp that fits it best earns up to +1.5. */
   meta?: MapMeta;
+  /**
+   * Map familiarity of each team (strength points, src/engine/familiarity.ts): what the team gained by playing this
+   * map earlier in the run or season. Kept apart from `adjust` so the scoreboard can show it.
+   */
+  familiarity?: [number, number];
+  /** Agent → role table: a player in another role's slot picks that role's agents when his pool has them. */
+  agentRoles?: AgentRoles;
 }
 
 export interface KillEvent {
@@ -86,6 +95,8 @@ export interface PlayerLine {
   mvp: boolean;
   /** Agent the player used on this map (from his real pool), when the sim picks one. */
   agent?: string;
+  /** Agent edge on that agent, in OVR points (src/engine/agents.ts), when not zero. */
+  agentEdge?: number;
 }
 
 /** Strength points each team got on this map beyond its lineup strength, for the UI and the calibration tests. */
@@ -98,6 +109,10 @@ export interface MapEdges {
   meta: number;
   /** Personal auras in a decider / overtime (0 otherwise). */
   aura: number;
+  /** Agent edges of the players on their picked agents (Σ edge × share, ±AGENT_TEAM_CAP; 0 without real pools). */
+  agent: number;
+  /** Map familiarity (MapOptions.familiarity). */
+  familiarity: number;
 }
 
 export interface MapResult {
@@ -207,19 +222,21 @@ interface MapPlayer {
   p: LineupPlayer;
   /** Kill multiplier of the map (form). */
   f: number;
+  /** Kill multiplier of the agent edge (1 without one), applied like the form. */
+  a: number;
   aura: AuraTier | undefined;
 }
 
 function killWeight(m: MapPlayer, opening: boolean, auraOn: boolean): number {
   const { aim, entry } = m.p.card.attrs;
-  const fit = roleFit(m.p.card.role, m.p.slot);
-  const base = (opening ? entry * 0.7 + aim * 0.3 : aim * 0.6 + entry * 0.4) * fit * m.f;
+  const fit = cardFit(m.p.card, m.p.slot);
+  const base = (opening ? entry * 0.7 + aim * 0.3 : aim * 0.6 + entry * 0.4) * fit * m.f * m.a;
   return auraOn && m.aura ? base * (1 + AURA_KILL[m.aura]) : base;
 }
 
 function deathWeight(m: MapPlayer, auraOn: boolean): number {
   const { presence, clutch } = m.p.card.attrs;
-  const base = (140 - (presence + clutch) / 2) / Math.sqrt(m.f);
+  const base = (140 - (presence + clutch) / 2) / Math.sqrt(m.f * m.a);
   return auraOn && m.aura ? base / (1 + AURA_KILL[m.aura] / 2) : base;
 }
 
@@ -264,7 +281,13 @@ function simulateKills(teams: [MapPlayer[], MapPlayer[]], winner: TeamIndex, rng
   return kills;
 }
 
-function buildLines(lineup: Lineup, rounds: RoundResult[], forms: readonly number[]): PlayerLine[] {
+function buildLines(
+  lineup: Lineup,
+  rounds: RoundResult[],
+  forms: readonly number[],
+  agents: readonly (string | undefined)[],
+  agentEdges: readonly number[],
+): PlayerLine[] {
   return lineup.players.map(({ card }, idx) => {
     let kills = 0;
     let deaths = 0;
@@ -301,7 +324,7 @@ function buildLines(lineup: Lineup, rounds: RoundResult[], forms: readonly numbe
       if (contributed || !died) kastRounds++;
     }
     const n = rounds.length;
-    return {
+    const line: PlayerLine = {
       cardId: card.id,
       handle: card.handle,
       kills,
@@ -316,6 +339,10 @@ function buildLines(lineup: Lineup, rounds: RoundResult[], forms: readonly numbe
       form: forms[idx]!,
       mvp: false,
     };
+    const agent = agents[idx];
+    if (agent) line.agent = agent;
+    if (agentEdges[idx]) line.agentEdge = agentEdges[idx];
+    return line;
   });
 }
 
@@ -351,14 +378,19 @@ export function simulateMap(a: Lineup, b: Lineup, rng: Rng, opts: MapOptions): M
   const affinity = (l: Lineup) => l.mapAffinity?.[opts.map] ?? 0;
 
   // Per-player form of the map (seeded per match, map and card when formSeed is given) and the aura flags.
+  // Agents come from their own seed (never from `rng`), so picking them changes no other draw.
   const lineups: [Lineup, Lineup] = [a, b];
   const forms: [number[], number[]] = [[], []];
+  const agents = lineups.map((l, t) =>
+    pickAgents(l.players, `${opts.formSeed ?? 'map'}:${opts.map}:agents:${t}`, opts.meta, opts.agentRoles),
+  ) as [(string | undefined)[], (string | undefined)[]];
+  const agentEdges = lineups.map((l, t) => l.players.map((p, i) => agentEdge(p.card, agents[t]![i])));
   const teams = lineups.map((l, t) =>
     l.players.map((p, i): MapPlayer => {
       const prev = opts.prevForm?.[t]?.[i];
       const z = mapFormZ(opts.formSeed ? createRng(formSeed(opts.formSeed, opts.map, p.card.id)) : rng, prev);
       forms[t]![i] = z;
-      return { p, f: formFactor(z, p.card.ovr, p.card.role), aura: p.card.aura };
+      return { p, f: formFactor(z, p.card.ovr, p.card.role), a: agentFactor(agentEdges[t]![i]!), aura: p.card.aura };
     }),
   ) as [MapPlayer[], MapPlayer[]];
   const edges = lineups.map((l, t): MapEdges => ({
@@ -366,12 +398,14 @@ export function simulateMap(a: Lineup, b: Lineup, rng: Rng, opts: MapOptions): M
     form: teamFormPoints(l.players, teams[t]!.map((m) => m.f)),
     meta: metaFit(l, opts.meta).points,
     aura: 0,
+    agent: agentTeamPoints(agentEdges[t]!, strengthShares(l.players)),
+    familiarity: opts.familiarity?.[t] ?? 0,
   })) as [MapEdges, MapEdges];
   const aura: [number, number] = [auraPoints(a.players), auraPoints(b.players)];
   const decider = opts.decider ?? false;
 
   const adjust = (opts.adjust?.[0] ?? 0) + affinity(a) - (opts.adjust?.[1] ?? 0) - affinity(b);
-  const fixed = (key: 'swing' | 'form' | 'meta') => edges[0][key] - edges[1][key];
+  const fixed = (key: 'swing' | 'form' | 'meta' | 'agent' | 'familiarity') => edges[0][key] - edges[1][key];
   const dimension = (key: 'decision' | 'clutch') => strength[0].dimensions[key] - strength[1].dimensions[key];
   const decisionEdge = (DECISION_EDGE * dimension('decision') * decisionMapFactor(opts.seriesMap ?? 1)) / 10;
   const clutchEdge = (CLUTCH_OT_EDGE * dimension('clutch')) / 10;
@@ -382,7 +416,8 @@ export function simulateMap(a: Lineup, b: Lineup, rng: Rng, opts: MapOptions): M
   for (let n = 1; ; n++) {
     if (n > MAX_ROUNDS) throw new Error('Map did not finish');
     const teamASide = sideOf(n, start);
-    let diff = strength[0].total - strength[1].total + fixed('swing') + fixed('form') + fixed('meta') + adjust;
+    let diff =
+      strength[0].total - strength[1].total + fixed('swing') + fixed('form') + fixed('meta') + fixed('agent') + fixed('familiarity') + adjust;
     diff += teamASide === 'defense' ? defenderBias : -defenderBias;
 
     // Economy: anti-eco (round 2) and bonus round (round 3) after each pistol.
@@ -413,7 +448,10 @@ export function simulateMap(a: Lineup, b: Lineup, rng: Rng, opts: MapOptions): M
     if (Math.max(score[0], score[1]) >= ROUNDS_TO_WIN && lead >= 2) break;
   }
 
-  const players: [PlayerLine[], PlayerLine[]] = [buildLines(a, rounds, forms[0]), buildLines(b, rounds, forms[1])];
+  const players: [PlayerLine[], PlayerLine[]] = [
+    buildLines(a, rounds, forms[0], agents[0], agentEdges[0]!),
+    buildLines(b, rounds, forms[1], agents[1], agentEdges[1]!),
+  ];
   markMvp(players);
   return {
     map: opts.map,
