@@ -3,6 +3,7 @@ import type { DraftMode } from '../../engine/draft';
 import { MODE_LABELS } from '../../game/labels';
 import { DIFFICULTY_LABELS, DIFFICULTY_SETTINGS, type Difficulty } from '../../game/difficulty';
 import { DailyHomeCard } from '../components/DailyHomeCard';
+import { OutrosHomeCard } from '../components/OutrosHomeCard';
 import { DifficultyPicker } from '../components/Difficulty';
 import { Emblem } from '../components/Emblem';
 import { Icon } from '../components/Icon';
@@ -38,6 +39,8 @@ interface Props {
   onDifficulty: (d: Difficulty) => void;
   /** Opens the Daily ("Diário"); absent while the game loads (the card shows today's progress anyway). */
   onDaily?: () => void;
+  /** Opens "Outros modos" (Valdle); absent while the game loads. */
+  onOutros?: () => void;
 }
 
 export function Home({
@@ -58,6 +61,7 @@ export function Home({
   difficulty,
   onDifficulty,
   onDaily,
+  onOutros,
 }: Props) {
   return (
     <div className="screen home" aria-busy={!ready}>
@@ -97,6 +101,7 @@ export function Home({
       )}
 
       <DailyHomeCard onOpen={onDaily} />
+      <OutrosHomeCard onOpen={onOutros} />
 
       <section className="modes" aria-labelledby="modes-title">
         <h2 id="modes-title" className="section-label">

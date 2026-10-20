@@ -36,6 +36,13 @@ export function Footer({ onHowTo }: { onHowTo?: () => void }) {
         </a>{' '}
         — retiramos qualquer imagem a pedido do titular. Imagens de mapas e agentes são da Riot Games.
       </p>
+      <p className="footer-credits">
+        Dados do jogo (agentes, habilidades, mapas, callouts e armas) e imagens de habilidades, armas e minimapas:{' '}
+        <a href="https://valorant-api.com" target="_blank" rel="noopener noreferrer">
+          valorant-api.com
+        </a>{' '}
+        (API comunitária, não oficial), conteúdo da Riot Games.
+      </p>
       <p id="aviso">
         Road to Champions é um projeto de fã, não oficial, e não é endossado pela Riot Games. Não reflete as opiniões
         de ninguém oficialmente envolvido na produção ou gestão de propriedades da Riot Games. Riot Games e todas as

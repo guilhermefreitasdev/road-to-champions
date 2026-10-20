@@ -53,3 +53,9 @@ export function clearCareer(): void {
     // Ignore.
   }
 }
+
+/**
+ * Valdle ("Outros modos"): daily results, streaks and the open free puzzle of each game. Like the Diário's
+ * rtc:daily:v1 it is progress, not a saved game: "Recomeçar" and the crash reset never clear it.
+ */
+export const VALDLE_KEY = 'rtc:valdle:v1';

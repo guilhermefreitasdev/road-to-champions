@@ -9,7 +9,8 @@ jogadores históricos (card = jogador + evento, ex.: "aspas @ LOUD, Champions 20
 | Draft (MVP) | Roleta time+evento → escolhe 1 jogador → slot de função (DUE/INI/CON/SEN/FLEX). 5 picks + coach, 3 rerolls. Champions de 16 times: 4 grupos GSL (A–D) → playoffs dupla eliminação, final MD5 (ver "Formato do Champions") |
 | Ultimate Draft | 5 opções fixas por pick (seed por run), sem reroll |
 | Complete Trials (secundário) | Comece do seu servidor: escolha a região (Americas/EMEA/Pacific/China) e o campo (Atual ou Prime), drafte só com elencos de times dela, dispute a liga regional (12 times), o Masters (8) e o Champions (16). Ver "Modo Complete Trials" |
-| Diário | 4 desafios por dia iguais para todos: Linhas Históricas, Quem é o Pro, O Impostor, Placar Clássico (ver "Modo Diário"). Minijogos estilo Valdle ficaram para "Outros modos" (`docs/ideias-futuras.md`) |
+| Diário | 4 desafios por dia iguais para todos: Linhas Históricas, Quem é o Pro, O Impostor, Placar Clássico (ver "Modo Diário"). Minijogos estilo Valdle ficam em "Outros modos" |
+| Outros modos | Aba de jogos rápidos à parte: Valdle em duas versões, Cena pro (Pro Clássico, Grade 3x3, Conexões, Comp Misteriosa) e Jogo clássico (Agente Clássico, Habilidade, Mapa, Callout, Arma), cada jogo com desafio diário e modo livre; "Acerte o ace" em breve. Ver "Outros modos" |
 | Carreira | Funde a sua org numa região (Americas/EMEA/Pacific/China) e jogue temporada após temporada (2026, 2027, …): pré-temporada → liga regional → janela → Masters → Champions → relatório. Contratos, transferências, patrocínio, base, scrims, envelhecimento e aura de carreira. Ver "Modo Carreira" |
 | Online | Ranked 1v1, lobby de 8 managers (fase final, precisa backend) |
 
@@ -306,7 +307,7 @@ Salário negociável e cláusulas; empréstimos; lesões; rebaixamento/acesso da
 
 ## Modo Diário (`src/game/daily/`, telas `src/ui/screens/Daily*.tsx`)
 
-Implementado em 2026-10-20, no estilo do Daily do Road to Major: **quatro desafios por dia, iguais para todos**, todos sobre a cena pro e todos tirados dos nossos dados (nada inventado). As abas no estilo Valdle (Pro Clássico, Agente, Habilidade, Mapa, Callout, Grade 3x3, Conexões...) saíram daqui e ficaram para o projeto "Outros modos" (`docs/ideias-futuras.md`).
+Implementado em 2026-10-20, no estilo do Daily do Road to Major: **quatro desafios por dia, iguais para todos**, todos sobre a cena pro e todos tirados dos nossos dados (nada inventado). As abas no estilo Valdle (Pro Clássico, Agente, Habilidade, Mapa, Callout, Grade 3x3, Conexões...) saíram daqui e viraram a aba "Outros modos" (ver a seção).
 
 ### Calendário e determinismo (`calendar.ts`)
 - O dia é a data do calendário em **America/Sao_Paulo** (`dayKeyAt`, via `Intl`, então segue o banco de fusos, inclusive o horário de verão antigo); vira à meia-noite de Brasília. Contas de dias em números de dia UTC (`dayNumber`), sem depender do fuso da máquina.
@@ -334,6 +335,44 @@ Implementado em 2026-10-20, no estilo do Daily do Road to Major: **quatro desafi
 
 ### Telas
 Item "Diário" no menu principal e card dourado no Início (número do dia, os quatro desafios feitos ou não, resultado e sequência; lê só o localStorage, então aparece antes do pool carregar). Hub com os quatro cards (estado e pontos), resultado do dia com o painel de compartilhar, estatísticas, arquivo e a contagem até o próximo desafio; cada desafio numa tela com os quatro passos no topo e "Próximo" ao terminar. Chunk próprio (`Daily`, ~48 KB gzip, quase tudo `series.json`).
+
+## Outros modos (`src/game/valdle/`, telas `src/ui/screens/OutrosModos.tsx` e `src/ui/screens/valdle/`)
+
+Implementado em 2026-10-20: item "Outros modos" no menu principal e card no Início (lê só o localStorage). O hub lista os modos a partir de `src/ui/screens/outros/modes.ts` (uma entrada por modo: título, texto, ícone, `status` `live`/`soon` e a tela, carregada sob demanda com `lazyScreen`); hoje: **Valdle — Cena pro**, **Valdle — Jogo clássico** e **Acerte o ace** (em breve).
+
+### Regras comuns (`games.ts`, `planner.ts`, `play.ts`)
+- **Diário**: um desafio por jogo e por dia, igual para todos, no mesmo calendário do Diário (America/Sao_Paulo, vira à meia-noite de Brasília); **#1 = 2026-10-20** (`VALDLE_LAUNCH`). Cada dia usa `createRng("valdle:<jogo>:<data>")` e é planejado em ordem desde o #1, olhando os dias anteriores para não repetir (janelas abaixo; relaxadas só se o pool esgotar). Sem `Math.random` no motor.
+- **Modo livre**: desafios ilimitados com uma semente sorteada pela interface (`createRng("valdle:free:<jogo>:<semente>")`, nível sorteado), sem olhar para trás; o desafio aberto fica salvo; não conta para a sequência.
+- **Progresso** em `localStorage` **`rtc:valdle:v1`** (`src/ui/saveSlots.ts`, `src/ui/valdleStorage.ts`): `{ v: 1, daily: { jogo: { data: progresso } }, free: { jogo: { seed, progress, played, won } } }`. Como o Diário, não é apagado por "Recomeçar" nem pelo reset de erro. Save inválido é descartado campo a campo.
+- **Estatísticas por jogo**: diários jogados, % de vitórias, **sequência** (diários vencidos no próprio dia, até hoje ou ontem), recorde, distribuição (vitórias por tentativa; Grade por casas; Conexões por erros) e vitórias/jogos do modo livre. "Desistir" encerra como derrota.
+- **Compartilhar**, sem emoji e sem spoiler: `Road to Champions · Valdle Agente Clássico #12`, o resultado (`Acertei em 3/7`) e uma linha por palpite com letras (`V` certo, `P` perto, `-` errado; Grade = 3 linhas de casas; Conexões = o grupo de cada pro escolhido, `1 1 2 1`).
+- **Cores nunca sozinhas**: cada casa de atributo tem ícone (certo, perto, errado), seta de maior/menor e texto para leitor de tela.
+
+### Valdle — Jogo clássico (`classic.ts`, dados de `src/data/game/`)
+Só o Valorant, do snapshot do valorant-api.com (`npm run data:game`: `agents.json`, `maps.json` e, só para este modo, `agent-details.json` com bio em inglês, codinome, agente inicial e descrições das habilidades, e `weapons.json` com loja e números das armas).
+
+| Jogo | Regra | Tentativas | Não repete em |
+|---|---|---|---|
+| **Agente Clássico** | Adivinhe o agente; cada palpite compara **Função**, **Origem** (verde = mesmo país, amarelo = mesmo continente), **Estreia no VCT** (ano, setas; amarelo a 1 ano), **Inicial** (agente que toda conta tem, `isBaseContent`) e **Passiva** (tem habilidade passiva na API). | 7 | 20 dias |
+| **Habilidade** | Ícone da habilidade borrado e girado, que fica nítido a cada erro; pistas: função do agente → descrição da API com os nomes tapados → tecla. Bônus no fim: qual habilidade (C/Q/E/X). | 6 | 90 dias (e o agente em 4) |
+| **Mapa** | Pedaço ampliado (4,2x → 1,25x, primeiro em cinza) da imagem do mapa, num ponto sorteado; se afasta a cada erro. | 5 | 8 dias |
+| **Callout** | O nome do mapa e um **esquema** dele: a área de cada callout é a célula de Voronoi do seu ponto da API (`geometry.ts`), colorida por região (A, B, C, Meio, spawns), com o minimapa da Riot por baixo quando carrega. Vale o nome em português ("Principal do A") ou em inglês ("A Main"). Cada erro marca o palpite e diz "mesma área/outra área" e "perto/longe". Só entram callouts dentro da imagem e a ≥ 0,045 do vizinho mais próximo (destaque sem ambiguidade); dias fáceis preferem os callouts dos bombs. | 5 | 180 dias (mapa em 3) |
+| **Arma** | Compara **Categoria**, **Preço** (amarelo a ±300), **Dano na cabeça** da primeira faixa de distância (±15), **Cadência** (±1,5/s), **Pente** (±3), **Penetração** (baixa/média/alta, setas) e **Automática**. | 6 | 12 dias |
+| ~~Fala~~ | Não feito: a API devolve `voiceLine` nulo para todos os agentes. | — | — |
+
+Derivações documentadas (nada inventado): **Origem** = o país que a bio oficial em inglês cita (`AGENT_ORIGINS`: a palavra é conferida contra a bio pelos testes; KAY/O, Omen e Vyse não citam país e ficam "—"); continente pelas macrorregiões da ONU (M49). **Estreia no VCT** = o primeiro ano em que o agente aparece num placar de mapa pro da nossa base do VLR (`agent-stats.json`, desde 2021; agentes de 2020 aparecem como 2021; sem jogos = "—"). **Automática** = a API não informa modo de tiro (as semiautomáticas vêm marcadas). Ícones de habilidades, silhuetas de armas e minimapas vêm da CDN do valorant-api.com (a URL está no snapshot; se não carregar, Habilidade abre a primeira pista na hora e o Callout fica só com o esquema); as imagens dos mapas são as locais (`public/media/maps`, Liquipedia).
+
+### Valdle — Cena pro (`pro.ts`, sobre o índice do Diário, `src/game/daily/data.ts`)
+Fatos por jogador (`buildProIndex`): país, região e time do card mais recente, função principal e funções flex dos cards, times (titular em qualquer lista do VLR ou card; ids com o mesmo nome contam como o mesmo time), eventos como titular, eventos vencidos (card no elenco 1º colocado), estreia/eventos/títulos internacionais e agente mais jogado da carreira (mín. 10 mapas). "Na base" = internacionais desde 2021 e ligas desde 2023.
+
+| Jogo | Regra | Tentativas | Não repete em |
+|---|---|---|---|
+| **Pro Clássico** | Adivinhe o pro (autocomplete dos 637 handles); colunas **Último time** (amarelo = a resposta já jogou pelo time do palpite), **País**, **Região**, **Função** (amarelo = a resposta já jogou nessa função), **Estreia int.** (ano, ±1), **Títulos int.**, **Eventos int.** (±1) e **Agente nº 1** (amarelo = agente da mesma função). Respostas: handle único, com carreira internacional e todas as colunas conhecidas; curva da semana (segunda mais famosos). | 8 | 180 dias |
+| **Grade 3x3** | Linhas = 3 times; colunas de um padrão sorteado entre país, função, "jogou o <evento internacional>", "campeão internacional" e outro time. Cada casa precisa de **≥ 2 respostas** na base; a tela mostra "N possíveis" por casa e, no fim, exemplos das casas vazias. Cada pro vale uma vez; 12 palpites para 9 casas. Vence com as 9. | 12 palpites | grade em 365 dias, times em 6 |
+| **Conexões** | 16 pros, 4 grupos de 4 por um fato escondido: time, país, "campeões do <evento>" ou agente mais jogado. Cada pro cumpre **só** o fato do seu grupo entre os quatro, e uma busca de cobertura exata sobre **todos** os fatos desses tipos entre os 16 confirma que só há uma divisão possível. "Quase" quando 3 de 4 são do mesmo grupo; 4 erros e acaba. | 4 erros | grupos em 365 dias, fatos em 5 |
+| **Comp Misteriosa** | Os 5 agentes de um time num mapa real (de `src/data/real/comps.json`) e o ano; pistas a cada erro: evento → comp do adversário → fase e placar do mapa → região → adversário. Só entram comps que **nenhum outro time** usou naquele mapa no mesmo evento. Palpites errados dizem "mesma/outra região" e, depois da pista do evento, se o time jogou o evento. | 6 | série em 365 dias, time em 7 |
+
+Testes (`valdle.test.ts`): 365 dias de cada jogo recalculando tudo dos dados (respostas existem, casas da grade batem com os fatos e têm ≥ 2 respostas, Conexões com divisão única, comp única no evento, callout sem vizinho colado), as janelas de repetição, determinismo, modo livre, jogadas, sequência, texto de compartilhar sem emoji e o formato do save.
 
 ## Pipeline de dados (MVP)
 Script offline: VLR (stats, agentes, mapas) + Liquipedia (elencos, IGL, coach, map pool) + valorant-api.com (agentes/mapas)

@@ -1,7 +1,10 @@
 #!/usr/bin/env node
-// Fetches a reproducible snapshot of Valorant game data (agents, abilities, maps, callouts)
+// Fetches a reproducible snapshot of Valorant game data (agents, abilities, maps, callouts, weapons)
 // from valorant-api.com (unofficial community API, no key) and writes trimmed, deterministically
 // ordered JSON to src/data/game/. Node 22+, no dependencies.
+// agents.json and maps.json feed the whole game; agent-details.json (English bio, codename, starter flag,
+// ability descriptions) and weapons.json (shop data and stats) only feed "Outros modos" (Valdle, jogo clássico).
+// The images of those modes are a separate step: scripts/media/valdle.mjs (npm run data:game-media).
 //
 // Usage: npm run data:game   (or: node scripts/fetch-game-data.mjs)
 
@@ -131,6 +134,72 @@ function buildMaps(ptMaps, enMaps) {
   return maps.sort(byString('name'));
 }
 
+/** Fields of the agents used only by the Valdle (kept out of agents.json, which the main game bundles). */
+function buildAgentDetails(ptAgents, enAgents) {
+  const enByUuid = new Map(enAgents.map((a) => [a.uuid, a]));
+  const details = ptAgents.map((pt) => {
+    const en = enByUuid.get(pt.uuid);
+    const enAbilities = new Map(en.abilities.map((ab) => [ab.slot, ab]));
+    return {
+      name: clean(en.displayName),
+      /** Official English bio (the Valdle derives the agent's stated origin from it; see docs/design.md). */
+      descriptionEn: clean(en.description),
+      /** Riot's internal codename. */
+      developerName: clean(en.developerName),
+      /** true for the agents every account starts with. */
+      isBaseContent: Boolean(en.isBaseContent),
+      abilities: pt.abilities
+        .map((ab) => ({
+          slot: ab.slot,
+          name: clean(enAbilities.get(ab.slot)?.displayName ?? ab.displayName),
+          displayName: clean(ab.displayName),
+          description: clean(ab.description),
+        }))
+        .sort((a, b) => SLOT_ORDER.indexOf(a.slot) - SLOT_ORDER.indexOf(b.slot) || byString('slot')(a, b)),
+    };
+  });
+  return details.sort(byString('name'));
+}
+
+const enumTail = (s) => (typeof s === 'string' && s.includes('::') ? s.split('::').pop() : s || null);
+
+/** Buyable weapons (melee excluded): shop data and the stats the API publishes. */
+function buildWeapons(ptWeapons, enWeapons) {
+  const enByUuid = new Map(enWeapons.map((w) => [w.uuid, w]));
+  const weapons = ptWeapons
+    .filter((w) => w.shopData && w.weaponStats)
+    .map((pt) => {
+      const en = enByUuid.get(pt.uuid);
+      const s = pt.weaponStats;
+      return {
+        uuid: pt.uuid,
+        name: clean(en.displayName),
+        displayName: clean(pt.displayName),
+        /** API category, e.g. "Rifle", "Sidearm" (EEquippableCategory). */
+        category: enumTail(pt.category),
+        cost: pt.shopData.cost,
+        fireRate: round2(s.fireRate),
+        magazineSize: s.magazineSize,
+        reloadTimeSeconds: round2(s.reloadTimeSeconds),
+        equipTimeSeconds: round2(s.equipTimeSeconds),
+        /** "Low" | "Medium" | "High". */
+        wallPenetration: enumTail(s.wallPenetration),
+        /** "SemiAutomatic" or null (the API leaves it empty for automatic weapons). */
+        fireMode: enumTail(s.fireMode),
+        shotgunPelletCount: s.shotgunPelletCount,
+        damageRanges: s.damageRanges.map((r) => ({
+          rangeStartMeters: r.rangeStartMeters,
+          rangeEndMeters: r.rangeEndMeters,
+          headDamage: round2(r.headDamage),
+          bodyDamage: round2(r.bodyDamage),
+          legDamage: round2(r.legDamage),
+        })),
+        displayIcon: pt.displayIcon,
+      };
+    });
+  return weapons.sort(byString('name'));
+}
+
 async function writeJson(file, data) {
   const path = join(OUT_DIR, file);
   await writeFile(path, `${JSON.stringify(data, null, 2)}\n`, 'utf8');
@@ -143,6 +212,8 @@ async function main() {
   const enAgents = await getJson('/agents?isPlayableCharacter=true&language=en-US');
   const ptMaps = await getJson('/maps?language=pt-BR');
   const enMaps = await getJson('/maps?language=en-US');
+  const ptWeapons = await getJson('/weapons?language=pt-BR');
+  const enWeapons = await getJson('/weapons?language=en-US');
 
   const agents = buildAgents(ptAgents, enAgents);
   const maps = buildMaps(ptMaps, enMaps);
@@ -151,9 +222,12 @@ async function main() {
   await mkdir(OUT_DIR, { recursive: true });
   await writeJson('agents.json', agents);
   await writeJson('maps.json', maps);
+  await writeJson('agent-details.json', buildAgentDetails(ptAgents, enAgents));
+  const weapons = buildWeapons(ptWeapons, enWeapons);
+  await writeJson('weapons.json', weapons);
 
   const calloutCount = maps.reduce((n, m) => n + m.callouts.length, 0);
-  console.log(`${agents.length} agents, ${maps.length} maps, ${calloutCount} callouts`);
+  console.log(`${agents.length} agents, ${maps.length} maps, ${calloutCount} callouts, ${weapons.length} weapons`);
   console.log(`maps kept: ${maps.map((m) => m.name).join(', ')}`);
   console.log(`maps excluded: ${excluded.join(', ')}`);
 }

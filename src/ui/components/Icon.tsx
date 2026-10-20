@@ -35,6 +35,13 @@ export type IconName =
   | 'install'
   | 'calendar'
   | 'mask'
+  | 'up'
+  | 'down'
+  | 'grid'
+  | 'link'
+  | 'target'
+  | 'puzzle'
+  | 'tilde'
   | 'role-duelist'
   | 'role-initiator'
   | 'role-controller'
@@ -78,6 +85,13 @@ const PATHS: Record<IconName, string> = {
   install: 'M12 3v11M7.5 9.5L12 14l4.5-4.5M5 15v5h14v-5',
   calendar: 'M4 6h16v14H4zM4 10h16M8 3v4M16 3v4',
   mask: 'M3 8c3-1.5 6-1.5 9 0 3-1.5 6-1.5 9 0v3c0 3.5-3 5.5-5.5 5.5-1.6 0-2.6-1-3.5-2.5-.9 1.5-1.9 2.5-3.5 2.5C6 16.5 3 14.5 3 11zM7 11.5h2.5M14.5 11.5H17',
+  up: 'M12 19V5M6 11l6-6 6 6',
+  down: 'M12 5v14M6 13l6 6 6-6',
+  grid: 'M4 4h16v16H4zM4 9.3h16M4 14.7h16M9.3 4v16M14.7 4v16',
+  link: 'M10 14a4.5 4.5 0 006.4 0l3-3a4.5 4.5 0 00-6.4-6.4l-1.2 1.2M14 10a4.5 4.5 0 00-6.4 0l-3 3a4.5 4.5 0 006.4 6.4l1.2-1.2',
+  target: 'M12 3a9 9 0 100 18 9 9 0 000-18zM12 8a4 4 0 100 8 4 4 0 000-8zM12 11.5v1',
+  puzzle: 'M4 8h4a2 2 0 114 0h4v4a2 2 0 110 4v4H4v-4a2 2 0 100-4z',
+  tilde: 'M5 13.5c1.5-2.5 3.5-3 5.5-1.5s4 1 5.5-1.5',
   'role-duelist': 'M13 2L5 14h6l-1 8 8-12h-6z',
   'role-initiator': 'M2 12s3.6-6 10-6 10 6 10 6-3.6 6-10 6S2 12 2 12zM12 9.5a2.5 2.5 0 100 5 2.5 2.5 0 000-5z',
   'role-controller': 'M7 18h10a4 4 0 00.6-8A6 6 0 006.3 9 4.5 4.5 0 007 18z',

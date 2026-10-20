@@ -28,7 +28,7 @@ Status: decidido em 2026-10-19 deixar para depois. MVP usa snapshot estático ge
 2. Se animarem: atualização agendada + Daily de partidas reais.
 3. Se virar negócio: GRID + plano comercial da Liquipedia → modo ao vivo de verdade.
 
-## Aba "Outros modos" (projeto à parte, ainda NÃO implementar)
+## Aba "Outros modos" (Valdle IMPLEMENTADO em 2026-10-20; "Acerte o ace" em andamento)
 
 Decisão do dono (20/10/2026): o Valdle sai do jogo principal e vira uma aba "Outros modos", em duas versões
 criativas e separadas:
@@ -36,6 +36,11 @@ criativas e separadas:
   Linha do Tempo, Veto Quiz — a lista antiga estava em `docs/design.md`; o Diário implementado em 2026-10-20 ficou só com
   4 desafios da cena pro: Linhas Históricas, Quem é o Pro, O Impostor e Placar Clássico).
 - **Jogo clássico**: só o Valorant em si (Agente Clássico, Habilidade, Fala, Mapa, Callout, Arma).
+
+**Status (2026-10-20): o Valdle está implementado** — ver "Outros modos" em `docs/design.md`. Cena pro: Pro Clássico,
+Grade 3x3, Conexões e Comp Misteriosa. Jogo clássico: Agente Clássico, Habilidade, Mapa, Callout e Arma. Ficaram de fora:
+Fala (o valorant-api.com não tem falas: `voiceLine` nulo), Quem jogou de…, Linha do Tempo e Veto Quiz (ideias ainda
+abertas). "Acerte o ace" aparece no hub como "em breve" e é a próxima entrada de `src/ui/screens/outros/modes.ts`.
 
 ### "Acerte o ace" (ideia do dono)
 - Aces famosos de pros, **sem vídeo embutido**: a interface mostra o contexto (evento, mapa, round, agente, placar)

@@ -1,0 +1,960 @@
+[
+  {
+    "name": "Astra",
+    "descriptionEn": "Ghanaian Agent Astra harnesses the energies of the cosmos to reshape battlefields to her whim. With full command of her astral form and a talent for deep strategic foresight, she's always eons ahead of her enemy's next move.",
+    "developerName": "Rift",
+    "isBaseContent": false,
+    "abilities": [
+      {
+        "slot": "Grenade",
+        "name": "Gravity Well",
+        "displayName": "Poço Gravitacional",
+        "description": "Posicione Estrelas na Forma Astral (tecla da Ultimate). ATIVE uma Estrela para formar um Poço Gravitacional. Jogadores na área são puxados em direção ao centro antes de ele explodir, deixando Vulneráveis todos que ainda estão presos no centro."
+      },
+      {
+        "slot": "Ability1",
+        "name": "Nova Pulse",
+        "displayName": "Pulso Nova",
+        "description": "Posicione Estrelas na Forma Astral (tecla da Ultimate). ATIVE uma Estrela para detonar um Pulso Nova. O Pulso Nova carrega brevemente e depois explode, causando Concussão a todos os jogadores na área."
+      },
+      {
+        "slot": "Ability2",
+        "name": "Nebula / Dissipate",
+        "displayName": "Nebulosa / Dissipar",
+        "description": "Posicione Estrelas na Forma Astral (X). ATIVE uma Estrela para transformá-la em uma Nebulosa (fumaça). USE uma Estrela para dissipá-la, retornando a Estrela para ser posicionada em um novo local após um período. Dissipar forma brevemente uma Nebulosa falsa na localização da Estrela antes de retornar."
+      },
+      {
+        "slot": "Ultimate",
+        "name": "Astral Form / Cosmic Divide",
+        "displayName": "Forma Astral / Divisa Cósmica",
+        "description": "ATIVE para entrar na Forma Astral, em que você pode posicionar Estrelas com DISPARO. As Estrelas podem ser reativadas depois para serem transformadas em Pulso Nova, Nebulosa ou Poço Gravitacional. Quando Divisa Cósmica estiver carregada, use o DISPARO ALTERNATIVO na Forma Astral para começar a mirar e, depois, o DISPARO para escolher dois locais. Uma Divisa Cósmica infinita surge e conecta os pontos selecionados. A Divisa Cósmica bloqueia disparos e sons."
+      },
+      {
+        "slot": "Passive",
+        "name": "Astral Form",
+        "displayName": "Forma Astral",
+        "description": "ATIVE a Ultimate para entrar na Forma Astral e use DISPARO para posicionar Estrelas. Atinja as Estrelas com Pulso Nova, Nebulosa ou Poço Gravitacional para utilizar essas habilidades."
+      }
+    ]
+  },
+  {
+    "name": "Breach",
+    "descriptionEn": "The bionic Swede Breach fires powerful, targeted kinetic blasts to aggressively clear a path through enemy ground. The damage and disruption he inflicts ensures no fight is ever fair.",
+    "developerName": "Breach",
+    "isBaseContent": false,
+    "abilities": [
+      {
+        "slot": "Grenade",
+        "name": "Aftershock",
+        "displayName": "Pós-choque",
+        "description": "EQUIPE uma carga de fusão. DISPARE a carga para armar um jato de ação lenta pela parede, que causa alto dano a todos que estiverem na área de efeito."
+      },
+      {
+        "slot": "Ability1",
+        "name": "Flashpoint",
+        "displayName": "Estopim",
+        "description": "EQUIPE uma carga Cegante. DISPARE a carga para armar um jato de ação rápida pela parede. A carga é detonada, Cegando todos os jogadores que estiverem olhando para ela."
+      },
+      {
+        "slot": "Ability2",
+        "name": "Fault Line",
+        "displayName": "Falha Tectônica",
+        "description": "EQUIPE um impacto sísmico. SEGURE O DISPARO para aumentar a distância. SOLTE para iniciar o terremoto, causando Concussão em todos os jogadores na zona e numa linha reta até a zona."
+      },
+      {
+        "slot": "Ultimate",
+        "name": "Rolling Thunder",
+        "displayName": "Onda Trovejante",
+        "description": "EQUIPE uma Carga Sísmica. DISPARE para lançar um terremoto em cascata por todo o terreno numa grande área. O terremoto causa Concussão e lança ao ar quem estiver na área de efeito."
+      }
+    ]
+  },
+  {
+    "name": "Brimstone",
+    "descriptionEn": "Joining from the U.S.A., Brimstone's orbital arsenal ensures his squad always has the advantage. His ability to deliver utility precisely and safely make him the unmatched boots-on-the-ground commander.",
+    "developerName": "Sarge",
+    "isBaseContent": true,
+    "abilities": [
+      {
+        "slot": "Grenade",
+        "name": "Stim Beacon",
+        "displayName": "Sinalizador Estimulante",
+        "description": "INSTANTANEAMENTE arremesse um sinalizador estimulante. Ao pousar, ele criará um campo que concede um Estimulante de Combate e um Impulso de Velocidade aos jogadores."
+      },
+      {
+        "slot": "Ability1",
+        "name": "Incendiary",
+        "displayName": "Incendiário",
+        "description": "EQUIPE um lançador de granadas incendiárias. DISPARE para lançar uma granada que detona no chão, gerando uma zona de fogo que causa dano aos jogadores dentro dela."
+      },
+      {
+        "slot": "Ability2",
+        "name": "Sky Smoke",
+        "displayName": "Fumaça Celeste",
+        "description": "EQUIPE um mapa tático. DISPARE para marcar os locais onde as nuvens de fumaça de Brimstone pousarão. Use o DISPARO ALTERNATIVO para confirmar, lançando nuvens de fumaça de longa duração que bloqueiam a visão na área selecionada."
+      },
+      {
+        "slot": "Ultimate",
+        "name": "Orbital Strike",
+        "displayName": "Ataque Orbital",
+        "description": "EQUIPE um mapa tático. DISPARE para lançar um ataque prolongado de laser orbital no local selecionado, causando muito dano ao longo do tempo aos jogadores na área selecionada."
+      }
+    ]
+  },
+  {
+    "name": "Chamber",
+    "descriptionEn": "Well-dressed and well-armed, French weapons designer Chamber expels aggressors with deadly precision. He leverages his custom arsenal to hold the line and pick off enemies from afar, with a contingency built for every plan.",
+    "developerName": "Deadeye",
+    "isBaseContent": false,
+    "abilities": [
+      {
+        "slot": "Grenade",
+        "name": "Trademark",
+        "displayName": "Marca Registrada",
+        "description": "EQUIPE uma armadilha que busca por inimigos. DISPARE para posicioná-la no chão. Quando um inimigo visível entrar no alcance, a armadilha inicia uma contagem regressiva e desestabiliza o terreno ao redor, criando um campo duradouro que Desacelera os jogadores dentro dele. A armadilha pode ser recuperada para ser REPOSICIONADA."
+      },
+      {
+        "slot": "Ability1",
+        "name": "Headhunter",
+        "displayName": "Caçador de Cabeças",
+        "description": "ATIVE para equipar uma pistola pesada. Use o DISPARO ALTERNATIVO com a pistola equipada para mirar."
+      },
+      {
+        "slot": "Ability2",
+        "name": "Rendezvous",
+        "displayName": "Rendezvous",
+        "description": "EQUIPE uma âncora de teleporte. DISPARE para posicioná-la no chão. Enquanto estiver no chão e dentro do alcance da âncora, REATIVE para teleportar rapidamente até a âncora. A âncora pode ser recuperada para ser REPOSICIONADA."
+      },
+      {
+        "slot": "Ultimate",
+        "name": "Tour De Force",
+        "displayName": "Tour de Force",
+        "description": "ATIVE para invocar um poderoso fuzil de precisão personalizado que abate um inimigo com qualquer acerto na parte superior do corpo. Use o DISPARO ALTERNATIVO para mirar. Abater um inimigo cria um campo duradouro que Desacelera os jogadores dentro dele."
+      }
+    ]
+  },
+  {
+    "name": "Clove",
+    "descriptionEn": "Scottish troublemaker Clove makes mischief for enemies in both the heat of combat and the cold of death. The young immortal keeps foes guessing, even from beyond the grave, their return to the living only ever a moment away.",
+    "developerName": "Smonk",
+    "isBaseContent": false,
+    "abilities": [
+      {
+        "slot": "Grenade",
+        "name": "Pick-me-up",
+        "displayName": "Revitalizar",
+        "description": "ATIVE para absorver a energia vital de um inimigo caído que sofreu dano ou foi abatido por Clove e receba aceleração e Vida temporárias."
+      },
+      {
+        "slot": "Ability1",
+        "name": "Meddle",
+        "displayName": "Desvitalização",
+        "description": "EQUIPE um fragmento de Essência da Imortalidade. DISPARE para lançá-lo. Ao chegar no chão, ele detona após um breve intervalo e aplica temporariamente Deterioração a todos os alvos atingidos."
+      },
+      {
+        "slot": "Ability2",
+        "name": "Ruse",
+        "displayName": "Artimanha",
+        "description": "EQUIPE uma imagem do campo de batalha. DISPARE para marcar os locais onde você quer posicionar as nuvens de Clove. Use o DISPARO ALTERNATIVO para confirmar e lançar nuvens que bloqueiam a visão nas áreas selecionadas. Clove pode usar essa habilidade depois de morrer."
+      },
+      {
+        "slot": "Ultimate",
+        "name": "Not Dead Yet",
+        "displayName": "Ainda Não Morri",
+        "description": "Depois de morrer, ATIVE para ressuscitar. Depois de ressuscitar, Clove precisa obter um abate ou uma assistência de dano em um determinado período ou morre de vez. REATIVE para cancelar mais cedo."
+      }
+    ]
+  },
+  {
+    "name": "Cypher",
+    "descriptionEn": "The Moroccan information broker, Cypher is a one-man surveillance network who keeps tabs on the enemy's every move. No secret is safe. No maneuver goes unseen. Cypher is always watching.",
+    "developerName": "Gumshoe",
+    "isBaseContent": false,
+    "abilities": [
+      {
+        "slot": "Grenade",
+        "name": "Trapwire",
+        "displayName": "Fio-armadilha",
+        "description": "EQUIPE um fio-armadilha. DISPARE para instalar um fio-armadilha oculto e destrutível no local-alvo, criando uma linha entre o local e a parede oposta. Jogadores inimigos que passarem pelo fio sofrerão Lentidão e ficarão Revelados depois de um curto período se não destruírem o dispositivo a tempo. A habilidade pode ser recolhida e REPOSICIONADA."
+      },
+      {
+        "slot": "Ability1",
+        "name": "Cyber Cage",
+        "displayName": "Jaula Cibernética",
+        "description": "INSTANTANEAMENTE joga a jaula cibernética diante de Cypher. ATIVE para criar uma Zona que bloqueia a visão e reproduz um sinal de áudio quando inimigos passam por ela."
+      },
+      {
+        "slot": "Ability2",
+        "name": "Spycam",
+        "displayName": "Câmera de Vigilância",
+        "description": "EQUIPE uma Câmera de Vigilância. DISPARE para colocar a câmera no local-alvo. REPITA a habilidade para controlar a visão da câmera. Enquanto controla a câmera, DISPARE para lançar um dardo marcador. O dardo revelará a localização de qualquer jogador atingido. A câmera pode ser recuperada e REPOSICIONADA."
+      },
+      {
+        "slot": "Ultimate",
+        "name": "Neural Theft",
+        "displayName": "Assalto Neural",
+        "description": "Use INSTANTANEAMENTE num jogador inimigo morto alvejado para baixar informações sobre a equipe dele. Depois de um breve intervalo, a localização de todos os jogadores inimigos ainda vivos será Revelada duas vezes."
+      }
+    ]
+  },
+  {
+    "name": "Deadlock",
+    "descriptionEn": "Norwegian operative Deadlock deploys an array of cutting-edge nanowire to secure the battlefield from even the most lethal assault. No one escapes her vigilant watch, nor survives her unyielding ferocity.",
+    "developerName": "Cable",
+    "isBaseContent": false,
+    "abilities": [
+      {
+        "slot": "Grenade",
+        "name": "Barrier Mesh",
+        "displayName": "Barreira de Contenção",
+        "description": "EQUIPE um disco de Barreira de Contenção. DISPARE para lançar à frente. Ao atingir o chão, o disco gera barreiras a partir do ponto de origem, que bloqueiam a movimentação de personagens."
+      },
+      {
+        "slot": "Ability1",
+        "name": "Sonic Sensor",
+        "displayName": "Sensor Sônico",
+        "description": "EQUIPE um Sensor Sônico. DISPARE para posicionar. O sensor monitora os sons dos inimigos em uma área. Causa Concussão na área se sons de passos, disparos ou qualquer barulho significativo forem detectados. O sensor pode ser recuperado e REPOSICIONADO."
+      },
+      {
+        "slot": "Ability2",
+        "name": "GravNet",
+        "displayName": "GravNet",
+        "description": "EQUIPE uma granada GravNet. DISPARE para lançar. Use o DISPARO ALTERNATIVO para arremessar a curta distância. A GravNet detona ao atingir o chão, o que força personagens pegos por ela a agacharem e moverem-se lentamente."
+      },
+      {
+        "slot": "Ultimate",
+        "name": "Annihilation",
+        "displayName": "Aniquilação",
+        "description": "EQUIPE um Acelerador de Nanofios. DISPARE para liberar um pulso de nanofios que captura o primeiro inimigo que encontrar. O inimigo encasulado é puxado por uma trilha de nanofios e abatido, a não ser que seja libertado. O casulo de nanofios é destrutível."
+      }
+    ]
+  },
+  {
+    "name": "Fade",
+    "descriptionEn": "Turkish bounty hunter Fade unleashes the power of raw nightmare to seize enemy secrets. Attuned with terror itself, she hunts down targets and reveals their deepest fears - before crushing them in the dark.",
+    "developerName": "BountyHunter",
+    "isBaseContent": false,
+    "abilities": [
+      {
+        "slot": "Grenade",
+        "name": "Prowler",
+        "displayName": "Espreitador",
+        "description": "EQUIPE um Espreitador. DISPARE para enviá-lo à frente. SEGURE O DISPARO para mover o Espreitador na direção da sua retícula. Ele perseguirá o primeiro rastro sinistro ou inimigo que encontrar e afetará o alvo com Visão Turva ao alcançá-lo."
+      },
+      {
+        "slot": "Ability1",
+        "name": "Seize",
+        "displayName": "Clausura",
+        "description": "EQUIPE um nódulo de puro temor. DISPARE para arremessá-lo. O nódulo cairá depois de um determinado tempo. REPITA a habilidade para soltá-lo antecipadamente. Esse nódulo se rompe ao impacto, enclausurando inimigos próximos. Inimigos enclausurados sofrem Surdez e Deterioração."
+      },
+      {
+        "slot": "Ability2",
+        "name": "Haunt",
+        "displayName": "Assombrar",
+        "description": "EQUIPE uma assombração. DISPARE para arremessá-la. Ela cairá depois de um determinado tempo. REPITA a habilidade para soltá-la antecipadamente. Essa assombração ataca ao contato, Revelando inimigos em sua linha de visão e criando rastros sinistros até eles. Ela pode ser destruída pelos inimigos."
+      },
+      {
+        "slot": "Ultimate",
+        "name": "Nightfall",
+        "displayName": "Véu da Noite",
+        "description": "EQUIPE o poder dos pesadelos. DISPARE para liberar uma onda implacável de energia aterrorizante. Inimigos atingidos pela onda são Marcados por rastros sinistros e sofrem Surdez e Deterioração."
+      }
+    ]
+  },
+  {
+    "name": "Gekko",
+    "descriptionEn": "Gekko the Angeleno leads a tight-knit crew of calamitous creatures. His buddies bound forward, scattering enemies out of the way, with Gekko chasing them down to regroup and go again.",
+    "developerName": "Aggrobot",
+    "isBaseContent": false,
+    "abilities": [
+      {
+        "slot": "Grenade",
+        "name": "Mosh Pit",
+        "displayName": "Mosh Pit",
+        "description": "EQUIPE Mosh. DISPARE para lançá-lo como uma granada. Use o DISPARO ALTERNATIVO para arremessar a curta distância. Ao atingir uma superfície, Mosh se multiplica em uma grande área, o que causa uma pequena quantidade de dano ao longo do tempo, e, depois de uns instantes, explode. INTERAJA para recuperar o glóbulo e ganhar outra carga de Mosh após um curto período."
+      },
+      {
+        "slot": "Ability1",
+        "name": "Wingman",
+        "displayName": "Wingman",
+        "description": "EQUIPE Wingman. DISPARE para enviá-lo para encontrar inimigos. Wingman lança uma forte explosão na direção do primeiro inimigo que vê. Use o DISPARO ALTERNATIVO na direção de um ponto ou Spike plantada para que Wingman plante ou desarme a Spike. Para plantar, Gekko deve estar com a Spike no inventário. Quando Wingman expira, ele se transforma em um glóbulo inativo. INTERAJA para recuperar o glóbulo e ganhar outra carga de Wingman após um curto período."
+      },
+      {
+        "slot": "Ability2",
+        "name": "Dizzy",
+        "displayName": "Dizzy",
+        "description": "EQUIPE Dizzy. DISPARE para enviá-la voando pelo ar. Dizzy avança e solta explosões de plasma nos inimigos em sua linha de visão. Os inimigos atingidos pelo plasma ficam Cegos. Ao expirar, Dizzy se transforma em um glóbulo inativo. INTERAJA para recuperar o glóbulo e ganhar outra carga de Dizzy após um curto período."
+      },
+      {
+        "slot": "Ultimate",
+        "name": "Thrash",
+        "displayName": "Thrash",
+        "description": "EQUIPE Thrash. DISPARE para se conectar à mente dela e guiá-la pelo território inimigo. ATIVE para avançar e explodir, Detendo qualquer jogador em um pequeno raio. Ao expirar, Thrash se transforma em um glóbulo inativo. INTERAJA para recuperar o glóbulo e ganhar outra carga de Thrash após um curto período. Thrash pode ser recuperada uma vez."
+      }
+    ]
+  },
+  {
+    "name": "Harbor",
+    "descriptionEn": "Hailing from India’s coast, Harbor storms the field wielding ancient technology with dominion over water. He unleashes frothing rapids and crushing waves to shield his allies, or pummel those that oppose him.",
+    "developerName": "Mage",
+    "isBaseContent": false,
+    "abilities": [
+      {
+        "slot": "Grenade",
+        "name": "Storm Surge",
+        "displayName": "Temporal",
+        "description": "EQUIPE um Temporal. DISPARE para lançar, criando um redemoinho explosivo que causa Lentidão e Visão Turva aos jogadores dentro dele após um curto período."
+      },
+      {
+        "slot": "Ability1",
+        "name": "High Tide",
+        "displayName": "Maré Alta",
+        "description": "EQUIPE Maré Alta. DISPARE para enviar água para frente junto ao chão. SEGURE O DISPARO para guiar a água na direção da sua retícula, fazendo surgir uma Parede que bloqueia a visão ao longo do caminho. Use o DISPARO ALTERNATIVO para parar a água mais cedo. Todos os jogadores que atravessam a Maré Alta sofrem Lentidão."
+      },
+      {
+        "slot": "Ability2",
+        "name": "Cove",
+        "displayName": "Enseada",
+        "description": "EQUIPE Enseada. ATIVE para formar uma Fumaça de água no local selecionado. SEGURE O DISPARO enquanto mira para afastar o marcador e SEGURE O DISPARO ALTERNATIVO para aproximá-lo. RECARREGUE para trocar a visão de posicionamento. REATIVE para criar um Escudo ao redor da Fumaça de água, que bloqueia as balas que a atingem. A Fumaça de água com Escudo pode ser destruída."
+      },
+      {
+        "slot": "Ultimate",
+        "name": "Reckoning",
+        "displayName": "Acerto de Contas",
+        "description": "EQUIPE Acerto de Contas. DISPARE para liberar todo o poder do seu artefato, lançando uma onda que avança em direção aos inimigos, causando Visão Turva e Lentidão nos inimigos atingidos."
+      }
+    ]
+  },
+  {
+    "name": "Iso",
+    "descriptionEn": "Chinese fixer for hire Iso falls into a flow state to dismantle the opposition. Reconfiguring ambient energy into bulletproof protection, he advances with focus towards his next duel to the death.",
+    "developerName": "Sequoia",
+    "isBaseContent": false,
+    "abilities": [
+      {
+        "slot": "Grenade",
+        "name": "Contingency",
+        "displayName": "Contingência",
+        "description": "EQUIPE para reunir energia prismática. DISPARE para enviar à frente uma parede de energia indestrutível que bloqueia balas. Use o DISPARO ALTERNATIVO para enviar uma versão mais lenta da parede."
+      },
+      {
+        "slot": "Ability1",
+        "name": "Undercut",
+        "displayName": "Centelha Debilitante",
+        "description": "EQUIPE um feixe molecular. DISPARE para lançá-lo à frente e aplicar Vulnerabilidade e Supressão por um curto período a todos os jogadores que tocar. O feixe pode atravessar objetos sólidos, inclusive paredes."
+      },
+      {
+        "slot": "Ability2",
+        "name": "Double Tap",
+        "displayName": "Fluxo Protetor",
+        "description": "Comece INSTANTANEAMENTE a canalizar seu foco. Com o foco ativado: receba um escudo que absorve uma instância de dano de qualquer fonte, recarregue mais rápido e entre em um estado de fluxo. Inimigos que você abate ou a quem causa dano durante esse tempo geram um orbe de energia. Atirar nesse orbe renova seu estado de fluxo e seu escudo existente ou concede outro."
+      },
+      {
+        "slot": "Ultimate",
+        "name": "Kill Contract",
+        "displayName": "Contrato de Abate",
+        "description": "EQUIPE uma arena interdimensional. DISPARE para lançar uma coluna de energia pelo campo de batalha que puxa você e o primeiro inimigo atingido por ela para a arena para duelarem até a morte após curar vocês dois."
+      }
+    ]
+  },
+  {
+    "name": "Jett",
+    "descriptionEn": "Representing her home country of South Korea, Jett's agile and evasive fighting style lets her take risks no one else can. She runs circles around every skirmish, cutting enemies up before they even know what hit them.",
+    "developerName": "Wushu",
+    "isBaseContent": true,
+    "abilities": [
+      {
+        "slot": "Grenade",
+        "name": "Cloudburst",
+        "displayName": "Erupção das Brumas",
+        "description": "INSTANTANEAMENTE lança um projétil que se expande numa breve nuvem que obscurece a visão ao bater numa superfície. SEGURE o botão da habilidade para curvar a fumaça na direção da sua mira."
+      },
+      {
+        "slot": "Ability1",
+        "name": "Updraft",
+        "displayName": "Corrente Ascendente",
+        "description": "INSTANTANEAMENTE lança Jett bem alto no ar."
+      },
+      {
+        "slot": "Ability2",
+        "name": "Tailwind",
+        "displayName": "Brisa de Impulso",
+        "description": "ATIVE para preparar uma rajada de vento por tempo limitado. REPITA a habilidade para lançar Jett na direção do movimento atual dela. Se estiver parada, Jett será lançada para a frente. A carga de Brisa de Impulso é redefinida a cada dois abates."
+      },
+      {
+        "slot": "Ultimate",
+        "name": "Blade Storm",
+        "displayName": "Tormenta de Aço",
+        "description": "EQUIPE um conjunto de facas de arremesso altamente precisas. DISPARE para lançar uma única faca contra o alvo. As facas são recarregadas ao matar um oponente. Use o DISPARO ALTERNATIVO para jogar todas as facas restantes contra o alvo, porém elas não são recarregadas ao matar um oponente."
+      },
+      {
+        "slot": "Passive",
+        "name": "Drift",
+        "displayName": "Deriva",
+        "description": "Segurar o botão de pulo durante uma queda permite que você plane no ar."
+      }
+    ]
+  },
+  {
+    "name": "KAY/O",
+    "descriptionEn": "KAY/O is a machine of war built for a single purpose: neutralizing radiants. His power to Suppress enemy abilities dismantles his opponents' capacity to fight back, securing him and his allies the ultimate edge.",
+    "developerName": "Grenadier",
+    "isBaseContent": false,
+    "abilities": [
+      {
+        "slot": "Grenade",
+        "name": "FRAG/ment",
+        "displayName": "FRAG/mento",
+        "description": "EQUIPE um fragmento explosivo. DISPARE para lançar. Use o DISPARO ALTERNATIVO para arremessar a curta distância. O fragmento se fixa ao chão e explode várias vezes, causando dano quase letal no centro de cada explosão."
+      },
+      {
+        "slot": "Ability1",
+        "name": "FLASH/drive",
+        "displayName": "GRANADA/clarão",
+        "description": "EQUIPE uma granada de clarão. DISPARE para jogá-la por cima. Use o DISPARO ALTERNATIVO para arremessar a curta distância uma versão mais fraca que explode mais rápido. A granada de clarão explode após um curto período, Cegando qualquer um que estiver na linha de visão."
+      },
+      {
+        "slot": "Ability2",
+        "name": "ZERO/point",
+        "displayName": "PONTO/zero",
+        "description": "EQUIPE uma lâmina de supressão. DISPARE para lançar. A lâmina se fixa à primeira superfície que atingir e explode, Suprimindo qualquer um que estiver dentro do raio da explosão. Inimigos podem destruir a lâmina."
+      },
+      {
+        "slot": "Ultimate",
+        "name": "NULL/cmd",
+        "displayName": "ANULAR/cmd",
+        "description": "INSTANTANEAMENTE sobrecarrega com energia de Radianita polarizada que emite grandes pulsos energéticos em um raio enorme a partir de onde KAY/O estiver. Inimigos atingidos pelos pulsos são Suprimidos por um curto período. Enquanto estiver sobrecarregado, KAY/O recebe Estimulante de Combate e pode ser reestabilizado se for abatido."
+      }
+    ]
+  },
+  {
+    "name": "Killjoy",
+    "descriptionEn": "The genius of Germany, Killjoy effortlessly secures key battlefield positions with her arsenal of inventions. If their damage doesn't take her enemies out, the debuff her robots provide will make short work of them.",
+    "developerName": "Killjoy",
+    "isBaseContent": false,
+    "abilities": [
+      {
+        "slot": "Grenade",
+        "name": "Nanoswarm",
+        "displayName": "Nanoenxame",
+        "description": "EQUIPE uma granada Nanoenxame. DISPARE para lançar a granada. Ao atingir uma superfície, a Nanoenxame fica oculta. Use o DISPARO ALTERNATIVO para arremessar a curta distância. ATIVE a Nanoenxame para acionar um enxame de nanorrobôs que causam dano."
+      },
+      {
+        "slot": "Ability1",
+        "name": "ALARMBOT",
+        "displayName": "Robô de Alarme",
+        "description": "EQUIPE um Robô de Alarme oculto. DISPARE para ativar um robô que persegue os inimigos que entram no alcance. Ao se aproximar do alvo, o robô explode, aplicando Vulnerável aos inimigos na área. SEGURE EQUIPAR para retirar um robô ativado."
+      },
+      {
+        "slot": "Ability2",
+        "name": "TURRET",
+        "displayName": "Torreta",
+        "description": "EQUIPE uma Torreta. DISPARE para ativar uma torreta que atira em inimigos em um cone de 100°. Ao posicionar, EQUIPE novamente para alterar a direção da torreta, segure o DISPARO ALTERNATIVO para girar. SEGURE EQUIPAR para recolher a torreta ativada."
+      },
+      {
+        "slot": "Ultimate",
+        "name": "Lockdown",
+        "displayName": "Confinamento",
+        "description": "EQUIPE o dispositivo de Confinamento. DISPARE para ativá-lo. Após um longo processo de ativação, o dispositivo detém todos os inimigos no raio de alcance. O dispositivo pode ser destruído pelos inimigos."
+      }
+    ]
+  },
+  {
+    "name": "Miks",
+    "descriptionEn": "Straight from Croatia, Miks takes the stage channeling pure sound energy. With his infectious passion and sonic powers, he rallies his squad to move as one as they set the tempo on the battlefield together.",
+    "developerName": "Iris",
+    "isBaseContent": false,
+    "abilities": [
+      {
+        "slot": "Grenade",
+        "name": "M-pulse",
+        "displayName": "Pulso M",
+        "description": "EQUIPE Pulso M. O DISPARO ALTERNATIVO alterna entre Concussão e Cura. DISPARE para lançar o dispositivo. Ao ser posicionado, o Pulso M emite ondas sonoras que causam Concussão ou Curam os jogadores."
+      },
+      {
+        "slot": "Ability1",
+        "name": "Harmonize",
+        "displayName": "Harmonia",
+        "description": "EQUIPE Harmonia. Mire em um aliado e DISPARE para ativar um Estimulante de Combate e um impulso de velocidade em você e no aliado. O efeito renova-se a cada abate. O DISPARO ALTERNATIVO concede Estimulante de Combate e impulso de velocidade para você."
+      },
+      {
+        "slot": "Ability2",
+        "name": "Waveform",
+        "displayName": "Ressonância",
+        "description": "EQUIPE um Mapa Tático. DISPARE para definir os locais. O DISPARO ALTERNATIVO gera Fumaças nos locais selecionados."
+      },
+      {
+        "slot": "Ultimate",
+        "name": "Bassquake",
+        "displayName": "Melodia Sísmica",
+        "description": "EQUIPE Melodia Sísmica. DISPARE para carregar e lançar Radiância Sônica à frente, que empurra e causa Surdez e Lentidão nos jogadores."
+      }
+    ]
+  },
+  {
+    "name": "Neon",
+    "descriptionEn": "Filipino Agent Neon surges forward at shocking speeds, discharging bursts of bioelectric radiance as fast as her body generates it. She races ahead to catch enemies off guard then strikes them down quicker than lightning.",
+    "developerName": "Sprinter",
+    "isBaseContent": false,
+    "abilities": [
+      {
+        "slot": "Grenade",
+        "name": "Fast Lane",
+        "displayName": "Via Expressa",
+        "description": "DISPARE duas linhas de energia no chão à frente. As linhas se estendem por uma curta distância ou até atingirem uma superfície. Elas se tornam paredes de eletricidade estática que bloqueiam a visão."
+      },
+      {
+        "slot": "Ability1",
+        "name": "Relay Bolt",
+        "displayName": "Ricochete Elétrico",
+        "description": "INSTANTANEAMENTE arremessa um raio de energia que ricocheteia uma vez. Ao atingir cada superfície, o raio eletrifica o chão abaixo dele com uma explosão Concussiva."
+      },
+      {
+        "slot": "Ability2",
+        "name": "High Gear",
+        "displayName": "Equipamento Voltaico",
+        "description": "INSTANTANEAMENTE canaliza o poder da Neon para receber velocidade aumentada. Ao atingir a carga máxima, use o DISPARO ALTERNATIVO para acionar um deslize elétrico. A carga de deslizamento é redefinida a cada dois abates."
+      },
+      {
+        "slot": "Ultimate",
+        "name": "Overdrive",
+        "displayName": "Sobrecarga",
+        "description": "Neon libera todo o seu poder e velocidade por um curto período, recuperando todo o combustível e uma carga de deslizamento. DISPARE para canalizar esse poder em um raio elétrico letal com alta precisão de movimento. Abates reiniciam a duração do efeito."
+      }
+    ]
+  },
+  {
+    "name": "Omen",
+    "descriptionEn": "A phantom of a memory, Omen hunts in the shadows. He renders enemies blind, teleports across the field, then lets paranoia take hold as his foe scrambles to uncover where he might strike next.",
+    "developerName": "Wraith",
+    "isBaseContent": false,
+    "abilities": [
+      {
+        "slot": "Grenade",
+        "name": "Shrouded Step",
+        "displayName": "Passos Tenebrosos",
+        "description": "EQUIPE uma habilidade de Passos Tenebrosos para ver o indicador de alcance. DISPARE para começar uma breve canalização e, então, teleporte-se para o local marcado."
+      },
+      {
+        "slot": "Ability1",
+        "name": "Paranoia",
+        "displayName": "Paranoia",
+        "description": "EQUIPE um orbe cegante. DISPARE para lançá-lo, causando Surdez e Visão Turva brevemente em todos os jogadores atingidos. O projétil atravessa paredes."
+      },
+      {
+        "slot": "Ability2",
+        "name": "Dark Cover",
+        "displayName": "Manto Sombrio",
+        "description": "EQUIPE um orbe sombrio e entre em um universo distorcido para posicionar os orbes. PRESSIONE o botão de habilidade para lançar o orbe no local marcado, criando uma esfera de sombra duradoura que bloqueia a visão. SEGURE O DISPARO enquanto mira para afastar o marcador. SEGURE O DISPARO ALTERNATIVO enquanto mira para aproximar o marcador. PRESSIONE RECARREGAR para alternar para a visão de mira normal."
+      },
+      {
+        "slot": "Ultimate",
+        "name": "From the Shadows",
+        "displayName": "Salto das Sombras",
+        "description": "EQUIPE um mapa tático. DISPARE para começar a se teleportar ao local selecionado. Enquanto se teleporta, Omen aparecerá como um Vulto que pode ser destruído por qualquer inimigo para cancelar o teleporte, ou PRESSIONE EQUIPAR para cancelá-lo."
+      }
+    ]
+  },
+  {
+    "name": "Phoenix",
+    "descriptionEn": "Hailing from the U.K., Phoenix's star power shines through in his fighting style, igniting the battlefield with flash and flare. Whether he's got backup or not, he's rushing in to fight on his own terms.",
+    "developerName": "Phoenix",
+    "isBaseContent": true,
+    "abilities": [
+      {
+        "slot": "Grenade",
+        "name": "Blaze",
+        "displayName": "Labareda",
+        "description": "EQUIPE uma parede de fogo. DISPARE para criar uma linha de chamas que avança, atravessa o ambiente e gera uma parede de fogo que bloqueia a visão e causa dano a jogadores que passarem por ela. A parede de fogo cura Phoenix em vez de causar dano a ele. SEGURE O DISPARO para curvá-la na direção da mira."
+      },
+      {
+        "slot": "Ability1",
+        "name": "Hot Hands",
+        "displayName": "Mãos Quentes",
+        "description": "EQUIPE uma bola de fogo. DISPARE para jogar a bola de fogo, que explode após um intervalo ou ao atingir o chão e cria uma zona duradoura de fogo que causa dano aos inimigos. A zona de fogo cura Phoenix em vez de causar dano. Use o DISPARO ALTERNATIVO para arremessar a curta distância."
+      },
+      {
+        "slot": "Ability2",
+        "name": "Curveball",
+        "displayName": "Bola Curva",
+        "description": "EQUIPE um orbe de chamas que avança em curva e detona pouco após o lançamento. DISPARE para curvá-lo para a esquerda, detonando e Cegando qualquer jogador que vir o orbe. Use o DISPARO ALTERNATIVO para curvá-lo para a direita. Uma carga de Bola Curva é restaurada a cada dois abates."
+      },
+      {
+        "slot": "Ultimate",
+        "name": "Run it Back",
+        "displayName": "Renascimento",
+        "description": "INSTANTANEAMENTE coloca um marcador na localização de Phoenix. Com a habilidade ativa, morrer ou deixar o tempo acabar encerrarão a habilidade e trarão Phoenix de volta ao local marcado com Vida completa e a mesma quantidade de armadura que tinha ao ativa-la."
+      },
+      {
+        "slot": "Passive",
+        "name": "Heating Up",
+        "displayName": "Aquecimento",
+        "description": "PASSIVAMENTE, Phoenix é Curado em vez de sofrer dano após ficar parado no fogo do próprio Phoenix."
+      }
+    ]
+  },
+  {
+    "name": "Raze",
+    "descriptionEn": "Raze explodes out of Brazil with her big personality and big guns. With her blunt-force-trauma playstyle, she excels at flushing entrenched enemies and clearing tight spaces with a generous dose of \"boom.\"",
+    "developerName": "Clay",
+    "isBaseContent": false,
+    "abilities": [
+      {
+        "slot": "Grenade",
+        "name": "Boom Bot",
+        "displayName": "Bumba",
+        "description": "EQUIPE um Bumba. DISPARE para lançar o robô, que avança em linha reta no chão, ricocheteando nas paredes. O Bumba trava ao detectar inimigos no cone frontal e os persegue, explodindo e causando dano pesado se alcançá-los."
+      },
+      {
+        "slot": "Ability1",
+        "name": "Blast Pack",
+        "displayName": "Carga de Explosivos",
+        "description": "INSTANTANEAMENTE lança uma Carga de Explosivos que gruda em superfícies. REPITA a habilidade depois de lançar para detonar. A carga move tudo que for atingido e causa dano se estiver totalmente carregada."
+      },
+      {
+        "slot": "Ability2",
+        "name": "Paint Shells",
+        "displayName": "Cartuchos de Tinta",
+        "description": "EQUIPE uma granada múltipla. DISPARE para jogar a granada, que causa dano e cria submunições, cada uma causando dano a qualquer um que estiver no alcance. Use o DISPARO ALTERNATIVO para arremessar a curta distância. A carga dos Cartuchos de Tinta é redefinida a cada dois abates."
+      },
+      {
+        "slot": "Ultimate",
+        "name": "Showstopper",
+        "displayName": "Estraga-prazeres",
+        "description": "EQUIPE um lança-mísseis. DISPARE um foguete que causa dano devastador em área ao fazer contato com qualquer coisa."
+      }
+    ]
+  },
+  {
+    "name": "Reyna",
+    "descriptionEn": "Forged in the heart of Mexico, Reyna dominates single combat, popping off with each kill she scores. Her capability is only limited by her raw skill, making her sharply dependent on performance.",
+    "developerName": "Vampire",
+    "isBaseContent": false,
+    "abilities": [
+      {
+        "slot": "Grenade",
+        "name": "Leer",
+        "displayName": "Olhar Voraz",
+        "description": "EQUIPE um olho etéreo e destrutível. ATIVE para lançá-lo adiante a uma curta distância. O olho deixará com visão turva todos os inimigos que olharem para ele."
+      },
+      {
+        "slot": "Ability1",
+        "name": "Devour",
+        "displayName": "Devorar",
+        "description": "Colheita de Almas: inimigos abatidos até 3 segundos após sofrerem dano da Reyna deixam Orbes de Alma que duram 3s. Devorar: INSTANTANEAMENTE consome um Orbe de Alma e recebe Vida Temporária. Se IMPERATRIZ estiver ativa, Devorar é conjurada automaticamente, não consome o Orbe de Alma e a Cura é permanente."
+      },
+      {
+        "slot": "Ability2",
+        "name": "Dismiss",
+        "displayName": "Dispensar",
+        "description": "INSTANTANEAMENTE consome um Orbe de Alma próximo, ficando Inatingível por um curto período. Também se torna Invisível se a habilidade IMPERATRIZ estiver ativa."
+      },
+      {
+        "slot": "Ultimate",
+        "name": "Empress",
+        "displayName": "Imperatriz",
+        "description": "INSTANTANEAMENTE entra em estado de frenesi e recebe um Estimulante de Combate que aumenta drasticamente as velocidades de disparo, equipagem e recarga de munição. Ganha cargas infinitas das habilidades de Colheita de Almas."
+      }
+    ]
+  },
+  {
+    "name": "Sage",
+    "descriptionEn": "The bastion of China, Sage creates safety for herself and her team wherever she goes. Able to revive fallen friends and stave off forceful assaults, she provides a calm center to a hellish battlefield.",
+    "developerName": "Thorne",
+    "isBaseContent": true,
+    "abilities": [
+      {
+        "slot": "Grenade",
+        "name": "Barrier Orb",
+        "displayName": "Orbe de Barreira",
+        "description": "EQUIPE um orbe de barreira. DISPARE para posicionar uma parede que é fortificada após alguns segundos. DISPARO ALTERNATIVO gira o marcador de alvo."
+      },
+      {
+        "slot": "Ability1",
+        "name": "Slow Orb",
+        "displayName": "Orbe de Lentidão",
+        "description": "EQUIPE um orbe de lentidão. DISPARE para lançá-lo. O orbe detona ao pousar, criando um campo duradouro que Desacelera os jogadores dentro dele e reduz a velocidade de avanço."
+      },
+      {
+        "slot": "Ability2",
+        "name": "Healing Orb",
+        "displayName": "Orbe Curativo",
+        "description": "EQUIPE um orbe curativo. DISPARE com a mira sobre um aliado ferido para ativar uma Cura ao Longo do Tempo. Use o DISPARO ALTERNATIVO enquanto Sage estiver ferida para ativar uma Autocura ao Longo do Tempo."
+      },
+      {
+        "slot": "Ultimate",
+        "name": "Resurrection",
+        "displayName": "Ressurreição",
+        "description": "EQUIPE uma habilidade de ressurreição. DISPARE com a mira sobre um aliado morto para começar a revivê-lo. Depois de uma breve canalização, o aliado voltará com a Vida completa."
+      }
+    ]
+  },
+  {
+    "name": "Skye",
+    "descriptionEn": "Hailing from Australia, Skye and her band of beasts trailblaze the way through hostile territory. With her creations hampering the enemy, and her power to heal others, the team is strongest and safest by Skye's side.",
+    "developerName": "Guide",
+    "isBaseContent": false,
+    "abilities": [
+      {
+        "slot": "Grenade",
+        "name": "Regrowth",
+        "displayName": "Reflorescer",
+        "description": "EQUIPE um amuleto de cura. SEGURE O DISPARO para canalizar, curando aliados dentro do alcance e na sua linha de visão. Esta habilidade pode ser REPETIDA até a reserva de cura ser esgotada. Skye não pode curar a si mesma."
+      },
+      {
+        "slot": "Ability1",
+        "name": "Trailblazer",
+        "displayName": "Predador Explosivo",
+        "description": "EQUIPE um amuleto de lobo-da-tasmânia. DISPARE para enviá-lo e controlar esse predador. Enquanto estiver no controle, DISPARE para saltar para a frente. O lobo gera uma explosão Concussiva no impacto e causa dano aos inimigos diretamente atingidos."
+      },
+      {
+        "slot": "Ability2",
+        "name": "Guiding Light",
+        "displayName": "Luz Desbravadora",
+        "description": "EQUIPE um amuleto de falcão. DISPARE para enviá-lo. SEGURE O DISPARO para guiar o falcão na direção da sua mira. REPITA a habilidade enquanto ele estiver voando para transformá-lo em um clarão que alcança a potência máxima depois de um curto período durante o voo."
+      },
+      {
+        "slot": "Ultimate",
+        "name": "Seekers",
+        "displayName": "Rastreadores",
+        "description": "EQUIPE um amuleto de Rastreador. DISPARE para enviar três Rastreadores que localizarão os três inimigos mais próximos. Se um Rastreador alcançar o alvo, causará Visão Turva e Lentidão a esse inimigo. Inimigos podem destruir os Rastreadores."
+      }
+    ]
+  },
+  {
+    "name": "Sova",
+    "descriptionEn": "Born from the eternal winter of Russia's tundra, Sova tracks, finds, and eliminates enemies with ruthless efficiency and precision. His custom bow and incredible scouting abilities ensure that even if you run, you cannot hide.",
+    "developerName": "Hunter",
+    "isBaseContent": true,
+    "abilities": [
+      {
+        "slot": "Grenade",
+        "name": "Owl Drone",
+        "displayName": "Drone Coruja",
+        "description": "EQUIPE um drone coruja. DISPARE para acionar e pilotar o drone. Enquanto pilota o drone, DISPARE para atirar um dardo marcador. O dardo revelará a localização de qualquer jogador atingido. Inimigos podem destruir o Drone Coruja."
+      },
+      {
+        "slot": "Ability1",
+        "name": "Shock Bolt",
+        "displayName": "Flecha de Choque",
+        "description": "EQUIPE um arco com uma flecha de choque. DISPARE para lançar a flecha, que explode ao impacto, causando dano aos jogadores próximos. SEGURE O DISPARO para estender o alcance do projétil. Use o DISPARO ALTERNATIVO para adicionar até dois ricochetes à flecha."
+      },
+      {
+        "slot": "Ability2",
+        "name": "Recon Bolt",
+        "displayName": "Flecha Rastreadora",
+        "description": "EQUIPE um arco com uma flecha de reconhecimento. DISPARE para lançar a flecha, que é ativada mediante impacto e Revela a localização de quaisquer inimigos próximos da linha de visão. Inimigos podem destruí-la. SEGURE O DISPARO para estender o alcance do projétil. Use o DISPARO ALTERNATIVO para adicionar até dois ricochetes à flecha."
+      },
+      {
+        "slot": "Ultimate",
+        "name": "Hunter's Fury",
+        "displayName": "Fúria do Caçador",
+        "description": "EQUIPE um arco com três disparos de longo alcance que perfuram paredes. DISPARE para atirar um raio de energia diante de Sova, causando dano e Revelando a localização dos inimigos que estiverem na linha. A habilidade pode ser REPETIDA até mais duas vezes enquanto o cronômetro de habilidade estiver ativo."
+      },
+      {
+        "slot": "Passive",
+        "name": "Uncanny Marksman",
+        "displayName": "Mira Extraordinária",
+        "description": "O arco personalizado de Sova pode disparar as flechas e ricocheteá-las em superfícies. Segurar o disparo aumenta o poder do arco, e a flecha é disparada ao soltar. Pressione o disparo alternativo para mudar o número de ricochetes. Suas flechas podem ricochetear no terreno. Segurar o clique esquerdo aumenta a trajetória do alcance do arco. O clique direito alterna o número de ricochetes desejados. A flecha é disparada ao soltar o clique esquerdo."
+      }
+    ]
+  },
+  {
+    "name": "Tejo",
+    "descriptionEn": "A veteran intelligence consultant from Colombia, Tejo’s ballistic guidance system pressures the enemy to relinquish their ground - or their lives. His targeted strikes keep opponents off balance and under his heel.",
+    "developerName": "Cashew",
+    "isBaseContent": false,
+    "abilities": [
+      {
+        "slot": "Grenade",
+        "name": "Stealth Drone",
+        "displayName": "Drone Furtivo",
+        "description": "EQUIPE um drone furtivo. DISPARE para lançar o drone e assumir o controle dos movimentos dele. DISPARE novamente para acionar um pulso que causa Supressão e Revela os inimigos atingidos."
+      },
+      {
+        "slot": "Ability1",
+        "name": "Special Delivery",
+        "displayName": "Entrega Especial",
+        "description": "EQUIPE uma granada adesiva. DISPARE para lançar. A granada gruda na primeira superfície atingida e explode, causando Concussão e dano a qualquer alvo atingido pela explosão. Use o DISPARO ALTERNATIVO para lançar a granada com um ricochete."
+      },
+      {
+        "slot": "Ability2",
+        "name": "Guided Salvo",
+        "displayName": "Rajada Guiada",
+        "description": "EQUIPE um mapa tático. DISPARE para selecionar até dois locais-alvo no mapa. Use o DISPARO ALTERNATIVO para lançar projéteis que viajam de forma autônoma até os locais-alvo e detonam repetidamente e causam dano."
+      },
+      {
+        "slot": "Ultimate",
+        "name": "Armageddon",
+        "displayName": "Armagedom",
+        "description": "EQUIPE um mapa tático para selecionar o alvo do ataque. DISPARE para selecionar o ponto de origem do ataque. DISPARE novamente para definir o ponto final e lançar o ataque, que libera uma onda de explosões letais ao longo do trecho determinado. Use o DISPARO ALTERNATIVO durante o mapeamento para cancelar o ponto de origem."
+      }
+    ]
+  },
+  {
+    "name": "Veto",
+    "descriptionEn": "Empowered by an unstoppable DNA mutation, Senegalese enforcer Veto defies the rules of engagement by nullifying his opponent's powers and technology. On Veto's battlefield, gunplay is your only guarantee.",
+    "developerName": "Pine",
+    "isBaseContent": false,
+    "abilities": [
+      {
+        "slot": "Grenade",
+        "name": "Crosscut",
+        "displayName": "Travessia",
+        "description": "EQUIPE um vórtice. DISPARE para posicioná-lo no chão. Enquanto estiver dentro do alcance e olhando para o vórtice, ATIVE para se teleportar até ele. Durante a FASE DE COMPRA, o vórtice pode ser recolhido e REPOSICIONADO."
+      },
+      {
+        "slot": "Ability1",
+        "name": "Chokehold",
+        "displayName": "Imobilidade",
+        "description": "EQUIPE um fragmento viscoso da sua mutação. DISPARE para lançar. O fragmento é acionado com o impacto no chão, criando uma armadilha que prende os inimigos no lugar. Inimigos presos sofrem Surdez e Deterioração. Inimigos podem destruir a armadilha antes da ativação."
+      },
+      {
+        "slot": "Ability2",
+        "name": "Interceptor",
+        "displayName": "Interceptador",
+        "description": "EQUIPE o Interceptador. DISPARE para posicionar o Interceptador no local determinado. Depois de posicionado, REPITA para ativar. Uma vez ativado, ele destruirá qualquer utilitário que REBATERIA em um jogador e/ou que seria destruído naturalmente por tiros. Inimigos podem destruir o Interceptador."
+      },
+      {
+        "slot": "Ultimate",
+        "name": "Evolution",
+        "displayName": "Evolução",
+        "description": "Inicia INSTANTANEAMENTE uma mutação completa, ganhando Estimulante de Combate e Regeneração, e se torna IMUNE a todas as formas de enfraquecimento."
+      }
+    ]
+  },
+  {
+    "name": "Viper",
+    "descriptionEn": "The American Chemist, Viper deploys an array of poisonous chemical devices to control the battlefield and choke the enemy's vision. If the toxins don't kill her prey, her mindgames surely will.",
+    "developerName": "Pandemic",
+    "isBaseContent": false,
+    "abilities": [
+      {
+        "slot": "Grenade",
+        "name": "Snake Bite",
+        "displayName": "Veneno de Cobra",
+        "description": "EQUIPE um lançador químico. DISPARE para lançar um cilindro que se rompe ao atingir o chão, gerando uma zona química duradoura que causa dano aos inimigos e aplica Vulnerável a eles."
+      },
+      {
+        "slot": "Ability1",
+        "name": "Poison Cloud",
+        "displayName": "Nuvem Venenosa",
+        "description": "EQUIPE um emissor de gás. DISPARE para jogar o emissor, que permanece até o fim da rodada. Use o DISPARO ALTERNATIVO para arremessar a curta distância. REPITA para criar uma nuvem de gás tóxico que consome combustível e causa Deterioração nos adversários dentro dela. A habilidade pode ser recolhida e REPOSICIONADA antes do início da rodada e pode ser REUTILIZADA mais de uma vez ao longo da rodada."
+      },
+      {
+        "slot": "Ability2",
+        "name": "Toxic Screen",
+        "displayName": "Cortina Tóxica",
+        "description": "EQUIPE um lançador de emissores de gás que atravessam terreno. DISPARE para lançar uma longa linha de emissores de gás. REPITA para criar uma parede alta de gás tóxico que consome combustível causa Deterioração nos adversários dentro dela. A habilidade pode ser REPETIDA mais de uma vez."
+      },
+      {
+        "slot": "Ultimate",
+        "name": "Viper's Pit",
+        "displayName": "Poço Peçonhento",
+        "description": "EQUIPE um borrifador químico. DISPARE para borrifar uma nuvem química em todas as direções ao redor de Viper, criando uma grande nuvem que causa Visão Turva e Deteriora a Vida dos inimigos dentro dela. SEGURE a tecla de habilidade para dispersar a nuvem mais cedo."
+      },
+      {
+        "slot": "Passive",
+        "name": "Toxic",
+        "displayName": "Tóxica",
+        "description": "Você gradualmente gera e recupera a toxina que abastece as suas habilidades. Inimigos que atravessarem a Nuvem Venenosa, a Cortina Tóxica ou o Poço Peçonhento da Viper instantaneamente sofrerão pelo menos 30 de Deterioração. O nível de Deterioração deles aumenta quanto mais permanecem em contato com a toxina."
+      }
+    ]
+  },
+  {
+    "name": "Vyse",
+    "descriptionEn": "Metallic mastermind Vyse unleashes liquid metal to isolate, trap, and disarm her enemies. Through cunning and manipulation, she forces all who oppose her to fear the battlefield itself.",
+    "developerName": "Nox",
+    "isBaseContent": false,
+    "abilities": [
+      {
+        "slot": "Grenade",
+        "name": "Razorvine",
+        "displayName": "Espinheiro Cortante",
+        "description": "EQUIPE um emaranhado de metal líquido. DISPARE para lançar. Ao cair, o metal se torna invisível. Quando ATIVADO, ele se espalha e cria um grande espinheiro que causa Lentidão e dano a todos os jogadores que passam por ele."
+      },
+      {
+        "slot": "Ability1",
+        "name": "Shear",
+        "displayName": "Cerca-Viva",
+        "description": "EQUIPE filamentos de metal líquido. DISPARE para posicionar uma armadilha de parede oculta. Quando um inimigo passa por ela, uma parede indestrutível emerge do chão atrás dele. A parede dura um breve período antes de se dissipar."
+      },
+      {
+        "slot": "Ability2",
+        "name": "Arc Rose",
+        "displayName": "Rosa Arcana",
+        "description": "EQUIPE uma Rosa Arcana. Mire em uma superfície e DISPARE para posicionar uma Rosa Arcana oculta, ou use o DISPARO ALTERNATIVO para posicionar a Rosa Arcana através da superfície. USE NOVAMENTE para cegar todos os jogadores que estiverem olhando para ela. A habilidade pode ser recuperada e REPOSICIONADA."
+      },
+      {
+        "slot": "Ultimate",
+        "name": "Steel Garden",
+        "displayName": "Jardim de Aço",
+        "description": "EQUIPE um espinheiro de metal líquido. DISPARE para lançar metal como uma torrente de espinhos metálicos, BLOQUEANDO as armas primárias inimigas após um breve período."
+      }
+    ]
+  },
+  {
+    "name": "Waylay",
+    "descriptionEn": "Thailand's prismatic radiant Waylay transforms into light itself as she darts across the battlefield, striking down her targets through shards of light before flitting back to safety, all in the blink of an eye.",
+    "developerName": "Terra",
+    "isBaseContent": false,
+    "abilities": [
+      {
+        "slot": "Grenade",
+        "name": "Saturate",
+        "displayName": "Saturação",
+        "description": "EQUIPE um aglomerado de luz. DISPARE para lançar o aglomerado, que explode ao tocar no chão e Retém jogadores próximos com uma poderosa desaceleração de movimento e de armas."
+      },
+      {
+        "slot": "Ability1",
+        "name": "Lightspeed",
+        "displayName": "Velocidade da Luz",
+        "description": "EQUIPE para se preparar para um impulso de velocidade. DISPARE para avançar duas vezes. Use o DISPARO ALTERNATIVO para avançar uma vez. Só o primeiro avanço faz você subir."
+      },
+      {
+        "slot": "Ability2",
+        "name": "Refract",
+        "displayName": "Refração",
+        "description": "Cria INSTANTANEAMENTE um feixe de luz no chão. REATIVE para voltar rapidamente ao feixe como uma partícula de luz pura. Você fica invulnerável durante o deslocamento. Uma carga de Refração é restaurada a cada dois abates."
+      },
+      {
+        "slot": "Ultimate",
+        "name": "Convergent Paths",
+        "displayName": "Caminhos Convergentes",
+        "description": "EQUIPE para focar seu poder prismático. DISPARE para criar uma imagem residual de si mesma que projeta um feixe de luz. Após um breve intervalo, você recebe um poderoso impulso de velocidade, e o feixe se expande e Retém outros jogadores na área."
+      }
+    ]
+  },
+  {
+    "name": "Yoru",
+    "descriptionEn": "Japanese native Yoru rips holes straight through reality to infiltrate enemy lines unseen. Using deception and aggression in equal measure, he gets the drop on each target before they know where to look.",
+    "developerName": "Stealth",
+    "isBaseContent": false,
+    "abilities": [
+      {
+        "slot": "Grenade",
+        "name": "FAKEOUT",
+        "displayName": "Distração",
+        "description": "EQUIPE um eco dimensional que se transforma em uma cópia do Yoru quando ativado. DISPARE para ativar a cópia e fazê-la avançar. Use o DISPARO ALTERNATIVO para posicionar um eco inativo. USE para transformar o eco inativo em uma cópia e fazê-la avançar. As cópias explodem e Cegam os inimigos quando destruídas por eles."
+      },
+      {
+        "slot": "Ability1",
+        "name": "BLINDSIDE",
+        "displayName": "Ponto Cego",
+        "description": "EQUIPE para arrancar um fragmento dimensional instável da realidade. DISPARE para lançar o fragmento, ativando um clarão que se dissipa ao atingir uma superfície sólida."
+      },
+      {
+        "slot": "Ability2",
+        "name": "GATECRASH",
+        "displayName": "Passagem Dimensional",
+        "description": "EQUIPE um fluxo dimensional. DISPARE para lançá-lo à frente. Use o DISPARO ALTERNATIVO para posicionar um fluxo imóvel. ATIVE para se teleportar até ele. USE para acionar um teleporte falso. Uma carga de PASSAGEM DIMENSIONAL é restaurada a cada dois abates."
+      },
+      {
+        "slot": "Ultimate",
+        "name": "DIMENSIONAL DRIFT",
+        "displayName": "Espionagem Dimensional",
+        "description": "EQUIPE uma máscara para olhar por entre as dimensões. DISPARE para entrar na dimensão do Yoru, onde você não poderá ser afetado nem visto pelos inimigos lá fora. REATIVE para sair da dimensão do Yoru mais cedo."
+      }
+    ]
+  }
+]

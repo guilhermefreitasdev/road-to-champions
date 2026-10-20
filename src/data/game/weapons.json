@@ -1,0 +1,608 @@
+[
+  {
+    "uuid": "55d8a0f4-4274-ca67-fe2c-06ab45efdf58",
+    "name": "Ares",
+    "displayName": "Ares",
+    "category": "Heavy",
+    "cost": 1600,
+    "fireRate": 13,
+    "magazineSize": 50,
+    "reloadTimeSeconds": 3.25,
+    "equipTimeSeconds": 1.25,
+    "wallPenetration": "High",
+    "fireMode": null,
+    "shotgunPelletCount": 1,
+    "damageRanges": [
+      {
+        "rangeStartMeters": 0,
+        "rangeEndMeters": 30,
+        "headDamage": 75,
+        "bodyDamage": 30,
+        "legDamage": 25.5
+      },
+      {
+        "rangeStartMeters": 30,
+        "rangeEndMeters": 50,
+        "headDamage": 70,
+        "bodyDamage": 28,
+        "legDamage": 23.8
+      }
+    ],
+    "displayIcon": "https://media.valorant-api.com/weapons/55d8a0f4-4274-ca67-fe2c-06ab45efdf58/displayicon.png"
+  },
+  {
+    "uuid": "410b2e0b-4ceb-1321-1727-20858f7f3477",
+    "name": "Bandit",
+    "displayName": "Bandit",
+    "category": "Sidearm",
+    "cost": 600,
+    "fireRate": 5.1,
+    "magazineSize": 8,
+    "reloadTimeSeconds": 1.5,
+    "equipTimeSeconds": 0.75,
+    "wallPenetration": "Medium",
+    "fireMode": "SemiAutomatic",
+    "shotgunPelletCount": -1,
+    "damageRanges": [
+      {
+        "rangeStartMeters": 0,
+        "rangeEndMeters": 10,
+        "headDamage": 152,
+        "bodyDamage": 39,
+        "legDamage": 33
+      },
+      {
+        "rangeStartMeters": 10,
+        "rangeEndMeters": 30,
+        "headDamage": 128,
+        "bodyDamage": 39,
+        "legDamage": 33
+      },
+      {
+        "rangeStartMeters": 30,
+        "rangeEndMeters": 50,
+        "headDamage": 112,
+        "bodyDamage": 34,
+        "legDamage": 28
+      }
+    ],
+    "displayIcon": "https://media.valorant-api.com/weapons/410b2e0b-4ceb-1321-1727-20858f7f3477/displayicon.png"
+  },
+  {
+    "uuid": "910be174-449b-c412-ab22-d0873436b21b",
+    "name": "Bucky",
+    "displayName": "Bucky",
+    "category": "Shotgun",
+    "cost": 850,
+    "fireRate": 1.1,
+    "magazineSize": 5,
+    "reloadTimeSeconds": 2.5,
+    "equipTimeSeconds": 1,
+    "wallPenetration": "Low",
+    "fireMode": "SemiAutomatic",
+    "shotgunPelletCount": 15,
+    "damageRanges": [
+      {
+        "rangeStartMeters": 0,
+        "rangeEndMeters": 8,
+        "headDamage": 34,
+        "bodyDamage": 17,
+        "legDamage": 14
+      },
+      {
+        "rangeStartMeters": 8,
+        "rangeEndMeters": 12,
+        "headDamage": 26,
+        "bodyDamage": 13,
+        "legDamage": 11.05
+      },
+      {
+        "rangeStartMeters": 12,
+        "rangeEndMeters": 50,
+        "headDamage": 18,
+        "bodyDamage": 9,
+        "legDamage": 7.65
+      }
+    ],
+    "displayIcon": "https://media.valorant-api.com/weapons/910be174-449b-c412-ab22-d0873436b21b/displayicon.png"
+  },
+  {
+    "uuid": "ae3de142-4d85-2547-dd26-4e90bed35cf7",
+    "name": "Bulldog",
+    "displayName": "Bulldog",
+    "category": "Rifle",
+    "cost": 2050,
+    "fireRate": 10,
+    "magazineSize": 24,
+    "reloadTimeSeconds": 2.5,
+    "equipTimeSeconds": 1,
+    "wallPenetration": "Medium",
+    "fireMode": null,
+    "shotgunPelletCount": 1,
+    "damageRanges": [
+      {
+        "rangeStartMeters": 0,
+        "rangeEndMeters": 50,
+        "headDamage": 115.5,
+        "bodyDamage": 35,
+        "legDamage": 29.75
+      }
+    ],
+    "displayIcon": "https://media.valorant-api.com/weapons/ae3de142-4d85-2547-dd26-4e90bed35cf7/displayicon.png"
+  },
+  {
+    "uuid": "29a0cfab-485b-f5d5-779a-b59f85e204a8",
+    "name": "Classic",
+    "displayName": "Classic",
+    "category": "Sidearm",
+    "cost": 0,
+    "fireRate": 6.75,
+    "magazineSize": 12,
+    "reloadTimeSeconds": 1.75,
+    "equipTimeSeconds": 0.75,
+    "wallPenetration": "Low",
+    "fireMode": "SemiAutomatic",
+    "shotgunPelletCount": 1,
+    "damageRanges": [
+      {
+        "rangeStartMeters": 0,
+        "rangeEndMeters": 30,
+        "headDamage": 78,
+        "bodyDamage": 26,
+        "legDamage": 22.1
+      },
+      {
+        "rangeStartMeters": 30,
+        "rangeEndMeters": 50,
+        "headDamage": 66,
+        "bodyDamage": 22,
+        "legDamage": 18.7
+      }
+    ],
+    "displayIcon": "https://media.valorant-api.com/weapons/29a0cfab-485b-f5d5-779a-b59f85e204a8/displayicon.png"
+  },
+  {
+    "uuid": "44d4e95c-4157-0037-81b2-17841bf2e8e3",
+    "name": "Frenzy",
+    "displayName": "Frenzy",
+    "category": "Sidearm",
+    "cost": 450,
+    "fireRate": 10,
+    "magazineSize": 15,
+    "reloadTimeSeconds": 1.5,
+    "equipTimeSeconds": 1,
+    "wallPenetration": "Low",
+    "fireMode": null,
+    "shotgunPelletCount": 1,
+    "damageRanges": [
+      {
+        "rangeStartMeters": 0,
+        "rangeEndMeters": 20,
+        "headDamage": 78,
+        "bodyDamage": 26,
+        "legDamage": 22.1
+      },
+      {
+        "rangeStartMeters": 20,
+        "rangeEndMeters": 50,
+        "headDamage": 63,
+        "bodyDamage": 21,
+        "legDamage": 17.85
+      }
+    ],
+    "displayIcon": "https://media.valorant-api.com/weapons/44d4e95c-4157-0037-81b2-17841bf2e8e3/displayicon.png"
+  },
+  {
+    "uuid": "1baa85b4-4c70-1284-64bb-6481dfc3bb4e",
+    "name": "Ghost",
+    "displayName": "Ghost",
+    "category": "Sidearm",
+    "cost": 500,
+    "fireRate": 6.75,
+    "magazineSize": 13,
+    "reloadTimeSeconds": 1.5,
+    "equipTimeSeconds": 0.75,
+    "wallPenetration": "Medium",
+    "fireMode": "SemiAutomatic",
+    "shotgunPelletCount": 1,
+    "damageRanges": [
+      {
+        "rangeStartMeters": 0,
+        "rangeEndMeters": 30,
+        "headDamage": 105,
+        "bodyDamage": 30,
+        "legDamage": 25.5
+      },
+      {
+        "rangeStartMeters": 30,
+        "rangeEndMeters": 50,
+        "headDamage": 87.5,
+        "bodyDamage": 25,
+        "legDamage": 21.25
+      }
+    ],
+    "displayIcon": "https://media.valorant-api.com/weapons/1baa85b4-4c70-1284-64bb-6481dfc3bb4e/displayicon.png"
+  },
+  {
+    "uuid": "4ade7faa-4cf1-8376-95ef-39884480959b",
+    "name": "Guardian",
+    "displayName": "Guardian",
+    "category": "Rifle",
+    "cost": 2250,
+    "fireRate": 5.25,
+    "magazineSize": 12,
+    "reloadTimeSeconds": 2.5,
+    "equipTimeSeconds": 1,
+    "wallPenetration": "High",
+    "fireMode": "SemiAutomatic",
+    "shotgunPelletCount": 1,
+    "damageRanges": [
+      {
+        "rangeStartMeters": 0,
+        "rangeEndMeters": 50,
+        "headDamage": 195,
+        "bodyDamage": 65,
+        "legDamage": 48.75
+      }
+    ],
+    "displayIcon": "https://media.valorant-api.com/weapons/4ade7faa-4cf1-8376-95ef-39884480959b/displayicon.png"
+  },
+  {
+    "uuid": "ec845bf4-4f79-ddda-a3da-0db3774b2794",
+    "name": "Judge",
+    "displayName": "Judge",
+    "category": "Shotgun",
+    "cost": 1850,
+    "fireRate": 3.5,
+    "magazineSize": 5,
+    "reloadTimeSeconds": 2.2,
+    "equipTimeSeconds": 1,
+    "wallPenetration": "Low",
+    "fireMode": null,
+    "shotgunPelletCount": 12,
+    "damageRanges": [
+      {
+        "rangeStartMeters": 0,
+        "rangeEndMeters": 10,
+        "headDamage": 34,
+        "bodyDamage": 17,
+        "legDamage": 14.45
+      },
+      {
+        "rangeStartMeters": 10,
+        "rangeEndMeters": 15,
+        "headDamage": 20,
+        "bodyDamage": 10,
+        "legDamage": 8.5
+      },
+      {
+        "rangeStartMeters": 15,
+        "rangeEndMeters": 50,
+        "headDamage": 14,
+        "bodyDamage": 7,
+        "legDamage": 5.95
+      }
+    ],
+    "displayIcon": "https://media.valorant-api.com/weapons/ec845bf4-4f79-ddda-a3da-0db3774b2794/displayicon.png"
+  },
+  {
+    "uuid": "c4883e50-4494-202c-3ec3-6b8a9284f00b",
+    "name": "Marshal",
+    "displayName": "Marshal",
+    "category": "Sniper",
+    "cost": 950,
+    "fireRate": 1.5,
+    "magazineSize": 5,
+    "reloadTimeSeconds": 2.5,
+    "equipTimeSeconds": 1.25,
+    "wallPenetration": "Medium",
+    "fireMode": "SemiAutomatic",
+    "shotgunPelletCount": 1,
+    "damageRanges": [
+      {
+        "rangeStartMeters": 0,
+        "rangeEndMeters": 50,
+        "headDamage": 202,
+        "bodyDamage": 101,
+        "legDamage": 85.85
+      }
+    ],
+    "displayIcon": "https://media.valorant-api.com/weapons/c4883e50-4494-202c-3ec3-6b8a9284f00b/displayicon.png"
+  },
+  {
+    "uuid": "63e6c2b6-4a8e-869c-3d4c-e38355226584",
+    "name": "Odin",
+    "displayName": "Odin",
+    "category": "Heavy",
+    "cost": 3200,
+    "fireRate": 12,
+    "magazineSize": 100,
+    "reloadTimeSeconds": 5,
+    "equipTimeSeconds": 1.25,
+    "wallPenetration": "High",
+    "fireMode": null,
+    "shotgunPelletCount": 1,
+    "damageRanges": [
+      {
+        "rangeStartMeters": 0,
+        "rangeEndMeters": 30,
+        "headDamage": 95,
+        "bodyDamage": 38,
+        "legDamage": 32.3
+      },
+      {
+        "rangeStartMeters": 30,
+        "rangeEndMeters": 50,
+        "headDamage": 77.5,
+        "bodyDamage": 31,
+        "legDamage": 26.35
+      }
+    ],
+    "displayIcon": "https://media.valorant-api.com/weapons/63e6c2b6-4a8e-869c-3d4c-e38355226584/displayicon.png"
+  },
+  {
+    "uuid": "a03b24d3-4319-996d-0f8c-94bbfba1dfc7",
+    "name": "Operator",
+    "displayName": "Operator",
+    "category": "Sniper",
+    "cost": 4700,
+    "fireRate": 0.6,
+    "magazineSize": 5,
+    "reloadTimeSeconds": 3.7,
+    "equipTimeSeconds": 1.5,
+    "wallPenetration": "High",
+    "fireMode": "SemiAutomatic",
+    "shotgunPelletCount": 1,
+    "damageRanges": [
+      {
+        "rangeStartMeters": 0,
+        "rangeEndMeters": 50,
+        "headDamage": 255,
+        "bodyDamage": 150,
+        "legDamage": 120
+      }
+    ],
+    "displayIcon": "https://media.valorant-api.com/weapons/a03b24d3-4319-996d-0f8c-94bbfba1dfc7/displayicon.png"
+  },
+  {
+    "uuid": "5f0aaf7a-4289-3998-d5ff-eb9a5cf7ef5c",
+    "name": "Outlaw",
+    "displayName": "Outlaw",
+    "category": "Sniper",
+    "cost": 2400,
+    "fireRate": 2.75,
+    "magazineSize": 2,
+    "reloadTimeSeconds": 3.8,
+    "equipTimeSeconds": 1.25,
+    "wallPenetration": "High",
+    "fireMode": "SemiAutomatic",
+    "shotgunPelletCount": -1,
+    "damageRanges": [
+      {
+        "rangeStartMeters": 0,
+        "rangeEndMeters": 50,
+        "headDamage": 238,
+        "bodyDamage": 140,
+        "legDamage": 119
+      }
+    ],
+    "displayIcon": "https://media.valorant-api.com/weapons/5f0aaf7a-4289-3998-d5ff-eb9a5cf7ef5c/displayicon.png"
+  },
+  {
+    "uuid": "ee8e8d15-496b-07ac-e5f6-8fae5d4c7b1a",
+    "name": "Phantom",
+    "displayName": "Phantom",
+    "category": "Rifle",
+    "cost": 2900,
+    "fireRate": 11,
+    "magazineSize": 30,
+    "reloadTimeSeconds": 2.5,
+    "equipTimeSeconds": 1,
+    "wallPenetration": "Medium",
+    "fireMode": null,
+    "shotgunPelletCount": 1,
+    "damageRanges": [
+      {
+        "rangeStartMeters": 0,
+        "rangeEndMeters": 20,
+        "headDamage": 156,
+        "bodyDamage": 39,
+        "legDamage": 33.15
+      },
+      {
+        "rangeStartMeters": 20,
+        "rangeEndMeters": 50,
+        "headDamage": 140,
+        "bodyDamage": 35,
+        "legDamage": 29.75
+      }
+    ],
+    "displayIcon": "https://media.valorant-api.com/weapons/ee8e8d15-496b-07ac-e5f6-8fae5d4c7b1a/displayicon.png"
+  },
+  {
+    "uuid": "e336c6b8-418d-9340-d77f-7a9e4cfe0702",
+    "name": "Sheriff",
+    "displayName": "Sheriff",
+    "category": "Sidearm",
+    "cost": 800,
+    "fireRate": 4,
+    "magazineSize": 6,
+    "reloadTimeSeconds": 2.25,
+    "equipTimeSeconds": 1,
+    "wallPenetration": "High",
+    "fireMode": "SemiAutomatic",
+    "shotgunPelletCount": 1,
+    "damageRanges": [
+      {
+        "rangeStartMeters": 0,
+        "rangeEndMeters": 30,
+        "headDamage": 159.5,
+        "bodyDamage": 55,
+        "legDamage": 46.75
+      },
+      {
+        "rangeStartMeters": 30,
+        "rangeEndMeters": 50,
+        "headDamage": 145,
+        "bodyDamage": 50,
+        "legDamage": 42.5
+      }
+    ],
+    "displayIcon": "https://media.valorant-api.com/weapons/e336c6b8-418d-9340-d77f-7a9e4cfe0702/displayicon.png"
+  },
+  {
+    "uuid": "42da8ccc-40d5-affc-beec-15aa47b42eda",
+    "name": "Shorty",
+    "displayName": "Shorty",
+    "category": "Sidearm",
+    "cost": 300,
+    "fireRate": 3,
+    "magazineSize": 2,
+    "reloadTimeSeconds": 1.75,
+    "equipTimeSeconds": 0.75,
+    "wallPenetration": "Low",
+    "fireMode": "SemiAutomatic",
+    "shotgunPelletCount": 15,
+    "damageRanges": [
+      {
+        "rangeStartMeters": 0,
+        "rangeEndMeters": 7,
+        "headDamage": 22,
+        "bodyDamage": 11,
+        "legDamage": 9.35
+      },
+      {
+        "rangeStartMeters": 7,
+        "rangeEndMeters": 15,
+        "headDamage": 12,
+        "bodyDamage": 6,
+        "legDamage": 5.1
+      },
+      {
+        "rangeStartMeters": 15,
+        "rangeEndMeters": 50,
+        "headDamage": 6,
+        "bodyDamage": 3,
+        "legDamage": 2.55
+      }
+    ],
+    "displayIcon": "https://media.valorant-api.com/weapons/42da8ccc-40d5-affc-beec-15aa47b42eda/displayicon.png"
+  },
+  {
+    "uuid": "462080d1-4035-2937-7c09-27aa2a5c27a7",
+    "name": "Spectre",
+    "displayName": "Spectre",
+    "category": "SMG",
+    "cost": 1600,
+    "fireRate": 13.33,
+    "magazineSize": 30,
+    "reloadTimeSeconds": 2.25,
+    "equipTimeSeconds": 0.75,
+    "wallPenetration": "Low",
+    "fireMode": null,
+    "shotgunPelletCount": 1,
+    "damageRanges": [
+      {
+        "rangeStartMeters": 0,
+        "rangeEndMeters": 15,
+        "headDamage": 78,
+        "bodyDamage": 26,
+        "legDamage": 22.1
+      },
+      {
+        "rangeStartMeters": 15,
+        "rangeEndMeters": 30,
+        "headDamage": 66,
+        "bodyDamage": 22,
+        "legDamage": 18.7
+      },
+      {
+        "rangeStartMeters": 30,
+        "rangeEndMeters": 50,
+        "headDamage": 60,
+        "bodyDamage": 20,
+        "legDamage": 17
+      }
+    ],
+    "displayIcon": "https://media.valorant-api.com/weapons/462080d1-4035-2937-7c09-27aa2a5c27a7/displayicon.png"
+  },
+  {
+    "uuid": "f7e1b454-4ad4-1063-ec0a-159e56b58941",
+    "name": "Stinger",
+    "displayName": "Stinger",
+    "category": "SMG",
+    "cost": 1100,
+    "fireRate": 16,
+    "magazineSize": 20,
+    "reloadTimeSeconds": 2.25,
+    "equipTimeSeconds": 0.75,
+    "wallPenetration": "Low",
+    "fireMode": null,
+    "shotgunPelletCount": 1,
+    "damageRanges": [
+      {
+        "rangeStartMeters": 0,
+        "rangeEndMeters": 15,
+        "headDamage": 67.5,
+        "bodyDamage": 27,
+        "legDamage": 22.95
+      },
+      {
+        "rangeStartMeters": 15,
+        "rangeEndMeters": 50,
+        "headDamage": 57,
+        "bodyDamage": 23,
+        "legDamage": 19
+      }
+    ],
+    "displayIcon": "https://media.valorant-api.com/weapons/f7e1b454-4ad4-1063-ec0a-159e56b58941/displayicon.png"
+  },
+  {
+    "uuid": "9c82e19d-4575-0200-1a81-3eacf00cf872",
+    "name": "Vandal",
+    "displayName": "Vandal",
+    "category": "Rifle",
+    "cost": 2900,
+    "fireRate": 9.75,
+    "magazineSize": 25,
+    "reloadTimeSeconds": 2.5,
+    "equipTimeSeconds": 1,
+    "wallPenetration": "Medium",
+    "fireMode": null,
+    "shotgunPelletCount": 1,
+    "damageRanges": [
+      {
+        "rangeStartMeters": 0,
+        "rangeEndMeters": 50,
+        "headDamage": 160,
+        "bodyDamage": 40,
+        "legDamage": 34
+      }
+    ],
+    "displayIcon": "https://media.valorant-api.com/weapons/9c82e19d-4575-0200-1a81-3eacf00cf872/displayicon.png"
+  },
+  {
+    "uuid": "8db0a1bf-4a50-832a-4566-faaaa6d250ca",
+    "name": "Warden",
+    "displayName": "Warden",
+    "category": "Rifle",
+    "cost": 2900,
+    "fireRate": 6.5,
+    "magazineSize": 18,
+    "reloadTimeSeconds": 2.5,
+    "equipTimeSeconds": 1,
+    "wallPenetration": "Medium",
+    "fireMode": null,
+    "shotgunPelletCount": 1,
+    "damageRanges": [
+      {
+        "rangeStartMeters": 0,
+        "rangeEndMeters": 50,
+        "headDamage": 200,
+        "bodyDamage": 50,
+        "legDamage": 42
+      }
+    ],
+    "displayIcon": "https://media.valorant-api.com/weapons/8db0a1bf-4a50-832a-4566-faaaa6d250ca/displayicon.png"
+  }
+]
