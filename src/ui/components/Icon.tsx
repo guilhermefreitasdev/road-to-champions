@@ -42,9 +42,6 @@ export type IconName =
   | 'target'
   | 'puzzle'
   | 'tilde'
-  | 'volume'
-  | 'volume-off'
-  | 'rewind'
   | 'role-duelist'
   | 'role-initiator'
   | 'role-controller'
@@ -95,9 +92,6 @@ const PATHS: Record<IconName, string> = {
   target: 'M12 3a9 9 0 100 18 9 9 0 000-18zM12 8a4 4 0 100 8 4 4 0 000-8zM12 11.5v1',
   puzzle: 'M4 8h4a2 2 0 114 0h4v4a2 2 0 110 4v4H4v-4a2 2 0 100-4z',
   tilde: 'M5 13.5c1.5-2.5 3.5-3 5.5-1.5s4 1 5.5-1.5',
-  volume: 'M4 9.5h3.5L12 5.5v13l-4.5-4H4zM15.5 9a4 4 0 010 6M18 6.5a7.5 7.5 0 010 11',
-  'volume-off': 'M4 9.5h3.5L12 5.5v13l-4.5-4H4zM16 9.5l5 5M21 9.5l-5 5',
-  rewind: 'M11 6l-7 6 7 6zM20 6l-7 6 7 6z',
   'role-duelist': 'M13 2L5 14h6l-1 8 8-12h-6z',
   'role-initiator': 'M2 12s3.6-6 10-6 10 6 10 6-3.6 6-10 6S2 12 2 12zM12 9.5a2.5 2.5 0 100 5 2.5 2.5 0 000-5z',
   'role-controller': 'M7 18h10a4 4 0 00.6-8A6 6 0 006.3 9 4.5 4.5 0 007 18z',

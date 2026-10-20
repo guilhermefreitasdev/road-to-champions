@@ -12,10 +12,10 @@ export const CAREER_KEY = 'rtc:career:v1';
 /**
  * Keys of older save formats, removed on load (v1 = fictional sample cards, v2 = Swiss stage, v3 = strength v1,
  * v4 = before Modelo v3, v5 = before agent pools / flex roles / per-map agents, v6 = before difficulty and box scores;
- * season v3 = before difficulty and the transfer market). The history (rtc:history:v1) is
+ * season v3 = before difficulty and the transfer market; rtc:aces:v1 = progress of the removed "Acerte o ace"). The history (rtc:history:v1) is
  * a snapshot and survives these bumps.
  */
-export const OLD_KEYS = ['rtc:run:v1', 'rtc:run:v2', 'rtc:run:v3', 'rtc:run:v4', 'rtc:run:v5', 'rtc:run:v6', 'rtc:season:v1', 'rtc:season:v2', 'rtc:season:v3'];
+export const OLD_KEYS = ['rtc:run:v1', 'rtc:run:v2', 'rtc:run:v3', 'rtc:run:v4', 'rtc:run:v5', 'rtc:run:v6', 'rtc:season:v1', 'rtc:season:v2', 'rtc:season:v3', 'rtc:aces:v1'];
 
 function has(key: string): boolean {
   try {
@@ -59,9 +59,3 @@ export function clearCareer(): void {
  * rtc:daily:v1 it is progress, not a saved game: "Recomeçar" and the crash reset never clear it.
  */
 export const VALDLE_KEY = 'rtc:valdle:v1';
-
-/**
- * "Acerte o ace" (Outros modos): the AcesSave of src/game/aces (daily results, streak, free-mode totals and round)
- * plus the videos this browser could not embed. Progress, not a saved game: never cleared by "Recomeçar".
- */
-export const ACES_KEY = 'rtc:aces:v1';

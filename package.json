@@ -18,8 +18,6 @@
     "data:vlr-series": "NODE_USE_ENV_PROXY=1 node scripts/vlr/series.mjs",
     "data:liquipedia": "NODE_USE_ENV_PROXY=1 node scripts/liquipedia/run.mjs",
     "data:media": "NODE_USE_ENV_PROXY=1 node scripts/media/run.mjs",
-    "data:aces": "NODE_USE_ENV_PROXY=1 node scripts/aces/build.mjs",
-    "data:aces-check": "NODE_USE_ENV_PROXY=1 node scripts/aces/check-videos.mjs --write",
     "icons": "NODE_USE_ENV_PROXY=1 node scripts/pwa-icons.mjs"
   },
   "dependencies": {
